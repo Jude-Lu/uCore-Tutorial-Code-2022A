@@ -1,6 +1,6 @@
 import os
 
-TARGET_DIR = "../user/target/"
+TARGET_DIR = "../user/target/bin/"
 
 if __name__ == '__main__':
     f = open("link_app.S", mode="w")
@@ -26,7 +26,7 @@ _app_names:
 ''');
 
     for app in apps:
-        app = app[:app.find('.')]
+        # app = app[:app.find('.')]
         f.write("   .string \"" + app + "\"\n")
 
     for (idx, app) in enumerate(apps):

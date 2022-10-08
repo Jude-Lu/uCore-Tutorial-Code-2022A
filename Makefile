@@ -22,6 +22,7 @@ AS_OBJS = $(addprefix $(BUILDDIR)/, $(addsuffix .o, $(basename $(AS_SRCS))))
 OBJS = $(C_OBJS) $(AS_OBJS)
 
 HEADER_DEP = $(addsuffix .d, $(basename $(C_OBJS)))
+-include $(HEADER_DEP)
 
 ifeq ($(shell expr $(ch) \<= 5)$(shell expr $(ch) \>= 2), 11)
 ifeq (,$(findstring link_app.o,$(OBJS)))
@@ -82,14 +83,14 @@ $(HEADER_DEP): $(BUILDDIR)/$K/%.d : $K/%.c
         sed 's,\($*\)\.o[ :]*,\1.o $@ : ,g' < $@.$$$$ > $@; \
         rm -f $@.$$$$
 
-ifeq ($(shell expr $(ch) \>= 6), 1)
 INIT_PROC ?= usershell
+
+ifeq ($(shell expr $(ch) \>= 6), 1)
 $(K)/initproc.o: $K/initproc.S
 $(K)/initproc.S: $K/initproc.py .FORCE
 	cd $K && $(PY) initproc.py $(INIT_PROC)
 
 else ifeq ($(shell expr $(ch) \== 5), 1)
-INIT_PROC ?= usershell
 $(K)/link_app.o: $K/link_app.S
 $(K)/link_app.S: $K/pack.py .FORCE
 	cd $K && $(PY) pack.py $(INIT_PROC)
@@ -99,26 +100,32 @@ $(K)/kernel_app.ld: $K/kernelld.py .FORCE
 else ifeq ($(shell expr $(ch) \== 1), 1)
 
 else
-os$(ch)/link_app.o: $K/link_app.S
-os$(ch)/link_app.S: $K/pack.py
+$K/link_app.o: $K/link_app.S
+$K/link_app.S: $K/pack.py
 	cd $K && $(PY) pack.py
-os$(ch)/kernel_app.ld: $K/kernelld.py
+$K/kernel_app.ld: $K/kernelld.py
 	cd $K && $(PY) kernelld.py
 endif
 
-
-INIT_PROC ?= usershell
-
 build: build/kernel
 
+ifeq ($(shell expr $(ch) \!= 1)$(shell expr $(ch) \!= 6), 00)
+build/kernel: $(OBJS) os$(ch)/kernel_app.ld
+	$(LD) $(LDFLAGS) -T os$(ch)/kernel_app.ld -o $(BUILDDIR)/kernel $(OBJS)
+	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
+	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
+	@echo 'Build kernel done'
+else
 build/kernel: $(OBJS) os$(ch)/kernel.ld
 	$(LD) $(LDFLAGS) -T os$(ch)/kernel.ld -o $(BUILDDIR)/kernel $(OBJS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
 	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
 	@echo 'Build kernel done'
+endif
 
 clean:
 	rm -rf $(BUILDDIR)
+	make -C $(U) clean
 
 # BOARD
 BOARD		?= qemu
