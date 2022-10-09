@@ -3,6 +3,12 @@
 
 #define PAGE_SIZE (0x1000)
 
+enum {
+	STDIN = 0,
+	STDOUT = 1,
+	STDERR = 2,
+};
+
 // memory layout
 
 // the kernel expects there to be RAM

@@ -6,6 +6,10 @@ K = os$(ch)
 U = user
 F = nfs
 
+## Add your module dir here
+UTIL = utils
+##
+
 TOOLPREFIX = riscv64-unknown-elf-
 CC = $(TOOLPREFIX)gcc
 AS = $(TOOLPREFIX)gcc
@@ -16,13 +20,17 @@ PY = python3
 GDB = $(TOOLPREFIX)gdb
 CP = cp
 BUILDDIR = build
-C_SRCS = $(wildcard $K/*.c)
-AS_SRCS = $(wildcard $K/*.S)
-C_OBJS = $(addprefix $(BUILDDIR)/, $(addsuffix .o, $(basename $(C_SRCS))))
-AS_OBJS = $(addprefix $(BUILDDIR)/, $(addsuffix .o, $(basename $(AS_SRCS))))
-OBJS = $(C_OBJS) $(AS_OBJS)
 
+## Append your module dir
+C_SRCS = $(wildcard $(K)/*.c $(UTIL)/*.c)
+##
+
+AS_SRCS = $(wildcard $K/*.S)
+C_OBJS = $(addsuffix .o, $(basename $(C_SRCS)))
+AS_OBJS = $(addsuffix .o, $(basename $(AS_SRCS)))
+OBJS = $(C_OBJS) $(AS_OBJS)
 HEADER_DEP = $(addsuffix .d, $(basename $(C_OBJS)))
+
 -include $(HEADER_DEP)
 
 ifeq ($(shell expr $(ch) \<= 5)$(shell expr $(ch) \>= 2), 11)
@@ -69,19 +77,22 @@ endif
 
 LDFLAGS = -z max-page-size=4096
 
-$(AS_OBJS): $(BUILDDIR)/$K/%.o : $K/%.S
-	@mkdir -p $(@D)
+$(AS_OBJS): %.o : %.S
+	@mkdir -p $(BUILDDIR)/$(@D)
 	$(CC) $(CFLAGS) -c $< -o $@
+	@cp $@ $(BUILDDIR)/$(@D)
 
-$(C_OBJS): $(BUILDDIR)/$K/%.o : $K/%.c  $(BUILDDIR)/$K/%.d
-	@mkdir -p $(@D)
+$(C_OBJS): %.o : %.c %.d
+	@mkdir -p $(BUILDDIR)/$(@D)
 	$(CC) $(CFLAGS) -c $< -o $@
+	@cp $@ $(BUILDDIR)/$(@D)
 
-$(HEADER_DEP): $(BUILDDIR)/$K/%.d : $K/%.c
-	@mkdir -p $(@D)
+$(HEADER_DEP): %.d : %.c
+	@mkdir -p $(BUILDDIR)/$(@D)
 	@set -e; rm -f $@; $(CC) -MM $< $(INCLUDEFLAGS) > $@.$$$$; \
         sed 's,\($*\)\.o[ :]*,\1.o $@ : ,g' < $@.$$$$ > $@; \
         rm -f $@.$$$$
+	@mv $@ $(BUILDDIR)/$(@D)
 
 INIT_PROC ?= usershell
 
@@ -114,12 +125,15 @@ build/kernel: $(OBJS) os$(ch)/kernel_app.ld
 	$(LD) $(LDFLAGS) -T os$(ch)/kernel_app.ld -o $(BUILDDIR)/kernel $(OBJS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
 	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
+	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d
 	@echo 'Build kernel done'
+
 else
 build/kernel: $(OBJS) os$(ch)/kernel.ld
 	$(LD) $(LDFLAGS) -T os$(ch)/kernel.ld -o $(BUILDDIR)/kernel $(OBJS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
 	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
+	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d
 	@echo 'Build kernel done'
 endif
 
