@@ -9,7 +9,6 @@ if __name__ == '__main__':
     parser.add_argument('INIT_PROC', default="usershell")
     args = parser.parse_args()
 
-    # f = open("os/link_app.S", mode="w")
     f = open("link_app.S", mode="w")
     apps = os.listdir(TARGET_DIR)
     apps.sort()

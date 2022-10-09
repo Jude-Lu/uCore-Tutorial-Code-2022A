@@ -1,0 +1,912 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BASE_ADDRESS	loader.h	12;"	d
+BBLOCK	fs.h	65;"	d
+BLUE	log.h	/^	BLUE = 34,$/;"	e	enum:LOG_COLOR
+BPB	fs.h	62;"	d
+BSIZE	fs.h	18;"	d
+BUF_H	bio.h	2;"	d
+Breakpoint	trap.h	/^	Breakpoint = 3,$/;"	e	enum:Exception
+CONSOLE_H	console.h	2;"	d
+CONST_H	const.h	2;"	d
+CPU_FREQ	timer.h	8;"	d
+DEFS_H	defs.h	2;"	d
+DIRSIZ	fs.h	68;"	d
+Exception	trap.h	/^enum Exception {$/;"	g
+FCNTL_H	fcntl.h	2;"	d
+FD_BUFFER_SIZE	proc.h	8;"	d
+FD_INODE	file.h	/^	enum { FD_NONE = 0, FD_INODE, FD_STDIO } type;$/;"	e	enum:file::__anon6
+FD_NONE	file.h	/^	enum { FD_NONE = 0, FD_INODE, FD_STDIO } type;$/;"	e	enum:file::__anon6
+FD_STDIO	file.h	/^	enum { FD_NONE = 0, FD_INODE, FD_STDIO } type;$/;"	e	enum:file::__anon6
+FILEPOOLSIZE	file.h	9;"	d
+FILE_H	file.h	2;"	d
+FSMAGIC	fs.h	34;"	d
+FSSIZE	fs.h	14;"	d
+GRAY	log.h	/^	GRAY = 90,$/;"	e	enum:LOG_COLOR
+GREEN	log.h	/^	GREEN = 32,$/;"	e	enum:LOG_COLOR
+IBLOCK	fs.h	59;"	d
+IDLE_PID	const.h	28;"	d
+INIT_PROC	initproc.S	/^INIT_PROC:$/;"	l
+IPB	fs.h	56;"	d
+IllegalInstruction	trap.h	/^	IllegalInstruction = 2,$/;"	e	enum:Exception
+InstructionAccessFault	trap.h	/^	InstructionAccessFault = 1,$/;"	e	enum:Exception
+InstructionMisaligned	trap.h	/^	InstructionMisaligned = 0,$/;"	e	enum:Exception
+InstructionPageFault	trap.h	/^	InstructionPageFault = 12,$/;"	e	enum:Exception
+Interrupt	trap.h	/^enum Interrupt {$/;"	g
+KALLOC_H	kalloc.h	2;"	d
+KERNBASE	const.h	11;"	d
+KSTACK_SIZE	loader.h	14;"	d
+LOADER_H	loader.h	2;"	d
+LOG_COLOR	log.h	/^enum LOG_COLOR {$/;"	g
+LOG_H	log.h	2;"	d
+LoadAccessFault	trap.h	/^	LoadAccessFault = 5,$/;"	e	enum:Exception
+LoadMisaligned	trap.h	/^	LoadMisaligned = 4,$/;"	e	enum:Exception
+LoadPageFault	trap.h	/^	LoadPageFault = 13,$/;"	e	enum:Exception
+MAKE_SATP	riscv.h	171;"	d
+MAX	defs.h	19;"	d
+MAXFILE	fs.h	38;"	d
+MAXOPBLOCKS	fs.h	12;"	d
+MAXPATH	fs.h	15;"	d
+MAXVA	const.h	18;"	d
+MAXVA	riscv.h	318;"	d
+MAX_APP_NUM	const.h	26;"	d
+MAX_ARG_NUM	const.h	29;"	d
+MAX_STR_LEN	const.h	27;"	d
+MIE_MEIE	riscv.h	92;"	d
+MIE_MSIE	riscv.h	94;"	d
+MIE_MTIE	riscv.h	93;"	d
+MIN	defs.h	18;"	d
+MSTATUS_MIE	riscv.h	20;"	d
+MSTATUS_MPP_M	riscv.h	17;"	d
+MSTATUS_MPP_MASK	riscv.h	16;"	d
+MSTATUS_MPP_S	riscv.h	18;"	d
+MSTATUS_MPP_U	riscv.h	19;"	d
+MachineEnvCall	trap.h	/^	MachineEnvCall = 11,$/;"	e	enum:Exception
+NBUF	fs.h	13;"	d
+NDEV	fs.h	10;"	d
+NDIRECT	fs.h	36;"	d
+NELEM	defs.h	17;"	d
+NFILE	fs.h	8;"	d
+NINDIRECT	fs.h	37;"	d
+NINODE	fs.h	9;"	d
+NPROC	proc.h	7;"	d
+NULL	defs.h	21;"	d
+NUM	virtio.h	54;"	d
+O_CREATE	fcntl.h	7;"	d
+O_RDONLY	fcntl.h	4;"	d
+O_RDWR	fcntl.h	6;"	d
+O_TRUNC	fcntl.h	8;"	d
+O_WRONLY	fcntl.h	5;"	d
+PA2PTE	riscv.h	303;"	d
+PAGE_SIZE	const.h	4;"	d
+PGALIGNED	riscv.h	294;"	d
+PGROUNDDOWN	riscv.h	293;"	d
+PGROUNDUP	riscv.h	292;"	d
+PGSHIFT	riscv.h	290;"	d
+PGSIZE	riscv.h	289;"	d
+PHYSTOP	const.h	12;"	d
+PIPESIZE	file.h	8;"	d
+PLIC	plic.h	13;"	d
+PLIC_H	plic.h	2;"	d
+PLIC_MCLAIM	plic.h	20;"	d
+PLIC_MENABLE	plic.h	16;"	d
+PLIC_MPRIORITY	plic.h	18;"	d
+PLIC_PENDING	plic.h	15;"	d
+PLIC_PRIORITY	plic.h	14;"	d
+PLIC_SCLAIM	plic.h	21;"	d
+PLIC_SENABLE	plic.h	17;"	d
+PLIC_SPRIORITY	plic.h	19;"	d
+PRINTF_H	printf.h	2;"	d
+PROC_H	proc.h	2;"	d
+PTE2PA	riscv.h	305;"	d
+PTE_FLAGS	riscv.h	307;"	d
+PTE_R	riscv.h	297;"	d
+PTE_U	riscv.h	300;"	d
+PTE_V	riscv.h	296;"	d
+PTE_W	riscv.h	298;"	d
+PTE_X	riscv.h	299;"	d
+PX	riscv.h	312;"	d
+PXMASK	riscv.h	310;"	d
+PXSHIFT	riscv.h	311;"	d
+QUEUE_H	queue.h	2;"	d
+QUEUE_SIZE	queue.h	3;"	d
+R	bio.c	/^const int R = 0;$/;"	v
+R	virtio_disk.c	20;"	d	file:
+RED	log.h	/^	RED = 31,$/;"	e	enum:LOG_COLOR
+RISCV_H	riscv.h	2;"	d
+ROOTDEV	fs.h	11;"	d
+ROOTINO	fs.h	17;"	d
+RUNNABLE	proc.h	/^enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };$/;"	e	enum:procstate
+RUNNING	proc.h	/^enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };$/;"	e	enum:procstate
+SATP_SV39	riscv.h	169;"	d
+SBI_CLEAR_IPI	sbi.c	/^const uint64 SBI_CLEAR_IPI = 3;$/;"	v
+SBI_CONSOLE_GETCHAR	sbi.c	/^const uint64 SBI_CONSOLE_GETCHAR = 2;$/;"	v
+SBI_CONSOLE_PUTCHAR	sbi.c	/^const uint64 SBI_CONSOLE_PUTCHAR = 1;$/;"	v
+SBI_H	sbi.h	2;"	d
+SBI_REMOTE_FENCE_I	sbi.c	/^const uint64 SBI_REMOTE_FENCE_I = 5;$/;"	v
+SBI_REMOTE_SFENCE_VMA	sbi.c	/^const uint64 SBI_REMOTE_SFENCE_VMA = 6;$/;"	v
+SBI_REMOTE_SFENCE_VMA_ASID	sbi.c	/^const uint64 SBI_REMOTE_SFENCE_VMA_ASID = 7;$/;"	v
+SBI_SEND_IPI	sbi.c	/^const uint64 SBI_SEND_IPI = 4;$/;"	v
+SBI_SET_TIMER	sbi.c	/^const uint64 SBI_SET_TIMER = 0;$/;"	v
+SBI_SHUTDOWN	sbi.c	/^const uint64 SBI_SHUTDOWN = 8;$/;"	v
+SIE_SEIE	riscv.h	76;"	d
+SIE_SSIE	riscv.h	78;"	d
+SIE_STIE	riscv.h	77;"	d
+SLEEPING	proc.h	/^enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };$/;"	e	enum:procstate
+SSTATUS_SIE	riscv.h	47;"	d
+SSTATUS_SPIE	riscv.h	45;"	d
+SSTATUS_SPP	riscv.h	44;"	d
+SSTATUS_UIE	riscv.h	48;"	d
+SSTATUS_UPIE	riscv.h	46;"	d
+STDERR	file.h	/^	STDERR = 2,$/;"	e	enum:__anon7
+STDIN	file.h	/^	STDIN = 0,$/;"	e	enum:__anon7
+STDOUT	file.h	/^	STDOUT = 1,$/;"	e	enum:__anon7
+STRING_H	string.h	2;"	d
+SYSCALL_H	syscall.h	2;"	d
+SYS_accept	syscall_ids.h	202;"	d
+SYS_accept4	syscall_ids.h	242;"	d
+SYS_acct	syscall_ids.h	89;"	d
+SYS_add_key	syscall_ids.h	217;"	d
+SYS_adjtimex	syscall_ids.h	171;"	d
+SYS_arch_specific_syscall	syscall_ids.h	244;"	d
+SYS_bind	syscall_ids.h	200;"	d
+SYS_bpf	syscall_ids.h	265;"	d
+SYS_brk	syscall_ids.h	214;"	d
+SYS_capget	syscall_ids.h	90;"	d
+SYS_capset	syscall_ids.h	91;"	d
+SYS_chdir	syscall_ids.h	49;"	d
+SYS_chroot	syscall_ids.h	51;"	d
+SYS_clock_adjtime	syscall_ids.h	251;"	d
+SYS_clock_getres	syscall_ids.h	114;"	d
+SYS_clock_gettime	syscall_ids.h	113;"	d
+SYS_clock_nanosleep	syscall_ids.h	115;"	d
+SYS_clock_settime	syscall_ids.h	112;"	d
+SYS_clone	syscall_ids.h	220;"	d
+SYS_clone3	syscall_ids.h	292;"	d
+SYS_close	syscall_ids.h	57;"	d
+SYS_connect	syscall_ids.h	203;"	d
+SYS_copy_file_range	syscall_ids.h	270;"	d
+SYS_delete_module	syscall_ids.h	106;"	d
+SYS_dup	syscall_ids.h	24;"	d
+SYS_dup3	syscall_ids.h	25;"	d
+SYS_epoll_create1	syscall_ids.h	21;"	d
+SYS_epoll_ctl	syscall_ids.h	22;"	d
+SYS_epoll_pwait	syscall_ids.h	23;"	d
+SYS_eventfd2	syscall_ids.h	20;"	d
+SYS_execve	syscall_ids.h	221;"	d
+SYS_execveat	syscall_ids.h	266;"	d
+SYS_exit	syscall_ids.h	93;"	d
+SYS_exit_group	syscall_ids.h	94;"	d
+SYS_faccessat	syscall_ids.h	48;"	d
+SYS_faccessat2	syscall_ids.h	295;"	d
+SYS_fadvise64	syscall_ids.h	223;"	d
+SYS_fallocate	syscall_ids.h	47;"	d
+SYS_fanotify_init	syscall_ids.h	247;"	d
+SYS_fanotify_mark	syscall_ids.h	248;"	d
+SYS_fchdir	syscall_ids.h	50;"	d
+SYS_fchmod	syscall_ids.h	52;"	d
+SYS_fchmodat	syscall_ids.h	53;"	d
+SYS_fchown	syscall_ids.h	55;"	d
+SYS_fchownat	syscall_ids.h	54;"	d
+SYS_fcntl	syscall_ids.h	26;"	d
+SYS_fdatasync	syscall_ids.h	83;"	d
+SYS_fgetxattr	syscall_ids.h	11;"	d
+SYS_finit_module	syscall_ids.h	258;"	d
+SYS_flistxattr	syscall_ids.h	14;"	d
+SYS_flock	syscall_ids.h	33;"	d
+SYS_fremovexattr	syscall_ids.h	17;"	d
+SYS_fsconfig	syscall_ids.h	288;"	d
+SYS_fsetxattr	syscall_ids.h	8;"	d
+SYS_fsmount	syscall_ids.h	289;"	d
+SYS_fsopen	syscall_ids.h	287;"	d
+SYS_fspick	syscall_ids.h	290;"	d
+SYS_fstat	syscall_ids.h	80;"	d
+SYS_fstatat	syscall_ids.h	79;"	d
+SYS_fstatfs	syscall_ids.h	44;"	d
+SYS_fsync	syscall_ids.h	82;"	d
+SYS_ftruncate	syscall_ids.h	46;"	d
+SYS_futex	syscall_ids.h	98;"	d
+SYS_get_mempolicy	syscall_ids.h	236;"	d
+SYS_get_robust_list	syscall_ids.h	100;"	d
+SYS_getcpu	syscall_ids.h	168;"	d
+SYS_getcwd	syscall_ids.h	18;"	d
+SYS_getdents64	syscall_ids.h	61;"	d
+SYS_getegid	syscall_ids.h	177;"	d
+SYS_geteuid	syscall_ids.h	175;"	d
+SYS_getgid	syscall_ids.h	176;"	d
+SYS_getgroups	syscall_ids.h	158;"	d
+SYS_getitimer	syscall_ids.h	102;"	d
+SYS_getpeername	syscall_ids.h	205;"	d
+SYS_getpgid	syscall_ids.h	155;"	d
+SYS_getpid	syscall_ids.h	172;"	d
+SYS_getppid	syscall_ids.h	173;"	d
+SYS_getpriority	syscall_ids.h	141;"	d
+SYS_getrandom	syscall_ids.h	263;"	d
+SYS_getresgid	syscall_ids.h	150;"	d
+SYS_getresuid	syscall_ids.h	148;"	d
+SYS_getrlimit	syscall_ids.h	163;"	d
+SYS_getrusage	syscall_ids.h	165;"	d
+SYS_getsid	syscall_ids.h	156;"	d
+SYS_getsockname	syscall_ids.h	204;"	d
+SYS_getsockopt	syscall_ids.h	209;"	d
+SYS_gettid	syscall_ids.h	178;"	d
+SYS_gettimeofday	syscall_ids.h	169;"	d
+SYS_getuid	syscall_ids.h	174;"	d
+SYS_getxattr	syscall_ids.h	9;"	d
+SYS_init_module	syscall_ids.h	105;"	d
+SYS_inotify_add_watch	syscall_ids.h	28;"	d
+SYS_inotify_init1	syscall_ids.h	27;"	d
+SYS_inotify_rm_watch	syscall_ids.h	29;"	d
+SYS_io_cancel	syscall_ids.h	4;"	d
+SYS_io_destroy	syscall_ids.h	2;"	d
+SYS_io_getevents	syscall_ids.h	5;"	d
+SYS_io_pgetevents	syscall_ids.h	277;"	d
+SYS_io_setup	syscall_ids.h	1;"	d
+SYS_io_submit	syscall_ids.h	3;"	d
+SYS_io_uring_enter	syscall_ids.h	283;"	d
+SYS_io_uring_register	syscall_ids.h	284;"	d
+SYS_io_uring_setup	syscall_ids.h	282;"	d
+SYS_ioctl	syscall_ids.h	30;"	d
+SYS_ioprio_get	syscall_ids.h	32;"	d
+SYS_ioprio_set	syscall_ids.h	31;"	d
+SYS_kcmp	syscall_ids.h	257;"	d
+SYS_kexec_file_load	syscall_ids.h	279;"	d
+SYS_kexec_load	syscall_ids.h	104;"	d
+SYS_keyctl	syscall_ids.h	219;"	d
+SYS_kill	syscall_ids.h	129;"	d
+SYS_lgetxattr	syscall_ids.h	10;"	d
+SYS_linkat	syscall_ids.h	38;"	d
+SYS_listen	syscall_ids.h	201;"	d
+SYS_listxattr	syscall_ids.h	12;"	d
+SYS_llistxattr	syscall_ids.h	13;"	d
+SYS_lookup_dcookie	syscall_ids.h	19;"	d
+SYS_lremovexattr	syscall_ids.h	16;"	d
+SYS_lseek	syscall_ids.h	62;"	d
+SYS_lsetxattr	syscall_ids.h	7;"	d
+SYS_madvise	syscall_ids.h	233;"	d
+SYS_mbind	syscall_ids.h	235;"	d
+SYS_membarrier	syscall_ids.h	268;"	d
+SYS_memfd_create	syscall_ids.h	264;"	d
+SYS_migrate_pages	syscall_ids.h	238;"	d
+SYS_mincore	syscall_ids.h	232;"	d
+SYS_mkdirat	syscall_ids.h	35;"	d
+SYS_mknodat	syscall_ids.h	34;"	d
+SYS_mlock	syscall_ids.h	228;"	d
+SYS_mlock2	syscall_ids.h	269;"	d
+SYS_mlockall	syscall_ids.h	230;"	d
+SYS_mmap	syscall_ids.h	222;"	d
+SYS_mount	syscall_ids.h	40;"	d
+SYS_move_mount	syscall_ids.h	286;"	d
+SYS_move_pages	syscall_ids.h	239;"	d
+SYS_mprotect	syscall_ids.h	226;"	d
+SYS_mq_getsetattr	syscall_ids.h	185;"	d
+SYS_mq_notify	syscall_ids.h	184;"	d
+SYS_mq_open	syscall_ids.h	180;"	d
+SYS_mq_timedreceive	syscall_ids.h	183;"	d
+SYS_mq_timedsend	syscall_ids.h	182;"	d
+SYS_mq_unlink	syscall_ids.h	181;"	d
+SYS_mremap	syscall_ids.h	216;"	d
+SYS_msgctl	syscall_ids.h	187;"	d
+SYS_msgget	syscall_ids.h	186;"	d
+SYS_msgrcv	syscall_ids.h	188;"	d
+SYS_msgsnd	syscall_ids.h	189;"	d
+SYS_msync	syscall_ids.h	227;"	d
+SYS_munlock	syscall_ids.h	229;"	d
+SYS_munlockall	syscall_ids.h	231;"	d
+SYS_munmap	syscall_ids.h	215;"	d
+SYS_name_to_handle_at	syscall_ids.h	249;"	d
+SYS_nanosleep	syscall_ids.h	101;"	d
+SYS_nfsservctl	syscall_ids.h	42;"	d
+SYS_open_by_handle_at	syscall_ids.h	250;"	d
+SYS_open_tree	syscall_ids.h	285;"	d
+SYS_openat	syscall_ids.h	56;"	d
+SYS_openat2	syscall_ids.h	293;"	d
+SYS_perf_event_open	syscall_ids.h	241;"	d
+SYS_personality	syscall_ids.h	92;"	d
+SYS_pidfd_getfd	syscall_ids.h	294;"	d
+SYS_pidfd_open	syscall_ids.h	291;"	d
+SYS_pidfd_send_signal	syscall_ids.h	281;"	d
+SYS_pipe2	syscall_ids.h	59;"	d
+SYS_pivot_root	syscall_ids.h	41;"	d
+SYS_pkey_alloc	syscall_ids.h	274;"	d
+SYS_pkey_free	syscall_ids.h	275;"	d
+SYS_pkey_mprotect	syscall_ids.h	273;"	d
+SYS_ppoll	syscall_ids.h	73;"	d
+SYS_prctl	syscall_ids.h	167;"	d
+SYS_pread64	syscall_ids.h	67;"	d
+SYS_preadv	syscall_ids.h	69;"	d
+SYS_preadv2	syscall_ids.h	271;"	d
+SYS_prlimit64	syscall_ids.h	246;"	d
+SYS_process_vm_readv	syscall_ids.h	255;"	d
+SYS_process_vm_writev	syscall_ids.h	256;"	d
+SYS_pselect6	syscall_ids.h	72;"	d
+SYS_ptrace	syscall_ids.h	117;"	d
+SYS_pwrite64	syscall_ids.h	68;"	d
+SYS_pwritev	syscall_ids.h	70;"	d
+SYS_pwritev2	syscall_ids.h	272;"	d
+SYS_quotactl	syscall_ids.h	60;"	d
+SYS_read	syscall_ids.h	63;"	d
+SYS_readahead	syscall_ids.h	213;"	d
+SYS_readlinkat	syscall_ids.h	78;"	d
+SYS_readv	syscall_ids.h	65;"	d
+SYS_reboot	syscall_ids.h	142;"	d
+SYS_recvfrom	syscall_ids.h	207;"	d
+SYS_recvmmsg	syscall_ids.h	243;"	d
+SYS_recvmsg	syscall_ids.h	212;"	d
+SYS_remap_file_pages	syscall_ids.h	234;"	d
+SYS_removexattr	syscall_ids.h	15;"	d
+SYS_renameat2	syscall_ids.h	261;"	d
+SYS_request_key	syscall_ids.h	218;"	d
+SYS_restart_syscall	syscall_ids.h	128;"	d
+SYS_riscv_flush_icache	syscall_ids.h	296;"	d
+SYS_rseq	syscall_ids.h	278;"	d
+SYS_rt_sigaction	syscall_ids.h	134;"	d
+SYS_rt_sigpending	syscall_ids.h	136;"	d
+SYS_rt_sigprocmask	syscall_ids.h	135;"	d
+SYS_rt_sigqueueinfo	syscall_ids.h	138;"	d
+SYS_rt_sigreturn	syscall_ids.h	139;"	d
+SYS_rt_sigsuspend	syscall_ids.h	133;"	d
+SYS_rt_sigtimedwait	syscall_ids.h	137;"	d
+SYS_rt_tgsigqueueinfo	syscall_ids.h	240;"	d
+SYS_sched_get_priority_max	syscall_ids.h	125;"	d
+SYS_sched_get_priority_min	syscall_ids.h	126;"	d
+SYS_sched_getaffinity	syscall_ids.h	123;"	d
+SYS_sched_getattr	syscall_ids.h	260;"	d
+SYS_sched_getparam	syscall_ids.h	121;"	d
+SYS_sched_getscheduler	syscall_ids.h	120;"	d
+SYS_sched_rr_get_interval	syscall_ids.h	127;"	d
+SYS_sched_setaffinity	syscall_ids.h	122;"	d
+SYS_sched_setattr	syscall_ids.h	259;"	d
+SYS_sched_setparam	syscall_ids.h	118;"	d
+SYS_sched_setscheduler	syscall_ids.h	119;"	d
+SYS_sched_yield	syscall_ids.h	124;"	d
+SYS_seccomp	syscall_ids.h	262;"	d
+SYS_semctl	syscall_ids.h	191;"	d
+SYS_semget	syscall_ids.h	190;"	d
+SYS_semop	syscall_ids.h	193;"	d
+SYS_semtimedop	syscall_ids.h	192;"	d
+SYS_sendfile	syscall_ids.h	71;"	d
+SYS_sendmmsg	syscall_ids.h	254;"	d
+SYS_sendmsg	syscall_ids.h	211;"	d
+SYS_sendto	syscall_ids.h	206;"	d
+SYS_set_mempolicy	syscall_ids.h	237;"	d
+SYS_set_robust_list	syscall_ids.h	99;"	d
+SYS_set_tid_address	syscall_ids.h	96;"	d
+SYS_setdomainname	syscall_ids.h	162;"	d
+SYS_setfsgid	syscall_ids.h	152;"	d
+SYS_setfsuid	syscall_ids.h	151;"	d
+SYS_setgid	syscall_ids.h	144;"	d
+SYS_setgroups	syscall_ids.h	159;"	d
+SYS_sethostname	syscall_ids.h	161;"	d
+SYS_setitimer	syscall_ids.h	103;"	d
+SYS_setns	syscall_ids.h	253;"	d
+SYS_setpgid	syscall_ids.h	154;"	d
+SYS_setpriority	syscall_ids.h	140;"	d
+SYS_setregid	syscall_ids.h	143;"	d
+SYS_setresgid	syscall_ids.h	149;"	d
+SYS_setresuid	syscall_ids.h	147;"	d
+SYS_setreuid	syscall_ids.h	145;"	d
+SYS_setrlimit	syscall_ids.h	164;"	d
+SYS_setsid	syscall_ids.h	157;"	d
+SYS_setsockopt	syscall_ids.h	208;"	d
+SYS_settimeofday	syscall_ids.h	170;"	d
+SYS_setuid	syscall_ids.h	146;"	d
+SYS_setxattr	syscall_ids.h	6;"	d
+SYS_shmat	syscall_ids.h	196;"	d
+SYS_shmctl	syscall_ids.h	195;"	d
+SYS_shmdt	syscall_ids.h	197;"	d
+SYS_shmget	syscall_ids.h	194;"	d
+SYS_shutdown	syscall_ids.h	210;"	d
+SYS_sigaltstack	syscall_ids.h	132;"	d
+SYS_signalfd4	syscall_ids.h	74;"	d
+SYS_socket	syscall_ids.h	198;"	d
+SYS_socketpair	syscall_ids.h	199;"	d
+SYS_spawn	syscall_ids.h	280;"	d
+SYS_splice	syscall_ids.h	76;"	d
+SYS_statfs	syscall_ids.h	43;"	d
+SYS_statx	syscall_ids.h	276;"	d
+SYS_swapoff	syscall_ids.h	225;"	d
+SYS_swapon	syscall_ids.h	224;"	d
+SYS_symlinkat	syscall_ids.h	37;"	d
+SYS_sync	syscall_ids.h	81;"	d
+SYS_sync_file_range	syscall_ids.h	84;"	d
+SYS_syncfs	syscall_ids.h	252;"	d
+SYS_sysinfo	syscall_ids.h	179;"	d
+SYS_syslog	syscall_ids.h	116;"	d
+SYS_tee	syscall_ids.h	77;"	d
+SYS_tgkill	syscall_ids.h	131;"	d
+SYS_timer_create	syscall_ids.h	107;"	d
+SYS_timer_delete	syscall_ids.h	111;"	d
+SYS_timer_getoverrun	syscall_ids.h	109;"	d
+SYS_timer_gettime	syscall_ids.h	108;"	d
+SYS_timer_settime	syscall_ids.h	110;"	d
+SYS_timerfd_create	syscall_ids.h	85;"	d
+SYS_timerfd_gettime	syscall_ids.h	87;"	d
+SYS_timerfd_settime	syscall_ids.h	86;"	d
+SYS_times	syscall_ids.h	153;"	d
+SYS_tkill	syscall_ids.h	130;"	d
+SYS_truncate	syscall_ids.h	45;"	d
+SYS_umask	syscall_ids.h	166;"	d
+SYS_umount2	syscall_ids.h	39;"	d
+SYS_uname	syscall_ids.h	160;"	d
+SYS_unlinkat	syscall_ids.h	36;"	d
+SYS_unshare	syscall_ids.h	97;"	d
+SYS_userfaultfd	syscall_ids.h	267;"	d
+SYS_utimensat	syscall_ids.h	88;"	d
+SYS_vhangup	syscall_ids.h	58;"	d
+SYS_vmsplice	syscall_ids.h	75;"	d
+SYS_wait4	syscall_ids.h	245;"	d
+SYS_waitid	syscall_ids.h	95;"	d
+SYS_write	syscall_ids.h	64;"	d
+SYS_writev	syscall_ids.h	66;"	d
+StoreAccessFault	trap.h	/^	StoreAccessFault = 7,$/;"	e	enum:Exception
+StoreMisaligned	trap.h	/^	StoreMisaligned = 6,$/;"	e	enum:Exception
+StorePageFault	trap.h	/^	StorePageFault = 15,$/;"	e	enum:Exception
+SupervisorEnvCall	trap.h	/^	SupervisorEnvCall = 9,$/;"	e	enum:Exception
+SupervisorExternal	trap.h	/^	SupervisorExternal,$/;"	e	enum:Interrupt
+SupervisorSoft	trap.h	/^	SupervisorSoft,$/;"	e	enum:Interrupt
+SupervisorTimer	trap.h	/^	SupervisorTimer,$/;"	e	enum:Interrupt
+TARGET_DIR	kernelld.py	/^TARGET_DIR = "..\/user\/target\/"$/;"	v
+TICKS_PER_SEC	timer.h	6;"	d
+TIMER_H	timer.h	2;"	d
+TRAMPOLINE	const.h	23;"	d
+TRAPFRAME	const.h	24;"	d
+TRAP_H	trap.h	2;"	d
+TRAP_PAGE_SIZE	loader.h	15;"	d
+TYPES_H	types.h	2;"	d
+T_DIR	fs.h	41;"	d
+T_FILE	fs.h	42;"	d
+TimeVal	timer.h	/^} TimeVal;$/;"	t	typeref:struct:__anon1
+UART0	plic.h	5;"	d
+UART0_IRQ	plic.h	6;"	d
+UNUSED	proc.h	/^enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };$/;"	e	enum:procstate
+USED	proc.h	/^enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };$/;"	e	enum:procstate
+USER_TOP	const.h	22;"	d
+USE_LOG_DEBUG	log.h	35;"	d
+USE_LOG_DEBUG	log.h	44;"	d
+USE_LOG_ERROR	log.h	11;"	d
+USE_LOG_ERROR	log.h	17;"	d
+USE_LOG_ERROR	log.h	24;"	d
+USE_LOG_ERROR	log.h	32;"	d
+USE_LOG_ERROR	log.h	41;"	d
+USE_LOG_INFO	log.h	26;"	d
+USE_LOG_INFO	log.h	34;"	d
+USE_LOG_INFO	log.h	43;"	d
+USE_LOG_TRACE	log.h	45;"	d
+USE_LOG_WARN	log.h	18;"	d
+USE_LOG_WARN	log.h	25;"	d
+USE_LOG_WARN	log.h	33;"	d
+USE_LOG_WARN	log.h	42;"	d
+USTACK_SIZE	loader.h	13;"	d
+UserEnvCall	trap.h	/^	UserEnvCall = 8,$/;"	e	enum:Exception
+UserExternal	trap.h	/^	UserExternal = 8,$/;"	e	enum:Interrupt
+UserSoft	trap.h	/^	UserSoft = 0,$/;"	e	enum:Interrupt
+UserTimer	trap.h	/^	UserTimer = 4,$/;"	e	enum:Interrupt
+VIRTIO0	plic.h	9;"	d
+VIRTIO0_IRQ	plic.h	10;"	d
+VIRTIO_BLK_F_CONFIG_WCE	virtio.h	46;"	d
+VIRTIO_BLK_F_MQ	virtio.h	47;"	d
+VIRTIO_BLK_F_RO	virtio.h	44;"	d
+VIRTIO_BLK_F_SCSI	virtio.h	45;"	d
+VIRTIO_BLK_T_IN	virtio.h	90;"	d
+VIRTIO_BLK_T_OUT	virtio.h	91;"	d
+VIRTIO_CONFIG_S_ACKNOWLEDGE	virtio.h	38;"	d
+VIRTIO_CONFIG_S_DRIVER	virtio.h	39;"	d
+VIRTIO_CONFIG_S_DRIVER_OK	virtio.h	40;"	d
+VIRTIO_CONFIG_S_FEATURES_OK	virtio.h	41;"	d
+VIRTIO_F_ANY_LAYOUT	virtio.h	48;"	d
+VIRTIO_H	virtio.h	2;"	d
+VIRTIO_MMIO_DEVICE_FEATURES	virtio.h	22;"	d
+VIRTIO_MMIO_DEVICE_ID	virtio.h	20;"	d
+VIRTIO_MMIO_DRIVER_FEATURES	virtio.h	23;"	d
+VIRTIO_MMIO_GUEST_PAGE_SIZE	virtio.h	24;"	d
+VIRTIO_MMIO_INTERRUPT_ACK	virtio.h	34;"	d
+VIRTIO_MMIO_INTERRUPT_STATUS	virtio.h	33;"	d
+VIRTIO_MMIO_MAGIC_VALUE	virtio.h	18;"	d
+VIRTIO_MMIO_QUEUE_ALIGN	virtio.h	28;"	d
+VIRTIO_MMIO_QUEUE_NOTIFY	virtio.h	32;"	d
+VIRTIO_MMIO_QUEUE_NUM	virtio.h	27;"	d
+VIRTIO_MMIO_QUEUE_NUM_MAX	virtio.h	26;"	d
+VIRTIO_MMIO_QUEUE_PFN	virtio.h	29;"	d
+VIRTIO_MMIO_QUEUE_READY	virtio.h	31;"	d
+VIRTIO_MMIO_QUEUE_SEL	virtio.h	25;"	d
+VIRTIO_MMIO_STATUS	virtio.h	35;"	d
+VIRTIO_MMIO_VENDOR_ID	virtio.h	21;"	d
+VIRTIO_MMIO_VERSION	virtio.h	19;"	d
+VIRTIO_RING_F_EVENT_IDX	virtio.h	50;"	d
+VIRTIO_RING_F_INDIRECT_DESC	virtio.h	49;"	d
+VM_H	vm.h	2;"	d
+VRING_DESC_F_NEXT	virtio.h	63;"	d
+VRING_DESC_F_WRITE	virtio.h	64;"	d
+W	bio.c	/^const int W = 1;$/;"	v
+YELLOW	log.h	/^	YELLOW = 93,$/;"	e	enum:LOG_COLOR
+ZOMBIE	proc.h	/^enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };$/;"	e	enum:procstate
+__FS_H__	fs.h	2;"	d
+_entry	entry.S	/^_entry:$/;"	l
+a0	trap.h	/^	\/* 112 *\/ uint64 a0;$/;"	m	struct:trapframe
+a1	trap.h	/^	\/* 120 *\/ uint64 a1;$/;"	m	struct:trapframe
+a2	trap.h	/^	\/* 128 *\/ uint64 a2;$/;"	m	struct:trapframe
+a3	trap.h	/^	\/* 136 *\/ uint64 a3;$/;"	m	struct:trapframe
+a4	trap.h	/^	\/* 144 *\/ uint64 a4;$/;"	m	struct:trapframe
+a5	trap.h	/^	\/* 152 *\/ uint64 a5;$/;"	m	struct:trapframe
+a6	trap.h	/^	\/* 160 *\/ uint64 a6;$/;"	m	struct:trapframe
+a7	trap.h	/^	\/* 168 *\/ uint64 a7;$/;"	m	struct:trapframe
+add_task	proc.c	/^void add_task(struct proc *p)$/;"	f
+addr	virtio.h	/^	uint64 addr;$/;"	m	struct:virtq_desc
+addrs	file.h	/^	uint addrs[NDIRECT + 1];$/;"	m	struct:inode
+addrs	fs.h	/^	uint addrs[NDIRECT + 1]; \/\/ Data block addresses$/;"	m	struct:dinode
+alloc3_desc	virtio_disk.c	/^static int alloc3_desc(int *idx)$/;"	f	file:
+alloc_desc	virtio_disk.c	/^static int alloc_desc()$/;"	f	file:
+allocpid	proc.c	/^int allocpid()$/;"	f
+allocproc	proc.c	/^struct proc *allocproc()$/;"	f
+apps	kernelld.py	/^    apps = os.listdir(TARGET_DIR)$/;"	v
+argparse	initproc.py	/^import argparse$/;"	i
+args	initproc.py	/^    args = parser.parse_args()$/;"	v
+avail	virtio_disk.c	/^	struct virtq_avail *avail;$/;"	m	struct:disk	typeref:struct:disk::virtq_avail	file:
+b	virtio_disk.c	/^		struct buf *b;$/;"	m	struct:disk::__anon4	typeref:struct:disk::__anon4::buf	file:
+balloc	fs.c	/^static uint balloc(uint dev)$/;"	f	file:
+bcache	bio.c	/^} bcache;$/;"	v	typeref:struct:__anon2
+bfree	fs.c	/^static void bfree(int dev, uint b)$/;"	f	file:
+bget	bio.c	/^static struct buf *bget(uint dev, uint blockno)$/;"	f	file:
+bin_loader	loader.c	/^int bin_loader(struct inode *ip, struct proc *p)$/;"	f
+binit	bio.c	/^void binit()$/;"	f
+blockno	bio.h	/^	uint blockno;$/;"	m	struct:buf
+bmap	fs.c	/^static uint bmap(struct inode *ip, uint bn)$/;"	f	file:
+bmapstart	fs.h	/^	uint bmapstart; \/\/ Block number of first free map block$/;"	m	struct:superblock
+boot_stack	entry.S	/^boot_stack:$/;"	l
+boot_stack_top	entry.S	/^boot_stack_top:$/;"	l
+bpin	bio.c	/^void bpin(struct buf *b)$/;"	f
+bread	bio.c	/^struct buf *bread(uint dev, uint blockno)$/;"	f
+brelse	bio.c	/^void brelse(struct buf *b)$/;"	f
+buf	bio.c	/^	struct buf buf[NBUF];$/;"	m	struct:__anon2	typeref:struct:__anon2::buf	file:
+buf	bio.h	/^struct buf {$/;"	s
+bunpin	bio.c	/^void bunpin(struct buf *b)$/;"	f
+bwrite	bio.c	/^void bwrite(struct buf *b)$/;"	f
+bzero	fs.c	/^static void bzero(int dev, int bno)$/;"	f	file:
+clean_bss	main.c	/^void clean_bss()$/;"	f
+consgetc	console.c	/^int consgetc()$/;"	f
+console_getchar	sbi.c	/^int console_getchar()$/;"	f
+console_init	console.c	/^void console_init()$/;"	f
+console_putchar	sbi.c	/^void console_putchar(int c)$/;"	f
+console_read	syscall.c	/^uint64 console_read(uint64 va, uint64 len)$/;"	f
+console_write	syscall.c	/^uint64 console_write(uint64 va, uint64 len)$/;"	f
+consputc	console.c	/^void consputc(int c)$/;"	f
+context	proc.h	/^	struct context context; \/\/ swtch() here to run process$/;"	m	struct:proc	typeref:struct:proc::context
+context	proc.h	/^struct context {$/;"	s
+copyin	vm.c	/^int copyin(pagetable_t pagetable, char *dst, uint64 srcva, uint64 len)$/;"	f
+copyinstr	vm.c	/^int copyinstr(pagetable_t pagetable, char *dst, uint64 srcva, uint64 max)$/;"	f
+copyout	vm.c	/^int copyout(pagetable_t pagetable, uint64 dstva, char *src, uint64 len)$/;"	f
+cpuid	proc.c	/^int cpuid()$/;"	f
+create	file.c	/^static struct inode *create(char *path, short type)$/;"	f	file:
+curr_proc	proc.c	/^struct proc *curr_proc()$/;"	f
+current_proc	proc.c	/^struct proc *current_proc;$/;"	v	typeref:struct:proc
+data	bio.h	/^	uchar data[BSIZE];$/;"	m	struct:buf
+data	queue.h	/^	int data[QUEUE_SIZE];$/;"	m	struct:queue
+debugf	log.h	91;"	d
+debugf	log.h	98;"	d
+desc	virtio_disk.c	/^	struct virtq_desc *desc;$/;"	m	struct:disk	typeref:struct:disk::virtq_desc	file:
+dev	bio.h	/^	uint dev;$/;"	m	struct:buf
+dev	file.h	/^	uint dev; \/\/ Device number$/;"	m	struct:inode
+devintr	trap.c	/^void devintr(uint64 cause)$/;"	f
+digits	printf.c	/^static char digits[] = "0123456789abcdef";$/;"	v	file:
+dinode	fs.h	/^struct dinode {$/;"	s
+dirent	fs.h	/^struct dirent {$/;"	s
+dirlink	fs.c	/^int dirlink(struct inode *dp, char *name, uint inum)$/;"	f
+dirlookup	fs.c	/^struct inode *dirlookup(struct inode *dp, char *name, uint *poff)$/;"	f
+dirls	fs.c	/^int dirls(struct inode *dp)$/;"	f
+disk	bio.h	/^	int disk; \/\/ does disk "own" buf?$/;"	m	struct:buf
+disk	virtio_disk.c	/^static struct disk {$/;"	s	file:
+disk	virtio_disk.c	/^} __attribute__((aligned(PGSIZE))) disk;$/;"	v	typeref:struct:disk	file:
+dummy	string.c	/^void dummy(int _, ...)$/;"	f
+either_copyin	vm.c	/^int either_copyin(int user_src, uint64 src, char *dst, uint64 len)$/;"	f
+either_copyout	vm.c	/^int either_copyout(int user_dst, uint64 dst, char *src, uint64 len)$/;"	f
+empty	queue.h	/^	int empty;$/;"	m	struct:queue
+epc	trap.h	/^	\/*  24 *\/ uint64 epc; \/\/ saved user program counter$/;"	m	struct:trapframe
+errorf	log.h	58;"	d
+errorf	log.h	65;"	d
+exec	proc.c	/^int exec(char *path, char **argv)$/;"	f
+exit	proc.c	/^void exit(int code)$/;"	f
+exit_code	proc.h	/^	uint64 exit_code;$/;"	m	struct:proc
+f	initproc.py	/^    f = open("initproc.S", mode="w")$/;"	v
+f	kernelld.py	/^    f = open("kernel_app.ld", mode="w")$/;"	v
+fdalloc	proc.c	/^int fdalloc(struct file *f)$/;"	f
+fetch_task	proc.c	/^struct proc *fetch_task()$/;"	f
+fetchaddr	syscall.c	/^static inline uint64 fetchaddr(pagetable_t pagetable, uint64 va)$/;"	f	file:
+file	file.h	/^struct file {$/;"	s
+filealloc	file.c	/^struct file *filealloc()$/;"	f
+fileclose	file.c	/^void fileclose(struct file *f)$/;"	f
+fileopen	file.c	/^int fileopen(char *path, uint64 omode)$/;"	f
+filepool	file.c	/^struct file filepool[FILEPOOLSIZE];$/;"	v	typeref:struct:file
+files	proc.h	/^	struct file *files$/;"	m	struct:proc	typeref:struct:proc::file
+flags	virtio.h	/^	uint16 flags; \/\/ always zero$/;"	m	struct:virtq_avail
+flags	virtio.h	/^	uint16 flags; \/\/ always zero$/;"	m	struct:virtq_used
+flags	virtio.h	/^	uint16 flags;$/;"	m	struct:virtq_desc
+fork	proc.c	/^int fork()$/;"	f
+free	virtio_disk.c	/^	char free[NUM]; \/\/ is a descriptor free?$/;"	m	struct:disk	file:
+free_chain	virtio_disk.c	/^static void free_chain(int i)$/;"	f	file:
+free_desc	virtio_disk.c	/^static void free_desc(int i)$/;"	f	file:
+freelist	kalloc.c	/^	struct linklist *freelist;$/;"	m	struct:__anon5	typeref:struct:__anon5::linklist	file:
+freepagetable	proc.c	/^void freepagetable(pagetable_t pagetable, uint64 max_page)$/;"	f
+freeproc	proc.c	/^void freeproc(struct proc *p)$/;"	f
+freerange	kalloc.c	/^void freerange(void *pa_start, void *pa_end)$/;"	f
+freewalk	vm.c	/^void freewalk(pagetable_t pagetable)$/;"	f
+front	queue.h	/^	int front;$/;"	m	struct:queue
+fsinit	fs.c	/^void fsinit()$/;"	f
+get_cycle	timer.c	/^uint64 get_cycle()$/;"	f
+gp	trap.h	/^	\/*  56 *\/ uint64 gp;$/;"	m	struct:trapframe
+head	bio.c	/^	struct buf head;$/;"	m	struct:__anon2	typeref:struct:__anon2::buf	file:
+ialloc	fs.c	/^struct inode *ialloc(uint dev, short type)$/;"	f
+id	virtio.h	/^	uint32 id; \/\/ index of start of completed descriptor chain$/;"	m	struct:virtq_used_elem
+idle	proc.c	/^struct proc idle;$/;"	v	typeref:struct:proc
+idup	fs.c	/^struct inode *idup(struct inode *ip)$/;"	f
+idx	virtio.h	/^	uint16 idx; \/\/ device increments when it adds a ring[] entry$/;"	m	struct:virtq_used
+idx	virtio.h	/^	uint16 idx; \/\/ driver will write ring[idx] next$/;"	m	struct:virtq_avail
+iget	fs.c	/^static struct inode *iget(uint dev, uint inum)$/;"	f	file:
+info	virtio_disk.c	/^	} info[NUM];$/;"	m	struct:disk	typeref:struct:disk::__anon4	file:
+infof	log.h	80;"	d
+infof	log.h	87;"	d
+init_queue	queue.c	/^void init_queue(struct queue *q)$/;"	f
+init_stdio	proc.c	/^int init_stdio(struct proc *p)$/;"	f
+inode	file.h	/^struct inode {$/;"	s
+inode	fs.c	/^	struct inode inode[NINODE];$/;"	m	struct:__anon3	typeref:struct:__anon3::inode	file:
+inoderead	file.c	/^uint64 inoderead(struct file *f, uint64 va, uint64 len)$/;"	f
+inodestart	fs.h	/^	uint inodestart; \/\/ Block number of first inode block$/;"	m	struct:superblock
+inodewrite	file.c	/^uint64 inodewrite(struct file *f, uint64 va, uint64 len)$/;"	f
+intr_get	riscv.h	/^static inline int intr_get()$/;"	f
+intr_off	riscv.h	/^static inline void intr_off()$/;"	f
+intr_on	riscv.h	/^static inline void intr_on()$/;"	f
+inum	file.h	/^	uint inum; \/\/ Inode number$/;"	m	struct:inode
+inum	fs.h	/^	ushort inum;$/;"	m	struct:dirent
+ip	file.h	/^	struct inode *ip; \/\/ FD_INODE$/;"	m	struct:file	typeref:struct:file::inode
+iput	fs.c	/^void iput(struct inode *ip)$/;"	f
+itable	fs.c	/^} itable;$/;"	v	typeref:struct:__anon3
+itrunc	fs.c	/^void itrunc(struct inode *ip)$/;"	f
+iupdate	fs.c	/^void iupdate(struct inode *ip)$/;"	f
+ivalid	fs.c	/^void ivalid(struct inode *ip)$/;"	f
+kalloc	kalloc.c	/^void *kalloc()$/;"	f
+kernel_hartid	trap.h	/^	\/*  32 *\/ uint64 kernel_hartid; \/\/ saved kernel tp$/;"	m	struct:trapframe
+kernel_pagetable	vm.c	/^pagetable_t kernel_pagetable;$/;"	v
+kernel_satp	trap.h	/^	\/*   0 *\/ uint64 kernel_satp; \/\/ kernel page table$/;"	m	struct:trapframe
+kernel_sp	trap.h	/^	\/*   8 *\/ uint64 kernel_sp; \/\/ top of process's kernel stack$/;"	m	struct:trapframe
+kernel_trap	trap.h	/^	\/*  16 *\/ uint64 kernel_trap; \/\/ usertrap()$/;"	m	struct:trapframe
+kernelret	kernelvec.S	/^kernelret:$/;"	l
+kerneltrap	trap.c	/^void kerneltrap()$/;"	f
+kernelvec	kernelvec.S	/^kernelvec:$/;"	l
+kfree	kalloc.c	/^void kfree(void *pa)$/;"	f
+kinit	kalloc.c	/^void kinit()$/;"	f
+kmem	kalloc.c	/^} kmem;$/;"	v	typeref:struct:__anon5
+kstack	proc.c	/^__attribute__((aligned(16))) char kstack[NPROC][PAGE_SIZE];$/;"	v
+kstack	proc.h	/^	uint64 kstack; \/\/ Virtual address of kernel stack$/;"	m	struct:proc
+kvm_init	vm.c	/^void kvm_init()$/;"	f
+kvmmake	vm.c	/^pagetable_t kvmmake()$/;"	f
+kvmmap	vm.c	/^void kvmmap(pagetable_t kpgtbl, uint64 va, uint64 pa, uint64 sz, int perm)$/;"	f
+len	virtio.h	/^	uint32 len;$/;"	m	struct:virtq_desc
+len	virtio.h	/^	uint32 len;$/;"	m	struct:virtq_used_elem
+linklist	kalloc.c	/^struct linklist {$/;"	s	file:
+load_init_app	loader.c	/^int load_init_app()$/;"	f
+magic	fs.h	/^	uint magic; \/\/ Must be FSMAGIC$/;"	m	struct:superblock
+main	main.c	/^void main()$/;"	f
+mappages	vm.c	/^int mappages(pagetable_t pagetable, uint64 va, uint64 size, uint64 pa, int perm)$/;"	f
+max_page	proc.h	/^	uint64 max_page;$/;"	m	struct:proc
+memcmp	string.c	/^int memcmp(const void *v1, const void *v2, uint n)$/;"	f
+memcpy	string.c	/^void *memcpy(void *dst, const void *src, uint n)$/;"	f
+memmove	string.c	/^void *memmove(void *dst, const void *src, uint n)$/;"	f
+memset	string.c	/^void *memset(void *dst, int c, uint n)$/;"	f
+name	fs.h	/^	char name[DIRSIZ];$/;"	m	struct:dirent
+namei	fs.c	/^struct inode *namei(char *path)$/;"	f
+nblocks	fs.h	/^	uint nblocks; \/\/ Number of data blocks$/;"	m	struct:superblock
+next	bio.h	/^	struct buf *next;$/;"	m	struct:buf	typeref:struct:buf::buf
+next	kalloc.c	/^	struct linklist *next;$/;"	m	struct:linklist	typeref:struct:linklist::linklist	file:
+next	virtio.h	/^	uint16 next;$/;"	m	struct:virtq_desc
+ninodes	fs.h	/^	uint ninodes; \/\/ Number of inodes.$/;"	m	struct:superblock
+off	file.h	/^	uint off;$/;"	m	struct:file
+ops	virtio_disk.c	/^	struct virtio_blk_req ops[NUM];$/;"	m	struct:disk	typeref:struct:disk::virtio_blk_req	file:
+os	initproc.py	/^import os$/;"	i
+os	kernelld.py	/^import os$/;"	i
+pad	fs.h	/^	short pad[3];$/;"	m	struct:dinode
+pages	virtio_disk.c	/^	char pages[2 * PGSIZE];$/;"	m	struct:disk	file:
+pagetable	proc.h	/^	pagetable_t pagetable; \/\/ User page table$/;"	m	struct:proc
+pagetable_t	riscv.h	/^typedef uint64 *pagetable_t; \/\/ 512 PTEs$/;"	t
+panic	log.h	112;"	d
+parent	proc.h	/^	struct proc *parent; \/\/ Parent process$/;"	m	struct:proc	typeref:struct:proc::proc
+parser	initproc.py	/^    parser = argparse.ArgumentParser()$/;"	v
+pde_t	riscv.h	/^typedef uint64 pde_t;$/;"	t
+pid	proc.h	/^	int pid; \/\/ Process ID$/;"	m	struct:proc
+plic_claim	plic.c	/^int plic_claim()$/;"	f
+plic_complete	plic.c	/^void plic_complete(int irq)$/;"	f
+plicinit	plic.c	/^void plicinit()$/;"	f
+pool	proc.c	/^struct proc pool[NPROC];$/;"	v	typeref:struct:proc
+pop_queue	queue.c	/^int pop_queue(struct queue *q)$/;"	f
+prev	bio.h	/^	struct buf *prev; \/\/ LRU cache list$/;"	m	struct:buf	typeref:struct:buf::buf
+printf	printf.c	/^void printf(char *fmt, ...)$/;"	f
+printint	printf.c	/^static void printint(int xx, int base, int sign)$/;"	f	file:
+printptr	printf.c	/^static void printptr(uint64 x)$/;"	f	file:
+proc	proc.h	/^struct proc {$/;"	s
+proc_init	proc.c	/^void proc_init()$/;"	f
+procstate	proc.h	/^enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };$/;"	g
+pte_t	riscv.h	/^typedef uint64 pte_t;$/;"	t
+push_argv	proc.c	/^int push_argv(struct proc *p, char **argv)$/;"	f
+push_queue	queue.c	/^void push_queue(struct queue *q, int value)$/;"	f
+queue	queue.h	/^struct queue {$/;"	s
+r_mcounteren	riscv.h	/^static inline uint64 r_mcounteren()$/;"	f
+r_medeleg	riscv.h	/^static inline uint64 r_medeleg()$/;"	f
+r_mhartid	riscv.h	/^static inline uint64 r_mhartid()$/;"	f
+r_mideleg	riscv.h	/^static inline uint64 r_mideleg()$/;"	f
+r_mie	riscv.h	/^static inline uint64 r_mie()$/;"	f
+r_mstatus	riscv.h	/^static inline uint64 r_mstatus()$/;"	f
+r_ra	riscv.h	/^static inline uint64 r_ra()$/;"	f
+r_satp	riscv.h	/^static inline uint64 r_satp()$/;"	f
+r_scause	riscv.h	/^static inline uint64 r_scause()$/;"	f
+r_sepc	riscv.h	/^static inline uint64 r_sepc()$/;"	f
+r_sie	riscv.h	/^static inline uint64 r_sie()$/;"	f
+r_sip	riscv.h	/^static inline uint64 r_sip()$/;"	f
+r_sp	riscv.h	/^static inline uint64 r_sp()$/;"	f
+r_sstatus	riscv.h	/^static inline uint64 r_sstatus()$/;"	f
+r_stval	riscv.h	/^static inline uint64 r_stval()$/;"	f
+r_stvec	riscv.h	/^static inline uint64 r_stvec()$/;"	f
+r_time	riscv.h	/^static inline uint64 r_time()$/;"	f
+r_tp	riscv.h	/^static inline uint64 r_tp()$/;"	f
+ra	proc.h	/^	uint64 ra;$/;"	m	struct:context
+ra	trap.h	/^	\/*  40 *\/ uint64 ra;$/;"	m	struct:trapframe
+readable	file.h	/^	char readable;$/;"	m	struct:file
+readi	fs.c	/^int readi(struct inode *ip, int user_dst, uint64 dst, uint off, uint n)$/;"	f
+readsb	fs.c	/^static void readsb(int dev, struct superblock *sb)$/;"	f	file:
+ref	file.h	/^	int ref; \/\/ Reference count$/;"	m	struct:inode
+ref	file.h	/^	int ref; \/\/ reference count$/;"	m	struct:file
+refcnt	bio.h	/^	uint refcnt;$/;"	m	struct:buf
+reserved	virtio.h	/^	uint32 reserved;$/;"	m	struct:virtio_blk_req
+ring	virtio.h	/^	struct virtq_used_elem ring[NUM];$/;"	m	struct:virtq_used	typeref:struct:virtq_used::virtq_used_elem
+ring	virtio.h	/^	uint16 ring[NUM]; \/\/ descriptor numbers of chain heads$/;"	m	struct:virtq_avail
+root_dir	fs.c	/^struct inode *root_dir()$/;"	f
+s0	proc.h	/^	uint64 s0;$/;"	m	struct:context
+s0	trap.h	/^	\/*  96 *\/ uint64 s0;$/;"	m	struct:trapframe
+s1	proc.h	/^	uint64 s1;$/;"	m	struct:context
+s1	trap.h	/^	\/* 104 *\/ uint64 s1;$/;"	m	struct:trapframe
+s10	proc.h	/^	uint64 s10;$/;"	m	struct:context
+s10	trap.h	/^	\/* 240 *\/ uint64 s10;$/;"	m	struct:trapframe
+s11	proc.h	/^	uint64 s11;$/;"	m	struct:context
+s11	trap.h	/^	\/* 248 *\/ uint64 s11;$/;"	m	struct:trapframe
+s2	proc.h	/^	uint64 s2;$/;"	m	struct:context
+s2	trap.h	/^	\/* 176 *\/ uint64 s2;$/;"	m	struct:trapframe
+s3	proc.h	/^	uint64 s3;$/;"	m	struct:context
+s3	trap.h	/^	\/* 184 *\/ uint64 s3;$/;"	m	struct:trapframe
+s4	proc.h	/^	uint64 s4;$/;"	m	struct:context
+s4	trap.h	/^	\/* 192 *\/ uint64 s4;$/;"	m	struct:trapframe
+s5	proc.h	/^	uint64 s5;$/;"	m	struct:context
+s5	trap.h	/^	\/* 200 *\/ uint64 s5;$/;"	m	struct:trapframe
+s6	proc.h	/^	uint64 s6;$/;"	m	struct:context
+s6	trap.h	/^	\/* 208 *\/ uint64 s6;$/;"	m	struct:trapframe
+s7	proc.h	/^	uint64 s7;$/;"	m	struct:context
+s7	trap.h	/^	\/* 216 *\/ uint64 s7;$/;"	m	struct:trapframe
+s8	proc.h	/^	uint64 s8;$/;"	m	struct:context
+s8	trap.h	/^	\/* 224 *\/ uint64 s8;$/;"	m	struct:trapframe
+s9	proc.h	/^	uint64 s9;$/;"	m	struct:context
+s9	trap.h	/^	\/* 232 *\/ uint64 s9;$/;"	m	struct:trapframe
+safestrcpy	string.c	/^char *safestrcpy(char *s, const char *t, int n)$/;"	f
+sb	fs.c	/^struct superblock sb;$/;"	v	typeref:struct:superblock
+sbi_call	sbi.c	/^int inline sbi_call(uint64 which, uint64 arg0, uint64 arg1, uint64 arg2)$/;"	f
+sched	proc.c	/^void sched()$/;"	f
+scheduler	proc.c	/^void scheduler()$/;"	f
+sec	timer.h	/^	uint64 sec; \/\/ 自 Unix 纪元起的秒数$/;"	m	struct:__anon1
+sector	virtio.h	/^	uint64 sector;$/;"	m	struct:virtio_blk_req
+set_kerneltrap	trap.c	/^void set_kerneltrap()$/;"	f
+set_next_timer	timer.c	/^void set_next_timer()$/;"	f
+set_timer	sbi.c	/^void set_timer(uint64 stime)$/;"	f
+set_usertrap	trap.c	/^void set_usertrap()$/;"	f
+sfence_vma	riscv.h	/^static inline void sfence_vma()$/;"	f
+show_all_files	file.c	/^int show_all_files()$/;"	f
+shutdown	sbi.c	/^void shutdown()$/;"	f
+size	file.h	/^	uint size;$/;"	m	struct:inode
+size	fs.h	/^	uint size; \/\/ Size of file (bytes)$/;"	m	struct:dinode
+size	fs.h	/^	uint size; \/\/ Size of file system image (blocks)$/;"	m	struct:superblock
+sp	proc.h	/^	uint64 sp;$/;"	m	struct:context
+sp	trap.h	/^	\/*  48 *\/ uint64 sp;$/;"	m	struct:trapframe
+state	proc.h	/^	enum procstate state; \/\/ Process state$/;"	m	struct:proc	typeref:enum:proc::procstate
+status	virtio_disk.c	/^		char status;$/;"	m	struct:disk::__anon4	file:
+stdio_init	file.c	/^struct file *stdio_init(int fd)$/;"	f
+strlen	string.c	/^int strlen(const char *s)$/;"	f
+strncmp	string.c	/^int strncmp(const char *p, const char *q, uint n)$/;"	f
+strncpy	string.c	/^char *strncpy(char *s, const char *t, int n)$/;"	f
+superblock	fs.h	/^struct superblock {$/;"	s
+swtch	switch.S	/^swtch:$/;"	l
+sys_clone	syscall.c	/^uint64 sys_clone()$/;"	f
+sys_close	syscall.c	/^uint64 sys_close(int fd)$/;"	f
+sys_exec	syscall.c	/^uint64 sys_exec(uint64 path, uint64 uargv)$/;"	f
+sys_exit	syscall.c	/^__attribute__((noreturn)) void sys_exit(int code)$/;"	f
+sys_fstat	syscall.c	/^int sys_fstat(int fd,uint64 stat){$/;"	f
+sys_getpid	syscall.c	/^uint64 sys_getpid()$/;"	f
+sys_getppid	syscall.c	/^uint64 sys_getppid()$/;"	f
+sys_gettimeofday	syscall.c	/^uint64 sys_gettimeofday(uint64 val, int _tz)$/;"	f
+sys_linkat	syscall.c	/^int sys_linkat(int olddirfd, uint64 oldpath, int newdirfd, uint64 newpath, uint64 flags){$/;"	f
+sys_openat	syscall.c	/^uint64 sys_openat(uint64 va, uint64 omode, uint64 _flags)$/;"	f
+sys_read	syscall.c	/^uint64 sys_read(int fd, uint64 va, uint64 len)$/;"	f
+sys_sched_yield	syscall.c	/^uint64 sys_sched_yield()$/;"	f
+sys_set_priority	syscall.c	/^uint64 sys_set_priority(long long prio)$/;"	f
+sys_spawn	syscall.c	/^uint64 sys_spawn(uint64 va)$/;"	f
+sys_unlinkat	syscall.c	/^int sys_unlinkat(int dirfd, uint64 name, uint64 flags){$/;"	f
+sys_wait	syscall.c	/^uint64 sys_wait(int pid, uint64 va)$/;"	f
+sys_write	syscall.c	/^uint64 sys_write(int fd, uint64 va, uint64 len)$/;"	f
+syscall	syscall.c	/^void syscall()$/;"	f
+t0	trap.h	/^	\/*  72 *\/ uint64 t0;$/;"	m	struct:trapframe
+t1	trap.h	/^	\/*  80 *\/ uint64 t1;$/;"	m	struct:trapframe
+t2	trap.h	/^	\/*  88 *\/ uint64 t2;$/;"	m	struct:trapframe
+t3	trap.h	/^	\/* 256 *\/ uint64 t3;$/;"	m	struct:trapframe
+t4	trap.h	/^	\/* 264 *\/ uint64 t4;$/;"	m	struct:trapframe
+t5	trap.h	/^	\/* 272 *\/ uint64 t5;$/;"	m	struct:trapframe
+t6	trap.h	/^	\/* 280 *\/ uint64 t6;$/;"	m	struct:trapframe
+tail	queue.h	/^	int tail;$/;"	m	struct:queue
+task_queue	proc.c	/^struct queue task_queue;$/;"	v	typeref:struct:queue
+threadid	proc.c	/^int threadid()$/;"	f
+timer_init	timer.c	/^void timer_init()$/;"	f
+tp	trap.h	/^	\/*  64 *\/ uint64 tp;$/;"	m	struct:trapframe
+tracef	log.h	102;"	d
+tracef	log.h	109;"	d
+trampoline	trampoline.S	/^trampoline:$/;"	l
+trap_init	trap.c	/^void trap_init()$/;"	f
+trapframe	proc.c	/^__attribute__((aligned(4096))) char trapframe[NPROC][TRAP_PAGE_SIZE];$/;"	v
+trapframe	proc.h	/^	struct trapframe *trapframe; \/\/ data page for trampoline.S$/;"	m	struct:proc	typeref:struct:proc::trapframe
+trapframe	trap.h	/^struct trapframe {$/;"	s
+type	file.h	/^	enum { FD_NONE = 0, FD_INODE, FD_STDIO } type;$/;"	m	struct:file	typeref:enum:file::__anon6
+type	file.h	/^	short type; \/\/ copy of disk inode$/;"	m	struct:inode
+type	fs.h	/^	short type; \/\/ File type$/;"	m	struct:dinode
+type	virtio.h	/^	uint32 type; \/\/ VIRTIO_BLK_T_IN or ..._OUT$/;"	m	struct:virtio_blk_req
+uchar	types.h	/^typedef unsigned char uchar;$/;"	t
+uint	types.h	/^typedef unsigned int uint;$/;"	t
+uint16	types.h	/^typedef unsigned short uint16;$/;"	t
+uint32	types.h	/^typedef unsigned int uint32;$/;"	t
+uint64	types.h	/^typedef unsigned long uint64;$/;"	t
+uint8	types.h	/^typedef unsigned char uint8;$/;"	t
+unknown_trap	trap.c	/^void unknown_trap()$/;"	f
+unused	virtio.h	/^	uint16 unused;$/;"	m	struct:virtq_avail
+usec	timer.h	/^	uint64 usec; \/\/ 微秒数$/;"	m	struct:__anon1
+used	virtio_disk.c	/^	struct virtq_used *used;$/;"	m	struct:disk	typeref:struct:disk::virtq_used	file:
+used_idx	virtio_disk.c	/^	uint16 used_idx; \/\/ we've looked this far in used[2..NUM].$/;"	m	struct:disk	file:
+useraddr	vm.c	/^uint64 useraddr(pagetable_t pagetable, uint64 va)$/;"	f
+userret	trampoline.S	/^userret:$/;"	l
+usertrap	trap.c	/^void usertrap()$/;"	f
+usertrapret	trap.c	/^void usertrapret()$/;"	f
+uservec	trampoline.S	/^uservec:$/;"	l
+ushort	types.h	/^typedef unsigned short ushort;$/;"	t
+ustack	proc.h	/^	uint64 ustack; \/\/ Virtual address of kernel stack$/;"	m	struct:proc
+uvmcopy	vm.c	/^int uvmcopy(pagetable_t old, pagetable_t new, uint64 max_page)$/;"	f
+uvmcreate	vm.c	/^pagetable_t uvmcreate(uint64 trapframe)$/;"	f
+uvmfree	vm.c	/^void uvmfree(pagetable_t pagetable, uint64 max_page)$/;"	f
+uvmunmap	vm.c	/^void uvmunmap(pagetable_t pagetable, uint64 va, uint64 npages, int do_free)$/;"	f
+valid	bio.h	/^	int valid; \/\/ has data been read from disk?$/;"	m	struct:buf
+valid	file.h	/^	int valid; \/\/ inode has been read from disk?$/;"	m	struct:inode
+virtio_blk_req	virtio.h	/^struct virtio_blk_req {$/;"	s
+virtio_disk_init	virtio_disk.c	/^void virtio_disk_init()$/;"	f
+virtio_disk_intr	virtio_disk.c	/^void virtio_disk_intr()$/;"	f
+virtio_disk_rw	virtio_disk.c	/^void virtio_disk_rw(struct buf *b, int write)$/;"	f
+virtq_avail	virtio.h	/^struct virtq_avail {$/;"	s
+virtq_desc	virtio.h	/^struct virtq_desc {$/;"	s
+virtq_used	virtio.h	/^struct virtq_used {$/;"	s
+virtq_used_elem	virtio.h	/^struct virtq_used_elem {$/;"	s
+w_mcounteren	riscv.h	/^static inline void w_mcounteren(uint64 x)$/;"	f
+w_medeleg	riscv.h	/^static inline void w_medeleg(uint64 x)$/;"	f
+w_mepc	riscv.h	/^static inline void w_mepc(uint64 x)$/;"	f
+w_mideleg	riscv.h	/^static inline void w_mideleg(uint64 x)$/;"	f
+w_mie	riscv.h	/^static inline void w_mie(uint64 x)$/;"	f
+w_mscratch	riscv.h	/^static inline void w_mscratch(uint64 x)$/;"	f
+w_mstatus	riscv.h	/^static inline void w_mstatus(uint64 x)$/;"	f
+w_mtvec	riscv.h	/^static inline void w_mtvec(uint64 x)$/;"	f
+w_satp	riscv.h	/^static inline void w_satp(uint64 x)$/;"	f
+w_sepc	riscv.h	/^static inline void w_sepc(uint64 x)$/;"	f
+w_sie	riscv.h	/^static inline void w_sie(uint64 x)$/;"	f
+w_sip	riscv.h	/^static inline void w_sip(uint64 x)$/;"	f
+w_sscratch	riscv.h	/^static inline void w_sscratch(uint64 x)$/;"	f
+w_sstatus	riscv.h	/^static inline void w_sstatus(uint64 x)$/;"	f
+w_stvec	riscv.h	/^static inline void w_stvec(uint64 x)$/;"	f
+w_tp	riscv.h	/^static inline void w_tp(uint64 x)$/;"	f
+wait	proc.c	/^int wait(int pid, int *code)$/;"	f
+walk	vm.c	/^pte_t *walk(pagetable_t pagetable, uint64 va, int alloc)$/;"	f
+walkaddr	vm.c	/^uint64 walkaddr(pagetable_t pagetable, uint64 va)$/;"	f
+warnf	log.h	69;"	d
+warnf	log.h	76;"	d
+writable	file.h	/^	char writable;$/;"	m	struct:file
+writei	fs.c	/^int writei(struct inode *ip, int user_src, uint64 src, uint off, uint n)$/;"	f
+yield	proc.c	/^void yield()$/;"	f

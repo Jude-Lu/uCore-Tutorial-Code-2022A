@@ -4,6 +4,7 @@ all: build
 ch ?= 1
 K = os$(ch)
 U = user
+F = nfs
 
 TOOLPREFIX = riscv64-unknown-elf-
 CC = $(TOOLPREFIX)gcc
@@ -29,7 +30,6 @@ ifeq (,$(findstring link_app.o,$(OBJS)))
 	AS_OBJS += $(BUILDDIR)/$K/link_app.o
 endif
 else ifeq ($(shell expr $(ch) \>= 6), 1)
-F = $K/nfs
 ifeq (,$(findstring initproc.o,$(OBJS)))
 	AS_OBJS += $(BUILDDIR)/$K/initproc.o
 endif
@@ -109,7 +109,7 @@ endif
 
 build: build/kernel
 
-ifeq ($(shell expr $(ch) \!= 1)$(shell expr $(ch) \!= 6), 00)
+ifeq ($(shell expr $(ch) \!= 1)$(shell expr $(ch) \!= 6)$(shell expr $(ch) \!= 8), 111)
 build/kernel: $(OBJS) os$(ch)/kernel_app.ld
 	$(LD) $(LDFLAGS) -T os$(ch)/kernel_app.ld -o $(BUILDDIR)/kernel $(OBJS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
@@ -126,6 +126,7 @@ endif
 clean:
 	rm -rf $(BUILDDIR)
 	make -C $(U) clean
+	make -C $(F) clean
 
 # BOARD
 BOARD		?= qemu

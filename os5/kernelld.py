@@ -1,6 +1,6 @@
 import os
 
-TARGET_DIR = "../user/target/"
+TARGET_DIR = "../user/target/bin/"
 
 if __name__ == '__main__':
     f = open("kernel_app.ld", mode="w")
@@ -38,10 +38,11 @@ SECTIONS
         *(.data)
 ''')
     for (idx, _) in enumerate(apps):
-        f.write('        . = ALIGN(0x8);\n')
+        f.write('        . = ALIGN(0x1000);\n')
         f.write('        *(.data.app{})\n'.format(idx))
     f.write(
 '''
+        . = ALIGN(0x1000);
         *(.data.*)
         *(.sdata .sdata.*)
     }
