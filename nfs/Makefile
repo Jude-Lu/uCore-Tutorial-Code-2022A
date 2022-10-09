@@ -11,4 +11,4 @@ fs.img: $(FS_FUSE)
 	./$(FS_FUSE) $@ $(wildcard $(U)/$(USER_BIN_DIR)/*)
 
 clean:
-	rm *.img $(FS_FUSE)
+	rm -f *.img $(FS_FUSE)
