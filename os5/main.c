@@ -4,8 +4,6 @@
 #include "timer.h"
 #include "trap.h"
 
-pagetable_t kernel_pagetable;
-
 extern char e_text[]; // kernel.ld sets this to end of kernel code.
 extern char trampoline[];
 
@@ -37,7 +35,7 @@ pagetable_t kvmmake()
 // and enable paging.
 void kvm_init()
 {
-	kernel_pagetable = kvmmake();
+	pagetable_t kernel_pagetable = kvmmake();
 	w_satp(MAKE_SATP(kernel_pagetable));
 	sfence_vma();
 	infof("enable pageing at %p", r_satp());
