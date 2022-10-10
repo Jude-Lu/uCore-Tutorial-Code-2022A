@@ -1,8 +1,8 @@
 #ifndef VM_H
 #define VM_H
 
-#include "riscv.h"
-#include "types.h"
+#include "../utils/riscv.h"
+#include "../utils/types.h"
 
 void kvm_init();
 void kvmmap(pagetable_t, uint64, uint64, uint64, int);

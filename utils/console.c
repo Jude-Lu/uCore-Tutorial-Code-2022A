@@ -8,3 +8,7 @@ void consputc(int c) {
 void console_init() {
     // DO NOTHING
 }
+
+int consgetc() {
+    return console_getchar();
+}

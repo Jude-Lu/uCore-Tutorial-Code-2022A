@@ -1,8 +1,8 @@
 #include "syscall.h"
-#include "console.h"
+#include "../utils/console.h"
 #include "defs.h"
 #include "loader.h"
-#include "syscall_ids.h"
+#include "../utils/syscall_ids.h"
 #include "timer.h"
 #include "trap.h"
 
