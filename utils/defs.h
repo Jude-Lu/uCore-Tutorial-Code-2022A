@@ -1,13 +1,14 @@
 #ifndef DEFS_H
 #define DEFS_H
 
-#include "../utils/const.h"
-#include "../utils/log.h"
-#include "../utils/printf.h"
-#include "../utils/riscv.h"
-#include "../utils/sbi.h"
-#include "../utils/string.h"
-#include "../utils/types.h"
+#include "const.h"
+#include "log.h"
+#include "printf.h"
+#include "riscv.h"
+#include "sbi.h"
+#include "string.h"
+#include "types.h"
+#include "syscall.h"
 
 // number of elements in fixed-size array
 #define NELEM(x) (sizeof(x) / sizeof((x)[0]))

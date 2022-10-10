@@ -1,7 +1,8 @@
-#include "trap.h"
-#include "defs.h"
+#include "../utils/trap.h"
+#include "../utils/defs.h"
 #include "loader.h"
-#include "syscall.h"
+#include "os2_syscall.h"
+#include "os2_trap.h"
 
 extern char trampoline[], uservec[], boot_stack_top[];
 extern void *userret(uint64);
@@ -24,7 +25,7 @@ void usertrap(struct trapframe *trapframe)
 	uint64 cause = r_scause();
 	if (cause == UserEnvCall) {
 		trapframe->epc += 4;
-		syscall();
+		syscall(trapframe);
 		return usertrapret(trapframe, (uint64)boot_stack_top);
 	}
 	switch (cause) {
