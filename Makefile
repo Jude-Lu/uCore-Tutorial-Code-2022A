@@ -35,11 +35,11 @@ HEADER_DEP = $(addsuffix .d, $(basename $(C_OBJS)))
 
 ifeq ($(shell expr $(ch) \<= 5)$(shell expr $(ch) \>= 2), 11)
 ifeq (,$(findstring link_app.o,$(OBJS)))
-	AS_OBJS += $(BUILDDIR)/$K/link_app.o
+	AS_OBJS += $K/link_app.o
 endif
 else ifeq ($(shell expr $(ch) \>= 6), 1)
 ifeq (,$(findstring initproc.o,$(OBJS)))
-	AS_OBJS += $(BUILDDIR)/$K/initproc.o
+	AS_OBJS += $K/initproc.o
 endif
 endif
 

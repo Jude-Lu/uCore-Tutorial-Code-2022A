@@ -1,5 +1,4 @@
 #include "sbi.h"
-#include "types.h"
 
 const uint64 SBI_SET_TIMER = 0;
 const uint64 SBI_CONSOLE_PUTCHAR = 1;
@@ -33,4 +32,8 @@ int console_getchar() {
 
 void shutdown() {
     sbi_call(SBI_SHUTDOWN, 0, 0, 0);
+}
+
+void set_timer(uint64 stime) {
+    sbi_call(SBI_SET_TIMER, stime, 0, 0);
 }
