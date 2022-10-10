@@ -1,7 +1,7 @@
 #ifndef TRAP_H
 #define TRAP_H
 
-#include "types.h"
+#include "../utils/types.h"
 
 struct trapframe {
 	/*   0 */ uint64 kernel_satp; // kernel page table

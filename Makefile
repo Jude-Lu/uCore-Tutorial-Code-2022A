@@ -120,7 +120,7 @@ endif
 
 build: build/kernel
 
-ifeq ($(shell expr $(ch) \!= 1)$(shell expr $(ch) \!= 6)$(shell expr $(ch) \!= 8), 111)
+ifeq ($(shell expr $(ch) \!= 1)$(shell expr $(ch) \!= 6)$(shell expr $(ch) \!= 7)$(shell expr $(ch) \!= 8), 1111)
 build/kernel: $(OBJS) os$(ch)/kernel_app.ld
 	$(LD) $(LDFLAGS) -T os$(ch)/kernel_app.ld -o $(BUILDDIR)/kernel $(OBJS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm

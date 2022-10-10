@@ -1,16 +1,16 @@
 #ifndef DEFS_H
 #define DEFS_H
 
-#include "const.h"
+#include "../utils/const.h"
 #include "file.h"
 #include "kalloc.h"
-#include "log.h"
-#include "printf.h"
+#include "../utils/log.h"
+#include "../utils/printf.h"
 #include "proc.h"
-#include "riscv.h"
-#include "sbi.h"
-#include "string.h"
-#include "types.h"
+#include "../utils/riscv.h"
+#include "../utils/sbi.h"
+#include "../utils/string.h"
+#include "../utils/types.h"
 #include "vm.h"
 
 // number of elements in fixed-size array
