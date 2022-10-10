@@ -1,4 +1,4 @@
-#include "console.h"
+#include "../utils/console.h"
 #include "defs.h"
 #include "loader.h"
 #include "trap.h"

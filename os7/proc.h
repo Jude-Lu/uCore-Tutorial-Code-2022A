@@ -1,8 +1,8 @@
 #ifndef PROC_H
 #define PROC_H
 
-#include "riscv.h"
-#include "types.h"
+#include "../utils/riscv.h"
+#include "../utils/types.h"
 
 #define NPROC (512)
 #define FD_BUFFER_SIZE (16)

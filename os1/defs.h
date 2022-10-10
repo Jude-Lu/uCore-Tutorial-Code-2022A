@@ -1,10 +1,10 @@
 #ifndef DEFS_H
 #define DEFS_H
 
-#include "log.h"
-#include "printf.h"
+#include "../utils/log.h"
+#include "../utils/printf.h"
 #include "../utils/riscv.h"
-#include "sbi.h"
+#include "../utils/sbi.h"
 #include "../utils/types.h"
 
 // number of elements in fixed-size array

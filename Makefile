@@ -35,11 +35,11 @@ HEADER_DEP = $(addsuffix .d, $(basename $(C_OBJS)))
 
 ifeq ($(shell expr $(ch) \<= 5)$(shell expr $(ch) \>= 2), 11)
 ifeq (,$(findstring link_app.o,$(OBJS)))
-	AS_OBJS += $(BUILDDIR)/$K/link_app.o
+	AS_OBJS += $K/link_app.o
 endif
 else ifeq ($(shell expr $(ch) \>= 6), 1)
 ifeq (,$(findstring initproc.o,$(OBJS)))
-	AS_OBJS += $(BUILDDIR)/$K/initproc.o
+	AS_OBJS += $K/initproc.o
 endif
 endif
 
@@ -120,7 +120,7 @@ endif
 
 build: build/kernel
 
-ifeq ($(shell expr $(ch) \!= 1)$(shell expr $(ch) \!= 6)$(shell expr $(ch) \!= 8), 111)
+ifeq ($(shell expr $(ch) \!= 1)$(shell expr $(ch) \!= 6)$(shell expr $(ch) \!= 7)$(shell expr $(ch) \!= 8), 1111)
 build/kernel: $(OBJS) os$(ch)/kernel_app.ld
 	$(LD) $(LDFLAGS) -T os$(ch)/kernel_app.ld -o $(BUILDDIR)/kernel $(OBJS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm

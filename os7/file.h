@@ -3,7 +3,7 @@
 
 #include "fs.h"
 #include "proc.h"
-#include "types.h"
+#include "../utils/types.h"
 
 #define PIPESIZE (512)
 #define FILEPOOLSIZE (NPROC * FD_BUFFER_SIZE)
@@ -37,12 +37,6 @@ struct file {
 	struct pipe *pipe; // FD_PIPE
 	struct inode *ip; // FD_INODE
 	uint off;
-};
-
-enum {
-	STDIN = 0,
-	STDOUT = 1,
-	STDERR = 2,
 };
 
 extern struct file filepool[FILEPOOLSIZE];

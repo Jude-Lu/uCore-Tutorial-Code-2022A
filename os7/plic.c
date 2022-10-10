@@ -1,8 +1,8 @@
 #include "plic.h"
-#include "log.h"
+#include "../utils/log.h"
 #include "proc.h"
-#include "riscv.h"
-#include "types.h"
+#include "../utils/riscv.h"
+#include "../utils/types.h"
 
 //
 // the riscv Platform Level Interrupt Controller (PLIC).

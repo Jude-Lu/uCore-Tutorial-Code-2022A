@@ -1,8 +1,8 @@
 #ifndef BATCH_H
 #define BATCH_H
 
-#include "const.h"
-#include "types.h"
+#include "../utils/const.h"
+#include "../utils/types.h"
 
 void loader_init();
 int run_next_app();

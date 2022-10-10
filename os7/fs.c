@@ -14,8 +14,8 @@
 #include "defs.h"
 #include "file.h"
 #include "proc.h"
-#include "riscv.h"
-#include "types.h"
+#include "../utils/riscv.h"
+#include "../utils/types.h"
 // there should be one superblock per disk device, but we run with
 // only one device
 struct superblock sb;

@@ -1,6 +1,6 @@
 #include "timer.h"
-#include "riscv.h"
-#include "sbi.h"
+#include "../utils/riscv.h"
+#include "../utils/sbi.h"
 
 /// read the `mtime` regiser
 uint64 get_cycle()

@@ -1,8 +1,8 @@
 #ifndef PROC_H
 #define PROC_H
 
-#include "riscv.h"
-#include "types.h"
+#include "../utils/riscv.h"
+#include "../utils/types.h"
 #include "sync.h"
 
 #define NPROC (128)

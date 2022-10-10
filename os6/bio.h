@@ -2,7 +2,7 @@
 #define BUF_H
 
 #include "fs.h"
-#include "types.h"
+#include "../utils/types.h"
 
 struct buf {
 	int valid; // has data been read from disk?

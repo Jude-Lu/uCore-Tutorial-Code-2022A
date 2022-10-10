@@ -1,6 +1,6 @@
 #include "vm.h"
 #include "defs.h"
-#include "riscv.h"
+#include "../utils/riscv.h"
 
 pagetable_t kernel_pagetable;
 

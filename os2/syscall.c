@@ -1,7 +1,7 @@
 #include "syscall.h"
 #include "defs.h"
 #include "loader.h"
-#include "syscall_ids.h"
+#include "../utils/syscall_ids.h"
 #include "trap.h"
 
 uint64 sys_write(int fd, char *str, uint len)

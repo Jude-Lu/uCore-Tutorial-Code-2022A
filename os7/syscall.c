@@ -1,8 +1,8 @@
 #include "syscall.h"
-#include "console.h"
+#include "../utils/console.h"
 #include "defs.h"
 #include "loader.h"
-#include "syscall_ids.h"
+#include "../utils/syscall_ids.h"
 #include "timer.h"
 #include "trap.h"
 
@@ -50,6 +50,7 @@ uint64 sys_write(int fd, uint64 va, uint64 len)
 		return inodewrite(f, va, len);
 	default:
 		panic("unknown file type %d\n", f->type);
+		__builtin_unreachable();
 	}
 }
 
@@ -72,6 +73,7 @@ uint64 sys_read(int fd, uint64 va, uint64 len)
 		return inoderead(f, va, len);
 	default:
 		panic("unknown file type %d\n", f->type);
+		__builtin_unreachable();
 	}
 }
 

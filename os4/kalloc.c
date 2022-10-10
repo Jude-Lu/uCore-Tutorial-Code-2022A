@@ -1,6 +1,6 @@
 #include "kalloc.h"
 #include "defs.h"
-#include "riscv.h"
+#include "../utils/riscv.h"
 
 extern char ekernel[];
 
