@@ -101,20 +101,17 @@ struct thread *fetch_task()
 		debugf("No task to fetch\n");
 		return t;
 	}
-	int tid = t->tid;
-	int pid = t->process->pid;
 	tracef("fetch index %d(pid=%d, tid=%d, addr=%p) from task queue", index,
-	       pid, tid, (uint64)t);
+	       t->process->pid, t->tid, (uint64)t);
 	return t;
 }
 
 void add_task(struct thread *t)
 {
 	int task_id = task_to_id(t);
-	int pid = t->process->pid;
 	push_queue(&task_queue, task_id);
 	tracef("add index %d(pid=%d, tid=%d, addr=%p) to task queue", task_id,
-	       pid, t->tid, (uint64)t);
+	       t->process->pid, t->tid, (uint64)t);
 }
 
 // Look in the process table for an UNUSED proc.
