@@ -8,6 +8,7 @@ F = nfs
 
 ## Add your module dir here
 UTIL = utils
+VM = kernel-vm
 ##
 
 TOOLPREFIX = riscv64-unknown-elf-
@@ -22,7 +23,7 @@ CP = cp
 BUILDDIR = build
 
 ## Append your module dir
-C_SRCS = $(wildcard $(K)/*.c $(UTIL)/*.c)
+C_SRCS = $(wildcard $(K)/*.c $(UTIL)/*.c $(VM)/*.c)
 ##
 
 AS_SRCS = $(wildcard $K/*.S)
