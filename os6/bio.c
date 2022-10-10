@@ -16,8 +16,8 @@
 #include "bio.h"
 #include "defs.h"
 #include "fs.h"
-#include "riscv.h"
-#include "types.h"
+#include "../utils/riscv.h"
+#include "../utils/types.h"
 #include "virtio.h"
 
 struct {
