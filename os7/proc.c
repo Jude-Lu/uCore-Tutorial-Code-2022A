@@ -69,7 +69,10 @@ found:
 	p->max_page = 0;
 	p->parent = NULL;
 	p->exit_code = 0;
-	p->pagetable = uvmcreate((uint64)p->trapframe);
+	p->pagetable = uvmcreate();
+	if (mappages(p->pagetable, TRAPFRAME, PGSIZE, trapframe, PTE_R | PTE_W) < 0) {
+        panic("map trapframe fail");
+    }
 	memset(&p->context, 0, sizeof(p->context));
 	memset((void *)p->kstack, 0, KSTACK_SIZE);
 	memset((void *)p->trapframe, 0, TRAP_PAGE_SIZE);

@@ -78,7 +78,7 @@ void uvmunmap(pagetable_t pagetable, uint64 va, uint64 npages, int do_free) {
 
 // create an empty user page table.
 // returns 0 if out of memory.
-pagetable_t uvmcreate(uint64 trapframe) {
+pagetable_t uvmcreate() {
     pagetable_t pagetable;
     pagetable = (pagetable_t)kalloc();
     if (pagetable == 0) {
@@ -88,10 +88,6 @@ pagetable_t uvmcreate(uint64 trapframe) {
     memset(pagetable, 0, PGSIZE);
     if (mappages(pagetable, TRAMPOLINE, PAGE_SIZE, (uint64)trampoline,
                  PTE_R | PTE_X) < 0) {
-        panic("mappages fail");
-    }
-    if (mappages(pagetable, TRAPFRAME, PGSIZE, trapframe, PTE_R | PTE_W) <
-        0) {
         panic("mappages fail");
     }
     return pagetable;
