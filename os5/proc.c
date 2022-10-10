@@ -2,7 +2,8 @@
 #include "defs.h"
 #include "loader.h"
 #include "trap.h"
-#include "vm.h"
+#include "../kernel-vm/vm.h"
+#include "../kernel-vm/map.h"
 #include "queue.h"
 
 struct proc pool[NPROC];

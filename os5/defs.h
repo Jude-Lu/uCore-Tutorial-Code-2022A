@@ -2,7 +2,6 @@
 #define DEFS_H
 
 #include "../utils/const.h"
-#include "kalloc.h"
 #include "../utils/log.h"
 #include "../utils/printf.h"
 #include "proc.h"
@@ -10,7 +9,9 @@
 #include "../utils/sbi.h"
 #include "../utils/string.h"
 #include "../utils/types.h"
-#include "vm.h"
+#include "../kernel-vm/kalloc.h"
+#include "../kernel-vm/vm.h"
+#include "../kernel-vm/map.h"
 
 // number of elements in fixed-size array
 #define NELEM(x) (sizeof(x) / sizeof((x)[0]))

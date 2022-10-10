@@ -107,3 +107,34 @@ void uvmfree(pagetable_t pagetable, uint64 max_page) {
         uvmunmap(pagetable, 0, max_page, 1);
     freewalk(pagetable);
 }
+
+// Used in fork.
+// Copy the pagetable page and all the user pages.
+// Return 0 on success, -1 on error.
+int uvmcopy(pagetable_t old, pagetable_t new, uint64 max_page) {
+    pte_t* pte;
+    uint64 pa, i;
+    uint flags;
+    char* mem;
+
+    for (i = 0; i < max_page * PAGE_SIZE; i += PGSIZE) {
+        if ((pte = walk(old, i, 0)) == 0)
+            continue;
+        if ((*pte & PTE_V) == 0)
+            continue;
+        pa = PTE2PA(*pte);
+        flags = PTE_FLAGS(*pte);
+        if ((mem = kalloc()) == 0)
+            goto err;
+        memmove(mem, (char*)pa, PGSIZE);
+        if (mappages(new, i, PGSIZE, (uint64)mem, flags) != 0) {
+            kfree(mem);
+            goto err;
+        }
+    }
+    return 0;
+
+err:
+    uvmunmap(new, 0, i / PGSIZE, 1);
+    return -1;
+}
