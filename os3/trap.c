@@ -2,7 +2,7 @@
 #include "defs.h"
 #include "loader.h"
 #include "syscall.h"
-#include "timer.h"
+#include "../utils/timer.h"
 
 extern char trampoline[], uservec[];
 extern void *userret(uint64);

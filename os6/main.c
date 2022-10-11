@@ -2,7 +2,7 @@
 #include "defs.h"
 #include "loader.h"
 #include "plic.h"
-#include "timer.h"
+#include "../utils/timer.h"
 #include "trap.h"
 #include "virtio.h"
 

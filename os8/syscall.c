@@ -4,7 +4,7 @@
 #include "sync.h"
 #include "syscall.h"
 #include "../utils/syscall_ids.h"
-#include "timer.h"
+#include "../utils/timer.h"
 #include "trap.h"
 
 uint64 console_write(uint64 va, uint64 len)

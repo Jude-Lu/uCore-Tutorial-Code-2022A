@@ -3,7 +3,7 @@
 #include "loader.h"
 #include "plic.h"
 #include "syscall.h"
-#include "timer.h"
+#include "../utils/timer.h"
 #include "virtio.h"
 #include "proc.h"
 

@@ -3,7 +3,7 @@
 #include "defs.h"
 #include "loader.h"
 #include "../utils/syscall_ids.h"
-#include "timer.h"
+#include "../utils/timer.h"
 #include "trap.h"
 
 uint64 sys_write(int fd, uint64 va, uint len)

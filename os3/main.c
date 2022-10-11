@@ -1,7 +1,7 @@
 #include "../utils/console.h"
+#include "../utils/timer.h"
 #include "defs.h"
 #include "loader.h"
-#include "timer.h"
 #include "trap.h"
 
 void clean_bss()

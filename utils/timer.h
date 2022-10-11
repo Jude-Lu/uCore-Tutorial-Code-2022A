@@ -1,7 +1,7 @@
 #ifndef TIMER_H
 #define TIMER_H
 
-#include "../utils/types.h"
+#include "types.h"
 
 #define TICKS_PER_SEC (100)
 // QEMU
