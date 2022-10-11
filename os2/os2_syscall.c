@@ -1,9 +1,6 @@
 #include "os2_syscall.h"
-#include "../utils/log.h"
-#include "../utils/sbi.h"
-#include "../utils/const.h"
-#include "../utils/syscall.h"
 #include "loader.h"
+#include "../utils/defs.h"
 
 uint64 os2_sys_write(int fd, uint64 argument_str, uint64 len)
 {
@@ -28,7 +25,7 @@ __attribute__((noreturn)) void os2_sys_exit(int code)
 
 void syscall_init()
 {
-    static struct SyscallContext os2_sys_context = 
+    static struct syscall_context os2_sys_context = 
 	{
         .sys_write = os2_sys_write,
         .sys_exit = os2_sys_exit

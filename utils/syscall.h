@@ -4,8 +4,8 @@
 #include "types.h"
 #include "trap.h"
 
-//SyscallContext定义了各个syscall的函数指针，方便兼容不同章节syscall的差异，各个章节可以根据本章节的内容和难度实现本章节的syscall
-struct SyscallContext{
+//syscall_context定义了各个syscall的函数指针，方便兼容不同章节syscall的差异，各个章节可以根据本章节的内容和难度实现本章节的syscall
+struct syscall_context{
 	//ch2 syscall
 	uint64 (*sys_write)(int fd, uint64 va, uint64 len);
 	void (*sys_exit)(int code);
@@ -36,6 +36,6 @@ struct SyscallContext{
 };
 
 void syscall(struct trapframe *trapframe);
-void set_syscall(struct SyscallContext *sys_context);
+void set_syscall(struct syscall_context *sys_context);
 
 #endif
