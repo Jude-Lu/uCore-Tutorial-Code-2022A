@@ -1,7 +1,13 @@
 #include "../utils/console.h"
-#include "defs.h"
+#include "../utils/defs.h"
 #include "loader.h"
-#include "trap.h"
+#include "os2_trap.h"
+#include "os2_syscall.h"
+
+int procid()
+{
+	return 0;
+}
 
 int threadid()
 {
@@ -20,6 +26,7 @@ void main()
 	clean_bss();
 	printf("hello wrold!\n");
 	trap_init();
-	loader_init();
-	run_next_app();
+	syscall_init();
+    loader_init();
+    run_next_app();
 }

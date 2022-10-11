@@ -13,6 +13,11 @@ extern char boot_stack_top[];
 struct proc *current_proc;
 struct proc idle;
 
+int procid()
+{
+	return curr_proc()->pid;
+}
+
 int threadid()
 {
 	return curr_proc()->pid;

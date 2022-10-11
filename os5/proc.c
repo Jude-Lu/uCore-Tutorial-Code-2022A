@@ -15,6 +15,11 @@ struct proc *current_proc;
 struct proc idle;
 struct queue task_queue;
 
+int procid()
+{
+	return curr_proc()->pid;
+}
+
 int threadid()
 {
 	return curr_proc()->pid;
