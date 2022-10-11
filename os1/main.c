@@ -10,6 +10,11 @@ extern char e_data[];
 extern char s_bss[];
 extern char e_bss[];
 
+int procid()
+{
+	return 0;
+}
+
 int threadid()
 {
 	return 0;

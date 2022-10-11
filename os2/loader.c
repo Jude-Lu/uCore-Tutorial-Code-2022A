@@ -1,6 +1,6 @@
 #include "loader.h"
-#include "defs.h"
-#include "trap.h"
+#include "../utils/defs.h"
+#include "os2_trap.h"
 
 static int app_cur, app_num;
 static uint64* app_info_ptr;
@@ -34,8 +34,7 @@ int run_next_app() {
     }
     infof("load and run app %d", app_cur);
     uint64 length = load_app(app_info_ptr);
-    if (length > 0)
-        debugf("bin range = [%p, %p)", *app_info_ptr, *app_info_ptr + length);
+    debugf("bin range = [%p, %p)", *app_info_ptr, *app_info_ptr + length);
     memset(trapframe, 0, 4096);
     trapframe->epc = BASE_ADDRESS;
     trapframe->sp = (uint64)user_stack + USER_STACK_SIZE;

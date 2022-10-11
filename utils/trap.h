@@ -1,7 +1,7 @@
 #ifndef TRAP_H
 #define TRAP_H
 
-#include "../utils/types.h"
+#include "types.h"
 
 struct trapframe {
 	/*   0 */ uint64 kernel_satp; // kernel page table
@@ -67,8 +67,5 @@ enum Interrupt {
 	UserExternal = 8,
 	SupervisorExternal,
 };
-
-void trap_init();
-void usertrapret(struct trapframe *trapframe, uint64 kstack);
 
 #endif // TRAP_H
