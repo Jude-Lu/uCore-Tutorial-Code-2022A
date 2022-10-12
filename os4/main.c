@@ -1,8 +1,10 @@
-#include "../utils/console.h"
-#include "defs.h"
+#include "../utils/defs.h"
+#include "../kernel-vm/kalloc.h"
+#include "../kernel-vm/map.h"
 #include "loader.h"
-#include "../utils/timer.h"
-#include "trap.h"
+#include "proc.h"
+#include "os4_syscall.h"
+#include "os4_trap.h"
 
 extern char e_text[]; // kernel.ld sets this to end of kernel code.
 extern char trampoline[];
@@ -51,7 +53,8 @@ void main()
 	loader_init();
 	trap_init();
 	timer_init();
-	run_all_app();
-	infof("start scheduler!");
+    syscall_init();
+    run_all_app();
+    infof("start scheduler!");
 	scheduler();
 }
