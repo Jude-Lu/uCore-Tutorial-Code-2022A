@@ -1,8 +1,8 @@
-#include "trap.h"
-#include "defs.h"
+#include "os3_trap.h"
 #include "loader.h"
-#include "syscall.h"
-#include "../utils/timer.h"
+#include "proc.h"
+#include "os3_syscall.h"
+#include "../utils/defs.h"
 
 extern char trampoline[], uservec[];
 extern void *userret(uint64);
@@ -66,7 +66,7 @@ void usertrap()
 		switch (cause) {
 		case UserEnvCall:
 			trapframe->epc += 4;
-			syscall();
+			syscall(trapframe);
 			break;
 		case StoreMisaligned:
 		case StorePageFault:
