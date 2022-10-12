@@ -9,6 +9,7 @@ F = nfs
 ## Add your module dir here
 UTIL = utils
 SYSCALL = syscall
+TRAP = trap
 VM = kernel-vm
 ##
 
@@ -27,6 +28,9 @@ BUILDDIR = build
 C_SRCS = $(wildcard $(K)/*.c $(UTIL)/*.c)
 ifeq ($(shell expr $(ch) \>= 2), 1)
 	C_SRCS += $(wildcard $(SYSCALL)/*.c)
+endif
+ifeq ($(shell expr $(ch) \>= 2), 1)
+	C_SRCS += $(wildcard $(TRAP)/*.c)
 endif
 ifeq ($(shell expr $(ch) \>= 4), 1)
 	C_SRCS += $(wildcard $(VM)/*.c)

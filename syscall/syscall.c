@@ -1,6 +1,6 @@
 #include "syscall.h"
 #include "syscall_ids.h"
-#include "trap.h"
+#include "../trap/trap.h"
 
 struct syscall_context* sys_context;
 
