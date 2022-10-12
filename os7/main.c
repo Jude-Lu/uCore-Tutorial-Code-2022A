@@ -1,8 +1,9 @@
 #include "../utils/defs.h"
 #include "loader.h"
 #include "plic.h"
-#include "trap.h"
+#include "os7_trap.h"
 #include "virtio.h"
+#include "os7_syscall.h"
 
 extern char e_text[]; // kernel.ld sets this to end of kernel code.
 extern char trampoline[];
@@ -58,8 +59,9 @@ void main()
 	binit();
 	fsinit();
 	timer_init();
-	load_init_app();
-	infof("start scheduler!");
+    syscall_init();
+    load_init_app();
+    infof("start scheduler!");
 	show_all_files();
 	scheduler();
 }
