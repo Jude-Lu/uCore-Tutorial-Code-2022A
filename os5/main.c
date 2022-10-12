@@ -1,7 +1,5 @@
-#include "../utils/console.h"
-#include "defs.h"
+#include "../utils/defs.h"
 #include "loader.h"
-#include "../utils/timer.h"
 #include "trap.h"
 
 extern char e_text[]; // kernel.ld sets this to end of kernel code.

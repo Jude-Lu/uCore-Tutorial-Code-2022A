@@ -1,9 +1,8 @@
-#include "trap.h"
-#include "defs.h"
+#include "trap.h" 
 #include "loader.h"
 #include "plic.h"
 #include "syscall.h"
-#include "../utils/timer.h"
+#include "../utils/defs.h"
 #include "virtio.h"
 #include "proc.h"
 

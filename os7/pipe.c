@@ -1,6 +1,6 @@
-#include "defs.h"
 #include "proc.h"
-#include "../utils/riscv.h"
+#include "file.h"
+#include "../utils/defs.h"
 
 int pipealloc(struct file *f0, struct file *f1)
 {

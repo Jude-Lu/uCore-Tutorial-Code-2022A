@@ -1,9 +1,7 @@
 #include "proc.h"
-#include "defs.h"
 #include "loader.h"
 #include "trap.h"
-#include "../kernel-vm/map.h"
-#include "../kernel-vm/vm.h"
+#include "../utils/defs.h"
 
 struct proc pool[NPROC];
 __attribute__((aligned(16))) char kstack[NPROC][PAGE_SIZE];

@@ -1,9 +1,6 @@
 #include "syscall.h"
-#include "../utils/console.h"
-#include "defs.h"
+#include "../utils/defs.h"
 #include "loader.h"
-#include "../utils/syscall_ids.h"
-#include "../utils/timer.h"
 #include "trap.h"
 
 uint64 sys_write(int fd, uint64 va, uint len)

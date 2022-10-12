@@ -1,8 +1,7 @@
 #include "trap.h"
-#include "defs.h"
 #include "loader.h"
 #include "syscall.h"
-#include "../utils/timer.h"
+#include "../utils/defs.h"
 
 extern char trampoline[], uservec[];
 extern char userret[];

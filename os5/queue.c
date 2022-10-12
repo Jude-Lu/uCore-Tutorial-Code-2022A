@@ -1,5 +1,5 @@
 #include "queue.h"
-#include "defs.h"
+#include "proc.h"
 
 void init_queue(struct queue *q)
 {

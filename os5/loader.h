@@ -1,9 +1,8 @@
 #ifndef LOADER_H
 #define LOADER_H
 
-#include "../utils/const.h"
+#include "../utils/defs.h"
 #include "proc.h"
-#include "../utils/types.h"
 
 int finished();
 void loader_init();

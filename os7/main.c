@@ -1,8 +1,6 @@
-#include "../utils/console.h"
-#include "defs.h"
+#include "../utils/defs.h"
 #include "loader.h"
 #include "plic.h"
-#include "../utils/timer.h"
 #include "trap.h"
 #include "virtio.h"
 
