@@ -1,9 +1,5 @@
 #include "kalloc.h"
-#include "../utils/riscv.h"
-#include "../utils/types.h"
-#include "../utils/const.h"
-#include "../utils/string.h"
-#include "../utils/log.h"
+#include "../utils/defs.h"
 
 extern char ekernel[];
 

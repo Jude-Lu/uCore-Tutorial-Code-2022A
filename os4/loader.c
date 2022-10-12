@@ -2,8 +2,6 @@
 #include "proc.h"
 #include "os4_trap.h"
 #include "../utils/defs.h"
-#include "../kernel-vm/kalloc.h"
-#include "../kernel-vm/map.h"
 
 static int app_num;
 static uint64 *app_info_ptr;

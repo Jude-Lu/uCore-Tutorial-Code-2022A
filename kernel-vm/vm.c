@@ -1,8 +1,6 @@
 #include "vm.h"
 #include "kalloc.h"
-#include "../utils/const.h"
-#include "../utils/string.h"
-#include "../utils/log.h"
+#include "../utils/defs.h"
 
 // Return the address of the PTE in page table pagetable
 // that corresponds to virtual address va.  If alloc!=0,

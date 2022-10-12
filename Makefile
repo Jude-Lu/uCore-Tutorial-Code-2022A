@@ -8,6 +8,7 @@ F = nfs
 
 ## Add your module dir here
 UTIL = utils
+SYSCALL = syscall
 VM = kernel-vm
 ##
 
@@ -23,7 +24,13 @@ CP = cp
 BUILDDIR = build
 
 ## Append your module dir
-C_SRCS = $(wildcard $(K)/*.c $(UTIL)/*.c $(VM)/*.c)
+C_SRCS = $(wildcard $(K)/*.c $(UTIL)/*.c)
+ifeq ($(shell expr $(ch) \>= 2), 1)
+	C_SRCS += $(wildcard $(SYSCALL)/*.c)
+endif
+ifeq ($(shell expr $(ch) \>= 4), 1)
+	C_SRCS += $(wildcard $(VM)/*.c)
+endif
 ##
 
 AS_SRCS = $(wildcard $K/*.S)

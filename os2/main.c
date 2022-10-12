@@ -1,4 +1,3 @@
-#include "../utils/console.h"
 #include "../utils/defs.h"
 #include "loader.h"
 #include "os2_trap.h"

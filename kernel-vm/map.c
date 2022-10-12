@@ -1,9 +1,7 @@
 #include "map.h"
 #include "vm.h"
 #include "kalloc.h"
-#include "../utils/const.h"
-#include "../utils/string.h"
-#include "../utils/log.h"
+#include "../utils/defs.h"
 
 // Add a mapping to the kernel page table.
 // only used when booting.

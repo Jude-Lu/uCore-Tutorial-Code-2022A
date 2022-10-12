@@ -1,8 +1,7 @@
 #ifndef OS3_TRAP_H
 #define OS3_TRAP_H
 
-#include "../utils/types.h"
-#include "../utils/trap.h"
+#include "../utils/defs.h"
 
 void trap_init();
 void usertrapret();

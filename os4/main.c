@@ -1,6 +1,4 @@
 #include "../utils/defs.h"
-#include "../kernel-vm/kalloc.h"
-#include "../kernel-vm/map.h"
 #include "loader.h"
 #include "proc.h"
 #include "os4_syscall.h"
