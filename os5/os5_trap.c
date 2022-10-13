@@ -1,122 +1,74 @@
 #include "os5_trap.h"
 #include "loader.h"
-#include "os5_syscall.h"
-#include "../utils/defs.h"
+#include "proc.h"
 
 extern char trampoline[], uservec[];
 extern char userret[];
 
-void kerneltrap()
+void os5_set_usertrap()
 {
-	if ((r_sstatus() & SSTATUS_SPP) == 0)
-		panic("kerneltrap: not from supervisor mode");
-	panic("trap from kerne");
+	w_stvec(((uint64)TRAMPOLINE + (uservec - trampoline)) & ~0x3);
 }
 
-// set up to take exceptions and traps while in the kernel.
-void set_usertrap()
+void os5_set_kerneltrap()
 {
-	w_stvec(((uint64)TRAMPOLINE + (uservec - trampoline)) & ~0x3); // DIRECT
+	w_stvec((uint64)kerneltrap & ~0x3);
 }
 
-void set_kerneltrap()
+struct trapframe* os5_get_trapframe()
 {
-	w_stvec((uint64)kerneltrap & ~0x3); // DIRECT
+	return curr_proc()->trapframe;
 }
 
-// set up to take exceptions and traps while in the kernel.
-void trap_init()
+uint64 os5_get_kernel_sp()
 {
-	// intr_on();
-	set_kerneltrap();
+	return curr_proc()->kstack + PGSIZE;
 }
 
-void unknown_trap()
+void os5_call_userret()
 {
-	errorf("unknown trap: %p, stval = %p", r_scause(), r_stval());
-	exit(-1);
-}
-
-//
-// handle an interrupt, exception, or system call from user space.
-// called from trampoline.S
-//
-void usertrap()
-{
-	set_kerneltrap();
 	struct trapframe *trapframe = curr_proc()->trapframe;
-	tracef("trap from user epc = %p", trapframe->epc);
-	if ((r_sstatus() & SSTATUS_SPP) != 0)
-		panic("usertrap: not from user mode");
-
-	uint64 cause = r_scause();
-	if (cause & (1ULL << 63)) {
-		cause &= ~(1ULL << 63);
-		switch (cause) {
-		case SupervisorTimer:
-			tracef("time interrupt!");
-			set_next_timer();
-			yield();
-			break;
-		default:
-			unknown_trap();
-			break;
-		}
-	} else {
-		switch (cause) {
-		case UserEnvCall:
-			trapframe->epc += 4;
-			syscall(trapframe);
-			break;
-		case StoreMisaligned:
-		case StorePageFault:
-		case InstructionMisaligned:
-		case InstructionPageFault:
-		case LoadMisaligned:
-		case LoadPageFault:
-			errorf("%d in application, bad addr = %p, bad instruction = %p, "
-			       "core dumped.",
-			       cause, r_stval(), trapframe->epc);
-			exit(-2);
-			break;
-		case IllegalInstruction:
-			errorf("IllegalInstruction in application, core dumped.");
-			exit(-3);
-			break;
-		default:
-			unknown_trap();
-			break;
-		}
-	}
-	usertrapret();
-}
-
-//
-// return to user space
-//
-void usertrapret()
-{
-	set_usertrap();
-	struct trapframe *trapframe = curr_proc()->trapframe;
-	trapframe->kernel_satp = r_satp(); // kernel page table
-	trapframe->kernel_sp =
-		curr_proc()->kstack + KSTACK_SIZE; // process's kernel stack
-	trapframe->kernel_trap = (uint64)usertrap;
-	trapframe->kernel_hartid = r_tp(); // unuesd
-
-	w_sepc(trapframe->epc);
-	// set up the registers that trampoline.S's sret will use
-	// to get to user space.
-
-	// set S Previous Privilege mode to User.
-	uint64 x = r_sstatus();
-	x &= ~SSTATUS_SPP; // clear SPP to 0 for user mode
-	x |= SSTATUS_SPIE; // enable interrupts in user mode
-	w_sstatus(x);
-
-	// tell trampoline.S the user page table to switch to.
 	uint64 satp = MAKE_SATP(curr_proc()->pagetable);
 	uint64 fn = TRAMPOLINE + (userret - trampoline);
 	tracef("return to user @ %p", trapframe->epc);
 	((void (*)(uint64, uint64))fn)(TRAPFRAME, satp);
+}
+
+void os5_finish_usertrap(int cause)
+{
+	usertrapret();
+}
+
+void os5_error_in_trap(int status)
+{
+	exit(status); // Kill the process.
+}
+
+void os5_super_external_handler()
+{
+	// We do not encounter external interrupt in ch3, so we do nothing here.
+}
+
+void trap_init()
+{
+	static struct trap_handler_context os5_trap_context = 
+	{
+		.yield = yield,
+		
+		.set_usertrap = os5_set_usertrap,
+		.set_kerneltrap = os5_set_kerneltrap,
+
+		.get_trapframe = os5_get_trapframe,
+		.get_kernel_sp = os5_get_kernel_sp,
+		
+		.call_userret = os5_call_userret,
+		.finish_usertrap = os5_finish_usertrap,
+		.error_in_trap = os5_error_in_trap,
+
+		.super_external_handler = os5_super_external_handler
+	};
+	set_trap(&os5_trap_context);
+
+	// set up to take exceptions and traps while in the kernel.
+	os5_set_kerneltrap();
 }
