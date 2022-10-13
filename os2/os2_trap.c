@@ -36,7 +36,7 @@ void os2_call_userret()
 	userret((uint64)os2_get_trapframe());
 }
 
-void os2_finish_user_trap(int cause)
+void os2_finish_usertrap(int cause)
 {
 	if (cause != UserEnvCall)
 	{
@@ -72,7 +72,7 @@ void trap_init()
 		.get_kernel_sp = os2_get_kernel_sp,
 		
 		.call_userret = os2_call_userret,
-		.finish_usertrap = os2_finish_user_trap,
+		.finish_usertrap = os2_finish_usertrap,
 		.error_in_trap = os2_error_in_trap,
 
 		.supervisorexternal_handler = os2_supervisorexternal_handler
