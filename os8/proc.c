@@ -1,8 +1,7 @@
 #include "proc.h"
-#include "defs.h"
 #include "loader.h"
-#include "trap.h"
-#include "vm.h"
+#include "os8_trap.h"
+#include "../utils/defs.h"
 #include "queue.h"
 
 struct proc pool[NPROC];
@@ -475,4 +474,32 @@ int fdalloc(struct file *f)
 		}
 	}
 	return -1;
+}
+
+// Copy to either a user address, or kernel address,
+// depending on usr_dst.
+// Returns 0 on success, -1 on error.
+int either_copyout(int user_dst, uint64 dst, char *src, uint64 len)
+{
+	struct proc *p = curr_proc();
+	if (user_dst) {
+		return copyout(p->pagetable, dst, src, len);
+	} else {
+		memmove((void *)dst, src, len);
+		return 0;
+	}
+}
+
+// Copy from either a user address, or kernel address,
+// depending on usr_src.
+// Returns 0 on success, -1 on error.
+int either_copyin(int user_src, uint64 src, char *dst, uint64 len)
+{
+	struct proc *p = curr_proc();
+	if (user_src) {
+		return copyin(p->pagetable, dst, src, len);
+	} else {
+		memmove(dst, (char *)src, len);
+		return 0;
+	}
 }

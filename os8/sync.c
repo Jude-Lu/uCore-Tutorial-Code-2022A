@@ -1,6 +1,6 @@
-#include "defs.h"
 #include "proc.h"
 #include "sync.h"
+#include "../utils/defs.h"
 
 struct mutex *mutex_create(int blocking)
 {

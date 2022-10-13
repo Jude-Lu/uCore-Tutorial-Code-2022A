@@ -1,8 +1,7 @@
 #ifndef OS2_TRAP_H
 #define OS2_TRAP_H
 
-#include "../utils/trap.h"
-#include "../utils/types.h"
+#include "../utils/defs.h"
 #include "os2_syscall.h"
 
 void trap_init();

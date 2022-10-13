@@ -1,8 +1,7 @@
 #include "proc.h"
-#include "defs.h"
 #include "loader.h"
-#include "trap.h"
-#include "vm.h"
+#include "os7_trap.h"
+#include "../utils/defs.h"
 
 struct proc pool[NPROC];
 __attribute__((aligned(16))) char kstack[NPROC][PAGE_SIZE];
@@ -73,7 +72,10 @@ found:
 	p->max_page = 0;
 	p->parent = NULL;
 	p->exit_code = 0;
-	p->pagetable = uvmcreate((uint64)p->trapframe);
+	p->pagetable = uvmcreate();
+	if (mappages(p->pagetable, TRAPFRAME, PGSIZE, (uint64)p->trapframe, PTE_R | PTE_W) < 0) {
+        panic("map trapframe fail");
+    }
 	memset(&p->context, 0, sizeof(p->context));
 	memset((void *)p->kstack, 0, KSTACK_SIZE);
 	memset((void *)p->trapframe, 0, TRAP_PAGE_SIZE);
@@ -308,4 +310,32 @@ int fdalloc(struct file *f)
 		}
 	}
 	return -1;
+}
+
+// Copy to either a user address, or kernel address,
+// depending on usr_dst.
+// Returns 0 on success, -1 on error.
+int either_copyout(int user_dst, uint64 dst, char *src, uint64 len)
+{
+	struct proc *p = curr_proc();
+	if (user_dst) {
+		return copyout(p->pagetable, dst, src, len);
+	} else {
+		memmove((void *)dst, src, len);
+		return 0;
+	}
+}
+
+// Copy from either a user address, or kernel address,
+// depending on usr_src.
+// Returns 0 on success, -1 on error.
+int either_copyin(int user_src, uint64 src, char *dst, uint64 len)
+{
+	struct proc *p = curr_proc();
+	if (user_src) {
+		return copyin(p->pagetable, dst, src, len);
+	} else {
+		memmove(dst, (char *)src, len);
+		return 0;
+	}
 }

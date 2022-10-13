@@ -14,10 +14,8 @@
 //     so do not keep them longer than necessary.
 
 #include "bio.h"
-#include "defs.h"
 #include "fs.h"
-#include "../utils/riscv.h"
-#include "../utils/types.h"
+#include "../utils/defs.h"
 #include "virtio.h"
 
 struct {

@@ -1,6 +1,7 @@
 #include "loader.h"
-#include "defs.h"
-#include "trap.h"
+#include "proc.h"
+#include "os4_trap.h"
+#include "../utils/defs.h"
 
 static int app_num;
 static uint64 *app_info_ptr;
@@ -26,10 +27,9 @@ void loader_init()
 pagetable_t bin_loader(uint64 start, uint64 end, struct proc *p)
 {
 	pagetable_t pg = uvmcreate();
-	if (mappages(pg, TRAPFRAME, PGSIZE, (uint64)p->trapframe,
-		     PTE_R | PTE_W) < 0) {
-		panic("mappages fail");
-	}
+	if (mappages(pg, TRAPFRAME, PGSIZE, (uint64)p->trapframe, PTE_R | PTE_W) < 0) {
+        panic("map trapframe fail");
+    }
 	if (!PGALIGNED(start)) {
 		panic("user program not aligned, start = %p", start);
 	}

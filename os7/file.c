@@ -1,8 +1,8 @@
-#include "file.h"
-#include "defs.h"
+#include "file.h" 
 #include "fcntl.h"
 #include "fs.h"
 #include "proc.h"
+#include "../utils/defs.h"
 
 //This is a system-level open file table that holds open files of all process. 
 struct file filepool[FILEPOOLSIZE];

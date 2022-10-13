@@ -1,5 +1,4 @@
-#include "../utils/console.h"
-#include "defs.h"
+#include "../utils/defs.h"
 
 extern char s_text[];
 extern char e_text[];

@@ -11,11 +11,10 @@
 
 #include "fs.h"
 #include "bio.h"
-#include "defs.h"
 #include "file.h"
 #include "proc.h"
-#include "../utils/riscv.h"
-#include "../utils/types.h"
+#include "../utils/defs.h"
+
 // there should be one superblock per disk device, but we run with
 // only one device
 struct superblock sb;

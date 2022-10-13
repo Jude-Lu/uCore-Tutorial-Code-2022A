@@ -1,8 +1,8 @@
-#include "../utils/console.h"
-#include "defs.h"
+#include "../utils/defs.h"
 #include "loader.h"
-#include "timer.h"
-#include "trap.h"
+#include "proc.h"
+#include "os3_trap.h"
+#include "os3_syscall.h"
 
 void clean_bss()
 {
@@ -18,6 +18,7 @@ void main()
 	loader_init();
 	trap_init();
 	timer_init();
+	syscall_init();
 	run_all_app();
 	infof("start scheduler!");
 	scheduler();

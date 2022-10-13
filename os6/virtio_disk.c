@@ -8,12 +8,10 @@
 //
 
 #include "bio.h"
-#include "defs.h"
 #include "file.h"
 #include "fs.h"
 #include "plic.h"
-#include "../utils/riscv.h"
-#include "../utils/types.h"
+#include "../utils/defs.h"
 #include "virtio.h"
 
 // the address of virtio mmio register r.
