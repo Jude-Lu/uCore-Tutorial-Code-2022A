@@ -2,7 +2,7 @@
 #include "loader.h"
 #include "proc.h"
 
-extern char trampoline[], uservec[];
+extern char uservec[];
 extern void *userret(uint64);
 
 void os3_set_usertrap()
