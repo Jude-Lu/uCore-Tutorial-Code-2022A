@@ -51,7 +51,7 @@ void os2_finish_user_trap(int cause)
 
 void os2_error_in_trap(int status)
 {
-	// We are not able to do anything, just ignore the
+	// We are not able to do anything (e.g., kill the current process), just ignore the.
 }
 
 void os2_supervisorexternal_handler()
