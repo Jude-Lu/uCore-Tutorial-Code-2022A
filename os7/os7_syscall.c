@@ -202,13 +202,13 @@ uint64 os7_sys_close(int fd)
 
 void syscall_init()
 {
-    static struct syscall_context os7_sys_context =
-    {
-        .sys_write = os7_sys_write,
+	static struct syscall_context os7_sys_context =
+	{
+		.sys_write = os7_sys_write,
 		.sys_read = os7_sys_read,
-        .sys_exit = os7_sys_exit,
+		.sys_exit = os7_sys_exit,
 		.sys_sched_yield = os7_sys_sched_yield,
-        .sys_gettimeofday = os7_sys_gettimeofday,
+		.sys_gettimeofday = os7_sys_gettimeofday,
 		.sys_getpid = os7_sys_getpid,
 		.sys_getppid = os7_sys_getppid,
 		.sys_clone = os7_sys_clone,
@@ -218,5 +218,5 @@ void syscall_init()
 		.sys_openat = os7_sys_openat,
 		.sys_close = os7_sys_close
 	};
-    set_syscall(&os7_sys_context);
+	set_syscall(&os7_sys_context);
 }
