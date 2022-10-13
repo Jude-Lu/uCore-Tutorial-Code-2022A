@@ -1,8 +1,8 @@
 #include "../utils/defs.h"
 #include "loader.h"
 #include "sync.h"
-#include "syscall.h"
-#include "trap.h"
+#include "os8_syscall.h"
+#include "os8_trap.h"
 
 uint64 console_write(uint64 va, uint64 len)
 {
@@ -29,7 +29,7 @@ uint64 console_read(uint64 va, uint64 len)
 	return len;
 }
 
-uint64 sys_write(int fd, uint64 va, uint64 len)
+uint64 os8_sys_write(int fd, uint64 va, uint64 len)
 {
 	if (fd < 0 || fd > FD_BUFFER_SIZE)
 		return -1;
@@ -52,7 +52,7 @@ uint64 sys_write(int fd, uint64 va, uint64 len)
 	}
 }
 
-uint64 sys_read(int fd, uint64 va, uint64 len)
+uint64 os8_sys_read(int fd, uint64 va, uint64 len)
 {
 	if (fd < 0 || fd > FD_BUFFER_SIZE)
 		return -1;
@@ -75,19 +75,19 @@ uint64 sys_read(int fd, uint64 va, uint64 len)
 	}
 }
 
-__attribute__((noreturn)) void sys_exit(int code)
+__attribute__((noreturn)) void os8_sys_exit(int code)
 {
 	exit(code);
 	__builtin_unreachable();
 }
 
-uint64 sys_sched_yield()
+uint64 os8_sys_sched_yield()
 {
 	yield();
 	return 0;
 }
 
-uint64 sys_gettimeofday(uint64 val, int _tz)
+uint64 os8_sys_gettimeofday(uint64 val, int _tz)
 {
 	struct proc *p = curr_proc();
 	uint64 cycle = get_cycle();
@@ -98,18 +98,18 @@ uint64 sys_gettimeofday(uint64 val, int _tz)
 	return 0;
 }
 
-uint64 sys_getpid()
+uint64 os8_sys_getpid()
 {
 	return curr_proc()->pid;
 }
 
-uint64 sys_getppid()
+uint64 os8_sys_getppid()
 {
 	struct proc *p = curr_proc();
 	return p->parent == NULL ? IDLE_PID : p->parent->pid;
 }
 
-uint64 sys_clone()
+uint64 os8_sys_clone()
 {
 	debugf("fork!");
 	return fork();
@@ -121,7 +121,7 @@ static inline uint64 fetchaddr(pagetable_t pagetable, uint64 va)
 	return *addr;
 }
 
-uint64 sys_exec(uint64 path, uint64 uargv)
+uint64 os8_sys_exec(uint64 path, uint64 uargv)
 {
 	struct proc *p = curr_proc();
 	char name[MAX_STR_LEN];
@@ -139,14 +139,14 @@ uint64 sys_exec(uint64 path, uint64 uargv)
 	return exec(name, (char **)argv);
 }
 
-uint64 sys_wait(int pid, uint64 va)
+uint64 os8_sys_wait(int pid, uint64 va)
 {
 	struct proc *p = curr_proc();
 	int *code = (int *)useraddr(p->pagetable, va);
 	return wait(pid, code);
 }
 
-uint64 sys_pipe(uint64 fdarray)
+uint64 os8_sys_pipe(uint64 fdarray)
 {
 	struct proc *p = curr_proc();
 	uint64 fd0, fd1;
@@ -178,7 +178,7 @@ err0:
 	return -1;
 }
 
-uint64 sys_openat(uint64 va, uint64 omode, uint64 _flags)
+uint64 os8_sys_openat(uint64 va, uint64 omode, uint64 _flags)
 {
 	struct proc *p = curr_proc();
 	char path[200];
@@ -186,7 +186,7 @@ uint64 sys_openat(uint64 va, uint64 omode, uint64 _flags)
 	return fileopen(path, omode);
 }
 
-uint64 sys_close(int fd)
+uint64 os8_sys_close(int fd)
 {
 	if (fd < 0 || fd > FD_BUFFER_SIZE)
 		return -1;
@@ -201,7 +201,7 @@ uint64 sys_close(int fd)
 	return 0;
 }
 
-int sys_thread_create(uint64 entry, uint64 arg)
+int os8_sys_thread_create(uint64 entry, uint64 arg)
 {
 	struct proc *p = curr_proc();
 	int tid = allocthread(p, entry, 1);
@@ -216,12 +216,12 @@ int sys_thread_create(uint64 entry, uint64 arg)
 	return tid;
 }
 
-int sys_gettid()
+int os8_sys_gettid()
 {
 	return curr_thread()->tid;
 }
 
-int sys_waittid(int tid)
+int os8_sys_waittid(int tid)
 {
 	if (tid < 0 || tid >= NTHREAD) {
 		errorf("unexpected tid %d", tid);
@@ -249,7 +249,7 @@ int sys_waittid(int tid)
 *				use this idea or just ignore it.
 */
 
-int sys_mutex_create(int blocking)
+int os8_sys_mutex_create(int blocking)
 {
 	struct mutex *m = mutex_create(blocking);
 	if (m == NULL) {
@@ -262,7 +262,7 @@ int sys_mutex_create(int blocking)
 	return mutex_id;
 }
 
-int sys_mutex_lock(int mutex_id)
+int os8_sys_mutex_lock(int mutex_id)
 {
 	if (mutex_id < 0 || mutex_id >= curr_proc()->next_mutex_id) {
 		errorf("Unexpected mutex id %d", mutex_id);
@@ -274,7 +274,7 @@ int sys_mutex_lock(int mutex_id)
 	return 0;
 }
 
-int sys_mutex_unlock(int mutex_id)
+int os8_sys_mutex_unlock(int mutex_id)
 {
 	if (mutex_id < 0 || mutex_id >= curr_proc()->next_mutex_id) {
 		errorf("Unexpected mutex id %d", mutex_id);
@@ -285,7 +285,7 @@ int sys_mutex_unlock(int mutex_id)
 	return 0;
 }
 
-int sys_semaphore_create(int res_count)
+int os8_sys_semaphore_create(int res_count)
 {
 	struct semaphore *s = semaphore_create(res_count);
 	if (s == NULL) {
@@ -298,7 +298,7 @@ int sys_semaphore_create(int res_count)
 	return sem_id;
 }
 
-int sys_semaphore_up(int semaphore_id)
+int os8_sys_semaphore_up(int semaphore_id)
 {
 	if (semaphore_id < 0 ||
 	    semaphore_id >= curr_proc()->next_semaphore_id) {
@@ -310,7 +310,7 @@ int sys_semaphore_up(int semaphore_id)
 	return 0;
 }
 
-int sys_semaphore_down(int semaphore_id)
+int os8_sys_semaphore_down(int semaphore_id)
 {
 	if (semaphore_id < 0 ||
 	    semaphore_id >= curr_proc()->next_semaphore_id) {
@@ -323,7 +323,7 @@ int sys_semaphore_down(int semaphore_id)
 	return 0;
 }
 
-int sys_condvar_create()
+int os8_sys_condvar_create()
 {
 	struct condvar *c = condvar_create();
 	if (c == NULL) {
@@ -335,7 +335,7 @@ int sys_condvar_create()
 	return cond_id;
 }
 
-int sys_condvar_signal(int cond_id)
+int os8_sys_condvar_signal(int cond_id)
 {
 	if (cond_id < 0 || cond_id >= curr_proc()->next_condvar_id) {
 		errorf("Unexpected condvar id %d", cond_id);
@@ -345,7 +345,7 @@ int sys_condvar_signal(int cond_id)
 	return 0;
 }
 
-int sys_condvar_wait(int cond_id, int mutex_id)
+int os8_sys_condvar_wait(int cond_id, int mutex_id)
 {
 	if (cond_id < 0 || cond_id >= curr_proc()->next_condvar_id) {
 		errorf("Unexpected condvar id %d", cond_id);
@@ -360,105 +360,35 @@ int sys_condvar_wait(int cond_id, int mutex_id)
 	return 0;
 }
 
-// LAB5: (2) you may need to define function enable_deadlock_detect here
-
-extern char trap_page[];
-
-void syscall()
+void syscall_init()
 {
-	struct trapframe *trapframe = curr_thread()->trapframe;
-	int id = trapframe->a7, ret;
-	uint64 args[6] = { trapframe->a0, trapframe->a1, trapframe->a2,
-			   trapframe->a3, trapframe->a4, trapframe->a5 };
-	if (id != SYS_write && id != SYS_read && id != SYS_sched_yield) {
-		debugf("syscall %d args = [%x, %x, %x, %x, %x, %x]", id,
-		       args[0], args[1], args[2], args[3], args[4], args[5]);
-	}
-	switch (id) {
-	case SYS_write:
-		ret = sys_write(args[0], args[1], args[2]);
-		break;
-	case SYS_read:
-		ret = sys_read(args[0], args[1], args[2]);
-		break;
-	case SYS_openat:
-		ret = sys_openat(args[0], args[1], args[2]);
-		break;
-	case SYS_close:
-		ret = sys_close(args[0]);
-		break;
-	case SYS_exit:
-		sys_exit(args[0]);
-		// __builtin_unreachable();
-	// case SYS_nanosleep:
-	// 	ret = sys_nanosleep(args[0]);
-	// 	break;
-	case SYS_sched_yield:
-		ret = sys_sched_yield();
-		break;
-	case SYS_gettimeofday:
-		ret = sys_gettimeofday(args[0], args[1]);
-		break;
-	case SYS_getpid:
-		ret = sys_getpid();
-		break;
-	case SYS_getppid:
-		ret = sys_getppid();
-		break;
-	case SYS_clone: // SYS_fork
-		ret = sys_clone();
-		break;
-	case SYS_execve:
-		ret = sys_exec(args[0], args[1]);
-		break;
-	case SYS_wait4:
-		ret = sys_wait(args[0], args[1]);
-		break;
-	case SYS_pipe2:
-		ret = sys_pipe(args[0]);
-	case SYS_thread_create:
-		ret = sys_thread_create(args[0], args[1]);
-		break;
-	case SYS_gettid:
-		ret = sys_gettid();
-		break;
-	case SYS_waittid:
-		ret = sys_waittid(args[0]);
-		break;
-	case SYS_mutex_create:
-		ret = sys_mutex_create(args[0]);
-		break;
-	case SYS_mutex_lock:
-		ret = sys_mutex_lock(args[0]);
-		break;
-	case SYS_mutex_unlock:
-		ret = sys_mutex_unlock(args[0]);
-		break;
-	case SYS_semaphore_create:
-		ret = sys_semaphore_create(args[0]);
-		break;
-	case SYS_semaphore_up:
-		ret = sys_semaphore_up(args[0]);
-		break;
-	case SYS_semaphore_down:
-		ret = sys_semaphore_down(args[0]);
-		break;
-	case SYS_condvar_create:
-		ret = sys_condvar_create();
-		break;
-	case SYS_condvar_signal:
-		ret = sys_condvar_signal(args[0]);
-		break;
-	case SYS_condvar_wait:
-		ret = sys_condvar_wait(args[0], args[1]);
-		break;
-	// LAB5: (2) you may need to add case SYS_enable_deadlock_detect here
-	default:
-		ret = -1;
-		errorf("unknown syscall %d", id);
-	}
-	curr_thread()->trapframe->a0 = ret;
-	if (id != SYS_write && id != SYS_read && id != SYS_sched_yield) {
-		debugf("syscall %d ret %d", id, ret);
-	}
+    static struct syscall_context os8_sys_context =
+    {
+        .sys_write = os8_sys_write,
+		.sys_read = os8_sys_read,
+        .sys_exit = os8_sys_exit,
+		.sys_sched_yield = os8_sys_sched_yield,
+        .sys_gettimeofday = os8_sys_gettimeofday,
+		.sys_getpid = os8_sys_getpid,
+		.sys_getppid = os8_sys_getppid,
+		.sys_clone = os8_sys_clone,
+		.sys_exec = os8_sys_exec,
+		.sys_wait = os8_sys_wait,
+		.sys_pipe = os8_sys_pipe,
+		.sys_openat = os8_sys_openat,
+		.sys_close = os8_sys_close,
+		.sys_thread_create = os8_sys_thread_create,
+		.sys_gettid = os8_sys_gettid,
+		.sys_waittid = os8_sys_waittid,
+		.sys_mutex_create = os8_sys_mutex_create,
+		.sys_mutex_lock = os8_sys_mutex_lock,
+		.sys_mutex_unlock = os8_sys_mutex_unlock,
+		.sys_semaphore_create = os8_sys_semaphore_create,
+		.sys_semaphore_up = os8_sys_semaphore_up,
+		.sys_semaphore_down = os8_sys_semaphore_down,
+		.sys_condvar_create = os8_sys_condvar_create,
+		.sys_condvar_signal = os8_sys_condvar_signal,
+		.sys_condvar_wait = os8_sys_condvar_wait
+	};
+    set_syscall(&os8_sys_context);
 }

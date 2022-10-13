@@ -1,7 +1,6 @@
-#include "trap.h" 
+#include "os8_trap.h" 
 #include "loader.h"
 #include "plic.h"
-#include "syscall.h"
 #include "../utils/defs.h"
 #include "virtio.h"
 #include "proc.h"
@@ -84,7 +83,7 @@ void usertrap()
 		switch (cause) {
 		case UserEnvCall:
 			trapframe->epc += 4;
-			syscall();
+			syscall(trapframe);
 			break;
 		case StoreMisaligned:
 		case StorePageFault:
