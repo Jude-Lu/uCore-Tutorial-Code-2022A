@@ -193,13 +193,13 @@ int os6_sys_unlinkat(int dirfd, uint64 name, uint64 flags){
 
 void syscall_init()
 {
-    static struct syscall_context os6_sys_context =
-    {
-        .sys_write = os6_sys_write,
+	static struct syscall_context os6_sys_context =
+	{
+		.sys_write = os6_sys_write,
 		.sys_read = os6_sys_read,
-        .sys_exit = os6_sys_exit,
+		.sys_exit = os6_sys_exit,
 		.sys_sched_yield = os6_sys_sched_yield,
-        .sys_gettimeofday = os6_sys_gettimeofday,
+		.sys_gettimeofday = os6_sys_gettimeofday,
 		.sys_getpid = os6_sys_getpid,
 		.sys_getppid = os6_sys_getppid,
 		.sys_clone = os6_sys_clone,
@@ -213,5 +213,5 @@ void syscall_init()
 		.sys_linkat = os6_sys_linkat,
 		.sys_unlinkat = os6_sys_unlinkat
 	};
-    set_syscall(&os6_sys_context);
+	set_syscall(&os6_sys_context);
 }

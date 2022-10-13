@@ -89,8 +89,8 @@ found:
 	p->exit_code = 0;
 	p->pagetable = uvmcreate();
 	if (mappages(p->pagetable, TRAPFRAME, PGSIZE, (uint64)p->trapframe, PTE_R | PTE_W) < 0) {
-        panic("map trapframe fail");
-    }
+		panic("map trapframe fail");
+	}
 	memset(&p->context, 0, sizeof(p->context));
 	memset((void *)p->kstack, 0, KSTACK_SIZE);
 	memset((void *)p->trapframe, 0, TRAP_PAGE_SIZE);
@@ -218,7 +218,7 @@ int wait(int pid, int *code)
 		havekids = 0;
 		for (np = pool; np < &pool[NPROC]; np++) {
 			if (np->state != UNUSED && np->parent == p &&
-			    (pid <= 0 || np->pid == pid)) {
+				(pid <= 0 || np->pid == pid)) {
 				havekids = 1;
 				if (np->state == ZOMBIE) {
 					// Found one.
