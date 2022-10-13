@@ -70,6 +70,7 @@ void trap_init()
 
 		.get_trapframe = os2_get_trapframe,
 		.get_kernel_sp = os2_get_kernel_sp,
+		.error_in_trap = os2_error_in_trap,
 		
 		.call_userret = os2_call_userret,
 		.finish_usertrap = os2_finish_user_trap,
