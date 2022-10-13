@@ -54,12 +54,12 @@ uint64 os4_sys_gettimeofday(uint64 val, int _tz) // TODO: implement sys_gettimeo
 
 void syscall_init()
 {
-    static struct syscall_context os4_sys_context =
-    {
-        .sys_write = os4_sys_write,
-        .sys_exit = os4_sys_exit,
+	static struct syscall_context os4_sys_context =
+	{
+		.sys_write = os4_sys_write,
+		.sys_exit = os4_sys_exit,
 		.sys_sched_yield = os4_sys_sched_yield,
-        .sys_gettimeofday = os4_sys_gettimeofday
+		.sys_gettimeofday = os4_sys_gettimeofday
 	};
-    set_syscall(&os4_sys_context);
+	set_syscall(&os4_sys_context);
 }
