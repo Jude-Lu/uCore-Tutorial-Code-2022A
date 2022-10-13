@@ -26,6 +26,6 @@ void main()
 	printf("hello wrold!\n");
 	trap_init();
 	syscall_init();
-    loader_init();
-    run_next_app();
+	loader_init();
+	run_next_app();
 }
