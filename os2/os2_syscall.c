@@ -4,7 +4,7 @@
 
 uint64 os2_sys_write(int fd, uint64 argument_str, uint64 len)
 {
-    char *str = (char*)argument_str;
+	char *str = (char*)argument_str;
 	debugf("sys_write fd = %d str = %x, len = %d", fd, str, len);
 	if (fd != STDOUT)
 		return -1;
@@ -25,10 +25,10 @@ __attribute__((noreturn)) void os2_sys_exit(int code)
 
 void syscall_init()
 {
-    static struct syscall_context os2_sys_context = 
+	static struct syscall_context os2_sys_context = 
 	{
-        .sys_write = os2_sys_write,
-        .sys_exit = os2_sys_exit
+		.sys_write = os2_sys_write,
+		.sys_exit = os2_sys_exit
 	};
-    set_syscall(&os2_sys_context);
+	set_syscall(&os2_sys_context);
 }

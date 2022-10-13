@@ -97,19 +97,19 @@ uint64 os5_sys_spawn(uint64 va)
 }
 
 uint64 os5_sys_set_priority(long long prio){
-    // TODO: your job is to complete the sys call
-    return -1;
+	// TODO: your job is to complete the sys call
+	return -1;
 }
 
 void syscall_init()
 {
-    static struct syscall_context os5_sys_context =
-    {
-        .sys_write = os5_sys_write,
+	static struct syscall_context os5_sys_context =
+	{
+		.sys_write = os5_sys_write,
 		.sys_read = os5_sys_read,
-        .sys_exit = os5_sys_exit,
+		.sys_exit = os5_sys_exit,
 		.sys_sched_yield = os5_sys_sched_yield,
-        .sys_gettimeofday = os5_sys_gettimeofday,
+		.sys_gettimeofday = os5_sys_gettimeofday,
 		.sys_getpid = os5_sys_getpid,
 		.sys_getppid = os5_sys_getppid,
 		.sys_clone = os5_sys_clone,
@@ -118,5 +118,5 @@ void syscall_init()
 		.sys_spawn = os5_sys_spawn,
 		.sys_set_priority = os5_sys_set_priority
 	};
-    set_syscall(&os5_sys_context);
+	set_syscall(&os5_sys_context);
 }

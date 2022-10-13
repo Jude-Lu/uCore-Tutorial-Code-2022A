@@ -51,8 +51,8 @@ void main()
 	loader_init();
 	trap_init();
 	timer_init();
-    syscall_init();
-    run_all_app();
-    infof("start scheduler!");
+	syscall_init();
+	run_all_app();
+	infof("start scheduler!");
 	scheduler();
 }

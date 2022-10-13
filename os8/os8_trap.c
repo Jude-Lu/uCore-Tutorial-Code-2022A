@@ -1,137 +1,35 @@
-#include "os8_trap.h" 
+#include "os8_trap.h"
 #include "loader.h"
-#include "plic.h"
-#include "../utils/defs.h"
-#include "virtio.h"
 #include "proc.h"
+#include "plic.h"
+#include "virtio.h"
 
 extern char trampoline[], uservec[];
 extern char userret[], kernelvec[];
 
-void kerneltrap();
-
-// set up to take exceptions and traps while in the kernel.
-void set_usertrap()
+void os8_set_usertrap()
 {
-	w_stvec(((uint64)TRAMPOLINE + (uservec - trampoline)) & ~0x3); // DIRECT
+	w_stvec(((uint64)TRAMPOLINE + (uservec - trampoline)) & ~0x3);
 }
 
-void set_kerneltrap()
+void os8_set_kerneltrap()
 {
-	w_stvec((uint64)kernelvec & ~0x3); // DIRECT
+	w_stvec((uint64)kernelvec & ~0x3);
 }
 
-// set up to take exceptions and traps while in the kernel.
-void trap_init()
+struct trapframe* os8_get_trapframe()
 {
-	// intr_on();
-	set_kerneltrap();
-	w_sie(r_sie() | SIE_SEIE | SIE_STIE | SIE_SSIE);
+	return curr_thread()->trapframe;
 }
 
-void unknown_trap()
+uint64 os8_get_kernel_sp()
 {
-	errorf("unknown trap: %p, stval = %p", r_scause(), r_stval());
-	exit(-1);
+	return curr_thread()->kstack + KSTACK_SIZE;
 }
 
-void devintr(uint64 cause)
+void os8_call_userret()
 {
-	int irq;
-	switch (cause) {
-	case SupervisorTimer:
-		set_next_timer();
-		// if form user, allow yield
-		if ((r_sstatus() & SSTATUS_SPP) == 0) {
-			yield();
-		}
-		break;
-	case SupervisorExternal:
-		irq = plic_claim();
-		if (irq == UART0_IRQ) {
-			// do nothing
-		} else if (irq == VIRTIO0_IRQ) {
-			virtio_disk_intr();
-		} else if (irq) {
-			infof("unexpected interrupt irq=%d\n", irq);
-		}
-		if (irq)
-			plic_complete(irq);
-		break;
-	default:
-		unknown_trap();
-		break;
-	}
-}
-
-//
-// handle an interrupt, exception, or system call from user space.
-// called from trampoline.S
-//
-void usertrap()
-{
-	set_kerneltrap();
 	struct trapframe *trapframe = curr_thread()->trapframe;
-	tracef("trap from user epc = %p", trapframe->epc);
-	if ((r_sstatus() & SSTATUS_SPP) != 0)
-		panic("usertrap: not from user mode");
-
-	uint64 cause = r_scause();
-	if (cause & (1ULL << 63)) {
-		devintr(cause & 0xff);
-	} else {
-		switch (cause) {
-		case UserEnvCall:
-			trapframe->epc += 4;
-			syscall(trapframe);
-			break;
-		case StoreMisaligned:
-		case StorePageFault:
-		case InstructionMisaligned:
-		case InstructionPageFault:
-		case LoadMisaligned:
-		case LoadPageFault:
-			errorf("%d in application, bad addr = %p, bad instruction = %p, "
-			       "core dumped.",
-			       cause, r_stval(), trapframe->epc);
-			exit(-2);
-			break;
-		case IllegalInstruction:
-			errorf("IllegalInstruction in application, core dumped.");
-			exit(-3);
-			break;
-		default:
-			unknown_trap();
-			break;
-		}
-	}
-	usertrapret();
-}
-
-//
-// return to user space
-//
-void usertrapret()
-{
-	set_usertrap();
-	struct trapframe *trapframe = curr_thread()->trapframe;
-	trapframe->kernel_satp = r_satp(); // kernel page table
-	trapframe->kernel_sp =
-		curr_thread()->kstack + KSTACK_SIZE; // process's kernel stack
-	trapframe->kernel_trap = (uint64)usertrap;
-	trapframe->kernel_hartid = r_tp(); // unuesd
-
-	w_sepc(trapframe->epc);
-	// set up the registers that trampoline.S's sret will use
-	// to get to user space.
-
-	// set S Previous Privilege mode to User.
-	uint64 x = r_sstatus();
-	x &= ~SSTATUS_SPP; // clear SPP to 0 for user mode
-	x |= SSTATUS_SPIE; // enable interrupts in user mode
-	w_sstatus(x);
-
-	// tell trampoline.S the user page table to switch to.
 	uint64 satp = MAKE_SATP(curr_proc()->pagetable);
 	uint64 fn = TRAMPOLINE + (userret - trampoline);
 	uint64 trapframe_va = get_thread_trapframe_va(curr_thread()->tid);
@@ -139,26 +37,51 @@ void usertrapret()
 	((void (*)(uint64, uint64))fn)(trapframe_va, satp);
 }
 
-void kerneltrap()
+void os8_finish_usertrap(int cause)
 {
-	uint64 sepc = r_sepc();
-	uint64 sstatus = r_sstatus();
-	uint64 scause = r_scause();
+	usertrapret();
+}
 
-	debugf("kernel trap: epc = %p, cause = %d", sepc, scause);
+void os8_error_in_trap(int status)
+{
+	exit(status); // Kill the thread.
+}
 
-	if ((sstatus & SSTATUS_SPP) == 0)
-		panic("kerneltrap: not from supervisor mode");
-
-	if (scause & (1ULL << 63)) {
-		devintr(scause & 0xff);
-	} else {
-		errorf("invalid trap from kernel: %p, stval = %p sepc = %p\n",
-		       scause, r_stval(), sepc);
-		exit(-1);
+void os8_super_external_handler()
+{
+	int irq = plic_claim();
+	if (irq == UART0_IRQ) {
+		// do nothing
+	} else if (irq == VIRTIO0_IRQ) {
+		virtio_disk_intr();
+	} else if (irq) {
+		infof("unexpected interrupt irq=%d\n", irq);
 	}
-	// the yield() may have caused some traps to occur,
-	// so restore trap registers for use by kernelvec.S's sepc instruction.
-	w_sepc(sepc);
-	w_sstatus(sstatus);
+	if (irq)
+		plic_complete(irq);
+}
+
+void trap_init()
+{
+	static struct trap_handler_context os8_trap_context = 
+	{
+		.yield = yield,
+		
+		.set_usertrap = os8_set_usertrap,
+		.set_kerneltrap = os8_set_kerneltrap,
+
+		.get_trapframe = os8_get_trapframe,
+		.get_kernel_sp = os8_get_kernel_sp,
+		
+		.call_userret = os8_call_userret,
+		.finish_usertrap = os8_finish_usertrap,
+		.error_in_trap = os8_error_in_trap,
+
+		.super_external_handler = os8_super_external_handler
+	};
+	set_trap(&os8_trap_context);
+
+	// set up to take exceptions and traps while in the kernel.
+	os8_set_kerneltrap();
+	w_sie(r_sie() | SIE_SEIE | SIE_STIE | SIE_SSIE);
 }

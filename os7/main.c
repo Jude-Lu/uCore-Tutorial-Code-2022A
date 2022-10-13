@@ -59,9 +59,9 @@ void main()
 	binit();
 	fsinit();
 	timer_init();
-    syscall_init();
-    load_init_app();
-    infof("start scheduler!");
+	syscall_init();
+	load_init_app();
+	infof("start scheduler!");
 	show_all_files();
 	scheduler();
 }

@@ -68,4 +68,25 @@ enum Interrupt {
 	SupervisorExternal,
 };
 
+struct trap_handler_context
+{
+	void (*yield)();
+
+	void (*set_usertrap)();
+	void (*set_kerneltrap)();
+	
+	struct trapframe* (*get_trapframe)();
+	uint64 (*get_kernel_sp)();
+	
+	void (*call_userret)();
+	void (*finish_usertrap)(int cause);
+	void (*error_in_trap)(int status);
+
+	void (*super_external_handler)();
+};
+
+void set_trap(struct trap_handler_context *trap_handler_context);
+void usertrapret();
+void kerneltrap();
+
 #endif // TRAP_H

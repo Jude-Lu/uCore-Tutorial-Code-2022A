@@ -11,7 +11,7 @@
 #include "timer.h"
 #include "console.h"
 #include "../syscall/syscall.h"
-#include "../syscall/trap.h"
+#include "../trap/trap.h"
 #include "../kernel-vm/kalloc.h"
 #include "../kernel-vm/map.h"
 #include "../kernel-vm/vm.h"

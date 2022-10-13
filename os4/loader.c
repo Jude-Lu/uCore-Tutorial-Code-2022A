@@ -28,8 +28,8 @@ pagetable_t bin_loader(uint64 start, uint64 end, struct proc *p)
 {
 	pagetable_t pg = uvmcreate();
 	if (mappages(pg, TRAPFRAME, PGSIZE, (uint64)p->trapframe, PTE_R | PTE_W) < 0) {
-        panic("map trapframe fail");
-    }
+		panic("map trapframe fail");
+	}
 	if (!PGALIGNED(start)) {
 		panic("user program not aligned, start = %p", start);
 	}

@@ -362,13 +362,13 @@ int os8_sys_condvar_wait(int cond_id, int mutex_id)
 
 void syscall_init()
 {
-    static struct syscall_context os8_sys_context =
-    {
-        .sys_write = os8_sys_write,
+	static struct syscall_context os8_sys_context =
+	{
+		.sys_write = os8_sys_write,
 		.sys_read = os8_sys_read,
-        .sys_exit = os8_sys_exit,
+		.sys_exit = os8_sys_exit,
 		.sys_sched_yield = os8_sys_sched_yield,
-        .sys_gettimeofday = os8_sys_gettimeofday,
+		.sys_gettimeofday = os8_sys_gettimeofday,
 		.sys_getpid = os8_sys_getpid,
 		.sys_getppid = os8_sys_getppid,
 		.sys_clone = os8_sys_clone,
@@ -390,5 +390,5 @@ void syscall_init()
 		.sys_condvar_signal = os8_sys_condvar_signal,
 		.sys_condvar_wait = os8_sys_condvar_wait
 	};
-    set_syscall(&os8_sys_context);
+	set_syscall(&os8_sys_context);
 }

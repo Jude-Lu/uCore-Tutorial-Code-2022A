@@ -1,120 +1,70 @@
 #include "os3_trap.h"
 #include "loader.h"
 #include "proc.h"
-#include "os3_syscall.h"
-#include "../utils/defs.h"
 
-extern char trampoline[], uservec[];
+extern char uservec[];
 extern void *userret(uint64);
 
-void kerneltrap()
+void os3_set_usertrap()
 {
-	if ((r_sstatus() & SSTATUS_SPP) == 0)
-		panic("kerneltrap: not from supervisor mode");
-	panic("trap from kernel\n");
+	w_stvec((uint64)uservec & ~0x3);
 }
 
-// set up to take exceptions and traps while in the kernel.
-void set_usertrap(void)
+void os3_set_kerneltrap()
 {
-	w_stvec((uint64)uservec & ~0x3); // DIRECT
+	w_stvec((uint64)kerneltrap & ~0x3);
 }
 
-void set_kerneltrap(void)
+struct trapframe* os3_get_trapframe()
 {
-	w_stvec((uint64)kerneltrap & ~0x3); // DIRECT
+	return curr_proc()->trapframe;
 }
 
-// set up to take exceptions and traps while in the kernel.
-void trap_init(void)
+uint64 os3_get_kernel_sp()
 {
-	set_kerneltrap();
+	return curr_proc()->kstack + PGSIZE;
 }
 
-void unknown_trap()
+void os3_call_userret()
 {
-	errorf("unknown trap: %p, stval = %p\n", r_scause(), r_stval());
-	exit(-1);
+	userret((uint64)os3_get_trapframe());
 }
 
-//
-// handle an interrupt, exception, or system call from user space.
-// called from trampoline.S
-//
-void usertrap()
+void os3_finish_usertrap(int cause)
 {
-	set_kerneltrap();
-	struct trapframe *trapframe = curr_proc()->trapframe;
-
-	if ((r_sstatus() & SSTATUS_SPP) != 0)
-		panic("usertrap: not from user mode");
-
-	uint64 cause = r_scause();
-	if (cause & (1ULL << 63)) {
-		cause &= ~(1ULL << 63);
-		switch (cause) {
-		case SupervisorTimer:
-			tracef("time interrupt!\n");
-			set_next_timer();
-			yield();
-			break;
-		default:
-			unknown_trap();
-			break;
-		}
-	} else {
-		switch (cause) {
-		case UserEnvCall:
-			trapframe->epc += 4;
-			syscall(trapframe);
-			break;
-		case StoreMisaligned:
-		case StorePageFault:
-		case InstructionMisaligned:
-		case InstructionPageFault:
-		case LoadMisaligned:
-		case LoadPageFault:
-			printf("%d in application, bad addr = %p, bad instruction = %p, "
-			       "core dumped.\n",
-			       cause, r_stval(), trapframe->epc);
-			exit(-2);
-			break;
-		case IllegalInstruction:
-			printf("IllegalInstruction in application, core dumped.\n");
-			exit(-3);
-			break;
-		default:
-			unknown_trap();
-			break;
-		}
-	}
 	usertrapret();
 }
 
-//
-// return to user space
-//
-void usertrapret()
+void os3_error_in_trap(int status)
 {
-	set_usertrap();
-	struct trapframe *trapframe = curr_proc()->trapframe;
-	trapframe->kernel_satp = r_satp(); // kernel page table
-	trapframe->kernel_sp =
-		curr_proc()->kstack + PGSIZE; // process's kernel stack
-	trapframe->kernel_trap = (uint64)usertrap;
-	trapframe->kernel_hartid = r_tp(); // hartid for cpuid()
+	exit(status); // Kill the process.
+}
 
-	w_sepc(trapframe->epc);
-	// set up the registers that trampoline.S's sret will use
-	// to get to user space.
+void os3_super_external_handler()
+{
+	// We do not encounter external interrupt in ch3, so we do nothing here.
+}
 
-	// set S Previous Privilege mode to User.
-	uint64 x = r_sstatus();
-	x &= ~SSTATUS_SPP; // clear SPP to 0 for user mode
-	x |= SSTATUS_SPIE; // enable interrupts in user mode
-	w_sstatus(x);
+void trap_init()
+{
+	static struct trap_handler_context os3_trap_context = 
+	{
+		.yield = yield,
+		
+		.set_usertrap = os3_set_usertrap,
+		.set_kerneltrap = os3_set_kerneltrap,
 
-	// tell trampoline.S the user page table to switch to.
-	// uint64 satp = MAKE_SATP(p->pagetable);
-	userret((uint64)trapframe);
+		.get_trapframe = os3_get_trapframe,
+		.get_kernel_sp = os3_get_kernel_sp,
+		
+		.call_userret = os3_call_userret,
+		.finish_usertrap = os3_finish_usertrap,
+		.error_in_trap = os3_error_in_trap,
+
+		.super_external_handler = os3_super_external_handler
+	};
+	set_trap(&os3_trap_context);
+
+	// set up to take exceptions and traps while in the kernel.
+	os3_set_kerneltrap();
 }
