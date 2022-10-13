@@ -15,7 +15,7 @@ void os2_call_userret();
 void os2_finish_usertrap(int cause);
 void os2_error_in_trap(int status);
 
-void os2_supervisorexternal_handler();
+void os2_super_external_handler();
 
 void trap_init();
 

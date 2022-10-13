@@ -25,7 +25,7 @@ void devintr(uint64 cause)
 		}
 		break;
 	case SupervisorExternal:
-		(trap_context->supervisorexternal_handler)();
+		(trap_context->super_external_handler)();
 		break;
 	default:
 		unknown_trap();

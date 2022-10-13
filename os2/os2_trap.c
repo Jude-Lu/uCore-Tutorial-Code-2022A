@@ -54,7 +54,7 @@ void os2_error_in_trap(int status)
 	// We are not able to do anything (e.g., kill the current process), just ignore the.
 }
 
-void os2_supervisorexternal_handler()
+void os2_super_external_handler()
 {
 	// We do not encounter external interrupt in ch2, so we do nothing here.
 }
@@ -75,7 +75,7 @@ void trap_init()
 		.finish_usertrap = os2_finish_usertrap,
 		.error_in_trap = os2_error_in_trap,
 
-		.supervisorexternal_handler = os2_supervisorexternal_handler
+		.super_external_handler = os2_super_external_handler
 	};
 	set_trap(&os2_trap_context);
 

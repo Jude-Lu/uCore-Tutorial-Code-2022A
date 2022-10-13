@@ -82,7 +82,7 @@ struct trap_handler_context
 	void (*finish_usertrap)(int cause);
 	void (*error_in_trap)(int status);
 
-	void (*supervisorexternal_handler)();
+	void (*super_external_handler)();
 };
 
 void set_trap(struct trap_handler_context *trap_handler_context);

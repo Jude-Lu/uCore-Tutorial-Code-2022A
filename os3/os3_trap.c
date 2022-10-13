@@ -40,7 +40,7 @@ void os3_error_in_trap(int status)
 	exit(status); // Kill the process.
 }
 
-void os3_supervisorexternal_handler()
+void os3_super_external_handler()
 {
 	// We do not encounter external interrupt in ch3, so we do nothing here.
 }
@@ -61,7 +61,7 @@ void trap_init()
 		.finish_usertrap = os3_finish_usertrap,
 		.error_in_trap = os3_error_in_trap,
 
-		.supervisorexternal_handler = os3_supervisorexternal_handler
+		.super_external_handler = os3_super_external_handler
 	};
 	set_trap(&os3_trap_context);
 
