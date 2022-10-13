@@ -1,6 +1,6 @@
 #include "proc.h"
 #include "loader.h"
-#include "trap.h"
+#include "os8_trap.h"
 #include "../utils/defs.h"
 #include "queue.h"
 

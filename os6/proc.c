@@ -1,6 +1,6 @@
 #include "proc.h"
 #include "loader.h"
-#include "trap.h"
+#include "os6_trap.h"
 #include "../utils/defs.h"
 #include "queue.h"
 
@@ -94,7 +94,7 @@ found:
 	p->parent = NULL;
 	p->exit_code = 0;
 	p->pagetable = uvmcreate();
-	if (mappages(p->pagetable, TRAPFRAME, PGSIZE, trapframe, PTE_R | PTE_W) < 0) {
+	if (mappages(p->pagetable, TRAPFRAME, PGSIZE, (uint64)p->trapframe, PTE_R | PTE_W) < 0) {
         panic("map trapframe fail");
     }
 	memset(&p->context, 0, sizeof(p->context));

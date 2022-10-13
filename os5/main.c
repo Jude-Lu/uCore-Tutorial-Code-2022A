@@ -1,6 +1,7 @@
 #include "../utils/defs.h"
 #include "loader.h"
-#include "trap.h"
+#include "os5_trap.h"
+#include "os5_syscall.h"
 
 extern char e_text[]; // kernel.ld sets this to end of kernel code.
 extern char trampoline[];
@@ -49,7 +50,8 @@ void main()
 	loader_init();
 	trap_init();
 	timer_init();
-	load_init_app();
-	infof("start scheduler!");
+    syscall_init();
+    load_init_app();
+    infof("start scheduler!");
 	scheduler();
 }

@@ -1,5 +1,5 @@
 #include "loader.h"
-#include "trap.h"
+#include "os5_trap.h"
 #include "../utils/defs.h"
 
 static int app_num;

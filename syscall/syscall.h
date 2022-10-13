@@ -33,6 +33,21 @@ struct syscall_context{
 
 	//ch7 新增syscall
 	uint64 (*sys_pipe)(uint64 fdarray);
+
+	//ch8 新增syscall
+    int (*sys_thread_create)(uint64 entry, uint64 arg);
+    int (*sys_gettid)();
+    int (*sys_waittid)(int tid);
+    int (*sys_mutex_create)(int blocking);
+    int (*sys_mutex_lock)(int mutex_id);
+    int (*sys_mutex_unlock)(int mutex_id);
+    int (*sys_semaphore_create)(int res_count);
+    int (*sys_semaphore_up)(int semaphore_id);
+    int (*sys_semaphore_down)(int semaphore_id);
+    int (*sys_condvar_create)();
+    int (*sys_condvar_signal)(int cond_id);
+    int (*sys_condvar_wait)(int cond_id, int mutex_id);
+	
 };
 
 void syscall(struct trapframe *trapframe);
