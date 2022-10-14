@@ -7,6 +7,8 @@ target
 link_app.S
 kernel_app.ld
 tags
+fs
+*.img
 *.o
 *.d
 *.asm
