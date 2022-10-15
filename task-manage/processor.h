@@ -5,6 +5,8 @@
 
 enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };
 
+enum threadstate { T_UNUSED, T_USED, T_SLEEPING, T_RUNNABLE, T_RUNNING, T_EXITED };
+
 // Saved registers for kernel context switches.
 struct context {
 	uint64 ra;
@@ -29,6 +31,7 @@ struct manager {
     void* (*create)();
     void (*remove)(void* p);
     void* (*get)(int id);
+	int (*change)(void* p);
     void (*add)(void* p);
     void* (*fetch)(); 
 };
@@ -37,6 +40,7 @@ void set_manager(struct manager*);
 void* curr_task();
 void set_curr(void*);
 void* get_task(int);
+int change_task(void*);
 void* alloc_task();
 void free_task(void*);
 void add_task(void*);

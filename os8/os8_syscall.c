@@ -4,6 +4,11 @@
 #include "os8_syscall.h"
 #include "os8_trap.h"
 
+inline struct proc* curr_proc()
+{
+	return ((struct thread*)curr_task())->process;
+}
+
 uint64 console_write(uint64 va, uint64 len)
 {
 	struct proc *p = curr_proc();
@@ -211,14 +216,14 @@ int os8_sys_thread_create(uint64 entry, uint64 arg)
 	}
 	struct thread *t = &p->threads[tid];
 	t->trapframe->a0 = arg;
-	t->state = RUNNABLE;
+	t->state = T_RUNNABLE;
 	add_task(t);
 	return tid;
 }
 
 int os8_sys_gettid()
 {
-	return curr_thread()->tid;
+	return ((struct thread*)curr_task())->tid;
 }
 
 int os8_sys_waittid(int tid)
@@ -228,10 +233,10 @@ int os8_sys_waittid(int tid)
 		return -1;
 	}
 	struct thread *t = &curr_proc()->threads[tid];
-	if (t->state == T_UNUSED || tid == curr_thread()->tid) {
+	if (t->state == T_UNUSED || tid == ((struct thread*)curr_task())->tid) {
 		return -1;
 	}
-	if (t->state != EXITED) {
+	if (t->state != T_EXITED) {
 		return -2;
 	}
 	memset((void *)t->kstack, 7, KSTACK_SIZE);

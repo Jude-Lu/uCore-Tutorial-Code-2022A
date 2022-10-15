@@ -42,7 +42,7 @@ int bin_loader(struct inode *ip, struct proc *p)
 int load_init_app()
 {
 	struct inode *ip;
-	struct proc *p = allocproc();
+	struct proc *p = alloc_task();
 	init_stdio(p);
 	if ((ip = namei(INIT_PROC)) == 0) {
 		errorf("invalid init proc name\n");
@@ -56,7 +56,7 @@ int load_init_app()
 	argv[1] = NULL;
 	struct thread *t = &p->threads[0];
 	t->trapframe->a0 = push_argv(p, argv);
-	t->state = RUNNABLE;
+	t->state = T_RUNNABLE;
 	add_task(t);
 	return 0;
 }

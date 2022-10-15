@@ -19,6 +19,10 @@ void* get_task(int id) {
 	return task_manager->get(id);
 }
 
+int change_task(void* p) {
+	return task_manager->change(p);
+}
+
 void* alloc_task() {
 	return task_manager->create();
 }
