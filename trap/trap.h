@@ -71,6 +71,8 @@ enum Interrupt {
 struct trap_handler_context
 {
 	void (*yield)();
+	
+	int (*cpuid)();
 
 	void (*set_usertrap)();
 	void (*set_kerneltrap)();
@@ -82,7 +84,7 @@ struct trap_handler_context
 	void (*finish_usertrap)(int cause);
 	void (*error_in_trap)(int status);
 
-	void (*super_external_handler)();
+	void (*super_external_handler)(int cpuid);
 };
 
 void set_trap(struct trap_handler_context *trap_handler_context);

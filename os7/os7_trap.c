@@ -1,7 +1,7 @@
 #include "os7_trap.h"
 #include "loader.h"
 #include "proc.h"
-#include "plic.h"
+#include "../trap/plic.h"
 #include "virtio.h"
 
 extern char trampoline[], uservec[];
@@ -46,9 +46,9 @@ void os7_error_in_trap(int status)
 	exit(status); // Kill the process.
 }
 
-void os7_super_external_handler()
+void os7_super_external_handler(int cpuid)
 {
-	int irq = plic_claim();
+	int irq = plic_claim(cpuid);
 	if (irq == UART0_IRQ) {
 		// do nothing
 	} else if (irq == VIRTIO0_IRQ) {
@@ -57,7 +57,7 @@ void os7_super_external_handler()
 		infof("unexpected interrupt irq=%d\n", irq);
 	}
 	if (irq)
-		plic_complete(irq);
+		plic_complete(cpuid, irq);
 }
 
 void trap_init()
@@ -65,6 +65,8 @@ void trap_init()
 	static struct trap_handler_context os7_trap_context = 
 	{
 		.yield = yield,
+
+		.cpuid = cpuid,
 		
 		.set_usertrap = os7_set_usertrap,
 		.set_kerneltrap = os7_set_kerneltrap,

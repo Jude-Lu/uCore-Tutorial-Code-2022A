@@ -5,6 +5,11 @@
 extern char uservec[];
 extern void *userret(uint64);
 
+int os3_cpuid()
+{
+	return 0;
+}
+
 void os3_set_usertrap()
 {
 	w_stvec((uint64)uservec & ~0x3);
@@ -50,6 +55,8 @@ void trap_init()
 	static struct trap_handler_context os3_trap_context = 
 	{
 		.yield = yield,
+
+		.cpuid = os3_cpuid,
 		
 		.set_usertrap = os3_set_usertrap,
 		.set_kerneltrap = os3_set_kerneltrap,
