@@ -1,6 +1,6 @@
 #include "../utils/defs.h"
 #include "loader.h"
-#include "plic.h"
+#include "../trap/plic.h"
 #include "os8_trap.h"
 #include "os8_syscall.h"
 #include "virtio.h"
@@ -54,7 +54,7 @@ void main()
 	kinit();
 	kvm_init();
 	trap_init();
-	plicinit();
+	plicinit(0);
 	virtio_disk_init();
 	binit();
 	fsinit();

@@ -10,6 +10,11 @@ void os2_yield()
 	// We do not support "yield" in ch2, so we do nothing here.
 }
 
+int os2_cpuid()
+{
+	return 0;
+}
+
 void os2_set_usertrap()
 {
 	// The function has been done in trap_init(), and we do not use os2_set_kerneltrap (see below),
@@ -64,6 +69,8 @@ void trap_init()
 	static struct trap_handler_context os2_trap_context = 
 	{
 		.yield = os2_yield,
+
+		.cpuid = os2_cpuid,
 		
 		.set_usertrap = os2_set_usertrap,
 		.set_kerneltrap = os2_set_kerneltrap,
