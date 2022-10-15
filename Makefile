@@ -11,6 +11,7 @@ UTIL = utils
 SYSCALL = syscall
 TRAP = trap
 VM = kernel-vm
+TASK = task-manage
 ##
 
 TOOLPREFIX = riscv64-unknown-elf-
@@ -31,6 +32,9 @@ ifeq ($(shell expr $(ch) \>= 2), 1)
 endif
 ifeq ($(shell expr $(ch) \>= 2), 1)
 	C_SRCS += $(wildcard $(TRAP)/*.c)
+endif
+ifeq ($(shell expr $(ch) \>= 3), 1)
+	C_SRCS += $(wildcard $(TASK)/*.c)
 endif
 ifeq ($(shell expr $(ch) \>= 4), 1)
 	C_SRCS += $(wildcard $(VM)/*.c)

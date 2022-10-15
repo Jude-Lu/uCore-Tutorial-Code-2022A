@@ -41,7 +41,7 @@ int load_app(int n, uint64 *info)
 int run_all_app()
 {
 	for (int i = 0; i < app_num; ++i) {
-		struct proc *p = allocproc();
+		struct proc* p = (struct proc*)alloc_task();
 		struct trapframe *trapframe = p->trapframe;
 		load_app(i, app_info_ptr);
 		uint64 entry = BASE_ADDRESS + i * MAX_APP_SIZE;
