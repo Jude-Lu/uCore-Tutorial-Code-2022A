@@ -9,7 +9,7 @@ uint64 os5_sys_write(int fd, uint64 va, uint64 len)
 	debugf("sys_write fd = %d str = %x, len = %d", fd, va, len);
 	if (fd != STDOUT)
 		return -1;
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	char str[MAX_STR_LEN];
 	int size = copyinstr(p->pagetable, str, va, MIN(len, MAX_STR_LEN));
 	debugf("size = %d", size);
@@ -24,7 +24,7 @@ uint64 os5_sys_read(int fd, uint64 va, uint64 len)
 	debugf("sys_read fd = %d str = %x, len = %d", fd, va, len);
 	if (fd != STDIN)
 		return -1;
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	char str[MAX_STR_LEN];
 	for (int i = 0; i < len; ++i) {
 		int c = consgetc();
@@ -48,7 +48,7 @@ uint64 os5_sys_sched_yield()
 
 uint64 os5_sys_gettimeofday(uint64 val, int _tz)
 {
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	uint64 cycle = get_cycle();
 	TimeVal t;
 	t.sec = cycle / CPU_FREQ;
@@ -59,12 +59,12 @@ uint64 os5_sys_gettimeofday(uint64 val, int _tz)
 
 uint64 os5_sys_getpid()
 {
-	return curr_proc()->pid;
+	return ((struct proc*)curr_task())->pid;
 }
 
 uint64 os5_sys_getppid()
 {
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	return p->parent == NULL ? IDLE_PID : p->parent->pid;
 }
 
@@ -76,7 +76,7 @@ uint64 os5_sys_clone()
 
 uint64 os5_sys_exec(uint64 va, uint64 uargv)
 {
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	char name[200];
 	copyinstr(p->pagetable, name, va, 200);
 	debugf("sys_exec %s\n", name);
@@ -85,7 +85,7 @@ uint64 os5_sys_exec(uint64 va, uint64 uargv)
 
 uint64 os5_sys_wait(int pid, uint64 va)
 {
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	int *code = (int *)useraddr(p->pagetable, va);
 	return wait(pid, code);
 }

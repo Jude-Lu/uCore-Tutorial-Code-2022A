@@ -17,18 +17,18 @@ void os5_set_kerneltrap()
 
 struct trapframe* os5_get_trapframe()
 {
-	return curr_proc()->trapframe;
+	return ((struct proc*)curr_task())->trapframe;
 }
 
 uint64 os5_get_kernel_sp()
 {
-	return curr_proc()->kstack + PGSIZE;
+	return ((struct proc*)curr_task())->kstack + PGSIZE;
 }
 
 void os5_call_userret()
 {
-	struct trapframe *trapframe = curr_proc()->trapframe;
-	uint64 satp = MAKE_SATP(curr_proc()->pagetable);
+	struct trapframe *trapframe = ((struct proc*)curr_task())->trapframe;
+	uint64 satp = MAKE_SATP(((struct proc*)curr_task())->pagetable);
 	uint64 fn = TRAMPOLINE + (userret - trampoline);
 	tracef("return to user @ %p", trapframe->epc);
 	((void (*)(uint64, uint64))fn)(TRAPFRAME, satp);
