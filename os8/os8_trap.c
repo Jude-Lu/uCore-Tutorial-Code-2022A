@@ -19,20 +19,20 @@ void os8_set_kerneltrap()
 
 struct trapframe* os8_get_trapframe()
 {
-	return curr_thread()->trapframe;
+	return ((struct thread*)curr_task())->trapframe;
 }
 
 uint64 os8_get_kernel_sp()
 {
-	return curr_thread()->kstack + KSTACK_SIZE;
+	return ((struct thread*)curr_task())->kstack + KSTACK_SIZE;
 }
 
 void os8_call_userret()
 {
-	struct trapframe *trapframe = curr_thread()->trapframe;
-	uint64 satp = MAKE_SATP(curr_proc()->pagetable);
+	struct trapframe *trapframe = ((struct thread*)curr_task())->trapframe;
+	uint64 satp = MAKE_SATP(((struct thread*)curr_task())->process->pagetable);
 	uint64 fn = TRAMPOLINE + (userret - trampoline);
-	uint64 trapframe_va = get_thread_trapframe_va(curr_thread()->tid);
+	uint64 trapframe_va = get_thread_trapframe_va(((struct thread*)curr_task())->tid);
 	debugf("return to user @ %p, sp @ %p", trapframe->epc, trapframe->sp);
 	((void (*)(uint64, uint64))fn)(trapframe_va, satp);
 }

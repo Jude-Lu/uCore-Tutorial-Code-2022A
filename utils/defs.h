@@ -15,6 +15,8 @@
 #include "../kernel-vm/kalloc.h"
 #include "../kernel-vm/map.h"
 #include "../kernel-vm/vm.h"
+#include "../task-manage/queue.h"
+#include "../task-manage/processor.h"
 
 // number of elements in fixed-size array
 #define NELEM(x) (sizeof(x) / sizeof((x)[0]))

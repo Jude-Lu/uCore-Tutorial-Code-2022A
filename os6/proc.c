@@ -2,50 +2,28 @@
 #include "loader.h"
 #include "os6_trap.h"
 #include "../utils/defs.h"
-#include "queue.h"
 
 struct proc pool[NPROC];
 __attribute__((aligned(16))) char kstack[NPROC][PAGE_SIZE];
 __attribute__((aligned(4096))) char trapframe[NPROC][TRAP_PAGE_SIZE];
 
 extern char boot_stack_top[];
-struct proc *current_proc;
 struct proc idle;
 struct queue task_queue;
 
 int procid()
 {
-	return curr_proc()->pid;
+	return ((struct proc*)curr_task())->pid;
 }
 
 int threadid()
 {
-	return curr_proc()->pid;
+	return ((struct proc*)curr_task())->pid;
 }
 
 int cpuid()
 {
 	return 0;
-}
-
-struct proc *curr_proc()
-{
-	return current_proc;
-}
-
-// initialize the proc table at boot time.
-void proc_init()
-{
-	struct proc *p;
-	for (p = pool; p < &pool[NPROC]; p++) {
-		p->state = UNUSED;
-		p->kstack = (uint64)kstack[p - pool];
-		p->trapframe = (struct trapframe *)trapframe[p - pool];
-	}
-	idle.kstack = (uint64)boot_stack_top;
-	idle.pid = IDLE_PID;
-	current_proc = &idle;
-	init_queue(&task_queue);
 }
 
 int allocpid()
@@ -54,7 +32,16 @@ int allocpid()
 	return PID++;
 }
 
-struct proc *fetch_task()
+// Free a process's page table, and free the
+// physical memory it refers to.
+void freepagetable(pagetable_t pagetable, uint64 max_page)
+{
+	uvmunmap(pagetable, TRAMPOLINE, 1, 0);
+	uvmunmap(pagetable, TRAPFRAME, 1, 0);
+	uvmfree(pagetable, max_page);
+}
+
+void* fetch()
 {
 	int index = pop_queue(&task_queue);
 	if (index < 0) {
@@ -66,8 +53,10 @@ struct proc *fetch_task()
 	return pool + index;
 }
 
-void add_task(struct proc *p)
+void add(void* proc)
 {
+	struct proc* p = (struct proc*)proc;
+	p->state = RUNNABLE;
 	push_queue(&task_queue, p - pool);
 	debugf("add task %d(pid=%d) to task queue\n", p - pool, p->pid);
 }
@@ -75,7 +64,7 @@ void add_task(struct proc *p)
 // Look in the process table for an UNUSED proc.
 // If found, initialize state required to run in the kernel.
 // If there are no free procs, or a memory allocation fails, return 0.
-struct proc *allocproc()
+void* create()
 {
 	struct proc *p;
 	for (p = pool; p < &pool[NPROC]; p++) {
@@ -106,6 +95,20 @@ found:
 	return p;
 }
 
+void remove(void* proc)
+{
+	struct proc* p = (struct proc*)proc;
+	if (p->pagetable)
+		freepagetable(p->pagetable, p->max_page);
+	p->pagetable = 0;
+	for (int i = 0; i > FD_BUFFER_SIZE; i++) {
+		if (p->files[i] != NULL) {
+			fileclose(p->files[i]);
+		}
+	}
+	p->state = UNUSED;
+}
+
 int init_stdio(struct proc *p)
 {
 	for (int i = 0; i < 3; i++) {
@@ -126,26 +129,13 @@ void scheduler()
 {
 	struct proc *p;
 	for (;;) {
-		/*int has_proc = 0;
-		for (p = pool; p < &pool[NPROC]; p++) {
-			if (p->state == RUNNABLE) {
-				has_proc = 1;
-				tracef("swtich to proc %d", p - pool);
-				p->state = RUNNING;
-				current_proc = p;
-				swtch(&idle.context, &p->context);
-			}
-		}
-		if(has_proc == 0) {
-			panic("all app are over!\n");
-		}*/
 		p = fetch_task();
 		if (p == NULL) {
 			panic("all app are over!\n");
 		}
 		tracef("swtich to proc %d", p - pool);
 		p->state = RUNNING;
-		current_proc = p;
+		set_curr(p);
 		swtch(&idle.context, &p->context);
 	}
 }
@@ -159,7 +149,7 @@ void scheduler()
 // there's no process.
 void sched()
 {
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	if (p->state == RUNNING)
 		panic("sched running");
 	swtch(&p->context, &idle.context);
@@ -168,40 +158,17 @@ void sched()
 // Give up the CPU for one scheduling round.
 void yield()
 {
-	current_proc->state = RUNNABLE;
-	add_task(current_proc);
+	add_task(curr_task());
 	sched();
-}
-
-// Free a process's page table, and free the
-// physical memory it refers to.
-void freepagetable(pagetable_t pagetable, uint64 max_page)
-{
-	uvmunmap(pagetable, TRAMPOLINE, 1, 0);
-	uvmunmap(pagetable, TRAPFRAME, 1, 0);
-	uvmfree(pagetable, max_page);
-}
-
-void freeproc(struct proc *p)
-{
-	if (p->pagetable)
-		freepagetable(p->pagetable, p->max_page);
-	p->pagetable = 0;
-	for (int i = 0; i > FD_BUFFER_SIZE; i++) {
-		if (p->files[i] != NULL) {
-			fileclose(p->files[i]);
-		}
-	}
-	p->state = UNUSED;
 }
 
 int fork()
 {
 	struct proc *np;
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	int i;
 	// Allocate process.
-	if ((np = allocproc()) == 0) {
+	if ((np = alloc_task()) == 0) {
 		panic("allocproc\n");
 	}
 	// Copy user memory from parent to child.
@@ -222,7 +189,6 @@ int fork()
 	// Cause fork to return 0 in the child.
 	np->trapframe->a0 = 0;
 	np->parent = p;
-	np->state = RUNNABLE;
 	add_task(np);
 	return np->pid;
 }
@@ -267,7 +233,7 @@ int exec(char *path, char **argv)
 {
 	infof("exec : %s\n", path);
 	struct inode *ip;
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	if ((ip = namei(path)) == 0) {
 		errorf("invalid file name %s\n", path);
 		return -1;
@@ -282,7 +248,7 @@ int wait(int pid, int *code)
 {
 	struct proc *np;
 	int havekids;
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 
 	for (;;) {
 		// Scan through table looking for exited children.
@@ -303,7 +269,6 @@ int wait(int pid, int *code)
 		if (!havekids) {
 			return -1;
 		}
-		p->state = RUNNABLE;
 		add_task(p);
 		sched();
 	}
@@ -312,10 +277,10 @@ int wait(int pid, int *code)
 // Exit the current process.
 void exit(int code)
 {
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	p->exit_code = code;
 	debugf("proc %d exit with %d", p->pid, code);
-	freeproc(p);
+	free_task(p);
 	if (p->parent != NULL) {
 		// Parent should `wait`
 		p->state = ZOMBIE;
@@ -333,7 +298,7 @@ void exit(int code)
 int fdalloc(struct file *f)
 {
 	debugf("debugf f = %p, type = %d", f, f->type);
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	for (int i = 0; i < FD_BUFFER_SIZE; ++i) {
 		if (p->files[i] == NULL) {
 			p->files[i] = f;
@@ -349,7 +314,7 @@ int fdalloc(struct file *f)
 // Returns 0 on success, -1 on error.
 int either_copyout(int user_dst, uint64 dst, char *src, uint64 len)
 {
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	if (user_dst) {
 		return copyout(p->pagetable, dst, src, len);
 	} else {
@@ -363,11 +328,34 @@ int either_copyout(int user_dst, uint64 dst, char *src, uint64 len)
 // Returns 0 on success, -1 on error.
 int either_copyin(int user_src, uint64 src, char *dst, uint64 len)
 {
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	if (user_src) {
 		return copyin(p->pagetable, dst, src, len);
 	} else {
 		memmove(dst, (char *)src, len);
 		return 0;
 	}
+}
+
+// initialize the proc table at boot time.
+void proc_init()
+{
+	struct proc *p;
+	for (p = pool; p < &pool[NPROC]; p++) {
+		p->state = UNUSED;
+		p->kstack = (uint64)kstack[p - pool];
+		p->trapframe = (struct trapframe *)trapframe[p - pool];
+	}
+	idle.kstack = (uint64)boot_stack_top;
+	idle.pid = IDLE_PID;
+	set_curr(&idle);
+	init_queue(&task_queue, QUEUE_SIZE, process_queue_data);
+	static struct manager os6_manager =
+	{
+		.create = create,
+		.remove = remove,
+		.add = add,
+		.fetch = fetch
+	};
+	set_manager(&os6_manager);
 }

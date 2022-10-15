@@ -22,12 +22,12 @@ void os3_set_kerneltrap()
 
 struct trapframe* os3_get_trapframe()
 {
-	return curr_proc()->trapframe;
+	return ((struct proc*)curr_task())->trapframe;
 }
 
 uint64 os3_get_kernel_sp()
 {
-	return curr_proc()->kstack + PGSIZE;
+	return ((struct proc*)curr_task())->kstack + PGSIZE;
 }
 
 void os3_call_userret()

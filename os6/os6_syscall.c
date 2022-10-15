@@ -5,7 +5,7 @@
 
 uint64 console_write(uint64 va, uint64 len)
 {
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	char str[MAX_STR_LEN];
 	int size = copyinstr(p->pagetable, str, va, MIN(len, MAX_STR_LEN));
 	tracef("write size = %d", size);
@@ -17,7 +17,7 @@ uint64 console_write(uint64 va, uint64 len)
 
 uint64 console_read(uint64 va, uint64 len)
 {
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	char str[MAX_STR_LEN];
 	tracef("read size = %d", len);
 	for (int i = 0; i < len; ++i) {
@@ -32,7 +32,7 @@ uint64 os6_sys_write(int fd, uint64 va, uint64 len)
 {
 	if (fd < 0 || fd > FD_BUFFER_SIZE)
 		return -1;
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	struct file *f = p->files[fd];
 	if (f == NULL) {
 		errorf("invalid fd %d\n", fd);
@@ -53,7 +53,7 @@ uint64 os6_sys_read(int fd, uint64 va, uint64 len)
 {
 	if (fd < 0 || fd > FD_BUFFER_SIZE)
 		return -1;
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	struct file *f = p->files[fd];
 	if (f == NULL) {
 		errorf("invalid fd %d\n", fd);
@@ -84,7 +84,7 @@ uint64 os6_sys_sched_yield()
 
 uint64 os6_sys_gettimeofday(uint64 val, int _tz)
 {
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	uint64 cycle = get_cycle();
 	TimeVal t;
 	t.sec = cycle / CPU_FREQ;
@@ -95,12 +95,12 @@ uint64 os6_sys_gettimeofday(uint64 val, int _tz)
 
 uint64 os6_sys_getpid()
 {
-	return curr_proc()->pid;
+	return ((struct proc*)curr_task())->pid;
 }
 
 uint64 os6_sys_getppid()
 {
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	return p->parent == NULL ? IDLE_PID : p->parent->pid;
 }
 
@@ -118,7 +118,7 @@ static inline uint64 fetchaddr(pagetable_t pagetable, uint64 va)
 
 uint64 os6_sys_exec(uint64 path, uint64 uargv)
 {
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	char name[MAX_STR_LEN];
 	copyinstr(p->pagetable, name, path, MAX_STR_LEN);
 	uint64 arg;
@@ -136,7 +136,7 @@ uint64 os6_sys_exec(uint64 path, uint64 uargv)
 
 uint64 os6_sys_wait(int pid, uint64 va)
 {
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	int *code = (int *)useraddr(p->pagetable, va);
 	return wait(pid, code);
 }
@@ -155,7 +155,7 @@ uint64 os6_sys_set_priority(long long prio)
 
 uint64 os6_sys_openat(uint64 va, uint64 omode, uint64 _flags)
 {
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	char path[200];
 	copyinstr(p->pagetable, path, va, 200);
 	return fileopen(path, omode);
@@ -165,7 +165,7 @@ uint64 os6_sys_close(int fd)
 {
 	if (fd < 0 || fd > FD_BUFFER_SIZE)
 		return -1;
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	struct file *f = p->files[fd];
 	if (f == NULL) {
 		errorf("invalid fd %d", fd);

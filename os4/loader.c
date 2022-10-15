@@ -63,7 +63,7 @@ pagetable_t bin_loader(uint64 start, uint64 end, struct proc *p)
 int run_all_app()
 {
 	for (int i = 0; i < app_num; ++i) {
-		struct proc *p = allocproc();
+		struct proc *p = alloc_task();
 		tracef("load app %d", i);
 		bin_loader(app_info_ptr[i], app_info_ptr[i + 1], p);
 		p->state = RUNNABLE;
