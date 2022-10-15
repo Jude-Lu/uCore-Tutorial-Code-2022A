@@ -8,7 +8,7 @@ uint64 os4_sys_write(int fd, uint64 va, uint64 len)
 	debugf("sys_write fd = %d va = %x, len = %d", fd, va, len);
 	if (fd != STDOUT)
 		return -1;
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	char str[MAX_STR_LEN];
 	int size = copyinstr(p->pagetable, str, va, MIN(len, MAX_STR_LEN));
 	debugf("size = %d", size);
