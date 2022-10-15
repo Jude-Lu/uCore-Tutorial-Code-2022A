@@ -43,7 +43,7 @@ int pipewrite(struct pipe *pi, uint64 addr, int n)
 {
 	int w = 0;
 	uint64 size;
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	if (n <= 0) {
 		panic("invalid read num");
 	}
@@ -73,7 +73,7 @@ int piperead(struct pipe *pi, uint64 addr, int n)
 {
 	int r = 0;
 	uint64 size = -1;
-	struct proc *p = curr_proc();
+	struct proc *p = curr_task();
 	if (n <= 0) {
 		panic("invalid read num");
 	}

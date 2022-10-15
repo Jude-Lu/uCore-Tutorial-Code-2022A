@@ -30,7 +30,7 @@ int allocpid()
 // Look in the process table for an UNUSED proc.
 // If found, initialize state required to run in the kernel.
 // If there are no free procs, or a memory allocation fails, return 0.
-void* create(void) 
+void* create() 
 {
 	struct proc *p;
 	for (p = pool; p < &pool[NPROC]; p++) {
