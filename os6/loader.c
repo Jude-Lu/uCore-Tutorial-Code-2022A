@@ -51,7 +51,7 @@ int bin_loader(struct inode *ip, struct proc *p)
 int load_init_app()
 {
 	struct inode *ip;
-	struct proc *p = allocproc();
+	struct proc *p = alloc_task();
 	init_stdio(p);
 	printf("INIT_PROC: %s\n", INIT_PROC);
 	if ((ip = namei(INIT_PROC)) == 0) {
