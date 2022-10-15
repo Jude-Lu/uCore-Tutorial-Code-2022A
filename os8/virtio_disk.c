@@ -10,7 +10,7 @@
 #include "bio.h"
 #include "file.h"
 #include "fs.h"
-#include "plic.h"
+#include "../trap/plic.h"
 #include "../utils/defs.h"
 #include "virtio.h"
 

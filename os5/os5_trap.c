@@ -5,6 +5,11 @@
 extern char trampoline[], uservec[];
 extern char userret[];
 
+int os5_cpuid()
+{
+	return 0;
+}
+
 void os5_set_usertrap()
 {
 	w_stvec(((uint64)TRAMPOLINE + (uservec - trampoline)) & ~0x3);
@@ -54,6 +59,8 @@ void trap_init()
 	static struct trap_handler_context os5_trap_context = 
 	{
 		.yield = yield,
+
+		.cpuid = os5_cpuid,
 		
 		.set_usertrap = os5_set_usertrap,
 		.set_kerneltrap = os5_set_kerneltrap,
