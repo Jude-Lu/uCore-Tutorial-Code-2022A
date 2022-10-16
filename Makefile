@@ -12,6 +12,7 @@ SYSCALL = syscall
 TRAP = trap
 VM = kernel-vm
 TASK = task-manage
+SCRIPT = script
 ##
 
 TOOLPREFIX = riscv64-unknown-elf-
@@ -53,7 +54,9 @@ ifeq ($(shell expr $(ch) \<= 5)$(shell expr $(ch) \>= 2), 11)
 ifeq (,$(findstring link_app.o,$(OBJS)))
 	AS_OBJS += $K/link_app.o
 endif
-else ifeq ($(shell expr $(ch) \>= 6), 1)
+endif
+
+ifeq ($(shell expr $(ch) \>= 5), 1)
 ifeq (,$(findstring initproc.o,$(OBJS)))
 	AS_OBJS += $K/initproc.o
 endif
@@ -114,39 +117,43 @@ INIT_PROC ?= usershell
 
 ifeq ($(shell expr $(ch) \>= 6), 1)
 $(K)/initproc.o: $K/initproc.S
-$(K)/initproc.S: $K/initproc.py .FORCE
-	cd $K && $(PY) initproc.py $(INIT_PROC)
+$(K)/initproc.S: $(SCRIPT)/initproc.py .FORCE
+	cd $(SCRIPT) && $(PY) initproc.py $(INIT_PROC) $K
 
 else ifeq ($(shell expr $(ch) \== 5), 1)
+$(K)/initproc.o: $K/initproc.S
+$(K)/initproc.S: $(SCRIPT)/initproc.py .FORCE
+	cd $(SCRIPT) && $(PY) initproc.py $(INIT_PROC) $K
+
 $(K)/link_app.o: $K/link_app.S
-$(K)/link_app.S: $K/pack.py .FORCE
-	cd $K && $(PY) pack.py $(INIT_PROC)
-$(K)/kernel_app.ld: $K/kernelld.py .FORCE
-	cd $K && $(PY) kernelld.py
+$(K)/link_app.S: $(SCRIPT)/pack.py .FORCE
+	cd $(SCRIPT) && $(PY) pack.py $K
+$(SCRIPT)/kernel_app.ld: $(SCRIPT)/kernelld.py .FORCE
+	cd $(SCRIPT) && $(PY) kernelld.py
 
 else ifeq ($(shell expr $(ch) \== 1), 1)
 
 else
 $K/link_app.o: $K/link_app.S
-$K/link_app.S: $K/pack.py
-	cd $K && $(PY) pack.py
-$K/kernel_app.ld: $K/kernelld.py
-	cd $K && $(PY) kernelld.py
+$K/link_app.S: $(SCRIPT)/pack.py .FORCE
+	cd $(SCRIPT) && $(PY) pack.py $K
+$(SCRIPT)/kernel_app.ld: $(SCRIPT)/kernelld.py .FORCE
+	cd $(SCRIPT) && $(PY) kernelld.py
 endif
 
 build: build/kernel
 
 ifeq ($(shell expr $(ch) \!= 1)$(shell expr $(ch) \!= 6)$(shell expr $(ch) \!= 7)$(shell expr $(ch) \!= 8), 1111)
-build/kernel: $(OBJS) os$(ch)/kernel_app.ld
-	$(LD) $(LDFLAGS) -T os$(ch)/kernel_app.ld -o $(BUILDDIR)/kernel $(OBJS)
+build/kernel: $(OBJS) $(SCRIPT)/kernel_app.ld
+	$(LD) $(LDFLAGS) -T $(SCRIPT)/kernel_app.ld -o $(BUILDDIR)/kernel $(OBJS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
 	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
 	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d
 	@echo 'Build kernel done'
 
 else
-build/kernel: $(OBJS) os$(ch)/kernel.ld
-	$(LD) $(LDFLAGS) -T os$(ch)/kernel.ld -o $(BUILDDIR)/kernel $(OBJS)
+build/kernel: $(OBJS) $(SCRIPT)/kernel.ld
+	$(LD) $(LDFLAGS) -T $(SCRIPT)/kernel.ld -o $(BUILDDIR)/kernel $(OBJS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
 	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
 	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d

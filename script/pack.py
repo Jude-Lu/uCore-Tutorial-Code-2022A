@@ -1,10 +1,15 @@
 import os
+import argparse
 
 TARGET_DIR = "../user/target/bin/"
 
 if __name__ == '__main__':
-    f = open("link_app.S", mode="w")
+    parser = argparse.ArgumentParser()
+    parser.add_argument('OS', default="script")
+    args = parser.parse_args()
+    f = open("../" + args.OS + "/link_app.S", mode="w")
     apps = os.listdir(TARGET_DIR)
+    print(apps)
     apps.sort()
     f.write(
 '''    .align 4
@@ -26,7 +31,7 @@ _app_names:
 ''');
 
     for app in apps:
-        app = app[:app.find('.')]
+        # app = app[:app.find('.')]
         f.write("   .string \"" + app + "\"\n")
 
     for (idx, app) in enumerate(apps):

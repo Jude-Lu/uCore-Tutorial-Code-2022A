@@ -4,8 +4,9 @@ import argparse
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('INIT_PROC', default="usershell")
+    parser.add_argument('OS', default="script")
     args = parser.parse_args()
-    f = open("initproc.S", mode="w")
+    f = open("../" + args.OS + "/initproc.S", mode="w")
     f.write(
 '''
     .global INIT_PROC
