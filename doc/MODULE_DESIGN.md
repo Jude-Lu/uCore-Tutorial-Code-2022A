@@ -100,6 +100,9 @@ struct trap_handler_context
     // yield是每个章节自己的，不同的调度策略会调用不同的sched，而ch2里面甚至不需要支持（空函数）
 	void (*yield)();
 
+	// 主要用于处理外部中断的时候，获取当前是哪个cpu（发生了外部中断）
+	int (*cpuid)();
+
     // set_usertrap和set_kerneltrap分别用于处理在U/S态下发生异常时的异常处理代码入口
 	void (*set_usertrap)();
 	void (*set_kerneltrap)();
@@ -116,7 +119,7 @@ struct trap_handler_context
     // 用于处理当trap处理发生错误时要做的事
 	void (*error_in_trap)(int status);
 	// 用于处理非时间中断的一切外部中断，会在文件系统里面用到
-	void (*super_external_handler)();
+	void (*super_external_handler)(int cpuid);
 };
 ```
 # kernel-vm
