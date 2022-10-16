@@ -9,7 +9,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
     f = open("../" + args.OS + "/link_app.S", mode="w")
     apps = os.listdir(TARGET_DIR)
-    print(apps)
     apps.sort()
     f.write(
 '''    .align 4
