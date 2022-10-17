@@ -8,6 +8,7 @@ link_app.S
 kernel_app.ld
 tags
 fs
+*.swp
 *.img
 *.o
 *.d

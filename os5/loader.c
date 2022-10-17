@@ -90,7 +90,7 @@ int load_init_app()
 {
 	int id = get_id_by_name(INIT_PROC);
 	if (id < 0)
-		panic("Cannpt find INIT_PROC %s", INIT_PROC);
+		panic("Cannot find INIT_PROC %s", INIT_PROC);
 	struct proc *p = alloc_task();
 	if (p == NULL) {
 		panic("allocproc\n");
