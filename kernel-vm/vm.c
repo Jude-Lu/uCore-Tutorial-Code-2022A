@@ -2,18 +2,19 @@
 #include "kalloc.h"
 #include "../utils/defs.h"
 
-// Return the address of the PTE in page table pagetable
-// that corresponds to virtual address va.  If alloc!=0,
-// create any required page-table pages.
-//
-// The risc-v Sv39 scheme has three levels of page-table
-// pages. A page-table page contains 512 64-bit PTEs.
-// A 64-bit virtual address is split into five fields:
-//   39..63 -- must be zero.
-//   30..38 -- 9 bits of level-2 index.
-//   21..29 -- 9 bits of level-1 index.
-//   12..20 -- 9 bits of level-0 index.
-//    0..11 -- 12 bits of byte offset within the page.
+/**
+ * Return the address of the PTE in page table pagetable
+ * that corresponds to virtual address va.  If alloc!=0,
+ * create any required page-table pages.
+ * The risc-v Sv39 scheme has three levels of page-table
+ * pages. A page-table page contains 512 64-bit PTEs.
+ * A 64-bit virtual address is split into five fields:
+ * 39..63 -- must be zero.
+ * 30..38 -- 9 bits of level-2 index.
+ * 21..29 -- 9 bits of level-1 index.
+ * 12..20 -- 9 bits of level-0 index.
+ * 0..11 -- 12 bits of byte offset within the page.
+ */  
 pte_t* walk(pagetable_t pagetable, uint64 va, int alloc) {
     if (va >= MAXVA)
         panic("walk");
@@ -32,9 +33,11 @@ pte_t* walk(pagetable_t pagetable, uint64 va, int alloc) {
     return &pagetable[PX(0, va)];
 }
 
-// Look up a virtual address, return the physical address,
-// or 0 if not mapped.
-// Can only be used to look up user pages.
+/**
+ * Look up a virtual address, return the physical address,
+ * or 0 if not mapped.
+ * Can only be used to look up user pages.
+ */
 uint64 walkaddr(pagetable_t pagetable, uint64 va) {
     pte_t* pte;
     uint64 pa;
@@ -53,7 +56,7 @@ uint64 walkaddr(pagetable_t pagetable, uint64 va) {
     return pa;
 }
 
-// Look up a virtual address, return the physical address,
+/// Look up a virtual address, return the physical address,
 uint64 useraddr(pagetable_t pagetable, uint64 va) {
     uint64 page = walkaddr(pagetable, va);
     if (page == 0)
@@ -61,8 +64,10 @@ uint64 useraddr(pagetable_t pagetable, uint64 va) {
     return page | (va & 0xFFFULL);
 }
 
-// Recursively free page-table pages.
-// All leaf mappings must already have been removed.
+/**
+ * Recursively free page-table pages.
+ * All leaf mappings must already have been removed.
+ */
 void freewalk(pagetable_t pagetable) {
     // there are 2^9 = 512 PTEs in a page table.
     for (int i = 0; i < 512; i++) {
@@ -79,9 +84,11 @@ void freewalk(pagetable_t pagetable) {
     kfree((void*)pagetable);
 }
 
-// Copy from kernel to user.
-// Copy len bytes from src to virtual address dstva in a given page table.
-// Return 0 on success, -1 on error.
+/**
+ * Copy from kernel to user.
+ * Copy len bytes from src to virtual address dstva in a given page table.
+ * Return 0 on success, -1 on error.
+ */
 int copyout(pagetable_t pagetable, uint64 dstva, char* src, uint64 len) {
     uint64 n, va0, pa0;
 
@@ -102,9 +109,11 @@ int copyout(pagetable_t pagetable, uint64 dstva, char* src, uint64 len) {
     return 0;
 }
 
-// Copy from user to kernel.
-// Copy len bytes to dst from virtual address srcva in a given page table.
-// Return 0 on success, -1 on error.
+/**
+ * Copy from user to kernel.
+ * Copy len bytes to dst from virtual address srcva in a given page table.
+ * Return 0 on success, -1 on error.
+ */
 int copyin(pagetable_t pagetable, char* dst, uint64 srcva, uint64 len) {
     uint64 n, va0, pa0;
 
@@ -125,10 +134,12 @@ int copyin(pagetable_t pagetable, char* dst, uint64 srcva, uint64 len) {
     return 0;
 }
 
-// Copy a null-terminated string from user to kernel.
-// Copy bytes to dst from virtual address srcva in a given page table,
-// until a '\0', or max.
-// Return 0 on success, -1 on error.
+/**
+ * Copy a null-terminated string from user to kernel.
+ * Copy bytes to dst from virtual address srcva in a given page table,
+ * until a '\0', or max.
+ * Return 0 on success, -1 on error.
+ */
 int copyinstr(pagetable_t pagetable, char* dst, uint64 srcva, uint64 max) {
     uint64 n, va0, pa0;
     int got_null = 0, len = 0;

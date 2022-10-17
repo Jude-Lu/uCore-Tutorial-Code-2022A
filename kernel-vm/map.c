@@ -3,18 +3,22 @@
 #include "kalloc.h"
 #include "../utils/defs.h"
 
-// Add a mapping to the kernel page table.
-// only used when booting.
-// does not flush TLB or enable paging.
+/**
+ * Add a mapping to the kernel page table.
+ * only used when booting.
+ * does not flush TLB or enable paging.
+ */
 void kvmmap(pagetable_t kpgtbl, uint64 va, uint64 pa, uint64 sz, int perm) {
     if (mappages(kpgtbl, va, sz, pa, perm) != 0)
         panic("kvmmap");
 }
 
-// Create PTEs for virtual addresses starting at va that refer to
-// physical addresses starting at pa. va and size might not
-// be page-aligned. Returns 0 on success, -1 if walk() couldn't
-// allocate a needed page-table page.
+/**
+ * Create PTEs for virtual addresses starting at va that refer to
+ * physical addresses starting at pa. va and size might not
+ * be page-aligned. Returns 0 on success, -1 if walk() couldn't
+ * allocate a needed page-table page.
+ */
 int mappages(pagetable_t pagetable, uint64 va, uint64 size, uint64 pa, int perm) {
     uint64 a, last;
     pte_t* pte;
@@ -49,9 +53,11 @@ int uvmmap(pagetable_t pagetable, uint64 va, uint64 npages, int perm) {
     return 0;
 }
 
-// Remove npages of mappings starting from va. va must be
-// page-aligned. The mappings must exist.
-// Optionally free the physical memory.
+/**
+ * Remove npages of mappings starting from va. va must be
+ * page-aligned. The mappings must exist.
+ * Optionally free the physical memory.
+ */
 void uvmunmap(pagetable_t pagetable, uint64 va, uint64 npages, int do_free) {
     uint64 a;
     pte_t* pte;
@@ -74,8 +80,10 @@ void uvmunmap(pagetable_t pagetable, uint64 va, uint64 npages, int do_free) {
     }
 }
 
-// create an empty user page table.
-// returns 0 if out of memory.
+/**
+ * create an empty user page table.
+ * returns 0 if out of memory.
+ */
 pagetable_t uvmcreate() {
     pagetable_t pagetable;
     pagetable = (pagetable_t)kalloc();
@@ -102,9 +110,11 @@ void uvmfree(pagetable_t pagetable, uint64 max_page) {
     freewalk(pagetable);
 }
 
-// Used in fork.
-// Copy the pagetable page and all the user pages.
-// Return 0 on success, -1 on error.
+/**
+ * Used in fork.
+ * Copy the pagetable page and all the user pages.
+ * Return 0 on success, -1 on error.
+ */
 int uvmcopy(pagetable_t old, pagetable_t new, uint64 max_page) {
     pte_t* pte;
     uint64 pa, i;

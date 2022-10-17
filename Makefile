@@ -7,6 +7,7 @@ U = user
 F = nfs
 
 ## Add your module dir here
+ASM = asm
 UTIL = utils
 SYSCALL = syscall
 TRAP = trap
@@ -42,7 +43,20 @@ ifeq ($(shell expr $(ch) \>= 4), 1)
 endif
 ##
 
-AS_SRCS = $(wildcard $K/*.S)
+AS_SRCS = $(wildcard $K/*.S $(ASM)/entry.S)
+ifeq ($(shell expr $(ch) \>= 2), 1)
+	AS_SRCS += $(TRAP)/trampoline.S
+endif
+ifeq ($(shell expr $(ch) \>= 3), 1)
+	AS_SRCS += $(TRAP)/switch.S
+endif
+ifeq ($(shell expr $(ch) \>= 5), 1)
+	AS_SRCS += $(ASM)/initproc.S
+endif
+ifeq ($(shell expr $(ch) \>= 6), 1)
+	AS_SRCS += $(TRAP)/kernelvec.S
+endif
+
 C_OBJS = $(addsuffix .o, $(basename $(C_SRCS)))
 AS_OBJS = $(addsuffix .o, $(basename $(AS_SRCS)))
 OBJS = $(C_OBJS) $(AS_OBJS)
@@ -148,7 +162,7 @@ build/kernel: $(OBJS) $(SCRIPT)/kernel_app.ld
 	$(LD) $(LDFLAGS) -T $(SCRIPT)/kernel_app.ld -o $(BUILDDIR)/kernel $(OBJS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
 	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
-	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d
+	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d $(ASM)/*.d $(TRAP)/*.d
 	@echo 'Build kernel done'
 
 else
@@ -156,7 +170,7 @@ build/kernel: $(OBJS) $(SCRIPT)/kernel.ld
 	$(LD) $(LDFLAGS) -T $(SCRIPT)/kernel.ld -o $(BUILDDIR)/kernel $(OBJS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
 	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
-	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d
+	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d $(ASM)/*.d $(TRAP)/*.d
 	@echo 'Build kernel done'
 endif
 

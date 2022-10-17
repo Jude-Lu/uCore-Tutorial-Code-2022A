@@ -27,13 +27,20 @@ struct context {
 	uint64 s11;
 };
 
+/// 注意返回类型为void*的接口，实际返回类型就是proc结构体指针，但proc在不同的lab中定义不同，因此采用无类型指针定义
 struct manager {
-    void* (*create)();
-    void (*remove)(void* p);
-    void* (*get)(int id);
+	/// 创建任务
+	void* (*create)();
+	/// 删除任务
+	void (*remove)(void* p);
+	/// 根据id获取任务
+	void* (*get)(int id);
+	/// 根据任务获取id
 	int (*change)(void* p);
-    void (*add)(void* p);
-    void* (*fetch)(); 
+	/// 将任务加入调度队列
+	void (*add)(void* p);
+	/// 从调度队列中取出相应任务
+	void* (*fetch)();
 };
 
 void set_manager(struct manager*);
