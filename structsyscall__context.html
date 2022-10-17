@@ -1,0 +1,631 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>uCore-Tutorial-Code-2022A: syscall_context结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uCore-Tutorial-Code-2022A
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structsyscall__context.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">成员变量</a>  </div>
+  <div class="headertitle">
+<div class="title">syscall_context结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>syscall_context定义了各个syscall的函数指针，方便兼容不同章节syscall的差异，各个章节可以根据本章节的内容和难度实现本章节的syscall  
+ <a href="structsyscall__context.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="syscall_8h_source.html">syscall.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+成员变量</h2></td></tr>
+<tr class="memitem:a9f5f771132b65e348df9c88cf7befc7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#a9f5f771132b65e348df9c88cf7befc7a">sys_write</a> )(int fd, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
+<tr class="separator:a9f5f771132b65e348df9c88cf7befc7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac66fdab952acbff74398a22b92f0654d"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#ac66fdab952acbff74398a22b92f0654d">sys_exit</a> )(int code)</td></tr>
+<tr class="separator:ac66fdab952acbff74398a22b92f0654d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e35740e0937a8ef1856c47e92c7686"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#a35e35740e0937a8ef1856c47e92c7686">sys_sched_yield</a> )()</td></tr>
+<tr class="separator:a35e35740e0937a8ef1856c47e92c7686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ed9c5e734b1da39da88cf7f5218f371"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#a1ed9c5e734b1da39da88cf7f5218f371">sys_gettimeofday</a> )(<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> val, int _tz)</td></tr>
+<tr class="separator:a1ed9c5e734b1da39da88cf7f5218f371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae92ca4d2ef991be1a047217aebddf6ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#ae92ca4d2ef991be1a047217aebddf6ac">sys_read</a> )(int fd, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
+<tr class="separator:ae92ca4d2ef991be1a047217aebddf6ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28743bb67b7fc376ab34ecbbc987d733"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#a28743bb67b7fc376ab34ecbbc987d733">sys_getpid</a> )()</td></tr>
+<tr class="separator:a28743bb67b7fc376ab34ecbbc987d733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2196bbd486abb1f0a79963e2ae98ab8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#a2196bbd486abb1f0a79963e2ae98ab8b">sys_getppid</a> )()</td></tr>
+<tr class="separator:a2196bbd486abb1f0a79963e2ae98ab8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31348dc98b9944fe86548468945dc78a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#a31348dc98b9944fe86548468945dc78a">sys_clone</a> )()</td></tr>
+<tr class="separator:a31348dc98b9944fe86548468945dc78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fec519170a9286bd9d533f3132a5230"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#a0fec519170a9286bd9d533f3132a5230">sys_exec</a> )(<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> path, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> uargv)</td></tr>
+<tr class="separator:a0fec519170a9286bd9d533f3132a5230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97df1393dea9b669edea3183d905dc3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#a97df1393dea9b669edea3183d905dc3f">sys_wait</a> )(int pid, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va)</td></tr>
+<tr class="separator:a97df1393dea9b669edea3183d905dc3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a42419c93c346160295cab976aa26c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#ad0a42419c93c346160295cab976aa26c">sys_spawn</a> )(<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va)</td></tr>
+<tr class="memdesc:ad0a42419c93c346160295cab976aa26c"><td class="mdescLeft">&#160;</td><td class="mdescRight">该syscall需学生在实验中实现  <a href="structsyscall__context.html#ad0a42419c93c346160295cab976aa26c">更多...</a><br /></td></tr>
+<tr class="separator:ad0a42419c93c346160295cab976aa26c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c0b588dabcfe21cc122d31df6bb1c64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#a8c0b588dabcfe21cc122d31df6bb1c64">sys_set_priority</a> )(long long prio)</td></tr>
+<tr class="memdesc:a8c0b588dabcfe21cc122d31df6bb1c64"><td class="mdescLeft">&#160;</td><td class="mdescRight">该syscall需学生在实验中实现  <a href="structsyscall__context.html#a8c0b588dabcfe21cc122d31df6bb1c64">更多...</a><br /></td></tr>
+<tr class="separator:a8c0b588dabcfe21cc122d31df6bb1c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6173d8b61d07b13dbbb856f8afb57256"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#a6173d8b61d07b13dbbb856f8afb57256">sys_openat</a> )(<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> omode, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> _flags)</td></tr>
+<tr class="separator:a6173d8b61d07b13dbbb856f8afb57256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad85ce3025a9a5e8719dcf22b91410527"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#ad85ce3025a9a5e8719dcf22b91410527">sys_close</a> )(int fd)</td></tr>
+<tr class="separator:ad85ce3025a9a5e8719dcf22b91410527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a644b11499e9f8d8df6a29d35db544f88"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#a644b11499e9f8d8df6a29d35db544f88">sys_fstat</a> )(int fd, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> stat)</td></tr>
+<tr class="memdesc:a644b11499e9f8d8df6a29d35db544f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">该syscall需学生在实验中实现  <a href="structsyscall__context.html#a644b11499e9f8d8df6a29d35db544f88">更多...</a><br /></td></tr>
+<tr class="separator:a644b11499e9f8d8df6a29d35db544f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fb14e99ef62a141715114d99e1a50ee"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#a0fb14e99ef62a141715114d99e1a50ee">sys_linkat</a> )(int olddirfd, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> oldpath, int newdirfd, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> newpath, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> flags)</td></tr>
+<tr class="memdesc:a0fb14e99ef62a141715114d99e1a50ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">该syscall需学生在实验中实现  <a href="structsyscall__context.html#a0fb14e99ef62a141715114d99e1a50ee">更多...</a><br /></td></tr>
+<tr class="separator:a0fb14e99ef62a141715114d99e1a50ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e6603f04efc4975aa67107d62d97ef2"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#a2e6603f04efc4975aa67107d62d97ef2">sys_unlinkat</a> )(int dirfd, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> name, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> flags)</td></tr>
+<tr class="memdesc:a2e6603f04efc4975aa67107d62d97ef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">该syscall需学生在实验中实现  <a href="structsyscall__context.html#a2e6603f04efc4975aa67107d62d97ef2">更多...</a><br /></td></tr>
+<tr class="separator:a2e6603f04efc4975aa67107d62d97ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af42c144701e0877282a85cd9c7637b1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#af42c144701e0877282a85cd9c7637b1b">sys_pipe</a> )(<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> fdarray)</td></tr>
+<tr class="separator:af42c144701e0877282a85cd9c7637b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8a57ff8841a659ec363d7cbbfbe359"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#adb8a57ff8841a659ec363d7cbbfbe359">sys_thread_create</a> )(<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> entry, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> arg)</td></tr>
+<tr class="separator:adb8a57ff8841a659ec363d7cbbfbe359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a170685f623e884712bdf356fdb0106e9"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#a170685f623e884712bdf356fdb0106e9">sys_gettid</a> )()</td></tr>
+<tr class="separator:a170685f623e884712bdf356fdb0106e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae9d3cac0a5c45075b1d9e40e61f432f"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#aae9d3cac0a5c45075b1d9e40e61f432f">sys_waittid</a> )(int tid)</td></tr>
+<tr class="separator:aae9d3cac0a5c45075b1d9e40e61f432f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab33f8e31492f8feebc8a702ae74df59e"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#ab33f8e31492f8feebc8a702ae74df59e">sys_mutex_create</a> )(int blocking)</td></tr>
+<tr class="separator:ab33f8e31492f8feebc8a702ae74df59e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7cbb5a3e6eaec6c31c3344d690823fa"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#aa7cbb5a3e6eaec6c31c3344d690823fa">sys_mutex_lock</a> )(int mutex_id)</td></tr>
+<tr class="separator:aa7cbb5a3e6eaec6c31c3344d690823fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2e804f68733b0e888bc7ab17dd8d18e"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#ad2e804f68733b0e888bc7ab17dd8d18e">sys_mutex_unlock</a> )(int mutex_id)</td></tr>
+<tr class="separator:ad2e804f68733b0e888bc7ab17dd8d18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f00baf8bdbc2459b0f2edbd8d397664"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#a4f00baf8bdbc2459b0f2edbd8d397664">sys_semaphore_create</a> )(int res_count)</td></tr>
+<tr class="separator:a4f00baf8bdbc2459b0f2edbd8d397664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae4cebe04bc53f77791cf6a520c05190"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#aae4cebe04bc53f77791cf6a520c05190">sys_semaphore_up</a> )(int semaphore_id)</td></tr>
+<tr class="separator:aae4cebe04bc53f77791cf6a520c05190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad18ddd3fd2a7bc4adcf5ab9229ed28e8"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#ad18ddd3fd2a7bc4adcf5ab9229ed28e8">sys_semaphore_down</a> )(int semaphore_id)</td></tr>
+<tr class="separator:ad18ddd3fd2a7bc4adcf5ab9229ed28e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b8bfd294abc4ea2da044b8ec38372f5"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#a8b8bfd294abc4ea2da044b8ec38372f5">sys_condvar_create</a> )()</td></tr>
+<tr class="separator:a8b8bfd294abc4ea2da044b8ec38372f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5efde118f398d1a3621dd4b2f9114fc"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#ac5efde118f398d1a3621dd4b2f9114fc">sys_condvar_signal</a> )(int cond_id)</td></tr>
+<tr class="separator:ac5efde118f398d1a3621dd4b2f9114fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd258acecf2cf9472ed3a3f2a01e5ab1"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#acd258acecf2cf9472ed3a3f2a01e5ab1">sys_condvar_wait</a> )(int cond_id, int mutex_id)</td></tr>
+<tr class="separator:acd258acecf2cf9472ed3a3f2a01e5ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88eca0823e304878e25e0087c1e5296"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsyscall__context.html#ac88eca0823e304878e25e0087c1e5296">sys_enable_deadlock_detect</a> )(int is_enable)</td></tr>
+<tr class="memdesc:ac88eca0823e304878e25e0087c1e5296"><td class="mdescLeft">&#160;</td><td class="mdescRight">该syscall需学生在实验中实现  <a href="structsyscall__context.html#ac88eca0823e304878e25e0087c1e5296">更多...</a><br /></td></tr>
+<tr class="separator:ac88eca0823e304878e25e0087c1e5296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>syscall_context定义了各个syscall的函数指针，方便兼容不同章节syscall的差异，各个章节可以根据本章节的内容和难度实现本章节的syscall </p>
+</div><h2 class="groupheader">结构体成员变量说明</h2>
+<a id="a31348dc98b9944fe86548468945dc78a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31348dc98b9944fe86548468945dc78a">&#9670;&nbsp;</a></span>sys_clone</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* sys_clone()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad85ce3025a9a5e8719dcf22b91410527"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad85ce3025a9a5e8719dcf22b91410527">&#9670;&nbsp;</a></span>sys_close</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* sys_close(int fd)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b8bfd294abc4ea2da044b8ec38372f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b8bfd294abc4ea2da044b8ec38372f5">&#9670;&nbsp;</a></span>sys_condvar_create</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* sys_condvar_create()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5efde118f398d1a3621dd4b2f9114fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5efde118f398d1a3621dd4b2f9114fc">&#9670;&nbsp;</a></span>sys_condvar_signal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* sys_condvar_signal(int cond_id)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd258acecf2cf9472ed3a3f2a01e5ab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd258acecf2cf9472ed3a3f2a01e5ab1">&#9670;&nbsp;</a></span>sys_condvar_wait</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* sys_condvar_wait(int cond_id, int mutex_id)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac88eca0823e304878e25e0087c1e5296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88eca0823e304878e25e0087c1e5296">&#9670;&nbsp;</a></span>sys_enable_deadlock_detect</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* sys_enable_deadlock_detect(int is_enable)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>该syscall需学生在实验中实现 </p>
+
+</div>
+</div>
+<a id="a0fec519170a9286bd9d533f3132a5230"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fec519170a9286bd9d533f3132a5230">&#9670;&nbsp;</a></span>sys_exec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* sys_exec(<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> path, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> uargv)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac66fdab952acbff74398a22b92f0654d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac66fdab952acbff74398a22b92f0654d">&#9670;&nbsp;</a></span>sys_exit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* sys_exit(int code)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a644b11499e9f8d8df6a29d35db544f88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a644b11499e9f8d8df6a29d35db544f88">&#9670;&nbsp;</a></span>sys_fstat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* sys_fstat(int fd, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> stat)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>该syscall需学生在实验中实现 </p>
+
+</div>
+</div>
+<a id="a28743bb67b7fc376ab34ecbbc987d733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28743bb67b7fc376ab34ecbbc987d733">&#9670;&nbsp;</a></span>sys_getpid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* sys_getpid()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2196bbd486abb1f0a79963e2ae98ab8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2196bbd486abb1f0a79963e2ae98ab8b">&#9670;&nbsp;</a></span>sys_getppid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* sys_getppid()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a170685f623e884712bdf356fdb0106e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a170685f623e884712bdf356fdb0106e9">&#9670;&nbsp;</a></span>sys_gettid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* sys_gettid()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ed9c5e734b1da39da88cf7f5218f371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ed9c5e734b1da39da88cf7f5218f371">&#9670;&nbsp;</a></span>sys_gettimeofday</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* sys_gettimeofday(<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> val, int _tz)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0fb14e99ef62a141715114d99e1a50ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fb14e99ef62a141715114d99e1a50ee">&#9670;&nbsp;</a></span>sys_linkat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* sys_linkat(int olddirfd, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> oldpath, int newdirfd, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> newpath, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> flags)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>该syscall需学生在实验中实现 </p>
+
+</div>
+</div>
+<a id="ab33f8e31492f8feebc8a702ae74df59e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab33f8e31492f8feebc8a702ae74df59e">&#9670;&nbsp;</a></span>sys_mutex_create</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* sys_mutex_create(int blocking)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7cbb5a3e6eaec6c31c3344d690823fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7cbb5a3e6eaec6c31c3344d690823fa">&#9670;&nbsp;</a></span>sys_mutex_lock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* sys_mutex_lock(int mutex_id)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2e804f68733b0e888bc7ab17dd8d18e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2e804f68733b0e888bc7ab17dd8d18e">&#9670;&nbsp;</a></span>sys_mutex_unlock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* sys_mutex_unlock(int mutex_id)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6173d8b61d07b13dbbb856f8afb57256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6173d8b61d07b13dbbb856f8afb57256">&#9670;&nbsp;</a></span>sys_openat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* sys_openat(<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> omode, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> _flags)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af42c144701e0877282a85cd9c7637b1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af42c144701e0877282a85cd9c7637b1b">&#9670;&nbsp;</a></span>sys_pipe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* sys_pipe(<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> fdarray)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae92ca4d2ef991be1a047217aebddf6ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae92ca4d2ef991be1a047217aebddf6ac">&#9670;&nbsp;</a></span>sys_read</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* sys_read(int fd, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35e35740e0937a8ef1856c47e92c7686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e35740e0937a8ef1856c47e92c7686">&#9670;&nbsp;</a></span>sys_sched_yield</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* sys_sched_yield()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f00baf8bdbc2459b0f2edbd8d397664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f00baf8bdbc2459b0f2edbd8d397664">&#9670;&nbsp;</a></span>sys_semaphore_create</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* sys_semaphore_create(int res_count)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad18ddd3fd2a7bc4adcf5ab9229ed28e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad18ddd3fd2a7bc4adcf5ab9229ed28e8">&#9670;&nbsp;</a></span>sys_semaphore_down</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* sys_semaphore_down(int semaphore_id)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae4cebe04bc53f77791cf6a520c05190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae4cebe04bc53f77791cf6a520c05190">&#9670;&nbsp;</a></span>sys_semaphore_up</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* sys_semaphore_up(int semaphore_id)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c0b588dabcfe21cc122d31df6bb1c64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c0b588dabcfe21cc122d31df6bb1c64">&#9670;&nbsp;</a></span>sys_set_priority</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* sys_set_priority(long long prio)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>该syscall需学生在实验中实现 </p>
+
+</div>
+</div>
+<a id="ad0a42419c93c346160295cab976aa26c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0a42419c93c346160295cab976aa26c">&#9670;&nbsp;</a></span>sys_spawn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* sys_spawn(<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>该syscall需学生在实验中实现 </p>
+
+</div>
+</div>
+<a id="adb8a57ff8841a659ec363d7cbbfbe359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb8a57ff8841a659ec363d7cbbfbe359">&#9670;&nbsp;</a></span>sys_thread_create</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* sys_thread_create(<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> entry, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> arg)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e6603f04efc4975aa67107d62d97ef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e6603f04efc4975aa67107d62d97ef2">&#9670;&nbsp;</a></span>sys_unlinkat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* sys_unlinkat(int dirfd, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> name, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> flags)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>该syscall需学生在实验中实现 </p>
+
+</div>
+</div>
+<a id="a97df1393dea9b669edea3183d905dc3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97df1393dea9b669edea3183d905dc3f">&#9670;&nbsp;</a></span>sys_wait</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* sys_wait(int pid, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae9d3cac0a5c45075b1d9e40e61f432f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae9d3cac0a5c45075b1d9e40e61f432f">&#9670;&nbsp;</a></span>sys_waittid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* sys_waittid(int tid)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f5f771132b65e348df9c88cf7befc7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f5f771132b65e348df9c88cf7befc7a">&#9670;&nbsp;</a></span>sys_write</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* sys_write(int fd, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>syscall/<a class="el" href="syscall_8h_source.html">syscall.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structsyscall__context.html">syscall_context</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

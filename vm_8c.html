@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>uCore-Tutorial-Code-2022A: kernel-vm/vm.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uCore-Tutorial-Code-2022A
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('vm_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">vm.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="vm_8h_source.html">vm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="kalloc_8h_source.html">kalloc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="defs_8h_source.html">../utils/defs.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+vm.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="vm_8c__incl.png" border="0" usemap="#kernel-vm_2vm_8c" alt=""/></div>
+<map name="kernel-vm_2vm_8c" id="kernel-vm_2vm_8c">
+<area shape="rect" title=" " alt="" coords="1261,5,1384,32"/>
+<area shape="rect" href="vm_8h.html" title=" " alt="" coords="1295,155,1350,181"/>
+<area shape="rect" href="kalloc_8h.html" title=" " alt="" coords="1375,155,1447,181"/>
+<area shape="rect" href="defs_8h.html" title=" " alt="" coords="563,80,669,107"/>
+<area shape="rect" href="riscv_8h.html" title=" " alt="" coords="997,229,1105,256"/>
+<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="347,304,418,331"/>
+<area shape="rect" href="const_8h.html" title=" " alt="" coords="581,155,651,181"/>
+<area shape="rect" href="log_8h.html" title=" " alt="" coords="466,229,521,256"/>
+<area shape="rect" href="printf_8h.html" title=" " alt="" coords="843,155,911,181"/>
+<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="23,229,76,256"/>
+<area shape="rect" href="string_8h.html" title=" " alt="" coords="101,229,171,256"/>
+<area shape="rect" href="timer_8h.html" title=" " alt="" coords="195,229,263,256"/>
+<area shape="rect" href="console_8h.html" title=" " alt="" coords="935,155,1019,181"/>
+<area shape="rect" href="syscall_8h.html" title=" " alt="" coords="315,155,455,181"/>
+<area shape="rect" href="trap_8h.html" title=" " alt="" coords="287,229,390,256"/>
+<area shape="rect" href="map_8h.html" title=" " alt="" coords="675,155,819,181"/>
+<area shape="rect" href="queue_8h.html" title=" " alt="" coords="1044,155,1220,181"/>
+<area shape="rect" href="processor_8h.html" title=" " alt="" coords="545,229,743,256"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a271b7e1dd0b2700b8c91df4761bcc8cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="riscv_8h.html#ab2c27be14dd36f877c6267835e0d1608">pte_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#a271b7e1dd0b2700b8c91df4761bcc8cb">walk</a> (<a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, int alloc)</td></tr>
+<tr class="memdesc:a271b7e1dd0b2700b8c91df4761bcc8cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">两种功能：地址转换；建立映射  <a href="vm_8c.html#a271b7e1dd0b2700b8c91df4761bcc8cb">更多...</a><br /></td></tr>
+<tr class="separator:a271b7e1dd0b2700b8c91df4761bcc8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a535aedc13908156bba68a95333e44012"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#a535aedc13908156bba68a95333e44012">walkaddr</a> (<a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va)</td></tr>
+<tr class="memdesc:a535aedc13908156bba68a95333e44012"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚拟地址转物理地址函数  <a href="vm_8c.html#a535aedc13908156bba68a95333e44012">更多...</a><br /></td></tr>
+<tr class="separator:a535aedc13908156bba68a95333e44012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23d93749134ff05c8fe7c2ad0e561824"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#a23d93749134ff05c8fe7c2ad0e561824">useraddr</a> (<a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va)</td></tr>
+<tr class="memdesc:a23d93749134ff05c8fe7c2ad0e561824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look up a virtual address, return the physical address,  <a href="vm_8c.html#a23d93749134ff05c8fe7c2ad0e561824">更多...</a><br /></td></tr>
+<tr class="separator:a23d93749134ff05c8fe7c2ad0e561824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19262098f426be050bd86a01dc499d8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#a19262098f426be050bd86a01dc499d8b">freewalk</a> (<a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable)</td></tr>
+<tr class="memdesc:a19262098f426be050bd86a01dc499d8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放地址空间函数  <a href="vm_8c.html#a19262098f426be050bd86a01dc499d8b">更多...</a><br /></td></tr>
+<tr class="separator:a19262098f426be050bd86a01dc499d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dc116b09e9a88d390ec97d970ce1b4c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#a5dc116b09e9a88d390ec97d970ce1b4c">copyout</a> (<a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> dstva, char *src, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
+<tr class="memdesc:a5dc116b09e9a88d390ec97d970ce1b4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">用户态和内核态拷贝函数  <a href="vm_8c.html#a5dc116b09e9a88d390ec97d970ce1b4c">更多...</a><br /></td></tr>
+<tr class="separator:a5dc116b09e9a88d390ec97d970ce1b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83ffcd20aef363b6e0a3871c1e295364"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#a83ffcd20aef363b6e0a3871c1e295364">copyin</a> (<a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, char *dst, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> srcva, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
+<tr class="separator:a83ffcd20aef363b6e0a3871c1e295364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1760105bd97caa648c26e935ad54eea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#aa1760105bd97caa648c26e935ad54eea">copyinstr</a> (<a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, char *dst, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> srcva, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> max)</td></tr>
+<tr class="separator:aa1760105bd97caa648c26e935ad54eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a83ffcd20aef363b6e0a3871c1e295364"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83ffcd20aef363b6e0a3871c1e295364">&#9670;&nbsp;</a></span>copyin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int copyin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
+          <td class="paramname"><em>pagetable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>srcva</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Copy from user to kernel. Copy len bytes to dst from virtual address srcva in a given page table. Return 0 on success, -1 on error. </p>
+
+</div>
+</div>
+<a id="aa1760105bd97caa648c26e935ad54eea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1760105bd97caa648c26e935ad54eea">&#9670;&nbsp;</a></span>copyinstr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int copyinstr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
+          <td class="paramname"><em>pagetable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>srcva</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Copy a null-terminated string from user to kernel. Copy bytes to dst from virtual address srcva in a given page table, until a '\0', or max. Return 0 on success, -1 on error. </p>
+
+</div>
+</div>
+<a id="a5dc116b09e9a88d390ec97d970ce1b4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dc116b09e9a88d390ec97d970ce1b4c">&#9670;&nbsp;</a></span>copyout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int copyout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
+          <td class="paramname"><em>pagetable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>dstva</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>用户态和内核态拷贝函数 </p>
+<p>Copy from kernel to user. Copy len bytes from src to virtual address dstva in a given page table. Return 0 on success, -1 on error. </p>
+
+</div>
+</div>
+<a id="a19262098f426be050bd86a01dc499d8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19262098f426be050bd86a01dc499d8b">&#9670;&nbsp;</a></span>freewalk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void freewalk </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
+          <td class="paramname"><em>pagetable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放地址空间函数 </p>
+<p>Recursively free page-table pages. All leaf mappings must already have been removed. </p>
+
+</div>
+</div>
+<a id="a23d93749134ff05c8fe7c2ad0e561824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23d93749134ff05c8fe7c2ad0e561824">&#9670;&nbsp;</a></span>useraddr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> useraddr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
+          <td class="paramname"><em>pagetable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>va</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Look up a virtual address, return the physical address, </p>
+
+</div>
+</div>
+<a id="a271b7e1dd0b2700b8c91df4761bcc8cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a271b7e1dd0b2700b8c91df4761bcc8cb">&#9670;&nbsp;</a></span>walk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="riscv_8h.html#ab2c27be14dd36f877c6267835e0d1608">pte_t</a>* walk </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
+          <td class="paramname"><em>pagetable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>va</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alloc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>两种功能：地址转换；建立映射 </p>
+<p>Return the address of the PTE in page table pagetable that corresponds to virtual address va. If alloc!=0, create any required page-table pages. The risc-v Sv39 scheme has three levels of page-table pages. A page-table page contains 512 64-bit PTEs. A 64-bit virtual address is split into five fields: 39..63 &ndash; must be zero. 30..38 &ndash; 9 bits of level-2 index. 21..29 &ndash; 9 bits of level-1 index. 12..20 &ndash; 9 bits of level-0 index. 0..11 &ndash; 12 bits of byte offset within the page. </p>
+
+</div>
+</div>
+<a id="a535aedc13908156bba68a95333e44012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a535aedc13908156bba68a95333e44012">&#9670;&nbsp;</a></span>walkaddr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> walkaddr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
+          <td class="paramname"><em>pagetable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>va</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>虚拟地址转物理地址函数 </p>
+<p>Look up a virtual address, return the physical address, or 0 if not mapped. Can only be used to look up user pages. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_3e5ae976cba375449e7597bf7abde3d4.html">kernel-vm</a></li><li class="navelem"><a class="el" href="vm_8c.html">vm.c</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+var nfs_2fs_8h =
+[
+    [ "superblock", "structsuperblock.html", "structsuperblock" ],
+    [ "dinode", "structdinode.html", "structdinode" ],
+    [ "dirent", "structdirent.html", "structdirent" ],
+    [ "BBLOCK", "nfs_2fs_8h.html#a080eb729016328ec6da85bfe125fc04c", null ],
+    [ "BPB", "nfs_2fs_8h.html#a3c88fd21abb83ef11461ce750c466828", null ],
+    [ "BSIZE", "nfs_2fs_8h.html#a403cf3149c084cea115b85c90721039a", null ],
+    [ "DIRSIZ", "nfs_2fs_8h.html#a48246fb9e5cb7f6a71ebc9ebc2f06562", null ],
+    [ "FSMAGIC", "nfs_2fs_8h.html#ae948f5b79524939bc025b32d25a1fda0", null ],
+    [ "FSSIZE", "nfs_2fs_8h.html#a486f47992f736854db2444b01afd9991", null ],
+    [ "IBLOCK", "nfs_2fs_8h.html#ac9a5b990015f0f86e5d4c6b21d38ffa0", null ],
+    [ "IPB", "nfs_2fs_8h.html#aadb6c866a6d0a173f5f0a6ed9c7e0228", null ],
+    [ "MAXFILE", "nfs_2fs_8h.html#a714b2485a6dd312e37226e1f833728a9", null ],
+    [ "MAXOPBLOCKS", "nfs_2fs_8h.html#a31cde324007b4e52bbba7079ec5e5f45", null ],
+    [ "MAXPATH", "nfs_2fs_8h.html#a2d1edde91ea515b363277f4bbdc3244d", null ],
+    [ "NBUF", "nfs_2fs_8h.html#ad51e2f8dffd163c263ec676a268d0f0a", null ],
+    [ "NDEV", "nfs_2fs_8h.html#aa564a41c8409694da49b0badf2bb2853", null ],
+    [ "NDIRECT", "nfs_2fs_8h.html#acd38e9532d4b3623f844b93c012a8e06", null ],
+    [ "NFILE", "nfs_2fs_8h.html#a8485f4e81de2537e6a0935626167a775", null ],
+    [ "NINDIRECT", "nfs_2fs_8h.html#a6d24f098ea2928d61ff80b123d761715", null ],
+    [ "NINODE", "nfs_2fs_8h.html#adabafa10c7951be7c875cd2ee212be85", null ],
+    [ "ROOTDEV", "nfs_2fs_8h.html#ae9ce6b24fe2aae59ff60b469c35febbc", null ],
+    [ "ROOTINO", "nfs_2fs_8h.html#a22c8ea96d09283ed6496347806cc72a0", null ],
+    [ "T_DIR", "nfs_2fs_8h.html#a91136bcd71a9f499304f5d7e7e9d6376", null ],
+    [ "T_FILE", "nfs_2fs_8h.html#a0a8afbed81f5fb3930e9d153fbd51737", null ]
+];

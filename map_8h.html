@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>uCore-Tutorial-Code-2022A: kernel-vm/map.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uCore-Tutorial-Code-2022A
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('map_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">map.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="riscv_8h_source.html">../utils/riscv.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utils_2types_8h_source.html">../utils/types.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+map.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="map_8h__incl.png" border="0" usemap="#kernel-vm_2map_8h" alt=""/></div>
+<map name="kernel-vm_2map_8h" id="kernel-vm_2map_8h">
+<area shape="rect" title=" " alt="" coords="39,5,171,32"/>
+<area shape="rect" href="riscv_8h.html" title=" " alt="" coords="5,80,113,107"/>
+<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="69,155,140,181"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="map_8h__dep__incl.png" border="0" usemap="#kernel-vm_2map_8hdep" alt=""/></div>
+<map name="kernel-vm_2map_8hdep" id="kernel-vm_2map_8hdep">
+<area shape="rect" title=" " alt="" coords="938,5,1070,32"/>
+<area shape="rect" href="defs_8h.html" title=" " alt="" coords="1889,80,1983,107"/>
+<area shape="rect" href="map_8c.html" title=" " alt="" coords="5,155,136,181"/>
+<area shape="rect" href="kalloc_8c.html" title=" " alt="" coords="3465,155,3605,181"/>
+<area shape="rect" href="vm_8c.html" title=" " alt="" coords="3629,155,3752,181"/>
+<area shape="rect" href="os1_2main_8c.html" title=" " alt="" coords="3776,155,3869,181"/>
+<area shape="rect" href="os2_2loader_8c.html" title=" " alt="" coords="142,229,242,256"/>
+<area shape="rect" href="os2__trap_8h.html" title=" " alt="" coords="211,155,328,181"/>
+<area shape="rect" href="os2_2main_8c.html" title=" " alt="" coords="301,229,395,256"/>
+<area shape="rect" href="os2__syscall_8c.html" title=" " alt="" coords="403,155,538,181"/>
+<area shape="rect" href="os3_2loader_8h.html" title=" " alt="" coords="920,155,1021,181"/>
+<area shape="rect" href="os3_2loader_8c.html" title=" " alt="" coords="543,229,643,256"/>
+<area shape="rect" href="os3_2main_8c.html" title=" " alt="" coords="668,229,761,256"/>
+<area shape="rect" href="os3__syscall_8c.html" title=" " alt="" coords="786,229,921,256"/>
+<area shape="rect" href="os3_2proc_8c.html" title=" " alt="" coords="945,229,1033,256"/>
+<area shape="rect" href="os3__trap_8h.html" title=" " alt="" coords="664,155,781,181"/>
+<area shape="rect" href="os3_2proc_8h.html" title=" " alt="" coords="806,155,895,181"/>
+<area shape="rect" href="os4_2proc_8h.html" title=" " alt="" coords="1249,155,1338,181"/>
+<area shape="rect" href="os4_2loader_8c.html" title=" " alt="" coords="1058,229,1158,256"/>
+<area shape="rect" href="os4_2main_8c.html" title=" " alt="" coords="1183,229,1276,256"/>
+<area shape="rect" href="os4__syscall_8c.html" title=" " alt="" coords="1301,229,1435,256"/>
+<area shape="rect" href="os4_2proc_8c.html" title=" " alt="" coords="1460,229,1548,256"/>
+<area shape="rect" href="os4__trap_8h.html" title=" " alt="" coords="1363,155,1480,181"/>
+<area shape="rect" href="os5_2loader_8h.html" title=" " alt="" coords="1815,229,1916,256"/>
+<area shape="rect" href="os5_2loader_8c.html" title=" " alt="" coords="1555,304,1655,331"/>
+<area shape="rect" href="os5_2main_8c.html" title=" " alt="" coords="1680,304,1773,331"/>
+<area shape="rect" href="os5__syscall_8c.html" title=" " alt="" coords="1798,304,1933,331"/>
+<area shape="rect" href="os5_2proc_8c.html" title=" " alt="" coords="1957,304,2045,331"/>
+<area shape="rect" href="os5_2proc_8h.html" title=" " alt="" coords="1809,155,1898,181"/>
+<area shape="rect" href="os5__trap_8h.html" title=" " alt="" coords="1673,229,1791,256"/>
+<area shape="rect" href="os6_2bio_8c.html" title=" " alt="" coords="2024,155,2104,181"/>
+<area shape="rect" href="os6_2proc_8h.html" title=" " alt="" coords="2230,155,2319,181"/>
+<area shape="rect" href="os6_2file_8c.html" title=" " alt="" coords="2092,229,2172,256"/>
+<area shape="rect" href="os6_2fs_8c.html" title=" " alt="" coords="2196,229,2268,256"/>
+<area shape="rect" href="os6_2loader_8h.html" title=" " alt="" coords="2444,229,2545,256"/>
+<area shape="rect" href="os6_2loader_8c.html" title=" " alt="" coords="2445,304,2545,331"/>
+<area shape="rect" href="os6_2main_8c.html" title=" " alt="" coords="2575,304,2668,331"/>
+<area shape="rect" href="os6__syscall_8c.html" title=" " alt="" coords="2693,304,2827,331"/>
+<area shape="rect" href="os6_2proc_8c.html" title=" " alt="" coords="2323,304,2411,331"/>
+<area shape="rect" href="os6__trap_8h.html" title=" " alt="" coords="2569,229,2687,256"/>
+<area shape="rect" href="os6_2virtio__disk_8c.html" title=" " alt="" coords="2648,155,2776,181"/>
+<area shape="rect" href="os7_2bio_8c.html" title=" " alt="" coords="2800,155,2880,181"/>
+<area shape="rect" href="os7_2proc_8h.html" title=" " alt="" coords="2955,155,3045,181"/>
+<area shape="rect" href="os7_2file_8c.html" title=" " alt="" coords="2868,229,2948,256"/>
+<area shape="rect" href="os7_2fs_8c.html" title=" " alt="" coords="2972,229,3044,256"/>
+<area shape="rect" href="os7_2pipe_8c.html" title=" " alt="" coords="3068,229,3156,256"/>
+<area shape="rect" href="os7__trap_8h.html" title=" " alt="" coords="3221,155,3339,181"/>
+<area shape="rect" href="os7_2loader_8c.html" title=" " alt="" coords="3181,229,3281,256"/>
+<area shape="rect" href="os7_2main_8c.html" title=" " alt="" coords="3305,229,3399,256"/>
+<area shape="rect" href="os7__syscall_8c.html" title=" " alt="" coords="3423,229,3558,256"/>
+</map>
+</div>
+</div>
+<p><a href="map_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a2ad79c7b5ecb41955635f0eafa67f641"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a2ad79c7b5ecb41955635f0eafa67f641">kvmmap</a> (<a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, int)</td></tr>
+<tr class="memdesc:a2ad79c7b5ecb41955635f0eafa67f641"><td class="mdescLeft">&#160;</td><td class="mdescRight">为内核分配虚拟地址空间  <a href="map_8h.html#a2ad79c7b5ecb41955635f0eafa67f641">更多...</a><br /></td></tr>
+<tr class="separator:a2ad79c7b5ecb41955635f0eafa67f641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a849f47b75c76d08161d615daacf6ad5b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a849f47b75c76d08161d615daacf6ad5b">mappages</a> (<a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, int)</td></tr>
+<tr class="memdesc:a849f47b75c76d08161d615daacf6ad5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">建立虚拟地址到物理地址映射  <a href="map_8h.html#a849f47b75c76d08161d615daacf6ad5b">更多...</a><br /></td></tr>
+<tr class="separator:a849f47b75c76d08161d615daacf6ad5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a6a56602c37a63e8116d66d61dfa9cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a5a6a56602c37a63e8116d66d61dfa9cc">uvmmap</a> (<a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, int)</td></tr>
+<tr class="separator:a5a6a56602c37a63e8116d66d61dfa9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fbf40e2c26f6a6111bd0669ef5e8236"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a4fbf40e2c26f6a6111bd0669ef5e8236">uvmunmap</a> (<a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, int)</td></tr>
+<tr class="memdesc:a4fbf40e2c26f6a6111bd0669ef5e8236"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放虚拟地址到物理地址映射  <a href="map_8h.html#a4fbf40e2c26f6a6111bd0669ef5e8236">更多...</a><br /></td></tr>
+<tr class="separator:a4fbf40e2c26f6a6111bd0669ef5e8236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0861cf789c153af3703fc9098cc8dea5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a0861cf789c153af3703fc9098cc8dea5">uvmcreate</a> ()</td></tr>
+<tr class="memdesc:a0861cf789c153af3703fc9098cc8dea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建空用户页表  <a href="map_8h.html#a0861cf789c153af3703fc9098cc8dea5">更多...</a><br /></td></tr>
+<tr class="separator:a0861cf789c153af3703fc9098cc8dea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8064fdaa325d6a3ad61f7157202382c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a8064fdaa325d6a3ad61f7157202382c3">uvmfree</a> (<a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
+<tr class="memdesc:a8064fdaa325d6a3ad61f7157202382c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放用户地址空间  <a href="map_8h.html#a8064fdaa325d6a3ad61f7157202382c3">更多...</a><br /></td></tr>
+<tr class="separator:a8064fdaa325d6a3ad61f7157202382c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19ef1cdd26725159a05761b883c842d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#af19ef1cdd26725159a05761b883c842d">uvmcopy</a> (<a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
+<tr class="memdesc:af19ef1cdd26725159a05761b883c842d"><td class="mdescLeft">&#160;</td><td class="mdescRight">拷贝用户地址空间  <a href="map_8h.html#af19ef1cdd26725159a05761b883c842d">更多...</a><br /></td></tr>
+<tr class="separator:af19ef1cdd26725159a05761b883c842d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a796aa4017efb6527598a228f4b7cc9ac"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a796aa4017efb6527598a228f4b7cc9ac">trampoline</a> []</td></tr>
+<tr class="memdesc:a796aa4017efb6527598a228f4b7cc9ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">跳板页地址  <a href="map_8h.html#a796aa4017efb6527598a228f4b7cc9ac">更多...</a><br /></td></tr>
+<tr class="separator:a796aa4017efb6527598a228f4b7cc9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a2ad79c7b5ecb41955635f0eafa67f641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ad79c7b5ecb41955635f0eafa67f641">&#9670;&nbsp;</a></span>kvmmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kvmmap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
+          <td class="paramname"><em>kpgtbl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>va</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>pa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>sz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>perm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>为内核分配虚拟地址空间 </p>
+<p>Add a mapping to the kernel page table. only used when booting. does not flush TLB or enable paging. </p>
+
+</div>
+</div>
+<a id="a849f47b75c76d08161d615daacf6ad5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a849f47b75c76d08161d615daacf6ad5b">&#9670;&nbsp;</a></span>mappages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mappages </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
+          <td class="paramname"><em>pagetable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>va</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>pa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>perm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>建立虚拟地址到物理地址映射 </p>
+<p>Create PTEs for virtual addresses starting at va that refer to physical addresses starting at pa. va and size might not be page-aligned. Returns 0 on success, -1 if <a class="el" href="vm_8c.html#a271b7e1dd0b2700b8c91df4761bcc8cb" title="两种功能：地址转换；建立映射">walk()</a> couldn't allocate a needed page-table page. </p>
+
+</div>
+</div>
+<a id="af19ef1cdd26725159a05761b883c842d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af19ef1cdd26725159a05761b883c842d">&#9670;&nbsp;</a></span>uvmcopy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int uvmcopy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
+          <td class="paramname"><em>old</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
+          <td class="paramname"><em>new</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>max_page</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拷贝用户地址空间 </p>
+<p>Used in fork. Copy the pagetable page and all the user pages. Return 0 on success, -1 on error. </p>
+
+</div>
+</div>
+<a id="a0861cf789c153af3703fc9098cc8dea5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0861cf789c153af3703fc9098cc8dea5">&#9670;&nbsp;</a></span>uvmcreate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> uvmcreate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建空用户页表 </p>
+<p>create an empty user page table. returns 0 if out of memory. </p>
+
+</div>
+</div>
+<a id="a8064fdaa325d6a3ad61f7157202382c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8064fdaa325d6a3ad61f7157202382c3">&#9670;&nbsp;</a></span>uvmfree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uvmfree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
+          <td class="paramname"><em>pagetable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>max_page</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放用户地址空间 </p>
+<p>释放用户地址空间</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max_page</td><td>The max vaddr of user-space. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5a6a56602c37a63e8116d66d61dfa9cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a6a56602c37a63e8116d66d61dfa9cc">&#9670;&nbsp;</a></span>uvmmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int uvmmap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4fbf40e2c26f6a6111bd0669ef5e8236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fbf40e2c26f6a6111bd0669ef5e8236">&#9670;&nbsp;</a></span>uvmunmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void uvmunmap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
+          <td class="paramname"><em>pagetable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>va</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>npages</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>do_free</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放虚拟地址到物理地址映射 </p>
+<p>Remove npages of mappings starting from va. va must be page-aligned. The mappings must exist. Optionally free the physical memory. </p>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a796aa4017efb6527598a228f4b7cc9ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a796aa4017efb6527598a228f4b7cc9ac">&#9670;&nbsp;</a></span>trampoline</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char trampoline[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>跳板页地址 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_3e5ae976cba375449e7597bf7abde3d4.html">kernel-vm</a></li><li class="navelem"><a class="el" href="map_8h.html">map.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

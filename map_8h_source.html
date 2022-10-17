@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>uCore-Tutorial-Code-2022A: kernel-vm/map.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uCore-Tutorial-Code-2022A
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('map_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">map.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="map_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MAP_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MAP_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../utils/riscv.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../utils/types.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">char</span> <a class="code" href="map_8h.html#a796aa4017efb6527598a228f4b7cc9ac">trampoline</a>[];</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> <a class="code" href="map_8h.html#a2ad79c7b5ecb41955635f0eafa67f641">kvmmap</a>(<a class="code" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">int</span> <a class="code" href="map_8h.html#a849f47b75c76d08161d615daacf6ad5b">mappages</a>(<a class="code" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">int</span> <a class="code" href="map_8h.html#a5a6a56602c37a63e8116d66d61dfa9cc">uvmmap</a>(<a class="code" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="map_8h.html#a4fbf40e2c26f6a6111bd0669ef5e8236">uvmunmap</a>(<a class="code" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<a class="code" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> <a class="code" href="map_8h.html#a0861cf789c153af3703fc9098cc8dea5">uvmcreate</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="map_8h.html#a8064fdaa325d6a3ad61f7157202382c3">uvmfree</a>(<a class="code" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">int</span> <a class="code" href="map_8h.html#af19ef1cdd26725159a05761b883c842d">uvmcopy</a>(<a class="code" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="code" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif  // MAP_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="amap_8h_html_a849f47b75c76d08161d615daacf6ad5b"><div class="ttname"><a href="map_8h.html#a849f47b75c76d08161d615daacf6ad5b">mappages</a></div><div class="ttdeci">int mappages(pagetable_t, uint64, uint64, uint64, int)</div><div class="ttdoc">建立虚拟地址到物理地址映射</div><div class="ttdef"><b>Definition:</b> map.c:22</div></div>
+<div class="ttc" id="amap_8h_html_a0861cf789c153af3703fc9098cc8dea5"><div class="ttname"><a href="map_8h.html#a0861cf789c153af3703fc9098cc8dea5">uvmcreate</a></div><div class="ttdeci">pagetable_t uvmcreate()</div><div class="ttdoc">创建空用户页表</div><div class="ttdef"><b>Definition:</b> map.c:87</div></div>
+<div class="ttc" id="amap_8h_html_a4fbf40e2c26f6a6111bd0669ef5e8236"><div class="ttname"><a href="map_8h.html#a4fbf40e2c26f6a6111bd0669ef5e8236">uvmunmap</a></div><div class="ttdeci">void uvmunmap(pagetable_t, uint64, uint64, int)</div><div class="ttdoc">释放虚拟地址到物理地址映射</div><div class="ttdef"><b>Definition:</b> map.c:61</div></div>
+<div class="ttc" id="amap_8h_html_a796aa4017efb6527598a228f4b7cc9ac"><div class="ttname"><a href="map_8h.html#a796aa4017efb6527598a228f4b7cc9ac">trampoline</a></div><div class="ttdeci">char trampoline[]</div><div class="ttdoc">跳板页地址</div></div>
+<div class="ttc" id="amap_8h_html_a2ad79c7b5ecb41955635f0eafa67f641"><div class="ttname"><a href="map_8h.html#a2ad79c7b5ecb41955635f0eafa67f641">kvmmap</a></div><div class="ttdeci">void kvmmap(pagetable_t, uint64, uint64, uint64, int)</div><div class="ttdoc">为内核分配虚拟地址空间</div><div class="ttdef"><b>Definition:</b> map.c:11</div></div>
+<div class="ttc" id="amap_8h_html_af19ef1cdd26725159a05761b883c842d"><div class="ttname"><a href="map_8h.html#af19ef1cdd26725159a05761b883c842d">uvmcopy</a></div><div class="ttdeci">int uvmcopy(pagetable_t, pagetable_t, uint64)</div><div class="ttdoc">拷贝用户地址空间</div><div class="ttdef"><b>Definition:</b> map.c:118</div></div>
+<div class="ttc" id="anfs_2types_8h_html_a5975ce0896ee5ec5db2f1a411620a51a"><div class="ttname"><a href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a></div><div class="ttdeci">unsigned long uint64</div><div class="ttdef"><b>Definition:</b> types.h:10</div></div>
+<div class="ttc" id="amap_8h_html_a5a6a56602c37a63e8116d66d61dfa9cc"><div class="ttname"><a href="map_8h.html#a5a6a56602c37a63e8116d66d61dfa9cc">uvmmap</a></div><div class="ttdeci">int uvmmap(pagetable_t, uint64, uint64, int)</div><div class="ttdef"><b>Definition:</b> map.c:46</div></div>
+<div class="ttc" id="amap_8h_html_a8064fdaa325d6a3ad61f7157202382c3"><div class="ttname"><a href="map_8h.html#a8064fdaa325d6a3ad61f7157202382c3">uvmfree</a></div><div class="ttdeci">void uvmfree(pagetable_t, uint64)</div><div class="ttdoc">释放用户地址空间</div><div class="ttdef"><b>Definition:</b> map.c:107</div></div>
+<div class="ttc" id="ariscv_8h_html_aabc0f4f29a1508768d880855992b8ba7"><div class="ttname"><a href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a></div><div class="ttdeci">uint64 * pagetable_t</div><div class="ttdef"><b>Definition:</b> riscv.h:322</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_3e5ae976cba375449e7597bf7abde3d4.html">kernel-vm</a></li><li class="navelem"><a class="el" href="map_8h.html">map.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

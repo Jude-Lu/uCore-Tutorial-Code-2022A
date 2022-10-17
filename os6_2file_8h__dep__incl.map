@@ -1,0 +1,12 @@
+<map id="os6/file.h" name="os6/file.h">
+<area shape="rect" id="node1" title=" " alt="" coords="178,5,259,32"/>
+<area shape="rect" id="node2" href="$os6_2file_8c.html" title=" " alt="" coords="5,80,85,107"/>
+<area shape="rect" id="node3" href="$os6_2fs_8c.html" title=" " alt="" coords="109,80,181,107"/>
+<area shape="rect" id="node4" href="$os6_2loader_8h.html" title=" " alt="" coords="256,80,357,107"/>
+<area shape="rect" id="node5" href="$os6_2loader_8c.html" title=" " alt="" coords="66,155,166,181"/>
+<area shape="rect" id="node10" href="$os6_2virtio__disk_8c.html" title=" " alt="" coords="381,80,509,107"/>
+<area shape="rect" id="node6" href="$os6_2main_8c.html" title=" " alt="" coords="191,155,284,181"/>
+<area shape="rect" id="node7" href="$os6__syscall_8c.html" title=" " alt="" coords="309,155,443,181"/>
+<area shape="rect" id="node8" href="$os6__trap_8c.html" title=" " alt="" coords="467,155,583,181"/>
+<area shape="rect" id="node9" href="$os6_2proc_8c.html" title=" " alt="" coords="608,155,696,181"/>
+</map>

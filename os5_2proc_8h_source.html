@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>uCore-Tutorial-Code-2022A: os5/proc.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uCore-Tutorial-Code-2022A
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('os5_2proc_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">proc.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="os5_2proc_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PROC_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PROC_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../utils/defs.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="os5_2proc_8h.html#a810c5b751df5bb30588613ed91095129">    6</a></span>&#160;<span class="preprocessor">#define NPROC (512)</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// Per-process state</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">struct </span><a class="code" href="structproc.html">proc</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">enum</span> <a class="code" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7">procstate</a> <a class="code" href="structproc.html#a59425505202fc7e53a519d95707cb26b">state</a>; <span class="comment">// Process state</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structproc.html#af500917c052066b40cf47f96b43c607b">pid</a>; <span class="comment">// Process ID</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> <a class="code" href="structproc.html#a13788ece187726b3b82288eb5331004b">pagetable</a>; <span class="comment">// User page table</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structproc.html#aa5cd9b831d3a66478aed4d343e10282e">ustack</a>; <span class="comment">// Virtual address of kernel stack</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structproc.html#a7015a263779e0f6a56f1f089a02e040d">kstack</a>; <span class="comment">// Virtual address of kernel stack</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">struct </span><a class="code" href="structtrapframe.html">trapframe</a> *<a class="code" href="structproc.html#a173f72e10786dddc6cb3cf9f08060744">trapframe</a>; <span class="comment">// data page for trampoline.S</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">struct </span><a class="code" href="structcontext.html">context</a> <a class="code" href="structcontext.html">context</a>; <span class="comment">// swtch() here to run process</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structproc.html#ac50cc34f800e9dab8d6694300dede70a">max_page</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structproc.html#a15f8ad020cedb1f4bfc5dfa9fdf1519a">   18</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structproc.html">proc</a> *<a class="code" href="structproc.html#a15f8ad020cedb1f4bfc5dfa9fdf1519a">parent</a>; <span class="comment">// Parent process</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structproc.html#acfb2599c6adb35d4730c1f39f00ddcb8">   19</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structproc.html#acfb2599c6adb35d4730c1f39f00ddcb8">exit_code</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">int</span> <a class="code" href="os5_2proc_8h.html#a414dda255ed3c1e43e7922d10f9d2c6d">cpuid</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="os3_2proc_8h.html#a6f255d924f7a6bb2c4be0c8c2f2d9ce3">exit</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="os3_2proc_8h.html#a17d1aae356cbff8c71be7a05a1ec480e">proc_init</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="os3_2proc_8h.html#a4275b93213964b088d2c8daf9f8ab091">scheduler</a>() <a class="code" href="os2_2loader_8c.html#ae5bd43ddfa01d13ff845185ef27200b7">__attribute__</a>((noreturn));</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="os3_2proc_8h.html#a549a0c1cc47933fa045b200690965cbd">sched</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> <a class="code" href="os3_2proc_8h.html#a58c8b2ad0ea491a6642e5e1cbd358c89">yield</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">int</span> <a class="code" href="os5_2proc_8h.html#aa3a80f0c682e09d788db0c2b4cc5ff7e">fork</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">int</span> <a class="code" href="os5_2proc_8h.html#a19e5d9af016d0abc69b53c326355dd5b">exec</a>(<span class="keywordtype">char</span> *);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">int</span> <a class="code" href="os5_2proc_8h.html#a072060175b68e3020e9b8acfbaf3752b">wait</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span> *);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// swtch.S</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> <a class="code" href="os3_2proc_8h.html#a5518344adfcd738bb874c40027ea3f83">swtch</a>(struct <a class="code" href="structcontext.html">context</a> *, struct <a class="code" href="structcontext.html">context</a> *);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif // PROC_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aos5_2proc_8h_html_a19e5d9af016d0abc69b53c326355dd5b"><div class="ttname"><a href="os5_2proc_8h.html#a19e5d9af016d0abc69b53c326355dd5b">exec</a></div><div class="ttdeci">int exec(char *)</div><div class="ttdef"><b>Definition:</b> proc.c:164</div></div>
+<div class="ttc" id="astructproc_html_a15f8ad020cedb1f4bfc5dfa9fdf1519a"><div class="ttname"><a href="structproc.html#a15f8ad020cedb1f4bfc5dfa9fdf1519a">proc::parent</a></div><div class="ttdeci">struct proc * parent</div><div class="ttdef"><b>Definition:</b> proc.h:18</div></div>
+<div class="ttc" id="astructcontext_html"><div class="ttname"><a href="structcontext.html">context</a></div><div class="ttdef"><b>Definition:</b> processor.h:11</div></div>
+<div class="ttc" id="aprocessor_8h_html_aa1ced7d2b60040fded3fa873d0c03ba7"><div class="ttname"><a href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7">procstate</a></div><div class="ttdeci">procstate</div><div class="ttdef"><b>Definition:</b> processor.h:6</div></div>
+<div class="ttc" id="aos5_2proc_8h_html_aa3a80f0c682e09d788db0c2b4cc5ff7e"><div class="ttname"><a href="os5_2proc_8h.html#aa3a80f0c682e09d788db0c2b4cc5ff7e">fork</a></div><div class="ttdeci">int fork()</div><div class="ttdef"><b>Definition:</b> proc.c:142</div></div>
+<div class="ttc" id="aos5_2proc_8h_html_a072060175b68e3020e9b8acfbaf3752b"><div class="ttname"><a href="os5_2proc_8h.html#a072060175b68e3020e9b8acfbaf3752b">wait</a></div><div class="ttdeci">int wait(int, int *)</div><div class="ttdef"><b>Definition:</b> proc.c:176</div></div>
+<div class="ttc" id="astructproc_html_ac50cc34f800e9dab8d6694300dede70a"><div class="ttname"><a href="structproc.html#ac50cc34f800e9dab8d6694300dede70a">proc::max_page</a></div><div class="ttdeci">uint64 max_page</div><div class="ttdef"><b>Definition:</b> proc.h:17</div></div>
+<div class="ttc" id="astructproc_html_a13788ece187726b3b82288eb5331004b"><div class="ttname"><a href="structproc.html#a13788ece187726b3b82288eb5331004b">proc::pagetable</a></div><div class="ttdeci">pagetable_t pagetable</div><div class="ttdef"><b>Definition:</b> proc.h:12</div></div>
+<div class="ttc" id="astructproc_html_a173f72e10786dddc6cb3cf9f08060744"><div class="ttname"><a href="structproc.html#a173f72e10786dddc6cb3cf9f08060744">proc::trapframe</a></div><div class="ttdeci">struct trapframe * trapframe</div><div class="ttdef"><b>Definition:</b> proc.h:14</div></div>
+<div class="ttc" id="astructproc_html_a59425505202fc7e53a519d95707cb26b"><div class="ttname"><a href="structproc.html#a59425505202fc7e53a519d95707cb26b">proc::state</a></div><div class="ttdeci">enum procstate state</div><div class="ttdef"><b>Definition:</b> proc.h:10</div></div>
+<div class="ttc" id="astructproc_html_af500917c052066b40cf47f96b43c607b"><div class="ttname"><a href="structproc.html#af500917c052066b40cf47f96b43c607b">proc::pid</a></div><div class="ttdeci">int pid</div><div class="ttdef"><b>Definition:</b> proc.h:11</div></div>
+<div class="ttc" id="astructtrapframe_html"><div class="ttname"><a href="structtrapframe.html">trapframe</a></div><div class="ttdef"><b>Definition:</b> trap.h:6</div></div>
+<div class="ttc" id="aos3_2proc_8h_html_a4275b93213964b088d2c8daf9f8ab091"><div class="ttname"><a href="os3_2proc_8h.html#a4275b93213964b088d2c8daf9f8ab091">scheduler</a></div><div class="ttdeci">void scheduler() __attribute__((noreturn))</div><div class="ttdef"><b>Definition:</b> proc.c:83</div></div>
+<div class="ttc" id="aos3_2proc_8h_html_a6f255d924f7a6bb2c4be0c8c2f2d9ce3"><div class="ttname"><a href="os3_2proc_8h.html#a6f255d924f7a6bb2c4be0c8c2f2d9ce3">exit</a></div><div class="ttdeci">void exit(int)</div><div class="ttdef"><b>Definition:</b> proc.c:116</div></div>
+<div class="ttc" id="astructproc_html_aa5cd9b831d3a66478aed4d343e10282e"><div class="ttname"><a href="structproc.html#aa5cd9b831d3a66478aed4d343e10282e">proc::ustack</a></div><div class="ttdeci">uint64 ustack</div><div class="ttdef"><b>Definition:</b> proc.h:12</div></div>
+<div class="ttc" id="anfs_2types_8h_html_a5975ce0896ee5ec5db2f1a411620a51a"><div class="ttname"><a href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a></div><div class="ttdeci">unsigned long uint64</div><div class="ttdef"><b>Definition:</b> types.h:10</div></div>
+<div class="ttc" id="astructproc_html_acfb2599c6adb35d4730c1f39f00ddcb8"><div class="ttname"><a href="structproc.html#acfb2599c6adb35d4730c1f39f00ddcb8">proc::exit_code</a></div><div class="ttdeci">uint64 exit_code</div><div class="ttdef"><b>Definition:</b> proc.h:19</div></div>
+<div class="ttc" id="aos3_2proc_8h_html_a549a0c1cc47933fa045b200690965cbd"><div class="ttname"><a href="os3_2proc_8h.html#a549a0c1cc47933fa045b200690965cbd">sched</a></div><div class="ttdeci">void sched()</div><div class="ttdef"><b>Definition:</b> proc.c:100</div></div>
+<div class="ttc" id="aos2_2loader_8c_html_ae5bd43ddfa01d13ff845185ef27200b7"><div class="ttname"><a href="os2_2loader_8c.html#ae5bd43ddfa01d13ff845185ef27200b7">__attribute__</a></div><div class="ttdeci">__attribute__((aligned(4096)))</div><div class="ttdef"><b>Definition:</b> loader.c:18</div></div>
+<div class="ttc" id="astructproc_html"><div class="ttname"><a href="structproc.html">proc</a></div><div class="ttdef"><b>Definition:</b> proc.h:9</div></div>
+<div class="ttc" id="aos3_2proc_8h_html_a58c8b2ad0ea491a6642e5e1cbd358c89"><div class="ttname"><a href="os3_2proc_8h.html#a58c8b2ad0ea491a6642e5e1cbd358c89">yield</a></div><div class="ttdeci">void yield()</div><div class="ttdef"><b>Definition:</b> proc.c:109</div></div>
+<div class="ttc" id="astructproc_html_a7015a263779e0f6a56f1f089a02e040d"><div class="ttname"><a href="structproc.html#a7015a263779e0f6a56f1f089a02e040d">proc::kstack</a></div><div class="ttdeci">uint64 kstack</div><div class="ttdef"><b>Definition:</b> proc.h:13</div></div>
+<div class="ttc" id="aos3_2proc_8h_html_a17d1aae356cbff8c71be7a05a1ec480e"><div class="ttname"><a href="os3_2proc_8h.html#a17d1aae356cbff8c71be7a05a1ec480e">proc_init</a></div><div class="ttdeci">void proc_init()</div><div class="ttdef"><b>Definition:</b> proc.c:125</div></div>
+<div class="ttc" id="aos3_2proc_8h_html_a5518344adfcd738bb874c40027ea3f83"><div class="ttname"><a href="os3_2proc_8h.html#a5518344adfcd738bb874c40027ea3f83">swtch</a></div><div class="ttdeci">void swtch(struct context *, struct context *)</div></div>
+<div class="ttc" id="ariscv_8h_html_aabc0f4f29a1508768d880855992b8ba7"><div class="ttname"><a href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a></div><div class="ttdeci">uint64 * pagetable_t</div><div class="ttdef"><b>Definition:</b> riscv.h:322</div></div>
+<div class="ttc" id="aos5_2proc_8h_html_a414dda255ed3c1e43e7922d10f9d2c6d"><div class="ttname"><a href="os5_2proc_8h.html#a414dda255ed3c1e43e7922d10f9d2c6d">cpuid</a></div><div class="ttdeci">int cpuid()</div><div class="ttdef"><b>Definition:</b> proc.c:24</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_40423dc7e2eafae95d3e1bb60e8f6810.html">os5</a></li><li class="navelem"><a class="el" href="os5_2proc_8h.html">proc.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

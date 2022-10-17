@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>uCore-Tutorial-Code-2022A: os6/virtio.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uCore-Tutorial-Code-2022A
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('os6_2virtio_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">virtio.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="os6_2virtio_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef VIRTIO_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define VIRTIO_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="os6_2bio_8h.html">bio.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// virtio device definitions.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// for both the mmio interface, and virtio descriptors.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// only tested with qemu.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// this is the &quot;legacy&quot; virtio interface.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// the virtio spec:</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// https://docs.oasis-open.org/virtio/virtio/v1.1/virtio-v1.1.pdf</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// virtio mmio control registers, mapped starting at 0x10001000.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// from qemu virtio_mmio.h</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#adbc4f6c0d30c76a45fdc2dabe4cd2cbb">   18</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_MAGIC_VALUE 0x000 // 0x74726976</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#ab3b8d6bd5655e57baf01447384883076">   19</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_VERSION 0x004 // version; 1 is legacy</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#a843ffa98e22c96b9f33a0f4eb37a00cb">   20</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_DEVICE_ID 0x008 // device type; 1 is net, 2 is disk</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#ae24a27c9de546c99f70992f060e4ce99">   21</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_VENDOR_ID 0x00c // 0x554d4551</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#a5dd01aeb9c7de8d00b86814e1df075c1">   22</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_DEVICE_FEATURES 0x010</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#a9cf63c483bba3f905802d27bdef1c405">   23</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_DRIVER_FEATURES 0x020</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#ac38064f45b6ee9dde59197cd6aeaf5ef">   24</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_GUEST_PAGE_SIZE 0x028 // page size for PFN, write-only</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#af06acc888e4338d9d286199d9f005380">   25</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_QUEUE_SEL 0x030 // select queue, write-only</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#a017f59f133403156d7443bf5a28a3ceb">   26</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_QUEUE_NUM_MAX 0x034 // max size of current queue, read-only</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#ac04653c6ac4c886e5f08f0b292f66d1c">   27</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_QUEUE_NUM 0x038 // size of current queue, write-only</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#a0ad0dcfca61b0fc343b025c6c0884fd2">   28</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_QUEUE_ALIGN 0x03c // used ring alignment, write-only</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#ad4da01927cf7b7e634817688bd6863a5">   29</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_QUEUE_PFN                                                  \</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">    0x040 // physical page number for queue, read/write</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#a465c47ba6a9f60ba8ab41eeae4499463">   31</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_QUEUE_READY 0x044 // ready bit</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#af33b9135a8725e32c95e412b97ecdce5">   32</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_QUEUE_NOTIFY 0x050 // write-only</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#ae8d1f2f787d1164fe9cc24b28bbc5c3c">   33</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_INTERRUPT_STATUS 0x060 // read-only</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#a2bec6b89c384b4860985d98340a540d5">   34</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_INTERRUPT_ACK 0x064 // write-only</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#a93ae0e8556428cc98d2f964eb82d3aec">   35</a></span>&#160;<span class="preprocessor">#define VIRTIO_MMIO_STATUS 0x070 // read/write</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// status register bits, from qemu virtio_config.h</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#a9a057904115e16c67c5adc2c97d69746">   38</a></span>&#160;<span class="preprocessor">#define VIRTIO_CONFIG_S_ACKNOWLEDGE 1</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#a02ec5c45d255a19824d61050d9925b39">   39</a></span>&#160;<span class="preprocessor">#define VIRTIO_CONFIG_S_DRIVER 2</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#afc68bf23eb9cda196e0fab18f89aa3e1">   40</a></span>&#160;<span class="preprocessor">#define VIRTIO_CONFIG_S_DRIVER_OK 4</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#a5c8cf2858a304245299ce50835b47291">   41</a></span>&#160;<span class="preprocessor">#define VIRTIO_CONFIG_S_FEATURES_OK 8</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// device feature bits</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#aa24486e8dd96dd86c415ad6e04221424">   44</a></span>&#160;<span class="preprocessor">#define VIRTIO_BLK_F_RO 5 </span><span class="comment">/* Disk is read-only */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#aad7c44284dc8173499943e3402de5b1b">   45</a></span>&#160;<span class="preprocessor">#define VIRTIO_BLK_F_SCSI 7 </span><span class="comment">/* Supports scsi command passthru */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#a6064eb12c03012a30c0a5082b4fba3e4">   46</a></span>&#160;<span class="preprocessor">#define VIRTIO_BLK_F_CONFIG_WCE 11 </span><span class="comment">/* Writeback mode available in config */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#a825eaa1d195818dc1c2cc9796363d148">   47</a></span>&#160;<span class="preprocessor">#define VIRTIO_BLK_F_MQ 12 </span><span class="comment">/* support more than one vq */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#aa32be3266e0b2ded01f1609380cff620">   48</a></span>&#160;<span class="preprocessor">#define VIRTIO_F_ANY_LAYOUT 27</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#ab01a363ce20422c5d9065269fbf3eccf">   49</a></span>&#160;<span class="preprocessor">#define VIRTIO_RING_F_INDIRECT_DESC 28</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#abaad7d994ac1bb57a3bd2d058cff5c7a">   50</a></span>&#160;<span class="preprocessor">#define VIRTIO_RING_F_EVENT_IDX 29</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">// this many virtio descriptors.</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">// must be a power of two.</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#aaf0952059602752258dccaa015d7b54a">   54</a></span>&#160;<span class="preprocessor">#define NUM 8</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">// a single descriptor, from the spec.</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="structvirtq__desc.html">   57</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structvirtq__desc.html">virtq_desc</a> {</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="structvirtq__desc.html#a6da176eea517b5168a715dbfdbbf2f04">   58</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structvirtq__desc.html#a6da176eea517b5168a715dbfdbbf2f04">addr</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="structvirtq__desc.html#a63941c3a03dc9736f3234bb756d9a305">   59</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code" href="structvirtq__desc.html#a63941c3a03dc9736f3234bb756d9a305">len</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structvirtq__desc.html#ae15f0808741c35cb9a8d231105d8beea">   60</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a> <a class="code" href="structvirtq__desc.html#ae15f0808741c35cb9a8d231105d8beea">flags</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="structvirtq__desc.html#aec243abe8ce320e552ad64d69200cde3">   61</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a> <a class="code" href="structvirtq__desc.html#aec243abe8ce320e552ad64d69200cde3">next</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#ac98030127cfdd5b7e53a4756a38d3e28">   63</a></span>&#160;<span class="preprocessor">#define VRING_DESC_F_NEXT 1 // chained with another descriptor</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#a74fe2dbfe07fd3d386e87e7e7a921691">   64</a></span>&#160;<span class="preprocessor">#define VRING_DESC_F_WRITE 2 // device writes (vs read)</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">// the (entire) avail ring, from the spec.</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="structvirtq__avail.html">   67</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structvirtq__avail.html">virtq_avail</a> {</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="structvirtq__avail.html#ae15f0808741c35cb9a8d231105d8beea">   68</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a> <a class="code" href="structvirtq__avail.html#ae15f0808741c35cb9a8d231105d8beea">flags</a>; <span class="comment">// always zero</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structvirtq__avail.html#a90e9647d01c24514d3841344ff1cea7b">   69</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a> <a class="code" href="structvirtq__avail.html#a90e9647d01c24514d3841344ff1cea7b">idx</a>; <span class="comment">// driver will write ring[idx] next</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="structvirtq__avail.html#a3e5cc6f90e5a05f05646b58379b8dd63">   70</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a> <a class="code" href="structvirtq__avail.html#a3e5cc6f90e5a05f05646b58379b8dd63">ring</a>[<a class="code" href="os6_2virtio_8h.html#aaf0952059602752258dccaa015d7b54a">NUM</a>]; <span class="comment">// descriptor numbers of chain heads</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structvirtq__avail.html#a23f7a5cb5d5736bfb3ad36bab34a3dc6">   71</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a> <a class="code" href="structvirtq__avail.html#a23f7a5cb5d5736bfb3ad36bab34a3dc6">unused</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">// one entry in the &quot;used&quot; ring, with which the</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">// device tells the driver about completed requests.</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="structvirtq__used__elem.html">   76</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structvirtq__used__elem.html">virtq_used_elem</a> {</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="structvirtq__used__elem.html#a3384d9640634d49e84776a97f3e2c241">   77</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code" href="structvirtq__used__elem.html#a3384d9640634d49e84776a97f3e2c241">id</a>; <span class="comment">// index of start of completed descriptor chain</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="structvirtq__used__elem.html#a63941c3a03dc9736f3234bb756d9a305">   78</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code" href="structvirtq__used__elem.html#a63941c3a03dc9736f3234bb756d9a305">len</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="structvirtq__used.html">   81</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structvirtq__used.html">virtq_used</a> {</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="structvirtq__used.html#ae15f0808741c35cb9a8d231105d8beea">   82</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a> <a class="code" href="structvirtq__used.html#ae15f0808741c35cb9a8d231105d8beea">flags</a>; <span class="comment">// always zero</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="structvirtq__used.html#a90e9647d01c24514d3841344ff1cea7b">   83</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a> <a class="code" href="structvirtq__used.html#a90e9647d01c24514d3841344ff1cea7b">idx</a>; <span class="comment">// device increments when it adds a ring[] entry</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="structvirtq__used.html#a1c17dd70f833c762e425402688fdb896">   84</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structvirtq__used__elem.html">virtq_used_elem</a> <a class="code" href="structvirtq__used.html#a1c17dd70f833c762e425402688fdb896">ring</a>[<a class="code" href="os6_2virtio_8h.html#aaf0952059602752258dccaa015d7b54a">NUM</a>];</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">// these are specific to virtio block devices, e.g. disks,</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">// described in Section 5.2 of the spec.</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#a736c5cf3b8352bcec7c79ef42536a445">   90</a></span>&#160;<span class="preprocessor">#define VIRTIO_BLK_T_IN 0 // read the disk</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="os6_2virtio_8h.html#a47e0526d29f30098a2f665fb9f4b6d1f">   91</a></span>&#160;<span class="preprocessor">#define VIRTIO_BLK_T_OUT 1 // write the disk</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">// the format of the first descriptor in a disk request.</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">// to be followed by two more descriptors containing</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">// the block, and a one-byte status.</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="structvirtio__blk__req.html">   96</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structvirtio__blk__req.html">virtio_blk_req</a> {</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="structvirtio__blk__req.html#af356674bbaaf9bb782af79059eef1346">   97</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code" href="structvirtio__blk__req.html#af356674bbaaf9bb782af79059eef1346">type</a>; <span class="comment">// VIRTIO_BLK_T_IN or ..._OUT</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="structvirtio__blk__req.html#ab3fd3e5f7bb36e0b63ec3576b73b18cb">   98</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code" href="structvirtio__blk__req.html#ab3fd3e5f7bb36e0b63ec3576b73b18cb">reserved</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="structvirtio__blk__req.html#a68e159f80f2467b2690eeade6417dc1d">   99</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structvirtio__blk__req.html#a68e159f80f2467b2690eeade6417dc1d">sector</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;};</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keywordtype">void</span> <a class="code" href="os6_2virtio_8h.html#ac65e30a9f4974186b00f333ba74dda7c">virtio_disk_init</a>();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keywordtype">void</span> <a class="code" href="os6_2virtio_8h.html#aac03d5e3619e9766d03e8fab66f48316">virtio_disk_rw</a>(<span class="keyword">struct</span> <a class="code" href="structbuf.html">buf</a> *, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordtype">void</span> <a class="code" href="os6_2virtio_8h.html#afd6fb0a016a11952cd23c24c0a5dd4b5">virtio_disk_intr</a>();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif // VIRTIO_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astructvirtq__desc_html_aec243abe8ce320e552ad64d69200cde3"><div class="ttname"><a href="structvirtq__desc.html#aec243abe8ce320e552ad64d69200cde3">virtq_desc::next</a></div><div class="ttdeci">uint16 next</div><div class="ttdef"><b>Definition:</b> virtio.h:61</div></div>
+<div class="ttc" id="aos6_2virtio_8h_html_aaf0952059602752258dccaa015d7b54a"><div class="ttname"><a href="os6_2virtio_8h.html#aaf0952059602752258dccaa015d7b54a">NUM</a></div><div class="ttdeci">#define NUM</div><div class="ttdef"><b>Definition:</b> virtio.h:54</div></div>
+<div class="ttc" id="astructvirtq__used_html_a90e9647d01c24514d3841344ff1cea7b"><div class="ttname"><a href="structvirtq__used.html#a90e9647d01c24514d3841344ff1cea7b">virtq_used::idx</a></div><div class="ttdeci">uint16 idx</div><div class="ttdef"><b>Definition:</b> virtio.h:83</div></div>
+<div class="ttc" id="aos6_2virtio_8h_html_afd6fb0a016a11952cd23c24c0a5dd4b5"><div class="ttname"><a href="os6_2virtio_8h.html#afd6fb0a016a11952cd23c24c0a5dd4b5">virtio_disk_intr</a></div><div class="ttdeci">void virtio_disk_intr()</div><div class="ttdef"><b>Definition:</b> virtio_disk.c:267</div></div>
+<div class="ttc" id="astructvirtio__blk__req_html"><div class="ttname"><a href="structvirtio__blk__req.html">virtio_blk_req</a></div><div class="ttdef"><b>Definition:</b> virtio.h:96</div></div>
+<div class="ttc" id="astructvirtq__used_html_ae15f0808741c35cb9a8d231105d8beea"><div class="ttname"><a href="structvirtq__used.html#ae15f0808741c35cb9a8d231105d8beea">virtq_used::flags</a></div><div class="ttdeci">uint16 flags</div><div class="ttdef"><b>Definition:</b> virtio.h:82</div></div>
+<div class="ttc" id="astructvirtq__used__elem_html"><div class="ttname"><a href="structvirtq__used__elem.html">virtq_used_elem</a></div><div class="ttdef"><b>Definition:</b> virtio.h:76</div></div>
+<div class="ttc" id="astructvirtq__used__elem_html_a3384d9640634d49e84776a97f3e2c241"><div class="ttname"><a href="structvirtq__used__elem.html#a3384d9640634d49e84776a97f3e2c241">virtq_used_elem::id</a></div><div class="ttdeci">uint32 id</div><div class="ttdef"><b>Definition:</b> virtio.h:77</div></div>
+<div class="ttc" id="aos6_2virtio_8h_html_ac65e30a9f4974186b00f333ba74dda7c"><div class="ttname"><a href="os6_2virtio_8h.html#ac65e30a9f4974186b00f333ba74dda7c">virtio_disk_init</a></div><div class="ttdeci">void virtio_disk_init()</div></div>
+<div class="ttc" id="anfs_2types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="nfs_2types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition:</b> types.h:9</div></div>
+<div class="ttc" id="astructbuf_html"><div class="ttname"><a href="structbuf.html">buf</a></div><div class="ttdef"><b>Definition:</b> bio.h:7</div></div>
+<div class="ttc" id="astructvirtq__avail_html"><div class="ttname"><a href="structvirtq__avail.html">virtq_avail</a></div><div class="ttdef"><b>Definition:</b> virtio.h:67</div></div>
+<div class="ttc" id="astructvirtio__blk__req_html_af356674bbaaf9bb782af79059eef1346"><div class="ttname"><a href="structvirtio__blk__req.html#af356674bbaaf9bb782af79059eef1346">virtio_blk_req::type</a></div><div class="ttdeci">uint32 type</div><div class="ttdef"><b>Definition:</b> virtio.h:97</div></div>
+<div class="ttc" id="astructvirtio__blk__req_html_ab3fd3e5f7bb36e0b63ec3576b73b18cb"><div class="ttname"><a href="structvirtio__blk__req.html#ab3fd3e5f7bb36e0b63ec3576b73b18cb">virtio_blk_req::reserved</a></div><div class="ttdeci">uint32 reserved</div><div class="ttdef"><b>Definition:</b> virtio.h:98</div></div>
+<div class="ttc" id="astructvirtq__used_html"><div class="ttname"><a href="structvirtq__used.html">virtq_used</a></div><div class="ttdef"><b>Definition:</b> virtio.h:81</div></div>
+<div class="ttc" id="anfs_2types_8h_html_a5975ce0896ee5ec5db2f1a411620a51a"><div class="ttname"><a href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a></div><div class="ttdeci">unsigned long uint64</div><div class="ttdef"><b>Definition:</b> types.h:10</div></div>
+<div class="ttc" id="astructvirtq__desc_html_a63941c3a03dc9736f3234bb756d9a305"><div class="ttname"><a href="structvirtq__desc.html#a63941c3a03dc9736f3234bb756d9a305">virtq_desc::len</a></div><div class="ttdeci">uint32 len</div><div class="ttdef"><b>Definition:</b> virtio.h:59</div></div>
+<div class="ttc" id="astructvirtq__avail_html_a23f7a5cb5d5736bfb3ad36bab34a3dc6"><div class="ttname"><a href="structvirtq__avail.html#a23f7a5cb5d5736bfb3ad36bab34a3dc6">virtq_avail::unused</a></div><div class="ttdeci">uint16 unused</div><div class="ttdef"><b>Definition:</b> virtio.h:71</div></div>
+<div class="ttc" id="astructvirtq__used_html_a1c17dd70f833c762e425402688fdb896"><div class="ttname"><a href="structvirtq__used.html#a1c17dd70f833c762e425402688fdb896">virtq_used::ring</a></div><div class="ttdeci">struct virtq_used_elem ring[NUM]</div><div class="ttdef"><b>Definition:</b> virtio.h:84</div></div>
+<div class="ttc" id="astructvirtq__avail_html_ae15f0808741c35cb9a8d231105d8beea"><div class="ttname"><a href="structvirtq__avail.html#ae15f0808741c35cb9a8d231105d8beea">virtq_avail::flags</a></div><div class="ttdeci">uint16 flags</div><div class="ttdef"><b>Definition:</b> virtio.h:68</div></div>
+<div class="ttc" id="astructvirtio__blk__req_html_a68e159f80f2467b2690eeade6417dc1d"><div class="ttname"><a href="structvirtio__blk__req.html#a68e159f80f2467b2690eeade6417dc1d">virtio_blk_req::sector</a></div><div class="ttdeci">uint64 sector</div><div class="ttdef"><b>Definition:</b> virtio.h:99</div></div>
+<div class="ttc" id="astructvirtq__desc_html_a6da176eea517b5168a715dbfdbbf2f04"><div class="ttname"><a href="structvirtq__desc.html#a6da176eea517b5168a715dbfdbbf2f04">virtq_desc::addr</a></div><div class="ttdeci">uint64 addr</div><div class="ttdef"><b>Definition:</b> virtio.h:58</div></div>
+<div class="ttc" id="aos6_2bio_8h_html"><div class="ttname"><a href="os6_2bio_8h.html">bio.h</a></div></div>
+<div class="ttc" id="astructvirtq__avail_html_a90e9647d01c24514d3841344ff1cea7b"><div class="ttname"><a href="structvirtq__avail.html#a90e9647d01c24514d3841344ff1cea7b">virtq_avail::idx</a></div><div class="ttdeci">uint16 idx</div><div class="ttdef"><b>Definition:</b> virtio.h:69</div></div>
+<div class="ttc" id="astructvirtq__desc_html_ae15f0808741c35cb9a8d231105d8beea"><div class="ttname"><a href="structvirtq__desc.html#ae15f0808741c35cb9a8d231105d8beea">virtq_desc::flags</a></div><div class="ttdeci">uint16 flags</div><div class="ttdef"><b>Definition:</b> virtio.h:60</div></div>
+<div class="ttc" id="anfs_2types_8h_html_a05f6b0ae8f6a6e135b0e290c25fe0e4e"><div class="ttname"><a href="nfs_2types_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a></div><div class="ttdeci">unsigned short uint16</div><div class="ttdef"><b>Definition:</b> types.h:8</div></div>
+<div class="ttc" id="astructvirtq__used__elem_html_a63941c3a03dc9736f3234bb756d9a305"><div class="ttname"><a href="structvirtq__used__elem.html#a63941c3a03dc9736f3234bb756d9a305">virtq_used_elem::len</a></div><div class="ttdeci">uint32 len</div><div class="ttdef"><b>Definition:</b> virtio.h:78</div></div>
+<div class="ttc" id="astructvirtq__desc_html"><div class="ttname"><a href="structvirtq__desc.html">virtq_desc</a></div><div class="ttdef"><b>Definition:</b> virtio.h:57</div></div>
+<div class="ttc" id="aos6_2virtio_8h_html_aac03d5e3619e9766d03e8fab66f48316"><div class="ttname"><a href="os6_2virtio_8h.html#aac03d5e3619e9766d03e8fab66f48316">virtio_disk_rw</a></div><div class="ttdeci">void virtio_disk_rw(struct buf *, int)</div><div class="ttdef"><b>Definition:</b> virtio_disk.c:191</div></div>
+<div class="ttc" id="astructvirtq__avail_html_a3e5cc6f90e5a05f05646b58379b8dd63"><div class="ttname"><a href="structvirtq__avail.html#a3e5cc6f90e5a05f05646b58379b8dd63">virtq_avail::ring</a></div><div class="ttdeci">uint16 ring[NUM]</div><div class="ttdef"><b>Definition:</b> virtio.h:70</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_abd7cdcf819f1011356541bd12cc6c58.html">os6</a></li><li class="navelem"><a class="el" href="os6_2virtio_8h.html">virtio.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

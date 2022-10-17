@@ -1,0 +1,26 @@
+var nfs_2fs_8c =
+[
+    [ "min", "nfs_2fs_8c.html#ac6afabdc09a49a433ee19d8a9486056d", null ],
+    [ "NINODES", "nfs_2fs_8c.html#ad285a4c453432da6be26e87a581ee35c", null ],
+    [ "static_assert", "nfs_2fs_8c.html#abce67139ad0bc979ef080a694e60fb36", null ],
+    [ "balloc", "nfs_2fs_8c.html#a327cdfc7a74165d8922ec6c8ba256906", null ],
+    [ "basename", "nfs_2fs_8c.html#a761ffba32c8079f244280befb5d4765e", null ],
+    [ "ialloc", "nfs_2fs_8c.html#a341af7faeda3d6fcb57a5a9fe3a0104a", null ],
+    [ "iappend", "nfs_2fs_8c.html#a268b61616f575ff072f5bb34c83e02e9", null ],
+    [ "main", "nfs_2fs_8c.html#a0ddf1224851353fc92bfbff6f499fa97", null ],
+    [ "rinode", "nfs_2fs_8c.html#a3b6cb1258a963010211a8e5ddf99defe", null ],
+    [ "rsect", "nfs_2fs_8c.html#a22ea835ad23cd716a962f30e4882ee80", null ],
+    [ "winode", "nfs_2fs_8c.html#a2540c48cea7dc865909cfb3f8450a887", null ],
+    [ "wsect", "nfs_2fs_8c.html#ac62d827d836d1807e4d6f365f32348bb", null ],
+    [ "xint", "nfs_2fs_8c.html#a0cb088f1b4dabee9a6056b88a8f813ef", null ],
+    [ "xshort", "nfs_2fs_8c.html#ac6dbbb3aaeee7114cf795be284be08ce", null ],
+    [ "freeblock", "nfs_2fs_8c.html#a8d3a0b59d5f6e59c8b7c0bbdab41ab15", null ],
+    [ "freeinode", "nfs_2fs_8c.html#acee9059b25c8d81ef2b9cfedded17d48", null ],
+    [ "fsfd", "nfs_2fs_8c.html#a44f12de41bc5a5ada9e5fff19c18201c", null ],
+    [ "nbitmap", "nfs_2fs_8c.html#ab3610080ec9ad31beae2488dffd98026", null ],
+    [ "nblocks", "nfs_2fs_8c.html#a076c8e8b7f7acccc46cd356bd8776b26", null ],
+    [ "ninodeblocks", "nfs_2fs_8c.html#a86bf1487f875e3a82dbb4f7c0cde878c", null ],
+    [ "nmeta", "nfs_2fs_8c.html#a6bb66ce69ae378551f55d86c515ae02c", null ],
+    [ "sb", "nfs_2fs_8c.html#a0248d0bac625de5a1415f2f8c91f3343", null ],
+    [ "zeroes", "nfs_2fs_8c.html#aef2d52736d40de37197333ecdeb14a60", null ]
+];

@@ -1,0 +1,460 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>uCore-Tutorial-Code-2022A: task-manage/processor.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uCore-Tutorial-Code-2022A
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('processor_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">processor.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="utils_2types_8h_source.html">../utils/types.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+processor.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="processor_8h__incl.png" border="0" usemap="#task-manage_2processor_8h" alt=""/></div>
+<map name="task-manage_2processor_8h" id="task-manage_2processor_8h">
+<area shape="rect" title=" " alt="" coords="5,5,192,32"/>
+<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="41,80,156,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="processor_8h__dep__incl.png" border="0" usemap="#task-manage_2processor_8hdep" alt=""/></div>
+<map name="task-manage_2processor_8hdep" id="task-manage_2processor_8hdep">
+<area shape="rect" title=" " alt="" coords="2201,5,2387,32"/>
+<area shape="rect" href="defs_8h.html" title=" " alt="" coords="2165,80,2260,107"/>
+<area shape="rect" href="processor_8c.html" title=" " alt="" coords="2284,80,2469,107"/>
+<area shape="rect" href="kalloc_8c.html" title=" " alt="" coords="5,155,145,181"/>
+<area shape="rect" href="map_8c.html" title=" " alt="" coords="170,155,301,181"/>
+<area shape="rect" href="vm_8c.html" title=" " alt="" coords="325,155,447,181"/>
+<area shape="rect" href="os1_2main_8c.html" title=" " alt="" coords="471,155,565,181"/>
+<area shape="rect" href="os2_2loader_8c.html" title=" " alt="" coords="571,229,671,256"/>
+<area shape="rect" href="os2__trap_8h.html" title=" " alt="" coords="639,155,757,181"/>
+<area shape="rect" href="os2_2main_8c.html" title=" " alt="" coords="730,229,823,256"/>
+<area shape="rect" href="os2__syscall_8c.html" title=" " alt="" coords="832,155,967,181"/>
+<area shape="rect" href="os3_2loader_8h.html" title=" " alt="" coords="1207,155,1309,181"/>
+<area shape="rect" href="os3_2loader_8c.html" title=" " alt="" coords="971,229,1071,256"/>
+<area shape="rect" href="os3_2main_8c.html" title=" " alt="" coords="1095,229,1189,256"/>
+<area shape="rect" href="os3__syscall_8c.html" title=" " alt="" coords="1213,229,1348,256"/>
+<area shape="rect" href="os3_2proc_8c.html" title=" " alt="" coords="1373,229,1461,256"/>
+<area shape="rect" href="os3__trap_8h.html" title=" " alt="" coords="1333,155,1450,181"/>
+<area shape="rect" href="os3_2proc_8h.html" title=" " alt="" coords="1093,155,1183,181"/>
+<area shape="rect" href="os4_2proc_8h.html" title=" " alt="" coords="1677,155,1767,181"/>
+<area shape="rect" href="os4_2loader_8c.html" title=" " alt="" coords="1605,229,1705,256"/>
+<area shape="rect" href="os4_2main_8c.html" title=" " alt="" coords="1487,229,1581,256"/>
+<area shape="rect" href="os4__syscall_8c.html" title=" " alt="" coords="1843,229,1977,256"/>
+<area shape="rect" href="os4_2proc_8c.html" title=" " alt="" coords="1730,229,1818,256"/>
+<area shape="rect" href="os4__trap_8h.html" title=" " alt="" coords="1791,155,1909,181"/>
+<area shape="rect" href="os5_2loader_8h.html" title=" " alt="" coords="2154,229,2255,256"/>
+<area shape="rect" href="os5_2loader_8c.html" title=" " alt="" coords="2155,304,2255,331"/>
+<area shape="rect" href="os5_2main_8c.html" title=" " alt="" coords="2286,304,2379,331"/>
+<area shape="rect" href="os5__syscall_8c.html" title=" " alt="" coords="2404,304,2539,331"/>
+<area shape="rect" href="os5_2proc_8c.html" title=" " alt="" coords="2033,304,2121,331"/>
+<area shape="rect" href="os5_2proc_8h.html" title=" " alt="" coords="2085,155,2175,181"/>
+<area shape="rect" href="os5__trap_8h.html" title=" " alt="" coords="2279,229,2397,256"/>
+<area shape="rect" href="os6_2bio_8c.html" title=" " alt="" coords="2453,155,2533,181"/>
+<area shape="rect" href="os6_2proc_8h.html" title=" " alt="" coords="2659,155,2748,181"/>
+<area shape="rect" href="os6_2file_8c.html" title=" " alt="" coords="2522,229,2602,256"/>
+<area shape="rect" href="os6_2fs_8c.html" title=" " alt="" coords="2626,229,2698,256"/>
+<area shape="rect" href="os6_2loader_8h.html" title=" " alt="" coords="2874,229,2975,256"/>
+<area shape="rect" href="os6_2loader_8c.html" title=" " alt="" coords="2875,304,2975,331"/>
+<area shape="rect" href="os6_2main_8c.html" title=" " alt="" coords="3005,304,3098,331"/>
+<area shape="rect" href="os6__syscall_8c.html" title=" " alt="" coords="3123,304,3257,331"/>
+<area shape="rect" href="os6_2proc_8c.html" title=" " alt="" coords="2753,304,2841,331"/>
+<area shape="rect" href="os6__trap_8h.html" title=" " alt="" coords="2999,229,3117,256"/>
+<area shape="rect" href="os6_2virtio__disk_8c.html" title=" " alt="" coords="3077,155,3205,181"/>
+<area shape="rect" href="os7_2bio_8c.html" title=" " alt="" coords="3229,155,3309,181"/>
+<area shape="rect" href="os7_2proc_8h.html" title=" " alt="" coords="3384,155,3473,181"/>
+<area shape="rect" href="os7_2file_8c.html" title=" " alt="" coords="3306,229,3386,256"/>
+<area shape="rect" href="os7_2fs_8c.html" title=" " alt="" coords="3413,229,3485,256"/>
+<area shape="rect" href="os7__trap_8h.html" title=" " alt="" coords="3599,155,3717,181"/>
+<area shape="rect" href="os7_2loader_8c.html" title=" " alt="" coords="3511,229,3611,256"/>
+<area shape="rect" href="os7_2main_8c.html" title=" " alt="" coords="3635,229,3729,256"/>
+<area shape="rect" href="os7__syscall_8c.html" title=" " alt="" coords="3753,229,3888,256"/>
+</map>
+</div>
+</div>
+<p><a href="processor_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcontext.html">context</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmanager.html">manager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">注意返回类型为void*的接口，实际返回类型就是proc结构体指针，但proc在不同的lab中定义不同，因此采用无类型指针定义  <a href="structmanager.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:aa1ced7d2b60040fded3fa873d0c03ba7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7">procstate</a> { <br />
+&#160;&#160;<a class="el" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7aa09b651ef326a9d8efcee5cc5b720ab4">UNUSED</a>, 
+<a class="el" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7a1e780c62cb3fd2edcac39f739bbe6f6c">USED</a>, 
+<a class="el" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7a488282601451a751e0f0e770b15d4235">SLEEPING</a>, 
+<a class="el" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7a269b90433e40460a2c0044a0b3e15694">RUNNABLE</a>, 
+<br />
+&#160;&#160;<a class="el" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7a1061be6c3fb88d32829cba6f6b2be304">RUNNING</a>, 
+<a class="el" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7a5dfb36109b24f39d54d5c3f48f53def8">ZOMBIE</a>
+<br />
+ }</td></tr>
+<tr class="separator:aa1ced7d2b60040fded3fa873d0c03ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac00ea8a9e058461b1bdc3b571223060"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060">threadstate</a> { <br />
+&#160;&#160;<a class="el" href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060a890ae95d29fa868ef5b00faacb1831e7">T_UNUSED</a>, 
+<a class="el" href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060a26e66bbf40ba925c3cc40bfc07554cc6">T_USED</a>, 
+<a class="el" href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060ade71e6ccc64a038a654095333d2760c7">T_SLEEPING</a>, 
+<a class="el" href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060a30cc67fd6064c2e28e5603f4d877cb6e">T_RUNNABLE</a>, 
+<br />
+&#160;&#160;<a class="el" href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060a2557f11f662344607057fc57af66bc08">T_RUNNING</a>, 
+<a class="el" href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060ab5e424e0aafc62871c6191c10fad2b12">T_EXITED</a>
+<br />
+ }</td></tr>
+<tr class="separator:aac00ea8a9e058461b1bdc3b571223060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ad91f5f81b827793fc661b86e86ab6637"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processor_8h.html#ad91f5f81b827793fc661b86e86ab6637">set_manager</a> (struct <a class="el" href="structmanager.html">manager</a> *)</td></tr>
+<tr class="memdesc:ad91f5f81b827793fc661b86e86ab6637"><td class="mdescLeft">&#160;</td><td class="mdescRight">manager各个接口的实现在各个lab中，在这里初始化proc_manager  <a href="processor_8h.html#ad91f5f81b827793fc661b86e86ab6637">更多...</a><br /></td></tr>
+<tr class="separator:ad91f5f81b827793fc661b86e86ab6637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a300cb36ba4651248aebffc2aaa1f7ff3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processor_8h.html#a300cb36ba4651248aebffc2aaa1f7ff3">curr_task</a> ()</td></tr>
+<tr class="memdesc:a300cb36ba4651248aebffc2aaa1f7ff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">获得当前正在运行的进程  <a href="processor_8h.html#a300cb36ba4651248aebffc2aaa1f7ff3">更多...</a><br /></td></tr>
+<tr class="separator:a300cb36ba4651248aebffc2aaa1f7ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b291c9f835613e2be8c14961708f82b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processor_8h.html#a8b291c9f835613e2be8c14961708f82b">set_curr</a> (void *)</td></tr>
+<tr class="memdesc:a8b291c9f835613e2be8c14961708f82b"><td class="mdescLeft">&#160;</td><td class="mdescRight">修改当前正在运行的进程  <a href="processor_8h.html#a8b291c9f835613e2be8c14961708f82b">更多...</a><br /></td></tr>
+<tr class="separator:a8b291c9f835613e2be8c14961708f82b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f174d36028e0adf43a711f5a9cbc634"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processor_8h.html#a7f174d36028e0adf43a711f5a9cbc634">get_task</a> (int)</td></tr>
+<tr class="memdesc:a7f174d36028e0adf43a711f5a9cbc634"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据id获得进程  <a href="processor_8h.html#a7f174d36028e0adf43a711f5a9cbc634">更多...</a><br /></td></tr>
+<tr class="separator:a7f174d36028e0adf43a711f5a9cbc634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b2852fd7a8f739860efc716500bfe9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processor_8h.html#a69b2852fd7a8f739860efc716500bfe9">change_task</a> (void *)</td></tr>
+<tr class="memdesc:a69b2852fd7a8f739860efc716500bfe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据进程获得id  <a href="processor_8h.html#a69b2852fd7a8f739860efc716500bfe9">更多...</a><br /></td></tr>
+<tr class="separator:a69b2852fd7a8f739860efc716500bfe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae21708d62546513fe7db9af266c5644a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processor_8h.html#ae21708d62546513fe7db9af266c5644a">alloc_task</a> ()</td></tr>
+<tr class="memdesc:ae21708d62546513fe7db9af266c5644a"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建进程  <a href="processor_8h.html#ae21708d62546513fe7db9af266c5644a">更多...</a><br /></td></tr>
+<tr class="separator:ae21708d62546513fe7db9af266c5644a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab332544890d50a4a02bec0da3c013f7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processor_8h.html#ab332544890d50a4a02bec0da3c013f7f">free_task</a> (void *)</td></tr>
+<tr class="memdesc:ab332544890d50a4a02bec0da3c013f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放进程  <a href="processor_8h.html#ab332544890d50a4a02bec0da3c013f7f">更多...</a><br /></td></tr>
+<tr class="separator:ab332544890d50a4a02bec0da3c013f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace98329a953de91d912149ffcea57906"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processor_8h.html#ace98329a953de91d912149ffcea57906">add_task</a> (void *)</td></tr>
+<tr class="memdesc:ace98329a953de91d912149ffcea57906"><td class="mdescLeft">&#160;</td><td class="mdescRight">阻塞进程  <a href="processor_8h.html#ace98329a953de91d912149ffcea57906">更多...</a><br /></td></tr>
+<tr class="separator:ace98329a953de91d912149ffcea57906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9a1049b5c13c30b807560b52aea7c7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processor_8h.html#a8d9a1049b5c13c30b807560b52aea7c7">fetch_task</a> ()</td></tr>
+<tr class="memdesc:a8d9a1049b5c13c30b807560b52aea7c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">调度进程  <a href="processor_8h.html#a8d9a1049b5c13c30b807560b52aea7c7">更多...</a><br /></td></tr>
+<tr class="separator:a8d9a1049b5c13c30b807560b52aea7c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="aa1ced7d2b60040fded3fa873d0c03ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1ced7d2b60040fded3fa873d0c03ba7">&#9670;&nbsp;</a></span>procstate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7">procstate</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="aa1ced7d2b60040fded3fa873d0c03ba7aa09b651ef326a9d8efcee5cc5b720ab4"></a>UNUSED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa1ced7d2b60040fded3fa873d0c03ba7a1e780c62cb3fd2edcac39f739bbe6f6c"></a>USED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa1ced7d2b60040fded3fa873d0c03ba7a488282601451a751e0f0e770b15d4235"></a>SLEEPING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa1ced7d2b60040fded3fa873d0c03ba7a269b90433e40460a2c0044a0b3e15694"></a>RUNNABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa1ced7d2b60040fded3fa873d0c03ba7a1061be6c3fb88d32829cba6f6b2be304"></a>RUNNING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa1ced7d2b60040fded3fa873d0c03ba7a5dfb36109b24f39d54d5c3f48f53def8"></a>ZOMBIE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="aac00ea8a9e058461b1bdc3b571223060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac00ea8a9e058461b1bdc3b571223060">&#9670;&nbsp;</a></span>threadstate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060">threadstate</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="aac00ea8a9e058461b1bdc3b571223060a890ae95d29fa868ef5b00faacb1831e7"></a>T_UNUSED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aac00ea8a9e058461b1bdc3b571223060a26e66bbf40ba925c3cc40bfc07554cc6"></a>T_USED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aac00ea8a9e058461b1bdc3b571223060ade71e6ccc64a038a654095333d2760c7"></a>T_SLEEPING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aac00ea8a9e058461b1bdc3b571223060a30cc67fd6064c2e28e5603f4d877cb6e"></a>T_RUNNABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aac00ea8a9e058461b1bdc3b571223060a2557f11f662344607057fc57af66bc08"></a>T_RUNNING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aac00ea8a9e058461b1bdc3b571223060ab5e424e0aafc62871c6191c10fad2b12"></a>T_EXITED&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ace98329a953de91d912149ffcea57906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace98329a953de91d912149ffcea57906">&#9670;&nbsp;</a></span>add_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add_task </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>阻塞进程 </p>
+
+</div>
+</div>
+<a id="ae21708d62546513fe7db9af266c5644a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae21708d62546513fe7db9af266c5644a">&#9670;&nbsp;</a></span>alloc_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* alloc_task </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建进程 </p>
+
+</div>
+</div>
+<a id="a69b2852fd7a8f739860efc716500bfe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69b2852fd7a8f739860efc716500bfe9">&#9670;&nbsp;</a></span>change_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int change_task </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据进程获得id </p>
+
+</div>
+</div>
+<a id="a300cb36ba4651248aebffc2aaa1f7ff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a300cb36ba4651248aebffc2aaa1f7ff3">&#9670;&nbsp;</a></span>curr_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* curr_task </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获得当前正在运行的进程 </p>
+
+</div>
+</div>
+<a id="a8d9a1049b5c13c30b807560b52aea7c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d9a1049b5c13c30b807560b52aea7c7">&#9670;&nbsp;</a></span>fetch_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* fetch_task </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>调度进程 </p>
+
+</div>
+</div>
+<a id="ab332544890d50a4a02bec0da3c013f7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab332544890d50a4a02bec0da3c013f7f">&#9670;&nbsp;</a></span>free_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_task </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放进程 </p>
+
+</div>
+</div>
+<a id="a7f174d36028e0adf43a711f5a9cbc634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f174d36028e0adf43a711f5a9cbc634">&#9670;&nbsp;</a></span>get_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* get_task </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据id获得进程 </p>
+
+</div>
+</div>
+<a id="a8b291c9f835613e2be8c14961708f82b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b291c9f835613e2be8c14961708f82b">&#9670;&nbsp;</a></span>set_curr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_curr </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>修改当前正在运行的进程 </p>
+
+</div>
+</div>
+<a id="ad91f5f81b827793fc661b86e86ab6637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad91f5f81b827793fc661b86e86ab6637">&#9670;&nbsp;</a></span>set_manager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_manager </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structmanager.html">manager</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>manager各个接口的实现在各个lab中，在这里初始化proc_manager </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a4e8cb575de928bc21dd998d296e3819.html">task-manage</a></li><li class="navelem"><a class="el" href="processor_8h.html">processor.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

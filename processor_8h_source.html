@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>uCore-Tutorial-Code-2022A: task-manage/processor.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uCore-Tutorial-Code-2022A
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('processor_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">processor.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="processor_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PROCESSOR_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PROCESSOR_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../utils/types.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7a5dfb36109b24f39d54d5c3f48f53def8">    6</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7">procstate</a> { <a class="code" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7aa09b651ef326a9d8efcee5cc5b720ab4">UNUSED</a>, <a class="code" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7a1e780c62cb3fd2edcac39f739bbe6f6c">USED</a>, <a class="code" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7a488282601451a751e0f0e770b15d4235">SLEEPING</a>, <a class="code" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7a269b90433e40460a2c0044a0b3e15694">RUNNABLE</a>, <a class="code" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7a1061be6c3fb88d32829cba6f6b2be304">RUNNING</a>, <a class="code" href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7a5dfb36109b24f39d54d5c3f48f53def8">ZOMBIE</a> };</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060">    8</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060">threadstate</a> { <a class="code" href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060a890ae95d29fa868ef5b00faacb1831e7">T_UNUSED</a>, <a class="code" href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060a26e66bbf40ba925c3cc40bfc07554cc6">T_USED</a>, <a class="code" href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060ade71e6ccc64a038a654095333d2760c7">T_SLEEPING</a>, <a class="code" href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060a30cc67fd6064c2e28e5603f4d877cb6e">T_RUNNABLE</a>, <a class="code" href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060a2557f11f662344607057fc57af66bc08">T_RUNNING</a>, <a class="code" href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060ab5e424e0aafc62871c6191c10fad2b12">T_EXITED</a> };</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// Saved registers for kernel context switches.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structcontext.html">   11</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcontext.html">context</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structcontext.html#a99ab2f229a2b0ff09ce312d2b834df50">   12</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structcontext.html#a99ab2f229a2b0ff09ce312d2b834df50">ra</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structcontext.html#a5eb4ea9b43f8c6b0d2998554998351ef">   13</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structcontext.html#a5eb4ea9b43f8c6b0d2998554998351ef">sp</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// callee-saved</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structcontext.html#a1d00c64cea3fb318d7629b0f036b064d">   16</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structcontext.html#a1d00c64cea3fb318d7629b0f036b064d">s0</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structcontext.html#a166c3d0f5513789271d4856d866b0033">   17</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structcontext.html#a166c3d0f5513789271d4856d866b0033">s1</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structcontext.html#a1eaaaba5d84f852d2d4e547457934a26">   18</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structcontext.html#a1eaaaba5d84f852d2d4e547457934a26">s2</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structcontext.html#a6fb4758ec014a6db82c9388f0b44fd1c">   19</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structcontext.html#a6fb4758ec014a6db82c9388f0b44fd1c">s3</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structcontext.html#a33a8e2b055d7f5f0f45b8fe33efee62d">   20</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structcontext.html#a33a8e2b055d7f5f0f45b8fe33efee62d">s4</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structcontext.html#a8fc34f1feca917d8fe5dfefe6341a104">   21</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structcontext.html#a8fc34f1feca917d8fe5dfefe6341a104">s5</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structcontext.html#af27c271f54a18e74a2f34cd25ad23280">   22</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structcontext.html#af27c271f54a18e74a2f34cd25ad23280">s6</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structcontext.html#a648d45b060b3e373de32b43edd69fc73">   23</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structcontext.html#a648d45b060b3e373de32b43edd69fc73">s7</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structcontext.html#af151b363c69ffa3dca7e83a351a2708d">   24</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structcontext.html#af151b363c69ffa3dca7e83a351a2708d">s8</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structcontext.html#a1708f79c90c197da81e09f8b82705c52">   25</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structcontext.html#a1708f79c90c197da81e09f8b82705c52">s9</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structcontext.html#a3f2e62fbce29ab8f0f9c76c0b6fd1173">   26</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structcontext.html#a3f2e62fbce29ab8f0f9c76c0b6fd1173">s10</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structcontext.html#aae4668582d1a73d9e5530f84ea894ad8">   27</a></span>&#160;    <a class="code" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="structcontext.html#aae4668582d1a73d9e5530f84ea894ad8">s11</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structmanager.html">   31</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structmanager.html">manager</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structmanager.html#a16b27dafff82ba165c60ac8bb74970b0">   33</a></span>&#160;    <span class="keywordtype">void</span>* (*create)();</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structmanager.html#a1b8e0f3285783eaf41ec4f4cf76e0b72">   35</a></span>&#160;    void (*<a class="code" href="structmanager.html#a1b8e0f3285783eaf41ec4f4cf76e0b72">remove</a>)(<span class="keywordtype">void</span>* p);</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structmanager.html#a793f16a349e6ae00768d4513ec2f7958">   37</a></span>&#160;    <span class="keywordtype">void</span>* (*get)(<span class="keywordtype">int</span> id);</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structmanager.html#a56811952dff9f11fb3a6b5a6d13e633f">   39</a></span>&#160;    int (*<a class="code" href="structmanager.html#a56811952dff9f11fb3a6b5a6d13e633f">change</a>)(<span class="keywordtype">void</span>* p);</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structmanager.html#a0b294dcf32857a94cfc0a4ec8b82e8fb">   41</a></span>&#160;    void (*<a class="code" href="structmanager.html#a0b294dcf32857a94cfc0a4ec8b82e8fb">add</a>)(<span class="keywordtype">void</span>* p);</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structmanager.html#a17715a139c2f2f718708c31c1eace327">   43</a></span>&#160;    <span class="keywordtype">void</span>* (*fetch)();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> <a class="code" href="processor_8h.html#ad91f5f81b827793fc661b86e86ab6637">set_manager</a>(<span class="keyword">struct</span> <a class="code" href="structmanager.html">manager</a>*);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="processor_8h.html#a300cb36ba4651248aebffc2aaa1f7ff3">curr_task</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> <a class="code" href="processor_8h.html#a8b291c9f835613e2be8c14961708f82b">set_curr</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="processor_8h.html#a7f174d36028e0adf43a711f5a9cbc634">get_task</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">int</span> <a class="code" href="processor_8h.html#a69b2852fd7a8f739860efc716500bfe9">change_task</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="processor_8h.html#ae21708d62546513fe7db9af266c5644a">alloc_task</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> <a class="code" href="processor_8h.html#ab332544890d50a4a02bec0da3c013f7f">free_task</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> <a class="code" href="processor_8h.html#ace98329a953de91d912149ffcea57906">add_task</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="processor_8h.html#a8d9a1049b5c13c30b807560b52aea7c7">fetch_task</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif // PROCESSOR_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astructcontext_html_aae4668582d1a73d9e5530f84ea894ad8"><div class="ttname"><a href="structcontext.html#aae4668582d1a73d9e5530f84ea894ad8">context::s11</a></div><div class="ttdeci">uint64 s11</div><div class="ttdef"><b>Definition:</b> processor.h:27</div></div>
+<div class="ttc" id="aprocessor_8h_html_aa1ced7d2b60040fded3fa873d0c03ba7a488282601451a751e0f0e770b15d4235"><div class="ttname"><a href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7a488282601451a751e0f0e770b15d4235">SLEEPING</a></div><div class="ttdeci">@ SLEEPING</div><div class="ttdef"><b>Definition:</b> processor.h:6</div></div>
+<div class="ttc" id="aprocessor_8h_html_a300cb36ba4651248aebffc2aaa1f7ff3"><div class="ttname"><a href="processor_8h.html#a300cb36ba4651248aebffc2aaa1f7ff3">curr_task</a></div><div class="ttdeci">void * curr_task()</div><div class="ttdoc">获得当前正在运行的进程</div><div class="ttdef"><b>Definition:</b> processor.c:12</div></div>
+<div class="ttc" id="aprocessor_8h_html_aac00ea8a9e058461b1bdc3b571223060ade71e6ccc64a038a654095333d2760c7"><div class="ttname"><a href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060ade71e6ccc64a038a654095333d2760c7">T_SLEEPING</a></div><div class="ttdeci">@ T_SLEEPING</div><div class="ttdef"><b>Definition:</b> processor.h:8</div></div>
+<div class="ttc" id="aprocessor_8h_html_aa1ced7d2b60040fded3fa873d0c03ba7a1e780c62cb3fd2edcac39f739bbe6f6c"><div class="ttname"><a href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7a1e780c62cb3fd2edcac39f739bbe6f6c">USED</a></div><div class="ttdeci">@ USED</div><div class="ttdef"><b>Definition:</b> processor.h:6</div></div>
+<div class="ttc" id="astructcontext_html_a5eb4ea9b43f8c6b0d2998554998351ef"><div class="ttname"><a href="structcontext.html#a5eb4ea9b43f8c6b0d2998554998351ef">context::sp</a></div><div class="ttdeci">uint64 sp</div><div class="ttdef"><b>Definition:</b> processor.h:13</div></div>
+<div class="ttc" id="aprocessor_8h_html_a8d9a1049b5c13c30b807560b52aea7c7"><div class="ttname"><a href="processor_8h.html#a8d9a1049b5c13c30b807560b52aea7c7">fetch_task</a></div><div class="ttdeci">void * fetch_task()</div><div class="ttdoc">调度进程</div><div class="ttdef"><b>Definition:</b> processor.c:47</div></div>
+<div class="ttc" id="astructcontext_html"><div class="ttname"><a href="structcontext.html">context</a></div><div class="ttdef"><b>Definition:</b> processor.h:11</div></div>
+<div class="ttc" id="astructcontext_html_a166c3d0f5513789271d4856d866b0033"><div class="ttname"><a href="structcontext.html#a166c3d0f5513789271d4856d866b0033">context::s1</a></div><div class="ttdeci">uint64 s1</div><div class="ttdef"><b>Definition:</b> processor.h:17</div></div>
+<div class="ttc" id="aprocessor_8h_html_aa1ced7d2b60040fded3fa873d0c03ba7"><div class="ttname"><a href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7">procstate</a></div><div class="ttdeci">procstate</div><div class="ttdef"><b>Definition:</b> processor.h:6</div></div>
+<div class="ttc" id="aprocessor_8h_html_aac00ea8a9e058461b1bdc3b571223060"><div class="ttname"><a href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060">threadstate</a></div><div class="ttdeci">threadstate</div><div class="ttdef"><b>Definition:</b> processor.h:8</div></div>
+<div class="ttc" id="aprocessor_8h_html_aa1ced7d2b60040fded3fa873d0c03ba7a269b90433e40460a2c0044a0b3e15694"><div class="ttname"><a href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7a269b90433e40460a2c0044a0b3e15694">RUNNABLE</a></div><div class="ttdeci">@ RUNNABLE</div><div class="ttdef"><b>Definition:</b> processor.h:6</div></div>
+<div class="ttc" id="aprocessor_8h_html_aac00ea8a9e058461b1bdc3b571223060ab5e424e0aafc62871c6191c10fad2b12"><div class="ttname"><a href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060ab5e424e0aafc62871c6191c10fad2b12">T_EXITED</a></div><div class="ttdeci">@ T_EXITED</div><div class="ttdef"><b>Definition:</b> processor.h:8</div></div>
+<div class="ttc" id="astructcontext_html_af151b363c69ffa3dca7e83a351a2708d"><div class="ttname"><a href="structcontext.html#af151b363c69ffa3dca7e83a351a2708d">context::s8</a></div><div class="ttdeci">uint64 s8</div><div class="ttdef"><b>Definition:</b> processor.h:24</div></div>
+<div class="ttc" id="astructmanager_html_a0b294dcf32857a94cfc0a4ec8b82e8fb"><div class="ttname"><a href="structmanager.html#a0b294dcf32857a94cfc0a4ec8b82e8fb">manager::add</a></div><div class="ttdeci">void(* add)(void *p)</div><div class="ttdoc">将任务加入调度队列</div><div class="ttdef"><b>Definition:</b> processor.h:41</div></div>
+<div class="ttc" id="astructcontext_html_a648d45b060b3e373de32b43edd69fc73"><div class="ttname"><a href="structcontext.html#a648d45b060b3e373de32b43edd69fc73">context::s7</a></div><div class="ttdeci">uint64 s7</div><div class="ttdef"><b>Definition:</b> processor.h:23</div></div>
+<div class="ttc" id="aprocessor_8h_html_ae21708d62546513fe7db9af266c5644a"><div class="ttname"><a href="processor_8h.html#ae21708d62546513fe7db9af266c5644a">alloc_task</a></div><div class="ttdeci">void * alloc_task()</div><div class="ttdoc">创建进程</div><div class="ttdef"><b>Definition:</b> processor.c:32</div></div>
+<div class="ttc" id="astructcontext_html_a33a8e2b055d7f5f0f45b8fe33efee62d"><div class="ttname"><a href="structcontext.html#a33a8e2b055d7f5f0f45b8fe33efee62d">context::s4</a></div><div class="ttdeci">uint64 s4</div><div class="ttdef"><b>Definition:</b> processor.h:20</div></div>
+<div class="ttc" id="aprocessor_8h_html_ab332544890d50a4a02bec0da3c013f7f"><div class="ttname"><a href="processor_8h.html#ab332544890d50a4a02bec0da3c013f7f">free_task</a></div><div class="ttdeci">void free_task(void *)</div><div class="ttdoc">释放进程</div><div class="ttdef"><b>Definition:</b> processor.c:37</div></div>
+<div class="ttc" id="astructmanager_html"><div class="ttname"><a href="structmanager.html">manager</a></div><div class="ttdoc">注意返回类型为void*的接口，实际返回类型就是proc结构体指针，但proc在不同的lab中定义不同，因此采用无类型指针定义</div><div class="ttdef"><b>Definition:</b> processor.h:31</div></div>
+<div class="ttc" id="astructmanager_html_a56811952dff9f11fb3a6b5a6d13e633f"><div class="ttname"><a href="structmanager.html#a56811952dff9f11fb3a6b5a6d13e633f">manager::change</a></div><div class="ttdeci">int(* change)(void *p)</div><div class="ttdoc">根据任务获取id</div><div class="ttdef"><b>Definition:</b> processor.h:39</div></div>
+<div class="ttc" id="aprocessor_8h_html_ace98329a953de91d912149ffcea57906"><div class="ttname"><a href="processor_8h.html#ace98329a953de91d912149ffcea57906">add_task</a></div><div class="ttdeci">void add_task(void *)</div><div class="ttdoc">阻塞进程</div><div class="ttdef"><b>Definition:</b> processor.c:42</div></div>
+<div class="ttc" id="astructcontext_html_a6fb4758ec014a6db82c9388f0b44fd1c"><div class="ttname"><a href="structcontext.html#a6fb4758ec014a6db82c9388f0b44fd1c">context::s3</a></div><div class="ttdeci">uint64 s3</div><div class="ttdef"><b>Definition:</b> processor.h:19</div></div>
+<div class="ttc" id="aprocessor_8h_html_aa1ced7d2b60040fded3fa873d0c03ba7a1061be6c3fb88d32829cba6f6b2be304"><div class="ttname"><a href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7a1061be6c3fb88d32829cba6f6b2be304">RUNNING</a></div><div class="ttdeci">@ RUNNING</div><div class="ttdef"><b>Definition:</b> processor.h:6</div></div>
+<div class="ttc" id="astructcontext_html_a99ab2f229a2b0ff09ce312d2b834df50"><div class="ttname"><a href="structcontext.html#a99ab2f229a2b0ff09ce312d2b834df50">context::ra</a></div><div class="ttdeci">uint64 ra</div><div class="ttdef"><b>Definition:</b> processor.h:12</div></div>
+<div class="ttc" id="astructcontext_html_a1708f79c90c197da81e09f8b82705c52"><div class="ttname"><a href="structcontext.html#a1708f79c90c197da81e09f8b82705c52">context::s9</a></div><div class="ttdeci">uint64 s9</div><div class="ttdef"><b>Definition:</b> processor.h:25</div></div>
+<div class="ttc" id="astructcontext_html_a1eaaaba5d84f852d2d4e547457934a26"><div class="ttname"><a href="structcontext.html#a1eaaaba5d84f852d2d4e547457934a26">context::s2</a></div><div class="ttdeci">uint64 s2</div><div class="ttdef"><b>Definition:</b> processor.h:18</div></div>
+<div class="ttc" id="aprocessor_8h_html_ad91f5f81b827793fc661b86e86ab6637"><div class="ttname"><a href="processor_8h.html#ad91f5f81b827793fc661b86e86ab6637">set_manager</a></div><div class="ttdeci">void set_manager(struct manager *)</div><div class="ttdoc">manager各个接口的实现在各个lab中，在这里初始化proc_manager</div><div class="ttdef"><b>Definition:</b> processor.c:7</div></div>
+<div class="ttc" id="astructcontext_html_a1d00c64cea3fb318d7629b0f036b064d"><div class="ttname"><a href="structcontext.html#a1d00c64cea3fb318d7629b0f036b064d">context::s0</a></div><div class="ttdeci">uint64 s0</div><div class="ttdef"><b>Definition:</b> processor.h:16</div></div>
+<div class="ttc" id="aprocessor_8h_html_aac00ea8a9e058461b1bdc3b571223060a30cc67fd6064c2e28e5603f4d877cb6e"><div class="ttname"><a href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060a30cc67fd6064c2e28e5603f4d877cb6e">T_RUNNABLE</a></div><div class="ttdeci">@ T_RUNNABLE</div><div class="ttdef"><b>Definition:</b> processor.h:8</div></div>
+<div class="ttc" id="aprocessor_8h_html_aac00ea8a9e058461b1bdc3b571223060a2557f11f662344607057fc57af66bc08"><div class="ttname"><a href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060a2557f11f662344607057fc57af66bc08">T_RUNNING</a></div><div class="ttdeci">@ T_RUNNING</div><div class="ttdef"><b>Definition:</b> processor.h:8</div></div>
+<div class="ttc" id="aprocessor_8h_html_a69b2852fd7a8f739860efc716500bfe9"><div class="ttname"><a href="processor_8h.html#a69b2852fd7a8f739860efc716500bfe9">change_task</a></div><div class="ttdeci">int change_task(void *)</div><div class="ttdoc">根据进程获得id</div><div class="ttdef"><b>Definition:</b> processor.c:27</div></div>
+<div class="ttc" id="aprocessor_8h_html_aac00ea8a9e058461b1bdc3b571223060a890ae95d29fa868ef5b00faacb1831e7"><div class="ttname"><a href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060a890ae95d29fa868ef5b00faacb1831e7">T_UNUSED</a></div><div class="ttdeci">@ T_UNUSED</div><div class="ttdef"><b>Definition:</b> processor.h:8</div></div>
+<div class="ttc" id="anfs_2types_8h_html_a5975ce0896ee5ec5db2f1a411620a51a"><div class="ttname"><a href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a></div><div class="ttdeci">unsigned long uint64</div><div class="ttdef"><b>Definition:</b> types.h:10</div></div>
+<div class="ttc" id="aprocessor_8h_html_aac00ea8a9e058461b1bdc3b571223060a26e66bbf40ba925c3cc40bfc07554cc6"><div class="ttname"><a href="processor_8h.html#aac00ea8a9e058461b1bdc3b571223060a26e66bbf40ba925c3cc40bfc07554cc6">T_USED</a></div><div class="ttdeci">@ T_USED</div><div class="ttdef"><b>Definition:</b> processor.h:8</div></div>
+<div class="ttc" id="aprocessor_8h_html_a8b291c9f835613e2be8c14961708f82b"><div class="ttname"><a href="processor_8h.html#a8b291c9f835613e2be8c14961708f82b">set_curr</a></div><div class="ttdeci">void set_curr(void *)</div><div class="ttdoc">修改当前正在运行的进程</div><div class="ttdef"><b>Definition:</b> processor.c:17</div></div>
+<div class="ttc" id="astructmanager_html_a1b8e0f3285783eaf41ec4f4cf76e0b72"><div class="ttname"><a href="structmanager.html#a1b8e0f3285783eaf41ec4f4cf76e0b72">manager::remove</a></div><div class="ttdeci">void(* remove)(void *p)</div><div class="ttdoc">删除任务</div><div class="ttdef"><b>Definition:</b> processor.h:35</div></div>
+<div class="ttc" id="aprocessor_8h_html_aa1ced7d2b60040fded3fa873d0c03ba7a5dfb36109b24f39d54d5c3f48f53def8"><div class="ttname"><a href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7a5dfb36109b24f39d54d5c3f48f53def8">ZOMBIE</a></div><div class="ttdeci">@ ZOMBIE</div><div class="ttdef"><b>Definition:</b> processor.h:6</div></div>
+<div class="ttc" id="astructcontext_html_a3f2e62fbce29ab8f0f9c76c0b6fd1173"><div class="ttname"><a href="structcontext.html#a3f2e62fbce29ab8f0f9c76c0b6fd1173">context::s10</a></div><div class="ttdeci">uint64 s10</div><div class="ttdef"><b>Definition:</b> processor.h:26</div></div>
+<div class="ttc" id="astructcontext_html_a8fc34f1feca917d8fe5dfefe6341a104"><div class="ttname"><a href="structcontext.html#a8fc34f1feca917d8fe5dfefe6341a104">context::s5</a></div><div class="ttdeci">uint64 s5</div><div class="ttdef"><b>Definition:</b> processor.h:21</div></div>
+<div class="ttc" id="aprocessor_8h_html_aa1ced7d2b60040fded3fa873d0c03ba7aa09b651ef326a9d8efcee5cc5b720ab4"><div class="ttname"><a href="processor_8h.html#aa1ced7d2b60040fded3fa873d0c03ba7aa09b651ef326a9d8efcee5cc5b720ab4">UNUSED</a></div><div class="ttdeci">@ UNUSED</div><div class="ttdef"><b>Definition:</b> processor.h:6</div></div>
+<div class="ttc" id="astructcontext_html_af27c271f54a18e74a2f34cd25ad23280"><div class="ttname"><a href="structcontext.html#af27c271f54a18e74a2f34cd25ad23280">context::s6</a></div><div class="ttdeci">uint64 s6</div><div class="ttdef"><b>Definition:</b> processor.h:22</div></div>
+<div class="ttc" id="aprocessor_8h_html_a7f174d36028e0adf43a711f5a9cbc634"><div class="ttname"><a href="processor_8h.html#a7f174d36028e0adf43a711f5a9cbc634">get_task</a></div><div class="ttdeci">void * get_task(int)</div><div class="ttdoc">根据id获得进程</div><div class="ttdef"><b>Definition:</b> processor.c:22</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a4e8cb575de928bc21dd998d296e3819.html">task-manage</a></li><li class="navelem"><a class="el" href="processor_8h.html">processor.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

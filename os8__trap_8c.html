@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>uCore-Tutorial-Code-2022A: os8/os8_trap.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uCore-Tutorial-Code-2022A
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('os8__trap_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">os8_trap.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="os8__trap_8h_source.html">os8_trap.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="os8_2loader_8h_source.html">loader.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="os8_2proc_8h_source.html">proc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="plic_8h_source.html">../trap/plic.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="os8_2virtio_8h_source.html">virtio.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+os8_trap.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="os8__trap_8c__incl.png" border="0" usemap="#os8_2os8__trap_8c" alt=""/></div>
+<map name="os8_2os8__trap_8c" id="os8_2os8__trap_8c">
+<area shape="rect" title=" " alt="" coords="1418,5,1534,32"/>
+<area shape="rect" href="os8__trap_8h.html" title=" " alt="" coords="1029,304,1120,331"/>
+<area shape="rect" href="os8_2loader_8h.html" title=" " alt="" coords="1439,80,1513,107"/>
+<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="1343,229,1406,256"/>
+<area shape="rect" href="plic_8h.html" title=" " alt="" coords="1631,80,1729,107"/>
+<area shape="rect" href="os8_2virtio_8h.html" title=" " alt="" coords="1538,80,1606,107"/>
+<area shape="rect" href="defs_8h.html" title=" " alt="" coords="872,379,979,405"/>
+<area shape="rect" href="const_8h.html" title=" " alt="" coords="1443,453,1512,480"/>
+<area shape="rect" href="log_8h.html" title=" " alt="" coords="634,528,689,555"/>
+<area shape="rect" href="printf_8h.html" title=" " alt="" coords="118,453,186,480"/>
+<area shape="rect" href="riscv_8h.html" title=" " alt="" coords="1215,528,1279,555"/>
+<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="1117,603,1187,629"/>
+<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="5,528,59,555"/>
+<area shape="rect" href="string_8h.html" title=" " alt="" coords="291,528,362,555"/>
+<area shape="rect" href="timer_8h.html" title=" " alt="" coords="490,528,558,555"/>
+<area shape="rect" href="console_8h.html" title=" " alt="" coords="210,453,294,480"/>
+<area shape="rect" href="syscall_8h.html" title=" " alt="" coords="747,453,887,480"/>
+<area shape="rect" href="trap_8h.html" title=" " alt="" coords="765,528,867,555"/>
+<area shape="rect" href="kalloc_8h.html" title=" " alt="" coords="318,453,471,480"/>
+<area shape="rect" href="map_8h.html" title=" " alt="" coords="1064,453,1208,480"/>
+<area shape="rect" href="vm_8h.html" title=" " alt="" coords="1283,453,1419,480"/>
+<area shape="rect" href="queue_8h.html" title=" " alt="" coords="496,453,672,480"/>
+<area shape="rect" href="processor_8h.html" title=" " alt="" coords="891,528,1090,555"/>
+<area shape="rect" href="os8_2file_8h.html" title=" " alt="" coords="1514,155,1569,181"/>
+<area shape="rect" href="os8_2fs_8h.html" title=" " alt="" coords="1577,229,1623,256"/>
+<area shape="rect" href="sync_8h.html" title=" " alt="" coords="1305,304,1369,331"/>
+<area shape="rect" href="os8_2bio_8h.html" title=" " alt="" coords="1695,155,1750,181"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ac81b12597d54871bd1d7c24f03773652"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#ac81b12597d54871bd1d7c24f03773652">os8_set_usertrap</a> ()</td></tr>
+<tr class="separator:ac81b12597d54871bd1d7c24f03773652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1ba209e2e4e91c6d6176d8fbca9dd2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#ab1ba209e2e4e91c6d6176d8fbca9dd2c">os8_set_kerneltrap</a> ()</td></tr>
+<tr class="separator:ab1ba209e2e4e91c6d6176d8fbca9dd2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f25b68f8d6d2e7d05a28418da701464"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structtrapframe.html">trapframe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#a7f25b68f8d6d2e7d05a28418da701464">os8_get_trapframe</a> ()</td></tr>
+<tr class="separator:a7f25b68f8d6d2e7d05a28418da701464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a2d005a60467b804553caeca33deb8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#a7a2d005a60467b804553caeca33deb8a">os8_get_kernel_sp</a> ()</td></tr>
+<tr class="separator:a7a2d005a60467b804553caeca33deb8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2356f76a3769c8570b3d7d6a583c9358"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#a2356f76a3769c8570b3d7d6a583c9358">os8_call_userret</a> ()</td></tr>
+<tr class="separator:a2356f76a3769c8570b3d7d6a583c9358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc87f6b56cbe6cab597147956c6587e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#a1dc87f6b56cbe6cab597147956c6587e">os8_finish_usertrap</a> (int cause)</td></tr>
+<tr class="separator:a1dc87f6b56cbe6cab597147956c6587e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26ae0402dceac6b9def4c14a9a710b90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#a26ae0402dceac6b9def4c14a9a710b90">os8_error_in_trap</a> (int <a class="el" href="os8_2virtio__disk_8c.html#a051c9e198ee930358372c407a17e8b78">status</a>)</td></tr>
+<tr class="separator:a26ae0402dceac6b9def4c14a9a710b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a339fc31c68f894dc8b8df43c04be5b92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#a339fc31c68f894dc8b8df43c04be5b92">os8_super_external_handler</a> (int <a class="el" href="os8_2proc_8h.html#a414dda255ed3c1e43e7922d10f9d2c6d">cpuid</a>)</td></tr>
+<tr class="separator:a339fc31c68f894dc8b8df43c04be5b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d104d6bebefa5a97c55a9b4f6c937fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#a7d104d6bebefa5a97c55a9b4f6c937fb">trap_init</a> ()</td></tr>
+<tr class="separator:a7d104d6bebefa5a97c55a9b4f6c937fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a796aa4017efb6527598a228f4b7cc9ac"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#a796aa4017efb6527598a228f4b7cc9ac">trampoline</a> []</td></tr>
+<tr class="separator:a796aa4017efb6527598a228f4b7cc9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6435376c8373232f9561dfb25e7ca28"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#aa6435376c8373232f9561dfb25e7ca28">uservec</a> []</td></tr>
+<tr class="separator:aa6435376c8373232f9561dfb25e7ca28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af564f710557d70393b9fb1cce4e194d7"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#af564f710557d70393b9fb1cce4e194d7">userret</a> []</td></tr>
+<tr class="separator:af564f710557d70393b9fb1cce4e194d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad29ed72d197c94e5b6bd9f5cb80fe5fe"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#ad29ed72d197c94e5b6bd9f5cb80fe5fe">kernelvec</a> []</td></tr>
+<tr class="separator:ad29ed72d197c94e5b6bd9f5cb80fe5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a2356f76a3769c8570b3d7d6a583c9358"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2356f76a3769c8570b3d7d6a583c9358">&#9670;&nbsp;</a></span>os8_call_userret()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os8_call_userret </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26ae0402dceac6b9def4c14a9a710b90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26ae0402dceac6b9def4c14a9a710b90">&#9670;&nbsp;</a></span>os8_error_in_trap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os8_error_in_trap </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1dc87f6b56cbe6cab597147956c6587e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dc87f6b56cbe6cab597147956c6587e">&#9670;&nbsp;</a></span>os8_finish_usertrap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os8_finish_usertrap </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cause</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a2d005a60467b804553caeca33deb8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a2d005a60467b804553caeca33deb8a">&#9670;&nbsp;</a></span>os8_get_kernel_sp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os8_get_kernel_sp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f25b68f8d6d2e7d05a28418da701464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f25b68f8d6d2e7d05a28418da701464">&#9670;&nbsp;</a></span>os8_get_trapframe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structtrapframe.html">trapframe</a>* os8_get_trapframe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1ba209e2e4e91c6d6176d8fbca9dd2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1ba209e2e4e91c6d6176d8fbca9dd2c">&#9670;&nbsp;</a></span>os8_set_kerneltrap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os8_set_kerneltrap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac81b12597d54871bd1d7c24f03773652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac81b12597d54871bd1d7c24f03773652">&#9670;&nbsp;</a></span>os8_set_usertrap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os8_set_usertrap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a339fc31c68f894dc8b8df43c04be5b92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a339fc31c68f894dc8b8df43c04be5b92">&#9670;&nbsp;</a></span>os8_super_external_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os8_super_external_handler </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cpuid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d104d6bebefa5a97c55a9b4f6c937fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d104d6bebefa5a97c55a9b4f6c937fb">&#9670;&nbsp;</a></span>trap_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void trap_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="ad29ed72d197c94e5b6bd9f5cb80fe5fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad29ed72d197c94e5b6bd9f5cb80fe5fe">&#9670;&nbsp;</a></span>kernelvec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char kernelvec[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a796aa4017efb6527598a228f4b7cc9ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a796aa4017efb6527598a228f4b7cc9ac">&#9670;&nbsp;</a></span>trampoline</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char trampoline[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af564f710557d70393b9fb1cce4e194d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af564f710557d70393b9fb1cce4e194d7">&#9670;&nbsp;</a></span>userret</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char userret[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6435376c8373232f9561dfb25e7ca28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6435376c8373232f9561dfb25e7ca28">&#9670;&nbsp;</a></span>uservec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char uservec[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b545e7c90c84f0fd9866e0dc03b9bbc1.html">os8</a></li><li class="navelem"><a class="el" href="os8__trap_8c.html">os8_trap.c</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<map id="proc" name="proc">
+<area shape="rect" id="node1" title=" " alt="" coords="249,184,299,211"/>
+<area shape="rect" id="node7" href="$structthread.html" title=" " alt="" coords="125,273,189,300"/>
+<area shape="rect" id="node2" href="$structcontext.html" title=" " alt="" coords="5,95,76,121"/>
+<area shape="rect" id="node3" href="$structsemaphore.html" title=" " alt="" coords="459,95,553,121"/>
+<area shape="rect" id="node4" href="$structqueue.html" title=" " alt="" coords="357,5,420,32"/>
+<area shape="rect" id="node6" href="$structmutex.html" title=" " alt="" coords="245,95,309,121"/>
+<area shape="rect" id="node11" href="$structcondvar.html" title=" " alt="" coords="351,95,426,121"/>
+<area shape="rect" id="node5" href="$structtrapframe.html" title=" " alt="" coords="107,95,193,121"/>
+<area shape="rect" id="node8" href="$structfile.html" title=" " alt="" coords="634,95,677,121"/>
+<area shape="rect" id="node9" href="$structinode.html" title=" " alt="" coords="606,5,665,32"/>
+<area shape="rect" id="node10" href="$structpipe.html" title=" " alt="" coords="689,5,739,32"/>
+</map>
