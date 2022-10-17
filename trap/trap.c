@@ -97,9 +97,7 @@ void usertrap()
 	(trap_context->finish_usertrap)(cause);
 }
 
-//
-// return to user space
-//
+/// return to user space
 void usertrapret()
 {
 	(trap_context->set_usertrap)();

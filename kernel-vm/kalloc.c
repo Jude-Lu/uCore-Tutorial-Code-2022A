@@ -22,10 +22,12 @@ void kinit() {
     freerange(ekernel, (void*)PHYSTOP);
 }
 
-// Free the page of physical memory pointed at by v,
-// which normally should have been returned by a
-// call to kalloc().  (The exception is when
-// initializing the allocator; see kinit above.)
+/**
+ * Free the page of physical memory pointed at by v,
+ * which normally should have been returned by a
+ * call to kalloc().  (The exception is when
+ * initializing the allocator; see kinit above.)
+ */
 void kfree(void* pa) {
     struct linklist* l;
     if (((uint64)pa % PGSIZE) != 0 || (char*)pa < ekernel ||
@@ -38,9 +40,11 @@ void kfree(void* pa) {
     kmem.freelist = l;
 }
 
-// Allocate one 4096-byte page of physical memory.
-// Returns a pointer that the kernel can use.
-// Returns 0 if the memory cannot be allocated.
+/**
+ * Allocate one 4096-byte page of physical memory.
+ * Returns a pointer that the kernel can use.
+ * Returns 0 if the memory cannot be allocated.
+ */
 void* kalloc() {
     struct linklist* l;
     l = kmem.freelist;

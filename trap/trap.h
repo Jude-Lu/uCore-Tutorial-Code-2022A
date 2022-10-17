@@ -4,11 +4,16 @@
 #include "../utils/types.h"
 
 struct trapframe {
-	/*   0 */ uint64 kernel_satp; // kernel page table
-	/*   8 */ uint64 kernel_sp; // top of process's kernel stack
-	/*  16 */ uint64 kernel_trap; // usertrap()
-	/*  24 */ uint64 epc; // saved user program counter
-	/*  32 */ uint64 kernel_hartid; // saved kernel tp
+	/// kernel page table
+	/*   0 */ uint64 kernel_satp;
+	/// top of process's kernel stack
+	/*   8 */ uint64 kernel_sp;
+	/// usertrap()
+	/*  16 */ uint64 kernel_trap;
+	/// saved user program counter
+	/*  24 */ uint64 epc;
+	/// saved kernel tp
+	/*  32 */ uint64 kernel_hartid;
 	/*  40 */ uint64 ra;
 	/*  48 */ uint64 sp;
 	/*  56 */ uint64 gp;
@@ -70,20 +75,29 @@ enum Interrupt {
 
 struct trap_handler_context
 {
+	/// yield是每个章节自己的，不同的调度策略会调用不同的sched，而ch2里面甚至不需要支持（空函数）
 	void (*yield)();
 	
+	/// 主要用于处理外部中断的时候，获取当前是哪个cpu（发生了外部中断）
 	int (*cpuid)();
 
+	/// set_usertrap和set_kerneltrap分别用于处理在U/S态下发生异常时的异常处理代码入口
 	void (*set_usertrap)();
 	void (*set_kerneltrap)();
 	
+	/// 用于得到当前正在考虑的trapframe,在ch2里面是全局共用的，到后面就是不同进程、再到不同线程的trap_frame
 	struct trapframe* (*get_trapframe)();
+	/// 用于拿到内核栈的栈顶指针
 	uint64 (*get_kernel_sp)();
 	
+	/// 放在usertrapret的最后执行，是在从S态回到U态前要做的一些工作，如把页表地址取出，然后调用userret最终回到S态
 	void (*call_userret)();
+	/// 在usertrap执行结束后执行，cause是异常编号，这里主要是为了兼容ch2，后面的章节里面只要调用usertrapret即可
 	void (*finish_usertrap)(int cause);
+	/// 用于处理当trap处理发生错误时要做的事
 	void (*error_in_trap)(int status);
 
+	/// 用于处理非时间中断的一切外部中断，会在文件系统里面用到
 	void (*super_external_handler)(int cpuid);
 };
 
