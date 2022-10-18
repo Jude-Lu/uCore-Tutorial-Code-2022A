@@ -10,7 +10,7 @@
 // are in sysfile.c.
 
 #include "fs.h"
-#include "bio.h"
+#include "../disk/bio.h"
 #include "file.h"
 #include "proc.h"
 #include "../utils/defs.h"

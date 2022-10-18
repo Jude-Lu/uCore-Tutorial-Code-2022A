@@ -2,7 +2,7 @@
 #include "loader.h"
 #include "../trap/plic.h"
 #include "os6_trap.h"
-#include "virtio.h"
+#include "../disk/virtio.h"
 #include "os6_syscall.h"
 
 extern char e_text[]; // kernel.ld sets this to end of kernel code.

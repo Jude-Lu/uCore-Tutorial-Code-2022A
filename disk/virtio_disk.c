@@ -7,12 +7,15 @@
 // virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0
 //
 
-#include "bio.h"
-#include "file.h"
-#include "fs.h"
 #include "../trap/plic.h"
 #include "../utils/defs.h"
 #include "virtio.h"
+
+struct virtio_context *virtio_disk_context;
+
+void set_virtio(struct virtio_context *virtio_context) {
+	virtio_disk_context = virtio_context;
+}
 
 // the address of virtio mmio register r.
 #define R(r) ((volatile uint32 *)(VIRTIO0 + (r)))
@@ -200,7 +203,7 @@ void virtio_disk_rw(struct buf *b, int write)
 		if (alloc3_desc(idx) == 0) {
 			break;
 		}
-		yield();
+		(virtio_disk_context->yield)();
 	}
 	// format the three descriptors.
 	// qemu's virtio-blk.c reads them.
@@ -257,7 +260,7 @@ void virtio_disk_rw(struct buf *b, int write)
 	intr_on();
 	while (_b->disk == 1) {
 		// WARN: No kernel concurrent support, DO NOT allow kernel yield
-		// yield();
+		// (virtio_disk_context->yield)();
 	}
 	intr_off();
 	disk.info[idx[0]].b = 0;

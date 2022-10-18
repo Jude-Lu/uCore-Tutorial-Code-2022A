@@ -2,6 +2,7 @@
 #include "loader.h"
 #include "os6_trap.h"
 #include "../utils/defs.h"
+#include "../disk/virtio.h"
 
 struct proc pool[NPROC];
 __attribute__((aligned(16))) char kstack[NPROC][PAGE_SIZE];
@@ -358,4 +359,10 @@ void proc_init()
 		.fetch = fetch
 	};
 	set_manager(&os6_manager);
+
+	static struct virtio_context os6_virtio = 
+	{
+		.yield = yield
+	};
+	set_virtio(&os6_virtio);
 }
