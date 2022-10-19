@@ -2,6 +2,7 @@
 #define PROC_H
 
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 #define NPROC (512)
 

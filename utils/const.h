@@ -1,6 +1,8 @@
 #ifndef CONST_H
 #define CONST_H
 
+#include "riscv.h"
+
 #define PAGE_SIZE (0x1000)
 
 enum {
@@ -47,5 +49,9 @@ enum {
 
 #define ROOTINO (1) // root i-number
 #define BSIZE (1024) // block size
+
+// virtio mmio interface
+#define VIRTIO0 0x10001000
+#define VIRTIO0_IRQ 1
 
 #endif // CONST_H

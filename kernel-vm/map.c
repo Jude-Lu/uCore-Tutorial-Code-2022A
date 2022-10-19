@@ -2,6 +2,7 @@
 #include "vm.h"
 #include "kalloc.h"
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 /**
  * Add a mapping to the kernel page table.

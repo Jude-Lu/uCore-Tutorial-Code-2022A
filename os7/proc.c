@@ -2,7 +2,7 @@
 #include "loader.h"
 #include "os7_trap.h"
 #include "../utils/defs.h"
-#include "../disk/virtio.h"
+#include "../utils/modules.h"
 
 struct proc pool[NPROC];
 __attribute__((aligned(16))) char kstack[NPROC][PAGE_SIZE];
@@ -11,6 +11,8 @@ __attribute__((aligned(4096))) char trapframe[NPROC][TRAP_PAGE_SIZE];
 extern char boot_stack_top[];
 struct proc idle;
 struct queue task_queue;
+
+struct file os7_filepool[FILEPOOLSIZE];
 
 int procid()
 {
@@ -310,32 +312,9 @@ int fdalloc(struct file *f)
 	return -1;
 }
 
-// Copy to either a user address, or kernel address,
-// depending on usr_dst.
-// Returns 0 on success, -1 on error.
-int either_copyout(int user_dst, uint64 dst, char *src, uint64 len)
+pagetable_t get_curr_pagetable()
 {
-	struct proc *p = curr_task();
-	if (user_dst) {
-		return copyout(p->pagetable, dst, src, len);
-	} else {
-		memmove((void *)dst, src, len);
-		return 0;
-	}
-}
-
-// Copy from either a user address, or kernel address,
-// depending on usr_src.
-// Returns 0 on success, -1 on error.
-int either_copyin(int user_src, uint64 src, char *dst, uint64 len)
-{
-	struct proc *p = curr_task();
-	if (user_src) {
-		return copyin(p->pagetable, dst, src, len);
-	} else {
-		memmove(dst, (char *)src, len);
-		return 0;
-	}
+	return ((struct proc*)curr_task()) -> pagetable;
 }
 
 // initialize the proc table at boot time.
@@ -365,4 +344,26 @@ void proc_init()
 		.yield = yield
 	};
 	set_virtio(&os7_virtio);
+
+	static struct pipe_context os7_pipe = 
+	{
+		.get_curr_pagetable = get_curr_pagetable,
+		.yield = yield
+	};
+	set_pipe(&os7_pipe);
+
+	static struct FSManager os7_fs_manager = 
+	{
+		.filepool_size = FILEPOOLSIZE,
+		.filepool = os7_filepool,
+
+		.fdalloc = fdalloc,
+		.get_curr_pagetable = get_curr_pagetable,
+
+		.either_copyout = either_copyout,
+		.either_copyin = either_copyin,
+
+		.pipeclose = pipeclose,
+	};
+	set_file(&os7_fs_manager);
 }

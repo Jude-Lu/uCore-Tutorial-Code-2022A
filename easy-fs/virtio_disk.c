@@ -7,8 +7,6 @@
 // virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0
 //
 
-#include "../trap/plic.h"
-#include "../utils/defs.h"
 #include "virtio.h"
 
 struct virtio_context *virtio_disk_context;

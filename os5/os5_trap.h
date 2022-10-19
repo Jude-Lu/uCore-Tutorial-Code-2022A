@@ -2,6 +2,7 @@
 #define OS5_TRAP_H
 
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 void os5_set_usertrap();
 void os5_set_kerneltrap();

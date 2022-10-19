@@ -2,6 +2,7 @@
 #define LOADER_H
 
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 int finished();
 void loader_init();

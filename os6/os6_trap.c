@@ -2,7 +2,7 @@
 #include "loader.h"
 #include "proc.h"
 #include "../trap/plic.h"
-#include "../disk/virtio.h"
+#include "../easy-fs/virtio.h"
 
 extern char trampoline[], uservec[];
 extern char userret[], kernelvec[];
@@ -77,6 +77,8 @@ void trap_init()
 		.call_userret = os6_call_userret,
 		.finish_usertrap = os6_finish_usertrap,
 		.error_in_trap = os6_error_in_trap,
+
+		.syscall = syscall,
 
 		.super_external_handler = os6_super_external_handler
 	};

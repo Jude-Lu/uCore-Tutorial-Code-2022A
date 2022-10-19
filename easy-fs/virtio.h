@@ -2,7 +2,7 @@
 #define VIRTIO_H
 
 #include "bio.h"
-#include "../utils/const.h"
+#include "../utils/defs.h"
 
 //
 // virtio device definitions.

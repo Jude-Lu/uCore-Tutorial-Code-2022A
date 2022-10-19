@@ -97,6 +97,9 @@ struct trap_handler_context
 	/// 用于处理当trap处理发生错误时要做的事
 	void (*error_in_trap)(int status);
 
+	/// 用于处理系统调用导致的trap
+	int (*syscall)(uint64 a0, uint64 a1, uint64 a2, uint64 a3, uint64 a4, uint64 a5, uint64 a6, uint64 a7);
+
 	/// 用于处理非时间中断的一切外部中断，会在文件系统里面用到
 	void (*super_external_handler)(int cpuid);
 };

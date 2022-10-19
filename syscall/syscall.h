@@ -2,7 +2,6 @@
 #define SYSCALL_H
 
 #include "../utils/types.h"
-#include "../trap/trap.h"
 #include "../utils/log.h"
 
 /// syscall_context定义了各个syscall的函数指针，方便兼容不同章节syscall的差异，各个章节可以根据本章节的内容和难度实现本章节的syscall
@@ -57,7 +56,7 @@ struct syscall_context{
     int (*sys_enable_deadlock_detect)(int is_enable);
 };
 
-void syscall(struct trapframe *trapframe);
+int syscall(uint64 a0, uint64 a1, uint64 a2, uint64 a3, uint64 a4, uint64 a5, uint64 a6, uint64 a7);
 void set_syscall(struct syscall_context *sys_context);
 
 #endif

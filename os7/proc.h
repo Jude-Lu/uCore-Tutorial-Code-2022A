@@ -2,11 +2,11 @@
 #define PROC_H
 
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 #define NPROC (512)
 #define FD_BUFFER_SIZE (16)
-
-struct file;
+#define FILEPOOLSIZE (NPROC * FD_BUFFER_SIZE)
 
 // Per-process state
 struct proc {
@@ -37,7 +37,5 @@ int init_stdio(struct proc *);
 int push_argv(struct proc *, char **);
 // swtch.S
 void swtch(struct context *, struct context *);
-int either_copyout(int, uint64, char *, uint64);
-int either_copyin(int, uint64, char *, uint64);
 
 #endif // PROC_H

@@ -1,6 +1,7 @@
 #include "os2_syscall.h"
 #include "loader.h"
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 uint64 os2_sys_write(int fd, uint64 argument_str, uint64 len)
 {

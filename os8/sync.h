@@ -1,6 +1,7 @@
 #ifndef SYNC_H
 #define SYNC_H
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 #define WAIT_QUEUE_MAX_LENGTH 16
 

@@ -1,7 +1,7 @@
 #include "loader.h"
-#include "file.h"
 #include "os8_trap.h"
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 extern char INIT_PROC[];
 

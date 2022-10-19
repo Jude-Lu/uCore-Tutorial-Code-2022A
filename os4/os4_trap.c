@@ -72,6 +72,8 @@ void trap_init()
 		.finish_usertrap = os4_finish_usertrap,
 		.error_in_trap = os4_error_in_trap,
 
+		.syscall = syscall,
+
 		.super_external_handler = os4_super_external_handler
 	};
 	set_trap(&os4_trap_context);
