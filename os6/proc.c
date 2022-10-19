@@ -2,8 +2,6 @@
 #include "loader.h"
 #include "os6_trap.h"
 #include "../utils/defs.h"
-#include "../disk/virtio.h"
-#include "../easy-fs/file.h"
 
 struct proc pool[NPROC];
 __attribute__((aligned(16))) char kstack[NPROC][PAGE_SIZE];

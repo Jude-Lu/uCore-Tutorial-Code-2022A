@@ -1,5 +1,4 @@
 #include "loader.h"
-#include "../easy-fs/file.h"
 #include "os6_trap.h"
 #include "../utils/defs.h"
 
