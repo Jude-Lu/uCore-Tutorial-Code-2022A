@@ -1,8 +1,8 @@
 #ifndef BUF_H
 #define BUF_H
 
-#include "fs.h"
 #include "../utils/types.h"
+#include "../utils/const.h"
 
 struct buf {
 	int valid; // has data been read from disk?

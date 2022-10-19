@@ -13,6 +13,7 @@ SYSCALL = syscall
 TRAP = trap
 VM = kernel-vm
 TASK = task-manage
+DISK = disk
 SCRIPT = script
 ##
 
@@ -40,6 +41,9 @@ ifeq ($(shell expr $(ch) \>= 3), 1)
 endif
 ifeq ($(shell expr $(ch) \>= 4), 1)
 	C_SRCS += $(wildcard $(VM)/*.c)
+endif
+ifeq ($(shell expr $(ch) \>= 6), 1)
+	C_SRCS += $(wildcard $(DISK)/*.c)
 endif
 ##
 

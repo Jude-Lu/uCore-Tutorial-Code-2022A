@@ -2,6 +2,7 @@
 #define VIRTIO_H
 
 #include "bio.h"
+#include "../utils/const.h"
 
 //
 // virtio device definitions.
@@ -102,5 +103,12 @@ struct virtio_blk_req {
 void virtio_disk_init();
 void virtio_disk_rw(struct buf *, int);
 void virtio_disk_intr();
+
+struct virtio_context
+{
+	void (*yield)();
+};
+
+void set_virtio(struct virtio_context *virtio_context);
 
 #endif // VIRTIO_H
