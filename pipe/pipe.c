@@ -1,6 +1,10 @@
-#include "proc.h"
-#include "file.h"
-#include "../utils/defs.h"
+#include "pipe.h"
+
+struct pipe_context *pipe_vm_context;
+
+void set_pipe(struct pipe_context *pipe_context) {
+	pipe_vm_context = pipe_context;
+}
 
 int pipealloc(struct file *f0, struct file *f1)
 {
@@ -43,7 +47,6 @@ int pipewrite(struct pipe *pi, uint64 addr, int n)
 {
 	int w = 0;
 	uint64 size;
-	struct proc *p = curr_task();
 	if (n <= 0) {
 		panic("invalid read num");
 	}
@@ -52,12 +55,12 @@ int pipewrite(struct pipe *pi, uint64 addr, int n)
 			return -1;
 		}
 		if (pi->nwrite == pi->nread + PIPESIZE) { // DOC: pipewrite-full
-			yield();
+			(pipe_vm_context->yield)();
 		} else {
 			size = MIN(MIN(n - w,
 				       pi->nread + PIPESIZE - pi->nwrite),
 				   PIPESIZE - (pi->nwrite % PIPESIZE));
-			if (copyin(p->pagetable,
+			if (copyin((pipe_vm_context->get_curr_pagetable)(),
 				   &pi->data[pi->nwrite % PIPESIZE], addr + w,
 				   size) < 0) {
 				panic("copyin");
@@ -73,13 +76,12 @@ int piperead(struct pipe *pi, uint64 addr, int n)
 {
 	int r = 0;
 	uint64 size = -1;
-	struct proc *p = curr_task();
 	if (n <= 0) {
 		panic("invalid read num");
 	}
 	while (pi->nread == pi->nwrite) {
 		if (pi->writeopen)
-			yield();
+			(pipe_vm_context->yield)();
 		else
 			return -1;
 	}
@@ -88,7 +90,7 @@ int piperead(struct pipe *pi, uint64 addr, int n)
 			break;
 		size = MIN(MIN(n - r, pi->nwrite - pi->nread),
 			   PIPESIZE - (pi->nread % PIPESIZE));
-		if (copyout(p->pagetable, addr + r,
+		if (copyout((pipe_vm_context->get_curr_pagetable)(), addr + r,
 			    &pi->data[pi->nread % PIPESIZE], size) < 0) {
 			panic("copyout");
 		}

@@ -5,11 +5,10 @@
 #include "sync.h"
 
 #define NPROC (128)
+#define FILEPOOLSIZE (NPROC * FD_BUFFER_SIZE)
 #define NTHREAD (16)
 #define FD_BUFFER_SIZE (16)
 #define LOCK_POOL_SIZE (8)
-
-struct file;
 
 struct thread {
 	enum threadstate state; // Thread state
@@ -60,7 +59,5 @@ int init_stdio(struct proc *);
 int push_argv(struct proc *, char **);
 // swtch.S
 void swtch(struct context *, struct context *);
-int either_copyout(int, uint64, char *, uint64);
-int either_copyin(int, uint64, char *, uint64);
 
 #endif // PROC_H

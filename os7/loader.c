@@ -1,5 +1,5 @@
 #include "loader.h"
-#include "file.h"
+#include "../easy-fs/file.h"
 #include "os7_trap.h"
 #include "../utils/defs.h"
 

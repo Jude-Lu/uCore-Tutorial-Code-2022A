@@ -2,7 +2,7 @@
 #define LOADER_H
 
 #include "../utils/const.h"
-#include "file.h"
+#include "../easy-fs/file.h"
 #include "proc.h"
 #include "../utils/types.h"
 

@@ -16,4 +16,7 @@ int copyout(pagetable_t, uint64, char*, uint64);
 int copyin(pagetable_t, char*, uint64, uint64);
 int copyinstr(pagetable_t, char*, uint64, uint64);
 
+int either_copyout(pagetable_t, int, uint64, char*, uint64);
+int either_copyin(pagetable_t, int, uint64, char*, uint64);
+
 #endif  // VM_H

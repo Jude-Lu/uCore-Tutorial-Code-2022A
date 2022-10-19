@@ -327,100 +327,15 @@ void yield() {}
 # easy-fs
 ## 结构体
 ```c
-struct inode {
-	uint dev; // Device number
-	uint inum; // Inode number
-	int ref; // Reference count
-	int valid; // inode has been read from disk?
-	short type; // copy of disk inode
-	uint size;
-	uint addrs[NDIRECT + 1];
-	// LAB4: You may need to add link count here
-};
+struct FSManager
+{
+	// 维护全局的file池子
+	int filepool_size;
+	struct file *filepool;
 
-// 该结构体提供有关文件当前使用情况和相应inode位置的信息
-struct file {
-	enum { FD_NONE = 0, FD_INODE, FD_STDIO } type;
-	int ref; // reference count
-	char readable;
-	char writable;
-	struct inode *ip; // FD_INODE
-	uint off;
-};
+	int (*fdalloc)(struct file *f); // 每个进程为文件f分配一个fd
+	pagetable_t (*get_curr_pagetable)(); // 得到当前进程的pagetable
 
-struct FSManager{
-    void (*fileclose)(struct file *);
-    int (*fileopen)(char *, uint64);
-    int (*link)(char *src, char *dst);
-    int (*unlink)(char *path);
-    int (*readdir)(char *path);
-}
-```
-```c
-struct superblock {
-	uint magic; // Must be FSMAGIC
-	uint size; // Size of file system image (blocks)
-	uint nblocks; // Number of data blocks
-	uint ninodes; // Number of inodes.
-	uint inodestart; // Block number of first inode block
-	uint bmapstart; // Block number of first free map block
+	void (*pipeclose)(struct pipe *pi, int writable); // 在关闭文件的时候，如果是一个pipe需要调用pipe自己的pipeclose。主要是为了兼容ch6里面还没有pipe，用一个报错的函数去填充该函数
 };
-
-// On-disk inode structure
-struct dinode {
-	short type; // File type
-	short pad[3];
-	// LAB4: you can reduce size of pad array and add link count below,
-	//       or you can just regard a pad as link count.
-	//       But keep in mind that you'd better keep sizeof(dinode) unchanged
-	uint size; // Size of file (bytes)
-	uint addrs[NDIRECT + 1]; // Data block addresses
-};
-
-struct dirent {
-	ushort inum;
-	char name[DIRSIZ];
-};
-```
-## 函数
-```c
-struct file *filealloc();
-uint64 inodewrite(struct file *, uint64, uint64);
-uint64 inoderead(struct file *, uint64, uint64);
-struct file *stdio_init(int);
-int show_all_files();
-```
-```c
-void fsinit();
-int dirlink(struct inode *, char *, uint);
-struct inode *dirlookup(struct inode *, char *, uint *);
-struct inode *ialloc(uint, short);
-struct inode *idup(struct inode *);
-void iinit();
-void ivalid(struct inode *);
-void iput(struct inode *);
-void iunlock(struct inode *);
-void iunlockput(struct inode *);
-void iupdate(struct inode *);
-struct inode *namei(char *);
-struct inode *root_dir();
-int readi(struct inode *, int, uint64, uint, uint);
-int writei(struct inode *, int, uint64, uint, uint);
-void itrunc(struct inode *);
-int dirls(struct inode *);
-```
-```c
-struct FSManager fsmanger = {
-    .fileclose = fileclose;
-    .fileopen = fileopen;
-    .link = link;
-    .unlink = unlink;
-    .readdir = readdir;
-}
-
-void fileclose(struct file *);
-int fileopen(char *, uint64);
-int link(char *src, char *dst);
-int unlink(char *path);
-int readdir(char *path);
 ```

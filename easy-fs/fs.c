@@ -12,8 +12,9 @@
 #include "fs.h"
 #include "../disk/bio.h"
 #include "file.h"
-#include "proc.h"
 #include "../utils/defs.h"
+
+extern struct FSManager *fs_manager;
 
 // there should be one superblock per disk device, but we run with
 // only one device
@@ -302,7 +303,7 @@ int readi(struct inode *ip, int user_dst, uint64 dst, uint off, uint n)
 	for (tot = 0; tot < n; tot += m, off += m, dst += m) {
 		bp = bread(ip->dev, bmap(ip, off / BSIZE));
 		m = MIN(n - tot, BSIZE - off % BSIZE);
-		if (either_copyout(user_dst, dst,
+		if (either_copyout((fs_manager->get_curr_pagetable)(), user_dst, dst,
 				   (char *)bp->data + (off % BSIZE), m) == -1) {
 			brelse(bp);
 			tot = -1;
@@ -333,7 +334,7 @@ int writei(struct inode *ip, int user_src, uint64 src, uint off, uint n)
 	for (tot = 0; tot < n; tot += m, off += m, src += m) {
 		bp = bread(ip->dev, bmap(ip, off / BSIZE));
 		m = MIN(n - tot, BSIZE - off % BSIZE);
-		if (either_copyin(user_src, src,
+		if (either_copyin((fs_manager->get_curr_pagetable)(), user_src, src,
 				  (char *)bp->data + (off % BSIZE), m) == -1) {
 			brelse(bp);
 			break;
