@@ -6,7 +6,7 @@ var searchData=
   ['o_5ftrunc_282',['O_TRUNC',['../os6_2fcntl_8h.html#ad1d67e453fb3031f40f8cd3403773813',1,'O_TRUNC():&#160;fcntl.h'],['../os7_2fcntl_8h.html#ad1d67e453fb3031f40f8cd3403773813',1,'O_TRUNC():&#160;fcntl.h'],['../os8_2fcntl_8h.html#ad1d67e453fb3031f40f8cd3403773813',1,'O_TRUNC():&#160;fcntl.h']]],
   ['o_5fwronly_283',['O_WRONLY',['../os6_2fcntl_8h.html#a11b644a8526139c4cc1850dac1271ced',1,'O_WRONLY():&#160;fcntl.h'],['../os7_2fcntl_8h.html#a11b644a8526139c4cc1850dac1271ced',1,'O_WRONLY():&#160;fcntl.h'],['../os8_2fcntl_8h.html#a11b644a8526139c4cc1850dac1271ced',1,'O_WRONLY():&#160;fcntl.h']]],
   ['off_284',['off',['../structfile.html#a1aeb2e4b0cfd549f8fb46fb7e08f7e3e',1,'file']]],
-  ['ops_285',['ops',['../os6_2virtio__disk_8c.html#a5580404502a1641dea5aee5ba4b393f1',1,'ops():&#160;virtio_disk.c'],['../os7_2virtio__disk_8c.html#a5580404502a1641dea5aee5ba4b393f1',1,'ops():&#160;virtio_disk.c'],['../os8_2virtio__disk_8c.html#a5580404502a1641dea5aee5ba4b393f1',1,'ops():&#160;virtio_disk.c']]],
+  ['ops_285',['ops',['../virtio__disk_8c.html#a5580404502a1641dea5aee5ba4b393f1',1,'virtio_disk.c']]],
   ['os2_5fcall_5fuserret_286',['os2_call_userret',['../os2__trap_8c.html#a6ab7fb987592bf284db8406596330f03',1,'os2_call_userret():&#160;os2_trap.c'],['../os2__trap_8h.html#a6ab7fb987592bf284db8406596330f03',1,'os2_call_userret():&#160;os2_trap.c']]],
   ['os2_5fcpuid_287',['os2_cpuid',['../os2__trap_8c.html#af3e22d0d628b39e1fe7217b1e1aa7773',1,'os2_trap.c']]],
   ['os2_5ferror_5fin_5ftrap_288',['os2_error_in_trap',['../os2__trap_8c.html#abf292fadd91301bf76b0ebb61ff84db1',1,'os2_error_in_trap(int status):&#160;os2_trap.c'],['../os2__trap_8h.html#abf292fadd91301bf76b0ebb61ff84db1',1,'os2_error_in_trap(int status):&#160;os2_trap.c']]],

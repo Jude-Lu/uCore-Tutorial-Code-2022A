@@ -6,5 +6,5 @@ var kalloc_8c =
     [ "kinit", "kalloc_8c.html#aea491e5b831017ff628370356b1e233d", null ],
     [ "ekernel", "kalloc_8c.html#a5f3ffcf1add5763eac42b04367f98242", null ],
     [ "freelist", "kalloc_8c.html#a15c085c4851579a67faf467804f60866", null ],
-    [ "kmem", "kalloc_8c.html#af019c503ad42e7d39d4e64663d786e85", null ]
+    [ "kmem", "kalloc_8c.html#abd70da7ab398d28cb572c5373899c142", null ]
 ];

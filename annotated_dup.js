@@ -20,6 +20,7 @@ var annotated_dup =
     [ "trap_handler_context", "structtrap__handler__context.html", "structtrap__handler__context" ],
     [ "trapframe", "structtrapframe.html", "structtrapframe" ],
     [ "virtio_blk_req", "structvirtio__blk__req.html", "structvirtio__blk__req" ],
+    [ "virtio_context", "structvirtio__context.html", "structvirtio__context" ],
     [ "virtq_avail", "structvirtq__avail.html", "structvirtq__avail" ],
     [ "virtq_desc", "structvirtq__desc.html", "structvirtq__desc" ],
     [ "virtq_used", "structvirtq__used.html", "structvirtq__used" ],

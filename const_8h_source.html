@@ -91,9 +91,9 @@ $(document).ready(function(){initNavTree('const_8h_source.html',''); initResizab
 <div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="const_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">    4</a></span>&#160;<span class="preprocessor">#define PAGE_SIZE (0x1000)</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">enum</span> {</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="const_8h.html#aaf105ae5beaca1dee30ae54530691fcea08864b73fa6c82cb8de78a336050bfdb">    7</a></span>&#160;    <a class="code" href="const_8h.html#aaf105ae5beaca1dee30ae54530691fcea08864b73fa6c82cb8de78a336050bfdb">STDIN</a> = 0,</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="const_8h.html#aaf105ae5beaca1dee30ae54530691fcead1026b11391895f6e302f892a44a04df">    8</a></span>&#160;    <a class="code" href="const_8h.html#aaf105ae5beaca1dee30ae54530691fcead1026b11391895f6e302f892a44a04df">STDOUT</a> = 1,</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="const_8h.html#aaf105ae5beaca1dee30ae54530691fcea4b971ca4918db729a147aa7c78cea0e3">    9</a></span>&#160;    <a class="code" href="const_8h.html#aaf105ae5beaca1dee30ae54530691fcea4b971ca4918db729a147aa7c78cea0e3">STDERR</a> = 2,</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="const_8h.html#a385c44f6fb256e5716a2302a5b940388a08864b73fa6c82cb8de78a336050bfdb">    7</a></span>&#160;    <a class="code" href="const_8h.html#a385c44f6fb256e5716a2302a5b940388a08864b73fa6c82cb8de78a336050bfdb">STDIN</a> = 0,</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="const_8h.html#a385c44f6fb256e5716a2302a5b940388ad1026b11391895f6e302f892a44a04df">    8</a></span>&#160;    <a class="code" href="const_8h.html#a385c44f6fb256e5716a2302a5b940388ad1026b11391895f6e302f892a44a04df">STDOUT</a> = 1,</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="const_8h.html#a385c44f6fb256e5716a2302a5b940388a4b971ca4918db729a147aa7c78cea0e3">    9</a></span>&#160;    <a class="code" href="const_8h.html#a385c44f6fb256e5716a2302a5b940388a4b971ca4918db729a147aa7c78cea0e3">STDERR</a> = 2,</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;};</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// memory layout</span></div>
@@ -121,12 +121,26 @@ $(document).ready(function(){initNavTree('const_8h_source.html',''); initResizab
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="const_8h.html#a140badff32835d7b4825ce2ac8c3a1bc">   34</a></span>&#160;<span class="preprocessor">#define IDLE_PID (0)</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="const_8h.html#af2118cce41db1171e3c76c1c1268641b">   35</a></span>&#160;<span class="preprocessor">#define MAX_ARG_NUM (32) // max exec arguments</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif // CONST_H</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// file system</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="const_8h.html#a8485f4e81de2537e6a0935626167a775">   39</a></span>&#160;<span class="preprocessor">#define NFILE (100) // open files per system</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="const_8h.html#adabafa10c7951be7c875cd2ee212be85">   40</a></span>&#160;<span class="preprocessor">#define NINODE (50) // maximum number of active i-nodes</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="const_8h.html#aa564a41c8409694da49b0badf2bb2853">   41</a></span>&#160;<span class="preprocessor">#define NDEV (10) // maximum major device number</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="const_8h.html#ae9ce6b24fe2aae59ff60b469c35febbc">   42</a></span>&#160;<span class="preprocessor">#define ROOTDEV (1) // device number of file system root disk</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="const_8h.html#a31cde324007b4e52bbba7079ec5e5f45">   43</a></span>&#160;<span class="preprocessor">#define MAXOPBLOCKS (10) // max # of blocks any FS op writes</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="const_8h.html#ad51e2f8dffd163c263ec676a268d0f0a">   44</a></span>&#160;<span class="preprocessor">#define NBUF (MAXOPBLOCKS * 3) // size of disk block cache</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="const_8h.html#a486f47992f736854db2444b01afd9991">   45</a></span>&#160;<span class="preprocessor">#define FSSIZE (1000) // size of file system in blocks</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="const_8h.html#a2d1edde91ea515b363277f4bbdc3244d">   46</a></span>&#160;<span class="preprocessor">#define MAXPATH (128) // maximum file path name</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="const_8h.html#a22c8ea96d09283ed6496347806cc72a0">   48</a></span>&#160;<span class="preprocessor">#define ROOTINO (1) // root i-number</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="const_8h.html#a403cf3149c084cea115b85c90721039a">   49</a></span>&#160;<span class="preprocessor">#define BSIZE (1024) // block size</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif // CONST_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aconst_8h_html_aaf105ae5beaca1dee30ae54530691fcea08864b73fa6c82cb8de78a336050bfdb"><div class="ttname"><a href="const_8h.html#aaf105ae5beaca1dee30ae54530691fcea08864b73fa6c82cb8de78a336050bfdb">STDIN</a></div><div class="ttdeci">@ STDIN</div><div class="ttdef"><b>Definition:</b> const.h:7</div></div>
-<div class="ttc" id="aconst_8h_html_aaf105ae5beaca1dee30ae54530691fcead1026b11391895f6e302f892a44a04df"><div class="ttname"><a href="const_8h.html#aaf105ae5beaca1dee30ae54530691fcead1026b11391895f6e302f892a44a04df">STDOUT</a></div><div class="ttdeci">@ STDOUT</div><div class="ttdef"><b>Definition:</b> const.h:8</div></div>
-<div class="ttc" id="aconst_8h_html_aaf105ae5beaca1dee30ae54530691fcea4b971ca4918db729a147aa7c78cea0e3"><div class="ttname"><a href="const_8h.html#aaf105ae5beaca1dee30ae54530691fcea4b971ca4918db729a147aa7c78cea0e3">STDERR</a></div><div class="ttdeci">@ STDERR</div><div class="ttdef"><b>Definition:</b> const.h:9</div></div>
+<div class="ttc" id="aconst_8h_html_a385c44f6fb256e5716a2302a5b940388a4b971ca4918db729a147aa7c78cea0e3"><div class="ttname"><a href="const_8h.html#a385c44f6fb256e5716a2302a5b940388a4b971ca4918db729a147aa7c78cea0e3">STDERR</a></div><div class="ttdeci">@ STDERR</div><div class="ttdef"><b>Definition:</b> const.h:9</div></div>
+<div class="ttc" id="aconst_8h_html_a385c44f6fb256e5716a2302a5b940388a08864b73fa6c82cb8de78a336050bfdb"><div class="ttname"><a href="const_8h.html#a385c44f6fb256e5716a2302a5b940388a08864b73fa6c82cb8de78a336050bfdb">STDIN</a></div><div class="ttdeci">@ STDIN</div><div class="ttdef"><b>Definition:</b> const.h:7</div></div>
+<div class="ttc" id="aconst_8h_html_a385c44f6fb256e5716a2302a5b940388ad1026b11391895f6e302f892a44a04df"><div class="ttname"><a href="const_8h.html#a385c44f6fb256e5716a2302a5b940388ad1026b11391895f6e302f892a44a04df">STDOUT</a></div><div class="ttdeci">@ STDOUT</div><div class="ttdef"><b>Definition:</b> const.h:8</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

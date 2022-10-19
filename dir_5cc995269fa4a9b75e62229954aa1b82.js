@@ -1,7 +1,5 @@
 var dir_5cc995269fa4a9b75e62229954aa1b82 =
 [
-    [ "bio.c", "os7_2bio_8c.html", "os7_2bio_8c" ],
-    [ "bio.h", "os7_2bio_8h.html", "os7_2bio_8h" ],
     [ "fcntl.h", "os7_2fcntl_8h.html", "os7_2fcntl_8h" ],
     [ "file.c", "os7_2file_8c.html", "os7_2file_8c" ],
     [ "file.h", "os7_2file_8h.html", "os7_2file_8h" ],
@@ -16,7 +14,5 @@ var dir_5cc995269fa4a9b75e62229954aa1b82 =
     [ "os7_trap.h", "os7__trap_8h.html", "os7__trap_8h" ],
     [ "pipe.c", "os7_2pipe_8c.html", "os7_2pipe_8c" ],
     [ "proc.c", "os7_2proc_8c.html", "os7_2proc_8c" ],
-    [ "proc.h", "os7_2proc_8h.html", "os7_2proc_8h" ],
-    [ "virtio.h", "os7_2virtio_8h.html", "os7_2virtio_8h" ],
-    [ "virtio_disk.c", "os7_2virtio__disk_8c.html", "os7_2virtio__disk_8c" ]
+    [ "proc.h", "os7_2proc_8h.html", "os7_2proc_8h" ]
 ];

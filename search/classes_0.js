@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buf_1079',['buf',['../structbuf.html',1,'']]]
+  ['buf_1082',['buf',['../structbuf.html',1,'']]]
 ];

@@ -1,7 +1,5 @@
 var dir_b545e7c90c84f0fd9866e0dc03b9bbc1 =
 [
-    [ "bio.c", "os8_2bio_8c.html", "os8_2bio_8c" ],
-    [ "bio.h", "os8_2bio_8h.html", "os8_2bio_8h" ],
     [ "fcntl.h", "os8_2fcntl_8h.html", "os8_2fcntl_8h" ],
     [ "file.c", "os8_2file_8c.html", "os8_2file_8c" ],
     [ "file.h", "os8_2file_8h.html", "os8_2file_8h" ],
@@ -18,7 +16,5 @@ var dir_b545e7c90c84f0fd9866e0dc03b9bbc1 =
     [ "proc.c", "os8_2proc_8c.html", "os8_2proc_8c" ],
     [ "proc.h", "os8_2proc_8h.html", "os8_2proc_8h" ],
     [ "sync.c", "sync_8c.html", "sync_8c" ],
-    [ "sync.h", "sync_8h.html", "sync_8h" ],
-    [ "virtio.h", "os8_2virtio_8h.html", "os8_2virtio_8h" ],
-    [ "virtio_disk.c", "os8_2virtio__disk_8c.html", "os8_2virtio__disk_8c" ]
+    [ "sync.h", "sync_8h.html", "sync_8h" ]
 ];

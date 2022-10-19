@@ -124,7 +124,7 @@ trap_handler_context 的协作图:</div>
 <tr class="memitem:a1dbf56b66aa018dbface0b288c14822c"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a1dbf56b66aa018dbface0b288c14822c">finish_usertrap</a> )(int cause)</td></tr>
 <tr class="memdesc:a1dbf56b66aa018dbface0b288c14822c"><td class="mdescLeft">&#160;</td><td class="mdescRight">在usertrap执行结束后执行，cause是异常编号，这里主要是为了兼容ch2，后面的章节里面只要调用usertrapret即可  <a href="structtrap__handler__context.html#a1dbf56b66aa018dbface0b288c14822c">更多...</a><br /></td></tr>
 <tr class="separator:a1dbf56b66aa018dbface0b288c14822c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7139487d9ef96407f2e1fee22f5c01b"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#ac7139487d9ef96407f2e1fee22f5c01b">error_in_trap</a> )(int <a class="el" href="os8_2virtio__disk_8c.html#a051c9e198ee930358372c407a17e8b78">status</a>)</td></tr>
+<tr class="memitem:ac7139487d9ef96407f2e1fee22f5c01b"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#ac7139487d9ef96407f2e1fee22f5c01b">error_in_trap</a> )(int <a class="el" href="virtio__disk_8c.html#a051c9e198ee930358372c407a17e8b78">status</a>)</td></tr>
 <tr class="memdesc:ac7139487d9ef96407f2e1fee22f5c01b"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于处理当trap处理发生错误时要做的事  <a href="structtrap__handler__context.html#ac7139487d9ef96407f2e1fee22f5c01b">更多...</a><br /></td></tr>
 <tr class="separator:ac7139487d9ef96407f2e1fee22f5c01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a56e2e99660cc40be5dbbe6ed992367"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a1a56e2e99660cc40be5dbbe6ed992367">super_external_handler</a> )(int <a class="el" href="structtrap__handler__context.html#a79b270d658c32d79ed40fee395764c65">cpuid</a>)</td></tr>
@@ -171,7 +171,7 @@ trap_handler_context 的协作图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* error_in_trap(int <a class="el" href="os8_2virtio__disk_8c.html#a051c9e198ee930358372c407a17e8b78">status</a>)</td>
+          <td class="memname">void(* error_in_trap(int <a class="el" href="virtio__disk_8c.html#a051c9e198ee930358372c407a17e8b78">status</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">

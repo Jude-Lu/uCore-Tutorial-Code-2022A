@@ -15,6 +15,6 @@ var os6_2fs_8c =
     [ "root_dir", "os6_2fs_8c.html#a298e28260b8b4ef0396fc411b42c46e5", null ],
     [ "writei", "os6_2fs_8c.html#a99e700638bb7b2c05330f7f93a555aa7", null ],
     [ "inode", "os6_2fs_8c.html#a6baaf26dd83b71b8d684c5d54a709e31", null ],
-    [ "itable", "os6_2fs_8c.html#a3f226c9d8efcdd9dc9273be461251347", null ],
+    [ "itable", "os6_2fs_8c.html#a8d83f146a7e3d628361bb4afbf882985", null ],
     [ "sb", "os6_2fs_8c.html#a0248d0bac625de5a1415f2f8c91f3343", null ]
 ];
