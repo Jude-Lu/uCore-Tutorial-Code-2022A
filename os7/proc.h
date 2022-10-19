@@ -2,6 +2,7 @@
 #define PROC_H
 
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 #define NPROC (512)
 #define FD_BUFFER_SIZE (16)

@@ -14,7 +14,6 @@
 //     so do not keep them longer than necessary.
 
 #include "bio.h"
-#include "../utils/defs.h"
 #include "virtio.h"
 
 struct {

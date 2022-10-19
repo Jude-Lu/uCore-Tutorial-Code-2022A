@@ -1,5 +1,6 @@
 #include "os5_syscall.h"
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 #include "../syscall/syscall_ids.h"
 #include "loader.h"
 #include "os5_trap.h"

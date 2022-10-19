@@ -2,6 +2,7 @@
 #define LOADER_H
 
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 #include "proc.h"
 
 int finished();

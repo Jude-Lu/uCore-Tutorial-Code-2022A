@@ -1,6 +1,7 @@
 #include "loader.h"
 #include "os5_trap.h"
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 static int app_num;
 static uint64 *app_info_ptr;

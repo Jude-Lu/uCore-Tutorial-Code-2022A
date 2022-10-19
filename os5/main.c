@@ -1,4 +1,5 @@
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 #include "loader.h"
 #include "os5_trap.h"
 #include "os5_syscall.h"

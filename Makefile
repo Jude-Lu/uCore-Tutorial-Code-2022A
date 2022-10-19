@@ -13,7 +13,6 @@ SYSCALL = syscall
 TRAP = trap
 VM = kernel-vm
 TASK = task-manage
-DISK = disk
 SCRIPT = script
 FS = easy-fs
 PIPE = pipe
@@ -46,9 +45,6 @@ ifeq ($(shell expr $(ch) \>= 4), 1)
 endif
 ifeq ($(shell expr $(ch) \>= 6), 1)
 	C_SRCS += $(wildcard $(FS)/*.c)
-endif
-ifeq ($(shell expr $(ch) \>= 6), 1)
-	C_SRCS += $(wildcard $(DISK)/*.c)
 endif
 ifeq ($(shell expr $(ch) \>= 7), 1)
 	C_SRCS += $(wildcard $(PIPE)/*.c)

@@ -2,6 +2,7 @@
 #include "loader.h"
 #include "os6_trap.h"
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 struct proc pool[NPROC];
 __attribute__((aligned(16))) char kstack[NPROC][PAGE_SIZE];
@@ -311,7 +312,7 @@ int fdalloc(struct file *f)
 	return -1;
 }
 
-void undefined_pipeclose(struct pipe *pi, int writable)
+void undefined_pipeclose(void *_pi, int writable)
 {
 	errorf("In ch6, we have not implemented pipe yet!");
 	exit(-1);
@@ -357,6 +358,9 @@ void proc_init()
 
 		.fdalloc = fdalloc,
 		.get_curr_pagetable = get_curr_pagetable,
+
+		.either_copyout = either_copyout,
+		.either_copyin = either_copyin,
 
 		.pipeclose = undefined_pipeclose,
 	};

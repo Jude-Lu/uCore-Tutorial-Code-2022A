@@ -1,5 +1,6 @@
 #include "loader.h"
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 #include "os2_trap.h"
 
 static int app_cur, app_num;

@@ -1,4 +1,5 @@
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 #include "loader.h"
 #include "os2_trap.h"
 #include "os2_syscall.h"

@@ -2,6 +2,7 @@
 #define OS2_TRAP_H
 
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 void os2_yield();
 

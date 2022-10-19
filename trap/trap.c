@@ -1,4 +1,5 @@
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 struct trap_handler_context *trap_context;
 

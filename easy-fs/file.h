@@ -3,7 +3,7 @@
 
 #include "fs.h"
 #include "../utils/types.h"
-#include "../pipe/pipe.h"
+#include "../utils/riscv.h"
 
 // in-memory copy of an inode,it can be used to quickly locate file entities on disk
 struct inode {
@@ -44,8 +44,11 @@ struct FSManager
 
 	int (*fdalloc)(struct file *f);
 	pagetable_t (*get_curr_pagetable)();
+	
+	int (*either_copyout)(pagetable_t, int, uint64, char*, uint64);
+	int (*either_copyin)(pagetable_t, int, uint64, char*, uint64);
 
-	void (*pipeclose)(struct pipe *pi, int writable);
+	void (*pipeclose)(void *_pi, int writable);
 };
 
 void set_file(struct FSManager *FSManager);

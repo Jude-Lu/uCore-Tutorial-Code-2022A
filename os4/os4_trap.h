@@ -2,6 +2,7 @@
 #define OS4_TRAP_H
 
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 void os4_set_usertrap();
 void os4_set_kerneltrap();

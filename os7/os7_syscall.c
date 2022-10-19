@@ -1,5 +1,6 @@
 #include "os7_syscall.h"
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 #include "loader.h"
 #include "os7_trap.h"
 

@@ -2,6 +2,7 @@
 #include "os3_trap.h"
 #include "proc.h"
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 static uint64 app_num;
 static uint64 *app_info_ptr;

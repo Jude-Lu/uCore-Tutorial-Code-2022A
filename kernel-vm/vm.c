@@ -1,6 +1,7 @@
 #include "vm.h"
 #include "kalloc.h"
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 /**
  * Return the address of the PTE in page table pagetable

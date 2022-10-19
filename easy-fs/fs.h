@@ -1,8 +1,7 @@
 #ifndef __FS_H__
 #define __FS_H__
 
-#include "../utils/types.h"
-#include "../utils/const.h"
+#include "../utils/defs.h"
 // On-disk file system format.
 // Both the kernel and user programs use this header file.
 

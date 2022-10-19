@@ -1,4 +1,5 @@
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 #include "loader.h"
 #include "proc.h"
 #include "os4_syscall.h"

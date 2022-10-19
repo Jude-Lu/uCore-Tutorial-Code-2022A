@@ -31,8 +31,9 @@ bad:
 	return -1;
 }
 
-void pipeclose(struct pipe *pi, int writable)
+void pipeclose(void *_pi, int writable)
 {
+	struct pipe *pi = (struct pipe*)(_pi);
 	if (writable) {
 		pi->writeopen = 0;
 	} else {
@@ -43,8 +44,9 @@ void pipeclose(struct pipe *pi, int writable)
 	}
 }
 
-int pipewrite(struct pipe *pi, uint64 addr, int n)
+int pipewrite(void *_pi, uint64 addr, int n)
 {
+	struct pipe *pi = (struct pipe*)(_pi);
 	int w = 0;
 	uint64 size;
 	if (n <= 0) {
@@ -72,8 +74,9 @@ int pipewrite(struct pipe *pi, uint64 addr, int n)
 	return w;
 }
 
-int piperead(struct pipe *pi, uint64 addr, int n)
+int piperead(void *_pi, uint64 addr, int n)
 {
+	struct pipe *pi = (struct pipe*)(_pi);
 	int r = 0;
 	uint64 size = -1;
 	if (n <= 0) {

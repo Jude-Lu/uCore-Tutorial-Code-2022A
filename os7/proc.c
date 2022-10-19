@@ -2,6 +2,7 @@
 #include "loader.h"
 #include "os7_trap.h"
 #include "../utils/defs.h"
+#include "../utils/modules.h"
 
 struct proc pool[NPROC];
 __attribute__((aligned(16))) char kstack[NPROC][PAGE_SIZE];
@@ -358,6 +359,9 @@ void proc_init()
 
 		.fdalloc = fdalloc,
 		.get_curr_pagetable = get_curr_pagetable,
+
+		.either_copyout = either_copyout,
+		.either_copyin = either_copyin,
 
 		.pipeclose = pipeclose,
 	};
