@@ -89,22 +89,23 @@ $(document).ready(function(){initNavTree('os3_2loader_8h_source.html',''); initR
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LOADER_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../utils/defs.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">int</span> <a class="code" href="os3_2loader_8h.html#a666dfcc6023613fdfe7ddc60e6c1f4e2">finished</a>();</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">void</span> <a class="code" href="os2_2loader_8h.html#ad17ddf1f6f302b109077a58598b0ae7c">loader_init</a>();</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">int</span> <a class="code" href="os3_2loader_8h.html#a80c32b58b690f1b577dbfa95bbcc5c05">run_all_app</a>();</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="os3_2loader_8h.html#a78cf30a084548c226ac61d0f5c3f1981">   10</a></span>&#160;<span class="preprocessor">#define BASE_ADDRESS (0x80400000)</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="os3_2loader_8h.html#a5f38c1d2cbe1f9d2de789ebfe570c7a4">   11</a></span>&#160;<span class="preprocessor">#define MAX_APP_SIZE (0x20000)</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="os3_2loader_8h.html#a5f4636d1d2b3b9d7aca2f889e61744be">   12</a></span>&#160;<span class="preprocessor">#define USER_STACK_SIZE (PAGE_SIZE)</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="os3_2loader_8h.html#a1711f19932c0aee95211797f8eb7b5b8">   13</a></span>&#160;<span class="preprocessor">#define TRAP_PAGE_SIZE (PAGE_SIZE)</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif // LOADER_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../utils/modules.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">int</span> <a class="code" href="os3_2loader_8h.html#a666dfcc6023613fdfe7ddc60e6c1f4e2">finished</a>();</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">void</span> <a class="code" href="os2_2loader_8h.html#ad17ddf1f6f302b109077a58598b0ae7c">loader_init</a>();</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">int</span> <a class="code" href="os3_2loader_8h.html#a80c32b58b690f1b577dbfa95bbcc5c05">run_all_app</a>();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="os3_2loader_8h.html#a78cf30a084548c226ac61d0f5c3f1981">   11</a></span>&#160;<span class="preprocessor">#define BASE_ADDRESS (0x80400000)</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="os3_2loader_8h.html#a5f38c1d2cbe1f9d2de789ebfe570c7a4">   12</a></span>&#160;<span class="preprocessor">#define MAX_APP_SIZE (0x20000)</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="os3_2loader_8h.html#a5f4636d1d2b3b9d7aca2f889e61744be">   13</a></span>&#160;<span class="preprocessor">#define USER_STACK_SIZE (PAGE_SIZE)</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="os3_2loader_8h.html#a1711f19932c0aee95211797f8eb7b5b8">   14</a></span>&#160;<span class="preprocessor">#define TRAP_PAGE_SIZE (PAGE_SIZE)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif // LOADER_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aos3_2loader_8h_html_a666dfcc6023613fdfe7ddc60e6c1f4e2"><div class="ttname"><a href="os3_2loader_8h.html#a666dfcc6023613fdfe7ddc60e6c1f4e2">finished</a></div><div class="ttdeci">int finished()</div><div class="ttdef"><b>Definition:</b> loader.c:11</div></div>
-<div class="ttc" id="aos3_2loader_8h_html_a80c32b58b690f1b577dbfa95bbcc5c05"><div class="ttname"><a href="os3_2loader_8h.html#a80c32b58b690f1b577dbfa95bbcc5c05">run_all_app</a></div><div class="ttdeci">int run_all_app()</div><div class="ttdef"><b>Definition:</b> loader.c:41</div></div>
-<div class="ttc" id="aos2_2loader_8h_html_ad17ddf1f6f302b109077a58598b0ae7c"><div class="ttname"><a href="os2_2loader_8h.html#ad17ddf1f6f302b109077a58598b0ae7c">loader_init</a></div><div class="ttdeci">void loader_init()</div><div class="ttdef"><b>Definition:</b> loader.c:9</div></div>
+<div class="ttc" id="aos3_2loader_8h_html_a666dfcc6023613fdfe7ddc60e6c1f4e2"><div class="ttname"><a href="os3_2loader_8h.html#a666dfcc6023613fdfe7ddc60e6c1f4e2">finished</a></div><div class="ttdeci">int finished()</div><div class="ttdef"><b>Definition:</b> loader.c:12</div></div>
+<div class="ttc" id="aos3_2loader_8h_html_a80c32b58b690f1b577dbfa95bbcc5c05"><div class="ttname"><a href="os3_2loader_8h.html#a80c32b58b690f1b577dbfa95bbcc5c05">run_all_app</a></div><div class="ttdeci">int run_all_app()</div><div class="ttdef"><b>Definition:</b> loader.c:42</div></div>
+<div class="ttc" id="aos2_2loader_8h_html_ad17ddf1f6f302b109077a58598b0ae7c"><div class="ttname"><a href="os2_2loader_8h.html#ad17ddf1f6f302b109077a58598b0ae7c">loader_init</a></div><div class="ttdeci">void loader_init()</div><div class="ttdef"><b>Definition:</b> loader.c:10</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

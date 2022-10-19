@@ -5,6 +5,7 @@ var dir_cbdb8362360e11eafe2fa3bc74cf0ffd =
     [ "const.h", "const_8h.html", "const_8h" ],
     [ "defs.h", "defs_8h.html", "defs_8h" ],
     [ "log.h", "log_8h.html", "log_8h" ],
+    [ "modules.h", "modules_8h.html", null ],
     [ "printf.c", "printf_8c.html", "printf_8c" ],
     [ "printf.h", "printf_8h.html", "printf_8h" ],
     [ "riscv.h", "riscv_8h.html", "riscv_8h" ],

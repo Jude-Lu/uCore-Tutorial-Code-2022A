@@ -8,7 +8,7 @@ var virtio__disk_8c =
     [ "b", "virtio__disk_8c.html#a478a43f541f7e29b957eaaef78d660d4", null ],
     [ "desc", "virtio__disk_8c.html#a67cc2ad049e2ba5c3f6f617170e2e251", null ],
     [ "free", "virtio__disk_8c.html#a0608361a8f53a287e3f3a3c7e46ed1ef", null ],
-    [ "info", "virtio__disk_8c.html#aff5d8012402017be62d571c8b2cfb217", null ],
+    [ "info", "virtio__disk_8c.html#a6c0d07be46d80bcd2065e9d152311ac9", null ],
     [ "ops", "virtio__disk_8c.html#a5580404502a1641dea5aee5ba4b393f1", null ],
     [ "pages", "virtio__disk_8c.html#ac3b88cd8d0eb2119dc863f883170530d", null ],
     [ "PID", "virtio__disk_8c.html#ab932513f17ef9524ed8f51edea944248", null ],

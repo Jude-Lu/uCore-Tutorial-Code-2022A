@@ -1,0 +1,6 @@
+<map id="FSManager" name="FSManager">
+<area shape="rect" id="node1" title=" " alt="" coords="26,184,121,211"/>
+<area shape="rect" id="node2" href="$structfile.html" title=" " alt="" coords="52,95,95,121"/>
+<area shape="rect" id="node3" href="$structinode.html" title=" " alt="" coords="5,5,64,32"/>
+<area shape="rect" id="node4" href="$structpipe.html" title=" " alt="" coords="88,5,139,32"/>
+</map>

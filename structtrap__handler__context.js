@@ -9,5 +9,6 @@ var structtrap__handler__context =
     [ "set_kerneltrap", "structtrap__handler__context.html#ade101058bbf3ee934bd0bfe8b45af7a8", null ],
     [ "set_usertrap", "structtrap__handler__context.html#aa2a2adbea320888daabb3ec68111f6ae", null ],
     [ "super_external_handler", "structtrap__handler__context.html#a1a56e2e99660cc40be5dbbe6ed992367", null ],
+    [ "syscall", "structtrap__handler__context.html#af45a07d39dc5515b789e2af21cd5566a", null ],
     [ "yield", "structtrap__handler__context.html#a561f5d7612fb5c250655a20ffae8dafe", null ]
 ];

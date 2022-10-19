@@ -89,29 +89,30 @@ $(document).ready(function(){initNavTree('os5_2loader_8h_source.html',''); initR
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LOADER_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../utils/defs.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="os5_2proc_8h.html">proc.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">int</span> <a class="code" href="os3_2loader_8h.html#a666dfcc6023613fdfe7ddc60e6c1f4e2">finished</a>();</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">void</span> <a class="code" href="os2_2loader_8h.html#ad17ddf1f6f302b109077a58598b0ae7c">loader_init</a>();</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">int</span> <a class="code" href="os5_2loader_8h.html#a360e18ff5a39d011c1e2fba9fcd7e53e">load_init_app</a>();</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">int</span> <a class="code" href="os5_2loader_8h.html#ae30b53a828412f9fc8b404dc687eff77">loader</a>(<span class="keywordtype">int</span>, <span class="keyword">struct</span> <a class="code" href="structproc.html">proc</a> *);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">int</span> <a class="code" href="os5_2loader_8h.html#ae6984edb33fc19cd877b80843cc52a90">get_id_by_name</a>(<span class="keywordtype">char</span> *);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="os5_2loader_8h.html#a78cf30a084548c226ac61d0f5c3f1981">   13</a></span>&#160;<span class="preprocessor">#define BASE_ADDRESS (0x1000)</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="os5_2loader_8h.html#ad77d03e18a9477ef16ff8c4ae3c8b43d">   14</a></span>&#160;<span class="preprocessor">#define USTACK_SIZE (PAGE_SIZE)</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="os5_2loader_8h.html#a1e277eb04e74c97ef760c7fa1a48278b">   15</a></span>&#160;<span class="preprocessor">#define KSTACK_SIZE (PAGE_SIZE)</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="os5_2loader_8h.html#a1711f19932c0aee95211797f8eb7b5b8">   16</a></span>&#160;<span class="preprocessor">#define TRAP_PAGE_SIZE (PAGE_SIZE)</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif // LOADER_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../utils/modules.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="os5_2proc_8h.html">proc.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">int</span> <a class="code" href="os3_2loader_8h.html#a666dfcc6023613fdfe7ddc60e6c1f4e2">finished</a>();</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">void</span> <a class="code" href="os2_2loader_8h.html#ad17ddf1f6f302b109077a58598b0ae7c">loader_init</a>();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">int</span> <a class="code" href="os5_2loader_8h.html#a360e18ff5a39d011c1e2fba9fcd7e53e">load_init_app</a>();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">int</span> <a class="code" href="os5_2loader_8h.html#ae30b53a828412f9fc8b404dc687eff77">loader</a>(<span class="keywordtype">int</span>, <span class="keyword">struct</span> <a class="code" href="structproc.html">proc</a> *);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">int</span> <a class="code" href="os5_2loader_8h.html#ae6984edb33fc19cd877b80843cc52a90">get_id_by_name</a>(<span class="keywordtype">char</span> *);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="os5_2loader_8h.html#a78cf30a084548c226ac61d0f5c3f1981">   14</a></span>&#160;<span class="preprocessor">#define BASE_ADDRESS (0x1000)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="os5_2loader_8h.html#ad77d03e18a9477ef16ff8c4ae3c8b43d">   15</a></span>&#160;<span class="preprocessor">#define USTACK_SIZE (PAGE_SIZE)</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="os5_2loader_8h.html#a1e277eb04e74c97ef760c7fa1a48278b">   16</a></span>&#160;<span class="preprocessor">#define KSTACK_SIZE (PAGE_SIZE)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="os5_2loader_8h.html#a1711f19932c0aee95211797f8eb7b5b8">   17</a></span>&#160;<span class="preprocessor">#define TRAP_PAGE_SIZE (PAGE_SIZE)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif // LOADER_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aos3_2loader_8h_html_a666dfcc6023613fdfe7ddc60e6c1f4e2"><div class="ttname"><a href="os3_2loader_8h.html#a666dfcc6023613fdfe7ddc60e6c1f4e2">finished</a></div><div class="ttdeci">int finished()</div><div class="ttdef"><b>Definition:</b> loader.c:11</div></div>
-<div class="ttc" id="aos5_2loader_8h_html_a360e18ff5a39d011c1e2fba9fcd7e53e"><div class="ttname"><a href="os5_2loader_8h.html#a360e18ff5a39d011c1e2fba9fcd7e53e">load_init_app</a></div><div class="ttdeci">int load_init_app()</div><div class="ttdef"><b>Definition:</b> loader.c:89</div></div>
-<div class="ttc" id="aos5_2loader_8h_html_ae6984edb33fc19cd877b80843cc52a90"><div class="ttname"><a href="os5_2loader_8h.html#ae6984edb33fc19cd877b80843cc52a90">get_id_by_name</a></div><div class="ttdeci">int get_id_by_name(char *)</div><div class="ttdef"><b>Definition:</b> loader.c:27</div></div>
-<div class="ttc" id="aos2_2loader_8h_html_ad17ddf1f6f302b109077a58598b0ae7c"><div class="ttname"><a href="os2_2loader_8h.html#ad17ddf1f6f302b109077a58598b0ae7c">loader_init</a></div><div class="ttdeci">void loader_init()</div><div class="ttdef"><b>Definition:</b> loader.c:9</div></div>
-<div class="ttc" id="aos5_2loader_8h_html_ae30b53a828412f9fc8b404dc687eff77"><div class="ttname"><a href="os5_2loader_8h.html#ae30b53a828412f9fc8b404dc687eff77">loader</a></div><div class="ttdeci">int loader(int, struct proc *)</div><div class="ttdef"><b>Definition:</b> loader.c:83</div></div>
+<div class="ttc" id="aos3_2loader_8h_html_a666dfcc6023613fdfe7ddc60e6c1f4e2"><div class="ttname"><a href="os3_2loader_8h.html#a666dfcc6023613fdfe7ddc60e6c1f4e2">finished</a></div><div class="ttdeci">int finished()</div><div class="ttdef"><b>Definition:</b> loader.c:12</div></div>
+<div class="ttc" id="aos5_2loader_8h_html_a360e18ff5a39d011c1e2fba9fcd7e53e"><div class="ttname"><a href="os5_2loader_8h.html#a360e18ff5a39d011c1e2fba9fcd7e53e">load_init_app</a></div><div class="ttdeci">int load_init_app()</div><div class="ttdef"><b>Definition:</b> loader.c:90</div></div>
+<div class="ttc" id="aos5_2loader_8h_html_ae6984edb33fc19cd877b80843cc52a90"><div class="ttname"><a href="os5_2loader_8h.html#ae6984edb33fc19cd877b80843cc52a90">get_id_by_name</a></div><div class="ttdeci">int get_id_by_name(char *)</div><div class="ttdef"><b>Definition:</b> loader.c:28</div></div>
+<div class="ttc" id="aos2_2loader_8h_html_ad17ddf1f6f302b109077a58598b0ae7c"><div class="ttname"><a href="os2_2loader_8h.html#ad17ddf1f6f302b109077a58598b0ae7c">loader_init</a></div><div class="ttdeci">void loader_init()</div><div class="ttdef"><b>Definition:</b> loader.c:10</div></div>
+<div class="ttc" id="aos5_2loader_8h_html_ae30b53a828412f9fc8b404dc687eff77"><div class="ttname"><a href="os5_2loader_8h.html#ae30b53a828412f9fc8b404dc687eff77">loader</a></div><div class="ttdeci">int loader(int, struct proc *)</div><div class="ttdef"><b>Definition:</b> loader.c:84</div></div>
 <div class="ttc" id="aos5_2proc_8h_html"><div class="ttname"><a href="os5_2proc_8h.html">proc.h</a></div></div>
-<div class="ttc" id="astructproc_html"><div class="ttname"><a href="structproc.html">proc</a></div><div class="ttdef"><b>Definition:</b> proc.h:9</div></div>
+<div class="ttc" id="astructproc_html"><div class="ttname"><a href="structproc.html">proc</a></div><div class="ttdef"><b>Definition:</b> proc.h:10</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

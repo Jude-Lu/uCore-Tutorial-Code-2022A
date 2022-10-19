@@ -1,6 +1,6 @@
 var structinode =
 [
-    [ "addrs", "structinode.html#aebe94df634426bc6670af58b47492f48", null ],
+    [ "addrs", "structinode.html#a94905615a8f79fd11b8f500e1bbee16d", null ],
     [ "dev", "structinode.html#aaf61a1db4c34c23857104abc633d8ee6", null ],
     [ "inum", "structinode.html#a28fdf3543c2464efb0ec94a429ef8acc", null ],
     [ "ref", "structinode.html#adb528a1cb1ca190150183394d082590d", null ],

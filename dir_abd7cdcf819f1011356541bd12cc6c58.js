@@ -1,10 +1,5 @@
 var dir_abd7cdcf819f1011356541bd12cc6c58 =
 [
-    [ "fcntl.h", "os6_2fcntl_8h.html", "os6_2fcntl_8h" ],
-    [ "file.c", "os6_2file_8c.html", "os6_2file_8c" ],
-    [ "file.h", "os6_2file_8h.html", "os6_2file_8h" ],
-    [ "fs.c", "os6_2fs_8c.html", "os6_2fs_8c" ],
-    [ "fs.h", "os6_2fs_8h.html", "os6_2fs_8h" ],
     [ "loader.c", "os6_2loader_8c.html", "os6_2loader_8c" ],
     [ "loader.h", "os6_2loader_8h.html", "os6_2loader_8h" ],
     [ "main.c", "os6_2main_8c.html", "os6_2main_8c" ],

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['file_1087',['file',['../structfile.html',1,'']]]
+  ['file_1098',['file',['../structfile.html',1,'']]],
+  ['fsmanager_1099',['FSManager',['../structFSManager.html',1,'']]]
 ];

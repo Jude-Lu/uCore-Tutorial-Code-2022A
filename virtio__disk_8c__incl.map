@@ -1,23 +1,15 @@
-<map id="disk/virtio_disk.c" name="disk/virtio_disk.c">
-<area shape="rect" id="node1" title=" " alt="" coords="97,5,229,32"/>
-<area shape="rect" id="node2" href="$plic_8h.html" title=" " alt="" coords="5,80,104,107"/>
-<area shape="rect" id="node3" href="$defs_8h.html" title=" " alt="" coords="856,80,963,107"/>
-<area shape="rect" id="node20" href="$virtio_8h.html" title=" " alt="" coords="129,80,197,107"/>
-<area shape="rect" id="node4" href="$const_8h.html" title=" " alt="" coords="135,229,204,256"/>
-<area shape="rect" id="node5" href="$log_8h.html" title=" " alt="" coords="857,229,911,256"/>
-<area shape="rect" id="node6" href="$printf_8h.html" title=" " alt="" coords="947,155,1015,181"/>
-<area shape="rect" id="node7" href="$riscv_8h.html" title=" " alt="" coords="483,229,547,256"/>
-<area shape="rect" id="node8" href="$utils_2types_8h.html" title=" " alt="" coords="662,304,733,331"/>
-<area shape="rect" id="node9" href="$sbi_8h.html" title=" " alt="" coords="1613,229,1667,256"/>
-<area shape="rect" id="node10" href="$string_8h.html" title=" " alt="" coords="1691,229,1762,256"/>
-<area shape="rect" id="node11" href="$timer_8h.html" title=" " alt="" coords="243,229,311,256"/>
-<area shape="rect" id="node12" href="$console_8h.html" title=" " alt="" coords="1039,155,1123,181"/>
-<area shape="rect" id="node13" href="$syscall_8h.html" title=" " alt="" coords="731,155,871,181"/>
-<area shape="rect" id="node14" href="$trap_8h.html" title=" " alt="" coords="646,229,749,256"/>
-<area shape="rect" id="node15" href="$kalloc_8h.html" title=" " alt="" coords="1147,155,1301,181"/>
-<area shape="rect" id="node16" href="$map_8h.html" title=" " alt="" coords="301,155,445,181"/>
-<area shape="rect" id="node17" href="$vm_8h.html" title=" " alt="" coords="520,155,656,181"/>
-<area shape="rect" id="node18" href="$queue_8h.html" title=" " alt="" coords="1325,155,1501,181"/>
-<area shape="rect" id="node19" href="$processor_8h.html" title=" " alt="" coords="1138,229,1337,256"/>
-<area shape="rect" id="node21" href="$bio_8h.html" title=" " alt="" coords="70,155,125,181"/>
+<map id="easy&#45;fs/virtio_disk.c" name="easy&#45;fs/virtio_disk.c">
+<area shape="rect" id="node1" title=" " alt="" coords="107,5,260,32"/>
+<area shape="rect" id="node2" href="$virtio_8h.html" title=" " alt="" coords="150,80,218,107"/>
+<area shape="rect" id="node3" href="$bio_8h.html" title=" " alt="" coords="51,155,106,181"/>
+<area shape="rect" id="node7" href="$defs_8h.html" title=" " alt="" coords="278,155,385,181"/>
+<area shape="rect" id="node4" href="$utils_2types_8h.html" title=" " alt="" coords="218,379,333,405"/>
+<area shape="rect" id="node5" href="$const_8h.html" title=" " alt="" coords="22,229,135,256"/>
+<area shape="rect" id="node6" href="$riscv_8h.html" title=" " alt="" coords="122,304,186,331"/>
+<area shape="rect" id="node8" href="$log_8h.html" title=" " alt="" coords="262,229,316,256"/>
+<area shape="rect" id="node9" href="$printf_8h.html" title=" " alt="" coords="340,229,408,256"/>
+<area shape="rect" id="node10" href="$sbi_8h.html" title=" " alt="" coords="301,304,354,331"/>
+<area shape="rect" id="node11" href="$string_8h.html" title=" " alt="" coords="399,304,470,331"/>
+<area shape="rect" id="node12" href="$timer_8h.html" title=" " alt="" coords="503,304,571,331"/>
+<area shape="rect" id="node13" href="$console_8h.html" title=" " alt="" coords="586,229,670,256"/>
 </map>

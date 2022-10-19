@@ -88,59 +88,66 @@ $(document).ready(function(){initNavTree('const_8h_source.html',''); initResizab
 <a href="const_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CONST_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CONST_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="const_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">    4</a></span>&#160;<span class="preprocessor">#define PAGE_SIZE (0x1000)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="riscv_8h.html">riscv.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">enum</span> {</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="const_8h.html#a385c44f6fb256e5716a2302a5b940388a08864b73fa6c82cb8de78a336050bfdb">    7</a></span>&#160;    <a class="code" href="const_8h.html#a385c44f6fb256e5716a2302a5b940388a08864b73fa6c82cb8de78a336050bfdb">STDIN</a> = 0,</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="const_8h.html#a385c44f6fb256e5716a2302a5b940388ad1026b11391895f6e302f892a44a04df">    8</a></span>&#160;    <a class="code" href="const_8h.html#a385c44f6fb256e5716a2302a5b940388ad1026b11391895f6e302f892a44a04df">STDOUT</a> = 1,</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="const_8h.html#a385c44f6fb256e5716a2302a5b940388a4b971ca4918db729a147aa7c78cea0e3">    9</a></span>&#160;    <a class="code" href="const_8h.html#a385c44f6fb256e5716a2302a5b940388a4b971ca4918db729a147aa7c78cea0e3">STDERR</a> = 2,</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;};</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// memory layout</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="const_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">    6</a></span>&#160;<span class="preprocessor">#define PAGE_SIZE (0x1000)</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="const_8h.html#a726ca809ffd3d67ab4b8476646f26635a08864b73fa6c82cb8de78a336050bfdb">    9</a></span>&#160;    <a class="code" href="const_8h.html#a726ca809ffd3d67ab4b8476646f26635a08864b73fa6c82cb8de78a336050bfdb">STDIN</a> = 0,</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="const_8h.html#a726ca809ffd3d67ab4b8476646f26635ad1026b11391895f6e302f892a44a04df">   10</a></span>&#160;    <a class="code" href="const_8h.html#a726ca809ffd3d67ab4b8476646f26635ad1026b11391895f6e302f892a44a04df">STDOUT</a> = 1,</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="const_8h.html#a726ca809ffd3d67ab4b8476646f26635a4b971ca4918db729a147aa7c78cea0e3">   11</a></span>&#160;    <a class="code" href="const_8h.html#a726ca809ffd3d67ab4b8476646f26635a4b971ca4918db729a147aa7c78cea0e3">STDERR</a> = 2,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// the kernel expects there to be RAM</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// for use by the kernel and user pages</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// from physical address 0x80000000 to PHYSTOP.</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="const_8h.html#a20cbfc19992a40ab9ccf4aa8ab8283d0">   17</a></span>&#160;<span class="preprocessor">#define KERNBASE 0x80200000L</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="const_8h.html#ad3c557a115f7d82d9ef849846779531c">   18</a></span>&#160;<span class="preprocessor">#define PHYSTOP (0x80000000 + 128 * 1024 * 1024) // we have 128M memroy</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// one beyond the highest possible virtual address.</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// MAXVA is actually one bit less than the max allowed by</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// Sv39, to avoid having to sign-extend virtual addresses</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// that have the high bit set.</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="const_8h.html#a781d1689a393d7c6e4243349cfdf6ce8">   24</a></span>&#160;<span class="preprocessor">#define MAXVA (1L &lt;&lt; (9 + 9 + 9 + 12 - 1))</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// map the trampoline page to the highest address,</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// in both user and kernel space.</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="const_8h.html#a34b6200a7381d42137b691db308f5492">   28</a></span>&#160;<span class="preprocessor">#define USER_TOP (MAXVA)</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="const_8h.html#a52ba776b718bf663e0b46a209bb7cc28">   29</a></span>&#160;<span class="preprocessor">#define TRAMPOLINE (USER_TOP - PGSIZE)</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="const_8h.html#a595bcc3e08854d590c0118951f0d5f53">   30</a></span>&#160;<span class="preprocessor">#define TRAPFRAME (TRAMPOLINE - PGSIZE)</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="const_8h.html#af6368cbcf84fb75963198f7f8ee3cf3f">   32</a></span>&#160;<span class="preprocessor">#define MAX_APP_NUM (32)</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="const_8h.html#a58ce36916c399104e18d32ff090f21c6">   33</a></span>&#160;<span class="preprocessor">#define MAX_STR_LEN (300)</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="const_8h.html#a140badff32835d7b4825ce2ac8c3a1bc">   34</a></span>&#160;<span class="preprocessor">#define IDLE_PID (0)</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="const_8h.html#af2118cce41db1171e3c76c1c1268641b">   35</a></span>&#160;<span class="preprocessor">#define MAX_ARG_NUM (32) // max exec arguments</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// file system</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="const_8h.html#a8485f4e81de2537e6a0935626167a775">   39</a></span>&#160;<span class="preprocessor">#define NFILE (100) // open files per system</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="const_8h.html#adabafa10c7951be7c875cd2ee212be85">   40</a></span>&#160;<span class="preprocessor">#define NINODE (50) // maximum number of active i-nodes</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="const_8h.html#aa564a41c8409694da49b0badf2bb2853">   41</a></span>&#160;<span class="preprocessor">#define NDEV (10) // maximum major device number</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="const_8h.html#ae9ce6b24fe2aae59ff60b469c35febbc">   42</a></span>&#160;<span class="preprocessor">#define ROOTDEV (1) // device number of file system root disk</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="const_8h.html#a31cde324007b4e52bbba7079ec5e5f45">   43</a></span>&#160;<span class="preprocessor">#define MAXOPBLOCKS (10) // max # of blocks any FS op writes</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="const_8h.html#ad51e2f8dffd163c263ec676a268d0f0a">   44</a></span>&#160;<span class="preprocessor">#define NBUF (MAXOPBLOCKS * 3) // size of disk block cache</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="const_8h.html#a486f47992f736854db2444b01afd9991">   45</a></span>&#160;<span class="preprocessor">#define FSSIZE (1000) // size of file system in blocks</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="const_8h.html#a2d1edde91ea515b363277f4bbdc3244d">   46</a></span>&#160;<span class="preprocessor">#define MAXPATH (128) // maximum file path name</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="const_8h.html#a22c8ea96d09283ed6496347806cc72a0">   48</a></span>&#160;<span class="preprocessor">#define ROOTINO (1) // root i-number</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="const_8h.html#a403cf3149c084cea115b85c90721039a">   49</a></span>&#160;<span class="preprocessor">#define BSIZE (1024) // block size</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif // CONST_H</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// memory layout</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// the kernel expects there to be RAM</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// for use by the kernel and user pages</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// from physical address 0x80000000 to PHYSTOP.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="const_8h.html#a20cbfc19992a40ab9ccf4aa8ab8283d0">   19</a></span>&#160;<span class="preprocessor">#define KERNBASE 0x80200000L</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="const_8h.html#ad3c557a115f7d82d9ef849846779531c">   20</a></span>&#160;<span class="preprocessor">#define PHYSTOP (0x80000000 + 128 * 1024 * 1024) // we have 128M memroy</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// one beyond the highest possible virtual address.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// MAXVA is actually one bit less than the max allowed by</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// Sv39, to avoid having to sign-extend virtual addresses</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// that have the high bit set.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="const_8h.html#a781d1689a393d7c6e4243349cfdf6ce8">   26</a></span>&#160;<span class="preprocessor">#define MAXVA (1L &lt;&lt; (9 + 9 + 9 + 12 - 1))</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// map the trampoline page to the highest address,</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// in both user and kernel space.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="const_8h.html#a34b6200a7381d42137b691db308f5492">   30</a></span>&#160;<span class="preprocessor">#define USER_TOP (MAXVA)</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="const_8h.html#a52ba776b718bf663e0b46a209bb7cc28">   31</a></span>&#160;<span class="preprocessor">#define TRAMPOLINE (USER_TOP - PGSIZE)</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="const_8h.html#a595bcc3e08854d590c0118951f0d5f53">   32</a></span>&#160;<span class="preprocessor">#define TRAPFRAME (TRAMPOLINE - PGSIZE)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="const_8h.html#af6368cbcf84fb75963198f7f8ee3cf3f">   34</a></span>&#160;<span class="preprocessor">#define MAX_APP_NUM (32)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="const_8h.html#a58ce36916c399104e18d32ff090f21c6">   35</a></span>&#160;<span class="preprocessor">#define MAX_STR_LEN (300)</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="const_8h.html#a140badff32835d7b4825ce2ac8c3a1bc">   36</a></span>&#160;<span class="preprocessor">#define IDLE_PID (0)</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="const_8h.html#af2118cce41db1171e3c76c1c1268641b">   37</a></span>&#160;<span class="preprocessor">#define MAX_ARG_NUM (32) // max exec arguments</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// file system</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="const_8h.html#a8485f4e81de2537e6a0935626167a775">   41</a></span>&#160;<span class="preprocessor">#define NFILE (100) // open files per system</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="const_8h.html#adabafa10c7951be7c875cd2ee212be85">   42</a></span>&#160;<span class="preprocessor">#define NINODE (50) // maximum number of active i-nodes</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="const_8h.html#aa564a41c8409694da49b0badf2bb2853">   43</a></span>&#160;<span class="preprocessor">#define NDEV (10) // maximum major device number</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="const_8h.html#ae9ce6b24fe2aae59ff60b469c35febbc">   44</a></span>&#160;<span class="preprocessor">#define ROOTDEV (1) // device number of file system root disk</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="const_8h.html#a31cde324007b4e52bbba7079ec5e5f45">   45</a></span>&#160;<span class="preprocessor">#define MAXOPBLOCKS (10) // max # of blocks any FS op writes</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="const_8h.html#ad51e2f8dffd163c263ec676a268d0f0a">   46</a></span>&#160;<span class="preprocessor">#define NBUF (MAXOPBLOCKS * 3) // size of disk block cache</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="const_8h.html#a486f47992f736854db2444b01afd9991">   47</a></span>&#160;<span class="preprocessor">#define FSSIZE (1000) // size of file system in blocks</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="const_8h.html#a2d1edde91ea515b363277f4bbdc3244d">   48</a></span>&#160;<span class="preprocessor">#define MAXPATH (128) // maximum file path name</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="const_8h.html#a22c8ea96d09283ed6496347806cc72a0">   50</a></span>&#160;<span class="preprocessor">#define ROOTINO (1) // root i-number</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="const_8h.html#a403cf3149c084cea115b85c90721039a">   51</a></span>&#160;<span class="preprocessor">#define BSIZE (1024) // block size</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">// virtio mmio interface</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="const_8h.html#aac8de2a0393367154119c25e2b279953">   54</a></span>&#160;<span class="preprocessor">#define VIRTIO0 0x10001000</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="const_8h.html#a25f490f8544627e94679dd4eee307c8a">   55</a></span>&#160;<span class="preprocessor">#define VIRTIO0_IRQ 1</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif // CONST_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aconst_8h_html_a385c44f6fb256e5716a2302a5b940388a4b971ca4918db729a147aa7c78cea0e3"><div class="ttname"><a href="const_8h.html#a385c44f6fb256e5716a2302a5b940388a4b971ca4918db729a147aa7c78cea0e3">STDERR</a></div><div class="ttdeci">@ STDERR</div><div class="ttdef"><b>Definition:</b> const.h:9</div></div>
-<div class="ttc" id="aconst_8h_html_a385c44f6fb256e5716a2302a5b940388a08864b73fa6c82cb8de78a336050bfdb"><div class="ttname"><a href="const_8h.html#a385c44f6fb256e5716a2302a5b940388a08864b73fa6c82cb8de78a336050bfdb">STDIN</a></div><div class="ttdeci">@ STDIN</div><div class="ttdef"><b>Definition:</b> const.h:7</div></div>
-<div class="ttc" id="aconst_8h_html_a385c44f6fb256e5716a2302a5b940388ad1026b11391895f6e302f892a44a04df"><div class="ttname"><a href="const_8h.html#a385c44f6fb256e5716a2302a5b940388ad1026b11391895f6e302f892a44a04df">STDOUT</a></div><div class="ttdeci">@ STDOUT</div><div class="ttdef"><b>Definition:</b> const.h:8</div></div>
+<div class="ttc" id="aconst_8h_html_a726ca809ffd3d67ab4b8476646f26635ad1026b11391895f6e302f892a44a04df"><div class="ttname"><a href="const_8h.html#a726ca809ffd3d67ab4b8476646f26635ad1026b11391895f6e302f892a44a04df">STDOUT</a></div><div class="ttdeci">@ STDOUT</div><div class="ttdef"><b>Definition:</b> const.h:10</div></div>
+<div class="ttc" id="ariscv_8h_html"><div class="ttname"><a href="riscv_8h.html">riscv.h</a></div></div>
+<div class="ttc" id="aconst_8h_html_a726ca809ffd3d67ab4b8476646f26635a08864b73fa6c82cb8de78a336050bfdb"><div class="ttname"><a href="const_8h.html#a726ca809ffd3d67ab4b8476646f26635a08864b73fa6c82cb8de78a336050bfdb">STDIN</a></div><div class="ttdeci">@ STDIN</div><div class="ttdef"><b>Definition:</b> const.h:9</div></div>
+<div class="ttc" id="aconst_8h_html_a726ca809ffd3d67ab4b8476646f26635a4b971ca4918db729a147aa7c78cea0e3"><div class="ttname"><a href="const_8h.html#a726ca809ffd3d67ab4b8476646f26635a4b971ca4918db729a147aa7c78cea0e3">STDERR</a></div><div class="ttdeci">@ STDERR</div><div class="ttdef"><b>Definition:</b> const.h:11</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

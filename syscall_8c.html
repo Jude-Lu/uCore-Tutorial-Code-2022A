@@ -90,18 +90,16 @@ $(document).ready(function(){initNavTree('syscall_8c.html',''); initResizable();
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="syscall_8h_source.html">syscall.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="syscall__ids_8h_source.html">syscall_ids.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="trap_8h_source.html">../trap/trap.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 syscall.c 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="syscall_8c__incl.png" border="0" usemap="#syscall_2syscall_8c" alt=""/></div>
 <map name="syscall_2syscall_8c" id="syscall_2syscall_8c">
-<area shape="rect" title=" " alt="" coords="121,5,248,32"/>
-<area shape="rect" href="syscall_8h.html" title=" " alt="" coords="56,80,134,107"/>
-<area shape="rect" href="trap_8h.html" title=" " alt="" coords="145,155,248,181"/>
-<area shape="rect" href="syscall__ids_8h.html" title=" " alt="" coords="222,80,328,107"/>
-<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="32,229,147,256"/>
-<area shape="rect" href="log_8h.html" title=" " alt="" coords="22,155,120,181"/>
+<area shape="rect" title=" " alt="" coords="122,5,249,32"/>
+<area shape="rect" href="syscall_8h.html" title=" " alt="" coords="89,80,167,107"/>
+<area shape="rect" href="syscall__ids_8h.html" title=" " alt="" coords="191,80,297,107"/>
+<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="5,155,120,181"/>
+<area shape="rect" href="log_8h.html" title=" " alt="" coords="144,155,243,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -110,9 +108,9 @@ syscall.c 的引用(Include)关系图:</div>
 <tr class="memitem:a7315321a560121fe4cbc7b02e9d25abb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="syscall_8c.html#a7315321a560121fe4cbc7b02e9d25abb">set_syscall</a> (struct <a class="el" href="structsyscall__context.html">syscall_context</a> *<a class="el" href="structsyscall__context.html">syscall_context</a>)</td></tr>
 <tr class="memdesc:a7315321a560121fe4cbc7b02e9d25abb"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化sys_context  <a href="syscall_8c.html#a7315321a560121fe4cbc7b02e9d25abb">更多...</a><br /></td></tr>
 <tr class="separator:a7315321a560121fe4cbc7b02e9d25abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65d155d7348da6e191cf238fe2264434"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="syscall_8c.html#a65d155d7348da6e191cf238fe2264434">syscall</a> (struct <a class="el" href="structtrapframe.html">trapframe</a> *<a class="el" href="structtrapframe.html">trapframe</a>)</td></tr>
-<tr class="memdesc:a65d155d7348da6e191cf238fe2264434"><td class="mdescLeft">&#160;</td><td class="mdescRight">syscall函数从上下文中获取对应的syscall id，分别调用对应的syscall处理函数，而对应的syscall处理函数已经在sys_context中指定  <a href="syscall_8c.html#a65d155d7348da6e191cf238fe2264434">更多...</a><br /></td></tr>
-<tr class="separator:a65d155d7348da6e191cf238fe2264434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab59e887b0252a23a4e1671fc4b666a75"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="syscall_8c.html#ab59e887b0252a23a4e1671fc4b666a75">syscall</a> (<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a0, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a1, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a2, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a3, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a4, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a5, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a6, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a7)</td></tr>
+<tr class="memdesc:ab59e887b0252a23a4e1671fc4b666a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">syscall函数从上下文中获取对应的syscall id，分别调用对应的syscall处理函数，而对应的syscall处理函数已经在sys_context中指定  <a href="syscall_8c.html#ab59e887b0252a23a4e1671fc4b666a75">更多...</a><br /></td></tr>
+<tr class="separator:ab59e887b0252a23a4e1671fc4b666a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 变量</h2></td></tr>
@@ -140,18 +138,64 @@ syscall.c 的引用(Include)关系图:</div>
 
 </div>
 </div>
-<a id="a65d155d7348da6e191cf238fe2264434"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65d155d7348da6e191cf238fe2264434">&#9670;&nbsp;</a></span>syscall()</h2>
+<a id="ab59e887b0252a23a4e1671fc4b666a75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab59e887b0252a23a4e1671fc4b666a75">&#9670;&nbsp;</a></span>syscall()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void syscall </td>
+          <td class="memname">int syscall </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structtrapframe.html">trapframe</a> *&#160;</td>
-          <td class="paramname"><em>trapframe</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>a0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>a1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>a2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>a3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>a4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>a5</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>a6</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>a7</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">

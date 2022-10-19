@@ -21,7 +21,9 @@ var const_8h =
     [ "TRAMPOLINE", "const_8h.html#a52ba776b718bf663e0b46a209bb7cc28", null ],
     [ "TRAPFRAME", "const_8h.html#a595bcc3e08854d590c0118951f0d5f53", null ],
     [ "USER_TOP", "const_8h.html#a34b6200a7381d42137b691db308f5492", null ],
-    [ "STDIN", "const_8h.html#a385c44f6fb256e5716a2302a5b940388a08864b73fa6c82cb8de78a336050bfdb", null ],
-    [ "STDOUT", "const_8h.html#a385c44f6fb256e5716a2302a5b940388ad1026b11391895f6e302f892a44a04df", null ],
-    [ "STDERR", "const_8h.html#a385c44f6fb256e5716a2302a5b940388a4b971ca4918db729a147aa7c78cea0e3", null ]
+    [ "VIRTIO0", "const_8h.html#aac8de2a0393367154119c25e2b279953", null ],
+    [ "VIRTIO0_IRQ", "const_8h.html#a25f490f8544627e94679dd4eee307c8a", null ],
+    [ "STDIN", "const_8h.html#a726ca809ffd3d67ab4b8476646f26635a08864b73fa6c82cb8de78a336050bfdb", null ],
+    [ "STDOUT", "const_8h.html#a726ca809ffd3d67ab4b8476646f26635ad1026b11391895f6e302f892a44a04df", null ],
+    [ "STDERR", "const_8h.html#a726ca809ffd3d67ab4b8476646f26635a4b971ca4918db729a147aa7c78cea0e3", null ]
 ];

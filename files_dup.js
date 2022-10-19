@@ -1,6 +1,6 @@
 var files_dup =
 [
-    [ "disk", "dir_e762017bb575983546aa91deb0127528.html", "dir_e762017bb575983546aa91deb0127528" ],
+    [ "easy-fs", "dir_d3f582bb2fa850a4222b3790cad57e7c.html", "dir_d3f582bb2fa850a4222b3790cad57e7c" ],
     [ "kernel-vm", "dir_3e5ae976cba375449e7597bf7abde3d4.html", "dir_3e5ae976cba375449e7597bf7abde3d4" ],
     [ "nfs", "dir_df89737796a26303be6ff471cb6368ae.html", "dir_df89737796a26303be6ff471cb6368ae" ],
     [ "os1", "dir_747ae010b17410c5d43e6a31ad568a62.html", "dir_747ae010b17410c5d43e6a31ad568a62" ],
@@ -11,6 +11,7 @@ var files_dup =
     [ "os6", "dir_abd7cdcf819f1011356541bd12cc6c58.html", "dir_abd7cdcf819f1011356541bd12cc6c58" ],
     [ "os7", "dir_5cc995269fa4a9b75e62229954aa1b82.html", "dir_5cc995269fa4a9b75e62229954aa1b82" ],
     [ "os8", "dir_b545e7c90c84f0fd9866e0dc03b9bbc1.html", "dir_b545e7c90c84f0fd9866e0dc03b9bbc1" ],
+    [ "pipe", "dir_10a9ce0fed988f239170fb83130f0d8d.html", "dir_10a9ce0fed988f239170fb83130f0d8d" ],
     [ "syscall", "dir_9811c6ce1522be100e224c1fa7d3a362.html", "dir_9811c6ce1522be100e224c1fa7d3a362" ],
     [ "task-manage", "dir_a4e8cb575de928bc21dd998d296e3819.html", "dir_a4e8cb575de928bc21dd998d296e3819" ],
     [ "trap", "dir_9307fb714a15d92bd184c2e3f9de7e6f.html", "dir_9307fb714a15d92bd184c2e3f9de7e6f" ],

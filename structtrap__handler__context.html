@@ -127,6 +127,9 @@ trap_handler_context 的协作图:</div>
 <tr class="memitem:ac7139487d9ef96407f2e1fee22f5c01b"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#ac7139487d9ef96407f2e1fee22f5c01b">error_in_trap</a> )(int <a class="el" href="virtio__disk_8c.html#a051c9e198ee930358372c407a17e8b78">status</a>)</td></tr>
 <tr class="memdesc:ac7139487d9ef96407f2e1fee22f5c01b"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于处理当trap处理发生错误时要做的事  <a href="structtrap__handler__context.html#ac7139487d9ef96407f2e1fee22f5c01b">更多...</a><br /></td></tr>
 <tr class="separator:ac7139487d9ef96407f2e1fee22f5c01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af45a07d39dc5515b789e2af21cd5566a"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#af45a07d39dc5515b789e2af21cd5566a">syscall</a> )(<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a0, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a1, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a2, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a3, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a4, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a5, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a6, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a7)</td></tr>
+<tr class="memdesc:af45a07d39dc5515b789e2af21cd5566a"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于处理系统调用导致的trap  <a href="structtrap__handler__context.html#af45a07d39dc5515b789e2af21cd5566a">更多...</a><br /></td></tr>
+<tr class="separator:af45a07d39dc5515b789e2af21cd5566a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a56e2e99660cc40be5dbbe6ed992367"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a1a56e2e99660cc40be5dbbe6ed992367">super_external_handler</a> )(int <a class="el" href="structtrap__handler__context.html#a79b270d658c32d79ed40fee395764c65">cpuid</a>)</td></tr>
 <tr class="memdesc:a1a56e2e99660cc40be5dbbe6ed992367"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于处理非时间中断的一切外部中断，会在文件系统里面用到  <a href="structtrap__handler__context.html#a1a56e2e99660cc40be5dbbe6ed992367">更多...</a><br /></td></tr>
 <tr class="separator:a1a56e2e99660cc40be5dbbe6ed992367"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -271,6 +274,22 @@ trap_handler_context 的协作图:</div>
 </div><div class="memdoc">
 
 <p>用于处理非时间中断的一切外部中断，会在文件系统里面用到 </p>
+
+</div>
+</div>
+<a id="af45a07d39dc5515b789e2af21cd5566a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af45a07d39dc5515b789e2af21cd5566a">&#9670;&nbsp;</a></span>syscall</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* syscall(<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a0, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a1, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a2, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a3, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a4, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a5, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a6, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a7)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>用于处理系统调用导致的trap </p>
 
 </div>
 </div>

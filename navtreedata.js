@@ -28,7 +28,7 @@ var NAVTREE =
       [ "结构体索引", "classes.html", null ],
       [ "成员变量", "functions.html", [
         [ "全部", "functions.html", "functions_dup" ],
-        [ "变量", "functions_vars.html", null ],
+        [ "变量", "functions_vars.html", "functions_vars" ],
         [ "枚举值", "functions_eval.html", null ]
       ] ]
     ] ],
@@ -50,14 +50,13 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"nfs_2fs_8c.html#ac6dbbb3aaeee7114cf795be284be08ce",
-"os4__trap_8h.html",
-"os6__syscall_8c.html",
-"os8_2file_8c.html#a48cea474fd8856dc2d2a5f2601b7d275",
-"processor_8h.html#a69b2852fd7a8f739860efc716500bfe9",
-"structsyscall__context.html#a8b8bfd294abc4ea2da044b8ec38372f5",
-"syscall__ids_8h.html#a6b52de4cf05d696712d4c3fadfc301e6",
-"virtio_8h.html#a2bec6b89c384b4860985d98340a540d5"
+"globals_func_p.html",
+"os3_2proc_8h.html#a810c5b751df5bb30588613ed91095129",
+"os6_2proc_8c.html#aa8d34090b3dff1dcd42684b6bc50af96",
+"os8_2proc_8h_source.html",
+"structcondvar.html",
+"syscall__ids_8h.html#a00d05d17590c1292b5871c584a318f5f",
+"syscall__ids_8h.html#acdf6662b396a425148856eec7ac53ada"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';
