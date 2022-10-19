@@ -78,6 +78,8 @@ void trap_init()
 		.finish_usertrap = os6_finish_usertrap,
 		.error_in_trap = os6_error_in_trap,
 
+		.syscall = syscall,
+
 		.super_external_handler = os6_super_external_handler
 	};
 	set_trap(&os6_trap_context);

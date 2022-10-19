@@ -1,6 +1,5 @@
 #include "syscall.h"
 #include "syscall_ids.h"
-#include "../trap/trap.h"
 
 struct syscall_context* sys_context;
 
@@ -10,9 +9,9 @@ void set_syscall(struct syscall_context* syscall_context) {
 }
 
 /// syscall函数从上下文中获取对应的syscall id，分别调用对应的syscall处理函数，而对应的syscall处理函数已经在sys_context中指定
-void syscall(struct trapframe* trapframe) {
-	int id = trapframe->a7, ret = 0;
-	uint64 args[6] = {trapframe->a0, trapframe->a1, trapframe->a2, trapframe->a3, trapframe->a4, trapframe->a5};
+int syscall(uint64 a0, uint64 a1, uint64 a2, uint64 a3, uint64 a4, uint64 a5, uint64 a6, uint64 a7) {
+	int id = a7, ret = 0;
+	uint64 args[6] = {a0, a1, a2, a3, a4, a5};
 	switch (id) {
 		// ch2
 		case SYS_write:
@@ -121,5 +120,5 @@ void syscall(struct trapframe* trapframe) {
 			ret = -1;
 			errorf("unknown syscall %d", id);
 	}
-	trapframe->a0 = ret;
+	return ret;
 }

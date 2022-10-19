@@ -1,5 +1,5 @@
 #include "../utils/defs.h"
-#include "../utils/modules.h"
+#include "trap.h"
 
 struct trap_handler_context *trap_context;
 
@@ -73,7 +73,7 @@ void usertrap()
 		switch (cause) {
 		case UserEnvCall:
 			trapframe->epc += 4;
-			syscall(trapframe);
+			trapframe->a0 = (trap_context->syscall)(trapframe->a0, trapframe->a1, trapframe->a2, trapframe->a3, trapframe->a4, trapframe->a5, trapframe->a6, trapframe->a7);
 			break;
 		case StoreMisaligned:
 		case StorePageFault:
