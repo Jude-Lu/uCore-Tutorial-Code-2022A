@@ -2,7 +2,7 @@
 #include "loader.h"
 #include "proc.h"
 
-extern char trampoline[], uservec[];
+extern char trampoline[], uservec[], kerneltrap[];
 extern char userret[];
 
 int os4_cpuid()

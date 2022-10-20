@@ -106,6 +106,5 @@ struct trap_handler_context
 
 void set_trap(struct trap_handler_context *trap_handler_context);
 void usertrapret();
-void kerneltrap();
 
 #endif // TRAP_H

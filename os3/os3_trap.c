@@ -2,7 +2,7 @@
 #include "loader.h"
 #include "proc.h"
 
-extern char uservec[];
+extern char uservec[], kerneltrap[];
 extern void *userret(uint64);
 
 int os3_cpuid()
