@@ -7,8 +7,6 @@ void set_trap(struct trap_handler_context *trap_handler_context) {
 	trap_context = trap_handler_context;
 }
 
-extern char uservec[], kernelvec[];
-
 void unknown_trap()
 {
 	errorf("unknown trap: %p, stval = %p", r_scause(), r_stval());
@@ -118,6 +116,9 @@ void usertrapret()
 	x |= SSTATUS_SPIE; // enable interrupts in user mode
 	w_sstatus(x);
 
-	// Do some preprocessing, and then call userret in trampoline.S
-	(trap_context->call_userret)();
+	// Get trapframe_va and satp, and then call userret in trampoline.S
+	void (*userret)(uint64, pagetable_t) = (void (*)(uint64, pagetable_t))trap_context->get_userret();
+	uint64 trapframe_va = trap_context->get_trapframe_va();
+	pagetable_t satp = trap_context->get_satp();
+	userret(trapframe_va, satp);
 }

@@ -4,8 +4,7 @@
 #include "../trap/plic.h"
 #include "../easy-fs/virtio.h"
 
-extern char trampoline[], uservec[];
-extern char userret[], kernelvec[];
+extern char trampoline[], uservec[], kernelvec[], userret[];
 
 void os8_set_usertrap()
 {
@@ -22,19 +21,24 @@ struct trapframe* os8_get_trapframe()
 	return ((struct thread*)curr_task())->trapframe;
 }
 
+uint64 os8_get_trapframe_va()
+{
+	return get_thread_trapframe_va(((struct thread*)curr_task())->tid);
+}
+
+pagetable_t os8_get_satp()
+{
+	return (pagetable_t)MAKE_SATP(((struct thread*)curr_task())->process->pagetable);
+}
+
 uint64 os8_get_kernel_sp()
 {
 	return ((struct thread*)curr_task())->kstack + KSTACK_SIZE;
 }
 
-void os8_call_userret()
+uint64 os8_get_userret()
 {
-	struct trapframe *trapframe = ((struct thread*)curr_task())->trapframe;
-	uint64 satp = MAKE_SATP(((struct thread*)curr_task())->process->pagetable);
-	uint64 fn = TRAMPOLINE + (userret - trampoline);
-	uint64 trapframe_va = get_thread_trapframe_va(((struct thread*)curr_task())->tid);
-	debugf("return to user @ %p, sp @ %p", trapframe->epc, trapframe->sp);
-	((void (*)(uint64, uint64))fn)(trapframe_va, satp);
+	return TRAMPOLINE + (userret - trampoline);
 }
 
 void os8_finish_usertrap(int cause)
@@ -73,9 +77,11 @@ void trap_init()
 		.set_kerneltrap = os8_set_kerneltrap,
 
 		.get_trapframe = os8_get_trapframe,
+		.get_trapframe_va = os8_get_trapframe_va,
+		.get_satp = os8_get_satp,
 		.get_kernel_sp = os8_get_kernel_sp,
 		
-		.call_userret = os8_call_userret,
+		.get_userret = os8_get_userret,
 		.finish_usertrap = os8_finish_usertrap,
 		.error_in_trap = os8_error_in_trap,
 
