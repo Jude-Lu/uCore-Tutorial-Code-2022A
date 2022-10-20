@@ -1,9 +1,5 @@
-#include "../utils/defs.h"
-#include "../utils/modules.h"
 #include "loader.h"
-#include "../trap/plic.h"
 #include "os6_trap.h"
-#include "../easy-fs/virtio.h"
 #include "os6_syscall.h"
 
 extern char e_text[]; // kernel.ld sets this to end of kernel code.

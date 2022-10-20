@@ -24,13 +24,14 @@ struct file {
 	int ref; // reference count
 	char readable;
 	char writable;
-	struct pipe *pipe; // FD_PIPE
+	void *pipe; // FD_PIPE
 	struct inode *ip; // FD_INODE
 	uint off;
 };
 
 void fileclose(struct file *);
 struct file *filealloc();
+int pipealloc(struct file *, struct file *);
 int fileopen(char *, uint64);
 uint64 inodewrite(struct file *, uint64, uint64);
 uint64 inoderead(struct file *, uint64, uint64);
@@ -48,6 +49,7 @@ struct FSManager
 	int (*either_copyout)(pagetable_t, int, uint64, char*, uint64);
 	int (*either_copyin)(pagetable_t, int, uint64, char*, uint64);
 
+	void* (*pipeopen)();
 	void (*pipeclose)(void *_pi, int writable);
 };
 

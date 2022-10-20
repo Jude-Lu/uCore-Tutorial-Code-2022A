@@ -488,6 +488,12 @@ void proc_init()
 	{
 		.get_curr_pagetable = get_curr_pagetable,
 		.yield = yield,
+
+		.kalloc = kalloc,
+		.kfree = kfree,
+
+		.copyin = copyin,
+		.copyout = copyout
 	};
 	set_pipe(&os8_pipe);
 
@@ -502,6 +508,7 @@ void proc_init()
 		.either_copyout = either_copyout,
 		.either_copyin = either_copyin,
 
+		.pipeopen = pipeopen,
 		.pipeclose = pipeclose,
 	};
 	set_file(&os8_fs_manager);
