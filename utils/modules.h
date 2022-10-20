@@ -12,6 +12,5 @@
 #include "../pipe/pipe.h"
 #include "../easy-fs/virtio.h"
 #include "../easy-fs/file.h"
-#include "../easy-fs/fs.h"
 
 #endif // MODULES_H
