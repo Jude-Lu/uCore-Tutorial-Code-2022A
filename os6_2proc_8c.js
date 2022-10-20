@@ -20,6 +20,7 @@ var os6_2proc_8c =
     [ "scheduler", "os6_2proc_8c.html#ad8e3087dd5a5c3096d2499c84f670c28", null ],
     [ "threadid", "os6_2proc_8c.html#ae326139715a1c3bf4e78a00fefbce3ac", null ],
     [ "undefined_pipeclose", "os6_2proc_8c.html#af230cd9589b53ec9d2e2f9bfbd359cd5", null ],
+    [ "undefined_pipeopen", "os6_2proc_8c.html#a612309b0fb41cfe41ba5245bbb76e2ea", null ],
     [ "wait", "os6_2proc_8c.html#ad6705e3a955798f1a6120dfe0ad7599d", null ],
     [ "yield", "os6_2proc_8c.html#a58c8b2ad0ea491a6642e5e1cbd358c89", null ],
     [ "pool", "os6_2proc_8c.html#a4070d337407ea066d0e20b02935e4932", null ]

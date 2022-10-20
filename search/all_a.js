@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['kalloc_189',['kalloc',['../kalloc_8c.html#af17b13c26f8a126a85de3f3fa19eb73b',1,'kalloc():&#160;kalloc.c'],['../kalloc_8h.html#af17b13c26f8a126a85de3f3fa19eb73b',1,'kalloc():&#160;kalloc.c']]],
+  ['kalloc_189',['kalloc',['../structpipe__context.html#a89bc9f8ce1c103a6a89dd1142f343392',1,'pipe_context::kalloc()'],['../kalloc_8c.html#af17b13c26f8a126a85de3f3fa19eb73b',1,'kalloc():&#160;kalloc.c'],['../kalloc_8h.html#af17b13c26f8a126a85de3f3fa19eb73b',1,'kalloc():&#160;kalloc.c']]],
   ['kalloc_2ec_190',['kalloc.c',['../kalloc_8c.html',1,'']]],
   ['kalloc_2eh_191',['kalloc.h',['../kalloc_8h.html',1,'']]],
   ['kernbase_192',['KERNBASE',['../const_8h.html#a20cbfc19992a40ab9ccf4aa8ab8283d0',1,'const.h']]],
@@ -10,7 +10,7 @@ var searchData=
   ['kernel_5ftrap_196',['kernel_trap',['../structtrapframe.html#a2d34b6c98236b8612c4bc7541b16d0f3',1,'trapframe']]],
   ['kerneltrap_197',['kerneltrap',['../trap_8c.html#aee583f80cd74fdae19ca29d44705b560',1,'kerneltrap():&#160;trap.c'],['../trap_8h.html#aee583f80cd74fdae19ca29d44705b560',1,'kerneltrap():&#160;trap.c']]],
   ['kernelvec_198',['kernelvec',['../os6__trap_8c.html#ad29ed72d197c94e5b6bd9f5cb80fe5fe',1,'kernelvec():&#160;os6_trap.c'],['../os7__trap_8c.html#ad29ed72d197c94e5b6bd9f5cb80fe5fe',1,'kernelvec():&#160;os7_trap.c'],['../os8__trap_8c.html#ad29ed72d197c94e5b6bd9f5cb80fe5fe',1,'kernelvec():&#160;os8_trap.c'],['../trap_8c.html#ad29ed72d197c94e5b6bd9f5cb80fe5fe',1,'kernelvec():&#160;trap.c']]],
-  ['kfree_199',['kfree',['../kalloc_8c.html#ac905e2b33cf453b44b2c00ff8c5332bc',1,'kfree(void *pa):&#160;kalloc.c'],['../kalloc_8h.html#acee1960bdb3a19cb495341ec725cafef',1,'kfree(void *):&#160;kalloc.c']]],
+  ['kfree_199',['kfree',['../structpipe__context.html#a65e6bfd5a0c5b1bc2cb7fd417656bee6',1,'pipe_context::kfree()'],['../kalloc_8c.html#ac905e2b33cf453b44b2c00ff8c5332bc',1,'kfree(void *pa):&#160;kalloc.c'],['../kalloc_8h.html#acee1960bdb3a19cb495341ec725cafef',1,'kfree(void *):&#160;kalloc.c']]],
   ['kinit_200',['kinit',['../kalloc_8c.html#aea491e5b831017ff628370356b1e233d',1,'kinit():&#160;kalloc.c'],['../kalloc_8h.html#aea491e5b831017ff628370356b1e233d',1,'kinit():&#160;kalloc.c']]],
   ['kmem_201',['kmem',['../kalloc_8c.html#a6a5142ddb0a6dc3644c8b65e75b35c16',1,'kalloc.c']]],
   ['kstack_202',['kstack',['../structproc.html#a7015a263779e0f6a56f1f089a02e040d',1,'proc::kstack()'],['../structthread.html#a7015a263779e0f6a56f1f089a02e040d',1,'thread::kstack()'],['../os3_2proc_8c.html#a341f3518b387b7395c5b5df86459cd6f',1,'kstack():&#160;proc.c']]],

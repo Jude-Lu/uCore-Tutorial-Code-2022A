@@ -1,8 +1,8 @@
 <map id="kernel&#45;vm/kalloc.c" name="kernel&#45;vm/kalloc.c">
-<area shape="rect" id="node1" title=" " alt="" coords="590,5,730,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="521,5,661,32"/>
 <area shape="rect" id="node2" href="$kalloc_8h.html" title=" " alt="" coords="136,155,208,181"/>
 <area shape="rect" id="node3" href="$defs_8h.html" title=" " alt="" coords="800,304,907,331"/>
-<area shape="rect" id="node13" href="$modules_8h.html" title=" " alt="" coords="593,80,727,107"/>
+<area shape="rect" id="node13" href="$modules_8h.html" title=" " alt="" coords="523,80,658,107"/>
 <area shape="rect" id="node4" href="$const_8h.html" title=" " alt="" coords="435,379,504,405"/>
 <area shape="rect" id="node5" href="$riscv_8h.html" title=" " alt="" coords="455,453,519,480"/>
 <area shape="rect" id="node6" href="$utils_2types_8h.html" title=" " alt="" coords="781,528,851,555"/>
@@ -17,11 +17,11 @@
 <area shape="rect" id="node16" href="$plic_8h.html" title=" " alt="" coords="384,229,483,256"/>
 <area shape="rect" id="node17" href="$map_8h.html" title=" " alt="" coords="5,379,149,405"/>
 <area shape="rect" id="node18" href="$vm_8h.html" title=" " alt="" coords="173,379,309,405"/>
-<area shape="rect" id="node19" href="$queue_8h.html" title=" " alt="" coords="435,155,611,181"/>
+<area shape="rect" id="node19" href="$queue_8h.html" title=" " alt="" coords="440,155,616,181"/>
 <area shape="rect" id="node20" href="$processor_8h.html" title=" " alt="" coords="233,453,431,480"/>
 <area shape="rect" id="node21" href="$pipe_8h.html" title=" " alt="" coords="507,229,613,256"/>
 <area shape="rect" id="node22" href="$virtio_8h.html" title=" " alt="" coords="638,229,770,256"/>
-<area shape="rect" id="node24" href="$file_8h.html" title=" " alt="" coords="811,155,930,181"/>
+<area shape="rect" id="node24" href="$file_8h.html" title=" " alt="" coords="806,155,925,181"/>
 <area shape="rect" id="node25" href="$easy-fs_2fs_8h.html" title=" " alt="" coords="846,229,893,256"/>
 <area shape="rect" id="node23" href="$bio_8h.html" title=" " alt="" coords="514,304,569,331"/>
 </map>

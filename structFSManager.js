@@ -6,5 +6,6 @@ var structFSManager =
     [ "filepool", "structFSManager.html#a3771f062bd97878faa51ebd23b997de0", null ],
     [ "filepool_size", "structFSManager.html#aa79f83b35b38093079841f86c2614d93", null ],
     [ "get_curr_pagetable", "structFSManager.html#ad6d828f6936788fd5630aa1028856e2e", null ],
-    [ "pipeclose", "structFSManager.html#ab49f7215a6fd0b90849a6981607c253c", null ]
+    [ "pipeclose", "structFSManager.html#ab49f7215a6fd0b90849a6981607c253c", null ],
+    [ "pipeopen", "structFSManager.html#af2eab1cd3bb0b41403bda554a49a9ede", null ]
 ];
