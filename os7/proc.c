@@ -1,8 +1,8 @@
-#include "proc.h"
-#include "loader.h"
-#include "os7_trap.h"
 #include "../utils/defs.h"
 #include "../utils/modules.h"
+#include "loader.h"
+#include "os7_trap.h"
+#include "os7_syscall.h"
 
 struct proc pool[NPROC];
 __attribute__((aligned(16))) char kstack[NPROC][PAGE_SIZE];
@@ -348,7 +348,13 @@ void proc_init()
 	static struct pipe_context os7_pipe = 
 	{
 		.get_curr_pagetable = get_curr_pagetable,
-		.yield = yield
+		.yield = yield,
+		
+		.kalloc = kalloc,
+		.kfree = kfree,
+
+		.copyin = copyin,
+		.copyout = copyout
 	};
 	set_pipe(&os7_pipe);
 
@@ -363,6 +369,7 @@ void proc_init()
 		.either_copyout = either_copyout,
 		.either_copyin = either_copyin,
 
+		.pipeopen = pipeopen,
 		.pipeclose = pipeclose,
 	};
 	set_file(&os7_fs_manager);

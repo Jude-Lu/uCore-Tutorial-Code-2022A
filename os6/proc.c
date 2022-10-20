@@ -312,6 +312,13 @@ int fdalloc(struct file *f)
 	return -1;
 }
 
+void* undefined_pipeopen()
+{
+	errorf("In ch6, we have not implemented pipe yet!");
+	exit(-1);
+	return 0;
+}
+
 void undefined_pipeclose(void *_pi, int writable)
 {
 	errorf("In ch6, we have not implemented pipe yet!");

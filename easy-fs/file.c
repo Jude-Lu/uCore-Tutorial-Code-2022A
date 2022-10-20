@@ -159,3 +159,19 @@ uint64 inoderead(struct file *f, uint64 va, uint64 len)
 		f->off += r;
 	return r;
 }
+
+int pipealloc(struct file *f0, struct file *f1)
+{
+	void *pi;
+	if ((pi = (fs_manager->pipeopen)()) == 0)
+		return -1;
+	f0->type = FD_PIPE;
+	f0->readable = 1;
+	f0->writable = 0;
+	f0->pipe = pi;
+	f1->type = FD_PIPE;
+	f1->readable = 0;
+	f1->writable = 1;
+	f1->pipe = pi;
+	return 0;
+}
