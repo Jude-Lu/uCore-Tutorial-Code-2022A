@@ -1,6 +1,5 @@
 #include "queue.h"
 #include "../utils/defs.h"
-#include "../utils/modules.h"
 
 int process_queue_data[QUEUE_SIZE];
 
