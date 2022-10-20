@@ -104,7 +104,6 @@ $(document).ready(function(){initNavTree('globals_o.html',''); initResizable(); 
 </li>
 <li>os2_call_userret()
 : <a class="el" href="os2__trap_8h.html#a6ab7fb987592bf284db8406596330f03">os2_trap.h</a>
-, <a class="el" href="os2__trap_8c.html#a6ab7fb987592bf284db8406596330f03">os2_trap.c</a>
 </li>
 <li>os2_cpuid()
 : <a class="el" href="os2__trap_8c.html#af3e22d0d628b39e1fe7217b1e1aa7773">os2_trap.c</a>
@@ -121,9 +120,18 @@ $(document).ready(function(){initNavTree('globals_o.html',''); initResizable(); 
 : <a class="el" href="os2__trap_8c.html#a120ea527aa9117b4b44e60d899d27b58">os2_trap.c</a>
 , <a class="el" href="os2__trap_8h.html#a120ea527aa9117b4b44e60d899d27b58">os2_trap.h</a>
 </li>
+<li>os2_get_satp()
+: <a class="el" href="os2__trap_8c.html#a7b53aa5283f029af662ca57e66ffcced">os2_trap.c</a>
+</li>
 <li>os2_get_trapframe()
 : <a class="el" href="os2__trap_8c.html#a13c03a426ca269310845fb941938b84a">os2_trap.c</a>
 , <a class="el" href="os2__trap_8h.html#a13c03a426ca269310845fb941938b84a">os2_trap.h</a>
+</li>
+<li>os2_get_trapframe_va()
+: <a class="el" href="os2__trap_8c.html#ae3674c466b985eb5db3a3481cddc899a">os2_trap.c</a>
+</li>
+<li>os2_get_userret()
+: <a class="el" href="os2__trap_8c.html#af675a4d3a9f3b48acf1b30b631861c57">os2_trap.c</a>
 </li>
 <li>os2_set_kerneltrap()
 : <a class="el" href="os2__trap_8c.html#a76134d78319e86111d023d83a5bd181a">os2_trap.c</a>
@@ -145,15 +153,14 @@ $(document).ready(function(){initNavTree('globals_o.html',''); initResizable(); 
 , <a class="el" href="os2__trap_8h.html#a773f15eede4843bd2acea53a03d55ba6">os2_trap.h</a>
 </li>
 <li>os3_call_userret()
-: <a class="el" href="os3__trap_8c.html#a9312a095d382d00c7289bf4c6b7d836b">os3_trap.c</a>
-, <a class="el" href="os3__trap_8h.html#a9312a095d382d00c7289bf4c6b7d836b">os3_trap.h</a>
+: <a class="el" href="os3__trap_8h.html#a9312a095d382d00c7289bf4c6b7d836b">os3_trap.h</a>
 </li>
 <li>os3_cpuid()
 : <a class="el" href="os3__trap_8c.html#a3c2c75638b04f15ba1a2fcae84a4150c">os3_trap.c</a>
 </li>
 <li>os3_error_in_trap()
-: <a class="el" href="os3__trap_8c.html#a02641f6f92cc26c6da58e722f561ec2b">os3_trap.c</a>
-, <a class="el" href="os3__trap_8h.html#a02641f6f92cc26c6da58e722f561ec2b">os3_trap.h</a>
+: <a class="el" href="os3__trap_8h.html#a02641f6f92cc26c6da58e722f561ec2b">os3_trap.h</a>
+, <a class="el" href="os3__trap_8c.html#a02641f6f92cc26c6da58e722f561ec2b">os3_trap.c</a>
 </li>
 <li>os3_finish_usertrap()
 : <a class="el" href="os3__trap_8c.html#a4f67d645b4ace02354af53d5f7006080">os3_trap.c</a>
@@ -163,9 +170,18 @@ $(document).ready(function(){initNavTree('globals_o.html',''); initResizable(); 
 : <a class="el" href="os3__trap_8c.html#ad1dd8c5950911d65a79653500e47f35f">os3_trap.c</a>
 , <a class="el" href="os3__trap_8h.html#ad1dd8c5950911d65a79653500e47f35f">os3_trap.h</a>
 </li>
+<li>os3_get_satp()
+: <a class="el" href="os3__trap_8c.html#a9526adf57d20f3c4c999a793bad92786">os3_trap.c</a>
+</li>
 <li>os3_get_trapframe()
 : <a class="el" href="os3__trap_8c.html#a9b3527330fc9c18a64e9e7be4791eb80">os3_trap.c</a>
 , <a class="el" href="os3__trap_8h.html#a9b3527330fc9c18a64e9e7be4791eb80">os3_trap.h</a>
+</li>
+<li>os3_get_trapframe_va()
+: <a class="el" href="os3__trap_8c.html#ae9754316cdaff7ec2b41b7ed014e7c53">os3_trap.c</a>
+</li>
+<li>os3_get_userret()
+: <a class="el" href="os3__trap_8c.html#aaa855394a73ad59ad4b4d454c3520787">os3_trap.c</a>
 </li>
 <li>os3_set_kerneltrap()
 : <a class="el" href="os3__trap_8c.html#aa4ea57ce7f8977ea8936418ecae35f7a">os3_trap.c</a>
@@ -189,8 +205,7 @@ $(document).ready(function(){initNavTree('globals_o.html',''); initResizable(); 
 : <a class="el" href="os3__syscall_8c.html#a197e9ed1e4d70e7d15a47ae28458a107">os3_syscall.c</a>
 </li>
 <li>os4_call_userret()
-: <a class="el" href="os4__trap_8c.html#a0456818edc9324692652da72527cc4a0">os4_trap.c</a>
-, <a class="el" href="os4__trap_8h.html#a0456818edc9324692652da72527cc4a0">os4_trap.h</a>
+: <a class="el" href="os4__trap_8h.html#a0456818edc9324692652da72527cc4a0">os4_trap.h</a>
 </li>
 <li>os4_cpuid()
 : <a class="el" href="os4__trap_8c.html#a42933e44d0dad87e4e5c8a0388909095">os4_trap.c</a>
@@ -207,9 +222,18 @@ $(document).ready(function(){initNavTree('globals_o.html',''); initResizable(); 
 : <a class="el" href="os4__trap_8c.html#ade6979936a7c2703e3ff7ba58881a0d7">os4_trap.c</a>
 , <a class="el" href="os4__trap_8h.html#ade6979936a7c2703e3ff7ba58881a0d7">os4_trap.h</a>
 </li>
+<li>os4_get_satp()
+: <a class="el" href="os4__trap_8c.html#ad16625bf35e190cfcd6519575b8f236a">os4_trap.c</a>
+</li>
 <li>os4_get_trapframe()
 : <a class="el" href="os4__trap_8c.html#a3636ee6b3feb769216a1af82d17f9488">os4_trap.c</a>
 , <a class="el" href="os4__trap_8h.html#a3636ee6b3feb769216a1af82d17f9488">os4_trap.h</a>
+</li>
+<li>os4_get_trapframe_va()
+: <a class="el" href="os4__trap_8c.html#a93a17a7d457025a73d4816f3128f7ce5">os4_trap.c</a>
+</li>
+<li>os4_get_userret()
+: <a class="el" href="os4__trap_8c.html#a958c29a01ed4a272e755f6a508180018">os4_trap.c</a>
 </li>
 <li>os4_set_kerneltrap()
 : <a class="el" href="os4__trap_8c.html#a3d48b78b976d53b6eb477ef4e3634b44">os4_trap.c</a>
@@ -233,8 +257,7 @@ $(document).ready(function(){initNavTree('globals_o.html',''); initResizable(); 
 : <a class="el" href="os4__syscall_8c.html#a2a1a4cb8a7ef3fac3cdd774705369fdb">os4_syscall.c</a>
 </li>
 <li>os5_call_userret()
-: <a class="el" href="os5__trap_8c.html#a8a28a93ac6a5f248aaabe3a71e965fcf">os5_trap.c</a>
-, <a class="el" href="os5__trap_8h.html#a8a28a93ac6a5f248aaabe3a71e965fcf">os5_trap.h</a>
+: <a class="el" href="os5__trap_8h.html#a8a28a93ac6a5f248aaabe3a71e965fcf">os5_trap.h</a>
 </li>
 <li>os5_cpuid()
 : <a class="el" href="os5__trap_8c.html#aeec755f269e606285aca98ffe60f2622">os5_trap.c</a>
@@ -251,9 +274,18 @@ $(document).ready(function(){initNavTree('globals_o.html',''); initResizable(); 
 : <a class="el" href="os5__trap_8c.html#a94ba2269c78018beff91651fc8fc6304">os5_trap.c</a>
 , <a class="el" href="os5__trap_8h.html#a94ba2269c78018beff91651fc8fc6304">os5_trap.h</a>
 </li>
+<li>os5_get_satp()
+: <a class="el" href="os5__trap_8c.html#ac27df85dbaa78e15e185b4458474b178">os5_trap.c</a>
+</li>
 <li>os5_get_trapframe()
 : <a class="el" href="os5__trap_8c.html#ab4df0201450161136051bb421604ac86">os5_trap.c</a>
 , <a class="el" href="os5__trap_8h.html#ab4df0201450161136051bb421604ac86">os5_trap.h</a>
+</li>
+<li>os5_get_trapframe_va()
+: <a class="el" href="os5__trap_8c.html#a91c6bc011debd09934052b9934d4fc17">os5_trap.c</a>
+</li>
+<li>os5_get_userret()
+: <a class="el" href="os5__trap_8c.html#aa088832032ad3dd788064091271a137a">os5_trap.c</a>
 </li>
 <li>os5_set_kerneltrap()
 : <a class="el" href="os5__trap_8c.html#ad1e09ec123783d336b707d39badc188e">os5_trap.c</a>
@@ -301,8 +333,7 @@ $(document).ready(function(){initNavTree('globals_o.html',''); initResizable(); 
 : <a class="el" href="os5__syscall_8c.html#a8cb3c83cf100b150a97e978a38b48835">os5_syscall.c</a>
 </li>
 <li>os6_call_userret()
-: <a class="el" href="os6__trap_8c.html#a0906a6b41f093e7b1ac2d7e3e5dddb3e">os6_trap.c</a>
-, <a class="el" href="os6__trap_8h.html#a0906a6b41f093e7b1ac2d7e3e5dddb3e">os6_trap.h</a>
+: <a class="el" href="os6__trap_8h.html#a0906a6b41f093e7b1ac2d7e3e5dddb3e">os6_trap.h</a>
 </li>
 <li>os6_error_in_trap()
 : <a class="el" href="os6__trap_8c.html#aa1dd13d97afd49ed8f4d9a90f7c6652b">os6_trap.c</a>
@@ -316,9 +347,18 @@ $(document).ready(function(){initNavTree('globals_o.html',''); initResizable(); 
 : <a class="el" href="os6__trap_8c.html#ad52343084965be9c26d0141f93395159">os6_trap.c</a>
 , <a class="el" href="os6__trap_8h.html#ad52343084965be9c26d0141f93395159">os6_trap.h</a>
 </li>
+<li>os6_get_satp()
+: <a class="el" href="os6__trap_8c.html#a70b359debb341a2ff591fc9b4cf9471e">os6_trap.c</a>
+</li>
 <li>os6_get_trapframe()
 : <a class="el" href="os6__trap_8c.html#a5c88e92dbcf9206b445b2e812353a82c">os6_trap.c</a>
 , <a class="el" href="os6__trap_8h.html#a5c88e92dbcf9206b445b2e812353a82c">os6_trap.h</a>
+</li>
+<li>os6_get_trapframe_va()
+: <a class="el" href="os6__trap_8c.html#a293a7f943071489fa053cc53f5721799">os6_trap.c</a>
+</li>
+<li>os6_get_userret()
+: <a class="el" href="os6__trap_8c.html#ab1ab226997de87a8278189832349cf98">os6_trap.c</a>
 </li>
 <li>os6_set_kerneltrap()
 : <a class="el" href="os6__trap_8c.html#abf8e4b1028c68b3fa04c94d1ebc189af">os6_trap.c</a>
@@ -381,32 +421,43 @@ $(document).ready(function(){initNavTree('globals_o.html',''); initResizable(); 
 : <a class="el" href="os6__syscall_8c.html#ac2f0995cb50960b63c024b44848af2fd">os6_syscall.c</a>
 </li>
 <li>os7_call_userret()
-: <a class="el" href="os7__trap_8c.html#a3149176f9bcf4ad5ef861034f3b13705">os7_trap.c</a>
-, <a class="el" href="os7__trap_8h.html#a3149176f9bcf4ad5ef861034f3b13705">os7_trap.h</a>
+: <a class="el" href="os7__trap_8h.html#a3149176f9bcf4ad5ef861034f3b13705">os7_trap.h</a>
 </li>
 <li>os7_error_in_trap()
 : <a class="el" href="os7__trap_8c.html#a5415d0e8f9af0220f05cc970157c0627">os7_trap.c</a>
 , <a class="el" href="os7__trap_8h.html#a5415d0e8f9af0220f05cc970157c0627">os7_trap.h</a>
 </li>
 <li>os7_finish_usertrap()
-: <a class="el" href="os7__trap_8h.html#af6a41843126a33256c0d52ceb57a4267">os7_trap.h</a>
-, <a class="el" href="os7__trap_8c.html#af6a41843126a33256c0d52ceb57a4267">os7_trap.c</a>
+: <a class="el" href="os7__trap_8c.html#af6a41843126a33256c0d52ceb57a4267">os7_trap.c</a>
+, <a class="el" href="os7__trap_8h.html#af6a41843126a33256c0d52ceb57a4267">os7_trap.h</a>
 </li>
 <li>os7_get_kernel_sp()
-: <a class="el" href="os7__trap_8c.html#ac3349d932289fc0463833b6041892576">os7_trap.c</a>
-, <a class="el" href="os7__trap_8h.html#ac3349d932289fc0463833b6041892576">os7_trap.h</a>
+: <a class="el" href="os7__trap_8h.html#ac3349d932289fc0463833b6041892576">os7_trap.h</a>
+, <a class="el" href="os7__trap_8c.html#ac3349d932289fc0463833b6041892576">os7_trap.c</a>
+</li>
+<li>os7_get_satp()
+: <a class="el" href="os7__trap_8c.html#a131b2b449f5367aca8f05d17e69b2361">os7_trap.c</a>
 </li>
 <li>os7_get_trapframe()
-: <a class="el" href="os7__trap_8h.html#a4421b1bd78e005fe7dcd7c072de74914">os7_trap.h</a>
-, <a class="el" href="os7__trap_8c.html#a4421b1bd78e005fe7dcd7c072de74914">os7_trap.c</a>
+: <a class="el" href="os7__trap_8c.html#a4421b1bd78e005fe7dcd7c072de74914">os7_trap.c</a>
+, <a class="el" href="os7__trap_8h.html#a4421b1bd78e005fe7dcd7c072de74914">os7_trap.h</a>
+</li>
+<li>os7_get_trapframe_va()
+: <a class="el" href="os7__trap_8c.html#abc8ddc3e9b559928c0f71e5982341de1">os7_trap.c</a>
+</li>
+<li>os7_get_userret()
+: <a class="el" href="os7__trap_8c.html#a3a4b032cebef88181e218e1e0d5e4b25">os7_trap.c</a>
+</li>
+<li>os7_get_userret_arguments()
+: <a class="el" href="os7__trap_8c.html#ab70b13b78bdb2b6a37e4a0c04e77550b">os7_trap.c</a>
 </li>
 <li>os7_set_kerneltrap()
 : <a class="el" href="os7__trap_8h.html#abde086308903782219b29e854277e070">os7_trap.h</a>
 , <a class="el" href="os7__trap_8c.html#abde086308903782219b29e854277e070">os7_trap.c</a>
 </li>
 <li>os7_set_usertrap()
-: <a class="el" href="os7__trap_8h.html#a78d2378a720040b4393a141fc41248fc">os7_trap.h</a>
-, <a class="el" href="os7__trap_8c.html#a78d2378a720040b4393a141fc41248fc">os7_trap.c</a>
+: <a class="el" href="os7__trap_8c.html#a78d2378a720040b4393a141fc41248fc">os7_trap.c</a>
+, <a class="el" href="os7__trap_8h.html#a78d2378a720040b4393a141fc41248fc">os7_trap.h</a>
 </li>
 <li>os7_super_external_handler()
 : <a class="el" href="os7__trap_8c.html#a2b5d6b36a28eec1384b0e23fae182270">os7_trap.c</a>
@@ -450,7 +501,6 @@ $(document).ready(function(){initNavTree('globals_o.html',''); initResizable(); 
 </li>
 <li>os8_call_userret()
 : <a class="el" href="os8__trap_8h.html#a2356f76a3769c8570b3d7d6a583c9358">os8_trap.h</a>
-, <a class="el" href="os8__trap_8c.html#a2356f76a3769c8570b3d7d6a583c9358">os8_trap.c</a>
 </li>
 <li>os8_error_in_trap()
 : <a class="el" href="os8__trap_8h.html#a26ae0402dceac6b9def4c14a9a710b90">os8_trap.h</a>
@@ -461,20 +511,29 @@ $(document).ready(function(){initNavTree('globals_o.html',''); initResizable(); 
 , <a class="el" href="os8__trap_8c.html#a1dc87f6b56cbe6cab597147956c6587e">os8_trap.c</a>
 </li>
 <li>os8_get_kernel_sp()
-: <a class="el" href="os8__trap_8c.html#a7a2d005a60467b804553caeca33deb8a">os8_trap.c</a>
-, <a class="el" href="os8__trap_8h.html#a7a2d005a60467b804553caeca33deb8a">os8_trap.h</a>
+: <a class="el" href="os8__trap_8h.html#a7a2d005a60467b804553caeca33deb8a">os8_trap.h</a>
+, <a class="el" href="os8__trap_8c.html#a7a2d005a60467b804553caeca33deb8a">os8_trap.c</a>
+</li>
+<li>os8_get_satp()
+: <a class="el" href="os8__trap_8c.html#ab5befdb82a5e27eae34ebb37e9da68cc">os8_trap.c</a>
 </li>
 <li>os8_get_trapframe()
-: <a class="el" href="os8__trap_8c.html#a7f25b68f8d6d2e7d05a28418da701464">os8_trap.c</a>
-, <a class="el" href="os8__trap_8h.html#a7f25b68f8d6d2e7d05a28418da701464">os8_trap.h</a>
+: <a class="el" href="os8__trap_8h.html#a7f25b68f8d6d2e7d05a28418da701464">os8_trap.h</a>
+, <a class="el" href="os8__trap_8c.html#a7f25b68f8d6d2e7d05a28418da701464">os8_trap.c</a>
+</li>
+<li>os8_get_trapframe_va()
+: <a class="el" href="os8__trap_8c.html#ad21d4006f2b4975979db83945159249f">os8_trap.c</a>
+</li>
+<li>os8_get_userret()
+: <a class="el" href="os8__trap_8c.html#a189f8688b3c2beaa9fe63d95d7934f5b">os8_trap.c</a>
 </li>
 <li>os8_set_kerneltrap()
 : <a class="el" href="os8__trap_8c.html#ab1ba209e2e4e91c6d6176d8fbca9dd2c">os8_trap.c</a>
 , <a class="el" href="os8__trap_8h.html#ab1ba209e2e4e91c6d6176d8fbca9dd2c">os8_trap.h</a>
 </li>
 <li>os8_set_usertrap()
-: <a class="el" href="os8__trap_8h.html#ac81b12597d54871bd1d7c24f03773652">os8_trap.h</a>
-, <a class="el" href="os8__trap_8c.html#ac81b12597d54871bd1d7c24f03773652">os8_trap.c</a>
+: <a class="el" href="os8__trap_8c.html#ac81b12597d54871bd1d7c24f03773652">os8_trap.c</a>
+, <a class="el" href="os8__trap_8h.html#ac81b12597d54871bd1d7c24f03773652">os8_trap.h</a>
 </li>
 <li>os8_super_external_handler()
 : <a class="el" href="os8__trap_8c.html#a339fc31c68f894dc8b8df43c04be5b92">os8_trap.c</a>

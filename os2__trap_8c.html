@@ -127,8 +127,6 @@ os2_trap.c 的引用(Include)关系图:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:af21368bc7ede908fb7fbf4983c8d69f2"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#af21368bc7ede908fb7fbf4983c8d69f2">userret</a> (<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
-<tr class="separator:af21368bc7ede908fb7fbf4983c8d69f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a773f15eede4843bd2acea53a03d55ba6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#a773f15eede4843bd2acea53a03d55ba6">os2_yield</a> ()</td></tr>
 <tr class="separator:a773f15eede4843bd2acea53a03d55ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3e22d0d628b39e1fe7217b1e1aa7773"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#af3e22d0d628b39e1fe7217b1e1aa7773">os2_cpuid</a> ()</td></tr>
@@ -139,10 +137,14 @@ os2_trap.c 的引用(Include)关系图:</div>
 <tr class="separator:a76134d78319e86111d023d83a5bd181a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13c03a426ca269310845fb941938b84a"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structtrapframe.html">trapframe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#a13c03a426ca269310845fb941938b84a">os2_get_trapframe</a> ()</td></tr>
 <tr class="separator:a13c03a426ca269310845fb941938b84a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3674c466b985eb5db3a3481cddc899a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#ae3674c466b985eb5db3a3481cddc899a">os2_get_trapframe_va</a> ()</td></tr>
+<tr class="separator:ae3674c466b985eb5db3a3481cddc899a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b53aa5283f029af662ca57e66ffcced"><td class="memItemLeft" align="right" valign="top"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#a7b53aa5283f029af662ca57e66ffcced">os2_get_satp</a> ()</td></tr>
+<tr class="separator:a7b53aa5283f029af662ca57e66ffcced"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a120ea527aa9117b4b44e60d899d27b58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#a120ea527aa9117b4b44e60d899d27b58">os2_get_kernel_sp</a> ()</td></tr>
 <tr class="separator:a120ea527aa9117b4b44e60d899d27b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ab7fb987592bf284db8406596330f03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#a6ab7fb987592bf284db8406596330f03">os2_call_userret</a> ()</td></tr>
-<tr class="separator:a6ab7fb987592bf284db8406596330f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af675a4d3a9f3b48acf1b30b631861c57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#af675a4d3a9f3b48acf1b30b631861c57">os2_get_userret</a> ()</td></tr>
+<tr class="separator:af675a4d3a9f3b48acf1b30b631861c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a0f93cbc7b70f5c262a1a0f558daec5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#a1a0f93cbc7b70f5c262a1a0f558daec5">os2_finish_usertrap</a> (int cause)</td></tr>
 <tr class="separator:a1a0f93cbc7b70f5c262a1a0f558daec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf292fadd91301bf76b0ebb61ff84db1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#abf292fadd91301bf76b0ebb61ff84db1">os2_error_in_trap</a> (int <a class="el" href="virtio__disk_8c.html#a051c9e198ee930358372c407a17e8b78">status</a>)</td></tr>
@@ -154,33 +156,16 @@ os2_trap.c 的引用(Include)关系图:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 变量</h2></td></tr>
-<tr class="memitem:a796aa4017efb6527598a228f4b7cc9ac"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#a796aa4017efb6527598a228f4b7cc9ac">trampoline</a> []</td></tr>
-<tr class="separator:a796aa4017efb6527598a228f4b7cc9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6435376c8373232f9561dfb25e7ca28"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#aa6435376c8373232f9561dfb25e7ca28">uservec</a> []</td></tr>
 <tr class="separator:aa6435376c8373232f9561dfb25e7ca28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9c9215e9c192dac7b9c5dc0bf3745f3"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#af9c9215e9c192dac7b9c5dc0bf3745f3">boot_stack_top</a> []</td></tr>
-<tr class="separator:af9c9215e9c192dac7b9c5dc0bf3745f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af564f710557d70393b9fb1cce4e194d7"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#af564f710557d70393b9fb1cce4e194d7">userret</a> []</td></tr>
+<tr class="separator:af564f710557d70393b9fb1cce4e194d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae158f7bccaf4f7f1b6a74eb2e166aa46"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#ae158f7bccaf4f7f1b6a74eb2e166aa46">trap_page</a> []</td></tr>
 <tr class="separator:ae158f7bccaf4f7f1b6a74eb2e166aa46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c9215e9c192dac7b9c5dc0bf3745f3"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os2__trap_8c.html#af9c9215e9c192dac7b9c5dc0bf3745f3">boot_stack_top</a> []</td></tr>
+<tr class="separator:af9c9215e9c192dac7b9c5dc0bf3745f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
-<a id="a6ab7fb987592bf284db8406596330f03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ab7fb987592bf284db8406596330f03">&#9670;&nbsp;</a></span>os2_call_userret()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void os2_call_userret </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="af3e22d0d628b39e1fe7217b1e1aa7773"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af3e22d0d628b39e1fe7217b1e1aa7773">&#9670;&nbsp;</a></span>os2_cpuid()</h2>
 
@@ -251,6 +236,23 @@ os2_trap.c 的引用(Include)关系图:</div>
 
 </div>
 </div>
+<a id="a7b53aa5283f029af662ca57e66ffcced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b53aa5283f029af662ca57e66ffcced">&#9670;&nbsp;</a></span>os2_get_satp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> os2_get_satp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a13c03a426ca269310845fb941938b84a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a13c03a426ca269310845fb941938b84a">&#9670;&nbsp;</a></span>os2_get_trapframe()</h2>
 
@@ -259,6 +261,40 @@ os2_trap.c 的引用(Include)关系图:</div>
       <table class="memname">
         <tr>
           <td class="memname">struct <a class="el" href="structtrapframe.html">trapframe</a>* os2_get_trapframe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3674c466b985eb5db3a3481cddc899a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3674c466b985eb5db3a3481cddc899a">&#9670;&nbsp;</a></span>os2_get_trapframe_va()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os2_get_trapframe_va </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af675a4d3a9f3b48acf1b30b631861c57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af675a4d3a9f3b48acf1b30b631861c57">&#9670;&nbsp;</a></span>os2_get_userret()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os2_get_userret </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -353,24 +389,6 @@ os2_trap.c 的引用(Include)关系图:</div>
 
 </div>
 </div>
-<a id="af21368bc7ede908fb7fbf4983c8d69f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af21368bc7ede908fb7fbf4983c8d69f2">&#9670;&nbsp;</a></span>userret()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* userret </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">变量说明</h2>
 <a id="af9c9215e9c192dac7b9c5dc0bf3745f3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9c9215e9c192dac7b9c5dc0bf3745f3">&#9670;&nbsp;</a></span>boot_stack_top</h2>
@@ -386,20 +404,6 @@ os2_trap.c 的引用(Include)关系图:</div>
 
 </div>
 </div>
-<a id="a796aa4017efb6527598a228f4b7cc9ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a796aa4017efb6527598a228f4b7cc9ac">&#9670;&nbsp;</a></span>trampoline</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char trampoline[]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ae158f7bccaf4f7f1b6a74eb2e166aa46"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae158f7bccaf4f7f1b6a74eb2e166aa46">&#9670;&nbsp;</a></span>trap_page</h2>
 
@@ -408,6 +412,20 @@ os2_trap.c 的引用(Include)关系图:</div>
       <table class="memname">
         <tr>
           <td class="memname">char trap_page[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af564f710557d70393b9fb1cce4e194d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af564f710557d70393b9fb1cce4e194d7">&#9670;&nbsp;</a></span>userret</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char userret[]</td>
         </tr>
       </table>
 </div><div class="memdoc">

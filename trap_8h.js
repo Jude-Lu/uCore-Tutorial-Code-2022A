@@ -26,7 +26,6 @@ var trap_8h =
       [ "UserExternal", "trap_8h.html#a137af7bce5ff764f5c0aa4550086deaaafb1ffb20766193b289339bf4aab6b802", null ],
       [ "SupervisorExternal", "trap_8h.html#a137af7bce5ff764f5c0aa4550086deaaa4583de1d5b73acd12c43416df6a6349b", null ]
     ] ],
-    [ "kerneltrap", "trap_8h.html#aee583f80cd74fdae19ca29d44705b560", null ],
     [ "set_trap", "trap_8h.html#abc6b4a1e99d8bf04a249c5cd8cc6107f", null ],
     [ "usertrapret", "trap_8h.html#af7af9d3b41281fc03534de3900476b85", null ]
 ];

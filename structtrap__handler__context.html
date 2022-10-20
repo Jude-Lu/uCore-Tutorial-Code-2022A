@@ -113,14 +113,20 @@ trap_handler_context 的协作图:</div>
 <tr class="memitem:ade101058bbf3ee934bd0bfe8b45af7a8"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#ade101058bbf3ee934bd0bfe8b45af7a8">set_kerneltrap</a> )()</td></tr>
 <tr class="separator:ade101058bbf3ee934bd0bfe8b45af7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6323c0d99db43d2078caf5d35be792f6"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structtrapframe.html">trapframe</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a6323c0d99db43d2078caf5d35be792f6">get_trapframe</a> )()</td></tr>
-<tr class="memdesc:a6323c0d99db43d2078caf5d35be792f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于得到当前正在考虑的trapframe,在ch2里面是全局共用的，到后面就是不同进程、再到不同线程的trap_frame  <a href="structtrap__handler__context.html#a6323c0d99db43d2078caf5d35be792f6">更多...</a><br /></td></tr>
+<tr class="memdesc:a6323c0d99db43d2078caf5d35be792f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于得到当前正在考虑的trapframe，在ch2里面是全局共用的，到后面就是不同进程、再到不同线程的trap_frame  <a href="structtrap__handler__context.html#a6323c0d99db43d2078caf5d35be792f6">更多...</a><br /></td></tr>
 <tr class="separator:a6323c0d99db43d2078caf5d35be792f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3c72b4d7409db28789f5a7151761c1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#ae3c72b4d7409db28789f5a7151761c1d">get_trapframe_va</a> )()</td></tr>
+<tr class="memdesc:ae3c72b4d7409db28789f5a7151761c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于得到当前正在考虑的trapframe的虚拟地址  <a href="structtrap__handler__context.html#ae3c72b4d7409db28789f5a7151761c1d">更多...</a><br /></td></tr>
+<tr class="separator:ae3c72b4d7409db28789f5a7151761c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712dbfb95495eaef551d8c5a8da9cd11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a712dbfb95495eaef551d8c5a8da9cd11">get_satp</a> )()</td></tr>
+<tr class="memdesc:a712dbfb95495eaef551d8c5a8da9cd11"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于得到页表的地址  <a href="structtrap__handler__context.html#a712dbfb95495eaef551d8c5a8da9cd11">更多...</a><br /></td></tr>
+<tr class="separator:a712dbfb95495eaef551d8c5a8da9cd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3280f63e6ab69094abadf4e8d37052ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a3280f63e6ab69094abadf4e8d37052ef">get_kernel_sp</a> )()</td></tr>
 <tr class="memdesc:a3280f63e6ab69094abadf4e8d37052ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于拿到内核栈的栈顶指针  <a href="structtrap__handler__context.html#a3280f63e6ab69094abadf4e8d37052ef">更多...</a><br /></td></tr>
 <tr class="separator:a3280f63e6ab69094abadf4e8d37052ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7329c04b46f49b26ed857a313f6cff18"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a7329c04b46f49b26ed857a313f6cff18">call_userret</a> )()</td></tr>
-<tr class="memdesc:a7329c04b46f49b26ed857a313f6cff18"><td class="mdescLeft">&#160;</td><td class="mdescRight">放在usertrapret的最后执行，是在从S态回到U态前要做的一些工作，如把页表地址取出，然后调用userret最终回到S态  <a href="structtrap__handler__context.html#a7329c04b46f49b26ed857a313f6cff18">更多...</a><br /></td></tr>
-<tr class="separator:a7329c04b46f49b26ed857a313f6cff18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ed3b389a4cec6c26df53089b8d086ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a9ed3b389a4cec6c26df53089b8d086ab">get_userret</a> )()</td></tr>
+<tr class="memdesc:a9ed3b389a4cec6c26df53089b8d086ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">得到userret的虚拟地址（在使用虚存机制时候，它在kernel里面会被映射到特定的位置）  <a href="structtrap__handler__context.html#a9ed3b389a4cec6c26df53089b8d086ab">更多...</a><br /></td></tr>
+<tr class="separator:a9ed3b389a4cec6c26df53089b8d086ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dbf56b66aa018dbface0b288c14822c"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a1dbf56b66aa018dbface0b288c14822c">finish_usertrap</a> )(int cause)</td></tr>
 <tr class="memdesc:a1dbf56b66aa018dbface0b288c14822c"><td class="mdescLeft">&#160;</td><td class="mdescRight">在usertrap执行结束后执行，cause是异常编号，这里主要是为了兼容ch2，后面的章节里面只要调用usertrapret即可  <a href="structtrap__handler__context.html#a1dbf56b66aa018dbface0b288c14822c">更多...</a><br /></td></tr>
 <tr class="separator:a1dbf56b66aa018dbface0b288c14822c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,22 +141,6 @@ trap_handler_context 的协作图:</div>
 <tr class="separator:a1a56e2e99660cc40be5dbbe6ed992367"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">结构体成员变量说明</h2>
-<a id="a7329c04b46f49b26ed857a313f6cff18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7329c04b46f49b26ed857a313f6cff18">&#9670;&nbsp;</a></span>call_userret</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void(* call_userret()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>放在usertrapret的最后执行，是在从S态回到U态前要做的一些工作，如把页表地址取出，然后调用userret最终回到S态 </p>
-
-</div>
-</div>
 <a id="a79b270d658c32d79ed40fee395764c65"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a79b270d658c32d79ed40fee395764c65">&#9670;&nbsp;</a></span>cpuid</h2>
 
@@ -215,6 +205,22 @@ trap_handler_context 的协作图:</div>
 
 </div>
 </div>
+<a id="a712dbfb95495eaef551d8c5a8da9cd11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a712dbfb95495eaef551d8c5a8da9cd11">&#9670;&nbsp;</a></span>get_satp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(* get_satp()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>用于得到页表的地址 </p>
+
+</div>
+</div>
 <a id="a6323c0d99db43d2078caf5d35be792f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6323c0d99db43d2078caf5d35be792f6">&#9670;&nbsp;</a></span>get_trapframe</h2>
 
@@ -227,7 +233,39 @@ trap_handler_context 的协作图:</div>
       </table>
 </div><div class="memdoc">
 
-<p>用于得到当前正在考虑的trapframe,在ch2里面是全局共用的，到后面就是不同进程、再到不同线程的trap_frame </p>
+<p>用于得到当前正在考虑的trapframe，在ch2里面是全局共用的，到后面就是不同进程、再到不同线程的trap_frame </p>
+
+</div>
+</div>
+<a id="ae3c72b4d7409db28789f5a7151761c1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3c72b4d7409db28789f5a7151761c1d">&#9670;&nbsp;</a></span>get_trapframe_va</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* get_trapframe_va()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>用于得到当前正在考虑的trapframe的虚拟地址 </p>
+
+</div>
+</div>
+<a id="a9ed3b389a4cec6c26df53089b8d086ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ed3b389a4cec6c26df53089b8d086ab">&#9670;&nbsp;</a></span>get_userret</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* get_userret()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>得到userret的虚拟地址（在使用虚存机制时候，它在kernel里面会被映射到特定的位置） </p>
 
 </div>
 </div>
