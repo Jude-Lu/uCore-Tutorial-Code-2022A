@@ -2,8 +2,7 @@
 #include "loader.h"
 #include "proc.h"
 
-extern char uservec[];
-extern void *userret(uint64);
+extern char uservec[], userret[], kerneltrap[];
 
 int os3_cpuid()
 {
@@ -25,14 +24,26 @@ struct trapframe* os3_get_trapframe()
 	return ((struct proc*)curr_task())->trapframe;
 }
 
+uint64 os3_get_trapframe_va()
+{
+	// Actually, os3 does not have the concept of virtual address.
+	return (uint64)os3_get_trapframe();
+}
+
+pagetable_t os3_get_satp()
+{
+	// Actually, os3 does not have pagetable.
+	return 0;
+}
+
 uint64 os3_get_kernel_sp()
 {
 	return ((struct proc*)curr_task())->kstack + PGSIZE;
 }
 
-void os3_call_userret()
+uint64 os3_get_userret()
 {
-	userret((uint64)os3_get_trapframe());
+	return (uint64)userret;
 }
 
 void os3_finish_usertrap(int cause)
@@ -62,9 +73,11 @@ void trap_init()
 		.set_kerneltrap = os3_set_kerneltrap,
 
 		.get_trapframe = os3_get_trapframe,
+		.get_trapframe_va = os3_get_trapframe_va,
+		.get_satp = os3_get_satp,
 		.get_kernel_sp = os3_get_kernel_sp,
 		
-		.call_userret = os3_call_userret,
+		.get_userret = os3_get_userret,
 		.finish_usertrap = os3_finish_usertrap,
 		.error_in_trap = os3_error_in_trap,
 

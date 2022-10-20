@@ -2,8 +2,7 @@
 #include "loader.h"
 #include "proc.h"
 
-extern char trampoline[], uservec[];
-extern char userret[];
+extern char trampoline[], uservec[], kerneltrap[], userret[];
 
 int os4_cpuid()
 {
@@ -25,18 +24,24 @@ struct trapframe* os4_get_trapframe()
 	return ((struct proc*)curr_task())->trapframe;
 }
 
+uint64 os4_get_trapframe_va()
+{
+	return TRAPFRAME;
+}
+
+pagetable_t os4_get_satp()
+{
+	return (pagetable_t)MAKE_SATP(((struct proc*)curr_task())->pagetable);
+}
+
 uint64 os4_get_kernel_sp()
 {
 	return ((struct proc*)curr_task())->kstack + PGSIZE;
 }
 
-void os4_call_userret()
+uint64 os4_get_userret()
 {
-	struct trapframe *trapframe = ((struct proc*)curr_task())->trapframe;
-	uint64 satp = MAKE_SATP(((struct proc*)curr_task())->pagetable);
-	uint64 fn = TRAMPOLINE + (userret - trampoline);
-	tracef("return to user @ %p", trapframe->epc);
-	((void (*)(uint64, uint64))fn)(TRAPFRAME, satp);
+	return (uint64)(TRAMPOLINE + (userret - trampoline));
 }
 
 void os4_finish_usertrap(int cause)
@@ -66,9 +71,11 @@ void trap_init()
 		.set_kerneltrap = os4_set_kerneltrap,
 
 		.get_trapframe = os4_get_trapframe,
+		.get_trapframe_va = os4_get_trapframe_va,
+		.get_satp = os4_get_satp,
 		.get_kernel_sp = os4_get_kernel_sp,
 		
-		.call_userret = os4_call_userret,
+		.get_userret = os4_get_userret,
 		.finish_usertrap = os4_finish_usertrap,
 		.error_in_trap = os4_error_in_trap,
 

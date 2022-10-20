@@ -85,13 +85,17 @@ struct trap_handler_context
 	void (*set_usertrap)();
 	void (*set_kerneltrap)();
 	
-	/// 用于得到当前正在考虑的trapframe,在ch2里面是全局共用的，到后面就是不同进程、再到不同线程的trap_frame
+	/// 用于得到当前正在考虑的trapframe，在ch2里面是全局共用的，到后面就是不同进程、再到不同线程的trap_frame
 	struct trapframe* (*get_trapframe)();
+	/// 用于得到当前正在考虑的trapframe的虚拟地址
+	uint64 (*get_trapframe_va)();
+	/// 用于得到页表的地址
+	pagetable_t (*get_satp)();
 	/// 用于拿到内核栈的栈顶指针
 	uint64 (*get_kernel_sp)();
 	
-	/// 放在usertrapret的最后执行，是在从S态回到U态前要做的一些工作，如把页表地址取出，然后调用userret最终回到S态
-	void (*call_userret)();
+	/// 得到userret的虚拟地址（在使用虚存机制时候，它在kernel里面会被映射到特定的位置）
+	uint64 (*get_userret)();
 	/// 在usertrap执行结束后执行，cause是异常编号，这里主要是为了兼容ch2，后面的章节里面只要调用usertrapret即可
 	void (*finish_usertrap)(int cause);
 	/// 用于处理当trap处理发生错误时要做的事
@@ -106,6 +110,5 @@ struct trap_handler_context
 
 void set_trap(struct trap_handler_context *trap_handler_context);
 void usertrapret();
-void kerneltrap();
 
 #endif // TRAP_H

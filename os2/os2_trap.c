@@ -1,9 +1,8 @@
 #include "os2_trap.h"
 #include "loader.h"
 
-extern char trampoline[], uservec[], boot_stack_top[];
-extern void *userret(uint64);
-extern char trap_page[];
+extern char uservec[], userret[];
+extern char trap_page[], boot_stack_top[];
 
 void os2_yield()
 {
@@ -31,14 +30,26 @@ struct trapframe* os2_get_trapframe()
 	return (struct trapframe*)trap_page;
 }
 
+uint64 os2_get_trapframe_va()
+{
+	// Actually, os2 does not have the concept of virtual address.
+	return (uint64)trap_page;
+}
+
+pagetable_t os2_get_satp()
+{
+	// Actually, os2 does not have pagetable.
+	return 0;
+}
+
 uint64 os2_get_kernel_sp()
 {
 	return (uint64)boot_stack_top + PGSIZE;
 }
 
-void os2_call_userret()
+uint64 os2_get_userret()
 {
-	userret((uint64)os2_get_trapframe());
+	return (uint64)userret;
 }
 
 void os2_finish_usertrap(int cause)
@@ -76,9 +87,11 @@ void trap_init()
 		.set_kerneltrap = os2_set_kerneltrap,
 
 		.get_trapframe = os2_get_trapframe,
+		.get_trapframe_va = os2_get_trapframe_va,
+		.get_satp = os2_get_satp,
 		.get_kernel_sp = os2_get_kernel_sp,
 		
-		.call_userret = os2_call_userret,
+		.get_userret = os2_get_userret,
 		.finish_usertrap = os2_finish_usertrap,
 		.error_in_trap = os2_error_in_trap,
 

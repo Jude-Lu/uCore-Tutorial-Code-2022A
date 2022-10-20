@@ -4,8 +4,7 @@
 #include "../trap/plic.h"
 #include "../easy-fs/virtio.h"
 
-extern char trampoline[], uservec[];
-extern char userret[], kernelvec[];
+extern char trampoline[], uservec[], kernelvec[], userret[];
 
 void os7_set_usertrap()
 {
@@ -22,18 +21,32 @@ struct trapframe* os7_get_trapframe()
 	return ((struct proc*)curr_task())->trapframe;
 }
 
+uint64 os7_get_trapframe_va()
+{
+	return TRAPFRAME;
+}
+
+pagetable_t os7_get_satp()
+{
+	return (pagetable_t)MAKE_SATP(((struct proc*)curr_task())->pagetable);
+}
+
 uint64 os7_get_kernel_sp()
 {
 	return ((struct proc*)curr_task())->kstack + PGSIZE;
 }
 
-void os7_call_userret()
+void os7_get_userret_arguments(uint64 *trapframe_va, uint64 *satp)
 {
 	struct trapframe *trapframe = ((struct proc*)curr_task())->trapframe;
-	uint64 satp = MAKE_SATP(((struct proc*)curr_task())->pagetable);
-	uint64 fn = TRAMPOLINE + (userret - trampoline);
 	tracef("return to user @ %p", trapframe->epc);
-	((void (*)(uint64, uint64))fn)(TRAPFRAME, satp);
+	*trapframe_va = TRAPFRAME;
+	*satp = MAKE_SATP(((struct proc*)curr_task())->pagetable);
+}
+
+uint64 os7_get_userret()
+{
+	return TRAMPOLINE + (userret - trampoline);
 }
 
 void os7_finish_usertrap(int cause)
@@ -72,9 +85,11 @@ void trap_init()
 		.set_kerneltrap = os7_set_kerneltrap,
 
 		.get_trapframe = os7_get_trapframe,
+		.get_trapframe_va = os7_get_trapframe_va,
+		.get_satp = os7_get_satp,
 		.get_kernel_sp = os7_get_kernel_sp,
 		
-		.call_userret = os7_call_userret,
+		.get_userret = os7_get_userret,
 		.finish_usertrap = os7_finish_usertrap,
 		.error_in_trap = os7_error_in_trap,
 
