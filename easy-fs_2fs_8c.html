@@ -89,27 +89,25 @@ $(document).ready(function(){initNavTree('easy-fs_2fs_8c.html',''); initResizabl
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="easy-fs_2fs_8h_source.html">fs.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="bio_8h_source.html">bio.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="file_8h_source.html">file.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 fs.c 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="easy-fs_2fs_8c__incl.png" border="0" usemap="#easy-fs_2fs_8c" alt=""/></div>
 <map name="easy-fs_2fs_8c" id="easy-fs_2fs_8c">
-<area shape="rect" title=" " alt="" coords="664,5,761,32"/>
-<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="624,155,671,181"/>
-<area shape="rect" href="bio_8h.html" title=" " alt="" coords="799,229,853,256"/>
-<area shape="rect" href="file_8h.html" title=" " alt="" coords="685,80,740,107"/>
-<area shape="rect" href="defs_8h.html" title=" " alt="" coords="333,229,439,256"/>
-<area shape="rect" href="const_8h.html" title=" " alt="" coords="603,304,673,331"/>
-<area shape="rect" href="riscv_8h.html" title=" " alt="" coords="586,379,650,405"/>
-<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="480,453,551,480"/>
-<area shape="rect" href="log_8h.html" title=" " alt="" coords="223,304,277,331"/>
-<area shape="rect" href="printf_8h.html" title=" " alt="" coords="301,304,369,331"/>
-<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="489,379,542,405"/>
-<area shape="rect" href="string_8h.html" title=" " alt="" coords="5,379,76,405"/>
-<area shape="rect" href="timer_8h.html" title=" " alt="" coords="100,379,168,405"/>
-<area shape="rect" href="console_8h.html" title=" " alt="" coords="393,304,477,331"/>
+<area shape="rect" title=" " alt="" coords="531,5,629,32"/>
+<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="525,155,571,181"/>
+<area shape="rect" href="file_8h.html" title=" " alt="" coords="586,80,641,107"/>
+<area shape="rect" href="defs_8h.html" title=" " alt="" coords="231,229,337,256"/>
+<area shape="rect" href="const_8h.html" title=" " alt="" coords="456,304,525,331"/>
+<area shape="rect" href="riscv_8h.html" title=" " alt="" coords="495,379,559,405"/>
+<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="287,453,358,480"/>
+<area shape="rect" href="log_8h.html" title=" " alt="" coords="23,304,78,331"/>
+<area shape="rect" href="printf_8h.html" title=" " alt="" coords="102,304,170,331"/>
+<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="163,379,216,405"/>
+<area shape="rect" href="string_8h.html" title=" " alt="" coords="241,379,311,405"/>
+<area shape="rect" href="timer_8h.html" title=" " alt="" coords="335,379,403,405"/>
+<area shape="rect" href="console_8h.html" title=" " alt="" coords="347,304,431,331"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -150,11 +148,11 @@ fs.c 的引用(Include)关系图:</div>
 <tr class="separator:a8accc94972d744ffbd5b31546e422bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0248d0bac625de5a1415f2f8c91f3343"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsuperblock.html">superblock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a0248d0bac625de5a1415f2f8c91f3343">sb</a></td></tr>
 <tr class="separator:a0248d0bac625de5a1415f2f8c91f3343"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96572bc6ebe7363b0c976e3728f65be6"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a8fd23309f97e9c7b623d7c1a4ea72763"><td class="memItemLeft" >struct {</td></tr>
 <tr class="memitem:a6baaf26dd83b71b8d684c5d54a709e31"><td class="memItemLeft" >&#160;&#160;&#160;struct <a class="el" href="structinode.html">inode</a>&#160;&#160;&#160;<a class="el" href="easy-fs_2fs_8c.html#a6baaf26dd83b71b8d684c5d54a709e31">inode</a> [<a class="el" href="const_8h.html#adabafa10c7951be7c875cd2ee212be85">NINODE</a>]</td></tr>
 <tr class="separator:a6baaf26dd83b71b8d684c5d54a709e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96572bc6ebe7363b0c976e3728f65be6"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a96572bc6ebe7363b0c976e3728f65be6">itable</a></td></tr>
-<tr class="separator:a96572bc6ebe7363b0c976e3728f65be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fd23309f97e9c7b623d7c1a4ea72763"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a8fd23309f97e9c7b623d7c1a4ea72763">itable</a></td></tr>
+<tr class="separator:a8fd23309f97e9c7b623d7c1a4ea72763"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
 <a id="a69a135a0e8a06d9f306d77ebc0c1f7a0"></a>
@@ -534,8 +532,8 @@ fs.c 的引用(Include)关系图:</div>
 
 </div>
 </div>
-<a id="a96572bc6ebe7363b0c976e3728f65be6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96572bc6ebe7363b0c976e3728f65be6">&#9670;&nbsp;</a></span>itable</h2>
+<a id="a8fd23309f97e9c7b623d7c1a4ea72763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fd23309f97e9c7b623d7c1a4ea72763">&#9670;&nbsp;</a></span>itable</h2>
 
 <div class="memitem">
 <div class="memproto">

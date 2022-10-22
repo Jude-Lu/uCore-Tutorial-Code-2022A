@@ -1,9 +1,9 @@
 <map id="utils/console.h" name="utils/console.h">
-<area shape="rect" id="node1" title=" " alt="" coords="3177,5,3293,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="3166,5,3282,32"/>
 <area shape="rect" id="node2" href="$defs_8h.html" title=" " alt="" coords="2267,80,2362,107"/>
-<area shape="rect" id="node49" href="$printf_8c.html" title=" " alt="" coords="4021,155,4120,181"/>
-<area shape="rect" id="node50" href="$console_8c.html" title=" " alt="" coords="3272,80,3387,107"/>
-<area shape="rect" id="node3" href="$virtio_8h.html" title=" " alt="" coords="3877,155,3997,181"/>
+<area shape="rect" id="node49" href="$printf_8c.html" title=" " alt="" coords="4000,155,4099,181"/>
+<area shape="rect" id="node50" href="$console_8c.html" title=" " alt="" coords="3261,80,3376,107"/>
+<area shape="rect" id="node3" href="$virtio_8h.html" title=" " alt="" coords="3877,155,3976,181"/>
 <area shape="rect" id="node4" href="$easy-fs_2fs_8h.html" title=" " alt="" coords="5,155,104,181"/>
 <area shape="rect" id="node5" href="$file_8c.html" title=" " alt="" coords="46,229,151,256"/>
 <area shape="rect" id="node6" href="$kalloc_8c.html" title=" " alt="" coords="179,155,319,181"/>

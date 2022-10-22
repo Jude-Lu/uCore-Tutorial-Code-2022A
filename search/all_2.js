@@ -16,12 +16,13 @@ var searchData=
   ['bmapstart_33',['bmapstart',['../structsuperblock.html#a923fc110922b13bb69974b1fcd70c027',1,'superblock']]],
   ['boot_5fstack_5ftop_34',['boot_stack_top',['../os2_2loader_8c.html#af9c9215e9c192dac7b9c5dc0bf3745f3',1,'boot_stack_top():&#160;loader.c'],['../os2__trap_8c.html#af9c9215e9c192dac7b9c5dc0bf3745f3',1,'boot_stack_top():&#160;os2_trap.c']]],
   ['bpb_35',['BPB',['../easy-fs_2fs_8h.html#a3c88fd21abb83ef11461ce750c466828',1,'BPB():&#160;fs.h'],['../nfs_2fs_8h.html#a3c88fd21abb83ef11461ce750c466828',1,'BPB():&#160;fs.h']]],
-  ['bpin_36',['bpin',['../bio_8c.html#ad77f8c0f9c4750b98dc422f279d554a7',1,'bpin(struct buf *b):&#160;bio.c'],['../bio_8h.html#a40ab7a772469664bf681fd1ede870d29',1,'bpin(struct buf *):&#160;bio.c']]],
-  ['bread_37',['bread',['../bio_8c.html#ae000984516278965dde3d125affd086c',1,'bread(uint dev, uint blockno):&#160;bio.c'],['../bio_8h.html#a90c72cf2140fdf1612484117327220af',1,'bread(uint, uint):&#160;bio.c']]],
+  ['bpin_36',['bpin',['../structFSManager.html#a81d120b55953bbfc4c228fd969c46a14',1,'FSManager::bpin()'],['../bio_8c.html#a9561b7bdf4020dc47092cf3a6a375ab4',1,'bpin(void *b):&#160;bio.c'],['../bio_8h.html#a21c84bdd526f182efd1b7931ce7d0ade',1,'bpin(void *):&#160;bio.c']]],
+  ['bread_37',['bread',['../structFSManager.html#a248eea0a7547da2161f51b7825cc242c',1,'FSManager::bread()'],['../bio_8c.html#a01ebd0efe72af59c25446f90a1ba7bb9',1,'bread(uint dev, uint blockno):&#160;bio.c'],['../bio_8h.html#a0acb856531e8a2c691a862530f10d067',1,'bread(uint, uint):&#160;bio.c']]],
   ['breakpoint_38',['Breakpoint',['../trap_8h.html#a8852f03cd91327c7c725673317d85b46a81123d611e191bb170882ac422011016',1,'trap.h']]],
-  ['brelse_39',['brelse',['../bio_8c.html#ab5335aeb503731104314321a78a6d727',1,'brelse(struct buf *b):&#160;bio.c'],['../bio_8h.html#aa31ec2f79e0456737a9680270bc1841b',1,'brelse(struct buf *):&#160;bio.c']]],
+  ['brelse_39',['brelse',['../structFSManager.html#a9bc0c52c29ccec5ff797829c71e6c5d6',1,'FSManager::brelse()'],['../bio_8c.html#aab295e04a65117b75f26d2b0937d3ae9',1,'brelse(void *_b):&#160;bio.c'],['../bio_8h.html#a05351fdc6a7e0099238da1d86b34afc8',1,'brelse(void *):&#160;bio.c']]],
   ['bsize_40',['BSIZE',['../nfs_2fs_8h.html#a403cf3149c084cea115b85c90721039a',1,'BSIZE():&#160;fs.h'],['../const_8h.html#a403cf3149c084cea115b85c90721039a',1,'BSIZE():&#160;const.h']]],
   ['buf_41',['buf',['../structbuf.html',1,'buf'],['../bio_8c.html#a72ee90c61d41547b10a533c219e081c6',1,'buf():&#160;bio.c']]],
-  ['bunpin_42',['bunpin',['../bio_8c.html#a8f81c094aeba2d51e78035ec6a16b303',1,'bunpin(struct buf *b):&#160;bio.c'],['../bio_8h.html#aef19220c64c1a4dfa158a69030cd40c1',1,'bunpin(struct buf *):&#160;bio.c']]],
-  ['bwrite_43',['bwrite',['../bio_8c.html#a63c899c13b176ddf80064d32225e1298',1,'bwrite(struct buf *b):&#160;bio.c'],['../bio_8h.html#a1bfd775f14ad3dfee354ee3897ecd28d',1,'bwrite(struct buf *):&#160;bio.c']]]
+  ['buf_5fdata_42',['buf_data',['../structFSManager.html#abdcd01384de5871faeb5c7b44f06926f',1,'FSManager::buf_data()'],['../bio_8c.html#acfdc9276c4330cd911854199e55c57fa',1,'buf_data(void *b):&#160;bio.c'],['../bio_8h.html#a1d546dc0222d51a0d8e7da7e4d3c8cf9',1,'buf_data(void *):&#160;bio.c']]],
+  ['bunpin_43',['bunpin',['../structFSManager.html#a1b269a8abb677d4e33b9a889e791b01a',1,'FSManager::bunpin()'],['../bio_8c.html#ae68a7b9f954b05d3cce7be10cc48ad67',1,'bunpin(void *b):&#160;bio.c'],['../bio_8h.html#af40c66b256f5a0cc2ca4fac2a534643a',1,'bunpin(void *):&#160;bio.c']]],
+  ['bwrite_44',['bwrite',['../structFSManager.html#afb031794c61498aa46d887b69b695fee',1,'FSManager::bwrite()'],['../bio_8c.html#ae81bbf8b40f0602a191798342900ca89',1,'bwrite(void *_b):&#160;bio.c'],['../bio_8h.html#a11d6de18d9baf220a2c63d07cc126fac',1,'bwrite(void *):&#160;bio.c']]]
 ];

@@ -1,5 +1,5 @@
-<map id="easy&#45;fs/bio.c" name="easy&#45;fs/bio.c">
-<area shape="rect" id="node1" title=" " alt="" coords="62,5,167,32"/>
+<map id="disk/bio.c" name="disk/bio.c">
+<area shape="rect" id="node1" title=" " alt="" coords="72,5,156,32"/>
 <area shape="rect" id="node2" href="$bio_8h.html" title=" " alt="" coords="51,155,106,181"/>
 <area shape="rect" id="node6" href="$virtio_8h.html" title=" " alt="" coords="116,80,184,107"/>
 <area shape="rect" id="node3" href="$utils_2types_8h.html" title=" " alt="" coords="198,379,313,405"/>

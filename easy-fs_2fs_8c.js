@@ -16,6 +16,6 @@ var easy_fs_2fs_8c =
     [ "writei", "easy-fs_2fs_8c.html#a99e700638bb7b2c05330f7f93a555aa7", null ],
     [ "fs_manager", "easy-fs_2fs_8c.html#a8accc94972d744ffbd5b31546e422bd2", null ],
     [ "inode", "easy-fs_2fs_8c.html#a6baaf26dd83b71b8d684c5d54a709e31", null ],
-    [ "itable", "easy-fs_2fs_8c.html#a96572bc6ebe7363b0c976e3728f65be6", null ],
+    [ "itable", "easy-fs_2fs_8c.html#a8fd23309f97e9c7b623d7c1a4ea72763", null ],
     [ "sb", "easy-fs_2fs_8c.html#a0248d0bac625de5a1415f2f8c91f3343", null ]
 ];

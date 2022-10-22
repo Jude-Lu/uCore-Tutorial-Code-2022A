@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uCore-Tutorial-Code-2022A: easy-fs/bio.h 源文件</title>
+<title>uCore-Tutorial-Code-2022A: disk/bio.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -103,37 +103,39 @@ $(document).ready(function(){initNavTree('bio_8h_source.html',''); initResizable
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> <a class="code" href="bio_8h.html#a53cca0ddc98c5f1de37124eca2575a59">binit</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">struct </span><a class="code" href="structbuf.html">buf</a> *<a class="code" href="bio_8h.html#a90c72cf2140fdf1612484117327220af">bread</a>(<a class="code" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>, <a class="code" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="bio_8h.html#aa31ec2f79e0456737a9680270bc1841b">brelse</a>(<span class="keyword">struct</span> <a class="code" href="structbuf.html">buf</a> *);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="bio_8h.html#a1bfd775f14ad3dfee354ee3897ecd28d">bwrite</a>(<span class="keyword">struct</span> <a class="code" href="structbuf.html">buf</a> *);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="bio_8h.html#a40ab7a772469664bf681fd1ede870d29">bpin</a>(<span class="keyword">struct</span> <a class="code" href="structbuf.html">buf</a> *);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="bio_8h.html#aef19220c64c1a4dfa158a69030cd40c1">bunpin</a>(<span class="keyword">struct</span> <a class="code" href="structbuf.html">buf</a> *);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif // BUF_H</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span>* <a class="code" href="bio_8h.html#a0acb856531e8a2c691a862530f10d067">bread</a>(<a class="code" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>, <a class="code" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="bio_8h.html#a05351fdc6a7e0099238da1d86b34afc8">brelse</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="bio_8h.html#a11d6de18d9baf220a2c63d07cc126fac">bwrite</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="bio_8h.html#a21c84bdd526f182efd1b7931ce7d0ade">bpin</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="bio_8h.html#af40c66b256f5a0cc2ca4fac2a534643a">bunpin</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<a class="code" href="nfs_2types_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a>* <a class="code" href="bio_8h.html#a1d546dc0222d51a0d8e7da7e4d3c8cf9">buf_data</a>(<span class="keywordtype">void</span>*);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif // BUF_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anfs_2types_8h_html_a65f85814a8290f9797005d3b28e7e5fc"><div class="ttname"><a href="nfs_2types_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a></div><div class="ttdeci">unsigned char uchar</div><div class="ttdef"><b>Definition:</b> types.h:6</div></div>
 <div class="ttc" id="astructbuf_html_ac63b1f168765a53e565a8ba27f5469d1"><div class="ttname"><a href="structbuf.html#ac63b1f168765a53e565a8ba27f5469d1">buf::valid</a></div><div class="ttdeci">int valid</div><div class="ttdef"><b>Definition:</b> bio.h:8</div></div>
 <div class="ttc" id="astructbuf_html_a97070430c7988bca5a2eafe30f23261d"><div class="ttname"><a href="structbuf.html#a97070430c7988bca5a2eafe30f23261d">buf::disk</a></div><div class="ttdeci">int disk</div><div class="ttdef"><b>Definition:</b> bio.h:9</div></div>
-<div class="ttc" id="abio_8h_html_aef19220c64c1a4dfa158a69030cd40c1"><div class="ttname"><a href="bio_8h.html#aef19220c64c1a4dfa158a69030cd40c1">bunpin</a></div><div class="ttdeci">void bunpin(struct buf *)</div><div class="ttdef"><b>Definition:</b> bio.c:107</div></div>
 <div class="ttc" id="anfs_2fs_8h_html_a403cf3149c084cea115b85c90721039a"><div class="ttname"><a href="nfs_2fs_8h.html#a403cf3149c084cea115b85c90721039a">BSIZE</a></div><div class="ttdeci">#define BSIZE</div><div class="ttdef"><b>Definition:</b> fs.h:18</div></div>
 <div class="ttc" id="astructbuf_html_a48c008b4a22859e25eb05af3b5c22d45"><div class="ttname"><a href="structbuf.html#a48c008b4a22859e25eb05af3b5c22d45">buf::prev</a></div><div class="ttdeci">struct buf * prev</div><div class="ttdef"><b>Definition:</b> bio.h:13</div></div>
 <div class="ttc" id="abio_8h_html_a53cca0ddc98c5f1de37124eca2575a59"><div class="ttname"><a href="bio_8h.html#a53cca0ddc98c5f1de37124eca2575a59">binit</a></div><div class="ttdeci">void binit(void)</div><div class="ttdef"><b>Definition:</b> bio.c:24</div></div>
-<div class="ttc" id="abio_8h_html_aa31ec2f79e0456737a9680270bc1841b"><div class="ttname"><a href="bio_8h.html#aa31ec2f79e0456737a9680270bc1841b">brelse</a></div><div class="ttdeci">void brelse(struct buf *)</div><div class="ttdef"><b>Definition:</b> bio.c:88</div></div>
+<div class="ttc" id="abio_8h_html_af40c66b256f5a0cc2ca4fac2a534643a"><div class="ttname"><a href="bio_8h.html#af40c66b256f5a0cc2ca4fac2a534643a">bunpin</a></div><div class="ttdeci">void bunpin(void *)</div><div class="ttdef"><b>Definition:</b> bio.c:109</div></div>
+<div class="ttc" id="abio_8h_html_a05351fdc6a7e0099238da1d86b34afc8"><div class="ttname"><a href="bio_8h.html#a05351fdc6a7e0099238da1d86b34afc8">brelse</a></div><div class="ttdeci">void brelse(void *)</div><div class="ttdef"><b>Definition:</b> bio.c:89</div></div>
 <div class="ttc" id="astructbuf_html"><div class="ttname"><a href="structbuf.html">buf</a></div><div class="ttdef"><b>Definition:</b> bio.h:7</div></div>
 <div class="ttc" id="astructbuf_html_af7f3952c867559bd470306b5f4fa861f"><div class="ttname"><a href="structbuf.html#af7f3952c867559bd470306b5f4fa861f">buf::refcnt</a></div><div class="ttdeci">uint refcnt</div><div class="ttdef"><b>Definition:</b> bio.h:12</div></div>
 <div class="ttc" id="astructbuf_html_a5a609449f1b0b08ae96fe8b29e866fd7"><div class="ttname"><a href="structbuf.html#a5a609449f1b0b08ae96fe8b29e866fd7">buf::next</a></div><div class="ttdeci">struct buf * next</div><div class="ttdef"><b>Definition:</b> bio.h:14</div></div>
+<div class="ttc" id="abio_8h_html_a0acb856531e8a2c691a862530f10d067"><div class="ttname"><a href="bio_8h.html#a0acb856531e8a2c691a862530f10d067">bread</a></div><div class="ttdeci">void * bread(uint, uint)</div><div class="ttdef"><b>Definition:</b> bio.c:69</div></div>
 <div class="ttc" id="astructbuf_html_a693fd5d6a5d048863483114066e8071e"><div class="ttname"><a href="structbuf.html#a693fd5d6a5d048863483114066e8071e">buf::blockno</a></div><div class="ttdeci">uint blockno</div><div class="ttdef"><b>Definition:</b> bio.h:11</div></div>
 <div class="ttc" id="anfs_2types_8h_html_a91ad9478d81a7aaf2593e8d9c3d06a14"><div class="ttname"><a href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> types.h:4</div></div>
-<div class="ttc" id="abio_8h_html_a90c72cf2140fdf1612484117327220af"><div class="ttname"><a href="bio_8h.html#a90c72cf2140fdf1612484117327220af">bread</a></div><div class="ttdeci">struct buf * bread(uint, uint)</div><div class="ttdef"><b>Definition:</b> bio.c:69</div></div>
-<div class="ttc" id="abio_8h_html_a40ab7a772469664bf681fd1ede870d29"><div class="ttname"><a href="bio_8h.html#a40ab7a772469664bf681fd1ede870d29">bpin</a></div><div class="ttdeci">void bpin(struct buf *)</div><div class="ttdef"><b>Definition:</b> bio.c:102</div></div>
 <div class="ttc" id="astructbuf_html_acbf234dae44942f6c2f0d35dbd0d7812"><div class="ttname"><a href="structbuf.html#acbf234dae44942f6c2f0d35dbd0d7812">buf::data</a></div><div class="ttdeci">uchar data[BSIZE]</div><div class="ttdef"><b>Definition:</b> bio.h:15</div></div>
+<div class="ttc" id="abio_8h_html_a1d546dc0222d51a0d8e7da7e4d3c8cf9"><div class="ttname"><a href="bio_8h.html#a1d546dc0222d51a0d8e7da7e4d3c8cf9">buf_data</a></div><div class="ttdeci">uchar * buf_data(void *)</div><div class="ttdef"><b>Definition:</b> bio.c:114</div></div>
 <div class="ttc" id="astructbuf_html_aaf61a1db4c34c23857104abc633d8ee6"><div class="ttname"><a href="structbuf.html#aaf61a1db4c34c23857104abc633d8ee6">buf::dev</a></div><div class="ttdeci">uint dev</div><div class="ttdef"><b>Definition:</b> bio.h:10</div></div>
-<div class="ttc" id="abio_8h_html_a1bfd775f14ad3dfee354ee3897ecd28d"><div class="ttname"><a href="bio_8h.html#a1bfd775f14ad3dfee354ee3897ecd28d">bwrite</a></div><div class="ttdeci">void bwrite(struct buf *)</div><div class="ttdef"><b>Definition:</b> bio.c:81</div></div>
+<div class="ttc" id="abio_8h_html_a11d6de18d9baf220a2c63d07cc126fac"><div class="ttname"><a href="bio_8h.html#a11d6de18d9baf220a2c63d07cc126fac">bwrite</a></div><div class="ttdeci">void bwrite(void *)</div><div class="ttdef"><b>Definition:</b> bio.c:81</div></div>
+<div class="ttc" id="abio_8h_html_a21c84bdd526f182efd1b7931ce7d0ade"><div class="ttname"><a href="bio_8h.html#a21c84bdd526f182efd1b7931ce7d0ade">bpin</a></div><div class="ttdeci">void bpin(void *)</div><div class="ttdef"><b>Definition:</b> bio.c:104</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d3f582bb2fa850a4222b3790cad57e7c.html">easy-fs</a></li><li class="navelem"><a class="el" href="bio_8h.html">bio.h</a></li>
+    <li class="navelem"><a class="el" href="dir_e762017bb575983546aa91deb0127528.html">disk</a></li><li class="navelem"><a class="el" href="bio_8h.html">bio.h</a></li>
     <li class="footer">制作者
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

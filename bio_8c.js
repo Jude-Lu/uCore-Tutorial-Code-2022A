@@ -1,11 +1,12 @@
 var bio_8c =
 [
     [ "binit", "bio_8c.html#a9e6b07f66dc0719de7fc439e571070ab", null ],
-    [ "bpin", "bio_8c.html#ad77f8c0f9c4750b98dc422f279d554a7", null ],
-    [ "bread", "bio_8c.html#ae000984516278965dde3d125affd086c", null ],
-    [ "brelse", "bio_8c.html#ab5335aeb503731104314321a78a6d727", null ],
-    [ "bunpin", "bio_8c.html#a8f81c094aeba2d51e78035ec6a16b303", null ],
-    [ "bwrite", "bio_8c.html#a63c899c13b176ddf80064d32225e1298", null ],
+    [ "bpin", "bio_8c.html#a9561b7bdf4020dc47092cf3a6a375ab4", null ],
+    [ "bread", "bio_8c.html#a01ebd0efe72af59c25446f90a1ba7bb9", null ],
+    [ "brelse", "bio_8c.html#aab295e04a65117b75f26d2b0937d3ae9", null ],
+    [ "buf_data", "bio_8c.html#acfdc9276c4330cd911854199e55c57fa", null ],
+    [ "bunpin", "bio_8c.html#ae68a7b9f954b05d3cce7be10cc48ad67", null ],
+    [ "bwrite", "bio_8c.html#ae81bbf8b40f0602a191798342900ca89", null ],
     [ "bcache", "bio_8c.html#a7725a9957148b7740449a091ea12b0e4", null ],
     [ "buf", "bio_8c.html#a72ee90c61d41547b10a533c219e081c6", null ],
     [ "head", "bio_8c.html#aa6e692c16f1b909f5cb2a1832cf43430", null ],

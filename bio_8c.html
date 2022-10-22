@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uCore-Tutorial-Code-2022A: easy-fs/bio.c 文件参考</title>
+<title>uCore-Tutorial-Code-2022A: disk/bio.c 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,9 +93,9 @@ $(document).ready(function(){initNavTree('bio_8c.html',''); initResizable(); });
 </div><div class="textblock"><div class="dynheader">
 bio.c 的引用(Include)关系图:</div>
 <div class="dyncontent">
-<div class="center"><img src="bio_8c__incl.png" border="0" usemap="#easy-fs_2bio_8c" alt=""/></div>
-<map name="easy-fs_2bio_8c" id="easy-fs_2bio_8c">
-<area shape="rect" title=" " alt="" coords="62,5,167,32"/>
+<div class="center"><img src="bio_8c__incl.png" border="0" usemap="#disk_2bio_8c" alt=""/></div>
+<map name="disk_2bio_8c" id="disk_2bio_8c">
+<area shape="rect" title=" " alt="" coords="72,5,156,32"/>
 <area shape="rect" href="bio_8h.html" title=" " alt="" coords="51,155,106,181"/>
 <area shape="rect" href="virtio_8h.html" title=" " alt="" coords="116,80,184,107"/>
 <area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="198,379,313,405"/>
@@ -115,16 +115,18 @@ bio.c 的引用(Include)关系图:</div>
 函数</h2></td></tr>
 <tr class="memitem:a9e6b07f66dc0719de7fc439e571070ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#a9e6b07f66dc0719de7fc439e571070ab">binit</a> ()</td></tr>
 <tr class="separator:a9e6b07f66dc0719de7fc439e571070ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae000984516278965dde3d125affd086c"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structbuf.html">buf</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#ae000984516278965dde3d125affd086c">bread</a> (<a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> dev, <a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> blockno)</td></tr>
-<tr class="separator:ae000984516278965dde3d125affd086c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63c899c13b176ddf80064d32225e1298"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#a63c899c13b176ddf80064d32225e1298">bwrite</a> (struct <a class="el" href="structbuf.html">buf</a> *<a class="el" href="virtio__disk_8c.html#a478a43f541f7e29b957eaaef78d660d4">b</a>)</td></tr>
-<tr class="separator:a63c899c13b176ddf80064d32225e1298"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5335aeb503731104314321a78a6d727"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#ab5335aeb503731104314321a78a6d727">brelse</a> (struct <a class="el" href="structbuf.html">buf</a> *<a class="el" href="virtio__disk_8c.html#a478a43f541f7e29b957eaaef78d660d4">b</a>)</td></tr>
-<tr class="separator:ab5335aeb503731104314321a78a6d727"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad77f8c0f9c4750b98dc422f279d554a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#ad77f8c0f9c4750b98dc422f279d554a7">bpin</a> (struct <a class="el" href="structbuf.html">buf</a> *<a class="el" href="virtio__disk_8c.html#a478a43f541f7e29b957eaaef78d660d4">b</a>)</td></tr>
-<tr class="separator:ad77f8c0f9c4750b98dc422f279d554a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f81c094aeba2d51e78035ec6a16b303"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#a8f81c094aeba2d51e78035ec6a16b303">bunpin</a> (struct <a class="el" href="structbuf.html">buf</a> *<a class="el" href="virtio__disk_8c.html#a478a43f541f7e29b957eaaef78d660d4">b</a>)</td></tr>
-<tr class="separator:a8f81c094aeba2d51e78035ec6a16b303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01ebd0efe72af59c25446f90a1ba7bb9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#a01ebd0efe72af59c25446f90a1ba7bb9">bread</a> (<a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> dev, <a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> blockno)</td></tr>
+<tr class="separator:a01ebd0efe72af59c25446f90a1ba7bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae81bbf8b40f0602a191798342900ca89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#ae81bbf8b40f0602a191798342900ca89">bwrite</a> (void *_b)</td></tr>
+<tr class="separator:ae81bbf8b40f0602a191798342900ca89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab295e04a65117b75f26d2b0937d3ae9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#aab295e04a65117b75f26d2b0937d3ae9">brelse</a> (void *_b)</td></tr>
+<tr class="separator:aab295e04a65117b75f26d2b0937d3ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9561b7bdf4020dc47092cf3a6a375ab4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#a9561b7bdf4020dc47092cf3a6a375ab4">bpin</a> (void *<a class="el" href="virtio__disk_8c.html#a478a43f541f7e29b957eaaef78d660d4">b</a>)</td></tr>
+<tr class="separator:a9561b7bdf4020dc47092cf3a6a375ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae68a7b9f954b05d3cce7be10cc48ad67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#ae68a7b9f954b05d3cce7be10cc48ad67">bunpin</a> (void *<a class="el" href="virtio__disk_8c.html#a478a43f541f7e29b957eaaef78d660d4">b</a>)</td></tr>
+<tr class="separator:ae68a7b9f954b05d3cce7be10cc48ad67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfdc9276c4330cd911854199e55c57fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#acfdc9276c4330cd911854199e55c57fa">buf_data</a> (void *<a class="el" href="virtio__disk_8c.html#a478a43f541f7e29b957eaaef78d660d4">b</a>)</td></tr>
+<tr class="separator:acfdc9276c4330cd911854199e55c57fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 变量</h2></td></tr>
@@ -158,8 +160,8 @@ bio.c 的引用(Include)关系图:</div>
 
 </div>
 </div>
-<a id="ad77f8c0f9c4750b98dc422f279d554a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad77f8c0f9c4750b98dc422f279d554a7">&#9670;&nbsp;</a></span>bpin()</h2>
+<a id="a9561b7bdf4020dc47092cf3a6a375ab4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9561b7bdf4020dc47092cf3a6a375ab4">&#9670;&nbsp;</a></span>bpin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,7 +169,7 @@ bio.c 的引用(Include)关系图:</div>
         <tr>
           <td class="memname">void bpin </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structbuf.html">buf</a> *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>b</em></td><td>)</td>
           <td></td>
         </tr>
@@ -176,14 +178,14 @@ bio.c 的引用(Include)关系图:</div>
 
 </div>
 </div>
-<a id="ae000984516278965dde3d125affd086c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae000984516278965dde3d125affd086c">&#9670;&nbsp;</a></span>bread()</h2>
+<a id="a01ebd0efe72af59c25446f90a1ba7bb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01ebd0efe72af59c25446f90a1ba7bb9">&#9670;&nbsp;</a></span>bread()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structbuf.html">buf</a>* bread </td>
+          <td class="memname">void* bread </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
           <td class="paramname"><em>dev</em>, </td>
@@ -204,8 +206,8 @@ bio.c 的引用(Include)关系图:</div>
 
 </div>
 </div>
-<a id="ab5335aeb503731104314321a78a6d727"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5335aeb503731104314321a78a6d727">&#9670;&nbsp;</a></span>brelse()</h2>
+<a id="aab295e04a65117b75f26d2b0937d3ae9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab295e04a65117b75f26d2b0937d3ae9">&#9670;&nbsp;</a></span>brelse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +215,25 @@ bio.c 的引用(Include)关系图:</div>
         <tr>
           <td class="memname">void brelse </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structbuf.html">buf</a> *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>_b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfdc9276c4330cd911854199e55c57fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfdc9276c4330cd911854199e55c57fa">&#9670;&nbsp;</a></span>buf_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nfs_2types_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a>* buf_data </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>b</em></td><td>)</td>
           <td></td>
         </tr>
@@ -222,8 +242,8 @@ bio.c 的引用(Include)关系图:</div>
 
 </div>
 </div>
-<a id="a8f81c094aeba2d51e78035ec6a16b303"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f81c094aeba2d51e78035ec6a16b303">&#9670;&nbsp;</a></span>bunpin()</h2>
+<a id="ae68a7b9f954b05d3cce7be10cc48ad67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae68a7b9f954b05d3cce7be10cc48ad67">&#9670;&nbsp;</a></span>bunpin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,7 +251,7 @@ bio.c 的引用(Include)关系图:</div>
         <tr>
           <td class="memname">void bunpin </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structbuf.html">buf</a> *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>b</em></td><td>)</td>
           <td></td>
         </tr>
@@ -240,8 +260,8 @@ bio.c 的引用(Include)关系图:</div>
 
 </div>
 </div>
-<a id="a63c899c13b176ddf80064d32225e1298"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63c899c13b176ddf80064d32225e1298">&#9670;&nbsp;</a></span>bwrite()</h2>
+<a id="ae81bbf8b40f0602a191798342900ca89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae81bbf8b40f0602a191798342900ca89">&#9670;&nbsp;</a></span>bwrite()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,8 +269,8 @@ bio.c 的引用(Include)关系图:</div>
         <tr>
           <td class="memname">void bwrite </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structbuf.html">buf</a> *&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>_b</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -334,7 +354,7 @@ bio.c 的引用(Include)关系图:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d3f582bb2fa850a4222b3790cad57e7c.html">easy-fs</a></li><li class="navelem"><a class="el" href="bio_8c.html">bio.c</a></li>
+    <li class="navelem"><a class="el" href="dir_e762017bb575983546aa91deb0127528.html">disk</a></li><li class="navelem"><a class="el" href="bio_8c.html">bio.c</a></li>
     <li class="footer">制作者
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
