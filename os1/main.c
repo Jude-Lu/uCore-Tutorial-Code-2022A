@@ -1,5 +1,4 @@
-#include "../utils/defs.h"
-#include "../utils/modules.h"
+#include "modules.h"
 
 extern char s_text[];
 extern char e_text[];
