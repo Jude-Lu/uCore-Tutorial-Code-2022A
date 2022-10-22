@@ -510,6 +510,13 @@ void proc_init()
 
 		.pipeopen = pipeopen,
 		.pipeclose = pipeclose,
+
+		.bread = bread,
+		.brelse = brelse,
+		.bwrite = bwrite,
+		.bpin = bpin,
+		.bunpin = bunpin,
+		.buf_data = buf_data
 	};
 	set_file(&os8_fs_manager);
 }

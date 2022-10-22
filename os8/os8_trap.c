@@ -2,7 +2,7 @@
 #include "loader.h"
 #include "proc.h"
 #include "../trap/plic.h"
-#include "../easy-fs/virtio.h"
+#include "../disk/virtio.h"
 
 extern char trampoline[], uservec[], kernelvec[], userret[];
 
