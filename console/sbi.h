@@ -1,5 +1,5 @@
-#ifndef TYPES_H
-#define TYPES_H
+#ifndef SBI_H
+#define SBI_H
 
 typedef unsigned int uint;
 typedef unsigned short ushort;
@@ -9,4 +9,9 @@ typedef unsigned short uint16;
 typedef unsigned int uint32;
 typedef unsigned long uint64;
 
-#endif // TYPES_H
+void console_putchar(int);
+int console_getchar();
+void shutdown();
+void set_timer(uint64);
+
+#endif // SBI_H
