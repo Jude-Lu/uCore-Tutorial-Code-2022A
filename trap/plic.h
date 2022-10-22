@@ -1,8 +1,6 @@
 #ifndef PLIC_H
 #define PLIC_H
 
-#include "../utils/const.h"
-
 // qemu puts UART registers here in physical memory.
 #define UART0 0x10000000L
 #define UART0_IRQ 10
@@ -17,6 +15,8 @@
 #define PLIC_SPRIORITY(hart) (PLIC + 0x201000 + (hart)*0x2000)
 #define PLIC_MCLAIM(hart) (PLIC + 0x200004 + (hart)*0x2000)
 #define PLIC_SCLAIM(hart) (PLIC + 0x201004 + (hart)*0x2000)
+
+#define VIRTIO0_IRQ 1
 
 void plicinit(int);
 int plic_claim(int);
