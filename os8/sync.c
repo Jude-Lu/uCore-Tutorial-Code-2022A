@@ -39,7 +39,7 @@ void mutex_lock(struct mutex *m)
 	}
 	// blocking mutex will wait in the queue
 	struct thread *t = curr_task();
-	push_queue(&m->wait_queue, change_task(t));
+	push_queue(&m->wait_queue, get_id(t));
 	// don't forget to change thread state to SLEEPING
 	t->state = T_SLEEPING;
 	debugf("block to wait for mutex");
@@ -103,7 +103,7 @@ void semaphore_down(struct semaphore *s)
 	if (s->count < 0) {
 		// s->count < 0 means need to wait (state=SLEEPING)
 		struct thread *t = curr_task();
-		push_queue(&s->wait_queue, change_task(t));
+		push_queue(&s->wait_queue, get_id(t));
 		t->state = T_SLEEPING;
 		debugf("semaphore down to %d and wait...", s->count);
 		sched();
@@ -142,7 +142,7 @@ void cond_wait(struct condvar *cond, struct mutex *m)
 	mutex_unlock(m);
 	struct thread *t = curr_task();
 	// now just wait for cond
-	push_queue(&cond->wait_queue, change_task(t));
+	push_queue(&cond->wait_queue, get_id(t));
 	t->state = T_SLEEPING;
 	debugf("wait for cond");
 	sched();

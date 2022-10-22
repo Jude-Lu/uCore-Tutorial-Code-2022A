@@ -10,6 +10,7 @@
 #include "types.h"
 #include "timer.h"
 #include "console.h"
+#include "queue.h"
 
 // number of elements in fixed-size array
 #define NELEM(x) (sizeof(x) / sizeof((x)[0]))

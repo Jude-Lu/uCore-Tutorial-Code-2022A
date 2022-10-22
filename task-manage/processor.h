@@ -47,7 +47,7 @@ void set_manager(struct manager*);
 void* curr_task();
 void set_curr(void*);
 void* get_task(int);
-int change_task(void*);
+int get_id(void*);
 void* alloc_task();
 void free_task(void*);
 void add_task(void*);

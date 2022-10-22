@@ -24,7 +24,7 @@ void* get_task(int id) {
 }
 
 /// 根据进程获得id
-int change_task(void* p) {
+int get_id(void* p) {
 	return task_manager->change(p);
 }
 
