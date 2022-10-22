@@ -121,7 +121,7 @@ void freethread(struct thread *t)
 }
 
 // get task by unique task id
-void* get(int index)
+void* get_task_by_id(int index)
 {
 	if (index < 0) {
 		return NULL;
@@ -133,7 +133,7 @@ void* get(int index)
 }
 
 // ncode unique task id for each thread
-int change(void *thread)
+int get_id_by_task(void *thread)
 {
 	struct thread* t = (struct thread*)thread;
 	int pool_id = t->process - pool;
@@ -144,7 +144,7 @@ int change(void *thread)
 void* fetch()
 {
 	int index = pop_queue(&task_queue);
-	struct thread *t = get(index);
+	struct thread *t = get_task_by_id(index);
 	if (t == NULL) {
 		debugf("No task to fetch\n");
 		return t;
@@ -157,7 +157,7 @@ void* fetch()
 void add(void* thread)
 {
 	struct thread* t = (struct thread*)thread;
-    int task_id = change(t);
+    int task_id = get_id_by_task(t);
     t->state = T_RUNNABLE;
     push_queue(&task_queue, task_id);
     tracef("add index %d(pid=%d, tid=%d, addr=%p) to task queue", task_id,
@@ -471,8 +471,8 @@ void proc_init()
 	{
 		.create = create,
 		.remove = remove,
-		.get = get,
-		.change = change,
+		.get_task_by_id = get_task_by_id,
+		.get_id_by_task = get_id_by_task,
 		.add = add,
 		.fetch = fetch
 	};
