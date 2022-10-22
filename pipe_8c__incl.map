@@ -1,14 +1,15 @@
 <map id="pipe/pipe.c" name="pipe/pipe.c">
-<area shape="rect" id="node1" title=" " alt="" coords="364,5,457,32"/>
-<area shape="rect" id="node2" href="$pipe_8h.html" title=" " alt="" coords="379,80,442,107"/>
-<area shape="rect" id="node3" href="$defs_8h.html" title=" " alt="" coords="205,155,312,181"/>
-<area shape="rect" id="node5" href="$riscv_8h.html" title=" " alt="" coords="424,304,488,331"/>
-<area shape="rect" id="node4" href="$const_8h.html" title=" " alt="" coords="321,229,391,256"/>
-<area shape="rect" id="node6" href="$utils_2types_8h.html" title=" " alt="" coords="155,379,226,405"/>
-<area shape="rect" id="node7" href="$log_8h.html" title=" " alt="" coords="49,229,103,256"/>
-<area shape="rect" id="node8" href="$printf_8h.html" title=" " alt="" coords="127,229,195,256"/>
-<area shape="rect" id="node9" href="$sbi_8h.html" title=" " alt="" coords="37,304,91,331"/>
-<area shape="rect" id="node10" href="$string_8h.html" title=" " alt="" coords="155,304,226,331"/>
-<area shape="rect" id="node11" href="$timer_8h.html" title=" " alt="" coords="250,304,318,331"/>
-<area shape="rect" id="node12" href="$console_8h.html" title=" " alt="" coords="415,229,499,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="436,5,529,32"/>
+<area shape="rect" id="node2" href="$pipe_8h.html" title=" " alt="" coords="451,80,514,107"/>
+<area shape="rect" id="node3" href="$defs_8h.html" title=" " alt="" coords="228,155,334,181"/>
+<area shape="rect" id="node5" href="$riscv_8h.html" title=" " alt="" coords="544,304,608,331"/>
+<area shape="rect" id="node4" href="$const_8h.html" title=" " alt="" coords="577,229,646,256"/>
+<area shape="rect" id="node6" href="$utils_2types_8h.html" title=" " alt="" coords="152,379,223,405"/>
+<area shape="rect" id="node7" href="$log_8h.html" title=" " alt="" coords="46,229,100,256"/>
+<area shape="rect" id="node8" href="$printf_8h.html" title=" " alt="" coords="124,229,192,256"/>
+<area shape="rect" id="node9" href="$sbi_8h.html" title=" " alt="" coords="34,304,88,331"/>
+<area shape="rect" id="node10" href="$string_8h.html" title=" " alt="" coords="152,304,223,331"/>
+<area shape="rect" id="node11" href="$timer_8h.html" title=" " alt="" coords="247,304,315,331"/>
+<area shape="rect" id="node12" href="$console_8h.html" title=" " alt="" coords="319,229,403,256"/>
+<area shape="rect" id="node13" href="$queue_8h.html" title=" " alt="" coords="428,229,502,256"/>
 </map>

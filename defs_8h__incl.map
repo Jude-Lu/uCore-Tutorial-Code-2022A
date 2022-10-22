@@ -1,5 +1,5 @@
 <map id="utils/defs.h" name="utils/defs.h">
-<area shape="rect" id="node1" title=" " alt="" coords="266,5,361,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="302,5,397,32"/>
 <area shape="rect" id="node2" href="$const_8h.html" title=" " alt="" coords="5,80,75,107"/>
 <area shape="rect" id="node3" href="$riscv_8h.html" title=" " alt="" coords="61,155,125,181"/>
 <area shape="rect" id="node4" href="$utils_2types_8h.html" title=" " alt="" coords="271,229,342,256"/>
@@ -9,4 +9,5 @@
 <area shape="rect" id="node8" href="$string_8h.html" title=" " alt="" coords="358,155,429,181"/>
 <area shape="rect" id="node9" href="$timer_8h.html" title=" " alt="" coords="453,155,521,181"/>
 <area shape="rect" id="node10" href="$console_8h.html" title=" " alt="" coords="525,80,609,107"/>
+<area shape="rect" id="node11" href="$queue_8h.html" title=" " alt="" coords="633,80,708,107"/>
 </map>

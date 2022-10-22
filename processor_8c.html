@@ -114,9 +114,9 @@ processor.c 的引用(Include)关系图:</div>
 <tr class="memitem:abc581500ca995aa04bb932a207a15f60"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processor_8c.html#abc581500ca995aa04bb932a207a15f60">get_task</a> (int id)</td></tr>
 <tr class="memdesc:abc581500ca995aa04bb932a207a15f60"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据id获得进程  <a href="processor_8c.html#abc581500ca995aa04bb932a207a15f60">更多...</a><br /></td></tr>
 <tr class="separator:abc581500ca995aa04bb932a207a15f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2ff79d7f1bf4bae1fad36c6ee3ea3f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processor_8c.html#af2ff79d7f1bf4bae1fad36c6ee3ea3f7">change_task</a> (void *p)</td></tr>
-<tr class="memdesc:af2ff79d7f1bf4bae1fad36c6ee3ea3f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据进程获得id  <a href="processor_8c.html#af2ff79d7f1bf4bae1fad36c6ee3ea3f7">更多...</a><br /></td></tr>
-<tr class="separator:af2ff79d7f1bf4bae1fad36c6ee3ea3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a170507a15f0f65f34f9ab1177cdd201c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processor_8c.html#a170507a15f0f65f34f9ab1177cdd201c">get_id</a> (void *p)</td></tr>
+<tr class="memdesc:a170507a15f0f65f34f9ab1177cdd201c"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据进程获得id  <a href="processor_8c.html#a170507a15f0f65f34f9ab1177cdd201c">更多...</a><br /></td></tr>
+<tr class="separator:a170507a15f0f65f34f9ab1177cdd201c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae21708d62546513fe7db9af266c5644a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="processor_8c.html#ae21708d62546513fe7db9af266c5644a">alloc_task</a> ()</td></tr>
 <tr class="memdesc:ae21708d62546513fe7db9af266c5644a"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建进程  <a href="processor_8c.html#ae21708d62546513fe7db9af266c5644a">更多...</a><br /></td></tr>
 <tr class="separator:ae21708d62546513fe7db9af266c5644a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,26 +177,6 @@ processor.c 的引用(Include)关系图:</div>
 
 </div>
 </div>
-<a id="af2ff79d7f1bf4bae1fad36c6ee3ea3f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2ff79d7f1bf4bae1fad36c6ee3ea3f7">&#9670;&nbsp;</a></span>change_task()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int change_task </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>p</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>根据进程获得id </p>
-
-</div>
-</div>
 <a id="a300cb36ba4651248aebffc2aaa1f7ff3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a300cb36ba4651248aebffc2aaa1f7ff3">&#9670;&nbsp;</a></span>curr_task()</h2>
 
@@ -252,6 +232,26 @@ processor.c 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>释放进程 </p>
+
+</div>
+</div>
+<a id="a170507a15f0f65f34f9ab1177cdd201c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a170507a15f0f65f34f9ab1177cdd201c">&#9670;&nbsp;</a></span>get_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_id </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据进程获得id </p>
 
 </div>
 </div>

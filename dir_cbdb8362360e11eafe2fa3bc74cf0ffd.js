@@ -8,6 +8,8 @@ var dir_cbdb8362360e11eafe2fa3bc74cf0ffd =
     [ "modules.h", "modules_8h.html", null ],
     [ "printf.c", "printf_8c.html", "printf_8c" ],
     [ "printf.h", "printf_8h.html", "printf_8h" ],
+    [ "queue.c", "queue_8c.html", "queue_8c" ],
+    [ "queue.h", "queue_8h.html", "queue_8h" ],
     [ "riscv.h", "riscv_8h.html", "riscv_8h" ],
     [ "sbi.c", "sbi_8c.html", "sbi_8c" ],
     [ "sbi.h", "sbi_8h.html", "sbi_8h" ],

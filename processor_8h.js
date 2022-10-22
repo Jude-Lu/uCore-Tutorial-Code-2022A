@@ -20,10 +20,10 @@ var processor_8h =
     ] ],
     [ "add_task", "processor_8h.html#ace98329a953de91d912149ffcea57906", null ],
     [ "alloc_task", "processor_8h.html#ae21708d62546513fe7db9af266c5644a", null ],
-    [ "change_task", "processor_8h.html#a69b2852fd7a8f739860efc716500bfe9", null ],
     [ "curr_task", "processor_8h.html#a300cb36ba4651248aebffc2aaa1f7ff3", null ],
     [ "fetch_task", "processor_8h.html#a8d9a1049b5c13c30b807560b52aea7c7", null ],
     [ "free_task", "processor_8h.html#ab332544890d50a4a02bec0da3c013f7f", null ],
+    [ "get_id", "processor_8h.html#a355154079046d22e674369148481c759", null ],
     [ "get_task", "processor_8h.html#a7f174d36028e0adf43a711f5a9cbc634", null ],
     [ "set_curr", "processor_8h.html#a8b291c9f835613e2be8c14961708f82b", null ],
     [ "set_manager", "processor_8h.html#ad91f5f81b827793fc661b86e86ab6637", null ]
