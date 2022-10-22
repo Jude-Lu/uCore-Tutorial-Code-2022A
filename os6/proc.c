@@ -369,7 +369,15 @@ void proc_init()
 		.either_copyout = either_copyout,
 		.either_copyin = either_copyin,
 
+		.pipeopen = undefined_pipeopen,
 		.pipeclose = undefined_pipeclose,
+
+		.bread = bread,
+		.brelse = brelse,
+		.bwrite = bwrite,
+		.bpin = bpin,
+		.bunpin = bunpin,
+		.buf_data = buf_data
 	};
 	set_file(&os6_fs_manager);
 }

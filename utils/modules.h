@@ -10,7 +10,7 @@
 #include "../task-manage/queue.h"
 #include "../task-manage/processor.h"
 #include "../pipe/pipe.h"
-#include "../easy-fs/virtio.h"
+#include "../disk/virtio.h"
 #include "../easy-fs/file.h"
 
 #endif // MODULES_H

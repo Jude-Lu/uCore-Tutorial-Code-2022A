@@ -66,7 +66,7 @@ const int R = 0;
 const int W = 1;
 
 // Return a buf with the contents of the indicated block.
-struct buf *bread(uint dev, uint blockno)
+void* bread(uint dev, uint blockno)
 {
 	struct buf *b;
 	b = bget(dev, blockno);
@@ -74,19 +74,21 @@ struct buf *bread(uint dev, uint blockno)
 		virtio_disk_rw(b, R);
 		b->valid = 1;
 	}
-	return b;
+	return (void*)b;
 }
 
 // Write b's contents to disk.
-void bwrite(struct buf *b)
+void bwrite(void *_b)
 {
+	struct buf *b = _b;
 	virtio_disk_rw(b, W);
 }
 
 // Release a buffer.
 // Move to the head of the most-recently-used list.
-void brelse(struct buf *b)
+void brelse(void *_b)
 {
+	struct buf *b = _b;
 	b->refcnt--;
 	if (b->refcnt == 0) {
 		// no one is waiting for it.
@@ -99,12 +101,17 @@ void brelse(struct buf *b)
 	}
 }
 
-void bpin(struct buf *b)
+void bpin(void *b)
 {
-	b->refcnt++;
+	((struct buf*)b)->refcnt++;
 }
 
-void bunpin(struct buf *b)
+void bunpin(void *b)
 {
-	b->refcnt--;
+	((struct buf*)b)->refcnt--;
+}
+
+uchar* buf_data(void *b)
+{
+	return ((struct buf*)b) -> data;
 }

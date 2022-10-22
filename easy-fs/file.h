@@ -51,6 +51,13 @@ struct FSManager
 
 	void* (*pipeopen)();
 	void (*pipeclose)(void *_pi, int writable);
+
+	void* (*bread)(uint, uint);
+	void (*brelse)(void*);
+	void (*bwrite)(void*);
+	void (*bpin)(void*);
+	void (*bunpin)(void*);
+	uchar* (*buf_data)(void*);
 };
 
 void set_file(struct FSManager *FSManager);
