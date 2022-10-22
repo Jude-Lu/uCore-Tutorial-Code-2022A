@@ -1,8 +1,14 @@
 #ifndef OS2_SYSCALL_H
 #define OS2_SYSCALL_H
 
-#include "../utils/types.h"
+#include "modules.h"
+
+enum {
+	STDIN = 0,
+	STDOUT = 1,
+	STDERR = 2,
+};
 
 void syscall_init();
 
-#endif
+#endif // OS2_SYSCALL_H
