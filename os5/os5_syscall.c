@@ -1,9 +1,6 @@
 #include "os5_syscall.h"
-#include "../utils/defs.h"
-#include "../utils/modules.h"
-#include "../syscall/syscall_ids.h"
+#include "proc.h"
 #include "loader.h"
-#include "os5_trap.h"
 
 uint64 os5_sys_write(int fd, uint64 va, uint64 len)
 {
