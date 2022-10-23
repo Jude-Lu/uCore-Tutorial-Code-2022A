@@ -1,8 +1,6 @@
 #include "proc.h"
 #include "loader.h"
 #include "os3_trap.h"
-#include "../utils/defs.h"
-#include "../utils/modules.h"
 
 struct proc pool[NPROC];
 char kstack[NPROC][PAGE_SIZE];
