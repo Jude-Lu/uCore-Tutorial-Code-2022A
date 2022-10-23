@@ -2,8 +2,7 @@
 #define FILE_H
 
 #include "fs.h"
-#include "../utils/types.h"
-#include "../utils/riscv.h"
+#include "defs.h"
 
 // in-memory copy of an inode,it can be used to quickly locate file entities on disk
 struct inode {

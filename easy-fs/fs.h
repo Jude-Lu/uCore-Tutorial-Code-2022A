@@ -1,7 +1,13 @@
 #ifndef __FS_H__
 #define __FS_H__
 
-#include "../utils/defs.h"
+#include "defs.h"
+
+extern void *memmove(void *, const void *, uint);
+extern void *memset(void *, int, uint);
+extern int strncmp(const char *, const char *, uint);
+extern char *strncpy(char *, const char *, int);
+
 // On-disk file system format.
 // Both the kernel and user programs use this header file.
 

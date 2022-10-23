@@ -1,7 +1,7 @@
 #include "file.h"
 #include "fcntl.h"
 #include "fs.h"
-#include "../utils/defs.h"
+#include "log.h"
 
 struct FSManager *fs_manager;
 
