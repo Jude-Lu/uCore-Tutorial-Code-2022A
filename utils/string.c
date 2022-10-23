@@ -1,5 +1,4 @@
 #include "string.h"
-#include "types.h"
 
 void *memset(void *dst, int c, uint n)
 {
@@ -93,8 +92,4 @@ int strlen(const char *s)
 	for (n = 0; s[n]; n++)
 		;
 	return n;
-}
-
-void dummy(int _, ...)
-{
 }
