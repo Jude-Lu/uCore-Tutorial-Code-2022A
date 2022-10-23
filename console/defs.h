@@ -386,4 +386,4 @@ static inline void sfence_vma()
 	asm volatile("sfence.vma zero, zero");
 }
 
-#endif // DEF_H
+#endif // DEFS_H
