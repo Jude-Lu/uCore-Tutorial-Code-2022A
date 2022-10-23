@@ -9,6 +9,8 @@
 
 #include "virtio.h"
 
+extern void *memset(void *, int, uint);
+
 struct virtio_context *virtio_disk_context;
 
 void set_virtio(struct virtio_context *virtio_context) {
