@@ -1,8 +1,6 @@
 #include "proc.h"
 #include "loader.h"
 #include "os8_trap.h"
-#include "../utils/defs.h"
-#include "../utils/modules.h"
 
 struct proc pool[NPROC];
 __attribute__((aligned(16))) char kstack[NPROC][NTHREAD][KSTACK_SIZE];
