@@ -1,6 +1,5 @@
 #include "os6_syscall.h"
-#include "../utils/defs.h"
-#include "../utils/modules.h"
+#include "proc.h"
 #include "loader.h"
 #include "os6_trap.h"
 

@@ -11,6 +11,7 @@
 
 #include "fs.h"
 #include "file.h"
+#include "log.h"
 
 extern struct FSManager *fs_manager;
 

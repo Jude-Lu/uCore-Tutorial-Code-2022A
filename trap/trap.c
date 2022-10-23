@@ -1,5 +1,5 @@
-#include "../utils/defs.h"
 #include "trap.h"
+#include "timer.h"
 
 struct trap_handler_context *trap_context;
 

@@ -1,14 +1,11 @@
 #include "proc.h"
 #include "loader.h"
 #include "os4_trap.h"
-#include "../utils/defs.h"
-#include "../utils/modules.h"
 
 struct proc pool[NPROC];
 __attribute__((aligned(16))) char kstack[NPROC][PAGE_SIZE];
 __attribute__((aligned(4096))) char trapframe[NPROC][TRAP_PAGE_SIZE];
 
-extern char boot_stack_top[];
 struct proc idle;
 
 int procid()

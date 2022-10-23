@@ -1,7 +1,7 @@
 #ifndef STRING_H
 #define STRING_H
 
-#include "types.h"
+#include "defs.h"
 
 int memcmp(const void *, const void *, uint);
 void *memmove(void *, const void *, uint);

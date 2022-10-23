@@ -1,8 +1,7 @@
 #ifndef OS7_TRAP_H
 #define OS7_TRAP_H
 
-#include "../utils/defs.h"
-#include "../utils/modules.h"
+#include "modules.h"
 
 void os7_set_usertrap();
 void os7_set_kerneltrap();

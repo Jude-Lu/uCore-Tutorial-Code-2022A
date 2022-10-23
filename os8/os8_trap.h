@@ -1,8 +1,7 @@
 #ifndef OS8_TRAP_H
 #define OS8_TRAP_H
 
-#include "../utils/defs.h"
-#include "../utils/modules.h"
+#include "modules.h"
 
 void os8_set_usertrap();
 void os8_set_kerneltrap();

@@ -2,8 +2,6 @@
 #include "os3_trap.h"
 #include "loader.h"
 #include "proc.h"
-#include "../utils/defs.h"
-#include "../utils/modules.h"
 
 uint64 os3_sys_write(int fd, uint64 argument_str, uint64 len)
 {

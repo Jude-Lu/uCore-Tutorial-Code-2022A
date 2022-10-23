@@ -1,7 +1,13 @@
 #ifndef TRAP_H
 #define TRAP_H
 
-#include "../utils/types.h"
+#define SSTATUS_SPP (1L << 8) // Previous mode, 1=Supervisor, 0=User
+#define SSTATUS_SPIE (1L << 5) // Supervisor Previous Interrupt Enable
+
+#include "log.h"
+#include "defs.h"
+
+typedef uint64 *pagetable_t; // 512 PTEs
 
 struct trapframe {
 	/// kernel page table

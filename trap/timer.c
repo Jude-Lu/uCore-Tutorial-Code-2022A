@@ -1,6 +1,5 @@
 #include "timer.h"
-#include "riscv.h"
-#include "sbi.h"
+#include "trap_dependency.h"
 
 /// read the `mtime` regiser
 uint64 get_cycle()

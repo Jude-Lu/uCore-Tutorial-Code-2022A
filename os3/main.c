@@ -1,5 +1,3 @@
-#include "../utils/defs.h"
-#include "../utils/modules.h"
 #include "loader.h"
 #include "proc.h"
 #include "os3_trap.h"
@@ -7,8 +5,6 @@
 
 void clean_bss()
 {
-	extern char s_bss[];
-	extern char e_bss[];
 	memset(s_bss, 0, e_bss - s_bss);
 }
 

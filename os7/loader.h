@@ -1,10 +1,8 @@
 #ifndef LOADER_H
 #define LOADER_H
 
-#include "../utils/const.h"
-#include "../easy-fs/file.h"
+#include "modules.h"
 #include "proc.h"
-#include "../utils/types.h"
 
 int load_init_app();
 int bin_loader(struct inode *, struct proc *);

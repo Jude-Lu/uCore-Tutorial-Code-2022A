@@ -1,8 +1,5 @@
-#ifndef BATCH_H
-#define BATCH_H
-
-#include "../utils/const.h"
-#include "../utils/types.h"
+#ifndef LOADER_H
+#define LOADER_H
 
 void loader_init();
 int run_next_app();
@@ -12,4 +9,4 @@ int run_next_app();
 #define USER_STACK_SIZE PAGE_SIZE
 #define TRAP_PAGE_SIZE PAGE_SIZE
 
-#endif // BATCH_H
+#endif // LOADER_H

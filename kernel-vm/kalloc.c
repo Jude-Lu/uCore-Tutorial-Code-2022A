@@ -1,8 +1,5 @@
 #include "kalloc.h"
-#include "../utils/defs.h"
-#include "../utils/modules.h"
-
-extern char ekernel[];
+#include "vm_dependency.h"
 
 struct linklist {
     struct linklist* next;

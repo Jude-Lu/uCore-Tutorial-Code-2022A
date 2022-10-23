@@ -1,11 +1,8 @@
 #ifndef MAP_H
 #define MAP_H
 
-#include "../utils/riscv.h"
-#include "../utils/types.h"
-
-/// 跳板页地址
-extern char trampoline[];
+#include "defs.h"
+#include "log.h"
 
 /// 为内核分配虚拟地址空间
 void kvmmap(pagetable_t, uint64, uint64, uint64, int);

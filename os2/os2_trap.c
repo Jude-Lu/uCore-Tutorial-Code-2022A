@@ -1,9 +1,6 @@
 #include "os2_trap.h"
 #include "loader.h"
 
-extern char uservec[], userret[];
-extern char trap_page[], boot_stack_top[];
-
 void os2_yield()
 {
 	// We do not support "yield" in ch2, so we do nothing here.

@@ -1,9 +1,7 @@
 #ifndef LOADER_H
 #define LOADER_H
 
-#include "../utils/defs.h"
-#include "../utils/modules.h"
-#include "../easy-fs/file.h"
+#include "modules.h"
 #include "proc.h"
 
 int load_init_app();

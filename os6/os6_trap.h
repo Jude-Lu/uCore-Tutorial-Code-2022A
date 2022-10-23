@@ -1,8 +1,7 @@
 #ifndef OS6_TRAP_H
 #define OS6_TRAP_H
 
-#include "../utils/defs.h"
-#include "../utils/modules.h"
+#include "modules.h"
 
 void os6_set_usertrap();
 void os6_set_kerneltrap();

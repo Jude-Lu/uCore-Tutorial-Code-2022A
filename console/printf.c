@@ -1,6 +1,9 @@
 #include <stdarg.h>
 #include "console.h"
+#include "sbi.h"
+#include "log.h"
 #include "defs.h"
+
 static char digits[] = "0123456789abcdef";
 
 static void printint(int xx, int base, int sign) {
@@ -77,4 +80,7 @@ void printf(char* fmt, ...) {
                 break;
         }
     }
+}
+
+void dummy(int _, ...) {
 }

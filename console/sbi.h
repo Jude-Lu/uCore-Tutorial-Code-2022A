@@ -1,7 +1,7 @@
 #ifndef SBI_H
 #define SBI_H
 
-#include "types.h"
+#include "defs.h"
 
 void console_putchar(int);
 int console_getchar();

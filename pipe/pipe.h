@@ -1,8 +1,8 @@
 #ifndef PIPE_H
 #define PIPE_H
 
-#include "../utils/defs.h"
-#include "../utils/riscv.h"
+#include "defs.h"
+#include "log.h"
 
 #define PIPESIZE (512)
 

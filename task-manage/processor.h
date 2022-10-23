@@ -1,7 +1,7 @@
 #ifndef PROCESSOR_H
 #define PROCESSOR_H
 
-#include "../utils/types.h"
+#include "defs.h"
 
 enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };
 
@@ -34,9 +34,9 @@ struct manager {
 	/// 删除任务
 	void (*remove)(void* p);
 	/// 根据id获取任务
-	void* (*get)(int id);
+	void* (*get_task_by_id)(int id);
 	/// 根据任务获取id
-	int (*change)(void* p);
+	int (*get_id_by_task)(void* p);
 	/// 将任务加入调度队列
 	void (*add)(void* p);
 	/// 从调度队列中取出相应任务

@@ -1,5 +1,3 @@
-#include "../utils/defs.h"
-#include "../utils/modules.h"
 #include "loader.h"
 #include "sync.h"
 #include "os8_syscall.h"

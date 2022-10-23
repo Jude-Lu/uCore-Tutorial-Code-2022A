@@ -1,10 +1,6 @@
 #include "os6_trap.h"
 #include "loader.h"
 #include "proc.h"
-#include "../trap/plic.h"
-#include "../disk/virtio.h"
-
-extern char trampoline[], uservec[], kernelvec[], userret[];
 
 void os6_set_usertrap()
 {

@@ -20,12 +20,12 @@ void set_curr(void* p) {
 
 /// 根据id获得进程
 void* get_task(int id) {
-	return task_manager->get(id);
+	return task_manager->get_task_by_id(id);
 }
 
 /// 根据进程获得id
 int get_id(void* p) {
-	return task_manager->change(p);
+	return task_manager->get_id_by_task(p);
 }
 
 /// 创建进程
