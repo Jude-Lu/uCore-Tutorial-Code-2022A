@@ -2,8 +2,6 @@
 #include "loader.h"
 #include "proc.h"
 
-extern char trampoline[], uservec[], kernelvec[], userret[];
-
 void os8_set_usertrap()
 {
 	w_stvec(((uint64)TRAMPOLINE + (uservec - trampoline)) & ~0x3);

@@ -6,7 +6,6 @@ struct proc pool[NPROC];
 __attribute__((aligned(16))) char kstack[NPROC][NTHREAD][KSTACK_SIZE];
 __attribute__((aligned(4096))) char trapframe[NPROC][NTHREAD][TRAP_PAGE_SIZE];
 
-extern char boot_stack_top[];
 struct thread idle;
 struct queue task_queue;
 

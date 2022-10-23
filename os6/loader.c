@@ -1,8 +1,6 @@
 #include "loader.h"
 #include "os6_trap.h"
 
-extern char INIT_PROC[];
-
 int bin_loader(struct inode *ip, struct proc *p)
 {
 	ivalid(ip);

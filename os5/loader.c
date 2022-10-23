@@ -1,11 +1,6 @@
 #include "loader.h"
 #include "os5_trap.h"
 
-static int app_num;
-static uint64 *app_info_ptr;
-extern char _app_num[], _app_names[], INIT_PROC[];
-char names[MAX_APP_NUM][MAX_STR_LEN];
-
 // Get user progs' infomation through pre-defined symbol in `link_app.S`
 void loader_init()
 {

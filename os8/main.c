@@ -2,13 +2,8 @@
 #include "os8_trap.h"
 #include "os8_syscall.h"
 
-extern char e_text[]; // kernel.ld sets this to end of kernel code.
-extern char trampoline[];
-
 void clean_bss()
 {
-	extern char s_bss[];
-	extern char e_bss[];
 	memset(s_bss, 0, e_bss - s_bss);
 }
 
