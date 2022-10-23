@@ -449,7 +449,7 @@ pagetable_t get_curr_pagetable()
 
 struct mutex* alloc_mutex()
 {
-	struct proc *p = ((struct thread*)curr_task())->process;
+	struct proc *p = curr_proc();
 	if (p->next_mutex_id >= LOCK_POOL_SIZE) {
 		return NULL;
 	}
@@ -460,7 +460,7 @@ struct mutex* alloc_mutex()
 
 struct semaphore* alloc_semaphore()
 {
-	struct proc *p = ((struct thread*)curr_task())->process;
+	struct proc *p = curr_proc();
 	if (p->next_semaphore_id >= LOCK_POOL_SIZE) {
 		return NULL;
 	}
@@ -471,7 +471,7 @@ struct semaphore* alloc_semaphore()
 
 struct condvar* alloc_codvar()
 {
-	struct proc *p = ((struct thread*)curr_task())->process;
+	struct proc *p = curr_proc();
 	if (p->next_condvar_id >= LOCK_POOL_SIZE) {
 		return NULL;
 	}
