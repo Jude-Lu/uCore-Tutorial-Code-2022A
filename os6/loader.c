@@ -1,7 +1,5 @@
 #include "loader.h"
 #include "os6_trap.h"
-#include "../utils/defs.h"
-#include "../utils/modules.h"
 
 extern char INIT_PROC[];
 
