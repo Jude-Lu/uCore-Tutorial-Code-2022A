@@ -91,42 +91,61 @@ $(document).ready(function(){initNavTree('os8_2proc_8c.html',''); initResizable(
 <div class="textblock"><code>#include &quot;<a class="el" href="os8_2proc_8h_source.html">proc.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="os8_2loader_8h_source.html">loader.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="os8__trap_8h_source.html">os8_trap.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="defs_8h_source.html">../utils/defs.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="modules_8h_source.html">../utils/modules.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 proc.c 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="os8_2proc_8c__incl.png" border="0" usemap="#os8_2proc_8c" alt=""/></div>
 <map name="os8_2proc_8c" id="os8_2proc_8c">
-<area shape="rect" title=" " alt="" coords="1039,5,1127,32"/>
-<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="1052,155,1115,181"/>
-<area shape="rect" href="defs_8h.html" title=" " alt="" coords="1075,528,1182,555"/>
-<area shape="rect" href="modules_8h.html" title=" " alt="" coords="673,304,808,331"/>
-<area shape="rect" href="os8_2loader_8h.html" title=" " alt="" coords="1143,80,1218,107"/>
-<area shape="rect" href="os8__trap_8h.html" title=" " alt="" coords="914,229,1005,256"/>
-<area shape="rect" href="sync_8h.html" title=" " alt="" coords="1029,229,1093,256"/>
-<area shape="rect" href="const_8h.html" title=" " alt="" coords="787,603,857,629"/>
-<area shape="rect" href="riscv_8h.html" title=" " alt="" coords="826,677,890,704"/>
-<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="823,752,893,779"/>
-<area shape="rect" href="log_8h.html" title=" " alt="" coords="708,603,763,629"/>
-<area shape="rect" href="printf_8h.html" title=" " alt="" coords="1191,603,1259,629"/>
-<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="1363,677,1417,704"/>
-<area shape="rect" href="string_8h.html" title=" " alt="" coords="1441,677,1512,704"/>
-<area shape="rect" href="timer_8h.html" title=" " alt="" coords="1049,677,1117,704"/>
-<area shape="rect" href="console_8h.html" title=" " alt="" coords="983,603,1067,629"/>
-<area shape="rect" href="queue_8h.html" title=" " alt="" coords="1091,603,1166,629"/>
-<area shape="rect" href="syscall_8h.html" title=" " alt="" coords="164,528,304,555"/>
-<area shape="rect" href="trap_8h.html" title=" " alt="" coords="325,677,428,704"/>
-<area shape="rect" href="plic_8h.html" title=" " alt="" coords="743,453,842,480"/>
-<area shape="rect" href="kalloc_8h.html" title=" " alt="" coords="435,379,588,405"/>
-<area shape="rect" href="map_8h.html" title=" " alt="" coords="329,603,473,629"/>
-<area shape="rect" href="vm_8h.html" title=" " alt="" coords="497,603,633,629"/>
-<area shape="rect" href="processor_8h.html" title=" " alt="" coords="5,677,204,704"/>
-<area shape="rect" href="pipe_8h.html" title=" " alt="" coords="866,453,973,480"/>
-<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="608,453,719,480"/>
-<area shape="rect" href="file_8h.html" title=" " alt="" coords="1200,379,1319,405"/>
-<area shape="rect" href="bio_8h.html" title=" " alt="" coords="643,528,697,555"/>
-<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="1219,453,1265,480"/>
+<area shape="rect" title=" " alt="" coords="795,5,883,32"/>
+<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="736,155,799,181"/>
+<area shape="rect" href="os8_2loader_8h.html" title=" " alt="" coords="802,80,877,107"/>
+<area shape="rect" href="os8__trap_8h.html" title=" " alt="" coords="875,155,966,181"/>
+<area shape="rect" href="os8_2modules_8h.html" title=" " alt="" coords="758,304,849,331"/>
+<area shape="rect" href="sync_8h.html" title=" " alt="" coords="737,229,801,256"/>
+<area shape="rect" href="os8_2defs_8h.html" title=" " alt="" coords="5,386,68,413"/>
+<area shape="rect" href="os8_2log_8h.html" title=" " alt="" coords="92,386,147,413"/>
+<area shape="rect" href="os8_2extern_8h.html" title=" " alt="" coords="171,386,247,413"/>
+<area shape="rect" href="console__module_8h.html" title=" " alt="" coords="271,379,410,420"/>
+<area shape="rect" href="disk__module_8h.html" title=" " alt="" coords="434,386,594,413"/>
+<area shape="rect" href="fs__module_8h.html" title=" " alt="" coords="619,386,785,413"/>
+<area shape="rect" href="vm__module_8h.html" title=" " alt="" coords="810,386,1002,413"/>
+<area shape="rect" href="pipe__module_8h.html" title=" " alt="" coords="1026,386,1189,413"/>
+<area shape="rect" href="syscall__module_8h.html" title=" " alt="" coords="1213,379,1341,420"/>
+<area shape="rect" href="trap__module_8h.html" title=" " alt="" coords="1365,386,1524,413"/>
+<area shape="rect" href="task__module_8h.html" title=" " alt="" coords="1549,379,1701,420"/>
+<area shape="rect" href="utils__module_8h.html" title=" " alt="" coords="1725,386,1887,413"/>
+<area shape="rect" href="console_8h.html" title=" " alt="" coords="131,468,215,495"/>
+<area shape="rect" href="printf_8h.html" title=" " alt="" coords="239,468,307,495"/>
+<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="331,468,385,495"/>
+<area shape="rect" href="console_2defs_8h.html" title=" " alt="" coords="327,543,389,569"/>
+<area shape="rect" href="bio_8h.html" title=" " alt="" coords="471,543,525,569"/>
+<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="409,468,477,495"/>
+<area shape="rect" href="disk_2defs_8h.html" title=" " alt="" coords="385,617,448,644"/>
+<area shape="rect" href="disk_2log_8h.html" title=" " alt="" coords="472,617,527,644"/>
+<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="643,543,689,569"/>
+<area shape="rect" href="file_8h.html" title=" " alt="" coords="703,468,757,495"/>
+<area shape="rect" href="easy-fs_2defs_8h.html" title=" " alt="" coords="636,692,699,719"/>
+<area shape="rect" href="fs__dependency_8h.html" title=" " alt="" coords="602,617,733,644"/>
+<area shape="rect" href="kalloc_8h.html" title=" " alt="" coords="782,468,854,495"/>
+<area shape="rect" href="vm_8h.html" title=" " alt="" coords="879,468,933,495"/>
+<area shape="rect" href="map_8h.html" title=" " alt="" coords="957,468,1020,495"/>
+<area shape="rect" href="kernel-vm_2defs_8h.html" title=" " alt="" coords="887,543,949,569"/>
+<area shape="rect" href="kernel-vm_2log_8h.html" title=" " alt="" coords="808,543,863,569"/>
+<area shape="rect" href="pipe_8h.html" title=" " alt="" coords="1044,468,1107,495"/>
+<area shape="rect" href="pipe_2defs_8h.html" title=" " alt="" coords="1052,543,1115,569"/>
+<area shape="rect" href="pipe_2log_8h.html" title=" " alt="" coords="973,543,1028,569"/>
+<area shape="rect" href="syscall__ids_8h.html" title=" " alt="" coords="1233,468,1339,495"/>
+<area shape="rect" href="syscall_8h.html" title=" " alt="" coords="1131,468,1209,495"/>
+<area shape="rect" href="syscall_2defs_8h.html" title=" " alt="" coords="1139,543,1201,569"/>
+<area shape="rect" href="trap_8h.html" title=" " alt="" coords="1363,468,1423,495"/>
+<area shape="rect" href="plic_8h.html" title=" " alt="" coords="1539,468,1596,495"/>
+<area shape="rect" href="timer_8h.html" title=" " alt="" coords="1447,468,1515,495"/>
+<area shape="rect" href="trap_2log_8h.html" title=" " alt="" coords="1365,543,1420,569"/>
+<area shape="rect" href="trap_2defs_8h.html" title=" " alt="" coords="1447,543,1509,569"/>
+<area shape="rect" href="processor_8h.html" title=" " alt="" coords="1621,468,1717,495"/>
+<area shape="rect" href="task-manage_2defs_8h.html" title=" " alt="" coords="1637,543,1700,569"/>
+<area shape="rect" href="string_8h.html" title=" " alt="" coords="1853,468,1924,495"/>
+<area shape="rect" href="queue_8h.html" title=" " alt="" coords="1754,468,1829,495"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -142,20 +161,20 @@ proc.c 的引用(Include)关系图:</div>
 <tr class="separator:a414dda255ed3c1e43e7922d10f9d2c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8d34090b3dff1dcd42684b6bc50af96"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#aa8d34090b3dff1dcd42684b6bc50af96">allocpid</a> ()</td></tr>
 <tr class="separator:aa8d34090b3dff1dcd42684b6bc50af96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c6ed8cf6422c786643d95b1de20d723"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#a1c6ed8cf6422c786643d95b1de20d723">freepagetable</a> (<a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> max_page)</td></tr>
+<tr class="memitem:a1c6ed8cf6422c786643d95b1de20d723"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#a1c6ed8cf6422c786643d95b1de20d723">freepagetable</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> max_page)</td></tr>
 <tr class="separator:a1c6ed8cf6422c786643d95b1de20d723"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c6575a11e05393fc9b7ef875bef2a07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#a2c6575a11e05393fc9b7ef875bef2a07">get_thread_trapframe_va</a> (int tid)</td></tr>
+<tr class="memitem:a2c6575a11e05393fc9b7ef875bef2a07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#a2c6575a11e05393fc9b7ef875bef2a07">get_thread_trapframe_va</a> (int tid)</td></tr>
 <tr class="separator:a2c6575a11e05393fc9b7ef875bef2a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2135dae439a596cd74c4d418ea441ba6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#a2135dae439a596cd74c4d418ea441ba6">get_thread_ustack_base_va</a> (struct <a class="el" href="structthread.html">thread</a> *t)</td></tr>
+<tr class="memitem:a2135dae439a596cd74c4d418ea441ba6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#a2135dae439a596cd74c4d418ea441ba6">get_thread_ustack_base_va</a> (struct <a class="el" href="structthread.html">thread</a> *t)</td></tr>
 <tr class="separator:a2135dae439a596cd74c4d418ea441ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2bfce83e555c9208085538ac7fedfc9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#ad2bfce83e555c9208085538ac7fedfc9">allocthread</a> (struct <a class="el" href="structproc.html">proc</a> *p, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> entry, int alloc_user_res)</td></tr>
+<tr class="memitem:ad2bfce83e555c9208085538ac7fedfc9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#ad2bfce83e555c9208085538ac7fedfc9">allocthread</a> (struct <a class="el" href="structproc.html">proc</a> *p, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> entry, int alloc_user_res)</td></tr>
 <tr class="separator:ad2bfce83e555c9208085538ac7fedfc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af538a511a0b41324bd8df99ef3be0f6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#af538a511a0b41324bd8df99ef3be0f6e">freethread</a> (struct <a class="el" href="structthread.html">thread</a> *t)</td></tr>
 <tr class="separator:af538a511a0b41324bd8df99ef3be0f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e7198d32381f44f02cf3cd5d9628a5c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#a5e7198d32381f44f02cf3cd5d9628a5c">get</a> (int index)</td></tr>
-<tr class="separator:a5e7198d32381f44f02cf3cd5d9628a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a039325f414d1ea4637f6a0d5683475fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#a039325f414d1ea4637f6a0d5683475fd">change</a> (void *<a class="el" href="structthread.html">thread</a>)</td></tr>
-<tr class="separator:a039325f414d1ea4637f6a0d5683475fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab33cb2d4873cc4b3161ca74cd13d1275"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#ab33cb2d4873cc4b3161ca74cd13d1275">get_task_by_id</a> (int index)</td></tr>
+<tr class="separator:ab33cb2d4873cc4b3161ca74cd13d1275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7441b2ae737781edd6b3846431bf053a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#a7441b2ae737781edd6b3846431bf053a">get_id_by_task</a> (void *<a class="el" href="structthread.html">thread</a>)</td></tr>
+<tr class="separator:a7441b2ae737781edd6b3846431bf053a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a138a8ffaf920ace90e996769eefc8b0d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#a138a8ffaf920ace90e996769eefc8b0d">fetch</a> ()</td></tr>
 <tr class="separator:a138a8ffaf920ace90e996769eefc8b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a784b27ab893d5acfb384c410ff7be00e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#a784b27ab893d5acfb384c410ff7be00e">add</a> (void *<a class="el" href="structthread.html">thread</a>)</td></tr>
@@ -184,7 +203,7 @@ proc.c 的引用(Include)关系图:</div>
 <tr class="separator:a7b17e5913b7dff48eec9ba3976ccfd3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00b6673379848688b1f4f14e5ce9735c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#a00b6673379848688b1f4f14e5ce9735c">fdalloc</a> (struct <a class="el" href="structfile.html">file</a> *f)</td></tr>
 <tr class="separator:a00b6673379848688b1f4f14e5ce9735c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1142ccecbe5d54372efbecdbeb20aba3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#a1142ccecbe5d54372efbecdbeb20aba3">get_curr_pagetable</a> ()</td></tr>
+<tr class="memitem:a1142ccecbe5d54372efbecdbeb20aba3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#a1142ccecbe5d54372efbecdbeb20aba3">get_curr_pagetable</a> ()</td></tr>
 <tr class="separator:a1142ccecbe5d54372efbecdbeb20aba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17d1aae356cbff8c71be7a05a1ec480e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8_2proc_8c.html#a17d1aae356cbff8c71be7a05a1ec480e">proc_init</a> ()</td></tr>
 <tr class="separator:a17d1aae356cbff8c71be7a05a1ec480e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -263,7 +282,7 @@ proc.c 的引用(Include)关系图:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
           <td class="paramname"><em>entry</em>, </td>
         </tr>
         <tr>
@@ -276,24 +295,6 @@ proc.c 的引用(Include)关系图:</div>
           <td></td>
           <td>)</td>
           <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a039325f414d1ea4637f6a0d5683475fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a039325f414d1ea4637f6a0d5683475fd">&#9670;&nbsp;</a></span>change()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int change </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>thread</em></td><td>)</td>
-          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -441,13 +442,13 @@ proc.c 的引用(Include)关系图:</div>
         <tr>
           <td class="memname">void freepagetable </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
           <td class="paramname"><em>pagetable</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
           <td class="paramname"><em>max_page</em>&#160;</td>
         </tr>
         <tr>
@@ -478,24 +479,6 @@ proc.c 的引用(Include)关系图:</div>
 
 </div>
 </div>
-<a id="a5e7198d32381f44f02cf3cd5d9628a5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e7198d32381f44f02cf3cd5d9628a5c">&#9670;&nbsp;</a></span>get()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* get </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a1142ccecbe5d54372efbecdbeb20aba3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1142ccecbe5d54372efbecdbeb20aba3">&#9670;&nbsp;</a></span>get_curr_pagetable()</h2>
 
@@ -503,9 +486,45 @@ proc.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> get_curr_pagetable </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> get_curr_pagetable </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7441b2ae737781edd6b3846431bf053a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7441b2ae737781edd6b3846431bf053a">&#9670;&nbsp;</a></span>get_id_by_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_id_by_task </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab33cb2d4873cc4b3161ca74cd13d1275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab33cb2d4873cc4b3161ca74cd13d1275">&#9670;&nbsp;</a></span>get_task_by_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* get_task_by_id </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -523,7 +542,7 @@ proc.c 的引用(Include)关系图:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> get_thread_trapframe_va </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> get_thread_trapframe_va </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>tid</em></td><td>)</td>
@@ -549,7 +568,7 @@ proc.c 的引用(Include)关系图:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> get_thread_ustack_base_va </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> get_thread_ustack_base_va </td>
           <td>(</td>
           <td class="paramtype">struct <a class="el" href="structthread.html">thread</a> *&#160;</td>
           <td class="paramname"><em>t</em></td><td>)</td>

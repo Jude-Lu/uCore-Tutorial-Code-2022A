@@ -7,7 +7,7 @@ var bio_8c =
     [ "buf_data", "bio_8c.html#acfdc9276c4330cd911854199e55c57fa", null ],
     [ "bunpin", "bio_8c.html#ae68a7b9f954b05d3cce7be10cc48ad67", null ],
     [ "bwrite", "bio_8c.html#ae81bbf8b40f0602a191798342900ca89", null ],
-    [ "bcache", "bio_8c.html#a7725a9957148b7740449a091ea12b0e4", null ],
+    [ "bcache", "bio_8c.html#a484cc4a6a6fe40f324eaab3f87b0c74e", null ],
     [ "buf", "bio_8c.html#a72ee90c61d41547b10a533c219e081c6", null ],
     [ "head", "bio_8c.html#aa6e692c16f1b909f5cb2a1832cf43430", null ],
     [ "R", "bio_8c.html#a554e63228b946db0d44c4f398b18e212", null ],

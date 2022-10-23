@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>uCore-Tutorial-Code-2022A: kernel-vm/defs.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uCore-Tutorial-Code-2022A
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('kernel-vm_2defs_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">defs.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="kernel-vm_2defs_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DEFS_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define DEFS_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">    4</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#ab95f123a6c9bcfee6a343170ef8c5f69">    5</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="console_2defs_8h.html#ab95f123a6c9bcfee6a343170ef8c5f69">ushort</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a65f85814a8290f9797005d3b28e7e5fc">    6</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="console_2defs_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#adde6aaee8457bee49c2a92621fe22b79">    7</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="console_2defs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">    8</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="console_2defs_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">    9</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="console_2defs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">   10</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#ab2c27be14dd36f877c6267835e0d1608">   12</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="console_2defs_8h.html#ab2c27be14dd36f877c6267835e0d1608">pte_t</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a9565a866261271dc57420e15e67f94f3">   13</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> <a class="code" href="console_2defs_8h.html#a9565a866261271dc57420e15e67f94f3">pde_t</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">   14</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> *<a class="code" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>; <span class="comment">// 512 PTEs</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// number of elements in fixed-size array</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#afacd331296c10f360da7640e0d68429f">   17</a></span>&#160;<span class="preprocessor">#define NELEM(x) (sizeof(x) / sizeof((x)[0]))</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">   18</a></span>&#160;<span class="preprocessor">#define MIN(a, b) (a &lt; b ? a : b)</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">   19</a></span>&#160;<span class="preprocessor">#define MAX(a, b) (a &gt; b ? a : b)</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">   21</a></span>&#160;<span class="preprocessor">#define NULL ((void *)0)</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// Machine Status Register, mstatus</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a16d6d0c403a36d5c6be7915bb7b830b7">   25</a></span>&#160;<span class="preprocessor">#define MSTATUS_MPP_MASK (3L &lt;&lt; 11) // previous mode.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#aa6621785868a067469e73ac9babeed99">   26</a></span>&#160;<span class="preprocessor">#define MSTATUS_MPP_M (3L &lt;&lt; 11)</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a484f2297ebe1535484c13f12f70e602a">   27</a></span>&#160;<span class="preprocessor">#define MSTATUS_MPP_S (1L &lt;&lt; 11)</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#aebc8dae20b3f619d03f0291db287f6de">   28</a></span>&#160;<span class="preprocessor">#define MSTATUS_MPP_U (0L &lt;&lt; 11)</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a225cb34e3b991318fa87f090cfc3fc5f">   29</a></span>&#160;<span class="preprocessor">#define MSTATUS_MIE (1L &lt;&lt; 3) // machine-mode interrupt enable.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">   31</a></span>&#160;<span class="preprocessor">#define PAGE_SIZE (0x1000)</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#abed82baf7f470b522273a3e37c24c600a08864b73fa6c82cb8de78a336050bfdb">   34</a></span>&#160;    <a class="code" href="console_2defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba08864b73fa6c82cb8de78a336050bfdb">STDIN</a> = 0,</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#abed82baf7f470b522273a3e37c24c600ad1026b11391895f6e302f892a44a04df">   35</a></span>&#160;    <a class="code" href="console_2defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bad1026b11391895f6e302f892a44a04df">STDOUT</a> = 1,</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#abed82baf7f470b522273a3e37c24c600a4b971ca4918db729a147aa7c78cea0e3">   36</a></span>&#160;    <a class="code" href="console_2defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba4b971ca4918db729a147aa7c78cea0e3">STDERR</a> = 2,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// memory layout</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">// the kernel expects there to be RAM</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">// for use by the kernel and user pages</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// from physical address 0x80000000 to PHYSTOP.</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a20cbfc19992a40ab9ccf4aa8ab8283d0">   44</a></span>&#160;<span class="preprocessor">#define KERNBASE 0x80200000L</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#ad3c557a115f7d82d9ef849846779531c">   45</a></span>&#160;<span class="preprocessor">#define PHYSTOP (0x80000000 + 128 * 1024 * 1024) // we have 128M memroy</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">// one beyond the highest possible virtual address.</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">// MAXVA is actually one bit less than the max allowed by</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">// Sv39, to avoid having to sign-extend virtual addresses</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">// that have the high bit set.</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#define MAXVA (1L &lt;&lt; (9 + 9 + 9 + 12 - 1))</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">// map the trampoline page to the highest address,</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">// in both user and kernel space.</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a34b6200a7381d42137b691db308f5492">   55</a></span>&#160;<span class="preprocessor">#define USER_TOP (MAXVA)</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a52ba776b718bf663e0b46a209bb7cc28">   56</a></span>&#160;<span class="preprocessor">#define TRAMPOLINE (USER_TOP - PGSIZE)</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a595bcc3e08854d590c0118951f0d5f53">   57</a></span>&#160;<span class="preprocessor">#define TRAPFRAME (TRAMPOLINE - PGSIZE)</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#af6368cbcf84fb75963198f7f8ee3cf3f">   59</a></span>&#160;<span class="preprocessor">#define MAX_APP_NUM (32)</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a58ce36916c399104e18d32ff090f21c6">   60</a></span>&#160;<span class="preprocessor">#define MAX_STR_LEN (300)</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a140badff32835d7b4825ce2ac8c3a1bc">   61</a></span>&#160;<span class="preprocessor">#define IDLE_PID (0)</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#af2118cce41db1171e3c76c1c1268641b">   62</a></span>&#160;<span class="preprocessor">#define MAX_ARG_NUM (32) // max exec arguments</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">// file system</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a8485f4e81de2537e6a0935626167a775">   65</a></span>&#160;<span class="preprocessor">#define NFILE (100) // open files per system</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#adabafa10c7951be7c875cd2ee212be85">   66</a></span>&#160;<span class="preprocessor">#define NINODE (50) // maximum number of active i-nodes</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#aa564a41c8409694da49b0badf2bb2853">   67</a></span>&#160;<span class="preprocessor">#define NDEV (10) // maximum major device number</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#ae9ce6b24fe2aae59ff60b469c35febbc">   68</a></span>&#160;<span class="preprocessor">#define ROOTDEV (1) // device number of file system root disk</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a31cde324007b4e52bbba7079ec5e5f45">   69</a></span>&#160;<span class="preprocessor">#define MAXOPBLOCKS (10) // max # of blocks any FS op writes</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#ad51e2f8dffd163c263ec676a268d0f0a">   70</a></span>&#160;<span class="preprocessor">#define NBUF (MAXOPBLOCKS * 3) // size of disk block cache</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a486f47992f736854db2444b01afd9991">   71</a></span>&#160;<span class="preprocessor">#define FSSIZE (1000) // size of file system in blocks</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a2d1edde91ea515b363277f4bbdc3244d">   72</a></span>&#160;<span class="preprocessor">#define MAXPATH (128) // maximum file path name</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a22c8ea96d09283ed6496347806cc72a0">   74</a></span>&#160;<span class="preprocessor">#define ROOTINO (1) // root i-number</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a403cf3149c084cea115b85c90721039a">   75</a></span>&#160;<span class="preprocessor">#define BSIZE (1024) // block size</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">// virtio mmio interface</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#aac8de2a0393367154119c25e2b279953">   78</a></span>&#160;<span class="preprocessor">#define VIRTIO0 0x10001000</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a25f490f8544627e94679dd4eee307c8a">   79</a></span>&#160;<span class="preprocessor">#define VIRTIO0_IRQ 1</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a5f96cb6ae6670e023c407cc2f77e1704">   81</a></span>&#160;<span class="preprocessor">#define PGSIZE 4096 // bytes per page</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a20d0b7c5f64f21a3fdc19cf44afe8ff2">   82</a></span>&#160;<span class="preprocessor">#define PGSHIFT 12 // bits of offset within a page</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#affa8cdfbd1c15dafc9f3af3a7b641f80">   84</a></span>&#160;<span class="preprocessor">#define PGROUNDUP(sz) (((sz) + PGSIZE - 1) &amp; ~(PGSIZE - 1))</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a687e91750055553dd2788386c6a512fb">   85</a></span>&#160;<span class="preprocessor">#define PGROUNDDOWN(a) (((a)) &amp; ~(PGSIZE - 1))</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a8636c2bf92b4bc01ad85ec74939ecd49">   86</a></span>&#160;<span class="preprocessor">#define PGALIGNED(a) (((a) &amp; (PGSIZE - 1)) == 0)</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a9a3c738182007bee471e44aae04c386f">   88</a></span>&#160;<span class="preprocessor">#define PTE_V (1L &lt;&lt; 0) // valid</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a3a188134a2cbd69e161521fb169ecd08">   89</a></span>&#160;<span class="preprocessor">#define PTE_R (1L &lt;&lt; 1)</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a058fcbcc3e1eab2c09c68b3e5221c545">   90</a></span>&#160;<span class="preprocessor">#define PTE_W (1L &lt;&lt; 2)</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#ae20c834a93867eedc88007621c74ad55">   91</a></span>&#160;<span class="preprocessor">#define PTE_X (1L &lt;&lt; 3)</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#adced9836a1dc98d72849361e6ab03cda">   92</a></span>&#160;<span class="preprocessor">#define PTE_U (1L &lt;&lt; 4) // 1 -&gt; user can access</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">// shift a physical address to the right place for a PTE.</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#af9e87f9fe094fe3c66355d9f940cee74">   95</a></span>&#160;<span class="preprocessor">#define PA2PTE(pa) ((((uint64)pa) &gt;&gt; 12) &lt;&lt; 10)</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a8d1e9544afd4f96b58bb74b52141bcb8">   97</a></span>&#160;<span class="preprocessor">#define PTE2PA(pte) (((pte) &gt;&gt; 10) &lt;&lt; 12)</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a8842a288646d28dda80a0544002f6941">   99</a></span>&#160;<span class="preprocessor">#define PTE_FLAGS(pte) ((pte)&amp;0x3FF)</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">// extract the three 9-bit page table indices from a virtual address.</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#abf203f063421971797b2d1152e2f046e">  102</a></span>&#160;<span class="preprocessor">#define PXMASK 0x1FF // 9 bits</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#ac305438b1c7e636765ce77ee6bfd84d0">  103</a></span>&#160;<span class="preprocessor">#define PXSHIFT(level) (PGSHIFT + (9 * (level)))</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#aa23d629dc0f88b2b330ebd697f2538e1">  104</a></span>&#160;<span class="preprocessor">#define PX(level, va) ((((uint64)(va)) &gt;&gt; PXSHIFT(level)) &amp; PXMASK)</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">// one beyond the highest possible virtual address.</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">// MAXVA is actually one bit less than the max allowed by</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">// Sv39, to avoid having to sign-extend virtual addresses</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">// that have the high bit set.</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a781d1689a393d7c6e4243349cfdf6ce8">  110</a></span>&#160;<span class="preprocessor">#define MAXVA (1L &lt;&lt; (9 + 9 + 9 + 12 - 1))</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">// Supervisor Status Register, sstatus</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a4d0820d6a8b0c5b0fef6875a985d3370">  114</a></span>&#160;<span class="preprocessor">#define SSTATUS_SPP (1L &lt;&lt; 8) // Previous mode, 1=Supervisor, 0=User</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a3f9373ba6db2ce5e5c7ea28c2a5b3df9">  115</a></span>&#160;<span class="preprocessor">#define SSTATUS_SPIE (1L &lt;&lt; 5) // Supervisor Previous Interrupt Enable</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a796ad1a8b2314776082e72e13f4a30cf">  116</a></span>&#160;<span class="preprocessor">#define SSTATUS_UPIE (1L &lt;&lt; 4) // User Previous Interrupt Enable</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a1c1f1da0ecfca5bc4fc4db3acadf1bc8">  117</a></span>&#160;<span class="preprocessor">#define SSTATUS_SIE (1L &lt;&lt; 1) // Supervisor Interrupt Enable</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a431c67f7f0e4b5dbdf2048310ad814e0">  118</a></span>&#160;<span class="preprocessor">#define SSTATUS_UIE (1L &lt;&lt; 0) // User Interrupt Enable</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">// Supervisor Interrupt Enable</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a7ca797adbc936cc2e7d7b66a40325e63">  121</a></span>&#160;<span class="preprocessor">#define SIE_SEIE (1L &lt;&lt; 9) // external</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a819d8ea9e98335b93d6120c89dd9458b">  122</a></span>&#160;<span class="preprocessor">#define SIE_STIE (1L &lt;&lt; 5) // timer</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a02551379f9acab8fcea973ecbc8fcf20">  123</a></span>&#160;<span class="preprocessor">#define SIE_SSIE (1L &lt;&lt; 1) // software</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">// Machine-mode Interrupt Enable</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#ab4e2e4b72ec1e13b315dcdc910f5595b">  126</a></span>&#160;<span class="preprocessor">#define MIE_MEIE (1L &lt;&lt; 11) // external</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a88f0c7a5a13f0570ecbaa43b912b0fe4">  127</a></span>&#160;<span class="preprocessor">#define MIE_MTIE (1L &lt;&lt; 7) // timer</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#acdb82cffb46911d1a236dcf651b24b05">  128</a></span>&#160;<span class="preprocessor">#define MIE_MSIE (1L &lt;&lt; 3) // software</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">// use riscv&#39;s sv39 page table scheme.</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#ade6b65dbf23c28fca39d543364b61113">  131</a></span>&#160;<span class="preprocessor">#define SATP_SV39 (8L &lt;&lt; 60)</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="kernel-vm_2defs_8h.html#a7f4cdb98920ced01e9f94ee090d46164">  133</a></span>&#160;<span class="preprocessor">#define MAKE_SATP(pagetable) (SATP_SV39 | (((uint64)pagetable) &gt;&gt; 12))</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">// which hart (core) is this?</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_mhartid()</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrr %0, mhartid&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_mstatus()</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;{</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrr %0, mstatus&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> w_mstatus(<a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrw mstatus, %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(x));</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">// machine exception program counter, holds the</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">// instruction address to which a return from</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment">// exception will go.</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> w_mepc(<a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;{</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrw mepc, %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(x));</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_sstatus()</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;{</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrr %0, sstatus&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> w_sstatus(<a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;{</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrw sstatus, %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(x));</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">// Supervisor Interrupt Pending</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_sip()</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;{</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrr %0, sip&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> w_sip(<a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;{</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrw sip, %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(x));</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;}</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_sie()</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;{</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrr %0, sie&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;}</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> w_sie(<a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x)</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;{</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrw sie, %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(x));</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_mie()</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;{</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrr %0, mie&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> w_mie(<a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;{</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrw mie, %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(x));</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment">// machine exception program counter, holds the</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="comment">// instruction address to which a return from</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment">// exception will go.</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> w_sepc(<a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x)</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;{</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrw sepc, %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(x));</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;}</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_sepc()</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;{</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrr %0, sepc&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment">// Machine Exception Delegation</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_medeleg()</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;{</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrr %0, medeleg&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> w_medeleg(<a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x)</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;{</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrw medeleg, %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(x));</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;}</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment">// Machine Interrupt Delegation</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_mideleg()</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrr %0, mideleg&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;}</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> w_mideleg(<a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;{</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrw mideleg, %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(x));</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment">// Supervisor Trap-Vector Base Address</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment">// low two bits are mode.</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> w_stvec(<a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x)</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;{</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrw stvec, %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(x));</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;}</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_stvec()</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;{</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrr %0, stvec&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="comment">// Machine-mode interrupt vector</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> w_mtvec(<a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x)</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;{</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrw mtvec, %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(x));</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;}</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment">// supervisor address translation and protection;</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="comment">// holds the address of the page table.</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> w_satp(<a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x)</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;{</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrw satp, %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(x));</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;}</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_satp()</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;{</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrr %0, satp&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="comment">// Supervisor Scratch register, for early trap handler in trampoline.S.</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> w_sscratch(<a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x)</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;{</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrw sscratch, %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(x));</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;}</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> w_mscratch(<a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x)</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;{</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrw mscratch, %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(x));</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;}</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="comment">// Supervisor Trap Cause</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_scause()</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;{</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrr %0, scause&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;}</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment">// Supervisor Trap Value</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_stval()</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;{</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrr %0, stval&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;}</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="comment">// Machine-mode Counter-Enable</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> w_mcounteren(<a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x)</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;{</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrw mcounteren, %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(x));</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;}</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_mcounteren()</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;{</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrr %0, mcounteren&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;}</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="comment">// machine-mode cycle counter</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_time()</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;{</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;csrr %0, time&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;}</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="comment">// enable device interrupts</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> intr_on()</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;{</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    w_sstatus(r_sstatus() | <a class="code" href="kernel-vm_2defs_8h.html#a1c1f1da0ecfca5bc4fc4db3acadf1bc8">SSTATUS_SIE</a>);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;}</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;<span class="comment">// disable device interrupts</span></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> intr_off()</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;{</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    w_sstatus(r_sstatus() &amp; ~<a class="code" href="kernel-vm_2defs_8h.html#a1c1f1da0ecfca5bc4fc4db3acadf1bc8">SSTATUS_SIE</a>);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;}</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="comment">// are device interrupts enabled?</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> intr_get()</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;{</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x = r_sstatus();</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordflow">return</span> (x &amp; <a class="code" href="kernel-vm_2defs_8h.html#a1c1f1da0ecfca5bc4fc4db3acadf1bc8">SSTATUS_SIE</a>) != 0;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;}</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_sp()</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;{</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;mv %0, sp&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;}</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="comment">// read and write tp, the thread pointer, which holds</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="comment">// this core&#39;s hartid (core number), the index into cpus[].</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_tp()</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;{</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;mv %0, tp&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;}</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> w_tp(<a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x)</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;{</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;mv tp, %0&quot;</span> : : <span class="stringliteral">&quot;r&quot;</span>(x));</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;}</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> r_ra()</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;{</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> x;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;mv %0, ra&quot;</span> : <span class="stringliteral">&quot;=r&quot;</span>(x));</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;}</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="comment">// flush the TLB.</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> sfence_vma()</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;{</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="comment">// the zero, zero means flush all TLB entries.</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keyword">asm</span> <span class="keyword">volatile</span>(<span class="stringliteral">&quot;sfence.vma zero, zero&quot;</span>);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;}</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="preprocessor">#endif // DEFS_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="akernel-vm_2defs_8h_html_a1c1f1da0ecfca5bc4fc4db3acadf1bc8"><div class="ttname"><a href="kernel-vm_2defs_8h.html#a1c1f1da0ecfca5bc4fc4db3acadf1bc8">SSTATUS_SIE</a></div><div class="ttdeci">#define SSTATUS_SIE</div><div class="ttdef"><b>Definition:</b> defs.h:117</div></div>
+<div class="ttc" id="aconsole_2defs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba08864b73fa6c82cb8de78a336050bfdb"><div class="ttname"><a href="console_2defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba08864b73fa6c82cb8de78a336050bfdb">STDIN</a></div><div class="ttdeci">@ STDIN</div><div class="ttdef"><b>Definition:</b> defs.h:34</div></div>
+<div class="ttc" id="aconsole_2defs_8h_html_aabc0f4f29a1508768d880855992b8ba7"><div class="ttname"><a href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a></div><div class="ttdeci">uint64 * pagetable_t</div><div class="ttdef"><b>Definition:</b> defs.h:14</div></div>
+<div class="ttc" id="aconsole_2defs_8h_html_a91ad9478d81a7aaf2593e8d9c3d06a14"><div class="ttname"><a href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> defs.h:4</div></div>
+<div class="ttc" id="aconsole_2defs_8h_html_a05f6b0ae8f6a6e135b0e290c25fe0e4e"><div class="ttname"><a href="console_2defs_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a></div><div class="ttdeci">unsigned short uint16</div><div class="ttdef"><b>Definition:</b> defs.h:8</div></div>
+<div class="ttc" id="aconsole_2defs_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="console_2defs_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition:</b> defs.h:7</div></div>
+<div class="ttc" id="aconsole_2defs_8h_html_ab2c27be14dd36f877c6267835e0d1608"><div class="ttname"><a href="console_2defs_8h.html#ab2c27be14dd36f877c6267835e0d1608">pte_t</a></div><div class="ttdeci">uint64 pte_t</div><div class="ttdef"><b>Definition:</b> defs.h:12</div></div>
+<div class="ttc" id="aconsole_2defs_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="console_2defs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition:</b> defs.h:9</div></div>
+<div class="ttc" id="aconsole_2defs_8h_html_ab95f123a6c9bcfee6a343170ef8c5f69"><div class="ttname"><a href="console_2defs_8h.html#ab95f123a6c9bcfee6a343170ef8c5f69">ushort</a></div><div class="ttdeci">unsigned short ushort</div><div class="ttdef"><b>Definition:</b> defs.h:5</div></div>
+<div class="ttc" id="aconsole_2defs_8h_html_a5975ce0896ee5ec5db2f1a411620a51a"><div class="ttname"><a href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a></div><div class="ttdeci">unsigned long uint64</div><div class="ttdef"><b>Definition:</b> defs.h:10</div></div>
+<div class="ttc" id="aconsole_2defs_8h_html_a06fc87d81c62e9abb8790b6e5713c55bad1026b11391895f6e302f892a44a04df"><div class="ttname"><a href="console_2defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bad1026b11391895f6e302f892a44a04df">STDOUT</a></div><div class="ttdeci">@ STDOUT</div><div class="ttdef"><b>Definition:</b> defs.h:35</div></div>
+<div class="ttc" id="aconsole_2defs_8h_html_a9565a866261271dc57420e15e67f94f3"><div class="ttname"><a href="console_2defs_8h.html#a9565a866261271dc57420e15e67f94f3">pde_t</a></div><div class="ttdeci">uint64 pde_t</div><div class="ttdef"><b>Definition:</b> defs.h:13</div></div>
+<div class="ttc" id="aconsole_2defs_8h_html_a65f85814a8290f9797005d3b28e7e5fc"><div class="ttname"><a href="console_2defs_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a></div><div class="ttdeci">unsigned char uchar</div><div class="ttdef"><b>Definition:</b> defs.h:6</div></div>
+<div class="ttc" id="aconsole_2defs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba4b971ca4918db729a147aa7c78cea0e3"><div class="ttname"><a href="console_2defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba4b971ca4918db729a147aa7c78cea0e3">STDERR</a></div><div class="ttdeci">@ STDERR</div><div class="ttdef"><b>Definition:</b> defs.h:36</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_3e5ae976cba375449e7597bf7abde3d4.html">kernel-vm</a></li><li class="navelem"><a class="el" href="kernel-vm_2defs_8h.html">defs.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

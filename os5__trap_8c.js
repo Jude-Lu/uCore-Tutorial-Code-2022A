@@ -11,9 +11,5 @@ var os5__trap_8c =
     [ "os5_set_kerneltrap", "os5__trap_8c.html#ad1e09ec123783d336b707d39badc188e", null ],
     [ "os5_set_usertrap", "os5__trap_8c.html#aa9062e60a4ddda15475b7d78a51cd4fd", null ],
     [ "os5_super_external_handler", "os5__trap_8c.html#aa12a7534f83eaa7b043cba4af2f80b43", null ],
-    [ "trap_init", "os5__trap_8c.html#a7d104d6bebefa5a97c55a9b4f6c937fb", null ],
-    [ "kerneltrap", "os5__trap_8c.html#af6c8f41864cbbdf039b7d31b4ab70458", null ],
-    [ "trampoline", "os5__trap_8c.html#a796aa4017efb6527598a228f4b7cc9ac", null ],
-    [ "userret", "os5__trap_8c.html#af564f710557d70393b9fb1cce4e194d7", null ],
-    [ "uservec", "os5__trap_8c.html#aa6435376c8373232f9561dfb25e7ca28", null ]
+    [ "trap_init", "os5__trap_8c.html#a7d104d6bebefa5a97c55a9b4f6c937fb", null ]
 ];

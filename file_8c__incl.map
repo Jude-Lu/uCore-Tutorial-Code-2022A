@@ -1,17 +1,9 @@
 <map id="easy&#45;fs/file.c" name="easy&#45;fs/file.c">
-<area shape="rect" id="node1" title=" " alt="" coords="461,5,567,32"/>
-<area shape="rect" id="node2" href="$file_8h.html" title=" " alt="" coords="520,80,575,107"/>
-<area shape="rect" id="node3" href="$easy-fs_2fs_8h.html" title=" " alt="" coords="459,155,505,181"/>
-<area shape="rect" id="node4" href="$defs_8h.html" title=" " alt="" coords="269,229,375,256"/>
-<area shape="rect" id="node15" href="$fcntl_8h.html" title=" " alt="" coords="599,80,661,107"/>
-<area shape="rect" id="node6" href="$riscv_8h.html" title=" " alt="" coords="566,379,630,405"/>
-<area shape="rect" id="node7" href="$utils_2types_8h.html" title=" " alt="" coords="221,453,292,480"/>
-<area shape="rect" id="node5" href="$const_8h.html" title=" " alt="" coords="527,304,597,331"/>
-<area shape="rect" id="node8" href="$log_8h.html" title=" " alt="" coords="47,304,101,331"/>
-<area shape="rect" id="node9" href="$printf_8h.html" title=" " alt="" coords="125,304,193,331"/>
-<area shape="rect" id="node10" href="$sbi_8h.html" title=" " alt="" coords="35,379,89,405"/>
-<area shape="rect" id="node11" href="$string_8h.html" title=" " alt="" coords="175,379,245,405"/>
-<area shape="rect" id="node12" href="$timer_8h.html" title=" " alt="" coords="269,379,337,405"/>
-<area shape="rect" id="node13" href="$console_8h.html" title=" " alt="" coords="320,304,404,331"/>
-<area shape="rect" id="node14" href="$queue_8h.html" title=" " alt="" coords="429,304,503,331"/>
+<area shape="rect" id="node1" title=" " alt="" coords="80,5,185,32"/>
+<area shape="rect" id="node2" href="$file_8h.html" title=" " alt="" coords="5,80,60,107"/>
+<area shape="rect" id="node3" href="$easy-fs_2fs_8h.html" title=" " alt="" coords="73,155,120,181"/>
+<area shape="rect" id="node6" href="$fcntl_8h.html" title=" " alt="" coords="136,80,199,107"/>
+<area shape="rect" id="node7" href="$easy-fs_2log_8h.html" title=" " alt="" coords="187,155,241,181"/>
+<area shape="rect" id="node4" href="$easy-fs_2defs_8h.html" title=" " alt="" coords="59,304,121,331"/>
+<area shape="rect" id="node5" href="$fs__dependency_8h.html" title=" " alt="" coords="127,229,258,256"/>
 </map>

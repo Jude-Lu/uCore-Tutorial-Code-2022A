@@ -1,6 +1,6 @@
-<map id="utils/console.c" name="utils/console.c">
-<area shape="rect" id="node1" title=" " alt="" coords="37,5,151,32"/>
+<map id="console/console.c" name="console/console.c">
+<area shape="rect" id="node1" title=" " alt="" coords="25,5,163,32"/>
 <area shape="rect" id="node2" href="$console_8h.html" title=" " alt="" coords="5,80,89,107"/>
 <area shape="rect" id="node3" href="$sbi_8h.html" title=" " alt="" coords="114,80,167,107"/>
-<area shape="rect" id="node4" href="$utils_2types_8h.html" title=" " alt="" coords="105,155,176,181"/>
+<area shape="rect" id="node4" href="$console_2defs_8h.html" title=" " alt="" coords="109,155,172,181"/>
 </map>

@@ -90,25 +90,18 @@ $(document).ready(function(){initNavTree('easy-fs_2fs_8c.html',''); initResizabl
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="easy-fs_2fs_8h_source.html">fs.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="file_8h_source.html">file.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="easy-fs_2log_8h_source.html">log.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 fs.c 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="easy-fs_2fs_8c__incl.png" border="0" usemap="#easy-fs_2fs_8c" alt=""/></div>
 <map name="easy-fs_2fs_8c" id="easy-fs_2fs_8c">
-<area shape="rect" title=" " alt="" coords="640,5,738,32"/>
-<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="634,155,680,181"/>
-<area shape="rect" href="file_8h.html" title=" " alt="" coords="695,80,750,107"/>
-<area shape="rect" href="defs_8h.html" title=" " alt="" coords="266,229,373,256"/>
-<area shape="rect" href="const_8h.html" title=" " alt="" coords="616,304,685,331"/>
-<area shape="rect" href="riscv_8h.html" title=" " alt="" coords="582,379,646,405"/>
-<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="298,453,368,480"/>
-<area shape="rect" href="log_8h.html" title=" " alt="" coords="34,304,88,331"/>
-<area shape="rect" href="printf_8h.html" title=" " alt="" coords="112,304,180,331"/>
-<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="173,379,226,405"/>
-<area shape="rect" href="string_8h.html" title=" " alt="" coords="251,379,322,405"/>
-<area shape="rect" href="timer_8h.html" title=" " alt="" coords="346,379,414,405"/>
-<area shape="rect" href="console_8h.html" title=" " alt="" coords="358,304,442,331"/>
-<area shape="rect" href="queue_8h.html" title=" " alt="" coords="466,304,541,331"/>
+<area shape="rect" title=" " alt="" coords="49,5,147,32"/>
+<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="68,155,115,181"/>
+<area shape="rect" href="file_8h.html" title=" " alt="" coords="5,80,60,107"/>
+<area shape="rect" href="easy-fs_2log_8h.html" title=" " alt="" coords="144,155,199,181"/>
+<area shape="rect" href="easy-fs_2defs_8h.html" title=" " alt="" coords="43,304,105,331"/>
+<area shape="rect" href="fs__dependency_8h.html" title=" " alt="" coords="111,229,242,256"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -116,7 +109,7 @@ fs.c 的引用(Include)关系图:</div>
 函数</h2></td></tr>
 <tr class="memitem:ade00044090adbc765c80c6cc81dae79d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#ade00044090adbc765c80c6cc81dae79d">fsinit</a> ()</td></tr>
 <tr class="separator:ade00044090adbc765c80c6cc81dae79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb360ce0b70a32d19d089fba4cd91293"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structinode.html">inode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#adb360ce0b70a32d19d089fba4cd91293">ialloc</a> (<a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> dev, short type)</td></tr>
+<tr class="memitem:adb360ce0b70a32d19d089fba4cd91293"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structinode.html">inode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#adb360ce0b70a32d19d089fba4cd91293">ialloc</a> (<a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> dev, short type)</td></tr>
 <tr class="separator:adb360ce0b70a32d19d089fba4cd91293"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7220afa8e5f4bea540eb95879ea7df6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a7220afa8e5f4bea540eb95879ea7df6e">iupdate</a> (struct <a class="el" href="structinode.html">inode</a> *ip)</td></tr>
 <tr class="separator:a7220afa8e5f4bea540eb95879ea7df6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,15 +121,15 @@ fs.c 的引用(Include)关系图:</div>
 <tr class="separator:ab3c447f135c68e4c3c1f8d5866f6e77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47ff37242dd456a2d34dea24a1307c49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a47ff37242dd456a2d34dea24a1307c49">itrunc</a> (struct <a class="el" href="structinode.html">inode</a> *ip)</td></tr>
 <tr class="separator:a47ff37242dd456a2d34dea24a1307c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab91c244607cd695272ae445218f5dadd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#ab91c244607cd695272ae445218f5dadd">readi</a> (struct <a class="el" href="structinode.html">inode</a> *ip, int user_dst, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> dst, <a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> off, <a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> n)</td></tr>
+<tr class="memitem:ab91c244607cd695272ae445218f5dadd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#ab91c244607cd695272ae445218f5dadd">readi</a> (struct <a class="el" href="structinode.html">inode</a> *ip, int user_dst, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> dst, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> off, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> n)</td></tr>
 <tr class="separator:ab91c244607cd695272ae445218f5dadd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99e700638bb7b2c05330f7f93a555aa7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a99e700638bb7b2c05330f7f93a555aa7">writei</a> (struct <a class="el" href="structinode.html">inode</a> *ip, int user_src, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> src, <a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> off, <a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> n)</td></tr>
+<tr class="memitem:a99e700638bb7b2c05330f7f93a555aa7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a99e700638bb7b2c05330f7f93a555aa7">writei</a> (struct <a class="el" href="structinode.html">inode</a> *ip, int user_src, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> src, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> off, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> n)</td></tr>
 <tr class="separator:a99e700638bb7b2c05330f7f93a555aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa182c62fade7a0bae9408830d5e06d4f"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structinode.html">inode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#aa182c62fade7a0bae9408830d5e06d4f">dirlookup</a> (struct <a class="el" href="structinode.html">inode</a> *dp, char *name, <a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> *poff)</td></tr>
+<tr class="memitem:aa182c62fade7a0bae9408830d5e06d4f"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structinode.html">inode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#aa182c62fade7a0bae9408830d5e06d4f">dirlookup</a> (struct <a class="el" href="structinode.html">inode</a> *dp, char *name, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> *poff)</td></tr>
 <tr class="separator:aa182c62fade7a0bae9408830d5e06d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95411e8454bbeee165ae7f09a2e5f7db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a95411e8454bbeee165ae7f09a2e5f7db">dirls</a> (struct <a class="el" href="structinode.html">inode</a> *dp)</td></tr>
 <tr class="separator:a95411e8454bbeee165ae7f09a2e5f7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69a135a0e8a06d9f306d77ebc0c1f7a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a69a135a0e8a06d9f306d77ebc0c1f7a0">dirlink</a> (struct <a class="el" href="structinode.html">inode</a> *dp, char *name, <a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> inum)</td></tr>
+<tr class="memitem:a69a135a0e8a06d9f306d77ebc0c1f7a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a69a135a0e8a06d9f306d77ebc0c1f7a0">dirlink</a> (struct <a class="el" href="structinode.html">inode</a> *dp, char *name, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> inum)</td></tr>
 <tr class="separator:a69a135a0e8a06d9f306d77ebc0c1f7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a298e28260b8b4ef0396fc411b42c46e5"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structinode.html">inode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a298e28260b8b4ef0396fc411b42c46e5">root_dir</a> ()</td></tr>
 <tr class="separator:a298e28260b8b4ef0396fc411b42c46e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,11 +142,11 @@ fs.c 的引用(Include)关系图:</div>
 <tr class="separator:a8accc94972d744ffbd5b31546e422bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0248d0bac625de5a1415f2f8c91f3343"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsuperblock.html">superblock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a0248d0bac625de5a1415f2f8c91f3343">sb</a></td></tr>
 <tr class="separator:a0248d0bac625de5a1415f2f8c91f3343"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fd23309f97e9c7b623d7c1a4ea72763"><td class="memItemLeft" >struct {</td></tr>
-<tr class="memitem:a6baaf26dd83b71b8d684c5d54a709e31"><td class="memItemLeft" >&#160;&#160;&#160;struct <a class="el" href="structinode.html">inode</a>&#160;&#160;&#160;<a class="el" href="easy-fs_2fs_8c.html#a6baaf26dd83b71b8d684c5d54a709e31">inode</a> [<a class="el" href="const_8h.html#adabafa10c7951be7c875cd2ee212be85">NINODE</a>]</td></tr>
+<tr class="memitem:a010ece35d82b747be361fb3501b96fcd"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a6baaf26dd83b71b8d684c5d54a709e31"><td class="memItemLeft" >&#160;&#160;&#160;struct <a class="el" href="structinode.html">inode</a>&#160;&#160;&#160;<a class="el" href="easy-fs_2fs_8c.html#a6baaf26dd83b71b8d684c5d54a709e31">inode</a> [<a class="el" href="utils_2defs_8h.html#adabafa10c7951be7c875cd2ee212be85">NINODE</a>]</td></tr>
 <tr class="separator:a6baaf26dd83b71b8d684c5d54a709e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fd23309f97e9c7b623d7c1a4ea72763"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a8fd23309f97e9c7b623d7c1a4ea72763">itable</a></td></tr>
-<tr class="separator:a8fd23309f97e9c7b623d7c1a4ea72763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a010ece35d82b747be361fb3501b96fcd"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a010ece35d82b747be361fb3501b96fcd">itable</a></td></tr>
+<tr class="separator:a010ece35d82b747be361fb3501b96fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
 <a id="a69a135a0e8a06d9f306d77ebc0c1f7a0"></a>
@@ -177,7 +170,7 @@ fs.c 的引用(Include)关系图:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
           <td class="paramname"><em>inum</em>&#160;</td>
         </tr>
         <tr>
@@ -211,7 +204,7 @@ fs.c 的引用(Include)关系图:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> *&#160;</td>
           <td class="paramname"><em>poff</em>&#160;</td>
         </tr>
         <tr>
@@ -268,7 +261,7 @@ fs.c 的引用(Include)关系图:</div>
         <tr>
           <td class="memname">struct <a class="el" href="structinode.html">inode</a>* ialloc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
           <td class="paramname"><em>dev</em>, </td>
         </tr>
         <tr>
@@ -416,19 +409,19 @@ fs.c 的引用(Include)关系图:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
           <td class="paramname"><em>dst</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
           <td class="paramname"><em>off</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
           <td class="paramname"><em>n</em>&#160;</td>
         </tr>
         <tr>
@@ -479,19 +472,19 @@ fs.c 的引用(Include)关系图:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
           <td class="paramname"><em>src</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
           <td class="paramname"><em>off</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
           <td class="paramname"><em>n</em>&#160;</td>
         </tr>
         <tr>
@@ -526,15 +519,15 @@ fs.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structinode.html">inode</a> <a class="el" href="structinode.html">inode</a>[<a class="el" href="const_8h.html#adabafa10c7951be7c875cd2ee212be85">NINODE</a>]</td>
+          <td class="memname">struct <a class="el" href="structinode.html">inode</a> <a class="el" href="structinode.html">inode</a>[<a class="el" href="utils_2defs_8h.html#adabafa10c7951be7c875cd2ee212be85">NINODE</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a8fd23309f97e9c7b623d7c1a4ea72763"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fd23309f97e9c7b623d7c1a4ea72763">&#9670;&nbsp;</a></span>itable</h2>
+<a id="a010ece35d82b747be361fb3501b96fcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a010ece35d82b747be361fb3501b96fcd">&#9670;&nbsp;</a></span>itable</h2>
 
 <div class="memitem">
 <div class="memproto">

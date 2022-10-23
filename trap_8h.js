@@ -2,6 +2,9 @@ var trap_8h =
 [
     [ "trapframe", "structtrapframe.html", "structtrapframe" ],
     [ "trap_handler_context", "structtrap__handler__context.html", "structtrap__handler__context" ],
+    [ "SSTATUS_SPIE", "trap_8h.html#a3f9373ba6db2ce5e5c7ea28c2a5b3df9", null ],
+    [ "SSTATUS_SPP", "trap_8h.html#a4d0820d6a8b0c5b0fef6875a985d3370", null ],
+    [ "pagetable_t", "trap_8h.html#aabc0f4f29a1508768d880855992b8ba7", null ],
     [ "Exception", "trap_8h.html#a8852f03cd91327c7c725673317d85b46", [
       [ "InstructionMisaligned", "trap_8h.html#a8852f03cd91327c7c725673317d85b46a580292303303c1b837210c1428279748", null ],
       [ "InstructionAccessFault", "trap_8h.html#a8852f03cd91327c7c725673317d85b46aed417e6c7b91feb214eb5a231bdf3257", null ],

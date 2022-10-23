@@ -1,0 +1,10 @@
+<map id="os5/modules.h" name="os5/modules.h">
+<area shape="rect" id="node1" title=" " alt="" coords="305,5,423,32"/>
+<area shape="rect" id="node2" href="$os5_2loader_8h.html" title=" " alt="" coords="269,155,371,181"/>
+<area shape="rect" id="node8" href="$os5_2proc_8h.html" title=" " alt="" coords="363,80,453,107"/>
+<area shape="rect" id="node3" href="$os5_2loader_8c.html" title=" " alt="" coords="123,229,223,256"/>
+<area shape="rect" id="node4" href="$os5_2main_8c.html" title=" " alt="" coords="5,229,99,256"/>
+<area shape="rect" id="node5" href="$os5__syscall_8c.html" title=" " alt="" coords="247,229,382,256"/>
+<area shape="rect" id="node6" href="$os5__trap_8c.html" title=" " alt="" coords="406,229,522,256"/>
+<area shape="rect" id="node7" href="$os5_2proc_8c.html" title=" " alt="" coords="547,229,635,256"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="os8/modules.h" name="os8/modules.h">
+<area shape="rect" id="node1" title=" " alt="" coords="295,5,413,32"/>
+<area shape="rect" id="node2" href="$os8_2loader_8h.html" title=" " alt="" coords="278,229,379,256"/>
+<area shape="rect" id="node8" href="$os8_2proc_8h.html" title=" " alt="" coords="368,155,457,181"/>
+<area shape="rect" id="node10" href="$sync_8h.html" title=" " alt="" coords="445,80,535,107"/>
+<area shape="rect" id="node11" href="$os8__trap_8h.html" title=" " alt="" coords="137,229,254,256"/>
+<area shape="rect" id="node3" href="$os8_2loader_8c.html" title=" " alt="" coords="145,304,245,331"/>
+<area shape="rect" id="node4" href="$os8_2main_8c.html" title=" " alt="" coords="270,304,363,331"/>
+<area shape="rect" id="node5" href="$os8__syscall_8c.html" title=" " alt="" coords="500,304,635,331"/>
+<area shape="rect" id="node6" href="$os8__trap_8c.html" title=" " alt="" coords="5,304,121,331"/>
+<area shape="rect" id="node7" href="$os8_2proc_8c.html" title=" " alt="" coords="387,304,475,331"/>
+<area shape="rect" id="node9" href="$sync_8c.html" title=" " alt="" coords="454,229,545,256"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="os6/extern.h" name="os6/extern.h">
+<area shape="rect" id="node1" title=" " alt="" coords="251,5,353,32"/>
+<area shape="rect" id="node2" href="$os6_2modules_8h.html" title=" " alt="" coords="243,80,361,107"/>
+<area shape="rect" id="node3" href="$os6_2loader_8h.html" title=" " alt="" coords="293,229,394,256"/>
+<area shape="rect" id="node9" href="$os6_2proc_8h.html" title=" " alt="" coords="340,155,429,181"/>
+<area shape="rect" id="node10" href="$os6__trap_8h.html" title=" " alt="" coords="151,229,269,256"/>
+<area shape="rect" id="node4" href="$os6_2loader_8c.html" title=" " alt="" coords="145,304,245,331"/>
+<area shape="rect" id="node5" href="$os6_2main_8c.html" title=" " alt="" coords="270,304,363,331"/>
+<area shape="rect" id="node6" href="$os6__syscall_8c.html" title=" " alt="" coords="500,304,635,331"/>
+<area shape="rect" id="node7" href="$os6__trap_8c.html" title=" " alt="" coords="5,304,121,331"/>
+<area shape="rect" id="node8" href="$os6_2proc_8c.html" title=" " alt="" coords="387,304,475,331"/>
+</map>

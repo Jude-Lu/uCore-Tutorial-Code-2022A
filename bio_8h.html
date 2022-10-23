@@ -88,17 +88,17 @@ $(document).ready(function(){initNavTree('bio_8h.html',''); initResizable(); });
 <div class="title">bio.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="utils_2types_8h_source.html">../utils/types.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="const_8h_source.html">../utils/const.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="disk_2defs_8h_source.html">defs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="disk_2log_8h_source.html">log.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 bio.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="bio_8h__incl.png" border="0" usemap="#disk_2bio_8h" alt=""/></div>
 <map name="disk_2bio_8h" id="disk_2bio_8h">
-<area shape="rect" title=" " alt="" coords="32,5,117,32"/>
-<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="5,229,120,256"/>
-<area shape="rect" href="const_8h.html" title=" " alt="" coords="66,80,179,107"/>
-<area shape="rect" href="riscv_8h.html" title=" " alt="" coords="77,155,141,181"/>
+<area shape="rect" title=" " alt="" coords="5,5,91,32"/>
+<area shape="rect" href="disk_2defs_8h.html" title=" " alt="" coords="39,229,102,256"/>
+<area shape="rect" href="disk_2log_8h.html" title=" " alt="" coords="77,80,131,107"/>
+<area shape="rect" href="disk__dependency_8h.html" title=" " alt="" coords="54,155,199,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -106,56 +106,40 @@ bio.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="bio_8h__dep__incl.png" border="0" usemap="#disk_2bio_8hdep" alt=""/></div>
 <map name="disk_2bio_8hdep" id="disk_2bio_8hdep">
-<area shape="rect" title=" " alt="" coords="2222,5,2307,32"/>
-<area shape="rect" href="bio_8c.html" title=" " alt="" coords="1433,155,1517,181"/>
-<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="3005,80,3103,107"/>
-<area shape="rect" href="virtio__disk_8c.html" title=" " alt="" coords="3092,155,3224,181"/>
-<area shape="rect" href="modules_8h.html" title=" " alt="" coords="1542,155,1665,181"/>
-<area shape="rect" href="os6__trap_8c.html" title=" " alt="" coords="1949,379,2065,405"/>
-<area shape="rect" href="os7__trap_8c.html" title=" " alt="" coords="2812,304,2928,331"/>
-<area shape="rect" href="os8__trap_8c.html" title=" " alt="" coords="3409,379,3525,405"/>
-<area shape="rect" href="kalloc_8c.html" title=" " alt="" coords="1959,229,2099,256"/>
-<area shape="rect" href="map_8c.html" title=" " alt="" coords="2123,229,2254,256"/>
-<area shape="rect" href="vm_8c.html" title=" " alt="" coords="2419,229,2542,256"/>
-<area shape="rect" href="os1_2main_8c.html" title=" " alt="" coords="2782,229,2875,256"/>
-<area shape="rect" href="os2_2loader_8c.html" title=" " alt="" coords="2371,304,2471,331"/>
-<area shape="rect" href="os2__trap_8h.html" title=" " alt="" coords="2278,229,2395,256"/>
-<area shape="rect" href="os2_2main_8c.html" title=" " alt="" coords="2198,304,2291,331"/>
-<area shape="rect" href="os2__syscall_8c.html" title=" " alt="" coords="199,229,333,256"/>
-<area shape="rect" href="os3_2loader_8h.html" title=" " alt="" coords="358,229,459,256"/>
-<area shape="rect" href="os3_2loader_8c.html" title=" " alt="" coords="431,304,531,331"/>
-<area shape="rect" href="os3_2main_8c.html" title=" " alt="" coords="313,304,406,331"/>
-<area shape="rect" href="os3__syscall_8c.html" title=" " alt="" coords="41,304,176,331"/>
-<area shape="rect" href="os3_2proc_8c.html" title=" " alt="" coords="201,304,289,331"/>
-<area shape="rect" href="os3__trap_8h.html" title=" " alt="" coords="57,229,174,256"/>
-<area shape="rect" href="os3_2proc_8h.html" title=" " alt="" coords="484,229,573,256"/>
-<area shape="rect" href="os4_2proc_8h.html" title=" " alt="" coords="801,229,891,256"/>
-<area shape="rect" href="os4_2loader_8c.html" title=" " alt="" coords="673,304,773,331"/>
-<area shape="rect" href="os4_2main_8c.html" title=" " alt="" coords="555,304,649,331"/>
-<area shape="rect" href="os4__syscall_8c.html" title=" " alt="" coords="911,304,1045,331"/>
-<area shape="rect" href="os4_2proc_8c.html" title=" " alt="" coords="798,304,886,331"/>
-<area shape="rect" href="os4__trap_8h.html" title=" " alt="" coords="915,229,1033,256"/>
-<area shape="rect" href="os5_2loader_8h.html" title=" " alt="" coords="1171,304,1273,331"/>
-<area shape="rect" href="os5_2loader_8c.html" title=" " alt="" coords="1152,379,1252,405"/>
-<area shape="rect" href="os5_2main_8c.html" title=" " alt="" coords="1277,379,1370,405"/>
-<area shape="rect" href="os5__syscall_8c.html" title=" " alt="" coords="1395,379,1529,405"/>
-<area shape="rect" href="os5_2proc_8c.html" title=" " alt="" coords="1039,379,1127,405"/>
-<area shape="rect" href="os5_2proc_8h.html" title=" " alt="" coords="1209,229,1299,256"/>
-<area shape="rect" href="os5__trap_8h.html" title=" " alt="" coords="1297,304,1414,331"/>
-<area shape="rect" href="os6_2loader_8h.html" title=" " alt="" coords="1782,304,1883,331"/>
-<area shape="rect" href="os6_2loader_8c.html" title=" " alt="" coords="1553,379,1653,405"/>
-<area shape="rect" href="os6__syscall_8c.html" title=" " alt="" coords="1677,379,1812,405"/>
-<area shape="rect" href="os6_2proc_8c.html" title=" " alt="" coords="1837,379,1925,405"/>
-<area shape="rect" href="os6_2proc_8h.html" title=" " alt="" coords="1743,229,1832,256"/>
-<area shape="rect" href="os6__trap_8h.html" title=" " alt="" coords="1641,304,1758,331"/>
-<area shape="rect" href="os7_2proc_8h.html" title=" " alt="" coords="2668,229,2757,256"/>
-<area shape="rect" href="os7__trap_8h.html" title=" " alt="" coords="2899,229,3017,256"/>
-<area shape="rect" href="os7_2loader_8c.html" title=" " alt="" coords="2633,304,2733,331"/>
-<area shape="rect" href="os7__syscall_8c.html" title=" " alt="" coords="2952,304,3087,331"/>
-<area shape="rect" href="os7_2proc_8c.html" title=" " alt="" coords="3111,304,3199,331"/>
-<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="3244,304,3333,331"/>
-<area shape="rect" href="sync_8h.html" title=" " alt="" coords="3193,229,3283,256"/>
-<area shape="rect" href="os8__trap_8h.html" title=" " alt="" coords="3409,229,3526,256"/>
+<area shape="rect" title=" " alt="" coords="852,5,937,32"/>
+<area shape="rect" href="bio_8c.html" title=" " alt="" coords="721,155,805,181"/>
+<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="845,80,944,107"/>
+<area shape="rect" href="disk__module_8h.html" title=" " alt="" coords="985,155,1133,181"/>
+<area shape="rect" href="virtio__disk_8c.html" title=" " alt="" coords="829,155,961,181"/>
+<area shape="rect" href="os6_2modules_8h.html" title=" " alt="" coords="352,229,469,256"/>
+<area shape="rect" href="os7_2modules_8h.html" title=" " alt="" coords="1000,229,1117,256"/>
+<area shape="rect" href="os8_2modules_8h.html" title=" " alt="" coords="1440,229,1557,256"/>
+<area shape="rect" href="os6_2loader_8h.html" title=" " alt="" coords="252,379,353,405"/>
+<area shape="rect" href="os6_2proc_8h.html" title=" " alt="" coords="258,304,347,331"/>
+<area shape="rect" href="os6__trap_8h.html" title=" " alt="" coords="377,379,495,405"/>
+<area shape="rect" href="os6_2loader_8c.html" title=" " alt="" coords="395,453,495,480"/>
+<area shape="rect" href="os6_2main_8c.html" title=" " alt="" coords="277,453,371,480"/>
+<area shape="rect" href="os6__syscall_8c.html" title=" " alt="" coords="118,453,253,480"/>
+<area shape="rect" href="os6__trap_8c.html" title=" " alt="" coords="519,453,635,480"/>
+<area shape="rect" href="os6_2proc_8c.html" title=" " alt="" coords="5,453,93,480"/>
+<area shape="rect" href="os7_2loader_8h.html" title=" " alt="" coords="1049,379,1151,405"/>
+<area shape="rect" href="os7_2proc_8h.html" title=" " alt="" coords="1097,304,1186,331"/>
+<area shape="rect" href="os7__trap_8h.html" title=" " alt="" coords="908,379,1025,405"/>
+<area shape="rect" href="os7_2loader_8c.html" title=" " alt="" coords="1050,453,1150,480"/>
+<area shape="rect" href="os7_2main_8c.html" title=" " alt="" coords="660,453,753,480"/>
+<area shape="rect" href="os7__syscall_8c.html" title=" " alt="" coords="778,453,913,480"/>
+<area shape="rect" href="os7__trap_8c.html" title=" " alt="" coords="1174,453,1290,480"/>
+<area shape="rect" href="os7_2proc_8c.html" title=" " alt="" coords="937,453,1025,480"/>
+<area shape="rect" href="os8_2loader_8h.html" title=" " alt="" coords="1531,453,1632,480"/>
+<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="1371,379,1461,405"/>
+<area shape="rect" href="sync_8h.html" title=" " alt="" coords="1453,304,1544,331"/>
+<area shape="rect" href="os8__trap_8h.html" title=" " alt="" coords="1656,453,1773,480"/>
+<area shape="rect" href="os8_2loader_8c.html" title=" " alt="" coords="1531,528,1631,555"/>
+<area shape="rect" href="os8_2main_8c.html" title=" " alt="" coords="1656,528,1749,555"/>
+<area shape="rect" href="os8__syscall_8c.html" title=" " alt="" coords="1774,528,1909,555"/>
+<area shape="rect" href="os8__trap_8c.html" title=" " alt="" coords="1278,528,1394,555"/>
+<area shape="rect" href="os8_2proc_8c.html" title=" " alt="" coords="1419,528,1507,555"/>
+<area shape="rect" href="sync_8c.html" title=" " alt="" coords="1416,453,1507,480"/>
 </map>
 </div>
 </div>
@@ -170,7 +154,7 @@ bio.h 的引用(Include)关系图:</div>
 函数</h2></td></tr>
 <tr class="memitem:a53cca0ddc98c5f1de37124eca2575a59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8h.html#a53cca0ddc98c5f1de37124eca2575a59">binit</a> (void)</td></tr>
 <tr class="separator:a53cca0ddc98c5f1de37124eca2575a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0acb856531e8a2c691a862530f10d067"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8h.html#a0acb856531e8a2c691a862530f10d067">bread</a> (<a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>, <a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)</td></tr>
+<tr class="memitem:a0acb856531e8a2c691a862530f10d067"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8h.html#a0acb856531e8a2c691a862530f10d067">bread</a> (<a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)</td></tr>
 <tr class="separator:a0acb856531e8a2c691a862530f10d067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05351fdc6a7e0099238da1d86b34afc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8h.html#a05351fdc6a7e0099238da1d86b34afc8">brelse</a> (void *)</td></tr>
 <tr class="separator:a05351fdc6a7e0099238da1d86b34afc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,7 +164,7 @@ bio.h 的引用(Include)关系图:</div>
 <tr class="separator:a21c84bdd526f182efd1b7931ce7d0ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af40c66b256f5a0cc2ca4fac2a534643a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8h.html#af40c66b256f5a0cc2ca4fac2a534643a">bunpin</a> (void *)</td></tr>
 <tr class="separator:af40c66b256f5a0cc2ca4fac2a534643a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d546dc0222d51a0d8e7da7e4d3c8cf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8h.html#a1d546dc0222d51a0d8e7da7e4d3c8cf9">buf_data</a> (void *)</td></tr>
+<tr class="memitem:a1d546dc0222d51a0d8e7da7e4d3c8cf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8h.html#a1d546dc0222d51a0d8e7da7e4d3c8cf9">buf_data</a> (void *)</td></tr>
 <tr class="separator:a1d546dc0222d51a0d8e7da7e4d3c8cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
@@ -229,13 +213,13 @@ bio.h 的引用(Include)关系图:</div>
         <tr>
           <td class="memname">void* bread </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -273,7 +257,7 @@ bio.h 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a>* buf_data </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a>* buf_data </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"></td><td>)</td>

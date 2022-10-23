@@ -88,41 +88,63 @@ $(document).ready(function(){initNavTree('os7_2loader_8h.html',''); initResizabl
 <div class="title">loader.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="const_8h_source.html">../utils/const.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="file_8h_source.html">../easy-fs/file.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="os7_2modules_8h_source.html">modules.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="os7_2proc_8h_source.html">proc.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="utils_2types_8h_source.html">../utils/types.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 loader.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="os7_2loader_8h__incl.png" border="0" usemap="#os7_2loader_8h" alt=""/></div>
 <map name="os7_2loader_8h" id="os7_2loader_8h">
-<area shape="rect" title=" " alt="" coords="649,5,751,32"/>
-<area shape="rect" href="const_8h.html" title=" " alt="" coords="1091,453,1205,480"/>
-<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="557,603,627,629"/>
-<area shape="rect" href="file_8h.html" title=" " alt="" coords="579,229,698,256"/>
-<area shape="rect" href="os7_2proc_8h.html" title=" " alt="" coords="705,80,767,107"/>
-<area shape="rect" href="riscv_8h.html" title=" " alt="" coords="865,528,929,555"/>
-<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="582,304,629,331"/>
-<area shape="rect" href="defs_8h.html" title=" " alt="" coords="543,379,649,405"/>
-<area shape="rect" href="log_8h.html" title=" " alt="" coords="145,453,199,480"/>
-<area shape="rect" href="printf_8h.html" title=" " alt="" coords="326,453,394,480"/>
-<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="236,528,289,555"/>
-<area shape="rect" href="string_8h.html" title=" " alt="" coords="327,528,398,555"/>
-<area shape="rect" href="timer_8h.html" title=" " alt="" coords="473,528,541,555"/>
-<area shape="rect" href="console_8h.html" title=" " alt="" coords="470,453,554,480"/>
-<area shape="rect" href="queue_8h.html" title=" " alt="" coords="629,453,704,480"/>
-<area shape="rect" href="modules_8h.html" title=" " alt="" coords="953,155,1087,181"/>
-<area shape="rect" href="syscall_8h.html" title=" " alt="" coords="102,379,242,405"/>
-<area shape="rect" href="trap_8h.html" title=" " alt="" coords="1403,528,1506,555"/>
-<area shape="rect" href="plic_8h.html" title=" " alt="" coords="1148,304,1247,331"/>
-<area shape="rect" href="kalloc_8h.html" title=" " alt="" coords="943,229,1097,256"/>
-<area shape="rect" href="map_8h.html" title=" " alt="" coords="1229,453,1373,480"/>
-<area shape="rect" href="vm_8h.html" title=" " alt="" coords="829,453,965,480"/>
-<area shape="rect" href="processor_8h.html" title=" " alt="" coords="1175,528,1374,555"/>
-<area shape="rect" href="pipe_8h.html" title=" " alt="" coords="881,304,988,331"/>
-<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="1013,304,1123,331"/>
-<area shape="rect" href="bio_8h.html" title=" " alt="" coords="1041,379,1095,405"/>
+<area shape="rect" title=" " alt="" coords="753,5,854,32"/>
+<area shape="rect" href="os7_2modules_8h.html" title=" " alt="" coords="758,155,849,181"/>
+<area shape="rect" href="os7_2proc_8h.html" title=" " alt="" coords="807,80,869,107"/>
+<area shape="rect" href="os7_2defs_8h.html" title=" " alt="" coords="5,237,68,263"/>
+<area shape="rect" href="os7_2log_8h.html" title=" " alt="" coords="92,237,147,263"/>
+<area shape="rect" href="os7_2extern_8h.html" title=" " alt="" coords="171,237,247,263"/>
+<area shape="rect" href="console__module_8h.html" title=" " alt="" coords="271,229,410,271"/>
+<area shape="rect" href="disk__module_8h.html" title=" " alt="" coords="434,237,594,263"/>
+<area shape="rect" href="fs__module_8h.html" title=" " alt="" coords="619,237,785,263"/>
+<area shape="rect" href="vm__module_8h.html" title=" " alt="" coords="810,237,1002,263"/>
+<area shape="rect" href="pipe__module_8h.html" title=" " alt="" coords="1026,237,1189,263"/>
+<area shape="rect" href="syscall__module_8h.html" title=" " alt="" coords="1213,229,1341,271"/>
+<area shape="rect" href="trap__module_8h.html" title=" " alt="" coords="1367,237,1525,263"/>
+<area shape="rect" href="task__module_8h.html" title=" " alt="" coords="1551,229,1703,271"/>
+<area shape="rect" href="utils__module_8h.html" title=" " alt="" coords="1729,237,1891,263"/>
+<area shape="rect" href="console_8h.html" title=" " alt="" coords="121,319,205,345"/>
+<area shape="rect" href="printf_8h.html" title=" " alt="" coords="229,319,297,345"/>
+<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="322,319,375,345"/>
+<area shape="rect" href="console_2defs_8h.html" title=" " alt="" coords="148,393,211,420"/>
+<area shape="rect" href="bio_8h.html" title=" " alt="" coords="427,393,481,420"/>
+<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="408,319,476,345"/>
+<area shape="rect" href="disk_2defs_8h.html" title=" " alt="" coords="328,617,391,644"/>
+<area shape="rect" href="disk_2log_8h.html" title=" " alt="" coords="355,468,409,495"/>
+<area shape="rect" href="disk__dependency_8h.html" title=" " alt="" coords="287,543,432,569"/>
+<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="601,393,648,420"/>
+<area shape="rect" href="file_8h.html" title=" " alt="" coords="675,319,729,345"/>
+<area shape="rect" href="easy-fs_2defs_8h.html" title=" " alt="" coords="592,543,655,569"/>
+<area shape="rect" href="fs__dependency_8h.html" title=" " alt="" coords="558,468,689,495"/>
+<area shape="rect" href="kalloc_8h.html" title=" " alt="" coords="782,319,854,345"/>
+<area shape="rect" href="vm_8h.html" title=" " alt="" coords="879,319,933,345"/>
+<area shape="rect" href="map_8h.html" title=" " alt="" coords="957,319,1020,345"/>
+<area shape="rect" href="kernel-vm_2defs_8h.html" title=" " alt="" coords="905,543,968,569"/>
+<area shape="rect" href="kernel-vm_2log_8h.html" title=" " alt="" coords="868,393,923,420"/>
+<area shape="rect" href="vm__dependency_8h.html" title=" " alt="" coords="814,468,953,495"/>
+<area shape="rect" href="pipe_8h.html" title=" " alt="" coords="1076,319,1139,345"/>
+<area shape="rect" href="pipe_2defs_8h.html" title=" " alt="" coords="1079,393,1141,420"/>
+<area shape="rect" href="pipe_2log_8h.html" title=" " alt="" coords="1165,393,1220,420"/>
+<area shape="rect" href="syscall__ids_8h.html" title=" " alt="" coords="1265,319,1371,345"/>
+<area shape="rect" href="syscall_8h.html" title=" " alt="" coords="1163,319,1241,345"/>
+<area shape="rect" href="syscall_2defs_8h.html" title=" " alt="" coords="1244,393,1307,420"/>
+<area shape="rect" href="trap_8h.html" title=" " alt="" coords="1395,319,1455,345"/>
+<area shape="rect" href="plic_8h.html" title=" " alt="" coords="1571,319,1628,345"/>
+<area shape="rect" href="timer_8h.html" title=" " alt="" coords="1479,319,1547,345"/>
+<area shape="rect" href="trap_2log_8h.html" title=" " alt="" coords="1397,393,1452,420"/>
+<area shape="rect" href="trap_2defs_8h.html" title=" " alt="" coords="1479,393,1541,420"/>
+<area shape="rect" href="processor_8h.html" title=" " alt="" coords="1653,319,1749,345"/>
+<area shape="rect" href="task-manage_2defs_8h.html" title=" " alt="" coords="1669,393,1732,420"/>
+<area shape="rect" href="string_8h.html" title=" " alt="" coords="1872,319,1943,345"/>
+<area shape="rect" href="queue_8h.html" title=" " alt="" coords="1773,319,1847,345"/>
+<area shape="rect" href="utils_2defs_8h.html" title=" " alt="" coords="1876,393,1939,420"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -145,11 +167,11 @@ loader.h 的引用(Include)关系图:</div>
 宏定义</h2></td></tr>
 <tr class="memitem:a78cf30a084548c226ac61d0f5c3f1981"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os7_2loader_8h.html#a78cf30a084548c226ac61d0f5c3f1981">BASE_ADDRESS</a>&#160;&#160;&#160;(0x1000)</td></tr>
 <tr class="separator:a78cf30a084548c226ac61d0f5c3f1981"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad77d03e18a9477ef16ff8c4ae3c8b43d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os7_2loader_8h.html#ad77d03e18a9477ef16ff8c4ae3c8b43d">USTACK_SIZE</a>&#160;&#160;&#160;(<a class="el" href="const_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>)</td></tr>
+<tr class="memitem:ad77d03e18a9477ef16ff8c4ae3c8b43d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os7_2loader_8h.html#ad77d03e18a9477ef16ff8c4ae3c8b43d">USTACK_SIZE</a>&#160;&#160;&#160;(<a class="el" href="utils_2defs_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>)</td></tr>
 <tr class="separator:ad77d03e18a9477ef16ff8c4ae3c8b43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e277eb04e74c97ef760c7fa1a48278b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os7_2loader_8h.html#a1e277eb04e74c97ef760c7fa1a48278b">KSTACK_SIZE</a>&#160;&#160;&#160;(<a class="el" href="const_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>)</td></tr>
+<tr class="memitem:a1e277eb04e74c97ef760c7fa1a48278b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os7_2loader_8h.html#a1e277eb04e74c97ef760c7fa1a48278b">KSTACK_SIZE</a>&#160;&#160;&#160;(<a class="el" href="utils_2defs_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>)</td></tr>
 <tr class="separator:a1e277eb04e74c97ef760c7fa1a48278b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1711f19932c0aee95211797f8eb7b5b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os7_2loader_8h.html#a1711f19932c0aee95211797f8eb7b5b8">TRAP_PAGE_SIZE</a>&#160;&#160;&#160;(<a class="el" href="const_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>)</td></tr>
+<tr class="memitem:a1711f19932c0aee95211797f8eb7b5b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os7_2loader_8h.html#a1711f19932c0aee95211797f8eb7b5b8">TRAP_PAGE_SIZE</a>&#160;&#160;&#160;(<a class="el" href="utils_2defs_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>)</td></tr>
 <tr class="separator:a1711f19932c0aee95211797f8eb7b5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -181,7 +203,7 @@ loader.h 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KSTACK_SIZE&#160;&#160;&#160;(<a class="el" href="const_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>)</td>
+          <td class="memname">#define KSTACK_SIZE&#160;&#160;&#160;(<a class="el" href="utils_2defs_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -195,7 +217,7 @@ loader.h 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define TRAP_PAGE_SIZE&#160;&#160;&#160;(<a class="el" href="const_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>)</td>
+          <td class="memname">#define TRAP_PAGE_SIZE&#160;&#160;&#160;(<a class="el" href="utils_2defs_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -209,7 +231,7 @@ loader.h 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define USTACK_SIZE&#160;&#160;&#160;(<a class="el" href="const_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>)</td>
+          <td class="memname">#define USTACK_SIZE&#160;&#160;&#160;(<a class="el" href="utils_2defs_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">

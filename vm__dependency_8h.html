@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>uCore-Tutorial-Code-2022A: kernel-vm/vm_dependency.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uCore-Tutorial-Code-2022A
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('vm__dependency_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">vm_dependency.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="kernel-vm_2defs_8h_source.html">defs.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+vm_dependency.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="vm__dependency_8h__incl.png" border="0" usemap="#kernel-vm_2vm__dependency_8h" alt=""/></div>
+<map name="kernel-vm_2vm__dependency_8h" id="kernel-vm_2vm__dependency_8h">
+<area shape="rect" title=" " alt="" coords="5,5,213,32"/>
+<area shape="rect" href="kernel-vm_2defs_8h.html" title=" " alt="" coords="78,80,141,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="vm__dependency_8h__dep__incl.png" border="0" usemap="#kernel-vm_2vm__dependency_8hdep" alt=""/></div>
+<map name="kernel-vm_2vm__dependency_8hdep" id="kernel-vm_2vm__dependency_8hdep">
+<area shape="rect" title=" " alt="" coords="919,5,1127,32"/>
+<area shape="rect" href="kernel-vm_2log_8h.html" title=" " alt="" coords="1115,80,1237,107"/>
+<area shape="rect" href="kalloc_8c.html" title=" " alt="" coords="875,229,1015,256"/>
+<area shape="rect" href="kalloc_8h.html" title=" " alt="" coords="1027,155,1168,181"/>
+<area shape="rect" href="map_8h.html" title=" " alt="" coords="1341,155,1473,181"/>
+<area shape="rect" href="vm_8h.html" title=" " alt="" coords="1193,155,1317,181"/>
+<area shape="rect" href="map_8c.html" title=" " alt="" coords="1187,229,1317,256"/>
+<area shape="rect" href="vm_8c.html" title=" " alt="" coords="1040,229,1163,256"/>
+<area shape="rect" href="vm__module_8h.html" title=" " alt="" coords="1342,229,1522,256"/>
+<area shape="rect" href="os4_2modules_8h.html" title=" " alt="" coords="536,304,653,331"/>
+<area shape="rect" href="os5_2modules_8h.html" title=" " alt="" coords="804,304,921,331"/>
+<area shape="rect" href="os6_2modules_8h.html" title=" " alt="" coords="1373,304,1491,331"/>
+<area shape="rect" href="os7_2modules_8h.html" title=" " alt="" coords="1881,304,1999,331"/>
+<area shape="rect" href="os8_2modules_8h.html" title=" " alt="" coords="2504,304,2621,331"/>
+<area shape="rect" href="os4_2proc_8h.html" title=" " alt="" coords="359,379,449,405"/>
+<area shape="rect" href="os4_2loader_8c.html" title=" " alt="" coords="535,453,635,480"/>
+<area shape="rect" href="os4_2main_8c.html" title=" " alt="" coords="5,453,99,480"/>
+<area shape="rect" href="os4__syscall_8c.html" title=" " alt="" coords="123,453,258,480"/>
+<area shape="rect" href="os4__trap_8c.html" title=" " alt="" coords="282,453,398,480"/>
+<area shape="rect" href="os4_2proc_8c.html" title=" " alt="" coords="423,453,511,480"/>
+<area shape="rect" href="os5_2loader_8h.html" title=" " alt="" coords="812,453,913,480"/>
+<area shape="rect" href="os5_2proc_8h.html" title=" " alt="" coords="730,379,819,405"/>
+<area shape="rect" href="os5_2loader_8c.html" title=" " alt="" coords="901,528,1001,555"/>
+<area shape="rect" href="os5_2main_8c.html" title=" " alt="" coords="1025,528,1119,555"/>
+<area shape="rect" href="os5__syscall_8c.html" title=" " alt="" coords="602,528,737,555"/>
+<area shape="rect" href="os5__trap_8c.html" title=" " alt="" coords="761,528,877,555"/>
+<area shape="rect" href="os5_2proc_8c.html" title=" " alt="" coords="489,528,577,555"/>
+<area shape="rect" href="os6_2loader_8h.html" title=" " alt="" coords="1360,453,1461,480"/>
+<area shape="rect" href="os6_2proc_8h.html" title=" " alt="" coords="1305,379,1394,405"/>
+<area shape="rect" href="os6__trap_8h.html" title=" " alt="" coords="1485,453,1603,480"/>
+<area shape="rect" href="os6_2loader_8c.html" title=" " alt="" coords="1414,528,1514,555"/>
+<area shape="rect" href="os6_2main_8c.html" title=" " alt="" coords="1539,528,1632,555"/>
+<area shape="rect" href="os6__syscall_8c.html" title=" " alt="" coords="1255,528,1390,555"/>
+<area shape="rect" href="os6__trap_8c.html" title=" " alt="" coords="1657,528,1773,555"/>
+<area shape="rect" href="os6_2proc_8c.html" title=" " alt="" coords="1143,528,1231,555"/>
+<area shape="rect" href="os7_2loader_8h.html" title=" " alt="" coords="1931,453,2032,480"/>
+<area shape="rect" href="os7_2proc_8h.html" title=" " alt="" coords="1854,379,1943,405"/>
+<area shape="rect" href="os7__trap_8h.html" title=" " alt="" coords="2056,453,2173,480"/>
+<area shape="rect" href="os7_2loader_8c.html" title=" " alt="" coords="1937,528,2037,555"/>
+<area shape="rect" href="os7_2main_8c.html" title=" " alt="" coords="2061,528,2155,555"/>
+<area shape="rect" href="os7__syscall_8c.html" title=" " alt="" coords="2179,528,2314,555"/>
+<area shape="rect" href="os7__trap_8c.html" title=" " alt="" coords="1797,528,1913,555"/>
+<area shape="rect" href="os7_2proc_8c.html" title=" " alt="" coords="2339,528,2427,555"/>
+<area shape="rect" href="os8_2loader_8h.html" title=" " alt="" coords="2501,528,2603,555"/>
+<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="2502,453,2591,480"/>
+<area shape="rect" href="sync_8h.html" title=" " alt="" coords="2435,379,2525,405"/>
+<area shape="rect" href="os8__trap_8h.html" title=" " alt="" coords="2627,528,2744,555"/>
+<area shape="rect" href="os8_2loader_8c.html" title=" " alt="" coords="2674,603,2774,629"/>
+<area shape="rect" href="os8_2main_8c.html" title=" " alt="" coords="2556,603,2649,629"/>
+<area shape="rect" href="os8__syscall_8c.html" title=" " alt="" coords="2397,603,2531,629"/>
+</map>
+</div>
+</div>
+<p><a href="vm__dependency_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a05518ab241076a365f2acd326cfc9c70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm__dependency_8h.html#a05518ab241076a365f2acd326cfc9c70">printf</a> (char *,...)</td></tr>
+<tr class="separator:a05518ab241076a365f2acd326cfc9c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537f6c7fcf41e284289a5afaaa9ea689"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm__dependency_8h.html#a537f6c7fcf41e284289a5afaaa9ea689">procid</a> ()</td></tr>
+<tr class="separator:a537f6c7fcf41e284289a5afaaa9ea689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae326139715a1c3bf4e78a00fefbce3ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm__dependency_8h.html#ae326139715a1c3bf4e78a00fefbce3ac">threadid</a> ()</td></tr>
+<tr class="separator:ae326139715a1c3bf4e78a00fefbce3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e23deae3ce8e5a548ff617abf90f4ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm__dependency_8h.html#a5e23deae3ce8e5a548ff617abf90f4ad">dummy</a> (int,...)</td></tr>
+<tr class="separator:a5e23deae3ce8e5a548ff617abf90f4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7861ee1569802186a619778efc85af13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm__dependency_8h.html#a7861ee1569802186a619778efc85af13">shutdown</a> ()</td></tr>
+<tr class="separator:a7861ee1569802186a619778efc85af13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9c8577c0e9d233f85892ec2d9bfe212"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm__dependency_8h.html#aa9c8577c0e9d233f85892ec2d9bfe212">memmove</a> (void *, const void *, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)</td></tr>
+<tr class="separator:aa9c8577c0e9d233f85892ec2d9bfe212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d55c9f035076ed1a90b6452770d0b62"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm__dependency_8h.html#a9d55c9f035076ed1a90b6452770d0b62">memset</a> (void *, int, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)</td></tr>
+<tr class="separator:a9d55c9f035076ed1a90b6452770d0b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a5f3ffcf1add5763eac42b04367f98242"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm__dependency_8h.html#a5f3ffcf1add5763eac42b04367f98242">ekernel</a> []</td></tr>
+<tr class="separator:a5f3ffcf1add5763eac42b04367f98242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6566f7cd3df4b59f36e9f24fc709d55d"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm__dependency_8h.html#a6566f7cd3df4b59f36e9f24fc709d55d">trampoline</a> []</td></tr>
+<tr class="separator:a6566f7cd3df4b59f36e9f24fc709d55d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a5e23deae3ce8e5a548ff617abf90f4ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e23deae3ce8e5a548ff617abf90f4ad">&#9670;&nbsp;</a></span>dummy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dummy </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9c8577c0e9d233f85892ec2d9bfe212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9c8577c0e9d233f85892ec2d9bfe212">&#9670;&nbsp;</a></span>memmove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* memmove </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d55c9f035076ed1a90b6452770d0b62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d55c9f035076ed1a90b6452770d0b62">&#9670;&nbsp;</a></span>memset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* memset </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05518ab241076a365f2acd326cfc9c70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05518ab241076a365f2acd326cfc9c70">&#9670;&nbsp;</a></span>printf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printf </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a537f6c7fcf41e284289a5afaaa9ea689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a537f6c7fcf41e284289a5afaaa9ea689">&#9670;&nbsp;</a></span>procid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int procid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7861ee1569802186a619778efc85af13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7861ee1569802186a619778efc85af13">&#9670;&nbsp;</a></span>shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void shutdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae326139715a1c3bf4e78a00fefbce3ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae326139715a1c3bf4e78a00fefbce3ac">&#9670;&nbsp;</a></span>threadid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int threadid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a5f3ffcf1add5763eac42b04367f98242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3ffcf1add5763eac42b04367f98242">&#9670;&nbsp;</a></span>ekernel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char ekernel[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6566f7cd3df4b59f36e9f24fc709d55d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6566f7cd3df4b59f36e9f24fc709d55d">&#9670;&nbsp;</a></span>trampoline</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char trampoline</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_3e5ae976cba375449e7597bf7abde3d4.html">kernel-vm</a></li><li class="navelem"><a class="el" href="vm__dependency_8h.html">vm_dependency.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

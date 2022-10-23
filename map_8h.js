@@ -6,6 +6,5 @@ var map_8h =
     [ "uvmcreate", "map_8h.html#a0861cf789c153af3703fc9098cc8dea5", null ],
     [ "uvmfree", "map_8h.html#a8064fdaa325d6a3ad61f7157202382c3", null ],
     [ "uvmmap", "map_8h.html#a5a6a56602c37a63e8116d66d61dfa9cc", null ],
-    [ "uvmunmap", "map_8h.html#a4fbf40e2c26f6a6111bd0669ef5e8236", null ],
-    [ "trampoline", "map_8h.html#a796aa4017efb6527598a228f4b7cc9ac", null ]
+    [ "uvmunmap", "map_8h.html#a4fbf40e2c26f6a6111bd0669ef5e8236", null ]
 ];

@@ -1,6 +1,5 @@
 var string_8c =
 [
-    [ "dummy", "string_8c.html#a8ac3f42cf28eedad37d644036e709109", null ],
     [ "memcmp", "string_8c.html#aa70027bbf4ef8a7388150c5b374f9b16", null ],
     [ "memcpy", "string_8c.html#ae3d71b1daca36f00293a5e21c342feb0", null ],
     [ "memmove", "string_8c.html#a01f8724ac478257f6703f2a52c738323", null ],

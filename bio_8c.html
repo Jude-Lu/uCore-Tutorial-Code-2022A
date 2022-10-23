@@ -95,20 +95,12 @@ bio.c 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="bio_8c__incl.png" border="0" usemap="#disk_2bio_8c" alt=""/></div>
 <map name="disk_2bio_8c" id="disk_2bio_8c">
-<area shape="rect" title=" " alt="" coords="72,5,156,32"/>
-<area shape="rect" href="bio_8h.html" title=" " alt="" coords="51,155,106,181"/>
-<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="116,80,184,107"/>
-<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="198,379,313,405"/>
-<area shape="rect" href="const_8h.html" title=" " alt="" coords="22,229,135,256"/>
-<area shape="rect" href="riscv_8h.html" title=" " alt="" coords="122,304,186,331"/>
-<area shape="rect" href="defs_8h.html" title=" " alt="" coords="321,155,428,181"/>
-<area shape="rect" href="log_8h.html" title=" " alt="" coords="262,229,316,256"/>
-<area shape="rect" href="printf_8h.html" title=" " alt="" coords="340,229,408,256"/>
-<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="301,304,354,331"/>
-<area shape="rect" href="string_8h.html" title=" " alt="" coords="399,304,470,331"/>
-<area shape="rect" href="timer_8h.html" title=" " alt="" coords="503,304,571,331"/>
-<area shape="rect" href="console_8h.html" title=" " alt="" coords="586,229,670,256"/>
-<area shape="rect" href="queue_8h.html" title=" " alt="" coords="694,229,769,256"/>
+<area shape="rect" title=" " alt="" coords="88,5,172,32"/>
+<area shape="rect" href="bio_8h.html" title=" " alt="" coords="67,155,122,181"/>
+<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="132,80,200,107"/>
+<area shape="rect" href="disk_2defs_8h.html" title=" " alt="" coords="63,379,126,405"/>
+<area shape="rect" href="disk_2log_8h.html" title=" " alt="" coords="67,229,122,256"/>
+<area shape="rect" href="disk__dependency_8h.html" title=" " alt="" coords="22,304,167,331"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -116,7 +108,7 @@ bio.c 的引用(Include)关系图:</div>
 函数</h2></td></tr>
 <tr class="memitem:a9e6b07f66dc0719de7fc439e571070ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#a9e6b07f66dc0719de7fc439e571070ab">binit</a> ()</td></tr>
 <tr class="separator:a9e6b07f66dc0719de7fc439e571070ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01ebd0efe72af59c25446f90a1ba7bb9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#a01ebd0efe72af59c25446f90a1ba7bb9">bread</a> (<a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> dev, <a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> blockno)</td></tr>
+<tr class="memitem:a01ebd0efe72af59c25446f90a1ba7bb9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#a01ebd0efe72af59c25446f90a1ba7bb9">bread</a> (<a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> dev, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> blockno)</td></tr>
 <tr class="separator:a01ebd0efe72af59c25446f90a1ba7bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae81bbf8b40f0602a191798342900ca89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#ae81bbf8b40f0602a191798342900ca89">bwrite</a> (void *_b)</td></tr>
 <tr class="separator:ae81bbf8b40f0602a191798342900ca89"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,18 +118,18 @@ bio.c 的引用(Include)关系图:</div>
 <tr class="separator:a9561b7bdf4020dc47092cf3a6a375ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae68a7b9f954b05d3cce7be10cc48ad67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#ae68a7b9f954b05d3cce7be10cc48ad67">bunpin</a> (void *<a class="el" href="virtio__disk_8c.html#a478a43f541f7e29b957eaaef78d660d4">b</a>)</td></tr>
 <tr class="separator:ae68a7b9f954b05d3cce7be10cc48ad67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfdc9276c4330cd911854199e55c57fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#acfdc9276c4330cd911854199e55c57fa">buf_data</a> (void *<a class="el" href="virtio__disk_8c.html#a478a43f541f7e29b957eaaef78d660d4">b</a>)</td></tr>
+<tr class="memitem:acfdc9276c4330cd911854199e55c57fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#acfdc9276c4330cd911854199e55c57fa">buf_data</a> (void *<a class="el" href="virtio__disk_8c.html#a478a43f541f7e29b957eaaef78d660d4">b</a>)</td></tr>
 <tr class="separator:acfdc9276c4330cd911854199e55c57fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 变量</h2></td></tr>
-<tr class="memitem:a7725a9957148b7740449a091ea12b0e4"><td class="memItemLeft" >struct {</td></tr>
-<tr class="memitem:a72ee90c61d41547b10a533c219e081c6"><td class="memItemLeft" >&#160;&#160;&#160;struct <a class="el" href="structbuf.html">buf</a>&#160;&#160;&#160;<a class="el" href="bio_8c.html#a72ee90c61d41547b10a533c219e081c6">buf</a> [<a class="el" href="const_8h.html#ad51e2f8dffd163c263ec676a268d0f0a">NBUF</a>]</td></tr>
+<tr class="memitem:a484cc4a6a6fe40f324eaab3f87b0c74e"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a72ee90c61d41547b10a533c219e081c6"><td class="memItemLeft" >&#160;&#160;&#160;struct <a class="el" href="structbuf.html">buf</a>&#160;&#160;&#160;<a class="el" href="bio_8c.html#a72ee90c61d41547b10a533c219e081c6">buf</a> [<a class="el" href="utils_2defs_8h.html#ad51e2f8dffd163c263ec676a268d0f0a">NBUF</a>]</td></tr>
 <tr class="separator:a72ee90c61d41547b10a533c219e081c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6e692c16f1b909f5cb2a1832cf43430"><td class="memItemLeft" >&#160;&#160;&#160;struct <a class="el" href="structbuf.html">buf</a>&#160;&#160;&#160;<a class="el" href="bio_8c.html#aa6e692c16f1b909f5cb2a1832cf43430">head</a></td></tr>
 <tr class="separator:aa6e692c16f1b909f5cb2a1832cf43430"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7725a9957148b7740449a091ea12b0e4"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#a7725a9957148b7740449a091ea12b0e4">bcache</a></td></tr>
-<tr class="separator:a7725a9957148b7740449a091ea12b0e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a484cc4a6a6fe40f324eaab3f87b0c74e"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#a484cc4a6a6fe40f324eaab3f87b0c74e">bcache</a></td></tr>
+<tr class="separator:a484cc4a6a6fe40f324eaab3f87b0c74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a554e63228b946db0d44c4f398b18e212"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#a554e63228b946db0d44c4f398b18e212">R</a> = 0</td></tr>
 <tr class="separator:a554e63228b946db0d44c4f398b18e212"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab21b528bc38899d04d3a7053e52fb797"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#ab21b528bc38899d04d3a7053e52fb797">W</a> = 1</td></tr>
@@ -188,13 +180,13 @@ bio.c 的引用(Include)关系图:</div>
         <tr>
           <td class="memname">void* bread </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
           <td class="paramname"><em>dev</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
           <td class="paramname"><em>blockno</em>&#160;</td>
         </tr>
         <tr>
@@ -232,7 +224,7 @@ bio.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a>* buf_data </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a>* buf_data </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>b</em></td><td>)</td>
@@ -280,8 +272,8 @@ bio.c 的引用(Include)关系图:</div>
 </div>
 </div>
 <h2 class="groupheader">变量说明</h2>
-<a id="a7725a9957148b7740449a091ea12b0e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7725a9957148b7740449a091ea12b0e4">&#9670;&nbsp;</a></span>bcache</h2>
+<a id="a484cc4a6a6fe40f324eaab3f87b0c74e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a484cc4a6a6fe40f324eaab3f87b0c74e">&#9670;&nbsp;</a></span>bcache</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -301,7 +293,7 @@ bio.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structbuf.html">buf</a> <a class="el" href="structbuf.html">buf</a>[<a class="el" href="const_8h.html#ad51e2f8dffd163c263ec676a268d0f0a">NBUF</a>]</td>
+          <td class="memname">struct <a class="el" href="structbuf.html">buf</a> <a class="el" href="structbuf.html">buf</a>[<a class="el" href="utils_2defs_8h.html#ad51e2f8dffd163c263ec676a268d0f0a">NBUF</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">

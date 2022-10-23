@@ -101,12 +101,12 @@ $(document).ready(function(){initNavTree('structmanager.html',''); initResizable
 <tr class="memitem:a1b8e0f3285783eaf41ec4f4cf76e0b72"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmanager.html#a1b8e0f3285783eaf41ec4f4cf76e0b72">remove</a> )(void *p)</td></tr>
 <tr class="memdesc:a1b8e0f3285783eaf41ec4f4cf76e0b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除任务  <a href="structmanager.html#a1b8e0f3285783eaf41ec4f4cf76e0b72">更多...</a><br /></td></tr>
 <tr class="separator:a1b8e0f3285783eaf41ec4f4cf76e0b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a793f16a349e6ae00768d4513ec2f7958"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmanager.html#a793f16a349e6ae00768d4513ec2f7958">get</a> )(int id)</td></tr>
-<tr class="memdesc:a793f16a349e6ae00768d4513ec2f7958"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据id获取任务  <a href="structmanager.html#a793f16a349e6ae00768d4513ec2f7958">更多...</a><br /></td></tr>
-<tr class="separator:a793f16a349e6ae00768d4513ec2f7958"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56811952dff9f11fb3a6b5a6d13e633f"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmanager.html#a56811952dff9f11fb3a6b5a6d13e633f">change</a> )(void *p)</td></tr>
-<tr class="memdesc:a56811952dff9f11fb3a6b5a6d13e633f"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据任务获取id  <a href="structmanager.html#a56811952dff9f11fb3a6b5a6d13e633f">更多...</a><br /></td></tr>
-<tr class="separator:a56811952dff9f11fb3a6b5a6d13e633f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64b95893d2525c09bb2b498a3094c263"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmanager.html#a64b95893d2525c09bb2b498a3094c263">get_task_by_id</a> )(int id)</td></tr>
+<tr class="memdesc:a64b95893d2525c09bb2b498a3094c263"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据id获取任务  <a href="structmanager.html#a64b95893d2525c09bb2b498a3094c263">更多...</a><br /></td></tr>
+<tr class="separator:a64b95893d2525c09bb2b498a3094c263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29dae501622f307231b9bfe0b3d249dc"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmanager.html#a29dae501622f307231b9bfe0b3d249dc">get_id_by_task</a> )(void *p)</td></tr>
+<tr class="memdesc:a29dae501622f307231b9bfe0b3d249dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据任务获取id  <a href="structmanager.html#a29dae501622f307231b9bfe0b3d249dc">更多...</a><br /></td></tr>
+<tr class="separator:a29dae501622f307231b9bfe0b3d249dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b294dcf32857a94cfc0a4ec8b82e8fb"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmanager.html#a0b294dcf32857a94cfc0a4ec8b82e8fb">add</a> )(void *p)</td></tr>
 <tr class="memdesc:a0b294dcf32857a94cfc0a4ec8b82e8fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">将任务加入调度队列  <a href="structmanager.html#a0b294dcf32857a94cfc0a4ec8b82e8fb">更多...</a><br /></td></tr>
 <tr class="separator:a0b294dcf32857a94cfc0a4ec8b82e8fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,22 +130,6 @@ $(document).ready(function(){initNavTree('structmanager.html',''); initResizable
 </div><div class="memdoc">
 
 <p>将任务加入调度队列 </p>
-
-</div>
-</div>
-<a id="a56811952dff9f11fb3a6b5a6d13e633f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56811952dff9f11fb3a6b5a6d13e633f">&#9670;&nbsp;</a></span>change</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int(* change(void *p)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>根据任务获取id </p>
 
 </div>
 </div>
@@ -181,14 +165,30 @@ $(document).ready(function(){initNavTree('structmanager.html',''); initResizable
 
 </div>
 </div>
-<a id="a793f16a349e6ae00768d4513ec2f7958"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a793f16a349e6ae00768d4513ec2f7958">&#9670;&nbsp;</a></span>get</h2>
+<a id="a29dae501622f307231b9bfe0b3d249dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29dae501622f307231b9bfe0b3d249dc">&#9670;&nbsp;</a></span>get_id_by_task</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void*(* get(int id)</td>
+          <td class="memname">int(* get_id_by_task(void *p)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据任务获取id </p>
+
+</div>
+</div>
+<a id="a64b95893d2525c09bb2b498a3094c263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b95893d2525c09bb2b498a3094c263">&#9670;&nbsp;</a></span>get_task_by_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void*(* get_task_by_id(int id)</td>
         </tr>
       </table>
 </div><div class="memdoc">

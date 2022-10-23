@@ -82,8 +82,7 @@ $(document).ready(function(){initNavTree('os8__trap_8c.html',''); initResizable(
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">函数</a> &#124;
-<a href="#var-members">变量</a>  </div>
+<a href="#func-members">函数</a>  </div>
   <div class="headertitle">
 <div class="title">os8_trap.c 文件参考</div>  </div>
 </div><!--header-->
@@ -91,42 +90,61 @@ $(document).ready(function(){initNavTree('os8__trap_8c.html',''); initResizable(
 <div class="textblock"><code>#include &quot;<a class="el" href="os8__trap_8h_source.html">os8_trap.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="os8_2loader_8h_source.html">loader.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="os8_2proc_8h_source.html">proc.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="plic_8h_source.html">../trap/plic.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="virtio_8h_source.html">../disk/virtio.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 os8_trap.c 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="os8__trap_8c__incl.png" border="0" usemap="#os8_2os8__trap_8c" alt=""/></div>
 <map name="os8_2os8__trap_8c" id="os8_2os8__trap_8c">
-<area shape="rect" title=" " alt="" coords="683,5,799,32"/>
-<area shape="rect" href="os8__trap_8h.html" title=" " alt="" coords="1108,229,1199,256"/>
-<area shape="rect" href="plic_8h.html" title=" " alt="" coords="316,379,415,405"/>
-<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="871,379,982,405"/>
-<area shape="rect" href="os8_2loader_8h.html" title=" " alt="" coords="241,80,316,107"/>
-<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="710,155,773,181"/>
-<area shape="rect" href="defs_8h.html" title=" " alt="" coords="1004,528,1111,555"/>
-<area shape="rect" href="modules_8h.html" title=" " alt="" coords="639,304,774,331"/>
-<area shape="rect" href="const_8h.html" title=" " alt="" coords="492,603,561,629"/>
-<area shape="rect" href="riscv_8h.html" title=" " alt="" coords="495,677,559,704"/>
-<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="683,752,754,779"/>
-<area shape="rect" href="log_8h.html" title=" " alt="" coords="847,603,902,629"/>
-<area shape="rect" href="printf_8h.html" title=" " alt="" coords="1389,603,1457,629"/>
-<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="1028,677,1081,704"/>
-<area shape="rect" href="string_8h.html" title=" " alt="" coords="1106,677,1177,704"/>
-<area shape="rect" href="timer_8h.html" title=" " alt="" coords="1259,677,1327,704"/>
-<area shape="rect" href="console_8h.html" title=" " alt="" coords="1130,603,1214,629"/>
-<area shape="rect" href="queue_8h.html" title=" " alt="" coords="1239,603,1313,629"/>
-<area shape="rect" href="syscall_8h.html" title=" " alt="" coords="655,528,795,555"/>
-<area shape="rect" href="trap_8h.html" title=" " alt="" coords="45,677,147,704"/>
-<area shape="rect" href="kalloc_8h.html" title=" " alt="" coords="490,379,643,405"/>
-<area shape="rect" href="map_8h.html" title=" " alt="" coords="273,603,417,629"/>
-<area shape="rect" href="vm_8h.html" title=" " alt="" coords="585,603,721,629"/>
-<area shape="rect" href="processor_8h.html" title=" " alt="" coords="755,677,954,704"/>
-<area shape="rect" href="pipe_8h.html" title=" " alt="" coords="567,453,673,480"/>
-<area shape="rect" href="file_8h.html" title=" " alt="" coords="122,379,241,405"/>
-<area shape="rect" href="bio_8h.html" title=" " alt="" coords="891,528,946,555"/>
-<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="698,453,745,480"/>
-<area shape="rect" href="sync_8h.html" title=" " alt="" coords="744,229,808,256"/>
+<area shape="rect" title=" " alt="" coords="719,5,835,32"/>
+<area shape="rect" href="os8__trap_8h.html" title=" " alt="" coords="650,155,741,181"/>
+<area shape="rect" href="os8_2loader_8h.html" title=" " alt="" coords="739,80,814,107"/>
+<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="819,155,881,181"/>
+<area shape="rect" href="os8_2modules_8h.html" title=" " alt="" coords="758,304,849,331"/>
+<area shape="rect" href="os8_2defs_8h.html" title=" " alt="" coords="5,386,68,413"/>
+<area shape="rect" href="os8_2log_8h.html" title=" " alt="" coords="92,386,147,413"/>
+<area shape="rect" href="os8_2extern_8h.html" title=" " alt="" coords="171,386,247,413"/>
+<area shape="rect" href="console__module_8h.html" title=" " alt="" coords="271,379,410,420"/>
+<area shape="rect" href="disk__module_8h.html" title=" " alt="" coords="434,386,594,413"/>
+<area shape="rect" href="fs__module_8h.html" title=" " alt="" coords="619,386,785,413"/>
+<area shape="rect" href="vm__module_8h.html" title=" " alt="" coords="810,386,1002,413"/>
+<area shape="rect" href="pipe__module_8h.html" title=" " alt="" coords="1026,386,1189,413"/>
+<area shape="rect" href="syscall__module_8h.html" title=" " alt="" coords="1213,379,1341,420"/>
+<area shape="rect" href="trap__module_8h.html" title=" " alt="" coords="1365,386,1524,413"/>
+<area shape="rect" href="task__module_8h.html" title=" " alt="" coords="1549,379,1701,420"/>
+<area shape="rect" href="utils__module_8h.html" title=" " alt="" coords="1725,386,1887,413"/>
+<area shape="rect" href="console_8h.html" title=" " alt="" coords="129,468,213,495"/>
+<area shape="rect" href="printf_8h.html" title=" " alt="" coords="237,468,305,495"/>
+<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="330,468,383,495"/>
+<area shape="rect" href="console_2defs_8h.html" title=" " alt="" coords="325,543,388,569"/>
+<area shape="rect" href="bio_8h.html" title=" " alt="" coords="469,543,524,569"/>
+<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="408,468,476,495"/>
+<area shape="rect" href="disk_2defs_8h.html" title=" " alt="" coords="384,617,447,644"/>
+<area shape="rect" href="disk_2log_8h.html" title=" " alt="" coords="471,617,525,644"/>
+<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="641,543,688,569"/>
+<area shape="rect" href="file_8h.html" title=" " alt="" coords="703,468,757,495"/>
+<area shape="rect" href="easy-fs_2defs_8h.html" title=" " alt="" coords="635,692,697,719"/>
+<area shape="rect" href="fs__dependency_8h.html" title=" " alt="" coords="601,617,731,644"/>
+<area shape="rect" href="kalloc_8h.html" title=" " alt="" coords="782,468,854,495"/>
+<area shape="rect" href="vm_8h.html" title=" " alt="" coords="879,468,933,495"/>
+<area shape="rect" href="map_8h.html" title=" " alt="" coords="957,468,1020,495"/>
+<area shape="rect" href="kernel-vm_2defs_8h.html" title=" " alt="" coords="887,543,949,569"/>
+<area shape="rect" href="kernel-vm_2log_8h.html" title=" " alt="" coords="808,543,863,569"/>
+<area shape="rect" href="pipe_8h.html" title=" " alt="" coords="1044,468,1107,495"/>
+<area shape="rect" href="pipe_2defs_8h.html" title=" " alt="" coords="1052,543,1115,569"/>
+<area shape="rect" href="pipe_2log_8h.html" title=" " alt="" coords="973,543,1028,569"/>
+<area shape="rect" href="syscall__ids_8h.html" title=" " alt="" coords="1233,468,1339,495"/>
+<area shape="rect" href="syscall_8h.html" title=" " alt="" coords="1131,468,1209,495"/>
+<area shape="rect" href="syscall_2defs_8h.html" title=" " alt="" coords="1139,543,1201,569"/>
+<area shape="rect" href="trap_8h.html" title=" " alt="" coords="1363,468,1423,495"/>
+<area shape="rect" href="plic_8h.html" title=" " alt="" coords="1539,468,1596,495"/>
+<area shape="rect" href="timer_8h.html" title=" " alt="" coords="1447,468,1515,495"/>
+<area shape="rect" href="trap_2log_8h.html" title=" " alt="" coords="1365,543,1420,569"/>
+<area shape="rect" href="trap_2defs_8h.html" title=" " alt="" coords="1447,543,1509,569"/>
+<area shape="rect" href="processor_8h.html" title=" " alt="" coords="1621,468,1717,495"/>
+<area shape="rect" href="task-manage_2defs_8h.html" title=" " alt="" coords="1637,543,1700,569"/>
+<area shape="rect" href="string_8h.html" title=" " alt="" coords="1853,468,1924,495"/>
+<area shape="rect" href="queue_8h.html" title=" " alt="" coords="1754,468,1829,495"/>
+<area shape="rect" href="sync_8h.html" title=" " alt="" coords="866,229,930,256"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -138,13 +156,13 @@ os8_trap.c 的引用(Include)关系图:</div>
 <tr class="separator:ab1ba209e2e4e91c6d6176d8fbca9dd2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f25b68f8d6d2e7d05a28418da701464"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structtrapframe.html">trapframe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#a7f25b68f8d6d2e7d05a28418da701464">os8_get_trapframe</a> ()</td></tr>
 <tr class="separator:a7f25b68f8d6d2e7d05a28418da701464"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad21d4006f2b4975979db83945159249f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#ad21d4006f2b4975979db83945159249f">os8_get_trapframe_va</a> ()</td></tr>
+<tr class="memitem:ad21d4006f2b4975979db83945159249f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#ad21d4006f2b4975979db83945159249f">os8_get_trapframe_va</a> ()</td></tr>
 <tr class="separator:ad21d4006f2b4975979db83945159249f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5befdb82a5e27eae34ebb37e9da68cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#ab5befdb82a5e27eae34ebb37e9da68cc">os8_get_satp</a> ()</td></tr>
+<tr class="memitem:ab5befdb82a5e27eae34ebb37e9da68cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#ab5befdb82a5e27eae34ebb37e9da68cc">os8_get_satp</a> ()</td></tr>
 <tr class="separator:ab5befdb82a5e27eae34ebb37e9da68cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a2d005a60467b804553caeca33deb8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#a7a2d005a60467b804553caeca33deb8a">os8_get_kernel_sp</a> ()</td></tr>
+<tr class="memitem:a7a2d005a60467b804553caeca33deb8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#a7a2d005a60467b804553caeca33deb8a">os8_get_kernel_sp</a> ()</td></tr>
 <tr class="separator:a7a2d005a60467b804553caeca33deb8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a189f8688b3c2beaa9fe63d95d7934f5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#a189f8688b3c2beaa9fe63d95d7934f5b">os8_get_userret</a> ()</td></tr>
+<tr class="memitem:a189f8688b3c2beaa9fe63d95d7934f5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#a189f8688b3c2beaa9fe63d95d7934f5b">os8_get_userret</a> ()</td></tr>
 <tr class="separator:a189f8688b3c2beaa9fe63d95d7934f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dc87f6b56cbe6cab597147956c6587e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#a1dc87f6b56cbe6cab597147956c6587e">os8_finish_usertrap</a> (int cause)</td></tr>
 <tr class="separator:a1dc87f6b56cbe6cab597147956c6587e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,17 +172,6 @@ os8_trap.c 的引用(Include)关系图:</div>
 <tr class="separator:a339fc31c68f894dc8b8df43c04be5b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d104d6bebefa5a97c55a9b4f6c937fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#a7d104d6bebefa5a97c55a9b4f6c937fb">trap_init</a> ()</td></tr>
 <tr class="separator:a7d104d6bebefa5a97c55a9b4f6c937fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-变量</h2></td></tr>
-<tr class="memitem:a796aa4017efb6527598a228f4b7cc9ac"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#a796aa4017efb6527598a228f4b7cc9ac">trampoline</a> []</td></tr>
-<tr class="separator:a796aa4017efb6527598a228f4b7cc9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6435376c8373232f9561dfb25e7ca28"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#aa6435376c8373232f9561dfb25e7ca28">uservec</a> []</td></tr>
-<tr class="separator:aa6435376c8373232f9561dfb25e7ca28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad29ed72d197c94e5b6bd9f5cb80fe5fe"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#ad29ed72d197c94e5b6bd9f5cb80fe5fe">kernelvec</a> []</td></tr>
-<tr class="separator:ad29ed72d197c94e5b6bd9f5cb80fe5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af564f710557d70393b9fb1cce4e194d7"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os8__trap_8c.html#af564f710557d70393b9fb1cce4e194d7">userret</a> []</td></tr>
-<tr class="separator:af564f710557d70393b9fb1cce4e194d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
 <a id="a26ae0402dceac6b9def4c14a9a710b90"></a>
@@ -210,7 +217,7 @@ os8_trap.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os8_get_kernel_sp </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os8_get_kernel_sp </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -227,7 +234,7 @@ os8_trap.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="riscv_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> os8_get_satp </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> os8_get_satp </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -261,7 +268,7 @@ os8_trap.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os8_get_trapframe_va </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os8_get_trapframe_va </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -278,7 +285,7 @@ os8_trap.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os8_get_userret </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os8_get_userret </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -351,63 +358,6 @@ os8_trap.c 的引用(Include)关系图:</div>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">变量说明</h2>
-<a id="ad29ed72d197c94e5b6bd9f5cb80fe5fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad29ed72d197c94e5b6bd9f5cb80fe5fe">&#9670;&nbsp;</a></span>kernelvec</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char kernelvec[]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a796aa4017efb6527598a228f4b7cc9ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a796aa4017efb6527598a228f4b7cc9ac">&#9670;&nbsp;</a></span>trampoline</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char trampoline[]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af564f710557d70393b9fb1cce4e194d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af564f710557d70393b9fb1cce4e194d7">&#9670;&nbsp;</a></span>userret</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char userret[]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa6435376c8373232f9561dfb25e7ca28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6435376c8373232f9561dfb25e7ca28">&#9670;&nbsp;</a></span>uservec</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char uservec[]</td>
         </tr>
       </table>
 </div><div class="memdoc">

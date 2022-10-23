@@ -1,0 +1,12 @@
+<map id="os5/defs.h" name="os5/defs.h">
+<area shape="rect" id="node1" title=" " alt="" coords="323,5,412,32"/>
+<area shape="rect" id="node2" href="$os5_2modules_8h.html" title=" " alt="" coords="261,80,378,107"/>
+<area shape="rect" id="node10" href="$os5__trap_8h.html" title=" " alt="" coords="385,229,502,256"/>
+<area shape="rect" id="node3" href="$os5_2loader_8h.html" title=" " alt="" coords="259,229,361,256"/>
+<area shape="rect" id="node9" href="$os5_2proc_8h.html" title=" " alt="" coords="192,155,281,181"/>
+<area shape="rect" id="node4" href="$os5_2loader_8c.html" title=" " alt="" coords="277,304,377,331"/>
+<area shape="rect" id="node5" href="$os5_2main_8c.html" title=" " alt="" coords="402,304,495,331"/>
+<area shape="rect" id="node6" href="$os5__syscall_8c.html" title=" " alt="" coords="5,304,140,331"/>
+<area shape="rect" id="node7" href="$os5__trap_8c.html" title=" " alt="" coords="520,304,636,331"/>
+<area shape="rect" id="node8" href="$os5_2proc_8c.html" title=" " alt="" coords="165,304,253,331"/>
+</map>

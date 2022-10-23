@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uCore-Tutorial-Code-2022A: utils/printf.c 文件参考</title>
+<title>uCore-Tutorial-Code-2022A: console/printf.c 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,25 +89,21 @@ $(document).ready(function(){initNavTree('printf_8c.html',''); initResizable(); 
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdarg.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="console_8h_source.html">console.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="defs_8h_source.html">defs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sbi_8h_source.html">sbi.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="console_2log_8h_source.html">log.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="console_2defs_8h_source.html">defs.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 printf.c 的引用(Include)关系图:</div>
 <div class="dyncontent">
-<div class="center"><img src="printf_8c__incl.png" border="0" usemap="#utils_2printf_8c" alt=""/></div>
-<map name="utils_2printf_8c" id="utils_2printf_8c">
-<area shape="rect" title=" " alt="" coords="107,5,206,32"/>
-<area shape="rect" title=" " alt="" coords="45,80,119,107"/>
-<area shape="rect" href="console_8h.html" title=" " alt="" coords="5,155,89,181"/>
-<area shape="rect" href="defs_8h.html" title=" " alt="" coords="305,80,368,107"/>
-<area shape="rect" href="const_8h.html" title=" " alt="" coords="114,155,183,181"/>
-<area shape="rect" href="riscv_8h.html" title=" " alt="" coords="170,229,234,256"/>
-<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="380,304,451,331"/>
-<area shape="rect" href="log_8h.html" title=" " alt="" coords="309,155,364,181"/>
-<area shape="rect" href="printf_8h.html" title=" " alt="" coords="388,155,456,181"/>
-<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="389,229,442,256"/>
-<area shape="rect" href="string_8h.html" title=" " alt="" coords="467,229,537,256"/>
-<area shape="rect" href="timer_8h.html" title=" " alt="" coords="561,229,629,256"/>
-<area shape="rect" href="queue_8h.html" title=" " alt="" coords="633,155,707,181"/>
+<div class="center"><img src="printf_8c__incl.png" border="0" usemap="#console_2printf_8c" alt=""/></div>
+<map name="console_2printf_8c" id="console_2printf_8c">
+<area shape="rect" title=" " alt="" coords="179,5,301,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,80,107"/>
+<area shape="rect" href="console_8h.html" title=" " alt="" coords="105,80,189,107"/>
+<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="213,80,267,107"/>
+<area shape="rect" href="console_2defs_8h.html" title=" " alt="" coords="209,155,271,181"/>
+<area shape="rect" href="console_2log_8h.html" title=" " alt="" coords="347,80,402,107"/>
+<area shape="rect" href="console__dependency_8h.html" title=" " alt="" coords="296,155,464,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -115,8 +111,38 @@ printf.c 的引用(Include)关系图:</div>
 函数</h2></td></tr>
 <tr class="memitem:a28abc837a69aa861f839321a9772d077"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="printf_8c.html#a28abc837a69aa861f839321a9772d077">printf</a> (char *fmt,...)</td></tr>
 <tr class="separator:a28abc837a69aa861f839321a9772d077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ac3f42cf28eedad37d644036e709109"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="printf_8c.html#a8ac3f42cf28eedad37d644036e709109">dummy</a> (int _,...)</td></tr>
+<tr class="separator:a8ac3f42cf28eedad37d644036e709109"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
+<a id="a8ac3f42cf28eedad37d644036e709109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ac3f42cf28eedad37d644036e709109">&#9670;&nbsp;</a></span>dummy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dummy </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a28abc837a69aa861f839321a9772d077"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a28abc837a69aa861f839321a9772d077">&#9670;&nbsp;</a></span>printf()</h2>
 
@@ -150,7 +176,7 @@ printf.c 的引用(Include)关系图:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a class="el" href="printf_8c.html">printf.c</a></li>
+    <li class="navelem"><a class="el" href="dir_9f97b40203d0b7782e2ba57c500dd0f3.html">console</a></li><li class="navelem"><a class="el" href="printf_8c.html">printf.c</a></li>
     <li class="footer">制作者
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

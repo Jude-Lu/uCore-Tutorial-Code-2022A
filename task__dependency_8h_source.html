@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>uCore-Tutorial-Code-2022A: task-manage/task_dependency.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uCore-Tutorial-Code-2022A
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('task__dependency_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">task_dependency.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="task__dependency_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TASK_DEPENDENCY_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TASK_DEPENDENCY_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="task__dependency_8h.html#a05518ab241076a365f2acd326cfc9c70">printf</a>(<span class="keywordtype">char</span>*, ...);</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="task__dependency_8h.html#a537f6c7fcf41e284289a5afaaa9ea689">procid</a>();</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="task__dependency_8h.html#ae326139715a1c3bf4e78a00fefbce3ac">threadid</a>();</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="task__dependency_8h.html#a5e23deae3ce8e5a548ff617abf90f4ad">dummy</a>(<span class="keywordtype">int</span>, ...);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="task__dependency_8h.html#a7861ee1569802186a619778efc85af13">shutdown</a>();</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#endif  </span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="atask__dependency_8h_html_ae326139715a1c3bf4e78a00fefbce3ac"><div class="ttname"><a href="task__dependency_8h.html#ae326139715a1c3bf4e78a00fefbce3ac">threadid</a></div><div class="ttdeci">int threadid()</div><div class="ttdef"><b>Definition:</b> main.c:8</div></div>
+<div class="ttc" id="atask__dependency_8h_html_a05518ab241076a365f2acd326cfc9c70"><div class="ttname"><a href="task__dependency_8h.html#a05518ab241076a365f2acd326cfc9c70">printf</a></div><div class="ttdeci">void printf(char *,...)</div><div class="ttdef"><b>Definition:</b> printf.c:40</div></div>
+<div class="ttc" id="atask__dependency_8h_html_a537f6c7fcf41e284289a5afaaa9ea689"><div class="ttname"><a href="task__dependency_8h.html#a537f6c7fcf41e284289a5afaaa9ea689">procid</a></div><div class="ttdeci">int procid()</div><div class="ttdef"><b>Definition:</b> main.c:3</div></div>
+<div class="ttc" id="atask__dependency_8h_html_a5e23deae3ce8e5a548ff617abf90f4ad"><div class="ttname"><a href="task__dependency_8h.html#a5e23deae3ce8e5a548ff617abf90f4ad">dummy</a></div><div class="ttdeci">void dummy(int,...)</div><div class="ttdef"><b>Definition:</b> printf.c:85</div></div>
+<div class="ttc" id="atask__dependency_8h_html_a7861ee1569802186a619778efc85af13"><div class="ttname"><a href="task__dependency_8h.html#a7861ee1569802186a619778efc85af13">shutdown</a></div><div class="ttdeci">void shutdown()</div><div class="ttdef"><b>Definition:</b> sbi.c:33</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_a4e8cb575de928bc21dd998d296e3819.html">task-manage</a></li><li class="navelem"><a class="el" href="task__dependency_8h.html">task_dependency.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

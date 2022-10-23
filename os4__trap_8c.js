@@ -11,9 +11,5 @@ var os4__trap_8c =
     [ "os4_set_kerneltrap", "os4__trap_8c.html#a3d48b78b976d53b6eb477ef4e3634b44", null ],
     [ "os4_set_usertrap", "os4__trap_8c.html#a5efc61c15e0c8aa4bd5021160251a823", null ],
     [ "os4_super_external_handler", "os4__trap_8c.html#a0d3b623031eaa7a84cc08b8fde66246c", null ],
-    [ "trap_init", "os4__trap_8c.html#a7d104d6bebefa5a97c55a9b4f6c937fb", null ],
-    [ "kerneltrap", "os4__trap_8c.html#af6c8f41864cbbdf039b7d31b4ab70458", null ],
-    [ "trampoline", "os4__trap_8c.html#a796aa4017efb6527598a228f4b7cc9ac", null ],
-    [ "userret", "os4__trap_8c.html#af564f710557d70393b9fb1cce4e194d7", null ],
-    [ "uservec", "os4__trap_8c.html#aa6435376c8373232f9561dfb25e7ca28", null ]
+    [ "trap_init", "os4__trap_8c.html#a7d104d6bebefa5a97c55a9b4f6c937fb", null ]
 ];

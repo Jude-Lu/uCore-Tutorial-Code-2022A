@@ -88,74 +88,79 @@ $(document).ready(function(){initNavTree('os5__syscall_8c.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="os5__syscall_8h_source.html">os5_syscall.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="defs_8h_source.html">../utils/defs.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="modules_8h_source.html">../utils/modules.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="syscall__ids_8h_source.html">../syscall/syscall_ids.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="os5_2proc_8h_source.html">proc.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="os5_2loader_8h_source.html">loader.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="os5__trap_8h_source.html">os5_trap.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 os5_syscall.c 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="os5__syscall_8c__incl.png" border="0" usemap="#os5_2os5__syscall_8c" alt=""/></div>
 <map name="os5_2os5__syscall_8c" id="os5_2os5__syscall_8c">
-<area shape="rect" title=" " alt="" coords="1031,5,1165,32"/>
-<area shape="rect" href="os5__syscall_8h.html" title=" " alt="" coords="773,87,882,114"/>
-<area shape="rect" href="defs_8h.html" title=" " alt="" coords="1101,468,1207,495"/>
-<area shape="rect" href="modules_8h.html" title=" " alt="" coords="745,244,880,271"/>
-<area shape="rect" href="syscall__ids_8h.html" title=" " alt="" coords="1437,80,1565,121"/>
-<area shape="rect" href="os5_2loader_8h.html" title=" " alt="" coords="1082,87,1157,114"/>
-<area shape="rect" href="os5__trap_8h.html" title=" " alt="" coords="957,169,1047,196"/>
-<area shape="rect" href="const_8h.html" title=" " alt="" coords="778,543,847,569"/>
-<area shape="rect" href="riscv_8h.html" title=" " alt="" coords="781,617,845,644"/>
-<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="741,692,812,719"/>
-<area shape="rect" href="log_8h.html" title=" " alt="" coords="648,543,703,569"/>
-<area shape="rect" href="printf_8h.html" title=" " alt="" coords="973,543,1041,569"/>
-<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="911,617,965,644"/>
-<area shape="rect" href="string_8h.html" title=" " alt="" coords="1160,617,1231,644"/>
-<area shape="rect" href="timer_8h.html" title=" " alt="" coords="1340,617,1408,644"/>
-<area shape="rect" href="console_8h.html" title=" " alt="" coords="1065,543,1149,569"/>
-<area shape="rect" href="queue_8h.html" title=" " alt="" coords="1174,543,1249,569"/>
-<area shape="rect" href="syscall_8h.html" title=" " alt="" coords="429,468,569,495"/>
-<area shape="rect" href="trap_8h.html" title=" " alt="" coords="5,617,108,644"/>
-<area shape="rect" href="plic_8h.html" title=" " alt="" coords="701,393,799,420"/>
-<area shape="rect" href="kalloc_8h.html" title=" " alt="" coords="511,319,664,345"/>
-<area shape="rect" href="map_8h.html" title=" " alt="" coords="319,543,463,569"/>
-<area shape="rect" href="vm_8h.html" title=" " alt="" coords="487,543,623,569"/>
-<area shape="rect" href="processor_8h.html" title=" " alt="" coords="132,617,331,644"/>
-<area shape="rect" href="pipe_8h.html" title=" " alt="" coords="959,393,1066,420"/>
-<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="824,393,935,420"/>
-<area shape="rect" href="file_8h.html" title=" " alt="" coords="1192,319,1311,345"/>
-<area shape="rect" href="bio_8h.html" title=" " alt="" coords="788,468,843,495"/>
-<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="1203,393,1249,420"/>
-<area shape="rect" href="os5_2proc_8h.html" title=" " alt="" coords="1123,169,1185,196"/>
+<area shape="rect" title=" " alt="" coords="423,5,557,32"/>
+<area shape="rect" href="os5__syscall_8h.html" title=" " alt="" coords="343,80,453,107"/>
+<area shape="rect" href="os5_2proc_8h.html" title=" " alt="" coords="464,155,527,181"/>
+<area shape="rect" href="os5_2loader_8h.html" title=" " alt="" coords="527,80,602,107"/>
+<area shape="rect" href="os5_2modules_8h.html" title=" " alt="" coords="485,229,575,256"/>
+<area shape="rect" href="os5_2defs_8h.html" title=" " alt="" coords="5,311,68,338"/>
+<area shape="rect" href="os5_2log_8h.html" title=" " alt="" coords="92,311,147,338"/>
+<area shape="rect" href="os5_2extern_8h.html" title=" " alt="" coords="171,311,247,338"/>
+<area shape="rect" href="console__module_8h.html" title=" " alt="" coords="271,304,410,345"/>
+<area shape="rect" href="vm__module_8h.html" title=" " alt="" coords="434,311,626,338"/>
+<area shape="rect" href="syscall__module_8h.html" title=" " alt="" coords="650,304,778,345"/>
+<area shape="rect" href="trap__module_8h.html" title=" " alt="" coords="836,311,995,338"/>
+<area shape="rect" href="task__module_8h.html" title=" " alt="" coords="1019,304,1171,345"/>
+<area shape="rect" href="utils__module_8h.html" title=" " alt="" coords="1195,311,1358,338"/>
+<area shape="rect" href="console_8h.html" title=" " alt="" coords="113,393,197,420"/>
+<area shape="rect" href="printf_8h.html" title=" " alt="" coords="221,393,289,420"/>
+<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="314,393,367,420"/>
+<area shape="rect" href="console_2defs_8h.html" title=" " alt="" coords="309,468,372,495"/>
+<area shape="rect" href="kalloc_8h.html" title=" " alt="" coords="391,393,463,420"/>
+<area shape="rect" href="vm_8h.html" title=" " alt="" coords="488,393,543,420"/>
+<area shape="rect" href="map_8h.html" title=" " alt="" coords="567,393,629,420"/>
+<area shape="rect" href="kernel-vm_2defs_8h.html" title=" " alt="" coords="491,617,553,644"/>
+<area shape="rect" href="kernel-vm_2log_8h.html" title=" " alt="" coords="527,468,581,495"/>
+<area shape="rect" href="vm__dependency_8h.html" title=" " alt="" coords="506,543,645,569"/>
+<area shape="rect" href="syscall__ids_8h.html" title=" " alt="" coords="653,393,759,420"/>
+<area shape="rect" href="syscall_8h.html" title=" " alt="" coords="783,393,861,420"/>
+<area shape="rect" href="syscall_2defs_8h.html" title=" " alt="" coords="735,468,797,495"/>
+<area shape="rect" href="trap_8h.html" title=" " alt="" coords="885,393,945,420"/>
+<area shape="rect" href="plic_8h.html" title=" " alt="" coords="1021,393,1079,420"/>
+<area shape="rect" href="timer_8h.html" title=" " alt="" coords="1041,543,1109,569"/>
+<area shape="rect" href="trap_2log_8h.html" title=" " alt="" coords="889,468,944,495"/>
+<area shape="rect" href="trap_2defs_8h.html" title=" " alt="" coords="913,617,976,644"/>
+<area shape="rect" href="trap__dependency_8h.html" title=" " alt="" coords="873,543,1017,569"/>
+<area shape="rect" href="processor_8h.html" title=" " alt="" coords="1103,393,1199,420"/>
+<area shape="rect" href="task-manage_2defs_8h.html" title=" " alt="" coords="1120,468,1183,495"/>
+<area shape="rect" href="string_8h.html" title=" " alt="" coords="1232,393,1303,420"/>
+<area shape="rect" href="queue_8h.html" title=" " alt="" coords="1327,393,1402,420"/>
+<area shape="rect" href="utils_2defs_8h.html" title=" " alt="" coords="1236,468,1299,495"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a8cb3c83cf100b150a97e978a38b48835"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#a8cb3c83cf100b150a97e978a38b48835">os5_sys_write</a> (int fd, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
+<tr class="memitem:a8cb3c83cf100b150a97e978a38b48835"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#a8cb3c83cf100b150a97e978a38b48835">os5_sys_write</a> (int fd, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
 <tr class="separator:a8cb3c83cf100b150a97e978a38b48835"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacb4dbf1f06bb96e0be8072811389a3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#aacb4dbf1f06bb96e0be8072811389a3b">os5_sys_read</a> (int fd, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
+<tr class="memitem:aacb4dbf1f06bb96e0be8072811389a3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#aacb4dbf1f06bb96e0be8072811389a3b">os5_sys_read</a> (int fd, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
 <tr class="separator:aacb4dbf1f06bb96e0be8072811389a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b6824bfd4ec0404a4f875ed8db0274e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#a1b6824bfd4ec0404a4f875ed8db0274e">__attribute__</a> ((noreturn))</td></tr>
 <tr class="separator:a1b6824bfd4ec0404a4f875ed8db0274e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a701c1a4bbbf9fe345fafd2fa90b9e266"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#a701c1a4bbbf9fe345fafd2fa90b9e266">os5_sys_sched_yield</a> ()</td></tr>
+<tr class="memitem:a701c1a4bbbf9fe345fafd2fa90b9e266"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#a701c1a4bbbf9fe345fafd2fa90b9e266">os5_sys_sched_yield</a> ()</td></tr>
 <tr class="separator:a701c1a4bbbf9fe345fafd2fa90b9e266"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a397455e8f4a2e46005d50162d01b4822"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#a397455e8f4a2e46005d50162d01b4822">os5_sys_gettimeofday</a> (<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> val, int _tz)</td></tr>
+<tr class="memitem:a397455e8f4a2e46005d50162d01b4822"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#a397455e8f4a2e46005d50162d01b4822">os5_sys_gettimeofday</a> (<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> val, int _tz)</td></tr>
 <tr class="separator:a397455e8f4a2e46005d50162d01b4822"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa287cea1383956b4ed0eb9b5bf5f8143"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#aa287cea1383956b4ed0eb9b5bf5f8143">os5_sys_getpid</a> ()</td></tr>
+<tr class="memitem:aa287cea1383956b4ed0eb9b5bf5f8143"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#aa287cea1383956b4ed0eb9b5bf5f8143">os5_sys_getpid</a> ()</td></tr>
 <tr class="separator:aa287cea1383956b4ed0eb9b5bf5f8143"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f661dbcda679c250880f8eb45658471"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#a6f661dbcda679c250880f8eb45658471">os5_sys_getppid</a> ()</td></tr>
+<tr class="memitem:a6f661dbcda679c250880f8eb45658471"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#a6f661dbcda679c250880f8eb45658471">os5_sys_getppid</a> ()</td></tr>
 <tr class="separator:a6f661dbcda679c250880f8eb45658471"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f293b44a3faa2bdb350000961e30787"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#a9f293b44a3faa2bdb350000961e30787">os5_sys_clone</a> ()</td></tr>
+<tr class="memitem:a9f293b44a3faa2bdb350000961e30787"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#a9f293b44a3faa2bdb350000961e30787">os5_sys_clone</a> ()</td></tr>
 <tr class="separator:a9f293b44a3faa2bdb350000961e30787"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a615e2f3e270e84936ffd708ed5829e1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#a615e2f3e270e84936ffd708ed5829e1e">os5_sys_exec</a> (<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> uargv)</td></tr>
+<tr class="memitem:a615e2f3e270e84936ffd708ed5829e1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#a615e2f3e270e84936ffd708ed5829e1e">os5_sys_exec</a> (<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> uargv)</td></tr>
 <tr class="separator:a615e2f3e270e84936ffd708ed5829e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5ffb9828d3ab96f8d4341e22231dc2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#af5ffb9828d3ab96f8d4341e22231dc2d">os5_sys_wait</a> (int pid, <a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va)</td></tr>
+<tr class="memitem:af5ffb9828d3ab96f8d4341e22231dc2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#af5ffb9828d3ab96f8d4341e22231dc2d">os5_sys_wait</a> (int pid, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va)</td></tr>
 <tr class="separator:af5ffb9828d3ab96f8d4341e22231dc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0047654f58ebb1132b3096b7d89e67a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#a0047654f58ebb1132b3096b7d89e67a6">os5_sys_spawn</a> (<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va)</td></tr>
+<tr class="memitem:a0047654f58ebb1132b3096b7d89e67a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#a0047654f58ebb1132b3096b7d89e67a6">os5_sys_spawn</a> (<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va)</td></tr>
 <tr class="separator:a0047654f58ebb1132b3096b7d89e67a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3c485f22c72c894dc21b328c204744d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#af3c485f22c72c894dc21b328c204744d">os5_sys_set_priority</a> (long long prio)</td></tr>
+<tr class="memitem:af3c485f22c72c894dc21b328c204744d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#af3c485f22c72c894dc21b328c204744d">os5_sys_set_priority</a> (long long prio)</td></tr>
 <tr class="separator:af3c485f22c72c894dc21b328c204744d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a581ed37968ead91b6d3a0b3b7a71da9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os5__syscall_8c.html#a581ed37968ead91b6d3a0b3b7a71da9d">syscall_init</a> ()</td></tr>
 <tr class="separator:a581ed37968ead91b6d3a0b3b7a71da9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,7 +191,7 @@ os5_syscall.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_clone </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_clone </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -203,15 +208,15 @@ os5_syscall.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_exec </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_exec </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
           <td class="paramname"><em>va</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
           <td class="paramname"><em>uargv</em>&#160;</td>
         </tr>
         <tr>
@@ -231,7 +236,7 @@ os5_syscall.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_getpid </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_getpid </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -248,7 +253,7 @@ os5_syscall.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_getppid </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_getppid </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -265,9 +270,9 @@ os5_syscall.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_gettimeofday </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_gettimeofday </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
           <td class="paramname"><em>val</em>, </td>
         </tr>
         <tr>
@@ -293,7 +298,7 @@ os5_syscall.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_read </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_read </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>fd</em>, </td>
@@ -301,13 +306,13 @@ os5_syscall.c 的引用(Include)关系图:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
           <td class="paramname"><em>va</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
           <td class="paramname"><em>len</em>&#160;</td>
         </tr>
         <tr>
@@ -327,7 +332,7 @@ os5_syscall.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_sched_yield </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_sched_yield </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -344,7 +349,7 @@ os5_syscall.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_set_priority </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_set_priority </td>
           <td>(</td>
           <td class="paramtype">long long&#160;</td>
           <td class="paramname"><em>prio</em></td><td>)</td>
@@ -362,9 +367,9 @@ os5_syscall.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_spawn </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_spawn </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
           <td class="paramname"><em>va</em></td><td>)</td>
           <td></td>
         </tr>
@@ -380,7 +385,7 @@ os5_syscall.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_wait </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_wait </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>pid</em>, </td>
@@ -388,7 +393,7 @@ os5_syscall.c 的引用(Include)关系图:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
           <td class="paramname"><em>va</em>&#160;</td>
         </tr>
         <tr>
@@ -408,7 +413,7 @@ os5_syscall.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_write </td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os5_sys_write </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>fd</em>, </td>
@@ -416,13 +421,13 @@ os5_syscall.c 的引用(Include)关系图:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
           <td class="paramname"><em>va</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
           <td class="paramname"><em>len</em>&#160;</td>
         </tr>
         <tr>

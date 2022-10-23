@@ -90,31 +90,24 @@ $(document).ready(function(){initNavTree('virtio__disk_8c.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="virtio_8h_source.html">virtio.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="disk__dependency_8h_source.html">disk_dependency.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 virtio_disk.c 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="virtio__disk_8c__incl.png" border="0" usemap="#disk_2virtio__disk_8c" alt=""/></div>
 <map name="disk_2virtio__disk_8c" id="disk_2virtio__disk_8c">
-<area shape="rect" title=" " alt="" coords="160,5,292,32"/>
-<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="192,80,260,107"/>
-<area shape="rect" href="bio_8h.html" title=" " alt="" coords="51,155,106,181"/>
-<area shape="rect" href="defs_8h.html" title=" " alt="" coords="321,155,428,181"/>
-<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="218,379,333,405"/>
-<area shape="rect" href="const_8h.html" title=" " alt="" coords="22,229,135,256"/>
-<area shape="rect" href="riscv_8h.html" title=" " alt="" coords="122,304,186,331"/>
-<area shape="rect" href="log_8h.html" title=" " alt="" coords="262,229,316,256"/>
-<area shape="rect" href="printf_8h.html" title=" " alt="" coords="340,229,408,256"/>
-<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="301,304,354,331"/>
-<area shape="rect" href="string_8h.html" title=" " alt="" coords="399,304,470,331"/>
-<area shape="rect" href="timer_8h.html" title=" " alt="" coords="503,304,571,331"/>
-<area shape="rect" href="console_8h.html" title=" " alt="" coords="586,229,670,256"/>
-<area shape="rect" href="queue_8h.html" title=" " alt="" coords="694,229,769,256"/>
+<area shape="rect" title=" " alt="" coords="64,5,196,32"/>
+<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="39,80,107,107"/>
+<area shape="rect" href="disk__dependency_8h.html" title=" " alt="" coords="75,304,220,331"/>
+<area shape="rect" href="bio_8h.html" title=" " alt="" coords="45,155,100,181"/>
+<area shape="rect" href="disk_2defs_8h.html" title=" " alt="" coords="5,379,68,405"/>
+<area shape="rect" href="disk_2log_8h.html" title=" " alt="" coords="75,229,129,256"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 宏定义</h2></td></tr>
-<tr class="memitem:a80e6faf1cf09d43dab325b4fd98cddfd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#a80e6faf1cf09d43dab325b4fd98cddfd">R</a>(r)&#160;&#160;&#160;((volatile <a class="el" href="nfs_2types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> *)(<a class="el" href="const_8h.html#aac8de2a0393367154119c25e2b279953">VIRTIO0</a> + (r)))</td></tr>
+<tr class="memitem:a80e6faf1cf09d43dab325b4fd98cddfd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#a80e6faf1cf09d43dab325b4fd98cddfd">R</a>(r)&#160;&#160;&#160;((volatile <a class="el" href="console_2defs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> *)(<a class="el" href="utils_2defs_8h.html#aac8de2a0393367154119c25e2b279953">VIRTIO0</a> + (r)))</td></tr>
 <tr class="separator:a80e6faf1cf09d43dab325b4fd98cddfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -130,7 +123,7 @@ virtio_disk.c 的引用(Include)关系图:</div>
 变量</h2></td></tr>
 <tr class="memitem:a606c098da2a787a1de01b84c736f9727"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structvirtio__context.html">virtio_context</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#a606c098da2a787a1de01b84c736f9727">virtio_disk_context</a></td></tr>
 <tr class="separator:a606c098da2a787a1de01b84c736f9727"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3b88cd8d0eb2119dc863f883170530d"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#ac3b88cd8d0eb2119dc863f883170530d">pages</a> [2 *<a class="el" href="riscv_8h.html#a5f96cb6ae6670e023c407cc2f77e1704">PGSIZE</a>]</td></tr>
+<tr class="memitem:ac3b88cd8d0eb2119dc863f883170530d"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#ac3b88cd8d0eb2119dc863f883170530d">pages</a> [2 *<a class="el" href="utils_2defs_8h.html#a5f96cb6ae6670e023c407cc2f77e1704">PGSIZE</a>]</td></tr>
 <tr class="separator:ac3b88cd8d0eb2119dc863f883170530d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67cc2ad049e2ba5c3f6f617170e2e251"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structvirtq__desc.html">virtq_desc</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#a67cc2ad049e2ba5c3f6f617170e2e251">desc</a></td></tr>
 <tr class="separator:a67cc2ad049e2ba5c3f6f617170e2e251"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,19 +133,17 @@ virtio_disk.c 的引用(Include)关系图:</div>
 <tr class="separator:ac7f9ed91798ae3b0141bdad487ef4f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0608361a8f53a287e3f3a3c7e46ed1ef"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#a0608361a8f53a287e3f3a3c7e46ed1ef">free</a> [<a class="el" href="virtio_8h.html#aaf0952059602752258dccaa015d7b54a">NUM</a>]</td></tr>
 <tr class="separator:a0608361a8f53a287e3f3a3c7e46ed1ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bdb5c26bead044def1a004fab37eb00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nfs_2types_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#a9bdb5c26bead044def1a004fab37eb00">used_idx</a></td></tr>
+<tr class="memitem:a9bdb5c26bead044def1a004fab37eb00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#a9bdb5c26bead044def1a004fab37eb00">used_idx</a></td></tr>
 <tr class="separator:a9bdb5c26bead044def1a004fab37eb00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff5d8012402017be62d571c8b2cfb217"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a6c0d07be46d80bcd2065e9d152311ac9"><td class="memItemLeft" >struct {</td></tr>
 <tr class="memitem:a478a43f541f7e29b957eaaef78d660d4"><td class="memItemLeft" >&#160;&#160;&#160;struct <a class="el" href="structbuf.html">buf</a> *&#160;&#160;&#160;<a class="el" href="virtio__disk_8c.html#a478a43f541f7e29b957eaaef78d660d4">b</a></td></tr>
 <tr class="separator:a478a43f541f7e29b957eaaef78d660d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a051c9e198ee930358372c407a17e8b78"><td class="memItemLeft" >&#160;&#160;&#160;char&#160;&#160;&#160;<a class="el" href="virtio__disk_8c.html#a051c9e198ee930358372c407a17e8b78">status</a></td></tr>
 <tr class="separator:a051c9e198ee930358372c407a17e8b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff5d8012402017be62d571c8b2cfb217"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#aff5d8012402017be62d571c8b2cfb217">info</a> [<a class="el" href="virtio_8h.html#aaf0952059602752258dccaa015d7b54a">NUM</a>]</td></tr>
-<tr class="separator:aff5d8012402017be62d571c8b2cfb217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c0d07be46d80bcd2065e9d152311ac9"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#a6c0d07be46d80bcd2065e9d152311ac9">info</a> [<a class="el" href="virtio_8h.html#aaf0952059602752258dccaa015d7b54a">NUM</a>]</td></tr>
+<tr class="separator:a6c0d07be46d80bcd2065e9d152311ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5580404502a1641dea5aee5ba4b393f1"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structvirtio__blk__req.html">virtio_blk_req</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#a5580404502a1641dea5aee5ba4b393f1">ops</a> [<a class="el" href="virtio_8h.html#aaf0952059602752258dccaa015d7b54a">NUM</a>]</td></tr>
 <tr class="separator:a5580404502a1641dea5aee5ba4b393f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab932513f17ef9524ed8f51edea944248"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#ab932513f17ef9524ed8f51edea944248">PID</a></td></tr>
-<tr class="separator:ab932513f17ef9524ed8f51edea944248"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">宏定义说明</h2>
 <a id="a80e6faf1cf09d43dab325b4fd98cddfd"></a>
@@ -166,7 +157,7 @@ virtio_disk.c 的引用(Include)关系图:</div>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">r</td><td>)</td>
-          <td>&#160;&#160;&#160;((volatile <a class="el" href="nfs_2types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> *)(<a class="el" href="const_8h.html#aac8de2a0393367154119c25e2b279953">VIRTIO0</a> + (r)))</td>
+          <td>&#160;&#160;&#160;((volatile <a class="el" href="console_2defs_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> *)(<a class="el" href="utils_2defs_8h.html#aac8de2a0393367154119c25e2b279953">VIRTIO0</a> + (r)))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -294,8 +285,8 @@ virtio_disk.c 的引用(Include)关系图:</div>
 
 </div>
 </div>
-<a id="aff5d8012402017be62d571c8b2cfb217"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff5d8012402017be62d571c8b2cfb217">&#9670;&nbsp;</a></span>info</h2>
+<a id="a6c0d07be46d80bcd2065e9d152311ac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c0d07be46d80bcd2065e9d152311ac9">&#9670;&nbsp;</a></span>info</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,21 +320,7 @@ virtio_disk.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char pages[2 *<a class="el" href="riscv_8h.html#a5f96cb6ae6670e023c407cc2f77e1704">PGSIZE</a>]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab932513f17ef9524ed8f51edea944248"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab932513f17ef9524ed8f51edea944248">&#9670;&nbsp;</a></span>PID</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int PID</td>
+          <td class="memname">char pages[2 *<a class="el" href="utils_2defs_8h.html#a5f96cb6ae6670e023c407cc2f77e1704">PGSIZE</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -385,7 +362,7 @@ virtio_disk.c 的引用(Include)关系图:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nfs_2types_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a> used_idx</td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a> used_idx</td>
         </tr>
       </table>
 </div><div class="memdoc">

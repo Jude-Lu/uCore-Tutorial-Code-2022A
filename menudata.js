@@ -148,7 +148,9 @@ var menudata={children:[
 {text:"v",url:"globals_vars.html#index_v"},
 {text:"w",url:"globals_vars.html#index_w"},
 {text:"z",url:"globals_vars.html#index_z"}]},
-{text:"类型定义",url:"globals_type.html"},
+{text:"类型定义",url:"globals_type.html",children:[
+{text:"p",url:"globals_type.html#index_p"},
+{text:"u",url:"globals_type.html#index_u"}]},
 {text:"枚举",url:"globals_enum.html"},
 {text:"枚举值",url:"globals_eval.html",children:[
 {text:"b",url:"globals_eval.html#index_b"},

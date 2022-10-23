@@ -1,7 +1,8 @@
 <map id="syscall/syscall.c" name="syscall/syscall.c">
-<area shape="rect" id="node1" title=" " alt="" coords="122,5,249,32"/>
-<area shape="rect" id="node2" href="$syscall_8h.html" title=" " alt="" coords="89,80,167,107"/>
-<area shape="rect" id="node5" href="$syscall__ids_8h.html" title=" " alt="" coords="191,80,297,107"/>
-<area shape="rect" id="node3" href="$utils_2types_8h.html" title=" " alt="" coords="5,155,120,181"/>
-<area shape="rect" id="node4" href="$log_8h.html" title=" " alt="" coords="144,155,243,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="97,5,224,32"/>
+<area shape="rect" id="node2" href="$syscall_8h.html" title=" " alt="" coords="5,80,84,107"/>
+<area shape="rect" id="node4" href="$syscall__ids_8h.html" title=" " alt="" coords="108,80,213,107"/>
+<area shape="rect" id="node5" href="$syscall_2log_8h.html" title=" " alt="" coords="237,80,292,107"/>
+<area shape="rect" id="node3" href="$syscall_2defs_8h.html" title=" " alt="" coords="13,155,76,181"/>
+<area shape="rect" id="node6" href="$syscall__dependency_8h.html" title=" " alt="" coords="183,155,346,181"/>
 </map>

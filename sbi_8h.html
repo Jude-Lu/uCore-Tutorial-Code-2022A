@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uCore-Tutorial-Code-2022A: utils/sbi.h 文件参考</title>
+<title>uCore-Tutorial-Code-2022A: console/sbi.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -87,71 +87,71 @@ $(document).ready(function(){initNavTree('sbi_8h.html',''); initResizable(); });
 <div class="title">sbi.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="utils_2types_8h_source.html">types.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="console_2defs_8h_source.html">defs.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 sbi.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
-<div class="center"><img src="sbi_8h__incl.png" border="0" usemap="#utils_2sbi_8h" alt=""/></div>
-<map name="utils_2sbi_8h" id="utils_2sbi_8h">
-<area shape="rect" title=" " alt="" coords="5,5,91,32"/>
-<area shape="rect" href="utils_2types_8h.html" title=" " alt="" coords="13,80,83,107"/>
+<div class="center"><img src="sbi_8h__incl.png" border="0" usemap="#console_2sbi_8h" alt=""/></div>
+<map name="console_2sbi_8h" id="console_2sbi_8h">
+<area shape="rect" title=" " alt="" coords="5,5,112,32"/>
+<area shape="rect" href="console_2defs_8h.html" title=" " alt="" coords="27,80,90,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div class="dyncontent">
-<div class="center"><img src="sbi_8h__dep__incl.png" border="0" usemap="#utils_2sbi_8hdep" alt=""/></div>
-<map name="utils_2sbi_8hdep" id="utils_2sbi_8hdep">
-<area shape="rect" title=" " alt="" coords="2413,5,2499,32"/>
-<area shape="rect" href="defs_8h.html" title=" " alt="" coords="2218,80,2313,107"/>
-<area shape="rect" href="console_8c.html" title=" " alt="" coords="2337,80,2452,107"/>
-<area shape="rect" href="sbi_8c.html" title=" " alt="" coords="2477,80,2561,107"/>
-<area shape="rect" href="timer_8c.html" title=" " alt="" coords="2585,80,2684,107"/>
-<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="5,155,104,181"/>
-<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="179,155,277,181"/>
-<area shape="rect" href="file_8c.html" title=" " alt="" coords="133,229,238,256"/>
-<area shape="rect" href="kalloc_8c.html" title=" " alt="" coords="302,155,442,181"/>
-<area shape="rect" href="pipe_8h.html" title=" " alt="" coords="466,155,561,181"/>
-<area shape="rect" href="map_8c.html" title=" " alt="" coords="585,155,716,181"/>
-<area shape="rect" href="vm_8c.html" title=" " alt="" coords="740,155,863,181"/>
-<area shape="rect" href="os1_2main_8c.html" title=" " alt="" coords="887,155,980,181"/>
-<area shape="rect" href="os2_2loader_8c.html" title=" " alt="" coords="985,229,1085,256"/>
-<area shape="rect" href="os2__trap_8h.html" title=" " alt="" coords="1055,155,1172,181"/>
-<area shape="rect" href="os2_2main_8c.html" title=" " alt="" coords="1144,229,1237,256"/>
-<area shape="rect" href="os2__syscall_8c.html" title=" " alt="" coords="1247,155,1382,181"/>
-<area shape="rect" href="os3_2loader_8h.html" title=" " alt="" coords="1623,155,1724,181"/>
-<area shape="rect" href="os3_2loader_8c.html" title=" " alt="" coords="1503,229,1603,256"/>
-<area shape="rect" href="os3_2main_8c.html" title=" " alt="" coords="1385,229,1479,256"/>
-<area shape="rect" href="os3__syscall_8c.html" title=" " alt="" coords="1741,229,1875,256"/>
-<area shape="rect" href="os3_2proc_8c.html" title=" " alt="" coords="1628,229,1716,256"/>
-<area shape="rect" href="os3__trap_8h.html" title=" " alt="" coords="1748,155,1865,181"/>
-<area shape="rect" href="os3_2proc_8h.html" title=" " alt="" coords="1509,155,1598,181"/>
-<area shape="rect" href="os4_2proc_8h.html" title=" " alt="" coords="2093,155,2182,181"/>
-<area shape="rect" href="os4_2loader_8c.html" title=" " alt="" coords="1899,229,1999,256"/>
-<area shape="rect" href="os4_2main_8c.html" title=" " alt="" coords="2024,229,2117,256"/>
-<area shape="rect" href="os4__syscall_8c.html" title=" " alt="" coords="2142,229,2277,256"/>
-<area shape="rect" href="os4_2proc_8c.html" title=" " alt="" coords="2301,229,2389,256"/>
-<area shape="rect" href="os4__trap_8h.html" title=" " alt="" coords="2207,155,2324,181"/>
-<area shape="rect" href="os5_2loader_8h.html" title=" " alt="" coords="2565,229,2667,256"/>
-<area shape="rect" href="os5_2loader_8c.html" title=" " alt="" coords="2578,304,2678,331"/>
-<area shape="rect" href="os5_2main_8c.html" title=" " alt="" coords="2703,304,2796,331"/>
-<area shape="rect" href="os5__syscall_8c.html" title=" " alt="" coords="2821,304,2955,331"/>
-<area shape="rect" href="os5_2proc_8c.html" title=" " alt="" coords="2465,304,2553,331"/>
-<area shape="rect" href="os5_2proc_8h.html" title=" " alt="" coords="2551,155,2641,181"/>
-<area shape="rect" href="os5__trap_8h.html" title=" " alt="" coords="2691,229,2808,256"/>
-<area shape="rect" href="os6_2loader_8h.html" title=" " alt="" coords="3035,229,3136,256"/>
-<area shape="rect" href="os6_2loader_8c.html" title=" " alt="" coords="3115,304,3215,331"/>
-<area shape="rect" href="os6__syscall_8c.html" title=" " alt="" coords="3239,304,3374,331"/>
-<area shape="rect" href="os6_2proc_8c.html" title=" " alt="" coords="2995,304,3083,331"/>
-<area shape="rect" href="os6_2proc_8h.html" title=" " alt="" coords="2985,155,3074,181"/>
-<area shape="rect" href="os6__trap_8h.html" title=" " alt="" coords="3211,229,3328,256"/>
-<area shape="rect" href="os7_2proc_8h.html" title=" " alt="" coords="3323,155,3413,181"/>
-<area shape="rect" href="os7__trap_8h.html" title=" " alt="" coords="3488,155,3605,181"/>
-<area shape="rect" href="os7_2loader_8c.html" title=" " alt="" coords="3403,229,3503,256"/>
-<area shape="rect" href="os7__syscall_8c.html" title=" " alt="" coords="3527,229,3662,256"/>
-<area shape="rect" href="os7_2proc_8c.html" title=" " alt="" coords="3687,229,3775,256"/>
-<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="3799,229,3889,256"/>
-<area shape="rect" href="sync_8h.html" title=" " alt="" coords="3797,155,3888,181"/>
+<div class="center"><img src="sbi_8h__dep__incl.png" border="0" usemap="#console_2sbi_8hdep" alt=""/></div>
+<map name="console_2sbi_8hdep" id="console_2sbi_8hdep">
+<area shape="rect" title=" " alt="" coords="1897,5,2003,32"/>
+<area shape="rect" href="console_8c.html" title=" " alt="" coords="1600,80,1737,107"/>
+<area shape="rect" href="console__module_8h.html" title=" " alt="" coords="1762,80,1957,107"/>
+<area shape="rect" href="printf_8c.html" title=" " alt="" coords="1981,80,2103,107"/>
+<area shape="rect" href="sbi_8c.html" title=" " alt="" coords="2127,80,2234,107"/>
+<area shape="rect" href="os1_2modules_8h.html" title=" " alt="" coords="186,155,303,181"/>
+<area shape="rect" href="os2_2modules_8h.html" title=" " alt="" coords="397,155,514,181"/>
+<area shape="rect" href="os3_2modules_8h.html" title=" " alt="" coords="950,155,1067,181"/>
+<area shape="rect" href="os4_2modules_8h.html" title=" " alt="" coords="1615,155,1733,181"/>
+<area shape="rect" href="os5_2modules_8h.html" title=" " alt="" coords="1847,155,1965,181"/>
+<area shape="rect" href="os6_2modules_8h.html" title=" " alt="" coords="2057,155,2174,181"/>
+<area shape="rect" href="os7_2modules_8h.html" title=" " alt="" coords="2363,155,2481,181"/>
+<area shape="rect" href="os8_2modules_8h.html" title=" " alt="" coords="2725,155,2842,181"/>
+<area shape="rect" href="os1_2main_8c.html" title=" " alt="" coords="129,229,222,256"/>
+<area shape="rect" href="os2__trap_8h.html" title=" " alt="" coords="246,229,363,256"/>
+<area shape="rect" href="os2__syscall_8h.html" title=" " alt="" coords="387,229,523,256"/>
+<area shape="rect" href="os2_2loader_8c.html" title=" " alt="" coords="5,304,105,331"/>
+<area shape="rect" href="os2_2main_8c.html" title=" " alt="" coords="270,304,363,331"/>
+<area shape="rect" href="os2__trap_8c.html" title=" " alt="" coords="129,304,245,331"/>
+<area shape="rect" href="os2__syscall_8c.html" title=" " alt="" coords="388,304,523,331"/>
+<area shape="rect" href="os3__trap_8h.html" title=" " alt="" coords="822,229,939,256"/>
+<area shape="rect" href="os3_2proc_8h.html" title=" " alt="" coords="964,229,1053,256"/>
+<area shape="rect" href="os3_2loader_8c.html" title=" " alt="" coords="959,304,1059,331"/>
+<area shape="rect" href="os3_2main_8c.html" title=" " alt="" coords="1083,304,1177,331"/>
+<area shape="rect" href="os3__syscall_8c.html" title=" " alt="" coords="547,304,681,331"/>
+<area shape="rect" href="os3__trap_8c.html" title=" " alt="" coords="705,304,821,331"/>
+<area shape="rect" href="os3_2proc_8c.html" title=" " alt="" coords="846,304,934,331"/>
+<area shape="rect" href="os4_2proc_8h.html" title=" " alt="" coords="1537,229,1627,256"/>
+<area shape="rect" href="os4_2loader_8c.html" title=" " alt="" coords="1731,304,1831,331"/>
+<area shape="rect" href="os4_2main_8c.html" title=" " alt="" coords="1201,304,1294,331"/>
+<area shape="rect" href="os4__syscall_8c.html" title=" " alt="" coords="1319,304,1453,331"/>
+<area shape="rect" href="os4__trap_8c.html" title=" " alt="" coords="1477,304,1593,331"/>
+<area shape="rect" href="os4_2proc_8c.html" title=" " alt="" coords="1618,304,1706,331"/>
+<area shape="rect" href="os5_2loader_8h.html" title=" " alt="" coords="1855,304,1957,331"/>
+<area shape="rect" href="os5_2proc_8h.html" title=" " alt="" coords="1947,229,2036,256"/>
+<area shape="rect" href="os5_2loader_8c.html" title=" " alt="" coords="1591,379,1691,405"/>
+<area shape="rect" href="os5_2main_8c.html" title=" " alt="" coords="1715,379,1809,405"/>
+<area shape="rect" href="os5__syscall_8c.html" title=" " alt="" coords="1833,379,1968,405"/>
+<area shape="rect" href="os5__trap_8c.html" title=" " alt="" coords="1992,379,2108,405"/>
+<area shape="rect" href="os5_2proc_8c.html" title=" " alt="" coords="2133,379,2221,405"/>
+<area shape="rect" href="os6_2loader_8h.html" title=" " alt="" coords="2133,304,2234,331"/>
+<area shape="rect" href="os6_2proc_8h.html" title=" " alt="" coords="2112,229,2201,256"/>
+<area shape="rect" href="os6__trap_8h.html" title=" " alt="" coords="2226,229,2343,256"/>
+<area shape="rect" href="os7_2loader_8h.html" title=" " alt="" coords="2371,304,2473,331"/>
+<area shape="rect" href="os7_2proc_8h.html" title=" " alt="" coords="2419,229,2508,256"/>
+<area shape="rect" href="os7__trap_8h.html" title=" " alt="" coords="2533,229,2650,256"/>
+<area shape="rect" href="os8_2loader_8h.html" title=" " alt="" coords="2733,379,2834,405"/>
+<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="2835,304,2924,331"/>
+<area shape="rect" href="sync_8h.html" title=" " alt="" coords="2917,229,3007,256"/>
+<area shape="rect" href="os8__trap_8h.html" title=" " alt="" coords="2725,229,2842,256"/>
 </map>
 </div>
 </div>
@@ -165,7 +165,7 @@ sbi.h 的引用(Include)关系图:</div>
 <tr class="separator:a5a00cd2e5a2aaac349d98eb537f3d24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7861ee1569802186a619778efc85af13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8h.html#a7861ee1569802186a619778efc85af13">shutdown</a> ()</td></tr>
 <tr class="separator:a7861ee1569802186a619778efc85af13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2497ff28b48edc0138dfdeea69c4c83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8h.html#ae2497ff28b48edc0138dfdeea69c4c83">set_timer</a> (<a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
+<tr class="memitem:ae2497ff28b48edc0138dfdeea69c4c83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8h.html#ae2497ff28b48edc0138dfdeea69c4c83">set_timer</a> (<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
 <tr class="separator:ae2497ff28b48edc0138dfdeea69c4c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
@@ -213,7 +213,7 @@ sbi.h 的引用(Include)关系图:</div>
         <tr>
           <td class="memname">void set_timer </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="nfs_2types_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -244,7 +244,7 @@ sbi.h 的引用(Include)关系图:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a class="el" href="sbi_8h.html">sbi.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f97b40203d0b7782e2ba57c500dd0f3.html">console</a></li><li class="navelem"><a class="el" href="sbi_8h.html">sbi.h</a></li>
     <li class="footer">制作者
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

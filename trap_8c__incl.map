@@ -1,15 +1,8 @@
 <map id="trap/trap.c" name="trap/trap.c">
-<area shape="rect" id="node1" title=" " alt="" coords="521,5,610,32"/>
-<area shape="rect" id="node2" href="$defs_8h.html" title=" " alt="" coords="332,80,439,107"/>
-<area shape="rect" id="node13" href="$trap_8h.html" title=" " alt="" coords="651,229,711,256"/>
-<area shape="rect" id="node3" href="$const_8h.html" title=" " alt="" coords="5,155,75,181"/>
-<area shape="rect" id="node4" href="$riscv_8h.html" title=" " alt="" coords="61,229,125,256"/>
-<area shape="rect" id="node5" href="$utils_2types_8h.html" title=" " alt="" coords="335,304,406,331"/>
-<area shape="rect" id="node6" href="$log_8h.html" title=" " alt="" coords="201,155,255,181"/>
-<area shape="rect" id="node7" href="$printf_8h.html" title=" " alt="" coords="279,155,347,181"/>
-<area shape="rect" id="node8" href="$sbi_8h.html" title=" " alt="" coords="301,229,355,256"/>
-<area shape="rect" id="node9" href="$string_8h.html" title=" " alt="" coords="379,229,450,256"/>
-<area shape="rect" id="node10" href="$timer_8h.html" title=" " alt="" coords="474,229,542,256"/>
-<area shape="rect" id="node11" href="$console_8h.html" title=" " alt="" coords="525,155,609,181"/>
-<area shape="rect" id="node12" href="$queue_8h.html" title=" " alt="" coords="633,155,708,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="175,5,265,32"/>
+<area shape="rect" id="node2" href="$trap_8h.html" title=" " alt="" coords="157,80,217,107"/>
+<area shape="rect" id="node6" href="$timer_8h.html" title=" " alt="" coords="225,155,293,181"/>
+<area shape="rect" id="node3" href="$trap_2log_8h.html" title=" " alt="" coords="73,155,127,181"/>
+<area shape="rect" id="node5" href="$trap_2defs_8h.html" title=" " alt="" coords="155,304,218,331"/>
+<area shape="rect" id="node4" href="$trap__dependency_8h.html" title=" " alt="" coords="5,229,149,256"/>
 </map>

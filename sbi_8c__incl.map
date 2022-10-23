@@ -1,5 +1,5 @@
-<map id="utils/sbi.c" name="utils/sbi.c">
-<area shape="rect" id="node1" title=" " alt="" coords="22,5,106,32"/>
-<area shape="rect" id="node2" href="$sbi_8h.html" title=" " alt="" coords="5,80,59,107"/>
-<area shape="rect" id="node3" href="$utils_2types_8h.html" title=" " alt="" coords="29,155,99,181"/>
+<map id="console/sbi.c" name="console/sbi.c">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node2" href="$sbi_8h.html" title=" " alt="" coords="32,80,85,107"/>
+<area shape="rect" id="node3" href="$console_2defs_8h.html" title=" " alt="" coords="27,155,90,181"/>
 </map>

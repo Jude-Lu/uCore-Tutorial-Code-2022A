@@ -1,4 +1,6 @@
 <map id="trap/trap.h" name="trap/trap.h">
-<area shape="rect" id="node1" title=" " alt="" coords="17,5,108,32"/>
-<area shape="rect" id="node2" href="$utils_2types_8h.html" title=" " alt="" coords="5,80,120,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="87,5,177,32"/>
+<area shape="rect" id="node2" href="$trap_2log_8h.html" title=" " alt="" coords="73,80,127,107"/>
+<area shape="rect" id="node4" href="$trap_2defs_8h.html" title=" " alt="" coords="101,229,163,256"/>
+<area shape="rect" id="node3" href="$trap__dependency_8h.html" title=" " alt="" coords="5,155,149,181"/>
 </map>
