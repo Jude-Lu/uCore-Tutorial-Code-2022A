@@ -17,6 +17,7 @@ SCRIPT = script
 FS = easy-fs
 DISK = disk
 PIPE = pipe
+SYNC = sync
 UTILS = utils
 ##
 
@@ -51,6 +52,9 @@ ifeq ($(shell expr $(ch) \>= 6), 1)
 endif
 ifeq ($(shell expr $(ch) \>= 7), 1)
 	C_SRCS += $(wildcard $(PIPE)/*.c)
+endif
+ifeq ($(shell expr $(ch) \>= 8), 1)
+	C_SRCS += $(wildcard $(SYNC)/*.c)
 endif
 ##
 

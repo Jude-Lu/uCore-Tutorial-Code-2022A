@@ -2,7 +2,6 @@
 #define PROC_H
 
 #include "modules.h"
-#include "sync.h"
 
 #define NPROC (128)
 #define FILEPOOLSIZE (NPROC * FD_BUFFER_SIZE)

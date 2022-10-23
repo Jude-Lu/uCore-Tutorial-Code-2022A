@@ -1,5 +1,4 @@
 #include "loader.h"
-#include "sync.h"
 #include "os8_syscall.h"
 #include "os8_trap.h"
 

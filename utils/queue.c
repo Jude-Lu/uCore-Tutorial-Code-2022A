@@ -31,3 +31,8 @@ int pop_queue(struct queue *q)
 		q->empty = 1;
 	return value;
 }
+
+int is_empty(struct queue *q)
+{
+	return q->empty;
+}
