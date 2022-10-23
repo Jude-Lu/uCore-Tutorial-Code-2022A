@@ -1,8 +1,9 @@
 <map id="disk/disk_module.h" name="disk/disk_module.h">
 <area shape="rect" id="node1" title=" " alt="" coords="56,5,204,32"/>
-<area shape="rect" id="node2" href="$bio_8h.html" title=" " alt="" coords="67,155,122,181"/>
-<area shape="rect" id="node6" href="$virtio_8h.html" title=" " alt="" coords="132,80,200,107"/>
-<area shape="rect" id="node3" href="$disk_2defs_8h.html" title=" " alt="" coords="63,379,126,405"/>
-<area shape="rect" id="node4" href="$disk_2log_8h.html" title=" " alt="" coords="67,229,122,256"/>
-<area shape="rect" id="node5" href="$disk__dependency_8h.html" title=" " alt="" coords="22,304,167,331"/>
+<area shape="rect" id="node2" href="$bio_8h.html" title=" " alt="" coords="66,155,121,181"/>
+<area shape="rect" id="node7" href="$virtio_8h.html" title=" " alt="" coords="132,80,200,107"/>
+<area shape="rect" id="node3" href="$disk_2defs_8h.html" title=" " alt="" coords="62,453,125,480"/>
+<area shape="rect" id="node4" href="$disk_2log_8h.html" title=" " alt="" coords="66,229,121,256"/>
+<area shape="rect" id="node5" href="$disk__dependency_8h.html" title=" " alt="" coords="21,304,166,331"/>
+<area shape="rect" id="node6" href="$disk_2string_8h.html" title=" " alt="" coords="58,379,129,405"/>
 </map>

@@ -1,0 +1,7 @@
+<map id="synchronization_context" name="synchronization_context">
+<area shape="rect" id="node1" title=" " alt="" coords="99,184,281,211"/>
+<area shape="rect" id="node2" href="$structsemaphore.html" title=" " alt="" coords="5,95,100,121"/>
+<area shape="rect" id="node3" href="$structqueue.html" title=" " alt="" coords="159,5,221,32"/>
+<area shape="rect" id="node4" href="$structmutex.html" title=" " alt="" coords="158,95,222,121"/>
+<area shape="rect" id="node5" href="$structcondvar.html" title=" " alt="" coords="267,95,342,121"/>
+</map>

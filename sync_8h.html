@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uCore-Tutorial-Code-2022A: os8/sync.h 文件参考</title>
+<title>uCore-Tutorial-Code-2022A: sync/sync.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,78 +89,36 @@ $(document).ready(function(){initNavTree('sync_8h.html',''); initResizable(); })
 <div class="title">sync.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="os8_2modules_8h_source.html">modules.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="sync_2defs_8h_source.html">defs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sync__dependency_8h_source.html">sync_dependency.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 sync.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
-<div class="center"><img src="sync_8h__incl.png" border="0" usemap="#os8_2sync_8h" alt=""/></div>
-<map name="os8_2sync_8h" id="os8_2sync_8h">
-<area shape="rect" title=" " alt="" coords="758,5,849,32"/>
-<area shape="rect" href="os8_2modules_8h.html" title=" " alt="" coords="758,80,849,107"/>
-<area shape="rect" href="os8_2defs_8h.html" title=" " alt="" coords="5,162,68,189"/>
-<area shape="rect" href="os8_2log_8h.html" title=" " alt="" coords="92,162,147,189"/>
-<area shape="rect" href="os8_2extern_8h.html" title=" " alt="" coords="171,162,247,189"/>
-<area shape="rect" href="console__module_8h.html" title=" " alt="" coords="271,155,410,196"/>
-<area shape="rect" href="disk__module_8h.html" title=" " alt="" coords="434,162,594,189"/>
-<area shape="rect" href="fs__module_8h.html" title=" " alt="" coords="619,162,785,189"/>
-<area shape="rect" href="vm__module_8h.html" title=" " alt="" coords="810,162,1002,189"/>
-<area shape="rect" href="pipe__module_8h.html" title=" " alt="" coords="1026,162,1189,189"/>
-<area shape="rect" href="syscall__module_8h.html" title=" " alt="" coords="1213,155,1341,196"/>
-<area shape="rect" href="trap__module_8h.html" title=" " alt="" coords="1367,162,1525,189"/>
-<area shape="rect" href="task__module_8h.html" title=" " alt="" coords="1551,155,1703,196"/>
-<area shape="rect" href="utils__module_8h.html" title=" " alt="" coords="1729,162,1891,189"/>
-<area shape="rect" href="console_8h.html" title=" " alt="" coords="121,244,205,271"/>
-<area shape="rect" href="printf_8h.html" title=" " alt="" coords="229,244,297,271"/>
-<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="322,244,375,271"/>
-<area shape="rect" href="console_2defs_8h.html" title=" " alt="" coords="269,319,332,345"/>
-<area shape="rect" href="bio_8h.html" title=" " alt="" coords="433,319,488,345"/>
-<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="408,244,476,271"/>
-<area shape="rect" href="disk_2defs_8h.html" title=" " alt="" coords="389,543,452,569"/>
-<area shape="rect" href="disk_2log_8h.html" title=" " alt="" coords="459,393,513,420"/>
-<area shape="rect" href="disk__dependency_8h.html" title=" " alt="" coords="459,468,604,495"/>
-<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="645,319,692,345"/>
-<area shape="rect" href="file_8h.html" title=" " alt="" coords="609,244,664,271"/>
-<area shape="rect" href="easy-fs_2defs_8h.html" title=" " alt="" coords="628,468,691,495"/>
-<area shape="rect" href="fs__dependency_8h.html" title=" " alt="" coords="639,393,770,420"/>
-<area shape="rect" href="kalloc_8h.html" title=" " alt="" coords="782,244,854,271"/>
-<area shape="rect" href="vm_8h.html" title=" " alt="" coords="879,244,933,271"/>
-<area shape="rect" href="map_8h.html" title=" " alt="" coords="957,244,1020,271"/>
-<area shape="rect" href="kernel-vm_2defs_8h.html" title=" " alt="" coords="880,468,943,495"/>
-<area shape="rect" href="kernel-vm_2log_8h.html" title=" " alt="" coords="917,319,972,345"/>
-<area shape="rect" href="vm__dependency_8h.html" title=" " alt="" coords="895,393,1034,420"/>
-<area shape="rect" href="pipe_8h.html" title=" " alt="" coords="1076,244,1139,271"/>
-<area shape="rect" href="pipe_2defs_8h.html" title=" " alt="" coords="1088,319,1151,345"/>
-<area shape="rect" href="pipe_2log_8h.html" title=" " alt="" coords="1175,319,1229,345"/>
-<area shape="rect" href="pipe__dependency_8h.html" title=" " alt="" coords="1129,393,1275,420"/>
-<area shape="rect" href="syscall__ids_8h.html" title=" " alt="" coords="1265,244,1371,271"/>
-<area shape="rect" href="syscall_8h.html" title=" " alt="" coords="1163,244,1241,271"/>
-<area shape="rect" href="syscall_2defs_8h.html" title=" " alt="" coords="1253,319,1316,345"/>
-<area shape="rect" href="trap_8h.html" title=" " alt="" coords="1395,244,1455,271"/>
-<area shape="rect" href="plic_8h.html" title=" " alt="" coords="1571,244,1628,271"/>
-<area shape="rect" href="timer_8h.html" title=" " alt="" coords="1479,244,1547,271"/>
-<area shape="rect" href="trap_2log_8h.html" title=" " alt="" coords="1397,319,1452,345"/>
-<area shape="rect" href="trap_2defs_8h.html" title=" " alt="" coords="1479,319,1541,345"/>
-<area shape="rect" href="processor_8h.html" title=" " alt="" coords="1653,244,1749,271"/>
-<area shape="rect" href="task-manage_2defs_8h.html" title=" " alt="" coords="1669,319,1732,345"/>
-<area shape="rect" href="string_8h.html" title=" " alt="" coords="1872,244,1943,271"/>
-<area shape="rect" href="queue_8h.html" title=" " alt="" coords="1773,244,1847,271"/>
-<area shape="rect" href="utils_2defs_8h.html" title=" " alt="" coords="1876,319,1939,345"/>
+<div class="center"><img src="sync_8h__incl.png" border="0" usemap="#sync_2sync_8h" alt=""/></div>
+<map name="sync_2sync_8h" id="sync_2sync_8h">
+<area shape="rect" title=" " alt="" coords="51,5,150,32"/>
+<area shape="rect" href="sync_2defs_8h.html" title=" " alt="" coords="5,80,68,107"/>
+<area shape="rect" href="sync__dependency_8h.html" title=" " alt="" coords="92,80,240,107"/>
+<area shape="rect" href="sync_2queue_8h.html" title=" " alt="" coords="129,155,203,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div class="dyncontent">
-<div class="center"><img src="sync_8h__dep__incl.png" border="0" usemap="#os8_2sync_8hdep" alt=""/></div>
-<map name="os8_2sync_8hdep" id="os8_2sync_8hdep">
-<area shape="rect" title=" " alt="" coords="293,5,383,32"/>
-<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="293,80,383,107"/>
-<area shape="rect" href="os8__syscall_8c.html" title=" " alt="" coords="5,229,140,256"/>
-<area shape="rect" href="sync_8c.html" title=" " alt="" coords="442,155,533,181"/>
-<area shape="rect" href="os8_2loader_8h.html" title=" " alt="" coords="266,155,367,181"/>
-<area shape="rect" href="os8__trap_8c.html" title=" " alt="" coords="519,229,635,256"/>
-<area shape="rect" href="os8_2proc_8c.html" title=" " alt="" coords="165,229,253,256"/>
-<area shape="rect" href="os8_2loader_8c.html" title=" " alt="" coords="395,229,495,256"/>
-<area shape="rect" href="os8_2main_8c.html" title=" " alt="" coords="277,229,370,256"/>
+<div class="center"><img src="sync_8h__dep__incl.png" border="0" usemap="#sync_2sync_8hdep" alt=""/></div>
+<map name="sync_2sync_8hdep" id="sync_2sync_8hdep">
+<area shape="rect" title=" " alt="" coords="407,5,506,32"/>
+<area shape="rect" href="sync__module_8h.html" title=" " alt="" coords="305,80,459,107"/>
+<area shape="rect" href="sync_8c.html" title=" " alt="" coords="484,80,581,107"/>
+<area shape="rect" href="os8_2modules_8h.html" title=" " alt="" coords="323,155,441,181"/>
+<area shape="rect" href="os8_2loader_8h.html" title=" " alt="" coords="331,304,433,331"/>
+<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="423,229,512,256"/>
+<area shape="rect" href="os8__trap_8h.html" title=" " alt="" coords="190,304,307,331"/>
+<area shape="rect" href="os8_2loader_8c.html" title=" " alt="" coords="5,379,105,405"/>
+<area shape="rect" href="os8_2main_8c.html" title=" " alt="" coords="130,379,223,405"/>
+<area shape="rect" href="os8__syscall_8c.html" title=" " alt="" coords="248,379,383,405"/>
+<area shape="rect" href="os8__trap_8c.html" title=" " alt="" coords="520,379,636,405"/>
+<area shape="rect" href="os8_2proc_8c.html" title=" " alt="" coords="407,379,495,405"/>
 </map>
 </div>
 </div>
@@ -173,6 +131,8 @@ sync.h 的引用(Include)关系图:</div>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsemaphore.html">semaphore</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcondvar.html">condvar</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsynchronization__context.html">synchronization_context</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -200,6 +160,8 @@ sync.h 的引用(Include)关系图:</div>
 <tr class="separator:ae2c60f8f00ff2ea965c78cee309d9676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d2073154317f60504639011ced6c402"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8h.html#a1d2073154317f60504639011ced6c402">cond_wait</a> (struct <a class="el" href="structcondvar.html">condvar</a> *, struct <a class="el" href="structmutex.html">mutex</a> *)</td></tr>
 <tr class="separator:a1d2073154317f60504639011ced6c402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e895842fc1fc82a19d816274489cfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8h.html#a53e895842fc1fc82a19d816274489cfc">set_sync</a> (struct <a class="el" href="structsynchronization__context.html">synchronization_context</a> *<a class="el" href="structsynchronization__context.html">synchronization_context</a>)</td></tr>
+<tr class="separator:a53e895842fc1fc82a19d816274489cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">宏定义说明</h2>
 <a id="ad71b4989e83665d56655107d2b478bf6"></a>
@@ -388,12 +350,30 @@ sync.h 的引用(Include)关系图:</div>
 
 </div>
 </div>
+<a id="a53e895842fc1fc82a19d816274489cfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53e895842fc1fc82a19d816274489cfc">&#9670;&nbsp;</a></span>set_sync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_sync </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structsynchronization__context.html">synchronization_context</a> *&#160;</td>
+          <td class="paramname"><em>synchronization_context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_b545e7c90c84f0fd9866e0dc03b9bbc1.html">os8</a></li><li class="navelem"><a class="el" href="sync_8h.html">sync.h</a></li>
+    <li class="navelem"><a class="el" href="dir_60f2dbb6714164eb829ccd5e05ded1f4.html">sync</a></li><li class="navelem"><a class="el" href="sync_8h.html">sync.h</a></li>
     <li class="footer">制作者
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

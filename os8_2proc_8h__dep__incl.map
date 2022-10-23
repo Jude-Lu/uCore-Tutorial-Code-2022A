@@ -1,9 +1,8 @@
 <map id="os8/proc.h" name="os8/proc.h">
-<area shape="rect" id="node1" title=" " alt="" coords="445,5,535,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="420,5,509,32"/>
 <area shape="rect" id="node2" href="$os8_2loader_8h.html" title=" " alt="" coords="295,80,397,107"/>
 <area shape="rect" id="node6" href="$os8__trap_8c.html" title=" " alt="" coords="407,155,523,181"/>
 <area shape="rect" id="node7" href="$os8_2proc_8c.html" title=" " alt="" coords="547,155,635,181"/>
-<area shape="rect" id="node8" href="$sync_8c.html" title=" " alt="" coords="553,80,643,107"/>
 <area shape="rect" id="node3" href="$os8_2loader_8c.html" title=" " alt="" coords="5,155,105,181"/>
 <area shape="rect" id="node4" href="$os8_2main_8c.html" title=" " alt="" coords="130,155,223,181"/>
 <area shape="rect" id="node5" href="$os8__syscall_8c.html" title=" " alt="" coords="248,155,383,181"/>

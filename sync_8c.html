@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>uCore-Tutorial-Code-2022A: os8/sync.c 文件参考</title>
+<title>uCore-Tutorial-Code-2022A: sync/sync.c 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -82,73 +82,32 @@ $(document).ready(function(){initNavTree('sync_8c.html',''); initResizable(); })
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">函数</a>  </div>
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
   <div class="headertitle">
 <div class="title">sync.c 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="os8_2proc_8h_source.html">proc.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="sync_8h_source.html">sync.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="sync_8h_source.html">sync.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sync_2log_8h_source.html">log.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 sync.c 的引用(Include)关系图:</div>
 <div class="dyncontent">
-<div class="center"><img src="sync_8c__incl.png" border="0" usemap="#os8_2sync_8c" alt=""/></div>
-<map name="os8_2sync_8c" id="os8_2sync_8c">
-<area shape="rect" title=" " alt="" coords="758,5,849,32"/>
-<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="737,80,800,107"/>
-<area shape="rect" href="sync_8h.html" title=" " alt="" coords="806,155,870,181"/>
-<area shape="rect" href="os8_2modules_8h.html" title=" " alt="" coords="758,229,849,256"/>
-<area shape="rect" href="os8_2defs_8h.html" title=" " alt="" coords="5,311,68,338"/>
-<area shape="rect" href="os8_2log_8h.html" title=" " alt="" coords="92,311,147,338"/>
-<area shape="rect" href="os8_2extern_8h.html" title=" " alt="" coords="171,311,247,338"/>
-<area shape="rect" href="console__module_8h.html" title=" " alt="" coords="271,304,410,345"/>
-<area shape="rect" href="disk__module_8h.html" title=" " alt="" coords="434,311,594,338"/>
-<area shape="rect" href="fs__module_8h.html" title=" " alt="" coords="619,311,785,338"/>
-<area shape="rect" href="vm__module_8h.html" title=" " alt="" coords="810,311,1002,338"/>
-<area shape="rect" href="pipe__module_8h.html" title=" " alt="" coords="1026,311,1189,338"/>
-<area shape="rect" href="syscall__module_8h.html" title=" " alt="" coords="1213,304,1341,345"/>
-<area shape="rect" href="trap__module_8h.html" title=" " alt="" coords="1365,311,1524,338"/>
-<area shape="rect" href="task__module_8h.html" title=" " alt="" coords="1549,304,1701,345"/>
-<area shape="rect" href="utils__module_8h.html" title=" " alt="" coords="1725,311,1887,338"/>
-<area shape="rect" href="console_8h.html" title=" " alt="" coords="189,393,273,420"/>
-<area shape="rect" href="printf_8h.html" title=" " alt="" coords="297,393,365,420"/>
-<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="390,393,443,420"/>
-<area shape="rect" href="console_2defs_8h.html" title=" " alt="" coords="376,468,439,495"/>
-<area shape="rect" href="bio_8h.html" title=" " alt="" coords="463,468,517,495"/>
-<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="528,393,596,420"/>
-<area shape="rect" href="disk_2defs_8h.html" title=" " alt="" coords="452,692,515,719"/>
-<area shape="rect" href="disk_2log_8h.html" title=" " alt="" coords="459,543,513,569"/>
-<area shape="rect" href="disk__dependency_8h.html" title=" " alt="" coords="411,617,556,644"/>
-<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="723,468,769,495"/>
-<area shape="rect" href="file_8h.html" title=" " alt="" coords="652,393,707,420"/>
-<area shape="rect" href="easy-fs_2defs_8h.html" title=" " alt="" coords="716,617,779,644"/>
-<area shape="rect" href="fs__dependency_8h.html" title=" " alt="" coords="682,543,813,569"/>
-<area shape="rect" href="kalloc_8h.html" title=" " alt="" coords="782,393,854,420"/>
-<area shape="rect" href="vm_8h.html" title=" " alt="" coords="879,393,933,420"/>
-<area shape="rect" href="map_8h.html" title=" " alt="" coords="957,393,1020,420"/>
-<area shape="rect" href="kernel-vm_2defs_8h.html" title=" " alt="" coords="800,468,863,495"/>
-<area shape="rect" href="kernel-vm_2log_8h.html" title=" " alt="" coords="887,468,941,495"/>
-<area shape="rect" href="pipe_8h.html" title=" " alt="" coords="1044,393,1107,420"/>
-<area shape="rect" href="pipe_2defs_8h.html" title=" " alt="" coords="967,468,1029,495"/>
-<area shape="rect" href="pipe_2log_8h.html" title=" " alt="" coords="1053,468,1108,495"/>
-<area shape="rect" href="syscall__ids_8h.html" title=" " alt="" coords="1233,393,1339,420"/>
-<area shape="rect" href="syscall_8h.html" title=" " alt="" coords="1131,393,1209,420"/>
-<area shape="rect" href="syscall_2defs_8h.html" title=" " alt="" coords="1139,468,1201,495"/>
-<area shape="rect" href="trap_8h.html" title=" " alt="" coords="1363,393,1423,420"/>
-<area shape="rect" href="plic_8h.html" title=" " alt="" coords="1539,393,1596,420"/>
-<area shape="rect" href="timer_8h.html" title=" " alt="" coords="1447,393,1515,420"/>
-<area shape="rect" href="trap_2log_8h.html" title=" " alt="" coords="1365,468,1420,495"/>
-<area shape="rect" href="trap_2defs_8h.html" title=" " alt="" coords="1447,468,1509,495"/>
-<area shape="rect" href="processor_8h.html" title=" " alt="" coords="1621,393,1717,420"/>
-<area shape="rect" href="task-manage_2defs_8h.html" title=" " alt="" coords="1637,468,1700,495"/>
-<area shape="rect" href="string_8h.html" title=" " alt="" coords="1853,393,1924,420"/>
-<area shape="rect" href="queue_8h.html" title=" " alt="" coords="1754,393,1829,420"/>
-<area shape="rect" href="utils_2defs_8h.html" title=" " alt="" coords="1857,468,1920,495"/>
+<div class="center"><img src="sync_8c__incl.png" border="0" usemap="#sync_2sync_8c" alt=""/></div>
+<map name="sync_2sync_8c" id="sync_2sync_8c">
+<area shape="rect" title=" " alt="" coords="75,5,172,32"/>
+<area shape="rect" href="sync_8h.html" title=" " alt="" coords="50,80,114,107"/>
+<area shape="rect" href="sync_2log_8h.html" title=" " alt="" coords="139,80,193,107"/>
+<area shape="rect" href="sync_2defs_8h.html" title=" " alt="" coords="5,155,68,181"/>
+<area shape="rect" href="sync__dependency_8h.html" title=" " alt="" coords="92,155,240,181"/>
+<area shape="rect" href="sync_2queue_8h.html" title=" " alt="" coords="129,229,203,256"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
+<tr class="memitem:a53e895842fc1fc82a19d816274489cfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8c.html#a53e895842fc1fc82a19d816274489cfc">set_sync</a> (struct <a class="el" href="structsynchronization__context.html">synchronization_context</a> *<a class="el" href="structsynchronization__context.html">synchronization_context</a>)</td></tr>
+<tr class="separator:a53e895842fc1fc82a19d816274489cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a864bab77a2b0b40f29b59d3f9b47e03b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structmutex.html">mutex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8c.html#a864bab77a2b0b40f29b59d3f9b47e03b">mutex_create</a> (int blocking)</td></tr>
 <tr class="separator:a864bab77a2b0b40f29b59d3f9b47e03b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44b654eeaa66a9cee0ef3880ff9ec507"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8c.html#a44b654eeaa66a9cee0ef3880ff9ec507">mutex_lock</a> (struct <a class="el" href="structmutex.html">mutex</a> *m)</td></tr>
@@ -167,6 +126,11 @@ sync.c 的引用(Include)关系图:</div>
 <tr class="separator:a0d4579f5b7156439f893569eab6da6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38c90dd34b8171dfb134e5e99ef9835f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8c.html#a38c90dd34b8171dfb134e5e99ef9835f">cond_wait</a> (struct <a class="el" href="structcondvar.html">condvar</a> *cond, struct <a class="el" href="structmutex.html">mutex</a> *m)</td></tr>
 <tr class="separator:a38c90dd34b8171dfb134e5e99ef9835f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a0a663455619e7190d5fef797be757597"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsynchronization__context.html">synchronization_context</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8c.html#a0a663455619e7190d5fef797be757597">sync_context</a></td></tr>
+<tr class="separator:a0a663455619e7190d5fef797be757597"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
 <a id="a0d4579f5b7156439f893569eab6da6f2"></a>
@@ -340,12 +304,45 @@ sync.c 的引用(Include)关系图:</div>
 
 </div>
 </div>
+<a id="a53e895842fc1fc82a19d816274489cfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53e895842fc1fc82a19d816274489cfc">&#9670;&nbsp;</a></span>set_sync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_sync </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structsynchronization__context.html">synchronization_context</a> *&#160;</td>
+          <td class="paramname"><em>synchronization_context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a0a663455619e7190d5fef797be757597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a663455619e7190d5fef797be757597">&#9670;&nbsp;</a></span>sync_context</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structsynchronization__context.html">synchronization_context</a>* sync_context</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_b545e7c90c84f0fd9866e0dc03b9bbc1.html">os8</a></li><li class="navelem"><a class="el" href="sync_8c.html">sync.c</a></li>
+    <li class="navelem"><a class="el" href="dir_60f2dbb6714164eb829ccd5e05ded1f4.html">sync</a></li><li class="navelem"><a class="el" href="sync_8c.html">sync.c</a></li>
     <li class="footer">制作者
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

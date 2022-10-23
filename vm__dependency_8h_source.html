@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('vm__dependency_8h_source.html',''); in
 <a href="vm__dependency_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef VM_DEPENDENCY_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define VM_DEPENDENCY_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kernel-vm_2defs_8h.html">defs.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kernel-vm_2string_8h.html">string.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">char</span> <a class="code" href="vm__dependency_8h.html#a5f3ffcf1add5763eac42b04367f98242">ekernel</a>[];</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">char</span> <a class="code" href="vm__dependency_8h.html#a6566f7cd3df4b59f36e9f24fc709d55d">trampoline</a>[];</div>
@@ -98,23 +98,18 @@ $(document).ready(function(){initNavTree('vm__dependency_8h_source.html',''); in
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="vm__dependency_8h.html#ae326139715a1c3bf4e78a00fefbce3ac">threadid</a>();</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="vm__dependency_8h.html#a5e23deae3ce8e5a548ff617abf90f4ad">dummy</a>(<span class="keywordtype">int</span>, ...);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="vm__dependency_8h.html#a7861ee1569802186a619778efc85af13">shutdown</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> *<a class="code" href="vm__dependency_8h.html#aa9c8577c0e9d233f85892ec2d9bfe212">memmove</a>(<span class="keywordtype">void</span> *, <span class="keyword">const</span> <span class="keywordtype">void</span> *, <a class="code" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> *<a class="code" href="vm__dependency_8h.html#a9d55c9f035076ed1a90b6452770d0b62">memset</a>(<span class="keywordtype">void</span> *, <span class="keywordtype">int</span>, <a class="code" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif  </span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif  </span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="avm__dependency_8h_html_a537f6c7fcf41e284289a5afaaa9ea689"><div class="ttname"><a href="vm__dependency_8h.html#a537f6c7fcf41e284289a5afaaa9ea689">procid</a></div><div class="ttdeci">int procid()</div><div class="ttdef"><b>Definition:</b> main.c:3</div></div>
-<div class="ttc" id="aconsole_2defs_8h_html_a91ad9478d81a7aaf2593e8d9c3d06a14"><div class="ttname"><a href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> defs.h:4</div></div>
 <div class="ttc" id="avm__dependency_8h_html_a05518ab241076a365f2acd326cfc9c70"><div class="ttname"><a href="vm__dependency_8h.html#a05518ab241076a365f2acd326cfc9c70">printf</a></div><div class="ttdeci">void printf(char *,...)</div><div class="ttdef"><b>Definition:</b> printf.c:40</div></div>
 <div class="ttc" id="avm__dependency_8h_html_a5f3ffcf1add5763eac42b04367f98242"><div class="ttname"><a href="vm__dependency_8h.html#a5f3ffcf1add5763eac42b04367f98242">ekernel</a></div><div class="ttdeci">char ekernel[]</div><div class="ttdef"><b>Definition:</b> extern.h:6</div></div>
-<div class="ttc" id="akernel-vm_2defs_8h_html"><div class="ttname"><a href="kernel-vm_2defs_8h.html">defs.h</a></div></div>
 <div class="ttc" id="avm__dependency_8h_html_a6566f7cd3df4b59f36e9f24fc709d55d"><div class="ttname"><a href="vm__dependency_8h.html#a6566f7cd3df4b59f36e9f24fc709d55d">trampoline</a></div><div class="ttdeci">char trampoline[]</div><div class="ttdef"><b>Definition:</b> extern.h:9</div></div>
 <div class="ttc" id="avm__dependency_8h_html_ae326139715a1c3bf4e78a00fefbce3ac"><div class="ttname"><a href="vm__dependency_8h.html#ae326139715a1c3bf4e78a00fefbce3ac">threadid</a></div><div class="ttdeci">int threadid()</div><div class="ttdef"><b>Definition:</b> main.c:8</div></div>
-<div class="ttc" id="avm__dependency_8h_html_aa9c8577c0e9d233f85892ec2d9bfe212"><div class="ttname"><a href="vm__dependency_8h.html#aa9c8577c0e9d233f85892ec2d9bfe212">memmove</a></div><div class="ttdeci">void * memmove(void *, const void *, uint)</div><div class="ttdef"><b>Definition:</b> string.c:28</div></div>
 <div class="ttc" id="avm__dependency_8h_html_a5e23deae3ce8e5a548ff617abf90f4ad"><div class="ttname"><a href="vm__dependency_8h.html#a5e23deae3ce8e5a548ff617abf90f4ad">dummy</a></div><div class="ttdeci">void dummy(int,...)</div><div class="ttdef"><b>Definition:</b> printf.c:85</div></div>
 <div class="ttc" id="avm__dependency_8h_html_a7861ee1569802186a619778efc85af13"><div class="ttname"><a href="vm__dependency_8h.html#a7861ee1569802186a619778efc85af13">shutdown</a></div><div class="ttdeci">void shutdown()</div><div class="ttdef"><b>Definition:</b> sbi.c:33</div></div>
-<div class="ttc" id="avm__dependency_8h_html_a9d55c9f035076ed1a90b6452770d0b62"><div class="ttname"><a href="vm__dependency_8h.html#a9d55c9f035076ed1a90b6452770d0b62">memset</a></div><div class="ttdeci">void * memset(void *, int, uint)</div><div class="ttdef"><b>Definition:</b> string.c:3</div></div>
+<div class="ttc" id="akernel-vm_2string_8h_html"><div class="ttname"><a href="kernel-vm_2string_8h.html">string.h</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

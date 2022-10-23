@@ -1,8 +1,9 @@
 <map id="kernel&#45;vm/vm.c" name="kernel&#45;vm/vm.c">
-<area shape="rect" id="node1" title=" " alt="" coords="34,5,157,32"/>
-<area shape="rect" id="node2" href="$vm_8h.html" title=" " alt="" coords="24,80,79,107"/>
-<area shape="rect" id="node6" href="$kalloc_8h.html" title=" " alt="" coords="104,80,176,107"/>
-<area shape="rect" id="node3" href="$kernel-vm_2defs_8h.html" title=" " alt="" coords="64,304,127,331"/>
-<area shape="rect" id="node4" href="$kernel-vm_2log_8h.html" title=" " alt="" coords="68,155,123,181"/>
-<area shape="rect" id="node5" href="$vm__dependency_8h.html" title=" " alt="" coords="26,229,165,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="29,5,151,32"/>
+<area shape="rect" id="node2" href="$vm_8h.html" title=" " alt="" coords="19,80,73,107"/>
+<area shape="rect" id="node7" href="$kalloc_8h.html" title=" " alt="" coords="98,80,170,107"/>
+<area shape="rect" id="node3" href="$kernel-vm_2defs_8h.html" title=" " alt="" coords="59,379,121,405"/>
+<area shape="rect" id="node4" href="$kernel-vm_2log_8h.html" title=" " alt="" coords="63,155,117,181"/>
+<area shape="rect" id="node5" href="$vm__dependency_8h.html" title=" " alt="" coords="21,229,159,256"/>
+<area shape="rect" id="node6" href="$kernel-vm_2string_8h.html" title=" " alt="" coords="55,304,125,331"/>
 </map>

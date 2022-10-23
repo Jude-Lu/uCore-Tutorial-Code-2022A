@@ -12,7 +12,5 @@ var dir_b545e7c90c84f0fd9866e0dc03b9bbc1 =
     [ "os8_trap.c", "os8__trap_8c.html", "os8__trap_8c" ],
     [ "os8_trap.h", "os8__trap_8h.html", "os8__trap_8h" ],
     [ "proc.c", "os8_2proc_8c.html", "os8_2proc_8c" ],
-    [ "proc.h", "os8_2proc_8h.html", "os8_2proc_8h" ],
-    [ "sync.c", "sync_8c.html", "sync_8c" ],
-    [ "sync.h", "sync_8h.html", "sync_8h" ]
+    [ "proc.h", "os8_2proc_8h.html", "os8_2proc_8h" ]
 ];

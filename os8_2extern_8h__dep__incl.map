@@ -1,14 +1,12 @@
 <map id="os8/extern.h" name="os8/extern.h">
-<area shape="rect" id="node1" title=" " alt="" coords="303,5,405,32"/>
-<area shape="rect" id="node2" href="$os8_2modules_8h.html" title=" " alt="" coords="295,80,413,107"/>
-<area shape="rect" id="node3" href="$os8_2loader_8h.html" title=" " alt="" coords="278,304,379,331"/>
-<area shape="rect" id="node9" href="$os8_2proc_8h.html" title=" " alt="" coords="368,229,457,256"/>
-<area shape="rect" id="node11" href="$sync_8h.html" title=" " alt="" coords="445,155,535,181"/>
-<area shape="rect" id="node12" href="$os8__trap_8h.html" title=" " alt="" coords="137,304,254,331"/>
-<area shape="rect" id="node4" href="$os8_2loader_8c.html" title=" " alt="" coords="145,379,245,405"/>
-<area shape="rect" id="node5" href="$os8_2main_8c.html" title=" " alt="" coords="270,379,363,405"/>
-<area shape="rect" id="node6" href="$os8__syscall_8c.html" title=" " alt="" coords="500,379,635,405"/>
-<area shape="rect" id="node7" href="$os8__trap_8c.html" title=" " alt="" coords="5,379,121,405"/>
-<area shape="rect" id="node8" href="$os8_2proc_8c.html" title=" " alt="" coords="387,379,475,405"/>
-<area shape="rect" id="node10" href="$sync_8c.html" title=" " alt="" coords="454,304,545,331"/>
+<area shape="rect" id="node1" title=" " alt="" coords="331,5,433,32"/>
+<area shape="rect" id="node2" href="$os8_2modules_8h.html" title=" " alt="" coords="323,80,441,107"/>
+<area shape="rect" id="node3" href="$os8_2loader_8h.html" title=" " alt="" coords="331,229,433,256"/>
+<area shape="rect" id="node9" href="$os8_2proc_8h.html" title=" " alt="" coords="423,155,512,181"/>
+<area shape="rect" id="node10" href="$os8__trap_8h.html" title=" " alt="" coords="190,229,307,256"/>
+<area shape="rect" id="node4" href="$os8_2loader_8c.html" title=" " alt="" coords="5,304,105,331"/>
+<area shape="rect" id="node5" href="$os8_2main_8c.html" title=" " alt="" coords="130,304,223,331"/>
+<area shape="rect" id="node6" href="$os8__syscall_8c.html" title=" " alt="" coords="248,304,383,331"/>
+<area shape="rect" id="node7" href="$os8__trap_8c.html" title=" " alt="" coords="520,304,636,331"/>
+<area shape="rect" id="node8" href="$os8_2proc_8c.html" title=" " alt="" coords="407,304,495,331"/>
 </map>

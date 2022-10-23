@@ -1,8 +1,9 @@
 <map id="easy&#45;fs/fs.c" name="easy&#45;fs/fs.c">
 <area shape="rect" id="node1" title=" " alt="" coords="49,5,147,32"/>
 <area shape="rect" id="node2" href="$easy-fs_2fs_8h.html" title=" " alt="" coords="68,155,115,181"/>
-<area shape="rect" id="node5" href="$file_8h.html" title=" " alt="" coords="5,80,60,107"/>
-<area shape="rect" id="node6" href="$easy-fs_2log_8h.html" title=" " alt="" coords="144,155,199,181"/>
-<area shape="rect" id="node3" href="$easy-fs_2defs_8h.html" title=" " alt="" coords="43,304,105,331"/>
+<area shape="rect" id="node6" href="$file_8h.html" title=" " alt="" coords="5,80,60,107"/>
+<area shape="rect" id="node7" href="$easy-fs_2log_8h.html" title=" " alt="" coords="144,155,199,181"/>
+<area shape="rect" id="node3" href="$easy-fs_2defs_8h.html" title=" " alt="" coords="43,379,105,405"/>
 <area shape="rect" id="node4" href="$fs__dependency_8h.html" title=" " alt="" coords="111,229,242,256"/>
+<area shape="rect" id="node5" href="$easy-fs_2string_8h.html" title=" " alt="" coords="127,304,197,331"/>
 </map>

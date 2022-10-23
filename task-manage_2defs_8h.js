@@ -72,7 +72,7 @@ var task_manage_2defs_8h =
     [ "uint64", "task-manage_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a", null ],
     [ "uint8", "task-manage_2defs_8h.html#adde6aaee8457bee49c2a92621fe22b79", null ],
     [ "ushort", "task-manage_2defs_8h.html#ab95f123a6c9bcfee6a343170ef8c5f69", null ],
-    [ "STDIN", "task-manage_2defs_8h.html#adb49720dc49f7d4e4cf9adbf2948e409a08864b73fa6c82cb8de78a336050bfdb", null ],
-    [ "STDOUT", "task-manage_2defs_8h.html#adb49720dc49f7d4e4cf9adbf2948e409ad1026b11391895f6e302f892a44a04df", null ],
-    [ "STDERR", "task-manage_2defs_8h.html#adb49720dc49f7d4e4cf9adbf2948e409a4b971ca4918db729a147aa7c78cea0e3", null ]
+    [ "STDIN", "task-manage_2defs_8h.html#aae05225933a42f81e7c4a9fb286596f9a08864b73fa6c82cb8de78a336050bfdb", null ],
+    [ "STDOUT", "task-manage_2defs_8h.html#aae05225933a42f81e7c4a9fb286596f9ad1026b11391895f6e302f892a44a04df", null ],
+    [ "STDERR", "task-manage_2defs_8h.html#aae05225933a42f81e7c4a9fb286596f9a4b971ca4918db729a147aa7c78cea0e3", null ]
 ];

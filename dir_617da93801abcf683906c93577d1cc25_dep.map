@@ -1,11 +1,11 @@
 <map id="os2" name="os2">
 <area shape="rect" id="node1" href="dir_617da93801abcf683906c93577d1cc25.html" title="os2" alt="" coords="149,5,221,53"/>
 <area shape="rect" id="node2" href="dir_9307fb714a15d92bd184c2e3f9de7e6f.html" title="trap" alt="" coords="5,101,77,149"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000005_000015.html" title="1" alt="" coords="92,91,101,106"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000005_000016.html" title="1" alt="" coords="92,91,101,106"/>
 <area shape="rect" id="node3" href="dir_9f97b40203d0b7782e2ba57c500dd0f3.html" title="console" alt="" coords="101,101,173,149"/>
 <area shape="rect" id="edge2-headlabel" href="dir_000005_000000.html" title="1" alt="" coords="160,82,170,96"/>
 <area shape="rect" id="node4" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html" title="utils" alt="" coords="197,101,269,149"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000005_000016.html" title="1" alt="" coords="216,74,225,89"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000005_000017.html" title="1" alt="" coords="216,74,225,89"/>
 <area shape="rect" id="node5" href="dir_9811c6ce1522be100e224c1fa7d3a362.html" title="syscall" alt="" coords="293,101,365,149"/>
-<area shape="rect" id="edge4-headlabel" href="dir_000005_000013.html" title="1" alt="" coords="279,77,288,91"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000005_000014.html" title="1" alt="" coords="279,77,288,91"/>
 </map>

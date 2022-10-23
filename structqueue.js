@@ -1,6 +1,6 @@
 var structqueue =
 [
-    [ "data", "structqueue.html#ac103627c1ad15cbec2f22d0abe6d54b6", null ],
+    [ "data", "structqueue.html#a5f5a263f6355755379b787e41b68b20d", null ],
     [ "empty", "structqueue.html#a7d076984670ab0600048b27ffb9ccdc3", null ],
     [ "front", "structqueue.html#ac261b45b6346e633de22d510c9f6a770", null ],
     [ "size", "structqueue.html#a439227feff9d7f55384e8780cfc2eb82", null ],

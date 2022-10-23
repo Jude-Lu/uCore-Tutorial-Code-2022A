@@ -16,6 +16,7 @@ var annotated_dup =
     [ "queue", "structqueue.html", "structqueue" ],
     [ "semaphore", "structsemaphore.html", "structsemaphore" ],
     [ "superblock", "structsuperblock.html", "structsuperblock" ],
+    [ "synchronization_context", "structsynchronization__context.html", "structsynchronization__context" ],
     [ "syscall_context", "structsyscall__context.html", "structsyscall__context" ],
     [ "thread", "structthread.html", "structthread" ],
     [ "TimeVal", "structTimeVal.html", "structTimeVal" ],
