@@ -3,5 +3,6 @@
 
 #include "trap.h"
 #include "plic.h"
+#include "timer.h"
 
 #endif // TRAP_MODULE_H
