@@ -32,6 +32,7 @@ void mutex_lock(struct mutex *m)
 		while (m->locked) {
 			yield();
 		}
+		m->locked = 1;
 		debugf("lock spin mutex after some trials");
 		return;
 	}
