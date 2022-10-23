@@ -17,6 +17,7 @@ SCRIPT = script
 FS = easy-fs
 DISK = disk
 PIPE = pipe
+UTILS = utils
 ##
 
 TOOLPREFIX = riscv64-unknown-elf-
@@ -31,7 +32,7 @@ CP = cp
 BUILDDIR = build
 
 ## Append your module dir
-C_SRCS = $(wildcard $(K)/*.c $(CONSOLE)/*.c)
+C_SRCS = $(wildcard $(K)/*.c $(CONSOLE)/*.c $(UTILS)/*.c)
 ifeq ($(shell expr $(ch) \>= 2), 1)
 	C_SRCS += $(wildcard $(SYSCALL)/*.c)
 endif
@@ -172,7 +173,7 @@ build/kernel: $(OBJS) $(SCRIPT)/kernel_app.ld
 	$(LD) $(LDFLAGS) -T $(SCRIPT)/kernel_app.ld -o $(BUILDDIR)/kernel $(OBJS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
 	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
-	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d $(ASM)/*.d $(TRAP)/*.d
+	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d $K/*.S $(ASM)/*.d $(TRAP)/*.d
 	@echo 'Build kernel done'
 
 else
@@ -180,7 +181,7 @@ build/kernel: $(OBJS) $(SCRIPT)/kernel.ld
 	$(LD) $(LDFLAGS) -T $(SCRIPT)/kernel.ld -o $(BUILDDIR)/kernel $(OBJS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
 	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
-	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d $(ASM)/*.d $(TRAP)/*.d
+	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d $K/*.S $(ASM)/*.d $(TRAP)/*.d
 	@echo 'Build kernel done'
 endif
 

@@ -1,7 +1,7 @@
 #ifndef LOG_H
 #define LOG_H
 
-#include "disk_dependency.h"
+#include "fs_dependency.h"
 
 #if defined(LOG_LEVEL_ERROR)
 

@@ -1,6 +1,9 @@
 #include "loader.h"
 #include "os2_trap.h"
 
+static int app_cur, app_num;
+static uint64* app_info_ptr;
+
 void loader_init() {
 	if ((uint64)ekernel >= BASE_ADDRESS) {
 		panic("kernel too large...\n");

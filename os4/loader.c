@@ -2,6 +2,9 @@
 #include "proc.h"
 #include "os4_trap.h"
 
+static int app_num;
+static uint64 *app_info_ptr;
+
 // Count finished programs. If all apps exited, shutdown.
 int finished()
 {
