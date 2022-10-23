@@ -4,6 +4,5 @@
 #include "console.h"
 #include "printf.h"
 #include "sbi.h"
-#include "log.h"
 
 #endif // CONSOLE_MODULE_H

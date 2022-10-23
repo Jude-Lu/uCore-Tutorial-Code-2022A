@@ -2,6 +2,7 @@
 #include "console.h"
 #include "sbi.h"
 #include "log.h"
+#include "defs.h"
 
 static char digits[] = "0123456789abcdef";
 
