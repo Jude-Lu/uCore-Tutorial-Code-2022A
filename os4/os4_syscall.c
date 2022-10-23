@@ -1,8 +1,6 @@
 #include "loader.h"
 #include "proc.h"
 #include "os4_trap.h"
-#include "../utils/defs.h"
-#include "../utils/modules.h"
 
 uint64 os4_sys_write(int fd, uint64 va, uint64 len)
 {
