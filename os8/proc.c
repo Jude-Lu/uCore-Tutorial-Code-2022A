@@ -447,6 +447,58 @@ pagetable_t get_curr_pagetable()
 	return curr_proc() -> pagetable;
 }
 
+struct mutex* alloc_mutex()
+{
+	struct proc *p = ((struct thread*)curr_task())->process;
+	if (p->next_mutex_id >= LOCK_POOL_SIZE) {
+		return NULL;
+	}
+	struct mutex *m = &p->mutex_pool[p->next_mutex_id];
+	p->next_mutex_id++;
+	return m;
+}
+
+struct semaphore* alloc_semaphore()
+{
+	struct proc *p = ((struct thread*)curr_task())->process;
+	if (p->next_semaphore_id >= LOCK_POOL_SIZE) {
+		return NULL;
+	}
+	struct semaphore *s = &p->semaphore_pool[p->next_semaphore_id];
+	p->next_semaphore_id++;
+	return s;
+}
+
+struct condvar* alloc_codvar()
+{
+	struct proc *p = ((struct thread*)curr_task())->process;
+	if (p->next_condvar_id >= LOCK_POOL_SIZE) {
+		return NULL;
+	}
+	struct condvar *c = &p->condvar_pool[p->next_condvar_id];
+	p->next_condvar_id++;
+	return c;
+}
+
+int curr_task_id()
+{
+	return get_id(curr_task());
+}
+
+void sleeping()
+{
+	struct thread *t = curr_task();
+	t->state = SLEEPING;
+	sched();
+}
+
+void running(int id)
+{
+	struct thread *t = get_task(id);
+	t->state = RUNNABLE;
+	add_task(t);
+}
+
 // initialize the proc table at boot time.
 void proc_init()
 {
@@ -516,4 +568,19 @@ void proc_init()
 		.buf_data = buf_data
 	};
 	set_file(&os8_fs_manager);
+
+	static struct synchronization_context os8_sync_context =
+	{
+		.alloc_mutex = alloc_mutex,
+		.alloc_semaphore = alloc_semaphore,
+		.alloc_codvar = alloc_codvar,
+
+		.curr_task_id = curr_task_id,
+
+		.yield = yield,
+
+		.sleeping = sleeping,
+		.running = running
+	};
+	set_sync(&os8_sync_context);
 }
