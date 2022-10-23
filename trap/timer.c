@@ -1,5 +1,6 @@
 #include "timer.h"
-#include "riscv.h"
+
+extern void set_timer(uint64);
 
 /// read the `mtime` regiser
 uint64 get_cycle()

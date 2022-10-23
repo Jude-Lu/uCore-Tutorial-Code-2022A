@@ -16,8 +16,6 @@
 #define PLIC_MCLAIM(hart) (PLIC + 0x200004 + (hart)*0x2000)
 #define PLIC_SCLAIM(hart) (PLIC + 0x201004 + (hart)*0x2000)
 
-#define VIRTIO0_IRQ 1
-
 void plicinit(int);
 int plic_claim(int);
 void plic_complete(int, int);

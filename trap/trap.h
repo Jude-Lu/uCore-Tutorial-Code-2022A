@@ -5,8 +5,7 @@
 #define SSTATUS_SPIE (1L << 5) // Supervisor Previous Interrupt Enable
 
 #include "log.h"
-#include "riscv.h"
-#include "types.h"
+#include "defs.h"
 
 typedef uint64 *pagetable_t; // 512 PTEs
 

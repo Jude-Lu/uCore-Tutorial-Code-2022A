@@ -1,15 +1,24 @@
-#ifndef RISCV_H
-#define RISCV_H
+#ifndef DEFS_H
+#define DEFS_H
 
-#include "types.h"
+typedef unsigned int uint;
+typedef unsigned short ushort;
+typedef unsigned char uchar;
+typedef unsigned char uint8;
+typedef unsigned short uint16;
+typedef unsigned int uint32;
+typedef unsigned long uint64;
 
-// which hart (core) is this?
-static inline uint64 r_mhartid()
-{
-	uint64 x;
-	asm volatile("csrr %0, mhartid" : "=r"(x));
-	return x;
-}
+typedef uint64 pte_t;
+typedef uint64 pde_t;
+typedef uint64 *pagetable_t; // 512 PTEs
+
+// number of elements in fixed-size array
+#define NELEM(x) (sizeof(x) / sizeof((x)[0]))
+#define MIN(a, b) (a < b ? a : b)
+#define MAX(a, b) (a > b ? a : b)
+
+#define NULL ((void *)0)
 
 // Machine Status Register, mstatus
 
@@ -18,6 +27,118 @@ static inline uint64 r_mhartid()
 #define MSTATUS_MPP_S (1L << 11)
 #define MSTATUS_MPP_U (0L << 11)
 #define MSTATUS_MIE (1L << 3) // machine-mode interrupt enable.
+
+#define PAGE_SIZE (0x1000)
+
+enum {
+	STDIN = 0,
+	STDOUT = 1,
+	STDERR = 2,
+};
+
+// memory layout
+
+// the kernel expects there to be RAM
+// for use by the kernel and user pages
+// from physical address 0x80000000 to PHYSTOP.
+#define KERNBASE 0x80200000L
+#define PHYSTOP (0x80000000 + 128 * 1024 * 1024) // we have 128M memroy
+
+// one beyond the highest possible virtual address.
+// MAXVA is actually one bit less than the max allowed by
+// Sv39, to avoid having to sign-extend virtual addresses
+// that have the high bit set.
+#define MAXVA (1L << (9 + 9 + 9 + 12 - 1))
+
+// map the trampoline page to the highest address,
+// in both user and kernel space.
+#define USER_TOP (MAXVA)
+#define TRAMPOLINE (USER_TOP - PGSIZE)
+#define TRAPFRAME (TRAMPOLINE - PGSIZE)
+
+#define MAX_APP_NUM (32)
+#define MAX_STR_LEN (300)
+#define IDLE_PID (0)
+#define MAX_ARG_NUM (32) // max exec arguments
+
+// file system
+#define NFILE (100) // open files per system
+#define NINODE (50) // maximum number of active i-nodes
+#define NDEV (10) // maximum major device number
+#define ROOTDEV (1) // device number of file system root disk
+#define MAXOPBLOCKS (10) // max # of blocks any FS op writes
+#define NBUF (MAXOPBLOCKS * 3) // size of disk block cache
+#define FSSIZE (1000) // size of file system in blocks
+#define MAXPATH (128) // maximum file path name
+
+#define ROOTINO (1) // root i-number
+#define BSIZE (1024) // block size
+
+// virtio mmio interface
+#define VIRTIO0 0x10001000
+#define VIRTIO0_IRQ 1
+
+#define PGSIZE 4096 // bytes per page
+#define PGSHIFT 12 // bits of offset within a page
+
+#define PGROUNDUP(sz) (((sz) + PGSIZE - 1) & ~(PGSIZE - 1))
+#define PGROUNDDOWN(a) (((a)) & ~(PGSIZE - 1))
+#define PGALIGNED(a) (((a) & (PGSIZE - 1)) == 0)
+
+#define PTE_V (1L << 0) // valid
+#define PTE_R (1L << 1)
+#define PTE_W (1L << 2)
+#define PTE_X (1L << 3)
+#define PTE_U (1L << 4) // 1 -> user can access
+
+// shift a physical address to the right place for a PTE.
+#define PA2PTE(pa) ((((uint64)pa) >> 12) << 10)
+
+#define PTE2PA(pte) (((pte) >> 10) << 12)
+
+#define PTE_FLAGS(pte) ((pte)&0x3FF)
+
+// extract the three 9-bit page table indices from a virtual address.
+#define PXMASK 0x1FF // 9 bits
+#define PXSHIFT(level) (PGSHIFT + (9 * (level)))
+#define PX(level, va) ((((uint64)(va)) >> PXSHIFT(level)) & PXMASK)
+
+// one beyond the highest possible virtual address.
+// MAXVA is actually one bit less than the max allowed by
+// Sv39, to avoid having to sign-extend virtual addresses
+// that have the high bit set.
+#define MAXVA (1L << (9 + 9 + 9 + 12 - 1))
+
+// Supervisor Status Register, sstatus
+
+#define SSTATUS_SPP (1L << 8) // Previous mode, 1=Supervisor, 0=User
+#define SSTATUS_SPIE (1L << 5) // Supervisor Previous Interrupt Enable
+#define SSTATUS_UPIE (1L << 4) // User Previous Interrupt Enable
+#define SSTATUS_SIE (1L << 1) // Supervisor Interrupt Enable
+#define SSTATUS_UIE (1L << 0) // User Interrupt Enable
+
+// Supervisor Interrupt Enable
+#define SIE_SEIE (1L << 9) // external
+#define SIE_STIE (1L << 5) // timer
+#define SIE_SSIE (1L << 1) // software
+
+// Machine-mode Interrupt Enable
+#define MIE_MEIE (1L << 11) // external
+#define MIE_MTIE (1L << 7) // timer
+#define MIE_MSIE (1L << 3) // software
+
+// use riscv's sv39 page table scheme.
+#define SATP_SV39 (8L << 60)
+
+#define MAKE_SATP(pagetable) (SATP_SV39 | (((uint64)pagetable) >> 12))
+
+// which hart (core) is this?
+static inline uint64 r_mhartid()
+{
+	uint64 x;
+	asm volatile("csrr %0, mhartid" : "=r"(x));
+	return x;
+}
 
 static inline uint64 r_mstatus()
 {
@@ -38,14 +159,6 @@ static inline void w_mepc(uint64 x)
 {
 	asm volatile("csrw mepc, %0" : : "r"(x));
 }
-
-// Supervisor Status Register, sstatus
-
-#define SSTATUS_SPP (1L << 8) // Previous mode, 1=Supervisor, 0=User
-#define SSTATUS_SPIE (1L << 5) // Supervisor Previous Interrupt Enable
-#define SSTATUS_UPIE (1L << 4) // User Previous Interrupt Enable
-#define SSTATUS_SIE (1L << 1) // Supervisor Interrupt Enable
-#define SSTATUS_UIE (1L << 0) // User Interrupt Enable
 
 static inline uint64 r_sstatus()
 {
@@ -72,10 +185,6 @@ static inline void w_sip(uint64 x)
 	asm volatile("csrw sip, %0" : : "r"(x));
 }
 
-// Supervisor Interrupt Enable
-#define SIE_SEIE (1L << 9) // external
-#define SIE_STIE (1L << 5) // timer
-#define SIE_SSIE (1L << 1) // software
 static inline uint64 r_sie()
 {
 	uint64 x;
@@ -88,10 +197,6 @@ static inline void w_sie(uint64 x)
 	asm volatile("csrw sie, %0" : : "r"(x));
 }
 
-// Machine-mode Interrupt Enable
-#define MIE_MEIE (1L << 11) // external
-#define MIE_MTIE (1L << 7) // timer
-#define MIE_MSIE (1L << 3) // software
 static inline uint64 r_mie()
 {
 	uint64 x;
@@ -164,11 +269,6 @@ static inline void w_mtvec(uint64 x)
 {
 	asm volatile("csrw mtvec, %0" : : "r"(x));
 }
-
-// use riscv's sv39 page table scheme.
-#define SATP_SV39 (8L << 60)
-
-#define MAKE_SATP(pagetable) (SATP_SV39 | (((uint64)pagetable) >> 12))
 
 // supervisor address translation and protection;
 // holds the address of the page table.
@@ -286,39 +386,4 @@ static inline void sfence_vma()
 	asm volatile("sfence.vma zero, zero");
 }
 
-#define PGSIZE 4096 // bytes per page
-#define PGSHIFT 12 // bits of offset within a page
-
-#define PGROUNDUP(sz) (((sz) + PGSIZE - 1) & ~(PGSIZE - 1))
-#define PGROUNDDOWN(a) (((a)) & ~(PGSIZE - 1))
-#define PGALIGNED(a) (((a) & (PGSIZE - 1)) == 0)
-
-#define PTE_V (1L << 0) // valid
-#define PTE_R (1L << 1)
-#define PTE_W (1L << 2)
-#define PTE_X (1L << 3)
-#define PTE_U (1L << 4) // 1 -> user can access
-
-// shift a physical address to the right place for a PTE.
-#define PA2PTE(pa) ((((uint64)pa) >> 12) << 10)
-
-#define PTE2PA(pte) (((pte) >> 10) << 12)
-
-#define PTE_FLAGS(pte) ((pte)&0x3FF)
-
-// extract the three 9-bit page table indices from a virtual address.
-#define PXMASK 0x1FF // 9 bits
-#define PXSHIFT(level) (PGSHIFT + (9 * (level)))
-#define PX(level, va) ((((uint64)(va)) >> PXSHIFT(level)) & PXMASK)
-
-// one beyond the highest possible virtual address.
-// MAXVA is actually one bit less than the max allowed by
-// Sv39, to avoid having to sign-extend virtual addresses
-// that have the high bit set.
-#define MAXVA (1L << (9 + 9 + 9 + 12 - 1))
-
-typedef uint64 pte_t;
-typedef uint64 pde_t;
-typedef uint64 *pagetable_t; // 512 PTEs
-
-#endif // RISCV_H
+#endif // DEF_H
