@@ -3,6 +3,7 @@
 
 #include "defs.h"
 #include "log.h"
+#include "extern.h"
 #include "../console/console_module.h"
 
 #endif // MODULES_H

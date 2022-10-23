@@ -14,8 +14,6 @@ int threadid()
 
 void clean_bss()
 {
-	extern char s_bss[];
-	extern char e_bss[];
 	memset(s_bss, 0, e_bss - s_bss);
 }
 

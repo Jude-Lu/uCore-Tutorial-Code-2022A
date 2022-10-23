@@ -2,8 +2,6 @@
 #include "loader.h"
 #include "proc.h"
 
-extern char uservec[], userret[], kerneltrap[];
-
 int os3_cpuid()
 {
 	return 0;

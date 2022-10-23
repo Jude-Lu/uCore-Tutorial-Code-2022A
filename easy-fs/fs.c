@@ -13,7 +13,7 @@
 #include "file.h"
 #include "log.h"
 
-extern struct FSManager *fs_manager;
+struct FSManager *fs_manager;
 
 // there should be one superblock per disk device, but we run with
 // only one device

@@ -3,6 +3,7 @@
 
 #include "defs.h"
 #include "log.h"
+#include "extern.h"
 #include "../console/console_module.h"
 #include "../syscall/syscall_module.h"
 #include "../trap/trap_module.h"
