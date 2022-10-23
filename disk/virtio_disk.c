@@ -8,8 +8,7 @@
 //
 
 #include "virtio.h"
-
-extern void *memset(void *, int, uint);
+#include "disk_dependency.h"
 
 struct virtio_context *virtio_disk_context;
 
@@ -188,8 +187,6 @@ static int alloc3_desc(int *idx)
 	}
 	return 0;
 }
-
-extern int PID;
 
 void virtio_disk_rw(struct buf *b, int write)
 {

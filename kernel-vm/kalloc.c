@@ -1,6 +1,5 @@
 #include "kalloc.h"
-
-extern char ekernel[];
+#include "vm_dependency.h"
 
 struct linklist {
     struct linklist* next;

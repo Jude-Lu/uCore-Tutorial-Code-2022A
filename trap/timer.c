@@ -1,6 +1,5 @@
 #include "timer.h"
-
-extern void set_timer(uint64);
+#include "trap_dependency.h"
 
 /// read the `mtime` regiser
 uint64 get_cycle()

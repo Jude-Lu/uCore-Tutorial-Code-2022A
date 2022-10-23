@@ -1,9 +1,9 @@
 #ifndef LOG_H
 #define LOG_H
 
+#include "console_dependency.h"
+
 extern void printf(char*, ...);
-extern int procid();
-extern int threadid();
 extern void dummy(int, ...);
 extern void shutdown();
 

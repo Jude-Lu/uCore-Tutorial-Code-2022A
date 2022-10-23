@@ -4,9 +4,6 @@
 #include "defs.h"
 #include "log.h"
 
-/// 跳板页地址
-extern char trampoline[];
-
 /// 为内核分配虚拟地址空间
 void kvmmap(pagetable_t, uint64, uint64, uint64, int);
 /// 建立虚拟地址到物理地址映射

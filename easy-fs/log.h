@@ -1,11 +1,7 @@
 #ifndef LOG_H
 #define LOG_H
 
-extern void printf(char*, ...);
-extern int procid();
-extern int threadid();
-extern void dummy(int, ...);
-extern void shutdown();
+#include "disk_dependency.h"
 
 #if defined(LOG_LEVEL_ERROR)
 

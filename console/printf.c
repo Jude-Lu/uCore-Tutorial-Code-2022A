@@ -82,6 +82,5 @@ void printf(char* fmt, ...) {
     }
 }
 
-void dummy(int _, ...)
-{
+void dummy(int _, ...) {
 }
