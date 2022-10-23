@@ -1,8 +1,8 @@
 #ifndef MAP_H
 #define MAP_H
 
-#include "../utils/riscv.h"
-#include "../utils/types.h"
+#include "defs.h"
+#include "log.h"
 
 /// 跳板页地址
 extern char trampoline[];

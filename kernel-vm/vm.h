@@ -1,8 +1,8 @@
 #ifndef VM_H
 #define VM_H
 
-#include "../utils/riscv.h"
-#include "../utils/types.h"
+#include "defs.h"
+#include "log.h"
 
 /// 两种功能：地址转换；建立映射
 pte_t* walk(pagetable_t, uint64, int);
