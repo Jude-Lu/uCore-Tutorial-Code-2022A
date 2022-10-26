@@ -81,6 +81,7 @@ ifeq ($(shell expr $(ch) \>= 6), 1)
 	# AS_SRCS += $(TRAP)/kernelvec.S
 endif
 
+$(info $(SUBDIRS))
 $(SUBDIRS): .FORCE
 	make -C $@
 
@@ -188,6 +189,9 @@ endif
 
 ifeq ($(shell expr $(ch) \!= 1)$(shell expr $(ch) \!= 6)$(shell expr $(ch) \!= 7)$(shell expr $(ch) \!= 8), 1111)
 build/kernel: $(OBJS) $(SCRIPT)/kernel_app.ld
+	$(info $K)
+	$(info $(LIBS))
+	$(info "dep has no libs")
 	$(LD) $(LDFLAGS) -T $(SCRIPT)/kernel_app.ld -o $(BUILDDIR)/kernel $(OBJS) $(LIBS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
 	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
@@ -195,7 +199,11 @@ build/kernel: $(OBJS) $(SCRIPT)/kernel_app.ld
 	@echo 'Build kernel done'
 
 else
-build/kernel: $(OBJS) $(LIBS) $(SCRIPT)/kernel.ld
+# build/kernel: $(OBJS) $(LIBS) $(SCRIPT)/kernel.ld
+build/kernel: $(OBJS) $(SCRIPT)/kernel.ld
+	$(info $K)
+	$(info "dep has libs")
+	$(info $(LIBS))
 	$(LD) $(LDFLAGS) -T $(SCRIPT)/kernel.ld -o $(BUILDDIR)/kernel $(OBJS) $(LIBS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
 	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
@@ -235,7 +243,7 @@ $(F)/fs.img:
 $(F)/fs-copy.img: $(F)/fs.img
 	@$(CP) $< $@
 
-run: build/kernel $(F)/fs-copy.img
+run: $(SUBDIRS) build/kernel $(F)/fs-copy.img
 	$(QEMU) $(QEMUOPTS)
 
 debug: build/kernel .gdbinit $(F)/fs-copy.img
