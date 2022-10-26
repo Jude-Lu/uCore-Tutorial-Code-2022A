@@ -1,6 +1,5 @@
 var file_8c =
 [
-    [ "filealloc", "file_8c.html#ae6dcd86f2dc049b7ab643162247b463a", null ],
     [ "fileclose", "file_8c.html#ae557c81ab89c24219146144bb6adaa2c", null ],
     [ "fileopen", "file_8c.html#a48cea474fd8856dc2d2a5f2601b7d275", null ],
     [ "inoderead", "file_8c.html#a7e258be2251cb7d112c4dd9897a4f05d", null ],

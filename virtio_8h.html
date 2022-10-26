@@ -148,8 +148,10 @@ virtio.h 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 结构体</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvirtq__desc.html">virtq_desc</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">a single descriptor, from the spec.  <a href="structvirtq__desc.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvirtq__avail.html">virtq_avail</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">the (entire) avail ring, from the spec.  <a href="structvirtq__avail.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvirtq__used__elem.html">virtq_used_elem</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -504,6 +506,8 @@ virtio.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>virtio device definitions. for both the mmio interface, and virtio descriptors. only tested with qemu. this is the "legacy" virtio interface.</p>
+<p>the virtio spec: <a href="https://docs.oasis-open.org/virtio/virtio/v1.1/virtio-v1.1.pdf">https://docs.oasis-open.org/virtio/virtio/v1.1/virtio-v1.1.pdf</a> </p>
 
 </div>
 </div>

@@ -105,7 +105,11 @@ $(document).ready(function(){initNavTree('structsuperblock.html',''); initResiza
 <tr class="memitem:a923fc110922b13bb69974b1fcd70c027"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsuperblock.html#a923fc110922b13bb69974b1fcd70c027">bmapstart</a></td></tr>
 <tr class="separator:a923fc110922b13bb69974b1fcd70c027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">结构体成员变量说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>On-disk file system format. Both the kernel and user programs use this header file.</p>
+<p>Disk layout: [ boot block | super block | inode blocks | free bit map | data blocks]</p>
+<p>mkfs computes the super block and builds an initial file system. The super block describes the disk layout: </p>
+</div><h2 class="groupheader">结构体成员变量说明</h2>
 <a id="a923fc110922b13bb69974b1fcd70c027"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a923fc110922b13bb69974b1fcd70c027">&#9670;&nbsp;</a></span>bmapstart</h2>
 

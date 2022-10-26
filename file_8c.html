@@ -113,18 +113,21 @@ file.c 的引用(Include)关系图:</div>
 <tr class="memitem:a22c08158efd79bb165987843d064144d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8c.html#a22c08158efd79bb165987843d064144d">set_file</a> (struct <a class="el" href="structFSManager.html">FSManager</a> *<a class="el" href="structFSManager.html">FSManager</a>)</td></tr>
 <tr class="separator:a22c08158efd79bb165987843d064144d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a198d22735ec723ca760ead0ddfc92edb"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structfile.html">file</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8c.html#a198d22735ec723ca760ead0ddfc92edb">stdio_init</a> (int fd)</td></tr>
+<tr class="memdesc:a198d22735ec723ca760ead0ddfc92edb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract the stdio into a file.  <a href="file_8c.html#a198d22735ec723ca760ead0ddfc92edb">更多...</a><br /></td></tr>
 <tr class="separator:a198d22735ec723ca760ead0ddfc92edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae557c81ab89c24219146144bb6adaa2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8c.html#ae557c81ab89c24219146144bb6adaa2c">fileclose</a> (struct <a class="el" href="structfile.html">file</a> *f)</td></tr>
+<tr class="memdesc:ae557c81ab89c24219146144bb6adaa2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operation performed on the system-level open file table entry after some process closes a file.  <a href="file_8c.html#ae557c81ab89c24219146144bb6adaa2c">更多...</a><br /></td></tr>
 <tr class="separator:ae557c81ab89c24219146144bb6adaa2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6dcd86f2dc049b7ab643162247b463a"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structfile.html">file</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8c.html#ae6dcd86f2dc049b7ab643162247b463a">filealloc</a> ()</td></tr>
-<tr class="separator:ae6dcd86f2dc049b7ab643162247b463a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbb793f3c4e736e31677a31351a41054"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8c.html#acbb793f3c4e736e31677a31351a41054">show_all_files</a> ()</td></tr>
+<tr class="memdesc:acbb793f3c4e736e31677a31351a41054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show names of all files in the root_dir.  <a href="file_8c.html#acbb793f3c4e736e31677a31351a41054">更多...</a><br /></td></tr>
 <tr class="separator:acbb793f3c4e736e31677a31351a41054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48cea474fd8856dc2d2a5f2601b7d275"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8c.html#a48cea474fd8856dc2d2a5f2601b7d275">fileopen</a> (char *path, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> omode)</td></tr>
 <tr class="separator:a48cea474fd8856dc2d2a5f2601b7d275"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad09794bd435b3bfe16e899db4e17379a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8c.html#ad09794bd435b3bfe16e899db4e17379a">inodewrite</a> (struct <a class="el" href="structfile.html">file</a> *f, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
+<tr class="memdesc:ad09794bd435b3bfe16e899db4e17379a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to inode.  <a href="file_8c.html#ad09794bd435b3bfe16e899db4e17379a">更多...</a><br /></td></tr>
 <tr class="separator:ad09794bd435b3bfe16e899db4e17379a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e258be2251cb7d112c4dd9897a4f05d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8c.html#a7e258be2251cb7d112c4dd9897a4f05d">inoderead</a> (struct <a class="el" href="structfile.html">file</a> *f, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
+<tr class="memdesc:a7e258be2251cb7d112c4dd9897a4f05d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from inode.  <a href="file_8c.html#a7e258be2251cb7d112c4dd9897a4f05d">更多...</a><br /></td></tr>
 <tr class="separator:a7e258be2251cb7d112c4dd9897a4f05d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34f24317f1c97dfee386da43e3bb48a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8c.html#a34f24317f1c97dfee386da43e3bb48a9">pipealloc</a> (struct <a class="el" href="structfile.html">file</a> *f0, struct <a class="el" href="structfile.html">file</a> *f1)</td></tr>
 <tr class="separator:a34f24317f1c97dfee386da43e3bb48a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,23 +138,6 @@ file.c 的引用(Include)关系图:</div>
 <tr class="separator:a8accc94972d744ffbd5b31546e422bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
-<a id="ae6dcd86f2dc049b7ab643162247b463a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6dcd86f2dc049b7ab643162247b463a">&#9670;&nbsp;</a></span>filealloc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="structfile.html">file</a>* filealloc </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ae557c81ab89c24219146144bb6adaa2c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae557c81ab89c24219146144bb6adaa2c">&#9670;&nbsp;</a></span>fileclose()</h2>
 
@@ -167,6 +153,8 @@ file.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The operation performed on the system-level open file table entry after some process closes a file. </p>
 
 </div>
 </div>
@@ -195,6 +183,7 @@ file.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>A process creates or opens a file according to its path, returning the file descriptor of the created or opened file. If omode is O_CREATE, create a new file if omode if the others,open a created file. </p>
 
 </div>
 </div>
@@ -230,6 +219,8 @@ file.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Read data from inode. </p>
+
 </div>
 </div>
 <a id="ad09794bd435b3bfe16e899db4e17379a"></a>
@@ -263,6 +254,8 @@ file.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Write data to inode. </p>
 
 </div>
 </div>
@@ -327,6 +320,8 @@ file.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Show names of all files in the root_dir. </p>
+
 </div>
 </div>
 <a id="a198d22735ec723ca760ead0ddfc92edb"></a>
@@ -345,6 +340,8 @@ file.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Abstract the stdio into a file. </p>
+
 </div>
 </div>
 <h2 class="groupheader">变量说明</h2>
@@ -359,6 +356,14 @@ file.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>File system implementation. Five layers:</p><ul>
+<li>Blocks: allocator for raw disk blocks.</li>
+<li>Log: crash recovery for multi-step updates.</li>
+<li>Files: inode allocator, reading, writing, metadata.</li>
+<li>Directories: inode with special contents (list of other inodes!)</li>
+<li>Names: paths like /usr/rtm/xv6/fs.c for convenient naming.</li>
+</ul>
+<p>This file contains the low-level file system manipulation routines. The (higher-level) system call implementations are in sysfile.c. </p>
 
 </div>
 </div>

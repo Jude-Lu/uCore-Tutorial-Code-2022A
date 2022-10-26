@@ -109,6 +109,7 @@ fs.c 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:ade00044090adbc765c80c6cc81dae79d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#ade00044090adbc765c80c6cc81dae79d">fsinit</a> ()</td></tr>
+<tr class="memdesc:ade00044090adbc765c80c6cc81dae79d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init fs  <a href="easy-fs_2fs_8c.html#ade00044090adbc765c80c6cc81dae79d">更多...</a><br /></td></tr>
 <tr class="separator:ade00044090adbc765c80c6cc81dae79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb360ce0b70a32d19d089fba4cd91293"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structinode.html">inode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#adb360ce0b70a32d19d089fba4cd91293">ialloc</a> (<a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> dev, short type)</td></tr>
 <tr class="separator:adb360ce0b70a32d19d089fba4cd91293"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,10 +118,12 @@ fs.c 的引用(Include)关系图:</div>
 <tr class="memitem:a6b41577cc09b2a009be8f84bfb500079"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structinode.html">inode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a6b41577cc09b2a009be8f84bfb500079">idup</a> (struct <a class="el" href="structinode.html">inode</a> *ip)</td></tr>
 <tr class="separator:a6b41577cc09b2a009be8f84bfb500079"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2039eca5f6046c39294f57927d0c1e0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a2039eca5f6046c39294f57927d0c1e0f">ivalid</a> (struct <a class="el" href="structinode.html">inode</a> *ip)</td></tr>
+<tr class="memdesc:a2039eca5f6046c39294f57927d0c1e0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the inode from disk if necessary.  <a href="easy-fs_2fs_8c.html#a2039eca5f6046c39294f57927d0c1e0f">更多...</a><br /></td></tr>
 <tr class="separator:a2039eca5f6046c39294f57927d0c1e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3c447f135c68e4c3c1f8d5866f6e77b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#ab3c447f135c68e4c3c1f8d5866f6e77b">iput</a> (struct <a class="el" href="structinode.html">inode</a> *ip)</td></tr>
 <tr class="separator:ab3c447f135c68e4c3c1f8d5866f6e77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47ff37242dd456a2d34dea24a1307c49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a47ff37242dd456a2d34dea24a1307c49">itrunc</a> (struct <a class="el" href="structinode.html">inode</a> *ip)</td></tr>
+<tr class="memdesc:a47ff37242dd456a2d34dea24a1307c49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Truncate inode (discard contents).  <a href="easy-fs_2fs_8c.html#a47ff37242dd456a2d34dea24a1307c49">更多...</a><br /></td></tr>
 <tr class="separator:a47ff37242dd456a2d34dea24a1307c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab91c244607cd695272ae445218f5dadd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#ab91c244607cd695272ae445218f5dadd">readi</a> (struct <a class="el" href="structinode.html">inode</a> *ip, int user_dst, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> dst, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> off, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> n)</td></tr>
 <tr class="separator:ab91c244607cd695272ae445218f5dadd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,12 +132,16 @@ fs.c 的引用(Include)关系图:</div>
 <tr class="memitem:aa182c62fade7a0bae9408830d5e06d4f"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structinode.html">inode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#aa182c62fade7a0bae9408830d5e06d4f">dirlookup</a> (struct <a class="el" href="structinode.html">inode</a> *dp, char *name, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> *poff)</td></tr>
 <tr class="separator:aa182c62fade7a0bae9408830d5e06d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95411e8454bbeee165ae7f09a2e5f7db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a95411e8454bbeee165ae7f09a2e5f7db">dirls</a> (struct <a class="el" href="structinode.html">inode</a> *dp)</td></tr>
+<tr class="memdesc:a95411e8454bbeee165ae7f09a2e5f7db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the filenames of all files in the directory  <a href="easy-fs_2fs_8c.html#a95411e8454bbeee165ae7f09a2e5f7db">更多...</a><br /></td></tr>
 <tr class="separator:a95411e8454bbeee165ae7f09a2e5f7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69a135a0e8a06d9f306d77ebc0c1f7a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a69a135a0e8a06d9f306d77ebc0c1f7a0">dirlink</a> (struct <a class="el" href="structinode.html">inode</a> *dp, char *name, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> inum)</td></tr>
+<tr class="memdesc:a69a135a0e8a06d9f306d77ebc0c1f7a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a new directory entry (name, inum) into the directory dp.  <a href="easy-fs_2fs_8c.html#a69a135a0e8a06d9f306d77ebc0c1f7a0">更多...</a><br /></td></tr>
 <tr class="separator:a69a135a0e8a06d9f306d77ebc0c1f7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a298e28260b8b4ef0396fc411b42c46e5"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structinode.html">inode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a298e28260b8b4ef0396fc411b42c46e5">root_dir</a> ()</td></tr>
+<tr class="memdesc:a298e28260b8b4ef0396fc411b42c46e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the inode of the root directory  <a href="easy-fs_2fs_8c.html#a298e28260b8b4ef0396fc411b42c46e5">更多...</a><br /></td></tr>
 <tr class="separator:a298e28260b8b4ef0396fc411b42c46e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9baba030d5bc6e9e20cf8b7d181edf35"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structinode.html">inode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a9baba030d5bc6e9e20cf8b7d181edf35">namei</a> (char *path)</td></tr>
+<tr class="memdesc:a9baba030d5bc6e9e20cf8b7d181edf35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the corresponding inode according to the path  <a href="easy-fs_2fs_8c.html#a9baba030d5bc6e9e20cf8b7d181edf35">更多...</a><br /></td></tr>
 <tr class="separator:a9baba030d5bc6e9e20cf8b7d181edf35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -147,6 +154,7 @@ fs.c 的引用(Include)关系图:</div>
 <tr class="memitem:a6baaf26dd83b71b8d684c5d54a709e31"><td class="memItemLeft" >&#160;&#160;&#160;struct <a class="el" href="structinode.html">inode</a>&#160;&#160;&#160;<a class="el" href="easy-fs_2fs_8c.html#a6baaf26dd83b71b8d684c5d54a709e31">inode</a> [<a class="el" href="utils_2defs_8h.html#adabafa10c7951be7c875cd2ee212be85">NINODE</a>]</td></tr>
 <tr class="separator:a6baaf26dd83b71b8d684c5d54a709e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a010ece35d82b747be361fb3501b96fcd"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="easy-fs_2fs_8c.html#a010ece35d82b747be361fb3501b96fcd">itable</a></td></tr>
+<tr class="memdesc:a010ece35d82b747be361fb3501b96fcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The inode table in memory  <a href="easy-fs_2fs_8c.html#a010ece35d82b747be361fb3501b96fcd">更多...</a><br /></td></tr>
 <tr class="separator:a010ece35d82b747be361fb3501b96fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
@@ -182,6 +190,8 @@ fs.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Write a new directory entry (name, inum) into the directory dp. </p>
+
 </div>
 </div>
 <a id="aa182c62fade7a0bae9408830d5e06d4f"></a>
@@ -215,6 +225,7 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Look for a directory entry in a directory. If found, set *poff to byte offset of entry. </p>
 
 </div>
 </div>
@@ -234,6 +245,8 @@ fs.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Show the filenames of all files in the directory </p>
+
 </div>
 </div>
 <a id="ade00044090adbc765c80c6cc81dae79d"></a>
@@ -250,6 +263,8 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Init fs </p>
 
 </div>
 </div>
@@ -278,6 +293,7 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Allocate an inode on device dev. Mark it as allocated by giving it type <code>type</code>. Returns an allocated and referenced inode. </p>
 
 </div>
 </div>
@@ -296,6 +312,7 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Increment reference count for ip. Returns ip to enable ip = idup(ip1) idiom. </p>
 
 </div>
 </div>
@@ -314,6 +331,7 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Drop a reference to an in-memory inode. If that was the last reference, the inode table entry can be recycled. If that was the last reference and the inode has no links to it, free the inode (and its content) on disk. All calls to <a class="el" href="easy-fs_2fs_8c.html#ab3c447f135c68e4c3c1f8d5866f6e77b">iput()</a> must be inside a transaction in case it has to free the inode. </p>
 
 </div>
 </div>
@@ -333,6 +351,8 @@ fs.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Truncate inode (discard contents). </p>
+
 </div>
 </div>
 <a id="a7220afa8e5f4bea540eb95879ea7df6e"></a>
@@ -350,6 +370,7 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Copy a modified in-memory inode to disk. Must be called after every change to an ip-&gt;xxx field that lives on disk. </p>
 
 </div>
 </div>
@@ -369,6 +390,8 @@ fs.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Reads the inode from disk if necessary. </p>
+
 </div>
 </div>
 <a id="a9baba030d5bc6e9e20cf8b7d181edf35"></a>
@@ -386,6 +409,8 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Find the corresponding inode according to the path </p>
 
 </div>
 </div>
@@ -432,6 +457,7 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Read data from inode. If user_dst==1, then dst is a user virtual address; otherwise, dst is a kernel address. </p>
 
 </div>
 </div>
@@ -449,6 +475,8 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Return the inode of the root directory </p>
 
 </div>
 </div>
@@ -495,6 +523,7 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Write data to inode. Caller must hold ip-&gt;lock. If user_src==1, then src is a user virtual address; otherwise, src is a kernel address. Returns the number of bytes successfully written. If the return value is less than the requested n, there was an error of some kind. </p>
 
 </div>
 </div>
@@ -510,6 +539,14 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>File system implementation. Five layers:</p><ul>
+<li>Blocks: allocator for raw disk blocks.</li>
+<li>Log: crash recovery for multi-step updates.</li>
+<li>Files: inode allocator, reading, writing, metadata.</li>
+<li>Directories: inode with special contents (list of other inodes!)</li>
+<li>Names: paths like /usr/rtm/xv6/fs.c for convenient naming.</li>
+</ul>
+<p>This file contains the low-level file system manipulation routines. The (higher-level) system call implementations are in sysfile.c. </p>
 
 </div>
 </div>
@@ -539,6 +576,8 @@ fs.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>The inode table in memory </p>
+
 </div>
 </div>
 <a id="a0248d0bac625de5a1415f2f8c91f3343"></a>
@@ -552,6 +591,7 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>there should be one superblock per disk device, but we run with only one device </p>
 
 </div>
 </div>

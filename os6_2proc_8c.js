@@ -9,6 +9,7 @@ var os6_2proc_8c =
     [ "exit", "os6_2proc_8c.html#a7b17e5913b7dff48eec9ba3976ccfd3c", null ],
     [ "fdalloc", "os6_2proc_8c.html#a00b6673379848688b1f4f14e5ce9735c", null ],
     [ "fetch", "os6_2proc_8c.html#a138a8ffaf920ace90e996769eefc8b0d", null ],
+    [ "filealloc", "os6_2proc_8c.html#ae6dcd86f2dc049b7ab643162247b463a", null ],
     [ "fork", "os6_2proc_8c.html#aa3a80f0c682e09d788db0c2b4cc5ff7e", null ],
     [ "freepagetable", "os6_2proc_8c.html#a1c6ed8cf6422c786643d95b1de20d723", null ],
     [ "get_curr_pagetable", "os6_2proc_8c.html#a1142ccecbe5d54372efbecdbeb20aba3", null ],

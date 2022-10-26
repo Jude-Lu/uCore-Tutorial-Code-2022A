@@ -107,7 +107,11 @@ $(document).ready(function(){initNavTree('structinode.html',''); initResizable()
 <tr class="memitem:a94905615a8f79fd11b8f500e1bbee16d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structinode.html#a94905615a8f79fd11b8f500e1bbee16d">addrs</a> [<a class="el" href="nfs_2fs_8h.html#acd38e9532d4b3623f844b93c012a8e06">NDIRECT</a>+1]</td></tr>
 <tr class="separator:a94905615a8f79fd11b8f500e1bbee16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">结构体成员变量说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Inode content</p>
+<p>The content (data) associated with each inode is stored in blocks on the disk. The first NDIRECT block numbers are listed in ip-&gt;addrs[]. The next NINDIRECT blocks are listed in block ip-&gt;addrs[NDIRECT].</p>
+<p>in-memory copy of an inode,it can be used to quickly locate file entities on disk </p>
+</div><h2 class="groupheader">结构体成员变量说明</h2>
 <a id="a94905615a8f79fd11b8f500e1bbee16d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a94905615a8f79fd11b8f500e1bbee16d">&#9670;&nbsp;</a></span>addrs</h2>
 

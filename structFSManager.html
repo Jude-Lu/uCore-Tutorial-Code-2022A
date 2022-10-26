@@ -102,12 +102,10 @@ FSManager 的协作图:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 成员变量</h2></td></tr>
-<tr class="memitem:aa79f83b35b38093079841f86c2614d93"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#aa79f83b35b38093079841f86c2614d93">filepool_size</a></td></tr>
-<tr class="separator:aa79f83b35b38093079841f86c2614d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3771f062bd97878faa51ebd23b997de0"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structfile.html">file</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a3771f062bd97878faa51ebd23b997de0">filepool</a></td></tr>
-<tr class="separator:a3771f062bd97878faa51ebd23b997de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a4bb4217968ab2b47c9be8db3c1accb"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a4a4bb4217968ab2b47c9be8db3c1accb">fdalloc</a> )(struct <a class="el" href="structfile.html">file</a> *f)</td></tr>
 <tr class="separator:a4a4bb4217968ab2b47c9be8db3c1accb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe0c01d2813ec65550778f85645054a3"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structfile.html">file</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#abe0c01d2813ec65550778f85645054a3">filealloc</a> )()</td></tr>
+<tr class="separator:abe0c01d2813ec65550778f85645054a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6d828f6936788fd5630aa1028856e2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#ad6d828f6936788fd5630aa1028856e2e">get_curr_pagetable</a> )()</td></tr>
 <tr class="separator:ad6d828f6936788fd5630aa1028856e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85f6b23ca0733e0f0ed3796079628432"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a85f6b23ca0733e0f0ed3796079628432">either_copyout</a> )(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, int, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, char *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
@@ -258,28 +256,14 @@ FSManager 的协作图:</div>
 
 </div>
 </div>
-<a id="a3771f062bd97878faa51ebd23b997de0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3771f062bd97878faa51ebd23b997de0">&#9670;&nbsp;</a></span>filepool</h2>
+<a id="abe0c01d2813ec65550778f85645054a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe0c01d2813ec65550778f85645054a3">&#9670;&nbsp;</a></span>filealloc</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structfile.html">file</a>* filepool</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa79f83b35b38093079841f86c2614d93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa79f83b35b38093079841f86c2614d93">&#9670;&nbsp;</a></span>filepool_size</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int filepool_size</td>
+          <td class="memname">struct <a class="el" href="structfile.html">file</a>*(* filealloc()</td>
         </tr>
       </table>
 </div><div class="memdoc">

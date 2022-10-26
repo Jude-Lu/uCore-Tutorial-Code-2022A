@@ -110,8 +110,10 @@ bio.c 的引用(Include)关系图:</div>
 <tr class="memitem:a9e6b07f66dc0719de7fc439e571070ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#a9e6b07f66dc0719de7fc439e571070ab">binit</a> ()</td></tr>
 <tr class="separator:a9e6b07f66dc0719de7fc439e571070ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01ebd0efe72af59c25446f90a1ba7bb9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#a01ebd0efe72af59c25446f90a1ba7bb9">bread</a> (<a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> dev, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> blockno)</td></tr>
+<tr class="memdesc:a01ebd0efe72af59c25446f90a1ba7bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a buf with the contents of the indicated block.  <a href="bio_8c.html#a01ebd0efe72af59c25446f90a1ba7bb9">更多...</a><br /></td></tr>
 <tr class="separator:a01ebd0efe72af59c25446f90a1ba7bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae81bbf8b40f0602a191798342900ca89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#ae81bbf8b40f0602a191798342900ca89">bwrite</a> (void *_b)</td></tr>
+<tr class="memdesc:ae81bbf8b40f0602a191798342900ca89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write b's contents to disk.  <a href="bio_8c.html#ae81bbf8b40f0602a191798342900ca89">更多...</a><br /></td></tr>
 <tr class="separator:ae81bbf8b40f0602a191798342900ca89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab295e04a65117b75f26d2b0937d3ae9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#aab295e04a65117b75f26d2b0937d3ae9">brelse</a> (void *_b)</td></tr>
 <tr class="separator:aab295e04a65117b75f26d2b0937d3ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,6 +200,8 @@ bio.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Return a buf with the contents of the indicated block. </p>
+
 </div>
 </div>
 <a id="aab295e04a65117b75f26d2b0937d3ae9"></a>
@@ -215,6 +219,7 @@ bio.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Release a buffer. Move to the head of the most-recently-used list. </p>
 
 </div>
 </div>
@@ -270,6 +275,8 @@ bio.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Write b's contents to disk. </p>
+
 </div>
 </div>
 <h2 class="groupheader">变量说明</h2>
@@ -284,6 +291,15 @@ bio.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Buffer cache.</p>
+<p>The buffer cache is a linked list of buf structures holding cached copies of disk block contents. Caching disk blocks in memory reduces the number of disk reads and also provides a synchronization point for disk blocks used by multiple processes.</p>
+<p>Interface:</p><ul>
+<li>To get a buffer for a particular disk block, call bread.</li>
+<li>After changing buffer data, call bwrite to write it to disk.</li>
+<li>When done with the buffer, call brelse.</li>
+<li>Do not use the buffer after calling brelse.</li>
+<li>Only one process at a time can use a buffer, so do not keep them longer than necessary. </li>
+</ul>
 
 </div>
 </div>
