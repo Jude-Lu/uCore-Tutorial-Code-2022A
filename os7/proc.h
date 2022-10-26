@@ -32,7 +32,8 @@ int fork();
 int exec(char *, char **);
 int wait(int, int *);
 int fdalloc(struct file *);
-int init_stdio(struct proc *);
+struct file* filealloc();
+int init_stdio(struct proc*);
 int push_argv(struct proc *, char **);
 // swtch.S
 void swtch(struct context *, struct context *);

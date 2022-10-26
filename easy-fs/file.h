@@ -4,7 +4,16 @@
 #include "fs.h"
 #include "defs.h"
 
-// in-memory copy of an inode,it can be used to quickly locate file entities on disk
+/**
+ * Inode content
+ * 
+ * The content (data) associated with each inode is stored
+ * in blocks on the disk. The first NDIRECT block numbers
+ * are listed in ip->addrs[].  The next NINDIRECT blocks are
+ * listed in block ip->addrs[NDIRECT].
+ * 
+ * in-memory copy of an inode,it can be used to quickly locate file entities on disk
+ */
 struct inode {
 	uint dev; // Device number
 	uint inum; // Inode number
@@ -16,8 +25,8 @@ struct inode {
 	// LAB4: You may need to add link count here
 };
 
-// file.h
-// Defines a file in memory that provides information about the current use of the file and the corresponding inode location
+/// file.h
+/// Defines a file in memory that provides information about the current use of the file and the corresponding inode location
 struct file {
 	enum { FD_NONE = 0, FD_PIPE, FD_INODE, FD_STDIO } type;
 	int ref; // reference count
@@ -29,7 +38,6 @@ struct file {
 };
 
 void fileclose(struct file *);
-struct file *filealloc();
 int pipealloc(struct file *, struct file *);
 int fileopen(char *, uint64);
 uint64 inodewrite(struct file *, uint64, uint64);
@@ -39,10 +47,8 @@ int show_all_files();
 
 struct FSManager
 {
-	int filepool_size;
-	struct file *filepool; // This is a system-level open file table that holds open files of all process.
-
 	int (*fdalloc)(struct file *f);
+	struct file* (*filealloc)();
 	pagetable_t (*get_curr_pagetable)();
 	
 	int (*either_copyout)(pagetable_t, int, uint64, char*, uint64);

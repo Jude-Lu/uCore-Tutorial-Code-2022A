@@ -1,18 +1,18 @@
 #ifndef VIRTIO_H
 #define VIRTIO_H
 
+/**
+ * virtio device definitions.
+ * for both the mmio interface, and virtio descriptors.
+ * only tested with qemu.
+ * this is the "legacy" virtio interface.
+ * 
+ * the virtio spec:
+ * https://docs.oasis-open.org/virtio/virtio/v1.1/virtio-v1.1.pdf
+ */
+
 #include "bio.h"
 #include "defs.h"
-
-//
-// virtio device definitions.
-// for both the mmio interface, and virtio descriptors.
-// only tested with qemu.
-// this is the "legacy" virtio interface.
-//
-// the virtio spec:
-// https://docs.oasis-open.org/virtio/virtio/v1.1/virtio-v1.1.pdf
-//
 
 // virtio mmio control registers, mapped starting at 0x10001000.
 // from qemu virtio_mmio.h
@@ -54,7 +54,7 @@
 // must be a power of two.
 #define NUM 8
 
-// a single descriptor, from the spec.
+/// a single descriptor, from the spec.
 struct virtq_desc {
 	uint64 addr;
 	uint32 len;
@@ -64,7 +64,7 @@ struct virtq_desc {
 #define VRING_DESC_F_NEXT 1 // chained with another descriptor
 #define VRING_DESC_F_WRITE 2 // device writes (vs read)
 
-// the (entire) avail ring, from the spec.
+/// the (entire) avail ring, from the spec.
 struct virtq_avail {
 	uint16 flags; // always zero
 	uint16 idx; // driver will write ring[idx] next
@@ -72,8 +72,8 @@ struct virtq_avail {
 	uint16 unused;
 };
 
-// one entry in the "used" ring, with which the
-// device tells the driver about completed requests.
+/// one entry in the "used" ring, with which the
+/// device tells the driver about completed requests.
 struct virtq_used_elem {
 	uint32 id; // index of start of completed descriptor chain
 	uint32 len;
@@ -91,9 +91,9 @@ struct virtq_used {
 #define VIRTIO_BLK_T_IN 0 // read the disk
 #define VIRTIO_BLK_T_OUT 1 // write the disk
 
-// the format of the first descriptor in a disk request.
-// to be followed by two more descriptors containing
-// the block, and a one-byte status.
+/// the format of the first descriptor in a disk request.
+/// to be followed by two more descriptors containing
+/// the block, and a one-byte status.
 struct virtio_blk_req {
 	uint32 type; // VIRTIO_BLK_T_IN or ..._OUT
 	uint32 reserved;
