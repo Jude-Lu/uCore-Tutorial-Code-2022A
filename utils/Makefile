@@ -1,7 +1,7 @@
 .PHONY: clean build .FORCE
 all: build
 
-MOD = syscall
+MOD = utils
 DIR = $(MOD)
 ACHV = lib$(MOD).a
 

@@ -1,7 +1,7 @@
 .PHONY: clean build .FORCE
 all: build
 
-MOD = syscall
+MOD = trap
 DIR = $(MOD)
 ACHV = lib$(MOD).a
 
@@ -12,7 +12,9 @@ BUILDDIR = ../build
 
 C_SRCS = $(wildcard *.c)
 C_OBJS = $(addsuffix .o, $(basename $(C_SRCS)))
-OBJS = $(C_OBJS)
+AS_SRCS = $(wildcard *.S)
+AS_OBJS = $(addsuffix .o, $(basename $(AS_SRCS)))
+OBJS = $(C_OBJS) $(AS_OBJS)
 HEADER_DEP = $(addsuffix .d, $(basename $(C_OBJS)))
 
 -include $(HEADER_DEP)
@@ -34,6 +36,10 @@ endif
 # empty target
 .FORCE:
 
+$(AS_OBJS): %.o : %.S
+	@mkdir -p $(BUILDDIR)/$(MOD)
+	$(CC) $(CFLAGS) -c $< -o $@
+
 $(C_OBJS): %.o : %.c %.d
 	@mkdir -p $(BUILDDIR)/$(MOD)
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -43,7 +49,6 @@ $(HEADER_DEP): %.d : %.c
 	@set -e; rm -f $@; $(CC) -MM $< $(INCLUDEFLAGS) > $@.$$$$; \
         sed 's,\($*\)\.o[ :]*,\1.o $@ : ,g' < $@.$$$$ > $@; \
         rm -f $@.$$$$
-	@mv $@ $(BUILDDIR)/$(MOD)
 
 build: $(OBJS)
 	$(AR) -rc $(ACHV) $(OBJS)
