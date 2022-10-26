@@ -34,28 +34,26 @@ CP = cp
 BUILDDIR = build
 LIBDIR = $(BUILDDIR)/$(LIB)
 # SUBDIR = asm console syscall trap kernel-vm task-manage script easy-fs disk pipe sync utils
-SUBDIRS = syscall trap utils
-
-$(SUBDIRS): .FORCE
-	make -C $@
-
-LIBS = $(wildcard $(LIBDIR)/*.a)
+SUBDIRS = utils console
 
 ## Append your module dir
 # C_SRCS = $(wildcard $(K)/*.c $(CONSOLE)/*.c $(UTILS)/*.c)
-C_SRCS = $(wildcard $(K)/*.c $(CONSOLE)/*.c)
+C_SRCS = $(wildcard $(K)/*.c)
 
 ifeq ($(shell expr $(ch) \>= 2), 1)
+	SUBDIRS += syscall trap
 	# C_SRCS += $(wildcard $(SYSCALL)/*.c)
 endif
 ifeq ($(shell expr $(ch) \>= 2), 1)
 	# C_SRCS += $(wildcard $(TRAP)/*.c)
 endif
 ifeq ($(shell expr $(ch) \>= 3), 1)
-	C_SRCS += $(wildcard $(TASK)/*.c)
+	SUBDIRS += task-manage
+	# C_SRCS += $(wildcard $(TASK)/*.c)
 endif
 ifeq ($(shell expr $(ch) \>= 4), 1)
-	C_SRCS += $(wildcard $(VM)/*.c)
+	SUBDIRS += kernel-vm
+	# C_SRCS += $(wildcard $(VM)/*.c)
 endif
 ifeq ($(shell expr $(ch) \>= 6), 1)
 	C_SRCS += $(wildcard $(FS)/*.c)
@@ -82,6 +80,11 @@ endif
 ifeq ($(shell expr $(ch) \>= 6), 1)
 	# AS_SRCS += $(TRAP)/kernelvec.S
 endif
+
+$(SUBDIRS): .FORCE
+	make -C $@
+
+LIBS = $(wildcard $(LIBDIR)/*.a)
 
 C_OBJS = $(addsuffix .o, $(basename $(C_SRCS)))
 AS_OBJS = $(addsuffix .o, $(basename $(AS_SRCS)))
