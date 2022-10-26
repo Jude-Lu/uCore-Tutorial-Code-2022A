@@ -1,10 +1,11 @@
-.PHONY: clean build user run debug test .FORCE
-all: build
+.PHONY: clean build user run debug test .FORCE $(SUBDIRS)
+all: $(SUBDIRS) build 
 
 ch ?= 1
 K = os$(ch)
 U = user
 F = nfs
+LIB = lib
 
 ## Add your module dir here
 ASM = asm
@@ -31,11 +32,20 @@ PY = python3
 GDB = $(TOOLPREFIX)gdb
 CP = cp
 BUILDDIR = build
+LIBDIR = $(BUILDDIR)/$(LIB)
+# SUBDIR = asm console syscall trap kernel-vm task-manage script easy-fs disk pipe sync utils
+SUBDIRS = syscall
+
+$(SUBDIRS): .FORCE
+	make -C $@
+
+LIBS = $(wildcard $(LIBDIR)/*.a)
 
 ## Append your module dir
 C_SRCS = $(wildcard $(K)/*.c $(CONSOLE)/*.c $(UTILS)/*.c)
+
 ifeq ($(shell expr $(ch) \>= 2), 1)
-	C_SRCS += $(wildcard $(SYSCALL)/*.c)
+	# C_SRCS += $(wildcard $(SYSCALL)/*.c)
 endif
 ifeq ($(shell expr $(ch) \>= 2), 1)
 	C_SRCS += $(wildcard $(TRAP)/*.c)
@@ -76,6 +86,8 @@ C_OBJS = $(addsuffix .o, $(basename $(C_SRCS)))
 AS_OBJS = $(addsuffix .o, $(basename $(AS_SRCS)))
 OBJS = $(C_OBJS) $(AS_OBJS)
 HEADER_DEP = $(addsuffix .d, $(basename $(C_OBJS)))
+$(info $(OBJS))
+$(info $(HEADER_DEP))
 
 -include $(HEADER_DEP)
 
@@ -170,19 +182,18 @@ $(SCRIPT)/kernel_app.ld: $(SCRIPT)/kernelld.py .FORCE
 	cd $(SCRIPT) && $(PY) kernelld.py
 endif
 
-build: build/kernel
-
 ifeq ($(shell expr $(ch) \!= 1)$(shell expr $(ch) \!= 6)$(shell expr $(ch) \!= 7)$(shell expr $(ch) \!= 8), 1111)
-build/kernel: $(OBJS) $(SCRIPT)/kernel_app.ld
-	$(LD) $(LDFLAGS) -T $(SCRIPT)/kernel_app.ld -o $(BUILDDIR)/kernel $(OBJS)
+build/kernel: $(OBJS) $(LIBS) $(SCRIPT)/kernel_app.ld
+	$(info $(SUBDIRS))
+	$(LD) $(LDFLAGS) -T $(SCRIPT)/kernel_app.ld -o $(BUILDDIR)/kernel $(OBJS) $(LIBS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
 	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
 	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d $K/*.S $(ASM)/*.d $(TRAP)/*.d
 	@echo 'Build kernel done'
 
 else
-build/kernel: $(OBJS) $(SCRIPT)/kernel.ld
-	$(LD) $(LDFLAGS) -T $(SCRIPT)/kernel.ld -o $(BUILDDIR)/kernel $(OBJS)
+build/kernel: $(OBJS) $(LIBS) $(SCRIPT)/kernel.ld
+	$(LD) $(LDFLAGS) -T $(SCRIPT)/kernel.ld -o $(BUILDDIR)/kernel $(OBJS) $(LIBS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
 	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
 	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d $K/*.S $(ASM)/*.d $(TRAP)/*.d
@@ -235,7 +246,7 @@ QEMUOPTS = \
 	-bios $(BOOTLOADER) \
 	-kernel build/kernel    \
 
-run: build/kernel
+run: $(SUBDIRS) build/kernel 
 	$(QEMU) $(QEMUOPTS)
 
 debug: build/kernel .gdbinit
