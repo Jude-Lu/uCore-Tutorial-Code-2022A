@@ -54,7 +54,8 @@ int wait(int, int *);
 int allocthread(struct proc *p, uint64 entry, int alloc_user_res);
 uint64 get_thread_trapframe_va(int tid);
 int fdalloc(struct file *);
-int init_stdio(struct proc *);
+struct file* filealloc();
+int init_stdio(struct proc*);
 int push_argv(struct proc *, char **);
 // swtch.S
 void swtch(struct context *, struct context *);

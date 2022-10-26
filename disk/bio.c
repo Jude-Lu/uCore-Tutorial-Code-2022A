@@ -1,17 +1,19 @@
-// Buffer cache.
-//
-// The buffer cache is a linked list of buf structures holding
-// cached copies of disk block contents.  Caching disk blocks
-// in memory reduces the number of disk reads and also provides
-// a synchronization point for disk blocks used by multiple processes.
-//
-// Interface:
-// * To get a buffer for a particular disk block, call bread.
-// * After changing buffer data, call bwrite to write it to disk.
-// * When done with the buffer, call brelse.
-// * Do not use the buffer after calling brelse.
-// * Only one process at a time can use a buffer,
-//     so do not keep them longer than necessary.
+/**
+ * Buffer cache.
+ * 
+ * The buffer cache is a linked list of buf structures holding
+ * cached copies of disk block contents.  Caching disk blocks
+ * in memory reduces the number of disk reads and also provides
+ * a synchronization point for disk blocks used by multiple processes.
+ * 
+ * Interface:
+ * * To get a buffer for a particular disk block, call bread.
+ * * After changing buffer data, call bwrite to write it to disk.
+ * * When done with the buffer, call brelse.
+ * * Do not use the buffer after calling brelse.
+ * * Only one process at a time can use a buffer,
+ *     so do not keep them longer than necessary.
+ */
 
 #include "bio.h"
 #include "virtio.h"
@@ -35,8 +37,8 @@ void binit()
 	}
 }
 
-// Look through buffer cache for block on device dev.
-// If not found, allocate a buffer.
+/// Look through buffer cache for block on device dev.
+/// If not found, allocate a buffer.
 static struct buf *bget(uint dev, uint blockno)
 {
 	struct buf *b;
@@ -65,7 +67,7 @@ static struct buf *bget(uint dev, uint blockno)
 const int R = 0;
 const int W = 1;
 
-// Return a buf with the contents of the indicated block.
+/// Return a buf with the contents of the indicated block.
 void* bread(uint dev, uint blockno)
 {
 	struct buf *b;
@@ -77,15 +79,15 @@ void* bread(uint dev, uint blockno)
 	return (void*)b;
 }
 
-// Write b's contents to disk.
+/// Write b's contents to disk.
 void bwrite(void *_b)
 {
 	struct buf *b = _b;
 	virtio_disk_rw(b, W);
 }
 
-// Release a buffer.
-// Move to the head of the most-recently-used list.
+/// Release a buffer.
+/// Move to the head of the most-recently-used list.
 void brelse(void *_b)
 {
 	struct buf *b = _b;

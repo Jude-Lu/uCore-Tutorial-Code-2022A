@@ -9,7 +9,8 @@ __attribute__((aligned(4096))) char trapframe[NPROC][NTHREAD][TRAP_PAGE_SIZE];
 struct thread idle;
 struct queue task_queue;
 
-struct file os8_filepool[FILEPOOLSIZE];
+int filepool_size = FILEPOOLSIZE;
+struct file filepool[FILEPOOLSIZE]; // This is a system-level open file table that holds open files of all process.
 
 inline struct proc* curr_proc()
 {
@@ -442,6 +443,18 @@ int fdalloc(struct file *f)
 	return -1;
 }
 
+//Add a new system-level table entry for the open file table
+struct file *filealloc()
+{
+	for (int i = 0; i < filepool_size; ++i) {
+		if (filepool[i].ref == 0) {
+			filepool[i].ref = 1;
+			return &filepool[i];
+		}
+	}
+	return 0;
+}
+
 pagetable_t get_curr_pagetable()
 {
 	return curr_proc() -> pagetable;
@@ -548,10 +561,8 @@ void proc_init()
 
 	static struct FSManager os8_fs_manager = 
 	{
-		.filepool_size = FILEPOOLSIZE,
-		.filepool = os8_filepool,
-
 		.fdalloc = fdalloc,
+		.filealloc = filealloc,
 		.get_curr_pagetable = get_curr_pagetable,
 
 		.either_copyout = either_copyout,
