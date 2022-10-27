@@ -71,7 +71,7 @@ endif
 
 ifeq ($(shell expr $(ch) \>= 5), 1)
 ifeq (,$(findstring initproc.o,$(OBJS)))
-	AS_OBJS += $K/initproc.o
+	AS_OBJS += $(ASM)/initproc.o
 endif
 endif
 
@@ -129,14 +129,14 @@ $(HEADER_DEP): %.d : %.c
 INIT_PROC ?= usershell
 
 ifeq ($(shell expr $(ch) \>= 6), 1)
-$(K)/initproc.o: $K/initproc.S
-$(K)/initproc.S: $(SCRIPT)/initproc.py .FORCE
-	cd $(SCRIPT) && $(PY) initproc.py $(INIT_PROC) $K
+$(ASM)/initproc.o: $(ASM)/initproc.S
+$(ASM)/initproc.S: $(SCRIPT)/initproc.py .FORCE
+	cd $(SCRIPT) && $(PY) initproc.py $(INIT_PROC) $(ASM)
 
 else ifeq ($(shell expr $(ch) \== 5), 1)
-$(K)/initproc.o: $K/initproc.S
-$(K)/initproc.S: $(SCRIPT)/initproc.py .FORCE
-	cd $(SCRIPT) && $(PY) initproc.py $(INIT_PROC) $K
+$(ASM)/initproc.o: $(ASM)/initproc.S
+$(ASM)/initproc.S: $(SCRIPT)/initproc.py .FORCE
+	cd $(SCRIPT) && $(PY) initproc.py $(INIT_PROC) $(ASM)
 
 $(K)/link_app.o: $K/link_app.S
 $(K)/link_app.S: $(SCRIPT)/pack.py .FORCE
