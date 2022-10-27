@@ -7,21 +7,8 @@ U = user
 F = nfs
 LIB = lib
 
-## Add your module dir here
 ASM = asm
-CONSOLE = console
-SYSCALL = syscall
-TRAP = trap
-VM = kernel-vm
-TASK = task-manage
 SCRIPT = script
-FS = easy-fs
-DISK = disk
-PIPE = pipe
-SYNC = sync
-UTILS = utils
-##
-
 TOOLPREFIX = riscv64-unknown-elf-
 CC = $(TOOLPREFIX)gcc
 AS = $(TOOLPREFIX)gcc
@@ -33,55 +20,37 @@ GDB = $(TOOLPREFIX)gdb
 CP = cp
 BUILDDIR = build
 LIBDIR = $(BUILDDIR)/$(LIB)
-# SUBDIR = asm console syscall trap kernel-vm task-manage script easy-fs disk pipe sync utils
 SUBDIRS = utils console
 
 ## Append your module dir
-# C_SRCS = $(wildcard $(K)/*.c $(CONSOLE)/*.c $(UTILS)/*.c)
 C_SRCS = $(wildcard $(K)/*.c)
 
 ifeq ($(shell expr $(ch) \>= 2), 1)
 	SUBDIRS += syscall trap
-	# C_SRCS += $(wildcard $(SYSCALL)/*.c)
-endif
-ifeq ($(shell expr $(ch) \>= 2), 1)
-	# C_SRCS += $(wildcard $(TRAP)/*.c)
 endif
 ifeq ($(shell expr $(ch) \>= 3), 1)
 	SUBDIRS += task-manage
-	# C_SRCS += $(wildcard $(TASK)/*.c)
 endif
 ifeq ($(shell expr $(ch) \>= 4), 1)
 	SUBDIRS += kernel-vm
-	# C_SRCS += $(wildcard $(VM)/*.c)
 endif
 ifeq ($(shell expr $(ch) \>= 6), 1)
-	C_SRCS += $(wildcard $(FS)/*.c)
-	C_SRCS += $(wildcard $(DISK)/*.c)
+	SUBDIRS += easy-fs
+	SUBDIRS += disk
 endif
 ifeq ($(shell expr $(ch) \>= 7), 1)
-	C_SRCS += $(wildcard $(PIPE)/*.c)
+	SUBDIRS += pipe
 endif
 ifeq ($(shell expr $(ch) \>= 8), 1)
-	C_SRCS += $(wildcard $(SYNC)/*.c)
+	SUBDIRS += sync
 endif
 ##
 
 AS_SRCS = $(wildcard $K/*.S $(ASM)/entry.S)
-ifeq ($(shell expr $(ch) \>= 2), 1)
-	# AS_SRCS += $(TRAP)/trampoline.S
-endif
-ifeq ($(shell expr $(ch) \>= 3), 1)
-	# AS_SRCS += $(TRAP)/switch.S
-endif
 ifeq ($(shell expr $(ch) \>= 5), 1)
 	AS_SRCS += $(ASM)/initproc.S
 endif
-ifeq ($(shell expr $(ch) \>= 6), 1)
-	# AS_SRCS += $(TRAP)/kernelvec.S
-endif
 
-$(info $(SUBDIRS))
 $(SUBDIRS): .FORCE
 	make -C $@
 
@@ -91,8 +60,6 @@ C_OBJS = $(addsuffix .o, $(basename $(C_SRCS)))
 AS_OBJS = $(addsuffix .o, $(basename $(AS_SRCS)))
 OBJS = $(C_OBJS) $(AS_OBJS)
 HEADER_DEP = $(addsuffix .d, $(basename $(C_OBJS)))
-$(info $(OBJS))
-$(info $(HEADER_DEP))
 
 -include $(HEADER_DEP)
 
@@ -189,25 +156,19 @@ endif
 
 ifeq ($(shell expr $(ch) \!= 1)$(shell expr $(ch) \!= 6)$(shell expr $(ch) \!= 7)$(shell expr $(ch) \!= 8), 1111)
 build/kernel: $(OBJS) $(SCRIPT)/kernel_app.ld
-	$(info $K)
-	$(info $(LIBS))
-	$(info "dep has no libs")
 	$(LD) $(LDFLAGS) -T $(SCRIPT)/kernel_app.ld -o $(BUILDDIR)/kernel $(OBJS) $(LIBS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
 	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
-	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d $K/*.S $(ASM)/*.d $(TRAP)/*.d
+	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d* $K/*.S $(ASM)/*.d*
 	@echo 'Build kernel done'
 
 else
 # build/kernel: $(OBJS) $(LIBS) $(SCRIPT)/kernel.ld
 build/kernel: $(OBJS) $(SCRIPT)/kernel.ld
-	$(info $K)
-	$(info "dep has libs")
-	$(info $(LIBS))
 	$(LD) $(LDFLAGS) -T $(SCRIPT)/kernel.ld -o $(BUILDDIR)/kernel $(OBJS) $(LIBS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
 	$(OBJDUMP) -t $(BUILDDIR)/kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$$/d' > $(BUILDDIR)/kernel.sym
-	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d $K/*.S $(ASM)/*.d $(TRAP)/*.d
+	@rm -f $(OBJS) $(HEADER_DEP) $K/*.d* $K/*.S $(ASM)/*.d*
 	@echo 'Build kernel done'
 endif
 
