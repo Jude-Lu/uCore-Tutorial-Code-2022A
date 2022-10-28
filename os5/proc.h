@@ -7,15 +7,15 @@
 
 // Per-process state
 struct proc {
-	enum procstate state; // Process state
-	int pid; // Process ID
-	pagetable_t pagetable; // User page table
-	uint64 ustack; // Virtual address of kernel stack
-	uint64 kstack; // Virtual address of kernel stack
-	struct trapframe *trapframe; // data page for trampoline.S
-	struct context context; // swtch() here to run process
+	enum procstate state; ///< Process state
+	int pid; ///< Process ID
+	pagetable_t pagetable; ///< User page table
+	uint64 ustack; ///< Virtual address of kernel stack
+	uint64 kstack; ///< Virtual address of kernel stack
+	struct trapframe *trapframe; ///< data page for trampoline.S
+	struct context context; ///< swtch() here to run process
 	uint64 max_page;
-	struct proc *parent; // Parent process
+	struct proc *parent; ///< Parent process
 	uint64 exit_code;
 };
 

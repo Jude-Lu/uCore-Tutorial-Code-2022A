@@ -9,10 +9,10 @@
 //a struct for pipe
 struct pipe {
 	char data[PIPESIZE];
-	uint nread; // number of bytes read
-	uint nwrite; // number of bytes written
-	int readopen; // read fd is still open
-	int writeopen; // write fd is still open
+	uint nread; ///< number of bytes read
+	uint nwrite; ///< number of bytes written
+	int readopen; ///< read fd is still open
+	int writeopen; ///< write fd is still open
 };
 
 void* pipeopen();

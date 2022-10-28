@@ -2,12 +2,14 @@
 #define VIRTIO_H
 
 /**
- * virtio device definitions.
- * for both the mmio interface, and virtio descriptors.
- * only tested with qemu.
- * this is the "legacy" virtio interface.
+ * @file virtio.h
+ * @brief virtio device definitions.
+ * @details
+ * both the mmio interface, and virtio descriptors. \n
+ * only tested with qemu. \n
+ * this is the "legacy" virtio interface. \n
  * 
- * the virtio spec:
+ * the virtio spec: \n
  * https://docs.oasis-open.org/virtio/virtio/v1.1/virtio-v1.1.pdf
  */
 
@@ -66,22 +68,22 @@ struct virtq_desc {
 
 /// the (entire) avail ring, from the spec.
 struct virtq_avail {
-	uint16 flags; // always zero
-	uint16 idx; // driver will write ring[idx] next
-	uint16 ring[NUM]; // descriptor numbers of chain heads
+	uint16 flags; ///< always zero
+	uint16 idx; ///< driver will write ring[idx] next
+	uint16 ring[NUM]; ///< descriptor numbers of chain heads
 	uint16 unused;
 };
 
 /// one entry in the "used" ring, with which the
 /// device tells the driver about completed requests.
 struct virtq_used_elem {
-	uint32 id; // index of start of completed descriptor chain
+	uint32 id; ///< index of start of completed descriptor chain
 	uint32 len;
 };
 
 struct virtq_used {
-	uint16 flags; // always zero
-	uint16 idx; // device increments when it adds a ring[] entry
+	uint16 flags; ///< always zero
+	uint16 idx; ///< device increments when it adds a ring[] entry
 	struct virtq_used_elem ring[NUM];
 };
 
@@ -95,7 +97,7 @@ struct virtq_used {
 /// to be followed by two more descriptors containing
 /// the block, and a one-byte status.
 struct virtio_blk_req {
-	uint32 type; // VIRTIO_BLK_T_IN or ..._OUT
+	uint32 type; ///< VIRTIO_BLK_T_IN or ..._OUT
 	uint32 reserved;
 	uint64 sector;
 };

@@ -2,8 +2,8 @@
 #define QUEUE_H
 #define QUEUE_SIZE (1024)
 
-// queue data for processing scheduling only
-// for queue for wait queue of mutex/semaphore/condvar, provide other data
+/// queue data for processing scheduling only
+/// for queue for wait queue of mutex/semaphore/condvar, provide other data
 extern int process_queue_data[QUEUE_SIZE];
 
 struct queue {

@@ -1,25 +1,20 @@
 #ifndef TRAP_H
 #define TRAP_H
 
-#define SSTATUS_SPP (1L << 8) // Previous mode, 1=Supervisor, 0=User
-#define SSTATUS_SPIE (1L << 5) // Supervisor Previous Interrupt Enable
+#define SSTATUS_SPP (1L << 8) ///< Previous mode, 1=Supervisor, 0=User
+#define SSTATUS_SPIE (1L << 5) ///< Supervisor Previous Interrupt Enable
 
 #include "log.h"
 #include "defs.h"
 
-typedef uint64 *pagetable_t; // 512 PTEs
+typedef uint64 *pagetable_t; ///< 512 PTEs
 
 struct trapframe {
-	/// kernel page table
-	/*   0 */ uint64 kernel_satp;
-	/// top of process's kernel stack
-	/*   8 */ uint64 kernel_sp;
-	/// usertrap()
-	/*  16 */ uint64 kernel_trap;
-	/// saved user program counter
-	/*  24 */ uint64 epc;
-	/// saved kernel tp
-	/*  32 */ uint64 kernel_hartid;
+	/*   0 */ uint64 kernel_satp; ///< kernel page table
+	/*   8 */ uint64 kernel_sp; ///< top of process's kernel stack
+	/*  16 */ uint64 kernel_trap; ///< usertrap()
+	/*  24 */ uint64 epc; ///< saved user program counter
+	/*  32 */ uint64 kernel_hartid; ///< saved kernel tp
 	/*  40 */ uint64 ra;
 	/*  48 */ uint64 sp;
 	/*  56 */ uint64 gp;

@@ -22,11 +22,11 @@ typedef uint64 *pagetable_t; // 512 PTEs
 
 // Machine Status Register, mstatus
 
-#define MSTATUS_MPP_MASK (3L << 11) // previous mode.
+#define MSTATUS_MPP_MASK (3L << 11) ///< previous mode.
 #define MSTATUS_MPP_M (3L << 11)
 #define MSTATUS_MPP_S (1L << 11)
 #define MSTATUS_MPP_U (0L << 11)
-#define MSTATUS_MIE (1L << 3) // machine-mode interrupt enable.
+#define MSTATUS_MIE (1L << 3) ///< machine-mode interrupt enable.
 
 #define PAGE_SIZE (0x1000)
 
@@ -42,7 +42,7 @@ enum {
 // for use by the kernel and user pages
 // from physical address 0x80000000 to PHYSTOP.
 #define KERNBASE 0x80200000L
-#define PHYSTOP (0x80000000 + 128 * 1024 * 1024) // we have 128M memroy
+#define PHYSTOP (0x80000000 + 128 * 1024 * 1024) ///< we have 128M memroy
 
 // one beyond the highest possible virtual address.
 // MAXVA is actually one bit less than the max allowed by
@@ -59,20 +59,20 @@ enum {
 #define MAX_APP_NUM (32)
 #define MAX_STR_LEN (300)
 #define IDLE_PID (0)
-#define MAX_ARG_NUM (32) // max exec arguments
+#define MAX_ARG_NUM (32) ///< max exec arguments
 
 // file system
-#define NFILE (100) // open files per system
-#define NINODE (50) // maximum number of active i-nodes
-#define NDEV (10) // maximum major device number
-#define ROOTDEV (1) // device number of file system root disk
-#define MAXOPBLOCKS (10) // max # of blocks any FS op writes
-#define NBUF (MAXOPBLOCKS * 3) // size of disk block cache
-#define FSSIZE (1000) // size of file system in blocks
-#define MAXPATH (128) // maximum file path name
+#define NFILE (100) ///< open files per system
+#define NINODE (50) ///< maximum number of active i-nodes
+#define NDEV (10) ///< maximum major device number
+#define ROOTDEV (1) ///< device number of file system root disk
+#define MAXOPBLOCKS (10) ///< max # of blocks any FS op writes
+#define NBUF (MAXOPBLOCKS * 3) ///< size of disk block cache
+#define FSSIZE (1000) ///< size of file system in blocks
+#define MAXPATH (128) ///< maximum file path name
 
-#define ROOTINO (1) // root i-number
-#define BSIZE (1024) // block size
+#define ROOTINO (1) ///< root i-number
+#define BSIZE (1024) ///< block size
 
 // virtio mmio interface
 #define VIRTIO0 0x10001000
@@ -85,11 +85,11 @@ enum {
 #define PGROUNDDOWN(a) (((a)) & ~(PGSIZE - 1))
 #define PGALIGNED(a) (((a) & (PGSIZE - 1)) == 0)
 
-#define PTE_V (1L << 0) // valid
+#define PTE_V (1L << 0) ///< valid
 #define PTE_R (1L << 1)
 #define PTE_W (1L << 2)
 #define PTE_X (1L << 3)
-#define PTE_U (1L << 4) // 1 -> user can access
+#define PTE_U (1L << 4) ///< 1 -> user can access
 
 // shift a physical address to the right place for a PTE.
 #define PA2PTE(pa) ((((uint64)pa) >> 12) << 10)
@@ -111,21 +111,21 @@ enum {
 
 // Supervisor Status Register, sstatus
 
-#define SSTATUS_SPP (1L << 8) // Previous mode, 1=Supervisor, 0=User
-#define SSTATUS_SPIE (1L << 5) // Supervisor Previous Interrupt Enable
-#define SSTATUS_UPIE (1L << 4) // User Previous Interrupt Enable
-#define SSTATUS_SIE (1L << 1) // Supervisor Interrupt Enable
-#define SSTATUS_UIE (1L << 0) // User Interrupt Enable
+#define SSTATUS_SPP (1L << 8) ///< Previous mode, 1=Supervisor, 0=User
+#define SSTATUS_SPIE (1L << 5) ///< Supervisor Previous Interrupt Enable
+#define SSTATUS_UPIE (1L << 4) ///< User Previous Interrupt Enable
+#define SSTATUS_SIE (1L << 1) ///< Supervisor Interrupt Enable
+#define SSTATUS_UIE (1L << 0) ///< User Interrupt Enable
 
 // Supervisor Interrupt Enable
-#define SIE_SEIE (1L << 9) // external
-#define SIE_STIE (1L << 5) // timer
-#define SIE_SSIE (1L << 1) // software
+#define SIE_SEIE (1L << 9) ///< external
+#define SIE_STIE (1L << 5) ///< timer
+#define SIE_SSIE (1L << 1) ///< software
 
 // Machine-mode Interrupt Enable
-#define MIE_MEIE (1L << 11) // external
-#define MIE_MTIE (1L << 7) // timer
-#define MIE_MSIE (1L << 3) // software
+#define MIE_MEIE (1L << 11) ///< external
+#define MIE_MTIE (1L << 7) ///< timer
+#define MIE_MSIE (1L << 3) ///< software
 
 // use riscv's sv39 page table scheme.
 #define SATP_SV39 (8L << 60)

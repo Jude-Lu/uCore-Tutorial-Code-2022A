@@ -10,24 +10,24 @@
 #define LOCK_POOL_SIZE (8)
 
 struct thread {
-	enum threadstate state; // Thread state
-	int tid; // Thread ID
+	enum threadstate state; ///< Thread state
+	int tid; ///< Thread ID
 	struct proc *process;
-	uint64 ustack; // Virtual address of user stack
-	uint64 kstack; // Virtual address of kernel stack
-	struct trapframe *trapframe; // data page for trampoline.S
-	struct context context; // swtch() here to run process
+	uint64 ustack; ///< Virtual address of user stack
+	uint64 kstack; ///< Virtual address of kernel stack
+	struct trapframe *trapframe; ///< data page for trampoline.S
+	struct context context; ///< swtch() here to run process
 	uint64 exit_code;
 };
 
 // Per-process state
 struct proc {
-	enum procstate state; // Process state
-	int pid; // Process ID
-	pagetable_t pagetable; // User page table
+	enum procstate state; ///< Process state
+	int pid; ///< Process ID
+	pagetable_t pagetable; ///< User page table
 	uint64 max_page;
-	uint64 ustack_base; // Virtual address of user stack base
-	struct proc *parent; // Parent process
+	uint64 ustack_base; ///< Virtual address of user stack base
+	struct proc *parent; ///< Parent process
 	uint64 exit_code;
 	//File descriptor table, using to record the files opened by the process
 	struct file *files[FD_BUFFER_SIZE];

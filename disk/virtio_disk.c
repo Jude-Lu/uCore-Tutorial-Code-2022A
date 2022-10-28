@@ -1,11 +1,13 @@
-///
-/// driver for qemu's virtio disk device.
-/// uses qemu's mmio interface to virtio.
-/// qemu presents a "legacy" virtio interface.
-///
-/// qemu ... -drive file=fs.img,if=none,format=raw,id=x0 -device
-/// virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0
-///
+/**
+ * @file virtio_disk.c
+ * @details
+ * driver for qemu's virtio disk device. \n
+ * uses qemu's mmio interface to virtio. \n
+ * qemu presents a "legacy" virtio interface. \n
+ * 
+ * qemu ... -drive file=fs.img,if=none,format=raw,id=x0 -device \n
+ * virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0
+ */
 
 #include "virtio.h"
 #include "disk_dependency.h"
@@ -52,9 +54,9 @@ static struct disk {
 	/// points into pages[].
 	struct virtq_used *used;
 
-	/// our own book-keeping.
-	char free[NUM]; // is a descriptor free?
-	uint16 used_idx; // we've looked this far in used[2..NUM].
+	// our own book-keeping.
+	char free[NUM]; ///< is a descriptor free?
+	uint16 used_idx; ///< we've looked this far in used[2..NUM].
 
 	/// track info about in-flight operations,
 	/// for use when completion interrupt arrives.

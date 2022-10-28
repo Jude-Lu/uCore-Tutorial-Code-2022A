@@ -2,16 +2,15 @@
 #include "kalloc.h"
 
 /**
- * Return the address of the PTE in page table pagetable
- * that corresponds to virtual address va.  If alloc!=0,
- * create any required page-table pages.
- * The risc-v Sv39 scheme has three levels of page-table
- * pages. A page-table page contains 512 64-bit PTEs.
- * A 64-bit virtual address is split into five fields:
- * 39..63 -- must be zero.
- * 30..38 -- 9 bits of level-2 index.
- * 21..29 -- 9 bits of level-1 index.
- * 12..20 -- 9 bits of level-0 index.
+ * Return the address of the PTE in page table pagetable that corresponds to virtual address va. \n
+ * If alloc!=0, create any required page-table pages. \n
+ * The risc-v Sv39 scheme has three levels of page-table pages. \n
+ * A page-table page contains 512 64-bit PTEs. \n
+ * A 64-bit virtual address is split into five fields: \n
+ * 39..63 -- must be zero. \n
+ * 30..38 -- 9 bits of level-2 index. \n
+ * 21..29 -- 9 bits of level-1 index. \n
+ * 12..20 -- 9 bits of level-0 index. \n
  * 0..11 -- 12 bits of byte offset within the page.
  */  
 pte_t* walk(pagetable_t pagetable, uint64 va, int alloc) {
@@ -33,8 +32,7 @@ pte_t* walk(pagetable_t pagetable, uint64 va, int alloc) {
 }
 
 /**
- * Look up a virtual address, return the physical address,
- * or 0 if not mapped.
+ * Look up a virtual address, return the physical address, or 0 if not mapped. \n
  * Can only be used to look up user pages.
  */
 uint64 walkaddr(pagetable_t pagetable, uint64 va) {
@@ -64,7 +62,7 @@ uint64 useraddr(pagetable_t pagetable, uint64 va) {
 }
 
 /**
- * Recursively free page-table pages.
+ * Recursively free page-table pages. \n
  * All leaf mappings must already have been removed.
  */
 void freewalk(pagetable_t pagetable) {
@@ -84,8 +82,8 @@ void freewalk(pagetable_t pagetable) {
 }
 
 /**
- * Copy from kernel to user.
- * Copy len bytes from src to virtual address dstva in a given page table.
+ * Copy from kernel to user. \n
+ * Copy len bytes from src to virtual address dstva in a given page table. \n
  * Return 0 on success, -1 on error.
  */
 int copyout(pagetable_t pagetable, uint64 dstva, char* src, uint64 len) {
@@ -109,9 +107,9 @@ int copyout(pagetable_t pagetable, uint64 dstva, char* src, uint64 len) {
 }
 
 /**
- * Copy from user to kernel.
- * Copy len bytes to dst from virtual address srcva in a given page table.
- * Return 0 on success, -1 on error.
+ * Copy from user to kernel. \n
+ * Copy len bytes to dst from virtual address srcva in a given page table. \n
+ * Return 0 on success, -1 on error. \n
  */
 int copyin(pagetable_t pagetable, char* dst, uint64 srcva, uint64 len) {
     uint64 n, va0, pa0;
@@ -134,9 +132,8 @@ int copyin(pagetable_t pagetable, char* dst, uint64 srcva, uint64 len) {
 }
 
 /**
- * Copy a null-terminated string from user to kernel.
- * Copy bytes to dst from virtual address srcva in a given page table,
- * until a '\0', or max.
+ * Copy a null-terminated string from user to kernel. \n
+ * Copy bytes to dst from virtual address srcva in a given page table, until a '\0', or max. \n
  * Return 0 on success, -1 on error.
  */
 int copyinstr(pagetable_t pagetable, char* dst, uint64 srcva, uint64 max) {
