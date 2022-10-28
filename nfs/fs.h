@@ -5,17 +5,17 @@
 // On-disk file system format.
 // Both the kernel and user programs use this header file.
 
-#define NFILE 100 // open files per system
-#define NINODE 50 // maximum number of active i-nodes
-#define NDEV 10 // maximum major device number
-#define ROOTDEV 1 // device number of file system root disk
-#define MAXOPBLOCKS 10 // max # of blocks any FS op writes
-#define NBUF (MAXOPBLOCKS * 3) // size of disk block cache
-#define FSSIZE 1000 // size of file system in blocks
-#define MAXPATH 128 // maximum file path name
+#define NFILE 100 ///< open files per system
+#define NINODE 50 ///< maximum number of active i-nodes
+#define NDEV 10 ///< maximum major device number
+#define ROOTDEV 1 ///< device number of file system root disk
+#define MAXOPBLOCKS 10 ///< max # of blocks any FS op writes
+#define NBUF (MAXOPBLOCKS * 3) ///< size of disk block cache
+#define FSSIZE 1000 ///< size of file system in blocks
+#define MAXPATH 128 ///< maximum file path name
 
-#define ROOTINO 1 // root i-number
-#define BSIZE 1024 // block size
+#define ROOTINO 1 ///< root i-number
+#define BSIZE 1024 ///< block size
 
 // Disk layout:
 // [ boot block | super block | inode blocks | free bit map | data blocks]
@@ -23,12 +23,12 @@
 // mkfs computes the super block and builds an initial file system. The
 // super block describes the disk layout:
 struct superblock {
-	uint magic; // Must be FSMAGIC
-	uint size; // Size of file system image (blocks)
-	uint nblocks; // Number of data blocks
-	uint ninodes; // Number of inodes.
-	uint inodestart; // Block number of first inode block
-	uint bmapstart; // Block number of first free map block
+	uint magic; ///< Must be FSMAGIC
+	uint size; ///< Size of file system image (blocks)
+	uint nblocks; ///< Number of data blocks
+	uint ninodes; ///< Number of inodes.
+	uint inodestart; ///< Block number of first inode block
+	uint bmapstart; ///< Block number of first free map block
 };
 
 #define FSMAGIC 0x10203040
@@ -44,10 +44,10 @@ struct superblock {
 // LAB4: Keep it the same as dinode in os/fs.h after you change it
 // On-disk inode structure
 struct dinode {
-	short type; // File type
+	short type; ///< File type
 	short pad[3];
-	uint size; // Size of file (bytes)
-	uint addrs[NDIRECT + 1]; // Data block addresses
+	uint size; ///< Size of file (bytes)
+	uint addrs[NDIRECT + 1]; ///< Data block addresses
 };
 
 // Inodes per block.

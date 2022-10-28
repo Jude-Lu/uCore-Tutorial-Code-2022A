@@ -10,7 +10,7 @@ struct proc idle;
 struct queue task_queue;
 
 int filepool_size = FILEPOOLSIZE;
-struct file filepool[FILEPOOLSIZE]; // This is a system-level open file table that holds open files of all process.
+struct file filepool[FILEPOOLSIZE]; ///< This is a system-level open file table that holds open files of all process.
 
 int procid()
 {

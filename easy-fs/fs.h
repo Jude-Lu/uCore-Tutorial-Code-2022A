@@ -15,12 +15,12 @@
  * super block describes the disk layout:
  */
 struct superblock {
-	uint magic; // Must be FSMAGIC
-	uint size; // Size of file system image (blocks)
-	uint nblocks; // Number of data blocks
-	uint ninodes; // Number of inodes.
-	uint inodestart; // Block number of first inode block
-	uint bmapstart; // Block number of first free map block
+	uint magic; ///< Must be FSMAGIC
+	uint size; ///< Size of file system image (blocks)
+	uint nblocks; ///< Number of data blocks
+	uint ninodes; ///< Number of inodes.
+	uint inodestart; ///< Block number of first inode block
+	uint bmapstart; ///< Block number of first free map block
 };
 
 #define FSMAGIC 0x10203040
@@ -35,13 +35,13 @@ struct superblock {
 
 /// On-disk inode structure
 struct dinode {
-	short type; // File type
+	short type; ///< File type
 	short pad[3];
 	// LAB4: you can reduce size of pad array and add link count below,
 	//       or you can just regard a pad as link count.
 	//       But keep in mind that you'd better keep sizeof(dinode) unchanged
-	uint size; // Size of file (bytes)
-	uint addrs[NDIRECT + 1]; // Data block addresses
+	uint size; ///< Size of file (bytes)
+	uint addrs[NDIRECT + 1]; ///< Data block addresses
 };
 
 /// Inodes per block.

@@ -18,13 +18,13 @@
 
 #define NINODES 200
 
-// Disk layout:
-// [ boot block | sb block | inode blocks | free bit map | data blocks ]
+/// Disk layout:
+/// [ boot block | sb block | inode blocks | free bit map | data blocks ]
 
 int nbitmap = FSSIZE / (BSIZE * 8) + 1;
 int ninodeblocks = NINODES / IPB + 1;
-int nmeta; // Number of meta blocks (boot, sb, nlog, inode, bitmap)
-int nblocks; // Number of data blocks
+int nmeta; ///< Number of meta blocks (boot, sb, nlog, inode, bitmap)
+int nblocks; ///< Number of data blocks
 
 int fsfd;
 struct superblock sb;

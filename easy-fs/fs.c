@@ -156,7 +156,7 @@ static struct inode *iget(uint dev, uint inum)
 			ip->ref++;
 			return ip;
 		}
-		if (empty == 0 && ip->ref == 0) // Remember empty slot.
+		if (empty == 0 && ip->ref == 0) ///< Remember empty slot.
 			empty = ip;
 	}
 

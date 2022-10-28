@@ -53,8 +53,8 @@ static struct disk {
 	struct virtq_used *used;
 
 	/// our own book-keeping.
-	char free[NUM]; // is a descriptor free?
-	uint16 used_idx; // we've looked this far in used[2..NUM].
+	char free[NUM]; ///< is a descriptor free?
+	uint16 used_idx; ///< we've looked this far in used[2..NUM].
 
 	/// track info about in-flight operations,
 	/// for use when completion interrupt arrives.
