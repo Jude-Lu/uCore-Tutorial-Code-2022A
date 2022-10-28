@@ -22,11 +22,11 @@
 <area shape="rect" id="node10" href="$sbi_8h.html" title=" " alt="" coords="386,393,439,420"/>
 <area shape="rect" id="node11" href="$console_2defs_8h.html" title=" " alt="" coords="376,468,439,495"/>
 <area shape="rect" id="node13" href="$bio_8h.html" title=" " alt="" coords="463,468,517,495"/>
-<area shape="rect" id="node16" href="$virtio_8h.html" title=" " alt="" coords="521,393,589,420"/>
+<area shape="rect" id="node16" href="$virtio_8h.html" title="virtio device definitions." alt="" coords="521,393,589,420"/>
 <area shape="rect" id="node14" href="$disk_2defs_8h.html" title=" " alt="" coords="519,543,581,569"/>
 <area shape="rect" id="node15" href="$disk_2log_8h.html" title=" " alt="" coords="440,543,495,569"/>
-<area shape="rect" id="node18" href="$easy-fs_2fs_8h.html" title=" " alt="" coords="684,468,731,495"/>
-<area shape="rect" id="node21" href="$file_8h.html" title=" " alt="" coords="703,393,757,420"/>
+<area shape="rect" id="node18" href="$easy-fs_2fs_8h.html" title="On&#45;disk file system format." alt="" coords="684,468,731,495"/>
+<area shape="rect" id="node21" href="$file_8h.html" title="Inode content" alt="" coords="703,393,757,420"/>
 <area shape="rect" id="node19" href="$easy-fs_2defs_8h.html" title=" " alt="" coords="761,543,824,569"/>
 <area shape="rect" id="node20" href="$fs__dependency_8h.html" title=" " alt="" coords="606,543,737,569"/>
 <area shape="rect" id="node23" href="$kalloc_8h.html" title=" " alt="" coords="782,393,854,420"/>

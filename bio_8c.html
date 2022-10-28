@@ -88,6 +88,9 @@ $(document).ready(function(){initNavTree('bio_8c.html',''); initResizable(); });
 <div class="title">bio.c 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Buffer cache.  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="bio_8h_source.html">bio.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="virtio_8h_source.html">virtio.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -95,9 +98,9 @@ bio.c 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="bio_8c__incl.png" border="0" usemap="#disk_2bio_8c" alt=""/></div>
 <map name="disk_2bio_8c" id="disk_2bio_8c">
-<area shape="rect" title=" " alt="" coords="88,5,172,32"/>
+<area shape="rect" title="Buffer cache." alt="" coords="88,5,172,32"/>
 <area shape="rect" href="bio_8h.html" title=" " alt="" coords="66,155,121,181"/>
-<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="132,80,200,107"/>
+<area shape="rect" href="virtio_8h.html" title="virtio device definitions." alt="" coords="132,80,200,107"/>
 <area shape="rect" href="disk_2defs_8h.html" title=" " alt="" coords="62,453,125,480"/>
 <area shape="rect" href="disk_2log_8h.html" title=" " alt="" coords="66,229,121,256"/>
 <area shape="rect" href="disk__dependency_8h.html" title=" " alt="" coords="21,304,166,331"/>
@@ -138,7 +141,26 @@ bio.c 的引用(Include)关系图:</div>
 <tr class="memitem:ab21b528bc38899d04d3a7053e52fb797"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#ab21b528bc38899d04d3a7053e52fb797">W</a> = 1</td></tr>
 <tr class="separator:ab21b528bc38899d04d3a7053e52fb797"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">函数说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Buffer cache. </p>
+<p>The buffer cache is a linked list of buf structures holding <br  />
+cached copies of disk block contents. Caching disk blocks <br  />
+in memory reduces the number of disk reads and also provides <br  />
+a synchronization point for disk blocks used by multiple processes. <br  />
+ Interface: <br  />
+</p><ul>
+<li>To get a buffer for a particular disk block, call bread. <br  />
+</li>
+<li>After changing buffer data, call bwrite to write it to disk. <br  />
+</li>
+<li>When done with the buffer, call brelse. <br  />
+</li>
+<li>Do not use the buffer after calling brelse. <br  />
+</li>
+<li>Only one process at a time can use a buffer, <br  />
+ so do not keep them longer than necessary. </li>
+</ul>
+</div><h2 class="groupheader">函数说明</h2>
 <a id="a9e6b07f66dc0719de7fc439e571070ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e6b07f66dc0719de7fc439e571070ab">&#9670;&nbsp;</a></span>binit()</h2>
 
@@ -291,15 +313,6 @@ bio.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Buffer cache.</p>
-<p>The buffer cache is a linked list of buf structures holding cached copies of disk block contents. Caching disk blocks in memory reduces the number of disk reads and also provides a synchronization point for disk blocks used by multiple processes.</p>
-<p>Interface:</p><ul>
-<li>To get a buffer for a particular disk block, call bread.</li>
-<li>After changing buffer data, call bwrite to write it to disk.</li>
-<li>When done with the buffer, call brelse.</li>
-<li>Do not use the buffer after calling brelse.</li>
-<li>Only one process at a time can use a buffer, so do not keep them longer than necessary. </li>
-</ul>
 
 </div>
 </div>

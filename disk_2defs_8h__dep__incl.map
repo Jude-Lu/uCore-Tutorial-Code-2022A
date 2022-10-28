@@ -1,9 +1,9 @@
 <map id="disk/defs.h" name="disk/defs.h">
 <area shape="rect" id="node1" title=" " alt="" coords="978,5,1071,32"/>
 <area shape="rect" id="node2" href="$bio_8h.html" title=" " alt="" coords="934,304,1019,331"/>
-<area shape="rect" id="node4" href="$virtio_8h.html" title=" " alt="" coords="1014,379,1113,405"/>
+<area shape="rect" id="node4" href="$virtio_8h.html" title="virtio device definitions." alt="" coords="1014,379,1113,405"/>
 <area shape="rect" id="node34" href="$disk_2string_8h.html" title=" " alt="" coords="973,80,1076,107"/>
-<area shape="rect" id="node3" href="$bio_8c.html" title=" " alt="" coords="875,453,959,480"/>
+<area shape="rect" id="node3" href="$bio_8c.html" title="Buffer cache." alt="" coords="875,453,959,480"/>
 <area shape="rect" id="node5" href="$disk__module_8h.html" title=" " alt="" coords="983,453,1131,480"/>
 <area shape="rect" id="node33" href="$virtio__disk_8c.html" title=" " alt="" coords="1155,453,1287,480"/>
 <area shape="rect" id="node6" href="$os6_2modules_8h.html" title=" " alt="" coords="333,528,450,555"/>

@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
 <area shape="rect" href="trap__dependency_8h.html" title=" " alt="" coords="1795,80,1969,107"/>
 <area shape="rect" href="trap_8h.html" title=" " alt="" coords="1865,229,1955,256"/>
 <area shape="rect" href="timer_8h.html" title=" " alt="" coords="1671,80,1770,107"/>
-<area shape="rect" href="plic_8c.html" title=" " alt="" coords="2045,80,2132,107"/>
+<area shape="rect" href="plic_8c.html" title="the riscv Platform Level Interrupt Controller (PLIC)." alt="" coords="2045,80,2132,107"/>
 <area shape="rect" href="trap_2log_8h.html" title=" " alt="" coords="1883,155,1967,181"/>
 <area shape="rect" href="timer_8c.html" title=" " alt="" coords="1761,155,1859,181"/>
 <area shape="rect" href="trap__module_8h.html" title=" " alt="" coords="1823,304,1970,331"/>
@@ -160,6 +160,7 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
 <tr class="memitem:a070d2ce7b6bb7e5c05602aa8c308d0c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>&#160;&#160;&#160;((void *)0)</td></tr>
 <tr class="separator:a070d2ce7b6bb7e5c05602aa8c308d0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16d6d0c403a36d5c6be7915bb7b830b7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a16d6d0c403a36d5c6be7915bb7b830b7">MSTATUS_MPP_MASK</a>&#160;&#160;&#160;(3L &lt;&lt; 11)</td></tr>
+<tr class="memdesc:a16d6d0c403a36d5c6be7915bb7b830b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">previous mode.  <a href="trap_2defs_8h.html#a16d6d0c403a36d5c6be7915bb7b830b7">更多...</a><br /></td></tr>
 <tr class="separator:a16d6d0c403a36d5c6be7915bb7b830b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6621785868a067469e73ac9babeed99"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#aa6621785868a067469e73ac9babeed99">MSTATUS_MPP_M</a>&#160;&#160;&#160;(3L &lt;&lt; 11)</td></tr>
 <tr class="separator:aa6621785868a067469e73ac9babeed99"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,12 +169,14 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
 <tr class="memitem:aebc8dae20b3f619d03f0291db287f6de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#aebc8dae20b3f619d03f0291db287f6de">MSTATUS_MPP_U</a>&#160;&#160;&#160;(0L &lt;&lt; 11)</td></tr>
 <tr class="separator:aebc8dae20b3f619d03f0291db287f6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a225cb34e3b991318fa87f090cfc3fc5f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a225cb34e3b991318fa87f090cfc3fc5f">MSTATUS_MIE</a>&#160;&#160;&#160;(1L &lt;&lt; 3)</td></tr>
+<tr class="memdesc:a225cb34e3b991318fa87f090cfc3fc5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">machine-mode interrupt enable.  <a href="trap_2defs_8h.html#a225cb34e3b991318fa87f090cfc3fc5f">更多...</a><br /></td></tr>
 <tr class="separator:a225cb34e3b991318fa87f090cfc3fc5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d467c1d283fdfa1f2081ba1e0d01b6e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e">PAGE_SIZE</a>&#160;&#160;&#160;(0x1000)</td></tr>
 <tr class="separator:a7d467c1d283fdfa1f2081ba1e0d01b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20cbfc19992a40ab9ccf4aa8ab8283d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a20cbfc19992a40ab9ccf4aa8ab8283d0">KERNBASE</a>&#160;&#160;&#160;0x80200000L</td></tr>
 <tr class="separator:a20cbfc19992a40ab9ccf4aa8ab8283d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3c557a115f7d82d9ef849846779531c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#ad3c557a115f7d82d9ef849846779531c">PHYSTOP</a>&#160;&#160;&#160;(0x80000000 + 128 * 1024 * 1024)</td></tr>
+<tr class="memdesc:ad3c557a115f7d82d9ef849846779531c"><td class="mdescLeft">&#160;</td><td class="mdescRight">we have 128M memroy  <a href="trap_2defs_8h.html#ad3c557a115f7d82d9ef849846779531c">更多...</a><br /></td></tr>
 <tr class="separator:ad3c557a115f7d82d9ef849846779531c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a781d1689a393d7c6e4243349cfdf6ce8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a781d1689a393d7c6e4243349cfdf6ce8">MAXVA</a>&#160;&#160;&#160;(1L &lt;&lt; (9 + 9 + 9 + 12 - 1))</td></tr>
 <tr class="separator:a781d1689a393d7c6e4243349cfdf6ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,26 +193,37 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
 <tr class="memitem:a140badff32835d7b4825ce2ac8c3a1bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a140badff32835d7b4825ce2ac8c3a1bc">IDLE_PID</a>&#160;&#160;&#160;(0)</td></tr>
 <tr class="separator:a140badff32835d7b4825ce2ac8c3a1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2118cce41db1171e3c76c1c1268641b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#af2118cce41db1171e3c76c1c1268641b">MAX_ARG_NUM</a>&#160;&#160;&#160;(32)</td></tr>
+<tr class="memdesc:af2118cce41db1171e3c76c1c1268641b"><td class="mdescLeft">&#160;</td><td class="mdescRight">max exec arguments  <a href="trap_2defs_8h.html#af2118cce41db1171e3c76c1c1268641b">更多...</a><br /></td></tr>
 <tr class="separator:af2118cce41db1171e3c76c1c1268641b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8485f4e81de2537e6a0935626167a775"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a8485f4e81de2537e6a0935626167a775">NFILE</a>&#160;&#160;&#160;(100)</td></tr>
+<tr class="memdesc:a8485f4e81de2537e6a0935626167a775"><td class="mdescLeft">&#160;</td><td class="mdescRight">open files per system  <a href="trap_2defs_8h.html#a8485f4e81de2537e6a0935626167a775">更多...</a><br /></td></tr>
 <tr class="separator:a8485f4e81de2537e6a0935626167a775"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adabafa10c7951be7c875cd2ee212be85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#adabafa10c7951be7c875cd2ee212be85">NINODE</a>&#160;&#160;&#160;(50)</td></tr>
+<tr class="memdesc:adabafa10c7951be7c875cd2ee212be85"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum number of active i-nodes  <a href="trap_2defs_8h.html#adabafa10c7951be7c875cd2ee212be85">更多...</a><br /></td></tr>
 <tr class="separator:adabafa10c7951be7c875cd2ee212be85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa564a41c8409694da49b0badf2bb2853"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#aa564a41c8409694da49b0badf2bb2853">NDEV</a>&#160;&#160;&#160;(10)</td></tr>
+<tr class="memdesc:aa564a41c8409694da49b0badf2bb2853"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum major device number  <a href="trap_2defs_8h.html#aa564a41c8409694da49b0badf2bb2853">更多...</a><br /></td></tr>
 <tr class="separator:aa564a41c8409694da49b0badf2bb2853"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9ce6b24fe2aae59ff60b469c35febbc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#ae9ce6b24fe2aae59ff60b469c35febbc">ROOTDEV</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="memdesc:ae9ce6b24fe2aae59ff60b469c35febbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">device number of file system root disk  <a href="trap_2defs_8h.html#ae9ce6b24fe2aae59ff60b469c35febbc">更多...</a><br /></td></tr>
 <tr class="separator:ae9ce6b24fe2aae59ff60b469c35febbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31cde324007b4e52bbba7079ec5e5f45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a31cde324007b4e52bbba7079ec5e5f45">MAXOPBLOCKS</a>&#160;&#160;&#160;(10)</td></tr>
+<tr class="memdesc:a31cde324007b4e52bbba7079ec5e5f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">max # of blocks any FS op writes  <a href="trap_2defs_8h.html#a31cde324007b4e52bbba7079ec5e5f45">更多...</a><br /></td></tr>
 <tr class="separator:a31cde324007b4e52bbba7079ec5e5f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad51e2f8dffd163c263ec676a268d0f0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#ad51e2f8dffd163c263ec676a268d0f0a">NBUF</a>&#160;&#160;&#160;(<a class="el" href="utils_2defs_8h.html#a31cde324007b4e52bbba7079ec5e5f45">MAXOPBLOCKS</a> * 3)</td></tr>
+<tr class="memdesc:ad51e2f8dffd163c263ec676a268d0f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">size of disk block cache  <a href="trap_2defs_8h.html#ad51e2f8dffd163c263ec676a268d0f0a">更多...</a><br /></td></tr>
 <tr class="separator:ad51e2f8dffd163c263ec676a268d0f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a486f47992f736854db2444b01afd9991"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a486f47992f736854db2444b01afd9991">FSSIZE</a>&#160;&#160;&#160;(1000)</td></tr>
+<tr class="memdesc:a486f47992f736854db2444b01afd9991"><td class="mdescLeft">&#160;</td><td class="mdescRight">size of file system in blocks  <a href="trap_2defs_8h.html#a486f47992f736854db2444b01afd9991">更多...</a><br /></td></tr>
 <tr class="separator:a486f47992f736854db2444b01afd9991"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d1edde91ea515b363277f4bbdc3244d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a2d1edde91ea515b363277f4bbdc3244d">MAXPATH</a>&#160;&#160;&#160;(128)</td></tr>
+<tr class="memdesc:a2d1edde91ea515b363277f4bbdc3244d"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum file path name  <a href="trap_2defs_8h.html#a2d1edde91ea515b363277f4bbdc3244d">更多...</a><br /></td></tr>
 <tr class="separator:a2d1edde91ea515b363277f4bbdc3244d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22c8ea96d09283ed6496347806cc72a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a22c8ea96d09283ed6496347806cc72a0">ROOTINO</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="memdesc:a22c8ea96d09283ed6496347806cc72a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">root i-number  <a href="trap_2defs_8h.html#a22c8ea96d09283ed6496347806cc72a0">更多...</a><br /></td></tr>
 <tr class="separator:a22c8ea96d09283ed6496347806cc72a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a403cf3149c084cea115b85c90721039a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a403cf3149c084cea115b85c90721039a">BSIZE</a>&#160;&#160;&#160;(1024)</td></tr>
+<tr class="memdesc:a403cf3149c084cea115b85c90721039a"><td class="mdescLeft">&#160;</td><td class="mdescRight">block size  <a href="trap_2defs_8h.html#a403cf3149c084cea115b85c90721039a">更多...</a><br /></td></tr>
 <tr class="separator:a403cf3149c084cea115b85c90721039a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac8de2a0393367154119c25e2b279953"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#aac8de2a0393367154119c25e2b279953">VIRTIO0</a>&#160;&#160;&#160;0x10001000</td></tr>
 <tr class="separator:aac8de2a0393367154119c25e2b279953"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,6 +240,7 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
 <tr class="memitem:a8636c2bf92b4bc01ad85ec74939ecd49"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a8636c2bf92b4bc01ad85ec74939ecd49">PGALIGNED</a>(a)&#160;&#160;&#160;(((a) &amp; (<a class="el" href="utils_2defs_8h.html#a5f96cb6ae6670e023c407cc2f77e1704">PGSIZE</a> - 1)) == 0)</td></tr>
 <tr class="separator:a8636c2bf92b4bc01ad85ec74939ecd49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a3c738182007bee471e44aae04c386f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a9a3c738182007bee471e44aae04c386f">PTE_V</a>&#160;&#160;&#160;(1L &lt;&lt; 0)</td></tr>
+<tr class="memdesc:a9a3c738182007bee471e44aae04c386f"><td class="mdescLeft">&#160;</td><td class="mdescRight">valid  <a href="trap_2defs_8h.html#a9a3c738182007bee471e44aae04c386f">更多...</a><br /></td></tr>
 <tr class="separator:a9a3c738182007bee471e44aae04c386f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a188134a2cbd69e161521fb169ecd08"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a3a188134a2cbd69e161521fb169ecd08">PTE_R</a>&#160;&#160;&#160;(1L &lt;&lt; 1)</td></tr>
 <tr class="separator:a3a188134a2cbd69e161521fb169ecd08"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,6 +249,7 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
 <tr class="memitem:ae20c834a93867eedc88007621c74ad55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#ae20c834a93867eedc88007621c74ad55">PTE_X</a>&#160;&#160;&#160;(1L &lt;&lt; 3)</td></tr>
 <tr class="separator:ae20c834a93867eedc88007621c74ad55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adced9836a1dc98d72849361e6ab03cda"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#adced9836a1dc98d72849361e6ab03cda">PTE_U</a>&#160;&#160;&#160;(1L &lt;&lt; 4)</td></tr>
+<tr class="memdesc:adced9836a1dc98d72849361e6ab03cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">1 -&gt; user can access  <a href="trap_2defs_8h.html#adced9836a1dc98d72849361e6ab03cda">更多...</a><br /></td></tr>
 <tr class="separator:adced9836a1dc98d72849361e6ab03cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9e87f9fe094fe3c66355d9f940cee74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#af9e87f9fe094fe3c66355d9f940cee74">PA2PTE</a>(pa)&#160;&#160;&#160;((((<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)pa) &gt;&gt; 12) &lt;&lt; 10)</td></tr>
 <tr class="separator:af9e87f9fe094fe3c66355d9f940cee74"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,26 +266,37 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
 <tr class="memitem:a781d1689a393d7c6e4243349cfdf6ce8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a781d1689a393d7c6e4243349cfdf6ce8">MAXVA</a>&#160;&#160;&#160;(1L &lt;&lt; (9 + 9 + 9 + 12 - 1))</td></tr>
 <tr class="separator:a781d1689a393d7c6e4243349cfdf6ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d0820d6a8b0c5b0fef6875a985d3370"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a4d0820d6a8b0c5b0fef6875a985d3370">SSTATUS_SPP</a>&#160;&#160;&#160;(1L &lt;&lt; 8)</td></tr>
+<tr class="memdesc:a4d0820d6a8b0c5b0fef6875a985d3370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Previous mode, 1=Supervisor, 0=User  <a href="trap_2defs_8h.html#a4d0820d6a8b0c5b0fef6875a985d3370">更多...</a><br /></td></tr>
 <tr class="separator:a4d0820d6a8b0c5b0fef6875a985d3370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f9373ba6db2ce5e5c7ea28c2a5b3df9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a3f9373ba6db2ce5e5c7ea28c2a5b3df9">SSTATUS_SPIE</a>&#160;&#160;&#160;(1L &lt;&lt; 5)</td></tr>
+<tr class="memdesc:a3f9373ba6db2ce5e5c7ea28c2a5b3df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supervisor Previous Interrupt Enable  <a href="trap_2defs_8h.html#a3f9373ba6db2ce5e5c7ea28c2a5b3df9">更多...</a><br /></td></tr>
 <tr class="separator:a3f9373ba6db2ce5e5c7ea28c2a5b3df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a796ad1a8b2314776082e72e13f4a30cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a796ad1a8b2314776082e72e13f4a30cf">SSTATUS_UPIE</a>&#160;&#160;&#160;(1L &lt;&lt; 4)</td></tr>
+<tr class="memdesc:a796ad1a8b2314776082e72e13f4a30cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">User Previous Interrupt Enable  <a href="trap_2defs_8h.html#a796ad1a8b2314776082e72e13f4a30cf">更多...</a><br /></td></tr>
 <tr class="separator:a796ad1a8b2314776082e72e13f4a30cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c1f1da0ecfca5bc4fc4db3acadf1bc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a1c1f1da0ecfca5bc4fc4db3acadf1bc8">SSTATUS_SIE</a>&#160;&#160;&#160;(1L &lt;&lt; 1)</td></tr>
+<tr class="memdesc:a1c1f1da0ecfca5bc4fc4db3acadf1bc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supervisor Interrupt Enable  <a href="trap_2defs_8h.html#a1c1f1da0ecfca5bc4fc4db3acadf1bc8">更多...</a><br /></td></tr>
 <tr class="separator:a1c1f1da0ecfca5bc4fc4db3acadf1bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a431c67f7f0e4b5dbdf2048310ad814e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a431c67f7f0e4b5dbdf2048310ad814e0">SSTATUS_UIE</a>&#160;&#160;&#160;(1L &lt;&lt; 0)</td></tr>
+<tr class="memdesc:a431c67f7f0e4b5dbdf2048310ad814e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">User Interrupt Enable  <a href="trap_2defs_8h.html#a431c67f7f0e4b5dbdf2048310ad814e0">更多...</a><br /></td></tr>
 <tr class="separator:a431c67f7f0e4b5dbdf2048310ad814e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ca797adbc936cc2e7d7b66a40325e63"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a7ca797adbc936cc2e7d7b66a40325e63">SIE_SEIE</a>&#160;&#160;&#160;(1L &lt;&lt; 9)</td></tr>
+<tr class="memdesc:a7ca797adbc936cc2e7d7b66a40325e63"><td class="mdescLeft">&#160;</td><td class="mdescRight">external  <a href="trap_2defs_8h.html#a7ca797adbc936cc2e7d7b66a40325e63">更多...</a><br /></td></tr>
 <tr class="separator:a7ca797adbc936cc2e7d7b66a40325e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a819d8ea9e98335b93d6120c89dd9458b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a819d8ea9e98335b93d6120c89dd9458b">SIE_STIE</a>&#160;&#160;&#160;(1L &lt;&lt; 5)</td></tr>
+<tr class="memdesc:a819d8ea9e98335b93d6120c89dd9458b"><td class="mdescLeft">&#160;</td><td class="mdescRight">timer  <a href="trap_2defs_8h.html#a819d8ea9e98335b93d6120c89dd9458b">更多...</a><br /></td></tr>
 <tr class="separator:a819d8ea9e98335b93d6120c89dd9458b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02551379f9acab8fcea973ecbc8fcf20"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a02551379f9acab8fcea973ecbc8fcf20">SIE_SSIE</a>&#160;&#160;&#160;(1L &lt;&lt; 1)</td></tr>
+<tr class="memdesc:a02551379f9acab8fcea973ecbc8fcf20"><td class="mdescLeft">&#160;</td><td class="mdescRight">software  <a href="trap_2defs_8h.html#a02551379f9acab8fcea973ecbc8fcf20">更多...</a><br /></td></tr>
 <tr class="separator:a02551379f9acab8fcea973ecbc8fcf20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4e2e4b72ec1e13b315dcdc910f5595b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#ab4e2e4b72ec1e13b315dcdc910f5595b">MIE_MEIE</a>&#160;&#160;&#160;(1L &lt;&lt; 11)</td></tr>
+<tr class="memdesc:ab4e2e4b72ec1e13b315dcdc910f5595b"><td class="mdescLeft">&#160;</td><td class="mdescRight">external  <a href="trap_2defs_8h.html#ab4e2e4b72ec1e13b315dcdc910f5595b">更多...</a><br /></td></tr>
 <tr class="separator:ab4e2e4b72ec1e13b315dcdc910f5595b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88f0c7a5a13f0570ecbaa43b912b0fe4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a88f0c7a5a13f0570ecbaa43b912b0fe4">MIE_MTIE</a>&#160;&#160;&#160;(1L &lt;&lt; 7)</td></tr>
+<tr class="memdesc:a88f0c7a5a13f0570ecbaa43b912b0fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">timer  <a href="trap_2defs_8h.html#a88f0c7a5a13f0570ecbaa43b912b0fe4">更多...</a><br /></td></tr>
 <tr class="separator:a88f0c7a5a13f0570ecbaa43b912b0fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdb82cffb46911d1a236dcf651b24b05"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#acdb82cffb46911d1a236dcf651b24b05">MIE_MSIE</a>&#160;&#160;&#160;(1L &lt;&lt; 3)</td></tr>
+<tr class="memdesc:acdb82cffb46911d1a236dcf651b24b05"><td class="mdescLeft">&#160;</td><td class="mdescRight">software  <a href="trap_2defs_8h.html#acdb82cffb46911d1a236dcf651b24b05">更多...</a><br /></td></tr>
 <tr class="separator:acdb82cffb46911d1a236dcf651b24b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade6b65dbf23c28fca39d543364b61113"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#ade6b65dbf23c28fca39d543364b61113">SATP_SV39</a>&#160;&#160;&#160;(8L &lt;&lt; 60)</td></tr>
 <tr class="separator:ade6b65dbf23c28fca39d543364b61113"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -297,6 +324,7 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
 <tr class="memitem:a9565a866261271dc57420e15e67f94f3"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#a9565a866261271dc57420e15e67f94f3">pde_t</a></td></tr>
 <tr class="separator:a9565a866261271dc57420e15e67f94f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabc0f4f29a1508768d880855992b8ba7"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a></td></tr>
+<tr class="memdesc:aabc0f4f29a1508768d880855992b8ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">512 PTEs  <a href="trap_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">更多...</a><br /></td></tr>
 <tr class="separator:aabc0f4f29a1508768d880855992b8ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -320,6 +348,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>block size </p>
+
 </div>
 </div>
 <a id="a486f47992f736854db2444b01afd9991"></a>
@@ -333,6 +363,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>size of file system in blocks </p>
 
 </div>
 </div>
@@ -436,6 +468,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>max exec arguments </p>
+
 </div>
 </div>
 <a id="a58ce36916c399104e18d32ff090f21c6"></a>
@@ -464,6 +498,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>max # of blocks any FS op writes </p>
+
 </div>
 </div>
 <a id="a2d1edde91ea515b363277f4bbdc3244d"></a>
@@ -477,6 +513,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>maximum file path name </p>
 
 </div>
 </div>
@@ -520,6 +558,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>external </p>
+
 </div>
 </div>
 <a id="acdb82cffb46911d1a236dcf651b24b05"></a>
@@ -534,6 +574,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>software </p>
+
 </div>
 </div>
 <a id="a88f0c7a5a13f0570ecbaa43b912b0fe4"></a>
@@ -547,6 +589,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>timer </p>
 
 </div>
 </div>
@@ -590,6 +634,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>machine-mode interrupt enable. </p>
+
 </div>
 </div>
 <a id="aa6621785868a067469e73ac9babeed99"></a>
@@ -617,6 +663,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>previous mode. </p>
 
 </div>
 </div>
@@ -660,6 +708,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>size of disk block cache </p>
+
 </div>
 </div>
 <a id="aa564a41c8409694da49b0badf2bb2853"></a>
@@ -673,6 +723,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>maximum major device number </p>
 
 </div>
 </div>
@@ -706,6 +758,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>open files per system </p>
+
 </div>
 </div>
 <a id="adabafa10c7951be7c875cd2ee212be85"></a>
@@ -719,6 +773,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>maximum number of active i-nodes </p>
 
 </div>
 </div>
@@ -862,6 +918,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>we have 128M memroy </p>
+
 </div>
 </div>
 <a id="a8d1e9544afd4f96b58bb74b52141bcb8"></a>
@@ -926,6 +984,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>1 -&gt; user can access </p>
+
 </div>
 </div>
 <a id="a9a3c738182007bee471e44aae04c386f"></a>
@@ -939,6 +999,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>valid </p>
 
 </div>
 </div>
@@ -1042,6 +1104,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>device number of file system root disk </p>
+
 </div>
 </div>
 <a id="a22c8ea96d09283ed6496347806cc72a0"></a>
@@ -1055,6 +1119,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>root i-number </p>
 
 </div>
 </div>
@@ -1084,6 +1150,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>external </p>
+
 </div>
 </div>
 <a id="a02551379f9acab8fcea973ecbc8fcf20"></a>
@@ -1097,6 +1165,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>software </p>
 
 </div>
 </div>
@@ -1112,6 +1182,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>timer </p>
+
 </div>
 </div>
 <a id="a1c1f1da0ecfca5bc4fc4db3acadf1bc8"></a>
@@ -1125,6 +1197,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Supervisor Interrupt Enable </p>
 
 </div>
 </div>
@@ -1140,6 +1214,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>Supervisor Previous Interrupt Enable </p>
+
 </div>
 </div>
 <a id="a4d0820d6a8b0c5b0fef6875a985d3370"></a>
@@ -1153,6 +1229,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Previous mode, 1=Supervisor, 0=User </p>
 
 </div>
 </div>
@@ -1168,6 +1246,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
       </table>
 </div><div class="memdoc">
 
+<p>User Interrupt Enable </p>
+
 </div>
 </div>
 <a id="a796ad1a8b2314776082e72e13f4a30cf"></a>
@@ -1181,6 +1261,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>User Previous Interrupt Enable </p>
 
 </div>
 </div>
@@ -1266,6 +1348,8 @@ $(document).ready(function(){initNavTree('trap_2defs_8h.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>512 PTEs </p>
 
 </div>
 </div>

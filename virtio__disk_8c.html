@@ -97,7 +97,7 @@ virtio_disk.c 的引用(Include)关系图:</div>
 <div class="center"><img src="virtio__disk_8c__incl.png" border="0" usemap="#disk_2virtio__disk_8c" alt=""/></div>
 <map name="disk_2virtio__disk_8c" id="disk_2virtio__disk_8c">
 <area shape="rect" title=" " alt="" coords="83,5,215,32"/>
-<area shape="rect" href="virtio_8h.html" title=" " alt="" coords="58,80,126,107"/>
+<area shape="rect" href="virtio_8h.html" title="virtio device definitions." alt="" coords="58,80,126,107"/>
 <area shape="rect" href="disk__dependency_8h.html" title=" " alt="" coords="94,304,239,331"/>
 <area shape="rect" href="bio_8h.html" title=" " alt="" coords="65,155,119,181"/>
 <area shape="rect" href="disk_2defs_8h.html" title=" " alt="" coords="25,453,87,480"/>
@@ -134,9 +134,10 @@ virtio_disk.c 的引用(Include)关系图:</div>
 <tr class="memitem:ac7f9ed91798ae3b0141bdad487ef4f78"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structvirtq__used.html">virtq_used</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#ac7f9ed91798ae3b0141bdad487ef4f78">used</a></td></tr>
 <tr class="separator:ac7f9ed91798ae3b0141bdad487ef4f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0608361a8f53a287e3f3a3c7e46ed1ef"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#a0608361a8f53a287e3f3a3c7e46ed1ef">free</a> [<a class="el" href="virtio_8h.html#aaf0952059602752258dccaa015d7b54a">NUM</a>]</td></tr>
-<tr class="memdesc:a0608361a8f53a287e3f3a3c7e46ed1ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">our own book-keeping.  <a href="virtio__disk_8c.html#a0608361a8f53a287e3f3a3c7e46ed1ef">更多...</a><br /></td></tr>
+<tr class="memdesc:a0608361a8f53a287e3f3a3c7e46ed1ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">is a descriptor free?  <a href="virtio__disk_8c.html#a0608361a8f53a287e3f3a3c7e46ed1ef">更多...</a><br /></td></tr>
 <tr class="separator:a0608361a8f53a287e3f3a3c7e46ed1ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bdb5c26bead044def1a004fab37eb00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#a9bdb5c26bead044def1a004fab37eb00">used_idx</a></td></tr>
+<tr class="memdesc:a9bdb5c26bead044def1a004fab37eb00"><td class="mdescLeft">&#160;</td><td class="mdescRight">we've looked this far in used[2..NUM].  <a href="virtio__disk_8c.html#a9bdb5c26bead044def1a004fab37eb00">更多...</a><br /></td></tr>
 <tr class="separator:a9bdb5c26bead044def1a004fab37eb00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c0d07be46d80bcd2065e9d152311ac9"><td class="memItemLeft" >struct {</td></tr>
 <tr class="memitem:a478a43f541f7e29b957eaaef78d660d4"><td class="memItemLeft" >&#160;&#160;&#160;struct <a class="el" href="structbuf.html">buf</a> *&#160;&#160;&#160;<a class="el" href="virtio__disk_8c.html#a478a43f541f7e29b957eaaef78d660d4">b</a></td></tr>
@@ -148,7 +149,13 @@ virtio_disk.c 的引用(Include)关系图:</div>
 <tr class="memitem:a5580404502a1641dea5aee5ba4b393f1"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structvirtio__blk__req.html">virtio_blk_req</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="virtio__disk_8c.html#a5580404502a1641dea5aee5ba4b393f1">ops</a> [<a class="el" href="virtio_8h.html#aaf0952059602752258dccaa015d7b54a">NUM</a>]</td></tr>
 <tr class="separator:a5580404502a1641dea5aee5ba4b393f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">宏定义说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>driver for qemu's virtio disk device. <br  />
+uses qemu's mmio interface to virtio. <br  />
+qemu presents a "legacy" virtio interface. <br  />
+ qemu ... -drive file=fs.img,if=none,format=raw,id=x0 -device <br  />
+virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0 </p>
+</div><h2 class="groupheader">宏定义说明</h2>
 <a id="a80e6faf1cf09d43dab325b4fd98cddfd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a80e6faf1cf09d43dab325b4fd98cddfd">&#9670;&nbsp;</a></span>R</h2>
 
@@ -290,7 +297,7 @@ virtio_disk.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
-<p>our own book-keeping. </p>
+<p>is a descriptor free? </p>
 
 </div>
 </div>
@@ -380,6 +387,8 @@ virtio_disk.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>we've looked this far in used[2..NUM]. </p>
+
 </div>
 </div>
 <a id="a606c098da2a787a1de01b84c736f9727"></a>
@@ -393,8 +402,6 @@ virtio_disk.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>driver for qemu's virtio disk device. uses qemu's mmio interface to virtio. qemu presents a "legacy" virtio interface.</p>
-<p>qemu ... -drive file=fs.img,if=none,format=raw,id=x0 -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0 </p>
 
 </div>
 </div>

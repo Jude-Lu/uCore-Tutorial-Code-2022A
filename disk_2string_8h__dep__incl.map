@@ -4,8 +4,8 @@
 <area shape="rect" id="node3" href="$disk_2log_8h.html" title=" " alt="" coords="1077,155,1162,181"/>
 <area shape="rect" id="node35" href="$virtio__disk_8c.html" title=" " alt="" coords="1153,379,1285,405"/>
 <area shape="rect" id="node4" href="$bio_8h.html" title=" " alt="" coords="1049,229,1134,256"/>
-<area shape="rect" id="node5" href="$bio_8c.html" title=" " alt="" coords="873,379,957,405"/>
-<area shape="rect" id="node6" href="$virtio_8h.html" title=" " alt="" coords="993,304,1091,331"/>
+<area shape="rect" id="node5" href="$bio_8c.html" title="Buffer cache." alt="" coords="873,379,957,405"/>
+<area shape="rect" id="node6" href="$virtio_8h.html" title="virtio device definitions." alt="" coords="993,304,1091,331"/>
 <area shape="rect" id="node7" href="$disk__module_8h.html" title=" " alt="" coords="981,379,1129,405"/>
 <area shape="rect" id="node8" href="$os6_2modules_8h.html" title=" " alt="" coords="333,453,450,480"/>
 <area shape="rect" id="node17" href="$os7_2modules_8h.html" title=" " alt="" coords="997,453,1114,480"/>

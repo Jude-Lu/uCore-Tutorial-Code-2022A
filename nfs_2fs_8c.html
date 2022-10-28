@@ -154,8 +154,10 @@ fs.c 的引用(Include)关系图:</div>
 <tr class="memitem:a86bf1487f875e3a82dbb4f7c0cde878c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nfs_2fs_8c.html#a86bf1487f875e3a82dbb4f7c0cde878c">ninodeblocks</a> = <a class="el" href="nfs_2fs_8c.html#ad285a4c453432da6be26e87a581ee35c">NINODES</a> / <a class="el" href="nfs_2fs_8h.html#aadb6c866a6d0a173f5f0a6ed9c7e0228">IPB</a> + 1</td></tr>
 <tr class="separator:a86bf1487f875e3a82dbb4f7c0cde878c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bb66ce69ae378551f55d86c515ae02c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nfs_2fs_8c.html#a6bb66ce69ae378551f55d86c515ae02c">nmeta</a></td></tr>
+<tr class="memdesc:a6bb66ce69ae378551f55d86c515ae02c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of meta blocks (boot, sb, nlog, inode, bitmap)  <a href="nfs_2fs_8c.html#a6bb66ce69ae378551f55d86c515ae02c">更多...</a><br /></td></tr>
 <tr class="separator:a6bb66ce69ae378551f55d86c515ae02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a076c8e8b7f7acccc46cd356bd8776b26"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nfs_2fs_8c.html#a076c8e8b7f7acccc46cd356bd8776b26">nblocks</a></td></tr>
+<tr class="memdesc:a076c8e8b7f7acccc46cd356bd8776b26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of data blocks  <a href="nfs_2fs_8c.html#a076c8e8b7f7acccc46cd356bd8776b26">更多...</a><br /></td></tr>
 <tr class="separator:a076c8e8b7f7acccc46cd356bd8776b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44f12de41bc5a5ada9e5fff19c18201c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nfs_2fs_8c.html#a44f12de41bc5a5ada9e5fff19c18201c">fsfd</a></td></tr>
 <tr class="separator:a44f12de41bc5a5ada9e5fff19c18201c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -563,6 +565,7 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Disk layout: [ boot block | sb block | inode blocks | free bit map | data blocks ] </p>
 
 </div>
 </div>
@@ -577,6 +580,8 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Number of data blocks </p>
 
 </div>
 </div>
@@ -605,6 +610,8 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Number of meta blocks (boot, sb, nlog, inode, bitmap) </p>
 
 </div>
 </div>

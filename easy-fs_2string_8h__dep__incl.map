@@ -1,11 +1,11 @@
 <map id="easy&#45;fs/string.h" name="easy&#45;fs/string.h">
 <area shape="rect" id="node1" title=" " alt="" coords="752,5,875,32"/>
 <area shape="rect" id="node2" href="$fs__dependency_8h.html" title=" " alt="" coords="722,80,905,107"/>
-<area shape="rect" id="node3" href="$easy-fs_2fs_8h.html" title=" " alt="" coords="835,155,933,181"/>
+<area shape="rect" id="node3" href="$easy-fs_2fs_8h.html" title="On&#45;disk file system format." alt="" coords="835,155,933,181"/>
 <area shape="rect" id="node35" href="$easy-fs_2log_8h.html" title=" " alt="" coords="689,229,796,256"/>
-<area shape="rect" id="node4" href="$file_8h.html" title=" " alt="" coords="921,229,1028,256"/>
+<area shape="rect" id="node4" href="$file_8h.html" title="Inode content" alt="" coords="921,229,1028,256"/>
 <area shape="rect" id="node5" href="$file_8c.html" title=" " alt="" coords="714,304,819,331"/>
-<area shape="rect" id="node6" href="$easy-fs_2fs_8c.html" title=" " alt="" coords="843,304,941,331"/>
+<area shape="rect" id="node6" href="$easy-fs_2fs_8c.html" title="File system implementation." alt="" coords="843,304,941,331"/>
 <area shape="rect" id="node7" href="$fs__module_8h.html" title=" " alt="" coords="980,304,1135,331"/>
 <area shape="rect" id="node8" href="$os6_2modules_8h.html" title=" " alt="" coords="315,379,432,405"/>
 <area shape="rect" id="node17" href="$os7_2modules_8h.html" title=" " alt="" coords="999,379,1116,405"/>

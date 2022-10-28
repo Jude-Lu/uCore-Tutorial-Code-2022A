@@ -98,8 +98,8 @@ file.c 的引用(Include)关系图:</div>
 <div class="center"><img src="file_8c__incl.png" border="0" usemap="#easy-fs_2file_8c" alt=""/></div>
 <map name="easy-fs_2file_8c" id="easy-fs_2file_8c">
 <area shape="rect" title=" " alt="" coords="80,5,185,32"/>
-<area shape="rect" href="file_8h.html" title=" " alt="" coords="5,80,60,107"/>
-<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="73,155,120,181"/>
+<area shape="rect" href="file_8h.html" title="Inode content" alt="" coords="5,80,60,107"/>
+<area shape="rect" href="easy-fs_2fs_8h.html" title="On&#45;disk file system format." alt="" coords="73,155,120,181"/>
 <area shape="rect" href="fcntl_8h.html" title=" " alt="" coords="136,80,199,107"/>
 <area shape="rect" href="easy-fs_2log_8h.html" title=" " alt="" coords="187,155,241,181"/>
 <area shape="rect" href="easy-fs_2defs_8h.html" title=" " alt="" coords="59,379,121,405"/>
@@ -356,14 +356,6 @@ file.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>File system implementation. Five layers:</p><ul>
-<li>Blocks: allocator for raw disk blocks.</li>
-<li>Log: crash recovery for multi-step updates.</li>
-<li>Files: inode allocator, reading, writing, metadata.</li>
-<li>Directories: inode with special contents (list of other inodes!)</li>
-<li>Names: paths like /usr/rtm/xv6/fs.c for convenient naming.</li>
-</ul>
-<p>This file contains the low-level file system manipulation routines. The (higher-level) system call implementations are in sysfile.c. </p>
 
 </div>
 </div>

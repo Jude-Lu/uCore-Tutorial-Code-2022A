@@ -113,6 +113,7 @@ fs.h 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 结构体</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsuperblock.html">superblock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The super block describes the disk layout:  <a href="structsuperblock.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdinode.html">dinode</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">On-disk inode structure  <a href="structdinode.html#details">更多...</a><br /></td></tr>
@@ -123,24 +124,34 @@ fs.h 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 宏定义</h2></td></tr>
 <tr class="memitem:a8485f4e81de2537e6a0935626167a775"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nfs_2fs_8h.html#a8485f4e81de2537e6a0935626167a775">NFILE</a>&#160;&#160;&#160;100</td></tr>
+<tr class="memdesc:a8485f4e81de2537e6a0935626167a775"><td class="mdescLeft">&#160;</td><td class="mdescRight">open files per system  <a href="nfs_2fs_8h.html#a8485f4e81de2537e6a0935626167a775">更多...</a><br /></td></tr>
 <tr class="separator:a8485f4e81de2537e6a0935626167a775"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adabafa10c7951be7c875cd2ee212be85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nfs_2fs_8h.html#adabafa10c7951be7c875cd2ee212be85">NINODE</a>&#160;&#160;&#160;50</td></tr>
+<tr class="memdesc:adabafa10c7951be7c875cd2ee212be85"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum number of active i-nodes  <a href="nfs_2fs_8h.html#adabafa10c7951be7c875cd2ee212be85">更多...</a><br /></td></tr>
 <tr class="separator:adabafa10c7951be7c875cd2ee212be85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa564a41c8409694da49b0badf2bb2853"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nfs_2fs_8h.html#aa564a41c8409694da49b0badf2bb2853">NDEV</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memdesc:aa564a41c8409694da49b0badf2bb2853"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum major device number  <a href="nfs_2fs_8h.html#aa564a41c8409694da49b0badf2bb2853">更多...</a><br /></td></tr>
 <tr class="separator:aa564a41c8409694da49b0badf2bb2853"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9ce6b24fe2aae59ff60b469c35febbc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nfs_2fs_8h.html#ae9ce6b24fe2aae59ff60b469c35febbc">ROOTDEV</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:ae9ce6b24fe2aae59ff60b469c35febbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">device number of file system root disk  <a href="nfs_2fs_8h.html#ae9ce6b24fe2aae59ff60b469c35febbc">更多...</a><br /></td></tr>
 <tr class="separator:ae9ce6b24fe2aae59ff60b469c35febbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31cde324007b4e52bbba7079ec5e5f45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nfs_2fs_8h.html#a31cde324007b4e52bbba7079ec5e5f45">MAXOPBLOCKS</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memdesc:a31cde324007b4e52bbba7079ec5e5f45"><td class="mdescLeft">&#160;</td><td class="mdescRight">max # of blocks any FS op writes  <a href="nfs_2fs_8h.html#a31cde324007b4e52bbba7079ec5e5f45">更多...</a><br /></td></tr>
 <tr class="separator:a31cde324007b4e52bbba7079ec5e5f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad51e2f8dffd163c263ec676a268d0f0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nfs_2fs_8h.html#ad51e2f8dffd163c263ec676a268d0f0a">NBUF</a>&#160;&#160;&#160;(<a class="el" href="utils_2defs_8h.html#a31cde324007b4e52bbba7079ec5e5f45">MAXOPBLOCKS</a> * 3)</td></tr>
+<tr class="memdesc:ad51e2f8dffd163c263ec676a268d0f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">size of disk block cache  <a href="nfs_2fs_8h.html#ad51e2f8dffd163c263ec676a268d0f0a">更多...</a><br /></td></tr>
 <tr class="separator:ad51e2f8dffd163c263ec676a268d0f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a486f47992f736854db2444b01afd9991"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nfs_2fs_8h.html#a486f47992f736854db2444b01afd9991">FSSIZE</a>&#160;&#160;&#160;1000</td></tr>
+<tr class="memdesc:a486f47992f736854db2444b01afd9991"><td class="mdescLeft">&#160;</td><td class="mdescRight">size of file system in blocks  <a href="nfs_2fs_8h.html#a486f47992f736854db2444b01afd9991">更多...</a><br /></td></tr>
 <tr class="separator:a486f47992f736854db2444b01afd9991"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d1edde91ea515b363277f4bbdc3244d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nfs_2fs_8h.html#a2d1edde91ea515b363277f4bbdc3244d">MAXPATH</a>&#160;&#160;&#160;128</td></tr>
+<tr class="memdesc:a2d1edde91ea515b363277f4bbdc3244d"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum file path name  <a href="nfs_2fs_8h.html#a2d1edde91ea515b363277f4bbdc3244d">更多...</a><br /></td></tr>
 <tr class="separator:a2d1edde91ea515b363277f4bbdc3244d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22c8ea96d09283ed6496347806cc72a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nfs_2fs_8h.html#a22c8ea96d09283ed6496347806cc72a0">ROOTINO</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a22c8ea96d09283ed6496347806cc72a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">root i-number  <a href="nfs_2fs_8h.html#a22c8ea96d09283ed6496347806cc72a0">更多...</a><br /></td></tr>
 <tr class="separator:a22c8ea96d09283ed6496347806cc72a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a403cf3149c084cea115b85c90721039a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nfs_2fs_8h.html#a403cf3149c084cea115b85c90721039a">BSIZE</a>&#160;&#160;&#160;1024</td></tr>
+<tr class="memdesc:a403cf3149c084cea115b85c90721039a"><td class="mdescLeft">&#160;</td><td class="mdescRight">block size  <a href="nfs_2fs_8h.html#a403cf3149c084cea115b85c90721039a">更多...</a><br /></td></tr>
 <tr class="separator:a403cf3149c084cea115b85c90721039a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae948f5b79524939bc025b32d25a1fda0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nfs_2fs_8h.html#ae948f5b79524939bc025b32d25a1fda0">FSMAGIC</a>&#160;&#160;&#160;0x10203040</td></tr>
 <tr class="separator:ae948f5b79524939bc025b32d25a1fda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,6 +231,8 @@ fs.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>block size </p>
+
 </div>
 </div>
 <a id="a48246fb9e5cb7f6a71ebc9ebc2f06562"></a>
@@ -261,6 +274,8 @@ fs.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>size of file system in blocks </p>
 
 </div>
 </div>
@@ -332,6 +347,8 @@ fs.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>max # of blocks any FS op writes </p>
+
 </div>
 </div>
 <a id="a2d1edde91ea515b363277f4bbdc3244d"></a>
@@ -345,6 +362,8 @@ fs.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>maximum file path name </p>
 
 </div>
 </div>
@@ -360,6 +379,8 @@ fs.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>size of disk block cache </p>
+
 </div>
 </div>
 <a id="aa564a41c8409694da49b0badf2bb2853"></a>
@@ -373,6 +394,8 @@ fs.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>maximum major device number </p>
 
 </div>
 </div>
@@ -402,6 +425,8 @@ fs.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>open files per system </p>
+
 </div>
 </div>
 <a id="a6d24f098ea2928d61ff80b123d761715"></a>
@@ -430,6 +455,8 @@ fs.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>maximum number of active i-nodes </p>
+
 </div>
 </div>
 <a id="ae9ce6b24fe2aae59ff60b469c35febbc"></a>
@@ -444,6 +471,8 @@ fs.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>device number of file system root disk </p>
+
 </div>
 </div>
 <a id="a22c8ea96d09283ed6496347806cc72a0"></a>
@@ -457,6 +486,8 @@ fs.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>root i-number </p>
 
 </div>
 </div>

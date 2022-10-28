@@ -1,7 +1,7 @@
 <map id="trap/plic.h" name="trap/plic.h">
 <area shape="rect" id="node1" title=" " alt="" coords="1979,5,2065,32"/>
 <area shape="rect" id="node2" href="$trap__module_8h.html" title=" " alt="" coords="1878,80,2025,107"/>
-<area shape="rect" id="node50" href="$plic_8c.html" title=" " alt="" coords="2049,80,2136,107"/>
+<area shape="rect" id="node50" href="$plic_8c.html" title="the riscv Platform Level Interrupt Controller (PLIC)." alt="" coords="2049,80,2136,107"/>
 <area shape="rect" id="node3" href="$os2_2modules_8h.html" title=" " alt="" coords="370,155,487,181"/>
 <area shape="rect" id="node10" href="$os3_2modules_8h.html" title=" " alt="" coords="950,155,1067,181"/>
 <area shape="rect" id="node18" href="$os4_2modules_8h.html" title=" " alt="" coords="1655,155,1773,181"/>

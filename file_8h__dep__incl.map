@@ -1,7 +1,7 @@
 <map id="easy&#45;fs/file.h" name="easy&#45;fs/file.h">
-<area shape="rect" id="node1" title=" " alt="" coords="853,5,959,32"/>
+<area shape="rect" id="node1" title="Inode content" alt="" coords="853,5,959,32"/>
 <area shape="rect" id="node2" href="$file_8c.html" title=" " alt="" coords="728,80,833,107"/>
-<area shape="rect" id="node3" href="$easy-fs_2fs_8c.html" title=" " alt="" coords="857,80,955,107"/>
+<area shape="rect" id="node3" href="$easy-fs_2fs_8c.html" title="File system implementation." alt="" coords="857,80,955,107"/>
 <area shape="rect" id="node4" href="$fs__module_8h.html" title=" " alt="" coords="979,80,1134,107"/>
 <area shape="rect" id="node5" href="$os6_2modules_8h.html" title=" " alt="" coords="333,155,450,181"/>
 <area shape="rect" id="node14" href="$os7_2modules_8h.html" title=" " alt="" coords="998,155,1115,181"/>

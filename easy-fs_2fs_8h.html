@@ -89,6 +89,9 @@ $(document).ready(function(){initNavTree('easy-fs_2fs_8h.html',''); initResizabl
 <div class="title">fs.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>On-disk file system format.  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="easy-fs_2defs_8h_source.html">defs.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fs__dependency_8h_source.html">fs_dependency.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -96,7 +99,7 @@ fs.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="easy-fs_2fs_8h__incl.png" border="0" usemap="#easy-fs_2fs_8h" alt=""/></div>
 <map name="easy-fs_2fs_8h" id="easy-fs_2fs_8h">
-<area shape="rect" title=" " alt="" coords="5,5,104,32"/>
+<area shape="rect" title="On&#45;disk file system format." alt="" coords="5,5,104,32"/>
 <area shape="rect" href="easy-fs_2defs_8h.html" title=" " alt="" coords="9,229,71,256"/>
 <area shape="rect" href="fs__dependency_8h.html" title=" " alt="" coords="41,80,172,107"/>
 <area shape="rect" href="easy-fs_2string_8h.html" title=" " alt="" coords="57,155,127,181"/>
@@ -107,10 +110,10 @@ fs.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="easy-fs_2fs_8h__dep__incl.png" border="0" usemap="#easy-fs_2fs_8hdep" alt=""/></div>
 <map name="easy-fs_2fs_8hdep" id="easy-fs_2fs_8hdep">
-<area shape="rect" title=" " alt="" coords="893,5,991,32"/>
-<area shape="rect" href="file_8h.html" title=" " alt="" coords="843,80,950,107"/>
+<area shape="rect" title="On&#45;disk file system format." alt="" coords="893,5,991,32"/>
+<area shape="rect" href="file_8h.html" title="Inode content" alt="" coords="843,80,950,107"/>
 <area shape="rect" href="file_8c.html" title=" " alt="" coords="728,155,833,181"/>
-<area shape="rect" href="easy-fs_2fs_8c.html" title=" " alt="" coords="857,155,955,181"/>
+<area shape="rect" href="easy-fs_2fs_8c.html" title="File system implementation." alt="" coords="857,155,955,181"/>
 <area shape="rect" href="fs__module_8h.html" title=" " alt="" coords="979,155,1134,181"/>
 <area shape="rect" href="os6_2modules_8h.html" title=" " alt="" coords="333,229,450,256"/>
 <area shape="rect" href="os7_2modules_8h.html" title=" " alt="" coords="998,229,1115,256"/>
@@ -147,6 +150,7 @@ fs.h 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 结构体</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsuperblock.html">superblock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The super block describes the disk layout:  <a href="structsuperblock.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdinode.html">dinode</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">On-disk inode structure  <a href="structdinode.html#details">更多...</a><br /></td></tr>
@@ -228,7 +232,13 @@ fs.h 的引用(Include)关系图:</div>
 <tr class="memdesc:ac7a2f2501e39b39a4aa1bd7ab5336786"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the filenames of all files in the directory  <a href="easy-fs_2fs_8h.html#ac7a2f2501e39b39a4aa1bd7ab5336786">更多...</a><br /></td></tr>
 <tr class="separator:ac7a2f2501e39b39a4aa1bd7ab5336786"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">宏定义说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>On-disk file system format. </p>
+<p>the kernel and user programs use this header file. <br  />
+ Disk layout: <br  />
+[ boot block | super block | inode blocks | free bit map | data blocks] <br  />
+ mkfs computes the super block and builds an initial file system. </p>
+</div><h2 class="groupheader">宏定义说明</h2>
 <a id="a080eb729016328ec6da85bfe125fc04c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a080eb729016328ec6da85bfe125fc04c">&#9670;&nbsp;</a></span>BBLOCK</h2>
 
@@ -612,7 +622,9 @@ fs.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Drop a reference to an in-memory inode. If that was the last reference, the inode table entry can be recycled. If that was the last reference and the inode has no links to it, free the inode (and its content) on disk. All calls to <a class="el" href="easy-fs_2fs_8c.html#ab3c447f135c68e4c3c1f8d5866f6e77b">iput()</a> must be inside a transaction in case it has to free the inode. </p>
+<p>Drop a reference to an in-memory inode. <br  />
+If that was the last reference, the inode table entry can be recycled. If that was the last reference and the inode has no links to it, free the inode (and its content) on disk. <br  />
+All calls to <a class="el" href="easy-fs_2fs_8c.html#ab3c447f135c68e4c3c1f8d5866f6e77b">iput()</a> must be inside a transaction in case it has to free the inode. </p>
 
 </div>
 </div>
@@ -840,7 +852,11 @@ fs.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Write data to inode. Caller must hold ip-&gt;lock. If user_src==1, then src is a user virtual address; otherwise, src is a kernel address. Returns the number of bytes successfully written. If the return value is less than the requested n, there was an error of some kind. </p>
+<p>Write data to inode. <br  />
+Caller must hold ip-&gt;lock. <br  />
+If user_src==1, then src is a user virtual address; otherwise, src is a kernel address. <br  />
+Returns the number of bytes successfully written. <br  />
+If the return value is less than the requested n, there was an error of some kind. </p>
 
 </div>
 </div>

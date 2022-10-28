@@ -1,6 +1,6 @@
 <map id="disk/virtio_disk.c" name="disk/virtio_disk.c">
 <area shape="rect" id="node1" title=" " alt="" coords="83,5,215,32"/>
-<area shape="rect" id="node2" href="$virtio_8h.html" title=" " alt="" coords="58,80,126,107"/>
+<area shape="rect" id="node2" href="$virtio_8h.html" title="virtio device definitions." alt="" coords="58,80,126,107"/>
 <area shape="rect" id="node6" href="$disk__dependency_8h.html" title=" " alt="" coords="94,304,239,331"/>
 <area shape="rect" id="node3" href="$bio_8h.html" title=" " alt="" coords="65,155,119,181"/>
 <area shape="rect" id="node4" href="$disk_2defs_8h.html" title=" " alt="" coords="25,453,87,480"/>

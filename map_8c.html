@@ -175,7 +175,9 @@ map.c 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>为内核分配虚拟地址空间 </p>
-<p>Add a mapping to the kernel page table. only used when booting. does not flush TLB or enable paging. </p>
+<p>Add a mapping to the kernel page table. <br  />
+only used when booting. <br  />
+does not flush TLB or enable paging. </p>
 
 </div>
 </div>
@@ -224,7 +226,9 @@ map.c 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>建立虚拟地址到物理地址映射 </p>
-<p>Create PTEs for virtual addresses starting at va that refer to physical addresses starting at pa. va and size might not be page-aligned. Returns 0 on success, -1 if <a class="el" href="vm_8c.html#a271b7e1dd0b2700b8c91df4761bcc8cb" title="两种功能：地址转换；建立映射">walk()</a> couldn't allocate a needed page-table page. </p>
+<p>Create PTEs for virtual addresses starting at va that refer to physical addresses starting at pa. <br  />
+va and size might not be page-aligned. <br  />
+Returns 0 on success, -1 if <a class="el" href="vm_8c.html#a271b7e1dd0b2700b8c91df4761bcc8cb" title="两种功能：地址转换；建立映射">walk()</a> couldn't allocate a needed page-table page. </p>
 
 </div>
 </div>
@@ -261,7 +265,9 @@ map.c 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>拷贝用户地址空间 </p>
-<p>Used in fork. Copy the pagetable page and all the user pages. Return 0 on success, -1 on error. </p>
+<p>Used in fork. <br  />
+Copy the pagetable page and all the user pages. <br  />
+Return 0 on success, -1 on error. </p>
 
 </div>
 </div>
@@ -281,7 +287,8 @@ map.c 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>创建空用户页表 </p>
-<p>create an empty user page table. returns 0 if out of memory. </p>
+<p>create an empty user page table. <br  />
+returns 0 if out of memory. </p>
 
 </div>
 </div>
@@ -401,7 +408,10 @@ map.c 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>释放虚拟地址到物理地址映射 </p>
-<p>Remove npages of mappings starting from va. va must be page-aligned. The mappings must exist. Optionally free the physical memory. </p>
+<p>Remove npages of mappings starting from va. <br  />
+va must be page-aligned. <br  />
+The mappings must exist. <br  />
+Optionally free the physical memory. </p>
 
 </div>
 </div>

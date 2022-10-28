@@ -88,6 +88,9 @@ $(document).ready(function(){initNavTree('file_8h.html',''); initResizable(); })
 <div class="title">file.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Inode content  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="easy-fs_2fs_8h_source.html">fs.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="easy-fs_2defs_8h_source.html">defs.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -95,8 +98,8 @@ file.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="file_8h__incl.png" border="0" usemap="#easy-fs_2file_8h" alt=""/></div>
 <map name="easy-fs_2file_8h" id="easy-fs_2file_8h">
-<area shape="rect" title=" " alt="" coords="83,5,190,32"/>
-<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="63,80,109,107"/>
+<area shape="rect" title="Inode content" alt="" coords="83,5,190,32"/>
+<area shape="rect" href="easy-fs_2fs_8h.html" title="On&#45;disk file system format." alt="" coords="63,80,109,107"/>
 <area shape="rect" href="easy-fs_2defs_8h.html" title=" " alt="" coords="55,304,117,331"/>
 <area shape="rect" href="fs__dependency_8h.html" title=" " alt="" coords="21,155,151,181"/>
 <area shape="rect" href="easy-fs_2string_8h.html" title=" " alt="" coords="51,229,121,256"/>
@@ -107,9 +110,9 @@ file.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="file_8h__dep__incl.png" border="0" usemap="#easy-fs_2file_8hdep" alt=""/></div>
 <map name="easy-fs_2file_8hdep" id="easy-fs_2file_8hdep">
-<area shape="rect" title=" " alt="" coords="853,5,959,32"/>
+<area shape="rect" title="Inode content" alt="" coords="853,5,959,32"/>
 <area shape="rect" href="file_8c.html" title=" " alt="" coords="728,80,833,107"/>
-<area shape="rect" href="easy-fs_2fs_8c.html" title=" " alt="" coords="857,80,955,107"/>
+<area shape="rect" href="easy-fs_2fs_8c.html" title="File system implementation." alt="" coords="857,80,955,107"/>
 <area shape="rect" href="fs__module_8h.html" title=" " alt="" coords="979,80,1134,107"/>
 <area shape="rect" href="os6_2modules_8h.html" title=" " alt="" coords="333,155,450,181"/>
 <area shape="rect" href="os7_2modules_8h.html" title=" " alt="" coords="998,155,1115,181"/>
@@ -176,7 +179,14 @@ file.h 的引用(Include)关系图:</div>
 <tr class="memitem:a22c08158efd79bb165987843d064144d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a22c08158efd79bb165987843d064144d">set_file</a> (struct <a class="el" href="structFSManager.html">FSManager</a> *<a class="el" href="structFSManager.html">FSManager</a>)</td></tr>
 <tr class="separator:a22c08158efd79bb165987843d064144d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">函数说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Inode content </p>
+<p>The content (data) associated with each inode is stored <br  />
+in blocks on the disk. The first NDIRECT block numbers <br  />
+are listed in ip-&gt;addrs[]. The next NINDIRECT blocks are <br  />
+listed in block ip-&gt;addrs[NDIRECT]. <br  />
+ in-memory copy of an inode,it can be used to quickly locate file entities on disk </p>
+</div><h2 class="groupheader">函数说明</h2>
 <a id="ac865ee0b2d70f753d61d1fefef9de0f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac865ee0b2d70f753d61d1fefef9de0f6">&#9670;&nbsp;</a></span>fileclose()</h2>
 

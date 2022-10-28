@@ -88,6 +88,10 @@ $(document).ready(function(){initNavTree('easy-fs_2fs_8c.html',''); initResizabl
 <div class="title">fs.c 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>File system implementation. <br  />
+  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="easy-fs_2fs_8h_source.html">fs.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="file_8h_source.html">file.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="easy-fs_2log_8h_source.html">log.h</a>&quot;</code><br />
@@ -96,9 +100,9 @@ fs.c 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="easy-fs_2fs_8c__incl.png" border="0" usemap="#easy-fs_2fs_8c" alt=""/></div>
 <map name="easy-fs_2fs_8c" id="easy-fs_2fs_8c">
-<area shape="rect" title=" " alt="" coords="49,5,147,32"/>
-<area shape="rect" href="easy-fs_2fs_8h.html" title=" " alt="" coords="68,155,115,181"/>
-<area shape="rect" href="file_8h.html" title=" " alt="" coords="5,80,60,107"/>
+<area shape="rect" title="File system implementation." alt="" coords="49,5,147,32"/>
+<area shape="rect" href="easy-fs_2fs_8h.html" title="On&#45;disk file system format." alt="" coords="68,155,115,181"/>
+<area shape="rect" href="file_8h.html" title="Inode content" alt="" coords="5,80,60,107"/>
 <area shape="rect" href="easy-fs_2log_8h.html" title=" " alt="" coords="144,155,199,181"/>
 <area shape="rect" href="easy-fs_2defs_8h.html" title=" " alt="" coords="43,379,105,405"/>
 <area shape="rect" href="fs__dependency_8h.html" title=" " alt="" coords="111,229,242,256"/>
@@ -157,7 +161,25 @@ fs.c 的引用(Include)关系图:</div>
 <tr class="memdesc:a010ece35d82b747be361fb3501b96fcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The inode table in memory  <a href="easy-fs_2fs_8c.html#a010ece35d82b747be361fb3501b96fcd">更多...</a><br /></td></tr>
 <tr class="separator:a010ece35d82b747be361fb3501b96fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">函数说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>File system implementation. <br  />
+ </p>
+<p>Five layers: <br  />
+</p><ul>
+<li>Blocks: allocator for raw disk blocks. <br  />
+</li>
+<li>Log: crash recovery for multi-step updates. <br  />
+</li>
+<li>Files: inode allocator, reading, writing, metadata. <br  />
+</li>
+<li>Directories: inode with special contents (list of other inodes!) <br  />
+</li>
+<li>Names: paths like /usr/rtm/xv6/fs.c for convenient naming. <br  />
+ This file contains the low-level file system manipulation <br  />
+routines. The (higher-level) system call implementations <br  />
+are in sysfile.c. </li>
+</ul>
+</div><h2 class="groupheader">函数说明</h2>
 <a id="a69a135a0e8a06d9f306d77ebc0c1f7a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a69a135a0e8a06d9f306d77ebc0c1f7a0">&#9670;&nbsp;</a></span>dirlink()</h2>
 
@@ -331,7 +353,9 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Drop a reference to an in-memory inode. If that was the last reference, the inode table entry can be recycled. If that was the last reference and the inode has no links to it, free the inode (and its content) on disk. All calls to <a class="el" href="easy-fs_2fs_8c.html#ab3c447f135c68e4c3c1f8d5866f6e77b">iput()</a> must be inside a transaction in case it has to free the inode. </p>
+<p>Drop a reference to an in-memory inode. <br  />
+If that was the last reference, the inode table entry can be recycled. If that was the last reference and the inode has no links to it, free the inode (and its content) on disk. <br  />
+All calls to <a class="el" href="easy-fs_2fs_8c.html#ab3c447f135c68e4c3c1f8d5866f6e77b">iput()</a> must be inside a transaction in case it has to free the inode. </p>
 
 </div>
 </div>
@@ -523,7 +547,11 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Write data to inode. Caller must hold ip-&gt;lock. If user_src==1, then src is a user virtual address; otherwise, src is a kernel address. Returns the number of bytes successfully written. If the return value is less than the requested n, there was an error of some kind. </p>
+<p>Write data to inode. <br  />
+Caller must hold ip-&gt;lock. <br  />
+If user_src==1, then src is a user virtual address; otherwise, src is a kernel address. <br  />
+Returns the number of bytes successfully written. <br  />
+If the return value is less than the requested n, there was an error of some kind. </p>
 
 </div>
 </div>
@@ -539,14 +567,6 @@ fs.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>File system implementation. Five layers:</p><ul>
-<li>Blocks: allocator for raw disk blocks.</li>
-<li>Log: crash recovery for multi-step updates.</li>
-<li>Files: inode allocator, reading, writing, metadata.</li>
-<li>Directories: inode with special contents (list of other inodes!)</li>
-<li>Names: paths like /usr/rtm/xv6/fs.c for convenient naming.</li>
-</ul>
-<p>This file contains the low-level file system manipulation routines. The (higher-level) system call implementations are in sysfile.c. </p>
 
 </div>
 </div>

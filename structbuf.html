@@ -101,8 +101,10 @@ buf 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 成员变量</h2></td></tr>
 <tr class="memitem:ac63b1f168765a53e565a8ba27f5469d1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbuf.html#ac63b1f168765a53e565a8ba27f5469d1">valid</a></td></tr>
+<tr class="memdesc:ac63b1f168765a53e565a8ba27f5469d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">has data been read from disk?  <a href="structbuf.html#ac63b1f168765a53e565a8ba27f5469d1">更多...</a><br /></td></tr>
 <tr class="separator:ac63b1f168765a53e565a8ba27f5469d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97070430c7988bca5a2eafe30f23261d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbuf.html#a97070430c7988bca5a2eafe30f23261d">disk</a></td></tr>
+<tr class="memdesc:a97070430c7988bca5a2eafe30f23261d"><td class="mdescLeft">&#160;</td><td class="mdescRight">does disk "own" buf?  <a href="structbuf.html#a97070430c7988bca5a2eafe30f23261d">更多...</a><br /></td></tr>
 <tr class="separator:a97070430c7988bca5a2eafe30f23261d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf61a1db4c34c23857104abc633d8ee6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbuf.html#aaf61a1db4c34c23857104abc633d8ee6">dev</a></td></tr>
 <tr class="separator:aaf61a1db4c34c23857104abc633d8ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,6 +113,7 @@ buf 的协作图:</div>
 <tr class="memitem:af7f3952c867559bd470306b5f4fa861f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbuf.html#af7f3952c867559bd470306b5f4fa861f">refcnt</a></td></tr>
 <tr class="separator:af7f3952c867559bd470306b5f4fa861f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48c008b4a22859e25eb05af3b5c22d45"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structbuf.html">buf</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbuf.html#a48c008b4a22859e25eb05af3b5c22d45">prev</a></td></tr>
+<tr class="memdesc:a48c008b4a22859e25eb05af3b5c22d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">LRU cache list  <a href="structbuf.html#a48c008b4a22859e25eb05af3b5c22d45">更多...</a><br /></td></tr>
 <tr class="separator:a48c008b4a22859e25eb05af3b5c22d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a609449f1b0b08ae96fe8b29e866fd7"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structbuf.html">buf</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbuf.html#a5a609449f1b0b08ae96fe8b29e866fd7">next</a></td></tr>
 <tr class="separator:a5a609449f1b0b08ae96fe8b29e866fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,6 +175,8 @@ buf 的协作图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>does disk "own" buf? </p>
+
 </div>
 </div>
 <a id="a5a609449f1b0b08ae96fe8b29e866fd7"></a>
@@ -200,6 +205,8 @@ buf 的协作图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>LRU cache list </p>
+
 </div>
 </div>
 <a id="af7f3952c867559bd470306b5f4fa861f"></a>
@@ -227,6 +234,8 @@ buf 的协作图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>has data been read from disk? </p>
 
 </div>
 </div>

@@ -221,7 +221,10 @@ vm.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Copy from user to kernel. Copy len bytes to dst from virtual address srcva in a given page table. Return 0 on success, -1 on error. </p>
+<p>Copy from user to kernel. <br  />
+Copy len bytes to dst from virtual address srcva in a given page table. <br  />
+Return 0 on success, -1 on error. <br  />
+</p>
 
 </div>
 </div>
@@ -262,7 +265,9 @@ vm.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Copy a null-terminated string from user to kernel. Copy bytes to dst from virtual address srcva in a given page table, until a '\0', or max. Return 0 on success, -1 on error. </p>
+<p>Copy a null-terminated string from user to kernel. <br  />
+Copy bytes to dst from virtual address srcva in a given page table, until a '\0', or max. <br  />
+Return 0 on success, -1 on error. </p>
 
 </div>
 </div>
@@ -305,7 +310,9 @@ vm.h 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>用户态和内核态拷贝函数 </p>
-<p>Copy from kernel to user. Copy len bytes from src to virtual address dstva in a given page table. Return 0 on success, -1 on error. </p>
+<p>Copy from kernel to user. <br  />
+Copy len bytes from src to virtual address dstva in a given page table. <br  />
+Return 0 on success, -1 on error. </p>
 
 </div>
 </div>
@@ -418,7 +425,8 @@ vm.h 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>释放地址空间函数 </p>
-<p>Recursively free page-table pages. All leaf mappings must already have been removed. </p>
+<p>Recursively free page-table pages. <br  />
+All leaf mappings must already have been removed. </p>
 
 </div>
 </div>
@@ -485,7 +493,16 @@ vm.h 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>两种功能：地址转换；建立映射 </p>
-<p>Return the address of the PTE in page table pagetable that corresponds to virtual address va. If alloc!=0, create any required page-table pages. The risc-v Sv39 scheme has three levels of page-table pages. A page-table page contains 512 64-bit PTEs. A 64-bit virtual address is split into five fields: 39..63 &ndash; must be zero. 30..38 &ndash; 9 bits of level-2 index. 21..29 &ndash; 9 bits of level-1 index. 12..20 &ndash; 9 bits of level-0 index. 0..11 &ndash; 12 bits of byte offset within the page. </p>
+<p>Return the address of the PTE in page table pagetable that corresponds to virtual address va. <br  />
+If alloc!=0, create any required page-table pages. <br  />
+The risc-v Sv39 scheme has three levels of page-table pages. <br  />
+A page-table page contains 512 64-bit PTEs. <br  />
+A 64-bit virtual address is split into five fields: <br  />
+39..63 &ndash; must be zero. <br  />
+30..38 &ndash; 9 bits of level-2 index. <br  />
+21..29 &ndash; 9 bits of level-1 index. <br  />
+12..20 &ndash; 9 bits of level-0 index. <br  />
+0..11 &ndash; 12 bits of byte offset within the page. </p>
 
 </div>
 </div>
@@ -516,7 +533,8 @@ vm.h 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>虚拟地址转物理地址函数 </p>
-<p>Look up a virtual address, return the physical address, or 0 if not mapped. Can only be used to look up user pages. </p>
+<p>Look up a virtual address, return the physical address, or 0 if not mapped. <br  />
+Can only be used to look up user pages. </p>
 
 </div>
 </div>
