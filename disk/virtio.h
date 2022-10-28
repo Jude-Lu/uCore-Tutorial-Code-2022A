@@ -2,12 +2,14 @@
 #define VIRTIO_H
 
 /**
- * virtio device definitions.
- * for both the mmio interface, and virtio descriptors.
- * only tested with qemu.
- * this is the "legacy" virtio interface.
+ * @file virtio.h
+ * @brief virtio device definitions.
+ * @details
+ * both the mmio interface, and virtio descriptors. \n
+ * only tested with qemu. \n
+ * this is the "legacy" virtio interface. \n
  * 
- * the virtio spec:
+ * the virtio spec: \n
  * https://docs.oasis-open.org/virtio/virtio/v1.1/virtio-v1.1.pdf
  */
 

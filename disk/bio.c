@@ -1,17 +1,19 @@
 /**
- * Buffer cache.
+ * @file bio.c
+ * @brief Buffer cache.
  * 
- * The buffer cache is a linked list of buf structures holding
- * cached copies of disk block contents.  Caching disk blocks
- * in memory reduces the number of disk reads and also provides
- * a synchronization point for disk blocks used by multiple processes.
+ * @details
+ * The buffer cache is a linked list of buf structures holding \n
+ * cached copies of disk block contents.  Caching disk blocks \n
+ * in memory reduces the number of disk reads and also provides \n
+ * a synchronization point for disk blocks used by multiple processes. \n
  * 
- * Interface:
- * * To get a buffer for a particular disk block, call bread.
- * * After changing buffer data, call bwrite to write it to disk.
- * * When done with the buffer, call brelse.
- * * Do not use the buffer after calling brelse.
- * * Only one process at a time can use a buffer,
+ * Interface: \n
+ * * To get a buffer for a particular disk block, call bread. \n
+ * * After changing buffer data, call bwrite to write it to disk. \n
+ * * When done with the buffer, call brelse. \n
+ * * Do not use the buffer after calling brelse. \n
+ * * Only one process at a time can use a buffer, \n
  *     so do not keep them longer than necessary.
  */
 

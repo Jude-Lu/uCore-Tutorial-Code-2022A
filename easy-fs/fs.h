@@ -5,15 +5,18 @@
 #include "fs_dependency.h"
 
 /**
- * On-disk file system format.
- * Both the kernel and user programs use this header file.
+ * @file fs.h
+ * @brief On-disk file system format.
+ * @details
+ * the kernel and user programs use this header file. \n
  * 
- * Disk layout:
- * [ boot block | super block | inode blocks | free bit map | data blocks]
+ * Disk layout: \n
+ * [ boot block | super block | inode blocks | free bit map | data blocks] \n
  * 
- * mkfs computes the super block and builds an initial file system. The
- * super block describes the disk layout:
+ * mkfs computes the super block and builds an initial file system.
  */
+
+/// The super block describes the disk layout:
 struct superblock {
 	uint magic; ///< Must be FSMAGIC
 	uint size; ///< Size of file system image (blocks)

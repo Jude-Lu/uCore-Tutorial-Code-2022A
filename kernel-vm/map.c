@@ -3,8 +3,8 @@
 #include "kalloc.h"
 
 /**
- * Add a mapping to the kernel page table.
- * only used when booting.
+ * Add a mapping to the kernel page table. \n
+ * only used when booting. \n
  * does not flush TLB or enable paging.
  */
 void kvmmap(pagetable_t kpgtbl, uint64 va, uint64 pa, uint64 sz, int perm) {
@@ -13,10 +13,9 @@ void kvmmap(pagetable_t kpgtbl, uint64 va, uint64 pa, uint64 sz, int perm) {
 }
 
 /**
- * Create PTEs for virtual addresses starting at va that refer to
- * physical addresses starting at pa. va and size might not
- * be page-aligned. Returns 0 on success, -1 if walk() couldn't
- * allocate a needed page-table page.
+ * Create PTEs for virtual addresses starting at va that refer to physical addresses starting at pa. \n
+ * va and size might not be page-aligned. \n
+ * Returns 0 on success, -1 if walk() couldn't allocate a needed page-table page.
  */
 int mappages(pagetable_t pagetable, uint64 va, uint64 size, uint64 pa, int perm) {
     uint64 a, last;
@@ -53,8 +52,9 @@ int uvmmap(pagetable_t pagetable, uint64 va, uint64 npages, int perm) {
 }
 
 /**
- * Remove npages of mappings starting from va. va must be
- * page-aligned. The mappings must exist.
+ * Remove npages of mappings starting from va. \n
+ * va must be page-aligned. \n
+ * The mappings must exist. \n
  * Optionally free the physical memory.
  */
 void uvmunmap(pagetable_t pagetable, uint64 va, uint64 npages, int do_free) {
@@ -80,7 +80,7 @@ void uvmunmap(pagetable_t pagetable, uint64 va, uint64 npages, int do_free) {
 }
 
 /**
- * create an empty user page table.
+ * create an empty user page table. \n
  * returns 0 if out of memory.
  */
 pagetable_t uvmcreate() {
@@ -110,8 +110,8 @@ void uvmfree(pagetable_t pagetable, uint64 max_page) {
 }
 
 /**
- * Used in fork.
- * Copy the pagetable page and all the user pages.
+ * Used in fork. \n
+ * Copy the pagetable page and all the user pages. \n
  * Return 0 on success, -1 on error.
  */
 int uvmcopy(pagetable_t old, pagetable_t new, uint64 max_page) {

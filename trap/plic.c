@@ -1,9 +1,10 @@
 #include "plic.h"
 #include "defs.h"
 
-//
-// the riscv Platform Level Interrupt Controller (PLIC).
-//
+/**
+ * @file plic.c
+ * @brief the riscv Platform Level Interrupt Controller (PLIC).
+ */
 
 void plicinit(int hart)
 {

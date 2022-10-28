@@ -1,13 +1,16 @@
 /**
- * File system implementation.  Five layers:
- * + Blocks: allocator for raw disk blocks.
- * + Log: crash recovery for multi-step updates.
- * + Files: inode allocator, reading, writing, metadata.
- * + Directories: inode with special contents (list of other inodes!)
- * + Names: paths like /usr/rtm/xv6/fs.c for convenient naming.
+ * @file fs.c
+ * @brief File system implementation.  
+ * @details
+ * Five layers: \n
+ * + Blocks: allocator for raw disk blocks. \n
+ * + Log: crash recovery for multi-step updates. \n
+ * + Files: inode allocator, reading, writing, metadata. \n
+ * + Directories: inode with special contents (list of other inodes!) \n
+ * + Names: paths like /usr/rtm/xv6/fs.c for convenient naming. \n
  * 
- * This file contains the low-level file system manipulation
- * routines.  The (higher-level) system call implementations
+ * This file contains the low-level file system manipulation \n
+ * routines.  The (higher-level) system call implementations \n
  * are in sysfile.c.
  */
 
@@ -200,11 +203,11 @@ void ivalid(struct inode *ip)
 }
 
 /**
- * Drop a reference to an in-memory inode.
+ * Drop a reference to an in-memory inode. \n
  * If that was the last reference, the inode table entry can
  * be recycled.
  * If that was the last reference and the inode has no links
- * to it, free the inode (and its content) on disk.
+ * to it, free the inode (and its content) on disk. \n
  * All calls to iput() must be inside a transaction in
  * case it has to free the inode.
  */
@@ -311,11 +314,11 @@ int readi(struct inode *ip, int user_dst, uint64 dst, uint off, uint n)
 }
 
 /**
- * Write data to inode.
- * Caller must hold ip->lock.
+ * Write data to inode. \n
+ * Caller must hold ip->lock. \n
  * If user_src==1, then src is a user virtual address;
- * otherwise, src is a kernel address.
- * Returns the number of bytes successfully written.
+ * otherwise, src is a kernel address. \n
+ * Returns the number of bytes successfully written. \n
  * If the return value is less than the requested n,
  * there was an error of some kind.
  */

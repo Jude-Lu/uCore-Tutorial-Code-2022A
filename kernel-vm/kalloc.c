@@ -23,8 +23,8 @@ void kinit() {
 /**
  * Free the page of physical memory pointed at by v,
  * which normally should have been returned by a
- * call to kalloc().  (The exception is when
- * initializing the allocator; see kinit above.)
+ * call to kalloc(). \n
+ * (The exception is when initializing the allocator; see kinit above.)
  */
 void kfree(void* pa) {
     struct linklist* l;
@@ -39,8 +39,8 @@ void kfree(void* pa) {
 }
 
 /**
- * Allocate one 4096-byte page of physical memory.
- * Returns a pointer that the kernel can use.
+ * Allocate one 4096-byte page of physical memory. \n
+ * Returns a pointer that the kernel can use. \n
  * Returns 0 if the memory cannot be allocated.
  */
 void* kalloc() {

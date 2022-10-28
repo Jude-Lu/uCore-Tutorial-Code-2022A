@@ -5,12 +5,13 @@
 #include "defs.h"
 
 /**
- * Inode content
- * 
- * The content (data) associated with each inode is stored
- * in blocks on the disk. The first NDIRECT block numbers
- * are listed in ip->addrs[].  The next NINDIRECT blocks are
- * listed in block ip->addrs[NDIRECT].
+ * @file file.h
+ * @brief Inode content
+ * @details
+ * The content (data) associated with each inode is stored \n
+ * in blocks on the disk. The first NDIRECT block numbers \n
+ * are listed in ip->addrs[].  The next NINDIRECT blocks are \n
+ * listed in block ip->addrs[NDIRECT]. \n
  * 
  * in-memory copy of an inode,it can be used to quickly locate file entities on disk
  */
