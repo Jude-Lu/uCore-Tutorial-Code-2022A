@@ -8,7 +8,7 @@
  * does not flush TLB or enable paging.
  */
 void kvmmap(pagetable_t kpgtbl, uint64 va, uint64 pa, uint64 sz, int perm) {
-    if (mappages(kpgtbl, va, sz, pa, perm) != 0)
+    if (uvmmap(kpgtbl, va, sz, pa, perm) != 0)
         panic("kvmmap");
 }
 
@@ -17,7 +17,7 @@ void kvmmap(pagetable_t kpgtbl, uint64 va, uint64 pa, uint64 sz, int perm) {
  * va and size might not be page-aligned. \n
  * Returns 0 on success, -1 if walk() couldn't allocate a needed page-table page.
  */
-int mappages(pagetable_t pagetable, uint64 va, uint64 size, uint64 pa, int perm) {
+int uvmmap(pagetable_t pagetable, uint64 va, uint64 size, uint64 pa, int perm) {
     uint64 a, last;
     pte_t* pte;
 
@@ -37,16 +37,6 @@ int mappages(pagetable_t pagetable, uint64 va, uint64 size, uint64 pa, int perm)
             break;
         a += PGSIZE;
         pa += PGSIZE;
-    }
-    return 0;
-}
-
-int uvmmap(pagetable_t pagetable, uint64 va, uint64 npages, int perm) {
-    for (int i = 0; i < npages; ++i) {
-        if (mappages(pagetable, va + i * 0x1000, 0x1000,
-                     (uint64)kalloc(), perm)) {
-            return -1;
-        }
     }
     return 0;
 }
@@ -91,9 +81,9 @@ pagetable_t uvmcreate() {
         return 0;
     }
     memset(pagetable, 0, PGSIZE);
-    if (mappages(pagetable, TRAMPOLINE, PAGE_SIZE, (uint64)trampoline,
+    if (uvmmap(pagetable, TRAMPOLINE, PAGE_SIZE, (uint64)trampoline,
                  PTE_R | PTE_X) < 0) {
-        panic("mappages fail");
+        panic("uvmmap fail");
     }
     return pagetable;
 }
@@ -130,7 +120,7 @@ int uvmcopy(pagetable_t old, pagetable_t new, uint64 max_page) {
         if ((mem = kalloc()) == 0)
             goto err;
         memmove(mem, (char*)pa, PGSIZE);
-        if (mappages(new, i, PGSIZE, (uint64)mem, flags) != 0) {
+        if (uvmmap(new, i, PGSIZE, (uint64)mem, flags) != 0) {
             kfree(mem);
             goto err;
         }
