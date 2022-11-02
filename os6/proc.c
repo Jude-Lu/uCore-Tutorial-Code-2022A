@@ -84,7 +84,7 @@ found:
 	p->parent = NULL;
 	p->exit_code = 0;
 	p->pagetable = uvmcreate();
-	if (mappages(p->pagetable, TRAPFRAME, PGSIZE, (uint64)p->trapframe, PTE_R | PTE_W) < 0) {
+	if (uvmmap(p->pagetable, TRAPFRAME, PGSIZE, (uint64)p->trapframe, PTE_R | PTE_W) < 0) {
 		panic("map trapframe fail");
 	}
 	memset(&p->context, 0, sizeof(p->context));

@@ -25,7 +25,7 @@ void loader_init()
 pagetable_t bin_loader(uint64 start, uint64 end, struct proc *p)
 {
 	pagetable_t pg = uvmcreate();
-	if (mappages(pg, TRAPFRAME, PGSIZE, (uint64)p->trapframe, PTE_R | PTE_W) < 0) {
+	if (uvmmap(pg, TRAPFRAME, PGSIZE, (uint64)p->trapframe, PTE_R | PTE_W) < 0) {
 		panic("map trapframe fail");
 	}
 	if (!PGALIGNED(start)) {
@@ -38,9 +38,9 @@ pagetable_t bin_loader(uint64 start, uint64 end, struct proc *p)
 	}
 	end = PGROUNDUP(end);
 	uint64 length = end - start;
-	if (mappages(pg, BASE_ADDRESS, length, start,
+	if (uvmmap(pg, BASE_ADDRESS, length, start,
 		     PTE_U | PTE_R | PTE_W | PTE_X) != 0) {
-		panic("mappages fail");
+		panic("uvmmap fail");
 	}
 	p->pagetable = pg;
 	uint64 ustack_bottom_vaddr = BASE_ADDRESS + length + PAGE_SIZE;
@@ -48,7 +48,7 @@ pagetable_t bin_loader(uint64 start, uint64 end, struct proc *p)
 		// Fix in ch5
 		panic("Unsupported");
 	}
-	mappages(pg, ustack_bottom_vaddr, USTACK_SIZE, (uint64)kalloc(),
+	uvmmap(pg, ustack_bottom_vaddr, USTACK_SIZE, (uint64)kalloc(),
 		 PTE_U | PTE_R | PTE_W | PTE_X);
 	p->ustack = ustack_bottom_vaddr;
 	p->trapframe->epc = BASE_ADDRESS;
