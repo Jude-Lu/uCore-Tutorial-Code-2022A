@@ -1,6 +1,11 @@
 #ifndef DEFS_H
 #define DEFS_H
 
+/**
+ * @file defs.h
+ * @brief 规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数
+ */
+
 typedef unsigned int uint;
 typedef unsigned short ushort;
 typedef unsigned char uchar;
@@ -102,12 +107,6 @@ enum {
 #define PXMASK 0x1FF // 9 bits
 #define PXSHIFT(level) (PGSHIFT + (9 * (level)))
 #define PX(level, va) ((((uint64)(va)) >> PXSHIFT(level)) & PXMASK)
-
-// one beyond the highest possible virtual address.
-// MAXVA is actually one bit less than the max allowed by
-// Sv39, to avoid having to sign-extend virtual addresses
-// that have the high bit set.
-#define MAXVA (1L << (9 + 9 + 9 + 12 - 1))
 
 // Supervisor Status Register, sstatus
 

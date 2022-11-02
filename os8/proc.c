@@ -80,9 +80,10 @@ found:
 	// user stack
 	t->ustack = get_thread_ustack_base_va(t);
 	if (alloc_user_res != 0) {
-		if (uvmmap(p->pagetable, t->ustack, USTACK_SIZE / PAGE_SIZE,
-			   PTE_U | PTE_R | PTE_W) < 0) {
-			panic("map ustack fail");
+		for (int i = 0; i < USTACK_SIZE / PAGE_SIZE; ++i) {
+			if (uvmmap(p->pagetable, t->ustack + i * 0x1000, 0x1000, (uint64)kalloc(), PTE_U | PTE_R | PTE_W)) {
+				panic("map ustack fail");
+			}
 		}
 		p->max_page =
 			MAX(p->max_page,
@@ -91,7 +92,7 @@ found:
 	// trap frame
 	t->trapframe = (struct trapframe *)trapframe[p - pool][tid];
 	memset((void *)t->trapframe, 0, TRAP_PAGE_SIZE);
-	if (mappages(p->pagetable, get_thread_trapframe_va(tid), TRAP_PAGE_SIZE,
+	if (uvmmap(p->pagetable, get_thread_trapframe_va(tid), TRAP_PAGE_SIZE,
 		     (uint64)t->trapframe, PTE_R | PTE_W) < 0) {
 		panic("map trapframe fail");
 	}

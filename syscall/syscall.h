@@ -1,6 +1,11 @@
 #ifndef SYSCALL_H
 #define SYSCALL_H
 
+/**
+ * @file syscall.h
+ * @brief syscall模块主要负责系统调用的处理，根据传入的syscall id调用对应的syscall函数
+*/
+
 #include "defs.h"
 
 /// syscall_context定义了各个syscall的函数指针，方便兼容不同章节syscall的差异，各个章节可以根据本章节的内容和难度实现本章节的syscall

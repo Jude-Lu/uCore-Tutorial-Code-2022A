@@ -54,7 +54,7 @@ int bin_loader(uint64 start, uint64 end, struct proc *p)
 		} else if (pa + PAGE_SIZE > end) {
 			memset(page + (end - pa), 0, PAGE_SIZE - (end - pa));
 		}
-		if (mappages(p->pagetable, va, PGSIZE, (uint64)page,
+		if (uvmmap(p->pagetable, va, PGSIZE, (uint64)page,
 			     PTE_U | PTE_R | PTE_W | PTE_X) != 0)
 			panic("...");
 	}
@@ -67,7 +67,7 @@ int bin_loader(uint64 start, uint64 end, struct proc *p)
 			panic("...");
 		}
 		memset(page, 0, PGSIZE);
-		if (mappages(p->pagetable, va, PGSIZE, (uint64)page,
+		if (uvmmap(p->pagetable, va, PGSIZE, (uint64)page,
 			     PTE_U | PTE_R | PTE_W) != 0)
 			panic("...");
 	}
