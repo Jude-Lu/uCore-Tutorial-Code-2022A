@@ -1,4 +1,4 @@
 <map id="syscall/syscall.h" name="syscall/syscall.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,133,32"/>
-<area shape="rect" id="node2" href="$syscall_2defs_8h.html" title=" " alt="" coords="38,80,101,107"/>
+<area shape="rect" id="node1" title="syscall模块主要负责系统调用的处理，根据传入的syscall id调用对应的syscall函数" alt="" coords="5,5,133,32"/>
+<area shape="rect" id="node2" href="$syscall_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="38,80,101,107"/>
 </map>

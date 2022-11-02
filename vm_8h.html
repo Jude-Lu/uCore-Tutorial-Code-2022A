@@ -87,6 +87,9 @@ $(document).ready(function(){initNavTree('vm_8h.html',''); initResizable(); });
 <div class="title">vm.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>主要负责虚拟内存的管理  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="kernel-vm_2defs_8h_source.html">defs.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="kernel-vm_2log_8h_source.html">log.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -94,11 +97,11 @@ vm.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="vm_8h__incl.png" border="0" usemap="#kernel-vm_2vm_8h" alt=""/></div>
 <map name="kernel-vm_2vm_8h" id="kernel-vm_2vm_8h">
-<area shape="rect" title=" " alt="" coords="5,5,129,32"/>
-<area shape="rect" href="kernel-vm_2defs_8h.html" title=" " alt="" coords="40,304,103,331"/>
+<area shape="rect" title="主要负责虚拟内存的管理" alt="" coords="5,5,129,32"/>
+<area shape="rect" href="kernel-vm_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="40,304,103,331"/>
 <area shape="rect" href="kernel-vm_2log_8h.html" title=" " alt="" coords="93,80,148,107"/>
 <area shape="rect" href="vm__dependency_8h.html" title=" " alt="" coords="73,155,211,181"/>
-<area shape="rect" href="kernel-vm_2string_8h.html" title=" " alt="" coords="89,229,160,256"/>
+<area shape="rect" href="kernel-vm_2string_8h.html" title="实现了简单的字符串和内存操作函数，很多模块可以视情况使用" alt="" coords="89,229,160,256"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -106,7 +109,7 @@ vm.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="vm_8h__dep__incl.png" border="0" usemap="#kernel-vm_2vm_8hdep" alt=""/></div>
 <map name="kernel-vm_2vm_8hdep" id="kernel-vm_2vm_8hdep">
-<area shape="rect" title=" " alt="" coords="1095,5,1219,32"/>
+<area shape="rect" title="主要负责虚拟内存的管理" alt="" coords="1095,5,1219,32"/>
 <area shape="rect" href="map_8c.html" title=" " alt="" coords="941,80,1072,107"/>
 <area shape="rect" href="vm_8c.html" title=" " alt="" coords="1096,80,1219,107"/>
 <area shape="rect" href="vm__module_8h.html" title=" " alt="" coords="1243,80,1423,107"/>
@@ -162,17 +165,14 @@ vm.h 的引用(Include)关系图:</div>
 <tr class="memitem:a0ed9c88a0fdfd3f77c5a25d9411c7227"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#ab2c27be14dd36f877c6267835e0d1608">pte_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8h.html#a0ed9c88a0fdfd3f77c5a25d9411c7227">walk</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, int)</td></tr>
 <tr class="memdesc:a0ed9c88a0fdfd3f77c5a25d9411c7227"><td class="mdescLeft">&#160;</td><td class="mdescRight">两种功能：地址转换；建立映射  <a href="vm_8h.html#a0ed9c88a0fdfd3f77c5a25d9411c7227">更多...</a><br /></td></tr>
 <tr class="separator:a0ed9c88a0fdfd3f77c5a25d9411c7227"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb01d3ac95ce32c8421eb08d90f23ede"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8h.html#adb01d3ac95ce32c8421eb08d90f23ede">walkaddr</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
-<tr class="memdesc:adb01d3ac95ce32c8421eb08d90f23ede"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚拟地址转物理地址函数  <a href="vm_8h.html#adb01d3ac95ce32c8421eb08d90f23ede">更多...</a><br /></td></tr>
-<tr class="separator:adb01d3ac95ce32c8421eb08d90f23ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9982ae549f868430af53bcc60f699e2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8h.html#a9982ae549f868430af53bcc60f699e2d">useraddr</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
-<tr class="memdesc:a9982ae549f868430af53bcc60f699e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look up a virtual address, return the physical address,  <a href="vm_8h.html#a9982ae549f868430af53bcc60f699e2d">更多...</a><br /></td></tr>
+<tr class="memdesc:a9982ae549f868430af53bcc60f699e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚拟地址转物理地址函数  <a href="vm_8h.html#a9982ae549f868430af53bcc60f699e2d">更多...</a><br /></td></tr>
 <tr class="separator:a9982ae549f868430af53bcc60f699e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8238f93c489633a98af630729449104c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8h.html#a8238f93c489633a98af630729449104c">freewalk</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>)</td></tr>
 <tr class="memdesc:a8238f93c489633a98af630729449104c"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放地址空间函数  <a href="vm_8h.html#a8238f93c489633a98af630729449104c">更多...</a><br /></td></tr>
 <tr class="separator:a8238f93c489633a98af630729449104c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac8f4395c017bc86f341b7e9f0c6d577"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8h.html#aac8f4395c017bc86f341b7e9f0c6d577">copyout</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, char *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
-<tr class="memdesc:aac8f4395c017bc86f341b7e9f0c6d577"><td class="mdescLeft">&#160;</td><td class="mdescRight">用户态和内核态拷贝函数  <a href="vm_8h.html#aac8f4395c017bc86f341b7e9f0c6d577">更多...</a><br /></td></tr>
+<tr class="memdesc:aac8f4395c017bc86f341b7e9f0c6d577"><td class="mdescLeft">&#160;</td><td class="mdescRight">以下为用户态和内核态拷贝函数  <a href="vm_8h.html#aac8f4395c017bc86f341b7e9f0c6d577">更多...</a><br /></td></tr>
 <tr class="separator:aac8f4395c017bc86f341b7e9f0c6d577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf46fb79cae406c29443488583b8d47e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8h.html#adf46fb79cae406c29443488583b8d47e">copyin</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, char *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
 <tr class="separator:adf46fb79cae406c29443488583b8d47e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,7 +183,9 @@ vm.h 的引用(Include)关系图:</div>
 <tr class="memitem:a70afda8e3a69968b05a1409ff0736f0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8h.html#a70afda8e3a69968b05a1409ff0736f0d">either_copyin</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, int, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, char *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
 <tr class="separator:a70afda8e3a69968b05a1409ff0736f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">函数说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>主要负责虚拟内存的管理 </p>
+</div><h2 class="groupheader">函数说明</h2>
 <a id="adf46fb79cae406c29443488583b8d47e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf46fb79cae406c29443488583b8d47e">&#9670;&nbsp;</a></span>copyin()</h2>
 
@@ -309,7 +311,7 @@ Return 0 on success, -1 on error. </p>
       </table>
 </div><div class="memdoc">
 
-<p>用户态和内核态拷贝函数 </p>
+<p>以下为用户态和内核态拷贝函数 </p>
 <p>Copy from kernel to user. <br  />
 Copy len bytes from src to virtual address dstva in a given page table. <br  />
 Return 0 on success, -1 on error. </p>
@@ -440,13 +442,13 @@ All leaf mappings must already have been removed. </p>
           <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> useraddr </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>pagetable</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>va</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -456,7 +458,8 @@ All leaf mappings must already have been removed. </p>
       </table>
 </div><div class="memdoc">
 
-<p>Look up a virtual address, return the physical address, </p>
+<p>虚拟地址转物理地址函数 </p>
+<p>虚拟地址转物理地址函数 </p>
 
 </div>
 </div>
@@ -503,38 +506,6 @@ A 64-bit virtual address is split into five fields: <br  />
 21..29 &ndash; 9 bits of level-1 index. <br  />
 12..20 &ndash; 9 bits of level-0 index. <br  />
 0..11 &ndash; 12 bits of byte offset within the page. </p>
-
-</div>
-</div>
-<a id="adb01d3ac95ce32c8421eb08d90f23ede"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb01d3ac95ce32c8421eb08d90f23ede">&#9670;&nbsp;</a></span>walkaddr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> walkaddr </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
-          <td class="paramname"><em>pagetable</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
-          <td class="paramname"><em>va</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>虚拟地址转物理地址函数 </p>
-<p>Look up a virtual address, return the physical address, or 0 if not mapped. <br  />
-Can only be used to look up user pages. </p>
 
 </div>
 </div>

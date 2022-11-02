@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title=" " alt="" coords="75,5,172,32"/>
 <area shape="rect" id="node2" href="$sync_8h.html" title=" " alt="" coords="50,80,114,107"/>
 <area shape="rect" id="node6" href="$sync_2log_8h.html" title=" " alt="" coords="139,80,193,107"/>
-<area shape="rect" id="node3" href="$sync_2defs_8h.html" title=" " alt="" coords="5,155,68,181"/>
+<area shape="rect" id="node3" href="$sync_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="5,155,68,181"/>
 <area shape="rect" id="node4" href="$sync__dependency_8h.html" title=" " alt="" coords="92,155,240,181"/>
-<area shape="rect" id="node5" href="$sync_2queue_8h.html" title=" " alt="" coords="129,229,203,256"/>
+<area shape="rect" id="node5" href="$sync_2queue_8h.html" title="实现了简单的循环队列，可以在进程调度和同步互斥中使用" alt="" coords="129,229,203,256"/>
 </map>

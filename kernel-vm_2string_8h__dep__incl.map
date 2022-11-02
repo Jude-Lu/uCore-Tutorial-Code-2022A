@@ -1,11 +1,11 @@
 <map id="kernel&#45;vm/string.h" name="kernel&#45;vm/string.h">
-<area shape="rect" id="node1" title=" " alt="" coords="1019,5,1159,32"/>
+<area shape="rect" id="node1" title="实现了简单的字符串和内存操作函数，很多模块可以视情况使用" alt="" coords="1019,5,1159,32"/>
 <area shape="rect" id="node2" href="$vm__dependency_8h.html" title=" " alt="" coords="985,80,1193,107"/>
 <area shape="rect" id="node3" href="$kernel-vm_2log_8h.html" title=" " alt="" coords="1185,155,1307,181"/>
 <area shape="rect" id="node5" href="$kalloc_8c.html" title=" " alt="" coords="932,304,1072,331"/>
-<area shape="rect" id="node4" href="$kalloc_8h.html" title=" " alt="" coords="1097,229,1238,256"/>
-<area shape="rect" id="node49" href="$map_8h.html" title=" " alt="" coords="1411,229,1543,256"/>
-<area shape="rect" id="node50" href="$vm_8h.html" title=" " alt="" coords="1263,229,1387,256"/>
+<area shape="rect" id="node4" href="$kalloc_8h.html" title="主要负责物理内存的管理" alt="" coords="1097,229,1238,256"/>
+<area shape="rect" id="node49" href="$map_8h.html" title="主要负责页表的管理" alt="" coords="1411,229,1543,256"/>
+<area shape="rect" id="node50" href="$vm_8h.html" title="主要负责虚拟内存的管理" alt="" coords="1263,229,1387,256"/>
 <area shape="rect" id="node6" href="$map_8c.html" title=" " alt="" coords="1449,304,1579,331"/>
 <area shape="rect" id="node7" href="$vm_8c.html" title=" " alt="" coords="1097,304,1219,331"/>
 <area shape="rect" id="node8" href="$vm__module_8h.html" title=" " alt="" coords="1244,304,1424,331"/>

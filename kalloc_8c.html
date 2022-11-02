@@ -96,11 +96,11 @@ kalloc.c 的引用(Include)关系图:</div>
 <div class="center"><img src="kalloc_8c__incl.png" border="0" usemap="#kernel-vm_2kalloc_8c" alt=""/></div>
 <map name="kernel-vm_2kalloc_8c" id="kernel-vm_2kalloc_8c">
 <area shape="rect" title=" " alt="" coords="24,5,164,32"/>
-<area shape="rect" href="kalloc_8h.html" title=" " alt="" coords="22,80,94,107"/>
+<area shape="rect" href="kalloc_8h.html" title="主要负责物理内存的管理" alt="" coords="22,80,94,107"/>
 <area shape="rect" href="vm__dependency_8h.html" title=" " alt="" coords="38,229,177,256"/>
-<area shape="rect" href="kernel-vm_2defs_8h.html" title=" " alt="" coords="5,379,68,405"/>
+<area shape="rect" href="kernel-vm_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="5,379,68,405"/>
 <area shape="rect" href="kernel-vm_2log_8h.html" title=" " alt="" coords="39,155,93,181"/>
-<area shape="rect" href="kernel-vm_2string_8h.html" title=" " alt="" coords="55,304,125,331"/>
+<area shape="rect" href="kernel-vm_2string_8h.html" title="实现了简单的字符串和内存操作函数，很多模块可以视情况使用" alt="" coords="55,304,125,331"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -109,10 +109,13 @@ kalloc.c 的引用(Include)关系图:</div>
 <tr class="memitem:a1fb1c2e3b2e5deafacdfdd46107836d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kalloc_8c.html#a1fb1c2e3b2e5deafacdfdd46107836d3">freerange</a> (void *pa_start, void *pa_end)</td></tr>
 <tr class="separator:a1fb1c2e3b2e5deafacdfdd46107836d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea491e5b831017ff628370356b1e233d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kalloc_8c.html#aea491e5b831017ff628370356b1e233d">kinit</a> ()</td></tr>
+<tr class="memdesc:aea491e5b831017ff628370356b1e233d"><td class="mdescLeft">&#160;</td><td class="mdescRight">内存分配初始化  <a href="kalloc_8c.html#aea491e5b831017ff628370356b1e233d">更多...</a><br /></td></tr>
 <tr class="separator:aea491e5b831017ff628370356b1e233d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac905e2b33cf453b44b2c00ff8c5332bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kalloc_8c.html#ac905e2b33cf453b44b2c00ff8c5332bc">kfree</a> (void *pa)</td></tr>
+<tr class="memdesc:ac905e2b33cf453b44b2c00ff8c5332bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放一块内存  <a href="kalloc_8c.html#ac905e2b33cf453b44b2c00ff8c5332bc">更多...</a><br /></td></tr>
 <tr class="separator:ac905e2b33cf453b44b2c00ff8c5332bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af17b13c26f8a126a85de3f3fa19eb73b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kalloc_8c.html#af17b13c26f8a126a85de3f3fa19eb73b">kalloc</a> ()</td></tr>
+<tr class="memdesc:af17b13c26f8a126a85de3f3fa19eb73b"><td class="mdescLeft">&#160;</td><td class="mdescRight">分配一块内存  <a href="kalloc_8c.html#af17b13c26f8a126a85de3f3fa19eb73b">更多...</a><br /></td></tr>
 <tr class="separator:af17b13c26f8a126a85de3f3fa19eb73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -166,6 +169,8 @@ kalloc.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>分配一块内存 </p>
 <p>Allocate one 4096-byte page of physical memory. <br  />
 Returns a pointer that the kernel can use. <br  />
 Returns 0 if the memory cannot be allocated. </p>
@@ -187,7 +192,9 @@ Returns 0 if the memory cannot be allocated. </p>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Free the page of physical memory pointed at by v, which normally should have been returned by a call to <a class="el" href="kalloc_8c.html#af17b13c26f8a126a85de3f3fa19eb73b">kalloc()</a>. <br  />
+
+<p>释放一块内存 </p>
+<p>Free the page of physical memory pointed at by v, which normally should have been returned by a call to <a class="el" href="kalloc_8c.html#af17b13c26f8a126a85de3f3fa19eb73b" title="分配一块内存">kalloc()</a>. <br  />
 (The exception is when initializing the allocator; see kinit above.) </p>
 
 </div>
@@ -206,6 +213,8 @@ Returns 0 if the memory cannot be allocated. </p>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>内存分配初始化 </p>
 
 </div>
 </div>

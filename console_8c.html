@@ -95,19 +95,22 @@ console.c 的引用(Include)关系图:</div>
 <div class="center"><img src="console_8c__incl.png" border="0" usemap="#console_2console_8c" alt=""/></div>
 <map name="console_2console_8c" id="console_2console_8c">
 <area shape="rect" title=" " alt="" coords="25,5,163,32"/>
-<area shape="rect" href="console_8h.html" title=" " alt="" coords="5,80,89,107"/>
-<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="114,80,167,107"/>
-<area shape="rect" href="console_2defs_8h.html" title=" " alt="" coords="109,155,172,181"/>
+<area shape="rect" href="console_8h.html" title="控制台文件，调用sbi实现字符的输入输出" alt="" coords="5,80,89,107"/>
+<area shape="rect" href="sbi_8h.html" title="sbi文件，通过ecall实现最底层的输入输出" alt="" coords="114,80,167,107"/>
+<area shape="rect" href="console_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="109,155,172,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:a4d3805f1dde9ab5369883607ad6e989c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a4d3805f1dde9ab5369883607ad6e989c">consputc</a> (int c)</td></tr>
+<tr class="memdesc:a4d3805f1dde9ab5369883607ad6e989c"><td class="mdescLeft">&#160;</td><td class="mdescRight">控制台输出字符  <a href="console_8c.html#a4d3805f1dde9ab5369883607ad6e989c">更多...</a><br /></td></tr>
 <tr class="separator:a4d3805f1dde9ab5369883607ad6e989c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a463df5bcb42f4d4ad7d73c17c555e53d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a463df5bcb42f4d4ad7d73c17c555e53d">console_init</a> ()</td></tr>
+<tr class="memdesc:a463df5bcb42f4d4ad7d73c17c555e53d"><td class="mdescLeft">&#160;</td><td class="mdescRight">控制台初始化  <a href="console_8c.html#a463df5bcb42f4d4ad7d73c17c555e53d">更多...</a><br /></td></tr>
 <tr class="separator:a463df5bcb42f4d4ad7d73c17c555e53d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae48f074c97c16c634f8dda80cb7b76e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#ae48f074c97c16c634f8dda80cb7b76e7">consgetc</a> ()</td></tr>
+<tr class="memdesc:ae48f074c97c16c634f8dda80cb7b76e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">控制台输入字符  <a href="console_8c.html#ae48f074c97c16c634f8dda80cb7b76e7">更多...</a><br /></td></tr>
 <tr class="separator:ae48f074c97c16c634f8dda80cb7b76e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
@@ -126,6 +129,8 @@ console.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>控制台输入字符 </p>
+
 </div>
 </div>
 <a id="a463df5bcb42f4d4ad7d73c17c555e53d"></a>
@@ -142,6 +147,8 @@ console.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>控制台初始化 </p>
 
 </div>
 </div>
@@ -160,6 +167,8 @@ console.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>控制台输出字符 </p>
 
 </div>
 </div>

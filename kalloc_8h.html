@@ -87,6 +87,9 @@ $(document).ready(function(){initNavTree('kalloc_8h.html',''); initResizable(); 
 <div class="title">kalloc.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>主要负责物理内存的管理  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="kernel-vm_2defs_8h_source.html">defs.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="kernel-vm_2log_8h_source.html">log.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -94,11 +97,11 @@ kalloc.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="kalloc_8h__incl.png" border="0" usemap="#kernel-vm_2kalloc_8h" alt=""/></div>
 <map name="kernel-vm_2kalloc_8h" id="kernel-vm_2kalloc_8h">
-<area shape="rect" title=" " alt="" coords="5,5,147,32"/>
-<area shape="rect" href="kernel-vm_2defs_8h.html" title=" " alt="" coords="49,304,111,331"/>
+<area shape="rect" title="主要负责物理内存的管理" alt="" coords="5,5,147,32"/>
+<area shape="rect" href="kernel-vm_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="49,304,111,331"/>
 <area shape="rect" href="kernel-vm_2log_8h.html" title=" " alt="" coords="102,80,157,107"/>
 <area shape="rect" href="vm__dependency_8h.html" title=" " alt="" coords="81,155,220,181"/>
-<area shape="rect" href="kernel-vm_2string_8h.html" title=" " alt="" coords="98,229,169,256"/>
+<area shape="rect" href="kernel-vm_2string_8h.html" title="实现了简单的字符串和内存操作函数，很多模块可以视情况使用" alt="" coords="98,229,169,256"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -106,7 +109,7 @@ kalloc.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="kalloc_8h__dep__incl.png" border="0" usemap="#kernel-vm_2kalloc_8hdep" alt=""/></div>
 <map name="kernel-vm_2kalloc_8hdep" id="kernel-vm_2kalloc_8hdep">
-<area shape="rect" title=" " alt="" coords="1011,5,1152,32"/>
+<area shape="rect" title="主要负责物理内存的管理" alt="" coords="1011,5,1152,32"/>
 <area shape="rect" href="kalloc_8c.html" title=" " alt="" coords="777,80,917,107"/>
 <area shape="rect" href="map_8c.html" title=" " alt="" coords="941,80,1072,107"/>
 <area shape="rect" href="vm_8c.html" title=" " alt="" coords="1096,80,1219,107"/>
@@ -161,13 +164,18 @@ kalloc.h 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:af17b13c26f8a126a85de3f3fa19eb73b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kalloc_8h.html#af17b13c26f8a126a85de3f3fa19eb73b">kalloc</a> ()</td></tr>
+<tr class="memdesc:af17b13c26f8a126a85de3f3fa19eb73b"><td class="mdescLeft">&#160;</td><td class="mdescRight">分配一块内存  <a href="kalloc_8h.html#af17b13c26f8a126a85de3f3fa19eb73b">更多...</a><br /></td></tr>
 <tr class="separator:af17b13c26f8a126a85de3f3fa19eb73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acee1960bdb3a19cb495341ec725cafef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kalloc_8h.html#acee1960bdb3a19cb495341ec725cafef">kfree</a> (void *)</td></tr>
+<tr class="memdesc:acee1960bdb3a19cb495341ec725cafef"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放一块内存  <a href="kalloc_8h.html#acee1960bdb3a19cb495341ec725cafef">更多...</a><br /></td></tr>
 <tr class="separator:acee1960bdb3a19cb495341ec725cafef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea491e5b831017ff628370356b1e233d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kalloc_8h.html#aea491e5b831017ff628370356b1e233d">kinit</a> ()</td></tr>
+<tr class="memdesc:aea491e5b831017ff628370356b1e233d"><td class="mdescLeft">&#160;</td><td class="mdescRight">内存分配初始化  <a href="kalloc_8h.html#aea491e5b831017ff628370356b1e233d">更多...</a><br /></td></tr>
 <tr class="separator:aea491e5b831017ff628370356b1e233d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">函数说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>主要负责物理内存的管理 </p>
+</div><h2 class="groupheader">函数说明</h2>
 <a id="af17b13c26f8a126a85de3f3fa19eb73b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af17b13c26f8a126a85de3f3fa19eb73b">&#9670;&nbsp;</a></span>kalloc()</h2>
 
@@ -182,6 +190,8 @@ kalloc.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>分配一块内存 </p>
 <p>Allocate one 4096-byte page of physical memory. <br  />
 Returns a pointer that the kernel can use. <br  />
 Returns 0 if the memory cannot be allocated. </p>
@@ -203,7 +213,9 @@ Returns 0 if the memory cannot be allocated. </p>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Free the page of physical memory pointed at by v, which normally should have been returned by a call to <a class="el" href="kalloc_8c.html#af17b13c26f8a126a85de3f3fa19eb73b">kalloc()</a>. <br  />
+
+<p>释放一块内存 </p>
+<p>Free the page of physical memory pointed at by v, which normally should have been returned by a call to <a class="el" href="kalloc_8c.html#af17b13c26f8a126a85de3f3fa19eb73b" title="分配一块内存">kalloc()</a>. <br  />
 (The exception is when initializing the allocator; see kinit above.) </p>
 
 </div>
@@ -222,6 +234,8 @@ Returns 0 if the memory cannot be allocated. </p>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>内存分配初始化 </p>
 
 </div>
 </div>

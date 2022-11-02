@@ -1,5 +1,5 @@
 <map id="disk/defs.h" name="disk/defs.h">
-<area shape="rect" id="node1" title=" " alt="" coords="978,5,1071,32"/>
+<area shape="rect" id="node1" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="978,5,1071,32"/>
 <area shape="rect" id="node2" href="$bio_8h.html" title=" " alt="" coords="934,304,1019,331"/>
 <area shape="rect" id="node4" href="$virtio_8h.html" title="virtio device definitions." alt="" coords="1014,379,1113,405"/>
 <area shape="rect" id="node34" href="$disk_2string_8h.html" title=" " alt="" coords="973,80,1076,107"/>

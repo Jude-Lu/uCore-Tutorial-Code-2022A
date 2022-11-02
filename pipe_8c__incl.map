@@ -1,7 +1,7 @@
 <map id="pipe/pipe.c" name="pipe/pipe.c">
 <area shape="rect" id="node1" title=" " alt="" coords="31,5,125,32"/>
 <area shape="rect" id="node2" href="$pipe_8h.html" title=" " alt="" coords="47,80,109,107"/>
-<area shape="rect" id="node3" href="$pipe_2defs_8h.html" title=" " alt="" coords="5,155,68,181"/>
+<area shape="rect" id="node3" href="$pipe_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="5,155,68,181"/>
 <area shape="rect" id="node4" href="$pipe_2log_8h.html" title=" " alt="" coords="92,155,147,181"/>
 <area shape="rect" id="node5" href="$pipe__dependency_8h.html" title=" " alt="" coords="46,229,193,256"/>
 </map>

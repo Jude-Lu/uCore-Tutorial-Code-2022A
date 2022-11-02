@@ -1,4 +1,4 @@
 <map id="task&#45;manage/processor.h" name="task&#45;manage/processor.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,192,32"/>
-<area shape="rect" id="node2" href="$task-manage_2defs_8h.html" title=" " alt="" coords="67,80,130,107"/>
+<area shape="rect" id="node1" title="主要负责任务的调度" alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node2" href="$task-manage_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="67,80,130,107"/>
 </map>

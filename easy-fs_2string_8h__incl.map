@@ -1,4 +1,4 @@
 <map id="easy&#45;fs/string.h" name="easy&#45;fs/string.h">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,128,32"/>
-<area shape="rect" id="node2" href="$easy-fs_2defs_8h.html" title=" " alt="" coords="35,80,98,107"/>
+<area shape="rect" id="node2" href="$easy-fs_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="35,80,98,107"/>
 </map>

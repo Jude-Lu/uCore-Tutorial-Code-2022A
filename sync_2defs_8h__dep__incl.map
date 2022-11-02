@@ -1,5 +1,5 @@
 <map id="sync/defs.h" name="sync/defs.h">
-<area shape="rect" id="node1" title=" " alt="" coords="409,5,505,32"/>
+<area shape="rect" id="node1" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="409,5,505,32"/>
 <area shape="rect" id="node2" href="$sync_8h.html" title=" " alt="" coords="407,80,506,107"/>
 <area shape="rect" id="node3" href="$sync__module_8h.html" title=" " alt="" coords="305,155,459,181"/>
 <area shape="rect" id="node13" href="$sync_8c.html" title=" " alt="" coords="484,155,581,181"/>

@@ -12,7 +12,6 @@ var sync_2defs_8h =
     [ "MAXOPBLOCKS", "sync_2defs_8h.html#a31cde324007b4e52bbba7079ec5e5f45", null ],
     [ "MAXPATH", "sync_2defs_8h.html#a2d1edde91ea515b363277f4bbdc3244d", null ],
     [ "MAXVA", "sync_2defs_8h.html#a781d1689a393d7c6e4243349cfdf6ce8", null ],
-    [ "MAXVA", "sync_2defs_8h.html#a781d1689a393d7c6e4243349cfdf6ce8", null ],
     [ "MIE_MEIE", "sync_2defs_8h.html#ab4e2e4b72ec1e13b315dcdc910f5595b", null ],
     [ "MIE_MSIE", "sync_2defs_8h.html#acdb82cffb46911d1a236dcf651b24b05", null ],
     [ "MIE_MTIE", "sync_2defs_8h.html#a88f0c7a5a13f0570ecbaa43b912b0fe4", null ],

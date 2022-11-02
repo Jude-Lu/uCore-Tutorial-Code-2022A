@@ -95,8 +95,8 @@ sbi.c 的引用(Include)关系图:</div>
 <div class="center"><img src="sbi_8c__incl.png" border="0" usemap="#console_2sbi_8c" alt=""/></div>
 <map name="console_2sbi_8c" id="console_2sbi_8c">
 <area shape="rect" title=" " alt="" coords="5,5,112,32"/>
-<area shape="rect" href="sbi_8h.html" title=" " alt="" coords="32,80,85,107"/>
-<area shape="rect" href="console_2defs_8h.html" title=" " alt="" coords="27,155,90,181"/>
+<area shape="rect" href="sbi_8h.html" title="sbi文件，通过ecall实现最底层的输入输出" alt="" coords="32,80,85,107"/>
+<area shape="rect" href="console_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="27,155,90,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -105,12 +105,16 @@ sbi.c 的引用(Include)关系图:</div>
 <tr class="memitem:ad6a49bccf7c85ea8a75a57d901d39cbb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8c.html#ad6a49bccf7c85ea8a75a57d901d39cbb">sbi_call</a> (<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> which, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> arg0, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> arg1, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> arg2)</td></tr>
 <tr class="separator:ad6a49bccf7c85ea8a75a57d901d39cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeff55c4f415ee90bf7929c5e4d3079d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8c.html#aaeff55c4f415ee90bf7929c5e4d3079d">console_putchar</a> (int c)</td></tr>
+<tr class="memdesc:aaeff55c4f415ee90bf7929c5e4d3079d"><td class="mdescLeft">&#160;</td><td class="mdescRight">调用ecall实现putchar  <a href="sbi_8c.html#aaeff55c4f415ee90bf7929c5e4d3079d">更多...</a><br /></td></tr>
 <tr class="separator:aaeff55c4f415ee90bf7929c5e4d3079d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a00cd2e5a2aaac349d98eb537f3d24f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8c.html#a5a00cd2e5a2aaac349d98eb537f3d24f">console_getchar</a> ()</td></tr>
+<tr class="memdesc:a5a00cd2e5a2aaac349d98eb537f3d24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">调用ecall实现getchar  <a href="sbi_8c.html#a5a00cd2e5a2aaac349d98eb537f3d24f">更多...</a><br /></td></tr>
 <tr class="separator:a5a00cd2e5a2aaac349d98eb537f3d24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7861ee1569802186a619778efc85af13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8c.html#a7861ee1569802186a619778efc85af13">shutdown</a> ()</td></tr>
+<tr class="memdesc:a7861ee1569802186a619778efc85af13"><td class="mdescLeft">&#160;</td><td class="mdescRight">调用ecall实现关机  <a href="sbi_8c.html#a7861ee1569802186a619778efc85af13">更多...</a><br /></td></tr>
 <tr class="separator:a7861ee1569802186a619778efc85af13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cf2e5d251d71d1bf59b9189ed72f282"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sbi_8c.html#a8cf2e5d251d71d1bf59b9189ed72f282">set_timer</a> (<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> stime)</td></tr>
+<tr class="memdesc:a8cf2e5d251d71d1bf59b9189ed72f282"><td class="mdescLeft">&#160;</td><td class="mdescRight">调用ecall设置下一时钟中断  <a href="sbi_8c.html#a8cf2e5d251d71d1bf59b9189ed72f282">更多...</a><br /></td></tr>
 <tr class="separator:a8cf2e5d251d71d1bf59b9189ed72f282"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -150,6 +154,8 @@ sbi.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>调用ecall实现getchar </p>
+
 </div>
 </div>
 <a id="aaeff55c4f415ee90bf7929c5e4d3079d"></a>
@@ -167,6 +173,8 @@ sbi.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>调用ecall实现putchar </p>
 
 </div>
 </div>
@@ -234,6 +242,8 @@ sbi.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>调用ecall设置下一时钟中断 </p>
+
 </div>
 </div>
 <a id="a7861ee1569802186a619778efc85af13"></a>
@@ -250,6 +260,8 @@ sbi.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>调用ecall实现关机 </p>
 
 </div>
 </div>

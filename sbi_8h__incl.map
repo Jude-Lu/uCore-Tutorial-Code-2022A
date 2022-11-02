@@ -1,4 +1,4 @@
 <map id="console/sbi.h" name="console/sbi.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,112,32"/>
-<area shape="rect" id="node2" href="$console_2defs_8h.html" title=" " alt="" coords="27,80,90,107"/>
+<area shape="rect" id="node1" title="sbi文件，通过ecall实现最底层的输入输出" alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node2" href="$console_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="27,80,90,107"/>
 </map>

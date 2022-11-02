@@ -96,7 +96,7 @@ queue.c 的引用(Include)关系图:</div>
 <div class="center"><img src="queue_8c__incl.png" border="0" usemap="#utils_2queue_8c" alt=""/></div>
 <map name="utils_2queue_8c" id="utils_2queue_8c">
 <area shape="rect" title=" " alt="" coords="34,5,139,32"/>
-<area shape="rect" href="utils_2queue_8h.html" title=" " alt="" coords="5,80,80,107"/>
+<area shape="rect" href="utils_2queue_8h.html" title="实现了简单的循环队列，可以在进程调度和同步互斥中使用" alt="" coords="5,80,80,107"/>
 <area shape="rect" href="utils_2log_8h.html" title=" " alt="" coords="105,80,159,107"/>
 <area shape="rect" href="utils__dependency_8h.html" title=" " alt="" coords="59,155,205,181"/>
 </map>
@@ -105,12 +105,16 @@ queue.c 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:a1e5b37f39d7e79819d09e2c17a773a85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8c.html#a1e5b37f39d7e79819d09e2c17a773a85">init_queue</a> (struct <a class="el" href="structqueue.html">queue</a> *q, int size, int *data)</td></tr>
+<tr class="memdesc:a1e5b37f39d7e79819d09e2c17a773a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">队列初始化  <a href="queue_8c.html#a1e5b37f39d7e79819d09e2c17a773a85">更多...</a><br /></td></tr>
 <tr class="separator:a1e5b37f39d7e79819d09e2c17a773a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70870caec32731174243b82d4166872f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8c.html#a70870caec32731174243b82d4166872f">push_queue</a> (struct <a class="el" href="structqueue.html">queue</a> *q, int value)</td></tr>
+<tr class="memdesc:a70870caec32731174243b82d4166872f"><td class="mdescLeft">&#160;</td><td class="mdescRight">进队  <a href="queue_8c.html#a70870caec32731174243b82d4166872f">更多...</a><br /></td></tr>
 <tr class="separator:a70870caec32731174243b82d4166872f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3203003b2039490ebabc71ad9dbd82f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8c.html#ae3203003b2039490ebabc71ad9dbd82f">pop_queue</a> (struct <a class="el" href="structqueue.html">queue</a> *q)</td></tr>
+<tr class="memdesc:ae3203003b2039490ebabc71ad9dbd82f"><td class="mdescLeft">&#160;</td><td class="mdescRight">出队  <a href="queue_8c.html#ae3203003b2039490ebabc71ad9dbd82f">更多...</a><br /></td></tr>
 <tr class="separator:ae3203003b2039490ebabc71ad9dbd82f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d0118914b000cbd6bcf0bc7c1c131bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8c.html#a9d0118914b000cbd6bcf0bc7c1c131bc">is_empty</a> (struct <a class="el" href="structqueue.html">queue</a> *q)</td></tr>
+<tr class="memdesc:a9d0118914b000cbd6bcf0bc7c1c131bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">队列是否为空  <a href="queue_8c.html#a9d0118914b000cbd6bcf0bc7c1c131bc">更多...</a><br /></td></tr>
 <tr class="separator:a9d0118914b000cbd6bcf0bc7c1c131bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -151,6 +155,8 @@ queue.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>队列初始化 </p>
+
 </div>
 </div>
 <a id="a9d0118914b000cbd6bcf0bc7c1c131bc"></a>
@@ -169,6 +175,8 @@ queue.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>队列是否为空 </p>
+
 </div>
 </div>
 <a id="ae3203003b2039490ebabc71ad9dbd82f"></a>
@@ -186,6 +194,8 @@ queue.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>出队 </p>
 
 </div>
 </div>
@@ -214,6 +224,8 @@ queue.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>进队 </p>
 
 </div>
 </div>

@@ -94,7 +94,7 @@ trap_dependency.h 的引用(Include)关系图:</div>
 <div class="center"><img src="trap__dependency_8h__incl.png" border="0" usemap="#trap_2trap__dependency_8h" alt=""/></div>
 <map name="trap_2trap__dependency_8h" id="trap_2trap__dependency_8h">
 <area shape="rect" title=" " alt="" coords="5,5,180,32"/>
-<area shape="rect" href="trap_2defs_8h.html" title=" " alt="" coords="61,80,124,107"/>
+<area shape="rect" href="trap_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="61,80,124,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -160,6 +160,7 @@ trap_dependency.h 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:a05518ab241076a365f2acd326cfc9c70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap__dependency_8h.html#a05518ab241076a365f2acd326cfc9c70">printf</a> (char *,...)</td></tr>
+<tr class="memdesc:a05518ab241076a365f2acd326cfc9c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">最基本的printf函数  <a href="trap__dependency_8h.html#a05518ab241076a365f2acd326cfc9c70">更多...</a><br /></td></tr>
 <tr class="separator:a05518ab241076a365f2acd326cfc9c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a537f6c7fcf41e284289a5afaaa9ea689"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap__dependency_8h.html#a537f6c7fcf41e284289a5afaaa9ea689">procid</a> ()</td></tr>
 <tr class="separator:a537f6c7fcf41e284289a5afaaa9ea689"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,8 +169,10 @@ trap_dependency.h 的引用(Include)关系图:</div>
 <tr class="memitem:a5e23deae3ce8e5a548ff617abf90f4ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap__dependency_8h.html#a5e23deae3ce8e5a548ff617abf90f4ad">dummy</a> (int,...)</td></tr>
 <tr class="separator:a5e23deae3ce8e5a548ff617abf90f4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7861ee1569802186a619778efc85af13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap__dependency_8h.html#a7861ee1569802186a619778efc85af13">shutdown</a> ()</td></tr>
+<tr class="memdesc:a7861ee1569802186a619778efc85af13"><td class="mdescLeft">&#160;</td><td class="mdescRight">调用ecall实现关机  <a href="trap__dependency_8h.html#a7861ee1569802186a619778efc85af13">更多...</a><br /></td></tr>
 <tr class="separator:a7861ee1569802186a619778efc85af13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2497ff28b48edc0138dfdeea69c4c83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap__dependency_8h.html#ae2497ff28b48edc0138dfdeea69c4c83">set_timer</a> (<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
+<tr class="memdesc:ae2497ff28b48edc0138dfdeea69c4c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">调用ecall设置下一时钟中断  <a href="trap__dependency_8h.html#ae2497ff28b48edc0138dfdeea69c4c83">更多...</a><br /></td></tr>
 <tr class="separator:ae2497ff28b48edc0138dfdeea69c4c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
@@ -227,6 +230,8 @@ trap_dependency.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>最基本的printf函数 </p>
+
 </div>
 </div>
 <a id="a537f6c7fcf41e284289a5afaaa9ea689"></a>
@@ -262,6 +267,8 @@ trap_dependency.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>调用ecall设置下一时钟中断 </p>
+
 </div>
 </div>
 <a id="a7861ee1569802186a619778efc85af13"></a>
@@ -278,6 +285,8 @@ trap_dependency.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>调用ecall实现关机 </p>
 
 </div>
 </div>

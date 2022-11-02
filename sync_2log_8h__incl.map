@@ -1,5 +1,5 @@
 <map id="sync/log.h" name="sync/log.h">
 <area shape="rect" id="node1" title=" " alt="" coords="35,5,123,32"/>
 <area shape="rect" id="node2" href="$sync__dependency_8h.html" title=" " alt="" coords="5,80,153,107"/>
-<area shape="rect" id="node3" href="$sync_2queue_8h.html" title=" " alt="" coords="42,155,117,181"/>
+<area shape="rect" id="node3" href="$sync_2queue_8h.html" title="实现了简单的循环队列，可以在进程调度和同步互斥中使用" alt="" coords="42,155,117,181"/>
 </map>

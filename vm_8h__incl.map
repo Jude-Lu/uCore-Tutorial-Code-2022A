@@ -1,7 +1,7 @@
 <map id="kernel&#45;vm/vm.h" name="kernel&#45;vm/vm.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,129,32"/>
-<area shape="rect" id="node2" href="$kernel-vm_2defs_8h.html" title=" " alt="" coords="40,304,103,331"/>
+<area shape="rect" id="node1" title="主要负责虚拟内存的管理" alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node2" href="$kernel-vm_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="40,304,103,331"/>
 <area shape="rect" id="node3" href="$kernel-vm_2log_8h.html" title=" " alt="" coords="93,80,148,107"/>
 <area shape="rect" id="node4" href="$vm__dependency_8h.html" title=" " alt="" coords="73,155,211,181"/>
-<area shape="rect" id="node5" href="$kernel-vm_2string_8h.html" title=" " alt="" coords="89,229,160,256"/>
+<area shape="rect" id="node5" href="$kernel-vm_2string_8h.html" title="实现了简单的字符串和内存操作函数，很多模块可以视情况使用" alt="" coords="89,229,160,256"/>
 </map>

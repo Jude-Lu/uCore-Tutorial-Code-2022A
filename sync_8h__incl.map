@@ -1,6 +1,6 @@
 <map id="sync/sync.h" name="sync/sync.h">
 <area shape="rect" id="node1" title=" " alt="" coords="51,5,150,32"/>
-<area shape="rect" id="node2" href="$sync_2defs_8h.html" title=" " alt="" coords="5,80,68,107"/>
+<area shape="rect" id="node2" href="$sync_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="5,80,68,107"/>
 <area shape="rect" id="node3" href="$sync__dependency_8h.html" title=" " alt="" coords="92,80,240,107"/>
-<area shape="rect" id="node4" href="$sync_2queue_8h.html" title=" " alt="" coords="129,155,203,181"/>
+<area shape="rect" id="node4" href="$sync_2queue_8h.html" title="实现了简单的循环队列，可以在进程调度和同步互斥中使用" alt="" coords="129,155,203,181"/>
 </map>

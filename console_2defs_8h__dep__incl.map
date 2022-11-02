@@ -1,6 +1,6 @@
 <map id="console/defs.h" name="console/defs.h">
-<area shape="rect" id="node1" title=" " alt="" coords="2031,5,2147,32"/>
-<area shape="rect" id="node2" href="$sbi_8h.html" title=" " alt="" coords="1990,80,2097,107"/>
+<area shape="rect" id="node1" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="2031,5,2147,32"/>
+<area shape="rect" id="node2" href="$sbi_8h.html" title="sbi文件，通过ecall实现最底层的输入输出" alt="" coords="1990,80,2097,107"/>
 <area shape="rect" id="node49" href="$printf_8c.html" title=" " alt="" coords="2121,155,2243,181"/>
 <area shape="rect" id="node3" href="$console_8c.html" title=" " alt="" coords="1609,155,1747,181"/>
 <area shape="rect" id="node4" href="$console__module_8h.html" title=" " alt="" coords="1771,155,1966,181"/>

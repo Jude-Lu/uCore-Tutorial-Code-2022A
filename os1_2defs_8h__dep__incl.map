@@ -1,5 +1,5 @@
 <map id="os1/defs.h" name="os1/defs.h">
-<area shape="rect" id="node1" title=" " alt="" coords="19,5,109,32"/>
+<area shape="rect" id="node1" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="19,5,109,32"/>
 <area shape="rect" id="node2" href="$os1_2modules_8h.html" title=" " alt="" coords="5,80,123,107"/>
 <area shape="rect" id="node3" href="$os1_2main_8c.html" title=" " alt="" coords="17,155,111,181"/>
 </map>

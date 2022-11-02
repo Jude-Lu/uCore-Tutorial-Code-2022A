@@ -1,5 +1,5 @@
 <map id="disk/disk_dependency.h" name="disk/disk_dependency.h">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,181,32"/>
 <area shape="rect" id="node2" href="$disk_2string_8h.html" title=" " alt="" coords="58,80,129,107"/>
-<area shape="rect" id="node3" href="$disk_2defs_8h.html" title=" " alt="" coords="62,155,125,181"/>
+<area shape="rect" id="node3" href="$disk_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="62,155,125,181"/>
 </map>

@@ -89,14 +89,17 @@ $(document).ready(function(){initNavTree('processor_8h.html',''); initResizable(
 <div class="title">processor.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>主要负责任务的调度  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="task-manage_2defs_8h_source.html">defs.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 processor.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="processor_8h__incl.png" border="0" usemap="#task-manage_2processor_8h" alt=""/></div>
 <map name="task-manage_2processor_8h" id="task-manage_2processor_8h">
-<area shape="rect" title=" " alt="" coords="5,5,192,32"/>
-<area shape="rect" href="task-manage_2defs_8h.html" title=" " alt="" coords="67,80,130,107"/>
+<area shape="rect" title="主要负责任务的调度" alt="" coords="5,5,192,32"/>
+<area shape="rect" href="task-manage_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="67,80,130,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -104,7 +107,7 @@ processor.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="processor_8h__dep__incl.png" border="0" usemap="#task-manage_2processor_8hdep" alt=""/></div>
 <map name="task-manage_2processor_8hdep" id="task-manage_2processor_8hdep">
-<area shape="rect" title=" " alt="" coords="1686,5,1873,32"/>
+<area shape="rect" title="主要负责任务的调度" alt="" coords="1686,5,1873,32"/>
 <area shape="rect" href="task__module_8h.html" title=" " alt="" coords="1565,80,1773,107"/>
 <area shape="rect" href="processor_8c.html" title=" " alt="" coords="1797,80,1983,107"/>
 <area shape="rect" href="os3_2modules_8h.html" title=" " alt="" coords="385,155,502,181"/>
@@ -162,6 +165,7 @@ processor.h 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 结构体</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcontext.html">context</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saved registers for kernel context switches.  <a href="structcontext.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmanager.html">manager</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">注意返回类型为void*的接口，实际返回类型就是proc结构体指针，但proc在不同的lab中定义不同，因此采用无类型指针定义  <a href="structmanager.html#details">更多...</a><br /></td></tr>
@@ -222,7 +226,9 @@ processor.h 的引用(Include)关系图:</div>
 <tr class="memdesc:a8d9a1049b5c13c30b807560b52aea7c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">调度进程  <a href="processor_8h.html#a8d9a1049b5c13c30b807560b52aea7c7">更多...</a><br /></td></tr>
 <tr class="separator:a8d9a1049b5c13c30b807560b52aea7c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">枚举类型说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>主要负责任务的调度 </p>
+</div><h2 class="groupheader">枚举类型说明</h2>
 <a id="aa1ced7d2b60040fded3fa873d0c03ba7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa1ced7d2b60040fded3fa873d0c03ba7">&#9670;&nbsp;</a></span>procstate</h2>
 

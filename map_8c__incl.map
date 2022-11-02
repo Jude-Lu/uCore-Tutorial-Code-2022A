@@ -1,10 +1,10 @@
 <map id="kernel&#45;vm/map.c" name="kernel&#45;vm/map.c">
 <area shape="rect" id="node1" title=" " alt="" coords="78,5,208,32"/>
-<area shape="rect" id="node2" href="$map_8h.html" title=" " alt="" coords="29,80,92,107"/>
-<area shape="rect" id="node7" href="$vm_8h.html" title=" " alt="" coords="116,80,170,107"/>
-<area shape="rect" id="node8" href="$kalloc_8h.html" title=" " alt="" coords="195,80,267,107"/>
-<area shape="rect" id="node3" href="$kernel-vm_2defs_8h.html" title=" " alt="" coords="129,379,192,405"/>
+<area shape="rect" id="node2" href="$map_8h.html" title="主要负责页表的管理" alt="" coords="29,80,92,107"/>
+<area shape="rect" id="node7" href="$vm_8h.html" title="主要负责虚拟内存的管理" alt="" coords="116,80,170,107"/>
+<area shape="rect" id="node8" href="$kalloc_8h.html" title="主要负责物理内存的管理" alt="" coords="195,80,267,107"/>
+<area shape="rect" id="node3" href="$kernel-vm_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="129,379,192,405"/>
 <area shape="rect" id="node4" href="$kernel-vm_2log_8h.html" title=" " alt="" coords="81,155,136,181"/>
 <area shape="rect" id="node5" href="$vm__dependency_8h.html" title=" " alt="" coords="22,229,160,256"/>
-<area shape="rect" id="node6" href="$kernel-vm_2string_8h.html" title=" " alt="" coords="72,304,142,331"/>
+<area shape="rect" id="node6" href="$kernel-vm_2string_8h.html" title="实现了简单的字符串和内存操作函数，很多模块可以视情况使用" alt="" coords="72,304,142,331"/>
 </map>

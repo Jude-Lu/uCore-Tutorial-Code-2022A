@@ -1,6 +1,6 @@
 <map id="kernel&#45;vm/log.h" name="kernel&#45;vm/log.h">
 <area shape="rect" id="node1" title=" " alt="" coords="13,5,136,32"/>
 <area shape="rect" id="node2" href="$vm__dependency_8h.html" title=" " alt="" coords="5,80,144,107"/>
-<area shape="rect" id="node3" href="$kernel-vm_2string_8h.html" title=" " alt="" coords="39,155,110,181"/>
-<area shape="rect" id="node4" href="$kernel-vm_2defs_8h.html" title=" " alt="" coords="43,229,106,256"/>
+<area shape="rect" id="node3" href="$kernel-vm_2string_8h.html" title="实现了简单的字符串和内存操作函数，很多模块可以视情况使用" alt="" coords="39,155,110,181"/>
+<area shape="rect" id="node4" href="$kernel-vm_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="43,229,106,256"/>
 </map>

@@ -95,12 +95,12 @@ vm.c 的引用(Include)关系图:</div>
 <div class="center"><img src="vm_8c__incl.png" border="0" usemap="#kernel-vm_2vm_8c" alt=""/></div>
 <map name="kernel-vm_2vm_8c" id="kernel-vm_2vm_8c">
 <area shape="rect" title=" " alt="" coords="29,5,151,32"/>
-<area shape="rect" href="vm_8h.html" title=" " alt="" coords="19,80,73,107"/>
-<area shape="rect" href="kalloc_8h.html" title=" " alt="" coords="98,80,170,107"/>
-<area shape="rect" href="kernel-vm_2defs_8h.html" title=" " alt="" coords="59,379,121,405"/>
+<area shape="rect" href="vm_8h.html" title="主要负责虚拟内存的管理" alt="" coords="19,80,73,107"/>
+<area shape="rect" href="kalloc_8h.html" title="主要负责物理内存的管理" alt="" coords="98,80,170,107"/>
+<area shape="rect" href="kernel-vm_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="59,379,121,405"/>
 <area shape="rect" href="kernel-vm_2log_8h.html" title=" " alt="" coords="63,155,117,181"/>
 <area shape="rect" href="vm__dependency_8h.html" title=" " alt="" coords="21,229,159,256"/>
-<area shape="rect" href="kernel-vm_2string_8h.html" title=" " alt="" coords="55,304,125,331"/>
+<area shape="rect" href="kernel-vm_2string_8h.html" title="实现了简单的字符串和内存操作函数，很多模块可以视情况使用" alt="" coords="55,304,125,331"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -110,7 +110,6 @@ vm.c 的引用(Include)关系图:</div>
 <tr class="memdesc:a271b7e1dd0b2700b8c91df4761bcc8cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">两种功能：地址转换；建立映射  <a href="vm_8c.html#a271b7e1dd0b2700b8c91df4761bcc8cb">更多...</a><br /></td></tr>
 <tr class="separator:a271b7e1dd0b2700b8c91df4761bcc8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a535aedc13908156bba68a95333e44012"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#a535aedc13908156bba68a95333e44012">walkaddr</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va)</td></tr>
-<tr class="memdesc:a535aedc13908156bba68a95333e44012"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚拟地址转物理地址函数  <a href="vm_8c.html#a535aedc13908156bba68a95333e44012">更多...</a><br /></td></tr>
 <tr class="separator:a535aedc13908156bba68a95333e44012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23d93749134ff05c8fe7c2ad0e561824"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#a23d93749134ff05c8fe7c2ad0e561824">useraddr</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va)</td></tr>
 <tr class="memdesc:a23d93749134ff05c8fe7c2ad0e561824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look up a virtual address, return the physical address,  <a href="vm_8c.html#a23d93749134ff05c8fe7c2ad0e561824">更多...</a><br /></td></tr>
@@ -119,7 +118,7 @@ vm.c 的引用(Include)关系图:</div>
 <tr class="memdesc:a19262098f426be050bd86a01dc499d8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放地址空间函数  <a href="vm_8c.html#a19262098f426be050bd86a01dc499d8b">更多...</a><br /></td></tr>
 <tr class="separator:a19262098f426be050bd86a01dc499d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dc116b09e9a88d390ec97d970ce1b4c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#a5dc116b09e9a88d390ec97d970ce1b4c">copyout</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> dstva, char *src, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
-<tr class="memdesc:a5dc116b09e9a88d390ec97d970ce1b4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">用户态和内核态拷贝函数  <a href="vm_8c.html#a5dc116b09e9a88d390ec97d970ce1b4c">更多...</a><br /></td></tr>
+<tr class="memdesc:a5dc116b09e9a88d390ec97d970ce1b4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">以下为用户态和内核态拷贝函数  <a href="vm_8c.html#a5dc116b09e9a88d390ec97d970ce1b4c">更多...</a><br /></td></tr>
 <tr class="separator:a5dc116b09e9a88d390ec97d970ce1b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83ffcd20aef363b6e0a3871c1e295364"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8c.html#a83ffcd20aef363b6e0a3871c1e295364">copyin</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, char *dst, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> srcva, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
 <tr class="separator:a83ffcd20aef363b6e0a3871c1e295364"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -256,7 +255,7 @@ Return 0 on success, -1 on error. </p>
       </table>
 </div><div class="memdoc">
 
-<p>用户态和内核态拷贝函数 </p>
+<p>以下为用户态和内核态拷贝函数 </p>
 <p>Copy from kernel to user. <br  />
 Copy len bytes from src to virtual address dstva in a given page table. <br  />
 Return 0 on success, -1 on error. </p>
@@ -404,6 +403,7 @@ All leaf mappings must already have been removed. </p>
 </div><div class="memdoc">
 
 <p>Look up a virtual address, return the physical address, </p>
+<p>虚拟地址转物理地址函数 </p>
 
 </div>
 </div>
@@ -478,8 +478,6 @@ A 64-bit virtual address is split into five fields: <br  />
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>虚拟地址转物理地址函数 </p>
 <p>Look up a virtual address, return the physical address, or 0 if not mapped. <br  />
 Can only be used to look up user pages. </p>
 

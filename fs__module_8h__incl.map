@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title=" " alt="" coords="40,5,195,32"/>
 <area shape="rect" id="node2" href="$easy-fs_2fs_8h.html" title="On&#45;disk file system format." alt="" coords="62,155,109,181"/>
 <area shape="rect" id="node6" href="$file_8h.html" title="Inode content" alt="" coords="124,80,178,107"/>
-<area shape="rect" id="node3" href="$easy-fs_2defs_8h.html" title=" " alt="" coords="54,379,117,405"/>
+<area shape="rect" id="node3" href="$easy-fs_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="54,379,117,405"/>
 <area shape="rect" id="node4" href="$fs__dependency_8h.html" title=" " alt="" coords="20,229,151,256"/>
 <area shape="rect" id="node5" href="$easy-fs_2string_8h.html" title=" " alt="" coords="50,304,121,331"/>
 </map>

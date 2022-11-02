@@ -1,9 +1,9 @@
 <map id="console/printf.c" name="console/printf.c">
 <area shape="rect" id="node1" title=" " alt="" coords="179,5,301,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,80,80,107"/>
-<area shape="rect" id="node3" href="$console_8h.html" title=" " alt="" coords="105,80,189,107"/>
-<area shape="rect" id="node4" href="$sbi_8h.html" title=" " alt="" coords="213,80,267,107"/>
-<area shape="rect" id="node5" href="$console_2defs_8h.html" title=" " alt="" coords="209,155,271,181"/>
+<area shape="rect" id="node3" href="$console_8h.html" title="控制台文件，调用sbi实现字符的输入输出" alt="" coords="105,80,189,107"/>
+<area shape="rect" id="node4" href="$sbi_8h.html" title="sbi文件，通过ecall实现最底层的输入输出" alt="" coords="213,80,267,107"/>
+<area shape="rect" id="node5" href="$console_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="209,155,271,181"/>
 <area shape="rect" id="node6" href="$console_2log_8h.html" title=" " alt="" coords="347,80,402,107"/>
 <area shape="rect" id="node7" href="$console__dependency_8h.html" title=" " alt="" coords="296,155,464,181"/>
 </map>

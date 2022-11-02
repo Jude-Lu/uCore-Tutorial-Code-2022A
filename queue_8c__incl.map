@@ -1,6 +1,6 @@
 <map id="utils/queue.c" name="utils/queue.c">
 <area shape="rect" id="node1" title=" " alt="" coords="34,5,139,32"/>
-<area shape="rect" id="node2" href="$utils_2queue_8h.html" title=" " alt="" coords="5,80,80,107"/>
+<area shape="rect" id="node2" href="$utils_2queue_8h.html" title="实现了简单的循环队列，可以在进程调度和同步互斥中使用" alt="" coords="5,80,80,107"/>
 <area shape="rect" id="node3" href="$utils_2log_8h.html" title=" " alt="" coords="105,80,159,107"/>
 <area shape="rect" id="node4" href="$utils__dependency_8h.html" title=" " alt="" coords="59,155,205,181"/>
 </map>

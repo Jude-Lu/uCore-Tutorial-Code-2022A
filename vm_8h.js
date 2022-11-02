@@ -7,6 +7,5 @@ var vm_8h =
     [ "either_copyout", "vm_8h.html#aff156e37dbe7a1dbf0a7db3fefd7b3d0", null ],
     [ "freewalk", "vm_8h.html#a8238f93c489633a98af630729449104c", null ],
     [ "useraddr", "vm_8h.html#a9982ae549f868430af53bcc60f699e2d", null ],
-    [ "walk", "vm_8h.html#a0ed9c88a0fdfd3f77c5a25d9411c7227", null ],
-    [ "walkaddr", "vm_8h.html#adb01d3ac95ce32c8421eb08d90f23ede", null ]
+    [ "walk", "vm_8h.html#a0ed9c88a0fdfd3f77c5a25d9411c7227", null ]
 ];

@@ -3,27 +3,27 @@
 <area shape="rect" id="node2" href="$os2_2loader_8h.html" title=" " alt="" coords="197,80,271,107"/>
 <area shape="rect" id="node3" href="$os2__trap_8h.html" title=" " alt="" coords="295,80,386,107"/>
 <area shape="rect" id="node4" href="$os2_2modules_8h.html" title=" " alt="" coords="295,155,386,181"/>
-<area shape="rect" id="node5" href="$os2_2defs_8h.html" title=" " alt="" coords="5,237,68,263"/>
+<area shape="rect" id="node5" href="$os2_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="5,237,68,263"/>
 <area shape="rect" id="node6" href="$os2_2log_8h.html" title=" " alt="" coords="92,237,147,263"/>
 <area shape="rect" id="node7" href="$os2_2extern_8h.html" title=" " alt="" coords="171,237,247,263"/>
 <area shape="rect" id="node8" href="$console__module_8h.html" title=" " alt="" coords="271,229,410,271"/>
 <area shape="rect" id="node13" href="$syscall__module_8h.html" title=" " alt="" coords="434,229,562,271"/>
 <area shape="rect" id="node17" href="$trap__module_8h.html" title=" " alt="" coords="600,237,759,263"/>
 <area shape="rect" id="node24" href="$utils__module_8h.html" title=" " alt="" coords="795,237,958,263"/>
-<area shape="rect" id="node9" href="$console_8h.html" title=" " alt="" coords="113,319,197,345"/>
-<area shape="rect" id="node10" href="$printf_8h.html" title=" " alt="" coords="221,319,289,345"/>
-<area shape="rect" id="node11" href="$sbi_8h.html" title=" " alt="" coords="314,319,367,345"/>
-<area shape="rect" id="node12" href="$console_2defs_8h.html" title=" " alt="" coords="309,393,372,420"/>
+<area shape="rect" id="node9" href="$console_8h.html" title="控制台文件，调用sbi实现字符的输入输出" alt="" coords="113,319,197,345"/>
+<area shape="rect" id="node10" href="$printf_8h.html" title="printf文件，调用console实现了printf函数，供其它模块使用" alt="" coords="221,319,289,345"/>
+<area shape="rect" id="node11" href="$sbi_8h.html" title="sbi文件，通过ecall实现最底层的输入输出" alt="" coords="314,319,367,345"/>
+<area shape="rect" id="node12" href="$console_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="309,393,372,420"/>
 <area shape="rect" id="node14" href="$syscall__ids_8h.html" title=" " alt="" coords="392,319,497,345"/>
-<area shape="rect" id="node15" href="$syscall_8h.html" title=" " alt="" coords="521,319,600,345"/>
-<area shape="rect" id="node16" href="$syscall_2defs_8h.html" title=" " alt="" coords="529,393,592,420"/>
+<area shape="rect" id="node15" href="$syscall_8h.html" title="syscall模块主要负责系统调用的处理，根据传入的syscall id调用对应的syscall函数" alt="" coords="521,319,600,345"/>
+<area shape="rect" id="node16" href="$syscall_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="529,393,592,420"/>
 <area shape="rect" id="node18" href="$trap_8h.html" title=" " alt="" coords="624,319,684,345"/>
 <area shape="rect" id="node22" href="$plic_8h.html" title=" " alt="" coords="708,319,765,345"/>
 <area shape="rect" id="node23" href="$timer_8h.html" title=" " alt="" coords="769,468,837,495"/>
 <area shape="rect" id="node19" href="$trap_2log_8h.html" title=" " alt="" coords="621,393,676,420"/>
-<area shape="rect" id="node21" href="$trap_2defs_8h.html" title=" " alt="" coords="700,543,763,569"/>
+<area shape="rect" id="node21" href="$trap_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="700,543,763,569"/>
 <area shape="rect" id="node20" href="$trap__dependency_8h.html" title=" " alt="" coords="550,468,694,495"/>
-<area shape="rect" id="node25" href="$utils_2string_8h.html" title=" " alt="" coords="841,319,912,345"/>
-<area shape="rect" id="node27" href="$utils_2queue_8h.html" title=" " alt="" coords="937,319,1011,345"/>
-<area shape="rect" id="node26" href="$utils_2defs_8h.html" title=" " alt="" coords="845,393,908,420"/>
+<area shape="rect" id="node25" href="$utils_2string_8h.html" title="实现了简单的字符串和内存操作函数，很多模块可以视情况使用" alt="" coords="841,319,912,345"/>
+<area shape="rect" id="node27" href="$utils_2queue_8h.html" title="实现了简单的循环队列，可以在进程调度和同步互斥中使用" alt="" coords="937,319,1011,345"/>
+<area shape="rect" id="node26" href="$utils_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="845,393,908,420"/>
 </map>

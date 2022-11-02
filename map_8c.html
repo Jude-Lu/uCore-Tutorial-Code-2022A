@@ -96,13 +96,13 @@ map.c 的引用(Include)关系图:</div>
 <div class="center"><img src="map_8c__incl.png" border="0" usemap="#kernel-vm_2map_8c" alt=""/></div>
 <map name="kernel-vm_2map_8c" id="kernel-vm_2map_8c">
 <area shape="rect" title=" " alt="" coords="78,5,208,32"/>
-<area shape="rect" href="map_8h.html" title=" " alt="" coords="29,80,92,107"/>
-<area shape="rect" href="vm_8h.html" title=" " alt="" coords="116,80,170,107"/>
-<area shape="rect" href="kalloc_8h.html" title=" " alt="" coords="195,80,267,107"/>
-<area shape="rect" href="kernel-vm_2defs_8h.html" title=" " alt="" coords="129,379,192,405"/>
+<area shape="rect" href="map_8h.html" title="主要负责页表的管理" alt="" coords="29,80,92,107"/>
+<area shape="rect" href="vm_8h.html" title="主要负责虚拟内存的管理" alt="" coords="116,80,170,107"/>
+<area shape="rect" href="kalloc_8h.html" title="主要负责物理内存的管理" alt="" coords="195,80,267,107"/>
+<area shape="rect" href="kernel-vm_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="129,379,192,405"/>
 <area shape="rect" href="kernel-vm_2log_8h.html" title=" " alt="" coords="81,155,136,181"/>
 <area shape="rect" href="vm__dependency_8h.html" title=" " alt="" coords="22,229,160,256"/>
-<area shape="rect" href="kernel-vm_2string_8h.html" title=" " alt="" coords="72,304,142,331"/>
+<area shape="rect" href="kernel-vm_2string_8h.html" title="实现了简单的字符串和内存操作函数，很多模块可以视情况使用" alt="" coords="72,304,142,331"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -111,11 +111,9 @@ map.c 的引用(Include)关系图:</div>
 <tr class="memitem:a0f19b589ef525301937990d7890c7eee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8c.html#a0f19b589ef525301937990d7890c7eee">kvmmap</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> kpgtbl, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> pa, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> sz, int perm)</td></tr>
 <tr class="memdesc:a0f19b589ef525301937990d7890c7eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">为内核分配虚拟地址空间  <a href="map_8c.html#a0f19b589ef525301937990d7890c7eee">更多...</a><br /></td></tr>
 <tr class="separator:a0f19b589ef525301937990d7890c7eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06d3f4561c42a60312750ff980622469"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8c.html#a06d3f4561c42a60312750ff980622469">mappages</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> size, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> pa, int perm)</td></tr>
-<tr class="memdesc:a06d3f4561c42a60312750ff980622469"><td class="mdescLeft">&#160;</td><td class="mdescRight">建立虚拟地址到物理地址映射  <a href="map_8c.html#a06d3f4561c42a60312750ff980622469">更多...</a><br /></td></tr>
-<tr class="separator:a06d3f4561c42a60312750ff980622469"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f36f967125fd1b92cf221cd9cb9df99"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8c.html#a0f36f967125fd1b92cf221cd9cb9df99">uvmmap</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> npages, int perm)</td></tr>
-<tr class="separator:a0f36f967125fd1b92cf221cd9cb9df99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310b4e8f18eea1a0c9ef2bcd765564cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8c.html#a310b4e8f18eea1a0c9ef2bcd765564cf">uvmmap</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> size, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> pa, int perm)</td></tr>
+<tr class="memdesc:a310b4e8f18eea1a0c9ef2bcd765564cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">建立虚拟地址到物理地址映射  <a href="map_8c.html#a310b4e8f18eea1a0c9ef2bcd765564cf">更多...</a><br /></td></tr>
+<tr class="separator:a310b4e8f18eea1a0c9ef2bcd765564cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac94cfce8e654e647f83ae7ccd285ae8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8c.html#ac94cfce8e654e647f83ae7ccd285ae8b">uvmunmap</a> (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> npages, int do_free)</td></tr>
 <tr class="memdesc:ac94cfce8e654e647f83ae7ccd285ae8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放虚拟地址到物理地址映射  <a href="map_8c.html#ac94cfce8e654e647f83ae7ccd285ae8b">更多...</a><br /></td></tr>
 <tr class="separator:ac94cfce8e654e647f83ae7ccd285ae8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,57 +176,6 @@ map.c 的引用(Include)关系图:</div>
 <p>Add a mapping to the kernel page table. <br  />
 only used when booting. <br  />
 does not flush TLB or enable paging. </p>
-
-</div>
-</div>
-<a id="a06d3f4561c42a60312750ff980622469"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06d3f4561c42a60312750ff980622469">&#9670;&nbsp;</a></span>mappages()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int mappages </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>&#160;</td>
-          <td class="paramname"><em>pagetable</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
-          <td class="paramname"><em>va</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
-          <td class="paramname"><em>pa</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>perm</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>建立虚拟地址到物理地址映射 </p>
-<p>Create PTEs for virtual addresses starting at va that refer to physical addresses starting at pa. <br  />
-va and size might not be page-aligned. <br  />
-Returns 0 on success, -1 if <a class="el" href="vm_8c.html#a271b7e1dd0b2700b8c91df4761bcc8cb" title="两种功能：地址转换；建立映射">walk()</a> couldn't allocate a needed page-table page. </p>
 
 </div>
 </div>
@@ -329,8 +276,8 @@ returns 0 if out of memory. </p>
 
 </div>
 </div>
-<a id="a0f36f967125fd1b92cf221cd9cb9df99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f36f967125fd1b92cf221cd9cb9df99">&#9670;&nbsp;</a></span>uvmmap()</h2>
+<a id="a310b4e8f18eea1a0c9ef2bcd765564cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a310b4e8f18eea1a0c9ef2bcd765564cf">&#9670;&nbsp;</a></span>uvmmap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -351,7 +298,13 @@ returns 0 if out of memory. </p>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
-          <td class="paramname"><em>npages</em>, </td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>pa</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -366,6 +319,11 @@ returns 0 if out of memory. </p>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>建立虚拟地址到物理地址映射 </p>
+<p>Create PTEs for virtual addresses starting at va that refer to physical addresses starting at pa. <br  />
+va and size might not be page-aligned. <br  />
+Returns 0 on success, -1 if <a class="el" href="vm_8c.html#a271b7e1dd0b2700b8c91df4761bcc8cb" title="两种功能：地址转换；建立映射">walk()</a> couldn't allocate a needed page-table page. </p>
 
 </div>
 </div>
