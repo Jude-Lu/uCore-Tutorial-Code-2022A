@@ -44,7 +44,7 @@ uint64 os3_get_userret()
 	return (uint64)userret;
 }
 
-void os3_finish_usertrap(int cause)
+void os3_customized_usertrap(int cause)
 {
 	usertrapret();
 }
@@ -76,7 +76,7 @@ void trap_init()
 		.get_kernel_sp = os3_get_kernel_sp,
 		
 		.get_userret = os3_get_userret,
-		.finish_usertrap = os3_finish_usertrap,
+		.customized_usertrap = os3_customized_usertrap,
 		.error_in_trap = os3_error_in_trap,
 
 		.syscall = syscall,

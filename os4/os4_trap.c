@@ -42,7 +42,7 @@ uint64 os4_get_userret()
 	return (uint64)(TRAMPOLINE + (userret - trampoline));
 }
 
-void os4_finish_usertrap(int cause)
+void os4_customized_usertrap(int cause)
 {
 	usertrapret();
 }
@@ -74,7 +74,7 @@ void trap_init()
 		.get_kernel_sp = os4_get_kernel_sp,
 		
 		.get_userret = os4_get_userret,
-		.finish_usertrap = os4_finish_usertrap,
+		.customized_usertrap = os4_customized_usertrap,
 		.error_in_trap = os4_error_in_trap,
 
 		.syscall = syscall,

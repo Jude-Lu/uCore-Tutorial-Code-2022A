@@ -98,7 +98,7 @@ struct trap_handler_context
 	/// 得到userret的虚拟地址（在使用虚存机制时候，它在kernel里面会被映射到特定的位置）
 	uint64 (*get_userret)();
 	/// 在usertrap执行结束后执行，cause是异常编号，这里主要是为了兼容ch2，后面的章节里面只要调用usertrapret即可
-	void (*finish_usertrap)(int cause);
+	void (*customized_usertrap)(int cause);
 	/// 用于处理当trap处理发生错误时要做的事
 	void (*error_in_trap)(int status);
 
