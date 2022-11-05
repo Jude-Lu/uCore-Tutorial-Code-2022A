@@ -28,5 +28,6 @@ var searchData=
   ['curr_5fproc_73',['curr_proc',['../os8__syscall_8c.html#a73a5ca57b1a27c0dbbcce882312b750b',1,'os8_syscall.c']]],
   ['curr_5ftask_74',['curr_task',['../processor_8c.html#a300cb36ba4651248aebffc2aaa1f7ff3',1,'curr_task():&#160;processor.c'],['../processor_8h.html#a300cb36ba4651248aebffc2aaa1f7ff3',1,'curr_task():&#160;processor.c']]],
   ['curr_5ftask_5fid_75',['curr_task_id',['../structsynchronization__context.html#a220f5e7f67b2a6d2bb599b761d6c6b20',1,'synchronization_context::curr_task_id()'],['../os8_2proc_8c.html#a1defab7ed187cae63503779e08e19b0c',1,'curr_task_id():&#160;proc.c']]],
-  ['current_5ftask_76',['current_task',['../processor_8c.html#a430458b2d1e6f1f452943939d9034cce',1,'processor.c']]]
+  ['current_5ftask_76',['current_task',['../processor_8c.html#a430458b2d1e6f1f452943939d9034cce',1,'processor.c']]],
+  ['customized_5fusertrap_77',['customized_usertrap',['../structtrap__handler__context.html#af26fc46ee741e8084ba4e63b79760f3c',1,'trap_handler_context']]]
 ];

@@ -127,9 +127,9 @@ trap_handler_context 的协作图:</div>
 <tr class="memitem:a9ed3b389a4cec6c26df53089b8d086ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a9ed3b389a4cec6c26df53089b8d086ab">get_userret</a> )()</td></tr>
 <tr class="memdesc:a9ed3b389a4cec6c26df53089b8d086ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">得到userret的虚拟地址（在使用虚存机制时候，它在kernel里面会被映射到特定的位置）  <a href="structtrap__handler__context.html#a9ed3b389a4cec6c26df53089b8d086ab">更多...</a><br /></td></tr>
 <tr class="separator:a9ed3b389a4cec6c26df53089b8d086ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dbf56b66aa018dbface0b288c14822c"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a1dbf56b66aa018dbface0b288c14822c">finish_usertrap</a> )(int cause)</td></tr>
-<tr class="memdesc:a1dbf56b66aa018dbface0b288c14822c"><td class="mdescLeft">&#160;</td><td class="mdescRight">在usertrap执行结束后执行，cause是异常编号，这里主要是为了兼容ch2，后面的章节里面只要调用usertrapret即可  <a href="structtrap__handler__context.html#a1dbf56b66aa018dbface0b288c14822c">更多...</a><br /></td></tr>
-<tr class="separator:a1dbf56b66aa018dbface0b288c14822c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af26fc46ee741e8084ba4e63b79760f3c"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#af26fc46ee741e8084ba4e63b79760f3c">customized_usertrap</a> )(int cause)</td></tr>
+<tr class="memdesc:af26fc46ee741e8084ba4e63b79760f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">在usertrap执行结束后执行，cause是异常编号，这里主要是为了兼容ch2，后面的章节里面只要调用usertrapret即可  <a href="structtrap__handler__context.html#af26fc46ee741e8084ba4e63b79760f3c">更多...</a><br /></td></tr>
+<tr class="separator:af26fc46ee741e8084ba4e63b79760f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7139487d9ef96407f2e1fee22f5c01b"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#ac7139487d9ef96407f2e1fee22f5c01b">error_in_trap</a> )(int <a class="el" href="virtio__disk_8c.html#a051c9e198ee930358372c407a17e8b78">status</a>)</td></tr>
 <tr class="memdesc:ac7139487d9ef96407f2e1fee22f5c01b"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于处理当trap处理发生错误时要做的事  <a href="structtrap__handler__context.html#ac7139487d9ef96407f2e1fee22f5c01b">更多...</a><br /></td></tr>
 <tr class="separator:ac7139487d9ef96407f2e1fee22f5c01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,6 +157,22 @@ trap_handler_context 的协作图:</div>
 
 </div>
 </div>
+<a id="af26fc46ee741e8084ba4e63b79760f3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af26fc46ee741e8084ba4e63b79760f3c">&#9670;&nbsp;</a></span>customized_usertrap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* customized_usertrap(int cause)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在usertrap执行结束后执行，cause是异常编号，这里主要是为了兼容ch2，后面的章节里面只要调用usertrapret即可 </p>
+
+</div>
+</div>
 <a id="ac7139487d9ef96407f2e1fee22f5c01b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac7139487d9ef96407f2e1fee22f5c01b">&#9670;&nbsp;</a></span>error_in_trap</h2>
 
@@ -170,22 +186,6 @@ trap_handler_context 的协作图:</div>
 </div><div class="memdoc">
 
 <p>用于处理当trap处理发生错误时要做的事 </p>
-
-</div>
-</div>
-<a id="a1dbf56b66aa018dbface0b288c14822c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dbf56b66aa018dbface0b288c14822c">&#9670;&nbsp;</a></span>finish_usertrap</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void(* finish_usertrap(int cause)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>在usertrap执行结束后执行，cause是异常编号，这里主要是为了兼容ch2，后面的章节里面只要调用usertrapret即可 </p>
 
 </div>
 </div>

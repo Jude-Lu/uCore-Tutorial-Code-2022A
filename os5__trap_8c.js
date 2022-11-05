@@ -1,8 +1,8 @@
 var os5__trap_8c =
 [
     [ "os5_cpuid", "os5__trap_8c.html#aeec755f269e606285aca98ffe60f2622", null ],
+    [ "os5_customized_usertrap", "os5__trap_8c.html#a43cd60f964249eedc5359fa57e86bcdd", null ],
     [ "os5_error_in_trap", "os5__trap_8c.html#a5d209a3d2e5888bbb184314ca011c407", null ],
-    [ "os5_finish_usertrap", "os5__trap_8c.html#a258dc5a58133b4ee09ad5f432ba7da2e", null ],
     [ "os5_get_kernel_sp", "os5__trap_8c.html#a94ba2269c78018beff91651fc8fc6304", null ],
     [ "os5_get_satp", "os5__trap_8c.html#ac27df85dbaa78e15e185b4458474b178", null ],
     [ "os5_get_trapframe", "os5__trap_8c.html#ab4df0201450161136051bb421604ac86", null ],

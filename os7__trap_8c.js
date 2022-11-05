@@ -1,7 +1,7 @@
 var os7__trap_8c =
 [
+    [ "os7_customized_usertrap", "os7__trap_8c.html#a9382ed82cd52727a77c16874de69df28", null ],
     [ "os7_error_in_trap", "os7__trap_8c.html#a5415d0e8f9af0220f05cc970157c0627", null ],
-    [ "os7_finish_usertrap", "os7__trap_8c.html#af6a41843126a33256c0d52ceb57a4267", null ],
     [ "os7_get_kernel_sp", "os7__trap_8c.html#ac3349d932289fc0463833b6041892576", null ],
     [ "os7_get_satp", "os7__trap_8c.html#a131b2b449f5367aca8f05d17e69b2361", null ],
     [ "os7_get_trapframe", "os7__trap_8c.html#a4421b1bd78e005fe7dcd7c072de74914", null ],

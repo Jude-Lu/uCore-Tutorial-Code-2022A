@@ -1,8 +1,8 @@
 var structtrap__handler__context =
 [
     [ "cpuid", "structtrap__handler__context.html#a79b270d658c32d79ed40fee395764c65", null ],
+    [ "customized_usertrap", "structtrap__handler__context.html#af26fc46ee741e8084ba4e63b79760f3c", null ],
     [ "error_in_trap", "structtrap__handler__context.html#ac7139487d9ef96407f2e1fee22f5c01b", null ],
-    [ "finish_usertrap", "structtrap__handler__context.html#a1dbf56b66aa018dbface0b288c14822c", null ],
     [ "get_kernel_sp", "structtrap__handler__context.html#a3280f63e6ab69094abadf4e8d37052ef", null ],
     [ "get_satp", "structtrap__handler__context.html#a712dbfb95495eaef551d8c5a8da9cd11", null ],
     [ "get_trapframe", "structtrap__handler__context.html#a6323c0d99db43d2078caf5d35be792f6", null ],

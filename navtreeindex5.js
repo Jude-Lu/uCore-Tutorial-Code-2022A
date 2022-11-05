@@ -245,9 +245,9 @@ var NAVTREEINDEX5 =
 "os2__syscall_8h.html#a581ed37968ead91b6d3a0b3b7a71da9d":[1,0,6,8,0],
 "os2__syscall_8h_source.html":[1,0,6,8],
 "os2__trap_8c.html":[1,0,6,9],
+"os2__trap_8c.html#a0f48410cd6cfff16f90e26d7b6656775":[1,0,6,9,1],
 "os2__trap_8c.html#a120ea527aa9117b4b44e60d899d27b58":[1,0,6,9,3],
 "os2__trap_8c.html#a13c03a426ca269310845fb941938b84a":[1,0,6,9,5],
-"os2__trap_8c.html#a1a0f93cbc7b70f5c262a1a0f558daec5":[1,0,6,9,2],
 "os2__trap_8c.html#a76134d78319e86111d023d83a5bd181a":[1,0,6,9,8],
 "os2__trap_8c.html#a773f15eede4843bd2acea53a03d55ba6":[1,0,6,9,11]
 };

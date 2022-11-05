@@ -8,5 +8,6 @@ var searchData=
   ['cpuid_1639',['cpuid',['../structtrap__handler__context.html#a79b270d658c32d79ed40fee395764c65',1,'trap_handler_context']]],
   ['create_1640',['create',['../structmanager.html#a16b27dafff82ba165c60ac8bb74970b0',1,'manager']]],
   ['curr_5ftask_5fid_1641',['curr_task_id',['../structsynchronization__context.html#a220f5e7f67b2a6d2bb599b761d6c6b20',1,'synchronization_context']]],
-  ['current_5ftask_1642',['current_task',['../processor_8c.html#a430458b2d1e6f1f452943939d9034cce',1,'processor.c']]]
+  ['current_5ftask_1642',['current_task',['../processor_8c.html#a430458b2d1e6f1f452943939d9034cce',1,'processor.c']]],
+  ['customized_5fusertrap_1643',['customized_usertrap',['../structtrap__handler__context.html#af26fc46ee741e8084ba4e63b79760f3c',1,'trap_handler_context']]]
 ];

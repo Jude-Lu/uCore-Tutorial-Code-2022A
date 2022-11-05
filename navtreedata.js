@@ -62,7 +62,7 @@ var NAVTREEINDEX =
 "os6_2log_8h.html#ad990ee40546c76f3c3f424401d00e8d7aa60bd322f93178d68184e30e162571ca",
 "os7_2log_8h.html#a7861ee1569802186a619778efc85af13",
 "os8_2defs_8h.html#acdb82cffb46911d1a236dcf651b24b05",
-"os8__trap_8c.html#a7d104d6bebefa5a97c55a9b4f6c937fb",
+"os8__trap_8c.html#a7f25b68f8d6d2e7d05a28418da701464",
 "processor_8c.html#a863db1d0bdd94b65f74f84ffc3ced39d",
 "structtrap__handler__context.html#a1a56e2e99660cc40be5dbbe6ed992367",
 "sync_2queue_8h.html#a3d38424ba5ddbd6335dc3254b69b5952",

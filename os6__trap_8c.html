@@ -164,8 +164,8 @@ os6_trap.c 的引用(Include)关系图:</div>
 <tr class="separator:ad52343084965be9c26d0141f93395159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1ab226997de87a8278189832349cf98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os6__trap_8c.html#ab1ab226997de87a8278189832349cf98">os6_get_userret</a> ()</td></tr>
 <tr class="separator:ab1ab226997de87a8278189832349cf98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75e1992816bcaa4a8b081d30890c2f94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os6__trap_8c.html#a75e1992816bcaa4a8b081d30890c2f94">os6_finish_usertrap</a> (int cause)</td></tr>
-<tr class="separator:a75e1992816bcaa4a8b081d30890c2f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b786943f6a0314be3e2250ebd6ca81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os6__trap_8c.html#ae3b786943f6a0314be3e2250ebd6ca81">os6_customized_usertrap</a> (int cause)</td></tr>
+<tr class="separator:ae3b786943f6a0314be3e2250ebd6ca81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1dd13d97afd49ed8f4d9a90f7c6652b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os6__trap_8c.html#aa1dd13d97afd49ed8f4d9a90f7c6652b">os6_error_in_trap</a> (int <a class="el" href="virtio__disk_8c.html#a051c9e198ee930358372c407a17e8b78">status</a>)</td></tr>
 <tr class="separator:aa1dd13d97afd49ed8f4d9a90f7c6652b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a3adc891530605c5a614f720d8661c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os6__trap_8c.html#a8a3adc891530605c5a614f720d8661c8">os6_super_external_handler</a> (int <a class="el" href="os8_2proc_8h.html#a414dda255ed3c1e43e7922d10f9d2c6d">cpuid</a>)</td></tr>
@@ -174,6 +174,24 @@ os6_trap.c 的引用(Include)关系图:</div>
 <tr class="separator:a7d104d6bebefa5a97c55a9b4f6c937fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
+<a id="ae3b786943f6a0314be3e2250ebd6ca81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b786943f6a0314be3e2250ebd6ca81">&#9670;&nbsp;</a></span>os6_customized_usertrap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void os6_customized_usertrap </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cause</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa1dd13d97afd49ed8f4d9a90f7c6652b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa1dd13d97afd49ed8f4d9a90f7c6652b">&#9670;&nbsp;</a></span>os6_error_in_trap()</h2>
 
@@ -185,24 +203,6 @@ os6_trap.c 的引用(Include)关系图:</div>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>status</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a75e1992816bcaa4a8b081d30890c2f94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75e1992816bcaa4a8b081d30890c2f94">&#9670;&nbsp;</a></span>os6_finish_usertrap()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void os6_finish_usertrap </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>cause</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

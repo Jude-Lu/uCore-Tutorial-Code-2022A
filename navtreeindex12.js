@@ -246,8 +246,8 @@ var NAVTREEINDEX12 =
 "os8__syscall_8h_source.html":[1,0,12,8],
 "os8__trap_8c.html":[1,0,12,9],
 "os8__trap_8c.html#a189f8688b3c2beaa9fe63d95d7934f5b":[1,0,12,9,6],
-"os8__trap_8c.html#a1dc87f6b56cbe6cab597147956c6587e":[1,0,12,9,1],
-"os8__trap_8c.html#a26ae0402dceac6b9def4c14a9a710b90":[1,0,12,9,0],
+"os8__trap_8c.html#a26ae0402dceac6b9def4c14a9a710b90":[1,0,12,9,1],
 "os8__trap_8c.html#a339fc31c68f894dc8b8df43c04be5b92":[1,0,12,9,9],
-"os8__trap_8c.html#a7a2d005a60467b804553caeca33deb8a":[1,0,12,9,2]
+"os8__trap_8c.html#a7a2d005a60467b804553caeca33deb8a":[1,0,12,9,2],
+"os8__trap_8c.html#a7d104d6bebefa5a97c55a9b4f6c937fb":[1,0,12,9,10]
 };
