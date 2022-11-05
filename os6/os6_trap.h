@@ -10,7 +10,7 @@ struct trapframe* os6_get_trapframe();
 uint64 os6_get_kernel_sp();
 
 void os6_call_userret();
-void os6_finish_usertrap(int cause);
+void os6_customized_usertrap(int cause);
 void os6_error_in_trap(int status);
 
 void os6_super_external_handler();

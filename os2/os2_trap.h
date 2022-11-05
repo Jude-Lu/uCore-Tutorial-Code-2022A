@@ -12,7 +12,7 @@ struct trapframe* os2_get_trapframe();
 uint64 os2_get_kernel_sp();
 
 void os2_call_userret();
-void os2_finish_usertrap(int cause);
+void os2_customized_usertrap(int cause);
 void os2_error_in_trap(int status);
 
 void os2_super_external_handler();

@@ -10,7 +10,7 @@ struct trapframe* os4_get_trapframe();
 uint64 os4_get_kernel_sp();
 
 void os4_call_userret();
-void os4_finish_usertrap(int cause);
+void os4_customized_usertrap(int cause);
 void os4_error_in_trap(int status);
 
 void os4_super_external_handler();

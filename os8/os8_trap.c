@@ -37,7 +37,7 @@ uint64 os8_get_userret()
 	return TRAMPOLINE + (userret - trampoline);
 }
 
-void os8_finish_usertrap(int cause)
+void os8_customized_usertrap(int cause)
 {
 	usertrapret();
 }
@@ -78,7 +78,7 @@ void trap_init()
 		.get_kernel_sp = os8_get_kernel_sp,
 		
 		.get_userret = os8_get_userret,
-		.finish_usertrap = os8_finish_usertrap,
+		.customized_usertrap = os8_customized_usertrap,
 		.error_in_trap = os8_error_in_trap,
 
 		.syscall = syscall,

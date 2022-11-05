@@ -93,7 +93,7 @@ void usertrap()
 			break;
 		}
 	}
-	(trap_context->finish_usertrap)(cause);
+	(trap_context->customized_usertrap)(cause);
 }
 
 /// return to user space

@@ -49,7 +49,7 @@ uint64 os2_get_userret()
 	return (uint64)userret;
 }
 
-void os2_finish_usertrap(int cause)
+void os2_customized_usertrap(int cause)
 {
 	if (cause != UserEnvCall)
 	{
@@ -89,7 +89,7 @@ void trap_init()
 		.get_kernel_sp = os2_get_kernel_sp,
 		
 		.get_userret = os2_get_userret,
-		.finish_usertrap = os2_finish_usertrap,
+		.customized_usertrap = os2_customized_usertrap,
 		.error_in_trap = os2_error_in_trap,
 
 		.syscall = syscall,
