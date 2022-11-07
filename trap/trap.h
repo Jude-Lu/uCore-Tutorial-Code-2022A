@@ -1,6 +1,11 @@
 #ifndef TRAP_H
 #define TRAP_H
 
+/**
+ * @file trap.h
+ * @brief 负责发生异常时操作系统的处理
+*/
+
 #define SSTATUS_SPP (1L << 8) ///< Previous mode, 1=Supervisor, 0=User
 #define SSTATUS_SPIE (1L << 5) ///< Supervisor Previous Interrupt Enable
 
@@ -109,7 +114,7 @@ struct trap_handler_context
 	void (*super_external_handler)(int cpuid);
 };
 
-void set_trap(struct trap_handler_context *trap_handler_context);
-void usertrapret();
+void set_trap(struct trap_handler_context *trap_handler_context);  ///< 初始化trap_context
+void usertrapret();  ///< 不同操作系统完成异常处理的个性需求（即customized_usertrap(cause)）之后，调用该接口从S态回到U态；该接口会完成页表切换、上下文切换等流程
 
 #endif // TRAP_H
