@@ -81,7 +81,7 @@ void iput(struct inode *);
 void iunlock(struct inode *);
 void iunlockput(struct inode *);
 void iupdate(struct inode *);
-struct inode *namei(char *);
+struct inode *namei(char *); ///< 返回path路径对应文件的inode
 struct inode *root_dir();
 int readi(struct inode *, int, uint64, uint, uint);
 int writei(struct inode *, int, uint64, uint, uint);

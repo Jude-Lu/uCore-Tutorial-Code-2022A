@@ -108,9 +108,9 @@ void virtio_disk_intr();
 
 struct virtio_context
 {
-	void (*yield)();
+	void (*yield)();  ///< 对于操作外设的模块，可能需要交出当前进程的 CPU 控制权
 };
 
-void set_virtio(struct virtio_context *virtio_context);
+void set_virtio(struct virtio_context *virtio_context);  ///< 设置virtio_disk_context
 
 #endif // VIRTIO_H
