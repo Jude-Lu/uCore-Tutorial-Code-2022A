@@ -111,6 +111,7 @@ file.c 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:a22c08158efd79bb165987843d064144d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8c.html#a22c08158efd79bb165987843d064144d">set_file</a> (struct <a class="el" href="structFSManager.html">FSManager</a> *<a class="el" href="structFSManager.html">FSManager</a>)</td></tr>
+<tr class="memdesc:a22c08158efd79bb165987843d064144d"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置fs_manager  <a href="file_8c.html#a22c08158efd79bb165987843d064144d">更多...</a><br /></td></tr>
 <tr class="separator:a22c08158efd79bb165987843d064144d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a198d22735ec723ca760ead0ddfc92edb"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structfile.html">file</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8c.html#a198d22735ec723ca760ead0ddfc92edb">stdio_init</a> (int fd)</td></tr>
 <tr class="memdesc:a198d22735ec723ca760ead0ddfc92edb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract the stdio into a file.  <a href="file_8c.html#a198d22735ec723ca760ead0ddfc92edb">更多...</a><br /></td></tr>
@@ -122,6 +123,7 @@ file.c 的引用(Include)关系图:</div>
 <tr class="memdesc:acbb793f3c4e736e31677a31351a41054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show names of all files in the root_dir.  <a href="file_8c.html#acbb793f3c4e736e31677a31351a41054">更多...</a><br /></td></tr>
 <tr class="separator:acbb793f3c4e736e31677a31351a41054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48cea474fd8856dc2d2a5f2601b7d275"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8c.html#a48cea474fd8856dc2d2a5f2601b7d275">fileopen</a> (char *path, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> omode)</td></tr>
+<tr class="memdesc:a48cea474fd8856dc2d2a5f2601b7d275"><td class="mdescLeft">&#160;</td><td class="mdescRight">打开路径为path的文件；如果omode为O_CREATE需要新建一个文件，否则打开一个已有的文件  <a href="file_8c.html#a48cea474fd8856dc2d2a5f2601b7d275">更多...</a><br /></td></tr>
 <tr class="separator:a48cea474fd8856dc2d2a5f2601b7d275"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad09794bd435b3bfe16e899db4e17379a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8c.html#ad09794bd435b3bfe16e899db4e17379a">inodewrite</a> (struct <a class="el" href="structfile.html">file</a> *f, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
 <tr class="memdesc:ad09794bd435b3bfe16e899db4e17379a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to inode.  <a href="file_8c.html#ad09794bd435b3bfe16e899db4e17379a">更多...</a><br /></td></tr>
@@ -130,6 +132,7 @@ file.c 的引用(Include)关系图:</div>
 <tr class="memdesc:a7e258be2251cb7d112c4dd9897a4f05d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from inode.  <a href="file_8c.html#a7e258be2251cb7d112c4dd9897a4f05d">更多...</a><br /></td></tr>
 <tr class="separator:a7e258be2251cb7d112c4dd9897a4f05d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34f24317f1c97dfee386da43e3bb48a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8c.html#a34f24317f1c97dfee386da43e3bb48a9">pipealloc</a> (struct <a class="el" href="structfile.html">file</a> *f0, struct <a class="el" href="structfile.html">file</a> *f1)</td></tr>
+<tr class="memdesc:a34f24317f1c97dfee386da43e3bb48a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">新建一个pipe，读端和写端对用户暴露接口的文件分别为f1和f2  <a href="file_8c.html#a34f24317f1c97dfee386da43e3bb48a9">更多...</a><br /></td></tr>
 <tr class="separator:a34f24317f1c97dfee386da43e3bb48a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -155,6 +158,7 @@ file.c 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>The operation performed on the system-level open file table entry after some process closes a file. </p>
+<p>关闭文件f </p>
 
 </div>
 </div>
@@ -183,6 +187,8 @@ file.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>打开路径为path的文件；如果omode为O_CREATE需要新建一个文件，否则打开一个已有的文件 </p>
 <p>A process creates or opens a file according to its path, returning the file descriptor of the created or opened file. If omode is O_CREATE, create a new file if omode if the others,open a created file. </p>
 
 </div>
@@ -220,6 +226,7 @@ file.c 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>Read data from inode. </p>
+<p>从文件读数据 </p>
 
 </div>
 </div>
@@ -256,6 +263,7 @@ file.c 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>Write data to inode. </p>
+<p>向文件写数据，写入数据的起始虚拟地址是va、数据的字节长度为len，返回成功写入的数据长度。这里取名为inode 是因为，easy-fs实际上是对文件被绑定的inode写数据的；考虑同时打开了多次同一个文件（假设不关闭）的情形，这时候进程里面会有多个fd（以及对应的 file 结构体，它们会有不同的off表示读写的偏移量）对应同一个inode </p>
 
 </div>
 </div>
@@ -285,6 +293,8 @@ file.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>新建一个pipe，读端和写端对用户暴露接口的文件分别为f1和f2 </p>
+
 </div>
 </div>
 <a id="a22c08158efd79bb165987843d064144d"></a>
@@ -302,6 +312,8 @@ file.c 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>设置fs_manager </p>
 
 </div>
 </div>
@@ -341,6 +353,7 @@ file.c 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>Abstract the stdio into a file. </p>
+<p>初始化一个file类型的结构体 </p>
 
 </div>
 </div>

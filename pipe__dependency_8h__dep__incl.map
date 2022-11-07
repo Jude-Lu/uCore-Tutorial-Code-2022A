@@ -1,7 +1,7 @@
 <map id="pipe/pipe_dependency.h" name="pipe/pipe_dependency.h">
 <area shape="rect" id="node1" title=" " alt="" coords="658,5,837,32"/>
 <area shape="rect" id="node2" href="$pipe_2log_8h.html" title=" " alt="" coords="704,80,791,107"/>
-<area shape="rect" id="node3" href="$pipe_8h.html" title=" " alt="" coords="700,155,795,181"/>
+<area shape="rect" id="node3" href="$pipe_8h.html" title="管道的内部实现" alt="" coords="700,155,795,181"/>
 <area shape="rect" id="node4" href="$pipe__module_8h.html" title=" " alt="" coords="599,229,749,256"/>
 <area shape="rect" id="node23" href="$pipe_8c.html" title=" " alt="" coords="774,229,867,256"/>
 <area shape="rect" id="node5" href="$os7_2modules_8h.html" title=" " alt="" coords="438,304,555,331"/>

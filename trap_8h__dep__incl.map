@@ -1,5 +1,5 @@
 <map id="trap/trap.h" name="trap/trap.h">
-<area shape="rect" id="node1" title=" " alt="" coords="1977,5,2067,32"/>
+<area shape="rect" id="node1" title="负责发生异常时操作系统的处理" alt="" coords="1977,5,2067,32"/>
 <area shape="rect" id="node2" href="$trap__module_8h.html" title=" " alt="" coords="1878,80,2025,107"/>
 <area shape="rect" id="node50" href="$trap_8c.html" title=" " alt="" coords="2049,80,2139,107"/>
 <area shape="rect" id="node3" href="$os2_2modules_8h.html" title=" " alt="" coords="370,155,487,181"/>

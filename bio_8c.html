@@ -111,6 +111,7 @@ bio.c 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:a9e6b07f66dc0719de7fc439e571070ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#a9e6b07f66dc0719de7fc439e571070ab">binit</a> ()</td></tr>
+<tr class="memdesc:a9e6b07f66dc0719de7fc439e571070ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化一个buf  <a href="bio_8c.html#a9e6b07f66dc0719de7fc439e571070ab">更多...</a><br /></td></tr>
 <tr class="separator:a9e6b07f66dc0719de7fc439e571070ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01ebd0efe72af59c25446f90a1ba7bb9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#a01ebd0efe72af59c25446f90a1ba7bb9">bread</a> (<a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> dev, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a> blockno)</td></tr>
 <tr class="memdesc:a01ebd0efe72af59c25446f90a1ba7bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a buf with the contents of the indicated block.  <a href="bio_8c.html#a01ebd0efe72af59c25446f90a1ba7bb9">更多...</a><br /></td></tr>
@@ -119,12 +120,16 @@ bio.c 的引用(Include)关系图:</div>
 <tr class="memdesc:ae81bbf8b40f0602a191798342900ca89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write b's contents to disk.  <a href="bio_8c.html#ae81bbf8b40f0602a191798342900ca89">更多...</a><br /></td></tr>
 <tr class="separator:ae81bbf8b40f0602a191798342900ca89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab295e04a65117b75f26d2b0937d3ae9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#aab295e04a65117b75f26d2b0937d3ae9">brelse</a> (void *_b)</td></tr>
+<tr class="memdesc:aab295e04a65117b75f26d2b0937d3ae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放一个buffer  <a href="bio_8c.html#aab295e04a65117b75f26d2b0937d3ae9">更多...</a><br /></td></tr>
 <tr class="separator:aab295e04a65117b75f26d2b0937d3ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9561b7bdf4020dc47092cf3a6a375ab4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#a9561b7bdf4020dc47092cf3a6a375ab4">bpin</a> (void *<a class="el" href="virtio__disk_8c.html#a478a43f541f7e29b957eaaef78d660d4">b</a>)</td></tr>
+<tr class="memdesc:a9561b7bdf4020dc47092cf3a6a375ab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">增加一个buf的引用计数  <a href="bio_8c.html#a9561b7bdf4020dc47092cf3a6a375ab4">更多...</a><br /></td></tr>
 <tr class="separator:a9561b7bdf4020dc47092cf3a6a375ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae68a7b9f954b05d3cce7be10cc48ad67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#ae68a7b9f954b05d3cce7be10cc48ad67">bunpin</a> (void *<a class="el" href="virtio__disk_8c.html#a478a43f541f7e29b957eaaef78d660d4">b</a>)</td></tr>
+<tr class="memdesc:ae68a7b9f954b05d3cce7be10cc48ad67"><td class="mdescLeft">&#160;</td><td class="mdescRight">减少一个buf的引用计数  <a href="bio_8c.html#ae68a7b9f954b05d3cce7be10cc48ad67">更多...</a><br /></td></tr>
 <tr class="separator:ae68a7b9f954b05d3cce7be10cc48ad67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfdc9276c4330cd911854199e55c57fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8c.html#acfdc9276c4330cd911854199e55c57fa">buf_data</a> (void *<a class="el" href="virtio__disk_8c.html#a478a43f541f7e29b957eaaef78d660d4">b</a>)</td></tr>
+<tr class="memdesc:acfdc9276c4330cd911854199e55c57fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回buf存放实际数据位置的地址  <a href="bio_8c.html#acfdc9276c4330cd911854199e55c57fa">更多...</a><br /></td></tr>
 <tr class="separator:acfdc9276c4330cd911854199e55c57fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -176,6 +181,8 @@ a synchronization point for disk blocks used by multiple processes. <br  />
       </table>
 </div><div class="memdoc">
 
+<p>初始化一个buf </p>
+
 </div>
 </div>
 <a id="a9561b7bdf4020dc47092cf3a6a375ab4"></a>
@@ -193,6 +200,8 @@ a synchronization point for disk blocks used by multiple processes. <br  />
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>增加一个buf的引用计数 </p>
 
 </div>
 </div>
@@ -223,6 +232,7 @@ a synchronization point for disk blocks used by multiple processes. <br  />
 </div><div class="memdoc">
 
 <p>Return a buf with the contents of the indicated block. </p>
+<p>读磁盘上block到缓存buf的数据，返回buf的指针。dev是设备编号，blockno是磁盘block的编号 </p>
 
 </div>
 </div>
@@ -241,6 +251,8 @@ a synchronization point for disk blocks used by multiple processes. <br  />
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>释放一个buffer </p>
 <p>Release a buffer. Move to the head of the most-recently-used list. </p>
 
 </div>
@@ -261,6 +273,8 @@ a synchronization point for disk blocks used by multiple processes. <br  />
       </table>
 </div><div class="memdoc">
 
+<p>返回buf存放实际数据位置的地址 </p>
+
 </div>
 </div>
 <a id="ae68a7b9f954b05d3cce7be10cc48ad67"></a>
@@ -278,6 +292,8 @@ a synchronization point for disk blocks used by multiple processes. <br  />
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>减少一个buf的引用计数 </p>
 
 </div>
 </div>
@@ -298,6 +314,7 @@ a synchronization point for disk blocks used by multiple processes. <br  />
 </div><div class="memdoc">
 
 <p>Write b's contents to disk. </p>
+<p>把buf里面的数据写回磁盘上block，指针指向该buf </p>
 
 </div>
 </div>

@@ -93,14 +93,18 @@ $(document).ready(function(){initNavTree('structpipe__context.html',''); initRes
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 成员变量</h2></td></tr>
 <tr class="memitem:ad6d828f6936788fd5630aa1028856e2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#ad6d828f6936788fd5630aa1028856e2e">get_curr_pagetable</a> )()</td></tr>
+<tr class="memdesc:ad6d828f6936788fd5630aa1028856e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">得到当前进程的页表  <a href="structpipe__context.html#ad6d828f6936788fd5630aa1028856e2e">更多...</a><br /></td></tr>
 <tr class="separator:ad6d828f6936788fd5630aa1028856e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a561f5d7612fb5c250655a20ffae8dafe"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#a561f5d7612fb5c250655a20ffae8dafe">yield</a> )()</td></tr>
+<tr class="memdesc:a561f5d7612fb5c250655a20ffae8dafe"><td class="mdescLeft">&#160;</td><td class="mdescRight">写一个满的管道或者读一个空的管道时，需要等待其它进程的操作，所以要交出 CPU 控制权  <a href="structpipe__context.html#a561f5d7612fb5c250655a20ffae8dafe">更多...</a><br /></td></tr>
 <tr class="separator:a561f5d7612fb5c250655a20ffae8dafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89bc9f8ce1c103a6a89dd1142f343392"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#a89bc9f8ce1c103a6a89dd1142f343392">kalloc</a> )()</td></tr>
+<tr class="memdesc:a89bc9f8ce1c103a6a89dd1142f343392"><td class="mdescLeft">&#160;</td><td class="mdescRight">管道的数据是存放在物理内存里面的ring buffer，因此需要分配和释放物理内存。这两个接口可以直接让模块分配和释放物理页  <a href="structpipe__context.html#a89bc9f8ce1c103a6a89dd1142f343392">更多...</a><br /></td></tr>
 <tr class="separator:a89bc9f8ce1c103a6a89dd1142f343392"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65e6bfd5a0c5b1bc2cb7fd417656bee6"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#a65e6bfd5a0c5b1bc2cb7fd417656bee6">kfree</a> )(void *pa)</td></tr>
 <tr class="separator:a65e6bfd5a0c5b1bc2cb7fd417656bee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7e72c957d8dce216a28cf3857914f34"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#aa7e72c957d8dce216a28cf3857914f34">copyin</a> )(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, char *dst, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> srcva, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
+<tr class="memdesc:aa7e72c957d8dce216a28cf3857914f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">管道需要和进程虚拟内存里面的数据进行交互，比如把进程虚存里面的东西写入管道里面，因此需要copyin和copyout接口  <a href="structpipe__context.html#aa7e72c957d8dce216a28cf3857914f34">更多...</a><br /></td></tr>
 <tr class="separator:aa7e72c957d8dce216a28cf3857914f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4dda5f1f02ae7ba4f11976c0e98c981"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#af4dda5f1f02ae7ba4f11976c0e98c981">copyout</a> )(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> dstva, char *src, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
 <tr class="separator:af4dda5f1f02ae7ba4f11976c0e98c981"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,6 +121,8 @@ $(document).ready(function(){initNavTree('structpipe__context.html',''); initRes
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>管道需要和进程虚拟内存里面的数据进行交互，比如把进程虚存里面的东西写入管道里面，因此需要copyin和copyout接口 </p>
 
 </div>
 </div>
@@ -146,6 +152,8 @@ $(document).ready(function(){initNavTree('structpipe__context.html',''); initRes
       </table>
 </div><div class="memdoc">
 
+<p>得到当前进程的页表 </p>
+
 </div>
 </div>
 <a id="a89bc9f8ce1c103a6a89dd1142f343392"></a>
@@ -159,6 +167,8 @@ $(document).ready(function(){initNavTree('structpipe__context.html',''); initRes
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>管道的数据是存放在物理内存里面的ring buffer，因此需要分配和释放物理内存。这两个接口可以直接让模块分配和释放物理页 </p>
 
 </div>
 </div>
@@ -187,6 +197,8 @@ $(document).ready(function(){initNavTree('structpipe__context.html',''); initRes
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>写一个满的管道或者读一个空的管道时，需要等待其它进程的操作，所以要交出 CPU 控制权 </p>
 
 </div>
 </div>

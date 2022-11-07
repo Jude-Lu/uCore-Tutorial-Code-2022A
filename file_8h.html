@@ -158,25 +158,28 @@ file.h 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:ac865ee0b2d70f753d61d1fefef9de0f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#ac865ee0b2d70f753d61d1fefef9de0f6">fileclose</a> (struct <a class="el" href="structfile.html">file</a> *)</td></tr>
-<tr class="memdesc:ac865ee0b2d70f753d61d1fefef9de0f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operation performed on the system-level open file table entry after some process closes a file.  <a href="file_8h.html#ac865ee0b2d70f753d61d1fefef9de0f6">更多...</a><br /></td></tr>
+<tr class="memdesc:ac865ee0b2d70f753d61d1fefef9de0f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭文件f  <a href="file_8h.html#ac865ee0b2d70f753d61d1fefef9de0f6">更多...</a><br /></td></tr>
 <tr class="separator:ac865ee0b2d70f753d61d1fefef9de0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56a6c5e3f10b915bdf192a13513c47cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a56a6c5e3f10b915bdf192a13513c47cb">pipealloc</a> (struct <a class="el" href="structfile.html">file</a> *, struct <a class="el" href="structfile.html">file</a> *)</td></tr>
+<tr class="memdesc:a56a6c5e3f10b915bdf192a13513c47cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">新建一个pipe，读端和写端对用户暴露接口的文件分别为f1和f2  <a href="file_8h.html#a56a6c5e3f10b915bdf192a13513c47cb">更多...</a><br /></td></tr>
 <tr class="separator:a56a6c5e3f10b915bdf192a13513c47cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa273643e837ddb5212f10c6342183f9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#aa273643e837ddb5212f10c6342183f9d">fileopen</a> (char *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
+<tr class="memdesc:aa273643e837ddb5212f10c6342183f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">打开路径为path的文件；如果omode为O_CREATE需要新建一个文件，否则打开一个已有的文件  <a href="file_8h.html#aa273643e837ddb5212f10c6342183f9d">更多...</a><br /></td></tr>
 <tr class="separator:aa273643e837ddb5212f10c6342183f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91ad04236392ca0c8cd271f147c49554"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a91ad04236392ca0c8cd271f147c49554">inodewrite</a> (struct <a class="el" href="structfile.html">file</a> *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
-<tr class="memdesc:a91ad04236392ca0c8cd271f147c49554"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to inode.  <a href="file_8h.html#a91ad04236392ca0c8cd271f147c49554">更多...</a><br /></td></tr>
+<tr class="memdesc:a91ad04236392ca0c8cd271f147c49554"><td class="mdescLeft">&#160;</td><td class="mdescRight">向文件写数据，写入数据的起始虚拟地址是va、数据的字节长度为len，返回成功写入的数据长度。这里取名为inode 是因为，easy-fs实际上是对文件被绑定的inode写数据的；考虑同时打开了多次同一个文件（假设不关闭）的情形，这时候进程里面会有多个fd（以及对应的 file 结构体，它们会有不同的off表示读写的偏移量）对应同一个inode  <a href="file_8h.html#a91ad04236392ca0c8cd271f147c49554">更多...</a><br /></td></tr>
 <tr class="separator:a91ad04236392ca0c8cd271f147c49554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a960930182aac7e0044fad9f04e7f319d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a960930182aac7e0044fad9f04e7f319d">inoderead</a> (struct <a class="el" href="structfile.html">file</a> *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
-<tr class="memdesc:a960930182aac7e0044fad9f04e7f319d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from inode.  <a href="file_8h.html#a960930182aac7e0044fad9f04e7f319d">更多...</a><br /></td></tr>
+<tr class="memdesc:a960930182aac7e0044fad9f04e7f319d"><td class="mdescLeft">&#160;</td><td class="mdescRight">从文件读数据  <a href="file_8h.html#a960930182aac7e0044fad9f04e7f319d">更多...</a><br /></td></tr>
 <tr class="separator:a960930182aac7e0044fad9f04e7f319d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48ba1f09f680438cf521598bc0500b99"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structfile.html">file</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a48ba1f09f680438cf521598bc0500b99">stdio_init</a> (int)</td></tr>
-<tr class="memdesc:a48ba1f09f680438cf521598bc0500b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract the stdio into a file.  <a href="file_8h.html#a48ba1f09f680438cf521598bc0500b99">更多...</a><br /></td></tr>
+<tr class="memdesc:a48ba1f09f680438cf521598bc0500b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化一个file类型的结构体  <a href="file_8h.html#a48ba1f09f680438cf521598bc0500b99">更多...</a><br /></td></tr>
 <tr class="separator:a48ba1f09f680438cf521598bc0500b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbb793f3c4e736e31677a31351a41054"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#acbb793f3c4e736e31677a31351a41054">show_all_files</a> ()</td></tr>
 <tr class="memdesc:acbb793f3c4e736e31677a31351a41054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show names of all files in the root_dir.  <a href="file_8h.html#acbb793f3c4e736e31677a31351a41054">更多...</a><br /></td></tr>
 <tr class="separator:acbb793f3c4e736e31677a31351a41054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22c08158efd79bb165987843d064144d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a22c08158efd79bb165987843d064144d">set_file</a> (struct <a class="el" href="structFSManager.html">FSManager</a> *<a class="el" href="structFSManager.html">FSManager</a>)</td></tr>
+<tr class="memdesc:a22c08158efd79bb165987843d064144d"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置fs_manager  <a href="file_8h.html#a22c08158efd79bb165987843d064144d">更多...</a><br /></td></tr>
 <tr class="separator:a22c08158efd79bb165987843d064144d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
@@ -197,13 +200,14 @@ listed in block ip-&gt;addrs[NDIRECT]. <br  />
           <td class="memname">void fileclose </td>
           <td>(</td>
           <td class="paramtype">struct <a class="el" href="structfile.html">file</a> *&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The operation performed on the system-level open file table entry after some process closes a file. </p>
+<p>关闭文件f </p>
+<p>关闭文件f </p>
 
 </div>
 </div>
@@ -232,6 +236,8 @@ listed in block ip-&gt;addrs[NDIRECT]. <br  />
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>打开路径为path的文件；如果omode为O_CREATE需要新建一个文件，否则打开一个已有的文件 </p>
 <p>A process creates or opens a file according to its path, returning the file descriptor of the created or opened file. If omode is O_CREATE, create a new file if omode if the others,open a created file. </p>
 
 </div>
@@ -246,19 +252,19 @@ listed in block ip-&gt;addrs[NDIRECT]. <br  />
           <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> inoderead </td>
           <td>(</td>
           <td class="paramtype">struct <a class="el" href="structfile.html">file</a> *&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>f</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>va</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -268,7 +274,8 @@ listed in block ip-&gt;addrs[NDIRECT]. <br  />
       </table>
 </div><div class="memdoc">
 
-<p>Read data from inode. </p>
+<p>从文件读数据 </p>
+<p>从文件读数据 </p>
 
 </div>
 </div>
@@ -282,19 +289,19 @@ listed in block ip-&gt;addrs[NDIRECT]. <br  />
           <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> inodewrite </td>
           <td>(</td>
           <td class="paramtype">struct <a class="el" href="structfile.html">file</a> *&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>f</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>va</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -304,7 +311,8 @@ listed in block ip-&gt;addrs[NDIRECT]. <br  />
       </table>
 </div><div class="memdoc">
 
-<p>Write data to inode. </p>
+<p>向文件写数据，写入数据的起始虚拟地址是va、数据的字节长度为len，返回成功写入的数据长度。这里取名为inode 是因为，easy-fs实际上是对文件被绑定的inode写数据的；考虑同时打开了多次同一个文件（假设不关闭）的情形，这时候进程里面会有多个fd（以及对应的 file 结构体，它们会有不同的off表示读写的偏移量）对应同一个inode </p>
+<p>向文件写数据，写入数据的起始虚拟地址是va、数据的字节长度为len，返回成功写入的数据长度。这里取名为inode 是因为，easy-fs实际上是对文件被绑定的inode写数据的；考虑同时打开了多次同一个文件（假设不关闭）的情形，这时候进程里面会有多个fd（以及对应的 file 结构体，它们会有不同的off表示读写的偏移量）对应同一个inode </p>
 
 </div>
 </div>
@@ -334,6 +342,8 @@ listed in block ip-&gt;addrs[NDIRECT]. <br  />
       </table>
 </div><div class="memdoc">
 
+<p>新建一个pipe，读端和写端对用户暴露接口的文件分别为f1和f2 </p>
+
 </div>
 </div>
 <a id="a22c08158efd79bb165987843d064144d"></a>
@@ -351,6 +361,8 @@ listed in block ip-&gt;addrs[NDIRECT]. <br  />
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>设置fs_manager </p>
 
 </div>
 </div>
@@ -383,13 +395,14 @@ listed in block ip-&gt;addrs[NDIRECT]. <br  />
           <td class="memname">struct <a class="el" href="structfile.html">file</a>* stdio_init </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Abstract the stdio into a file. </p>
+<p>初始化一个file类型的结构体 </p>
+<p>初始化一个file类型的结构体 </p>
 
 </div>
 </div>

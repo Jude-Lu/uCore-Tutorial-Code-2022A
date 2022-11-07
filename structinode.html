@@ -112,7 +112,13 @@ $(document).ready(function(){initNavTree('structinode.html',''); initResizable()
 <tr class="memitem:a94905615a8f79fd11b8f500e1bbee16d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structinode.html#a94905615a8f79fd11b8f500e1bbee16d">addrs</a> [<a class="el" href="nfs_2fs_8h.html#acd38e9532d4b3623f844b93c012a8e06">NDIRECT</a>+1]</td></tr>
 <tr class="separator:a94905615a8f79fd11b8f500e1bbee16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">结构体成员变量说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>inode 指的是Index Node（索引节点），是文件系统中的一种重要数据结构。<br  />
+逻辑目录树结构中的每个文件和目录都对应一个 inode。<br  />
+在 inode 中不仅包含了文件/目录的元数据（大小/访问权限/类型等信息），<br  />
+还包含实际保存对应文件/目录数据的数据块（位于最后的数据块区域中）的索引信息，<br  />
+从而能够找到文件/目录的数据被保存在磁盘的哪些块中。 </p>
+</div><h2 class="groupheader">结构体成员变量说明</h2>
 <a id="a94905615a8f79fd11b8f500e1bbee16d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a94905615a8f79fd11b8f500e1bbee16d">&#9670;&nbsp;</a></span>addrs</h2>
 

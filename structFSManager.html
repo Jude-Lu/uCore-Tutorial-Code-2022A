@@ -103,20 +103,25 @@ FSManager 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 成员变量</h2></td></tr>
 <tr class="memitem:a4a4bb4217968ab2b47c9be8db3c1accb"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a4a4bb4217968ab2b47c9be8db3c1accb">fdalloc</a> )(struct <a class="el" href="structfile.html">file</a> *f)</td></tr>
+<tr class="memdesc:a4a4bb4217968ab2b47c9be8db3c1accb"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件对于进程而言也是其需要记录的一种资源，每个打开的文件会有一个非负整数 fd 指代它，这是一种已经被打开文件的索引。该接口用于让当前进程分配一个新的fd。  <a href="structFSManager.html#a4a4bb4217968ab2b47c9be8db3c1accb">更多...</a><br /></td></tr>
 <tr class="separator:a4a4bb4217968ab2b47c9be8db3c1accb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe0c01d2813ec65550778f85645054a3"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structfile.html">file</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#abe0c01d2813ec65550778f85645054a3">filealloc</a> )()</td></tr>
+<tr class="memdesc:abe0c01d2813ec65550778f85645054a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">分配进程中实际存储 struct file 指针的资源  <a href="structFSManager.html#abe0c01d2813ec65550778f85645054a3">更多...</a><br /></td></tr>
 <tr class="separator:abe0c01d2813ec65550778f85645054a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6d828f6936788fd5630aa1028856e2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#ad6d828f6936788fd5630aa1028856e2e">get_curr_pagetable</a> )()</td></tr>
+<tr class="memdesc:ad6d828f6936788fd5630aa1028856e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">以下三个接口用于和当前进程的虚存做交互  <a href="structFSManager.html#ad6d828f6936788fd5630aa1028856e2e">更多...</a><br /></td></tr>
 <tr class="separator:ad6d828f6936788fd5630aa1028856e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85f6b23ca0733e0f0ed3796079628432"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a85f6b23ca0733e0f0ed3796079628432">either_copyout</a> )(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, int, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, char *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
 <tr class="separator:a85f6b23ca0733e0f0ed3796079628432"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae460dc851223698a65f05605c88dd6b9"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#ae460dc851223698a65f05605c88dd6b9">either_copyin</a> )(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, int, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, char *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
 <tr class="separator:ae460dc851223698a65f05605c88dd6b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2eab1cd3bb0b41403bda554a49a9ede"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#af2eab1cd3bb0b41403bda554a49a9ede">pipeopen</a> )()</td></tr>
+<tr class="memdesc:af2eab1cd3bb0b41403bda554a49a9ede"><td class="mdescLeft">&#160;</td><td class="mdescRight">对于用户来说，pipe被抽象为了文件，也就是说文件系统要提供操作pipe的接口。实际的实现文件系统不负责，需要内核核心提供的创建和关闭管道的接口；内核核心可以直接使用pipe模块提供的接口  <a href="structFSManager.html#af2eab1cd3bb0b41403bda554a49a9ede">更多...</a><br /></td></tr>
 <tr class="separator:af2eab1cd3bb0b41403bda554a49a9ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab49f7215a6fd0b90849a6981607c253c"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#ab49f7215a6fd0b90849a6981607c253c">pipeclose</a> )(void *_pi, int writable)</td></tr>
 <tr class="separator:ab49f7215a6fd0b90849a6981607c253c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a248eea0a7547da2161f51b7825cc242c"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a248eea0a7547da2161f51b7825cc242c">bread</a> )(<a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)</td></tr>
+<tr class="memdesc:a248eea0a7547da2161f51b7825cc242c"><td class="mdescLeft">&#160;</td><td class="mdescRight">以下为与磁盘交互的接口。内核核心可以把disk模块对外暴露的接口提供给easy-fs模块使用  <a href="structFSManager.html#a248eea0a7547da2161f51b7825cc242c">更多...</a><br /></td></tr>
 <tr class="separator:a248eea0a7547da2161f51b7825cc242c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bc0c52c29ccec5ff797829c71e6c5d6"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a9bc0c52c29ccec5ff797829c71e6c5d6">brelse</a> )(void *)</td></tr>
 <tr class="separator:a9bc0c52c29ccec5ff797829c71e6c5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,6 +160,8 @@ FSManager 的协作图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>以下为与磁盘交互的接口。内核核心可以把disk模块对外暴露的接口提供给easy-fs模块使用 </p>
 
 </div>
 </div>
@@ -254,6 +261,8 @@ FSManager 的协作图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>文件对于进程而言也是其需要记录的一种资源，每个打开的文件会有一个非负整数 fd 指代它，这是一种已经被打开文件的索引。该接口用于让当前进程分配一个新的fd。 </p>
+
 </div>
 </div>
 <a id="abe0c01d2813ec65550778f85645054a3"></a>
@@ -268,6 +277,8 @@ FSManager 的协作图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>分配进程中实际存储 struct file 指针的资源 </p>
+
 </div>
 </div>
 <a id="ad6d828f6936788fd5630aa1028856e2e"></a>
@@ -281,6 +292,8 @@ FSManager 的协作图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>以下三个接口用于和当前进程的虚存做交互 </p>
 
 </div>
 </div>
@@ -309,6 +322,8 @@ FSManager 的协作图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>对于用户来说，pipe被抽象为了文件，也就是说文件系统要提供操作pipe的接口。实际的实现文件系统不负责，需要内核核心提供的创建和关闭管道的接口；内核核心可以直接使用pipe模块提供的接口 </p>
 
 </div>
 </div>

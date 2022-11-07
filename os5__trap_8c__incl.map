@@ -27,7 +27,7 @@
 <area shape="rect" id="node22" href="$syscall__ids_8h.html" title=" " alt="" coords="393,393,498,420"/>
 <area shape="rect" id="node23" href="$syscall_8h.html" title="syscall模块主要负责系统调用的处理，根据传入的syscall id调用对应的syscall函数" alt="" coords="290,393,369,420"/>
 <area shape="rect" id="node24" href="$syscall_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="298,468,361,495"/>
-<area shape="rect" id="node26" href="$trap_8h.html" title=" " alt="" coords="522,393,582,420"/>
+<area shape="rect" id="node26" href="$trap_8h.html" title="负责发生异常时操作系统的处理" alt="" coords="522,393,582,420"/>
 <area shape="rect" id="node30" href="$plic_8h.html" title=" " alt="" coords="658,393,715,420"/>
 <area shape="rect" id="node31" href="$timer_8h.html" title=" " alt="" coords="590,543,658,569"/>
 <area shape="rect" id="node27" href="$trap_2log_8h.html" title=" " alt="" coords="438,468,493,495"/>

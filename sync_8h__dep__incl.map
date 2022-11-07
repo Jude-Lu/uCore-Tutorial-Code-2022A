@@ -1,5 +1,5 @@
 <map id="sync/sync.h" name="sync/sync.h">
-<area shape="rect" id="node1" title=" " alt="" coords="407,5,506,32"/>
+<area shape="rect" id="node1" title="同步互斥模块，实现了mutex（锁）、semaphore（信号量）、condvar（条件变量）三种机制" alt="" coords="407,5,506,32"/>
 <area shape="rect" id="node2" href="$sync__module_8h.html" title=" " alt="" coords="305,80,459,107"/>
 <area shape="rect" id="node12" href="$sync_8c.html" title=" " alt="" coords="484,80,581,107"/>
 <area shape="rect" id="node3" href="$os8_2modules_8h.html" title=" " alt="" coords="323,155,441,181"/>

@@ -1,5 +1,5 @@
 <map id="pipe/pipe.h" name="pipe/pipe.h">
-<area shape="rect" id="node1" title=" " alt="" coords="700,5,795,32"/>
+<area shape="rect" id="node1" title="管道的内部实现" alt="" coords="700,5,795,32"/>
 <area shape="rect" id="node2" href="$pipe__module_8h.html" title=" " alt="" coords="599,80,749,107"/>
 <area shape="rect" id="node21" href="$pipe_8c.html" title=" " alt="" coords="774,80,867,107"/>
 <area shape="rect" id="node3" href="$os7_2modules_8h.html" title=" " alt="" coords="438,155,555,181"/>

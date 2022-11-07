@@ -127,10 +127,11 @@ Public 类型</h2></td></tr>
 <tr class="memdesc:a3ab9ee7e2cad8f73ff4bf973ad8d7713"><td class="mdescLeft">&#160;</td><td class="mdescRight">FD_INODE  <a href="structfile.html#a3ab9ee7e2cad8f73ff4bf973ad8d7713">更多...</a><br /></td></tr>
 <tr class="separator:a3ab9ee7e2cad8f73ff4bf973ad8d7713"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1aeb2e4b0cfd549f8fb46fb7e08f7e3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfile.html#a1aeb2e4b0cfd549f8fb46fb7e08f7e3e">off</a></td></tr>
+<tr class="memdesc:a1aeb2e4b0cfd549f8fb46fb7e08f7e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">读写文件的偏移量；可以使用lseek函数来改变这个偏移的位置以支持随机读写  <a href="structfile.html#a1aeb2e4b0cfd549f8fb46fb7e08f7e3e">更多...</a><br /></td></tr>
 <tr class="separator:a1aeb2e4b0cfd549f8fb46fb7e08f7e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p><a class="el" href="file_8h.html" title="Inode content">file.h</a> Defines a file in memory that provides information about the current use of the file and the corresponding inode location </p>
+<div class="textblock"><p><a class="el" href="file_8h.html" title="Inode content">file.h</a> 在进程中，我们使用file结构体来标识一个被进程使用的文件 Defines a file in memory that provides information about the current use of the file and the corresponding inode location </p>
 </div><h2 class="groupheader">成员枚举类型说明</h2>
 <a id="a726ca809ffd3d67ab4b8476646f26635"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a726ca809ffd3d67ab4b8476646f26635">&#9670;&nbsp;</a></span>anonymous enum</h2>
@@ -180,6 +181,8 @@ Public 类型</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>读写文件的偏移量；可以使用lseek函数来改变这个偏移的位置以支持随机读写 </p>
 
 </div>
 </div>

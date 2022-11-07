@@ -1,6 +1,6 @@
 <map id="trap/trap.c" name="trap/trap.c">
 <area shape="rect" id="node1" title=" " alt="" coords="175,5,265,32"/>
-<area shape="rect" id="node2" href="$trap_8h.html" title=" " alt="" coords="157,80,217,107"/>
+<area shape="rect" id="node2" href="$trap_8h.html" title="负责发生异常时操作系统的处理" alt="" coords="157,80,217,107"/>
 <area shape="rect" id="node6" href="$timer_8h.html" title=" " alt="" coords="225,155,293,181"/>
 <area shape="rect" id="node3" href="$trap_2log_8h.html" title=" " alt="" coords="73,155,127,181"/>
 <area shape="rect" id="node5" href="$trap_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="155,304,218,331"/>

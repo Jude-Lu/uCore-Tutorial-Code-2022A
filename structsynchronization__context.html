@@ -105,18 +105,23 @@ synchronization_context 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 成员变量</h2></td></tr>
 <tr class="memitem:a544eded34daaf62bdd97b908c83f9e92"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structmutex.html">mutex</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsynchronization__context.html#a544eded34daaf62bdd97b908c83f9e92">alloc_mutex</a> )()</td></tr>
+<tr class="memdesc:a544eded34daaf62bdd97b908c83f9e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">mutex、semaphore、condvar是进程掌握的资源，因此需要让内核核心实现分配的功能  <a href="structsynchronization__context.html#a544eded34daaf62bdd97b908c83f9e92">更多...</a><br /></td></tr>
 <tr class="separator:a544eded34daaf62bdd97b908c83f9e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4bd44044f624bc759564516b180ac6e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsemaphore.html">semaphore</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsynchronization__context.html#ad4bd44044f624bc759564516b180ac6e">alloc_semaphore</a> )()</td></tr>
 <tr class="separator:ad4bd44044f624bc759564516b180ac6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a357852d9ab1ca3eb36bdd33a4b1b7d3b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structcondvar.html">condvar</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsynchronization__context.html#a357852d9ab1ca3eb36bdd33a4b1b7d3b">alloc_codvar</a> )()</td></tr>
 <tr class="separator:a357852d9ab1ca3eb36bdd33a4b1b7d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a220f5e7f67b2a6d2bb599b761d6c6b20"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsynchronization__context.html#a220f5e7f67b2a6d2bb599b761d6c6b20">curr_task_id</a> )()</td></tr>
+<tr class="memdesc:a220f5e7f67b2a6d2bb599b761d6c6b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前正在运行线程的id。内核核心需要给每个线程提供互不相同的int类型id，以供同步互斥模块识别  <a href="structsynchronization__context.html#a220f5e7f67b2a6d2bb599b761d6c6b20">更多...</a><br /></td></tr>
 <tr class="separator:a220f5e7f67b2a6d2bb599b761d6c6b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a561f5d7612fb5c250655a20ffae8dafe"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsynchronization__context.html#a561f5d7612fb5c250655a20ffae8dafe">yield</a> )()</td></tr>
+<tr class="memdesc:a561f5d7612fb5c250655a20ffae8dafe"><td class="mdescLeft">&#160;</td><td class="mdescRight">对于spin mutex（自旋锁）的机制，线程抢不到锁需要等待，这时候需要主动放弃 CPU 主动权  <a href="structsynchronization__context.html#a561f5d7612fb5c250655a20ffae8dafe">更多...</a><br /></td></tr>
 <tr class="separator:a561f5d7612fb5c250655a20ffae8dafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa1adf48c5835e6419bb8bce24cb11e1"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsynchronization__context.html#aaa1adf48c5835e6419bb8bce24cb11e1">sleeping</a> )()</td></tr>
+<tr class="memdesc:aaa1adf48c5835e6419bb8bce24cb11e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">让当前抢不到资源的线程睡眠，等到后面资源空闲时被唤醒  <a href="structsynchronization__context.html#aaa1adf48c5835e6419bb8bce24cb11e1">更多...</a><br /></td></tr>
 <tr class="separator:aaa1adf48c5835e6419bb8bce24cb11e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9124efec8e35394fd915de91e326da8"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsynchronization__context.html#af9124efec8e35394fd915de91e326da8">running</a> )(int id)</td></tr>
+<tr class="memdesc:af9124efec8e35394fd915de91e326da8"><td class="mdescLeft">&#160;</td><td class="mdescRight">唤醒编号为id的线程  <a href="structsynchronization__context.html#af9124efec8e35394fd915de91e326da8">更多...</a><br /></td></tr>
 <tr class="separator:af9124efec8e35394fd915de91e326da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">结构体成员变量说明</h2>
@@ -146,6 +151,8 @@ synchronization_context 的协作图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>mutex、semaphore、condvar是进程掌握的资源，因此需要让内核核心实现分配的功能 </p>
+
 </div>
 </div>
 <a id="ad4bd44044f624bc759564516b180ac6e"></a>
@@ -174,6 +181,8 @@ synchronization_context 的协作图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>获取当前正在运行线程的id。内核核心需要给每个线程提供互不相同的int类型id，以供同步互斥模块识别 </p>
+
 </div>
 </div>
 <a id="af9124efec8e35394fd915de91e326da8"></a>
@@ -187,6 +196,8 @@ synchronization_context 的协作图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>唤醒编号为id的线程 </p>
 
 </div>
 </div>
@@ -202,6 +213,8 @@ synchronization_context 的协作图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>让当前抢不到资源的线程睡眠，等到后面资源空闲时被唤醒 </p>
+
 </div>
 </div>
 <a id="a561f5d7612fb5c250655a20ffae8dafe"></a>
@@ -215,6 +228,8 @@ synchronization_context 的协作图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>对于spin mutex（自旋锁）的机制，线程抢不到锁需要等待，这时候需要主动放弃 CPU 主动权 </p>
 
 </div>
 </div>

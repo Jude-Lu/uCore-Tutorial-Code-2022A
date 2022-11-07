@@ -1,7 +1,7 @@
 <map id="sync/queue.h" name="sync/queue.h">
 <area shape="rect" id="node1" title="实现了简单的循环队列，可以在进程调度和同步互斥中使用" alt="" coords="420,5,528,32"/>
 <area shape="rect" id="node2" href="$sync__dependency_8h.html" title=" " alt="" coords="383,80,565,107"/>
-<area shape="rect" id="node3" href="$sync_8h.html" title=" " alt="" coords="366,155,465,181"/>
+<area shape="rect" id="node3" href="$sync_8h.html" title="同步互斥模块，实现了mutex（锁）、semaphore（信号量）、condvar（条件变量）三种机制" alt="" coords="366,155,465,181"/>
 <area shape="rect" id="node15" href="$sync_2log_8h.html" title=" " alt="" coords="489,155,577,181"/>
 <area shape="rect" id="node4" href="$sync__module_8h.html" title=" " alt="" coords="305,229,459,256"/>
 <area shape="rect" id="node14" href="$sync_8c.html" title=" " alt="" coords="484,229,581,256"/>

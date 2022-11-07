@@ -89,6 +89,9 @@ $(document).ready(function(){initNavTree('sync_8h.html',''); initResizable(); })
 <div class="title">sync.h 文件参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>同步互斥模块，实现了mutex（锁）、semaphore（信号量）、condvar（条件变量）三种机制  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="sync_2defs_8h_source.html">defs.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="sync__dependency_8h_source.html">sync_dependency.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -96,7 +99,7 @@ sync.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="sync_8h__incl.png" border="0" usemap="#sync_2sync_8h" alt=""/></div>
 <map name="sync_2sync_8h" id="sync_2sync_8h">
-<area shape="rect" title=" " alt="" coords="51,5,150,32"/>
+<area shape="rect" title="同步互斥模块，实现了mutex（锁）、semaphore（信号量）、condvar（条件变量）三种机制" alt="" coords="51,5,150,32"/>
 <area shape="rect" href="sync_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="5,80,68,107"/>
 <area shape="rect" href="sync__dependency_8h.html" title=" " alt="" coords="92,80,240,107"/>
 <area shape="rect" href="sync_2queue_8h.html" title="实现了简单的循环队列，可以在进程调度和同步互斥中使用" alt="" coords="129,155,203,181"/>
@@ -107,7 +110,7 @@ sync.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="sync_8h__dep__incl.png" border="0" usemap="#sync_2sync_8hdep" alt=""/></div>
 <map name="sync_2sync_8hdep" id="sync_2sync_8hdep">
-<area shape="rect" title=" " alt="" coords="407,5,506,32"/>
+<area shape="rect" title="同步互斥模块，实现了mutex（锁）、semaphore（信号量）、condvar（条件变量）三种机制" alt="" coords="407,5,506,32"/>
 <area shape="rect" href="sync__module_8h.html" title=" " alt="" coords="305,80,459,107"/>
 <area shape="rect" href="sync_8c.html" title=" " alt="" coords="484,80,581,107"/>
 <area shape="rect" href="os8_2modules_8h.html" title=" " alt="" coords="323,155,441,181"/>
@@ -143,27 +146,39 @@ sync.h 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:a864bab77a2b0b40f29b59d3f9b47e03b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structmutex.html">mutex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8h.html#a864bab77a2b0b40f29b59d3f9b47e03b">mutex_create</a> (int blocking)</td></tr>
+<tr class="memdesc:a864bab77a2b0b40f29b59d3f9b47e03b"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建一个mutex，其中blocking表示mutex的类型，为0是自旋锁、否则是阻塞锁  <a href="sync_8h.html#a864bab77a2b0b40f29b59d3f9b47e03b">更多...</a><br /></td></tr>
 <tr class="separator:a864bab77a2b0b40f29b59d3f9b47e03b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18eb2adcf78b0435e05e6df5ba752c34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8h.html#a18eb2adcf78b0435e05e6df5ba752c34">mutex_lock</a> (struct <a class="el" href="structmutex.html">mutex</a> *)</td></tr>
+<tr class="memdesc:a18eb2adcf78b0435e05e6df5ba752c34"><td class="mdescLeft">&#160;</td><td class="mdescRight">加锁  <a href="sync_8h.html#a18eb2adcf78b0435e05e6df5ba752c34">更多...</a><br /></td></tr>
 <tr class="separator:a18eb2adcf78b0435e05e6df5ba752c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a207590bffdf90b278945b756ec8946dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8h.html#a207590bffdf90b278945b756ec8946dc">mutex_unlock</a> (struct <a class="el" href="structmutex.html">mutex</a> *)</td></tr>
+<tr class="memdesc:a207590bffdf90b278945b756ec8946dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">解锁  <a href="sync_8h.html#a207590bffdf90b278945b756ec8946dc">更多...</a><br /></td></tr>
 <tr class="separator:a207590bffdf90b278945b756ec8946dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae46baaa9228cdff4ba057f790cf4ab96"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsemaphore.html">semaphore</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8h.html#ae46baaa9228cdff4ba057f790cf4ab96">semaphore_create</a> (int count)</td></tr>
+<tr class="memdesc:ae46baaa9228cdff4ba057f790cf4ab96"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建一个初值为count的semaphore  <a href="sync_8h.html#ae46baaa9228cdff4ba057f790cf4ab96">更多...</a><br /></td></tr>
 <tr class="separator:ae46baaa9228cdff4ba057f790cf4ab96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1d1b412badffec46073ff411779b7fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8h.html#ab1d1b412badffec46073ff411779b7fc">semaphore_up</a> (struct <a class="el" href="structsemaphore.html">semaphore</a> *)</td></tr>
+<tr class="memdesc:ab1d1b412badffec46073ff411779b7fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">将semaphore的值加1  <a href="sync_8h.html#ab1d1b412badffec46073ff411779b7fc">更多...</a><br /></td></tr>
 <tr class="separator:ab1d1b412badffec46073ff411779b7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fd37ed58a676237d0801036152ab891"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8h.html#a4fd37ed58a676237d0801036152ab891">semaphore_down</a> (struct <a class="el" href="structsemaphore.html">semaphore</a> *)</td></tr>
+<tr class="memdesc:a4fd37ed58a676237d0801036152ab891"><td class="mdescLeft">&#160;</td><td class="mdescRight">将semaphore的值减1  <a href="sync_8h.html#a4fd37ed58a676237d0801036152ab891">更多...</a><br /></td></tr>
 <tr class="separator:a4fd37ed58a676237d0801036152ab891"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf1dae4f44647ca3f7327d033a4ceb72"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structcondvar.html">condvar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8h.html#abf1dae4f44647ca3f7327d033a4ceb72">condvar_create</a> ()</td></tr>
+<tr class="memdesc:abf1dae4f44647ca3f7327d033a4ceb72"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建一个condvar  <a href="sync_8h.html#abf1dae4f44647ca3f7327d033a4ceb72">更多...</a><br /></td></tr>
 <tr class="separator:abf1dae4f44647ca3f7327d033a4ceb72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2c60f8f00ff2ea965c78cee309d9676"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8h.html#ae2c60f8f00ff2ea965c78cee309d9676">cond_signal</a> (struct <a class="el" href="structcondvar.html">condvar</a> *)</td></tr>
+<tr class="memdesc:ae2c60f8f00ff2ea965c78cee309d9676"><td class="mdescLeft">&#160;</td><td class="mdescRight">在该condvar上发信号，唤醒正在等待的线程  <a href="sync_8h.html#ae2c60f8f00ff2ea965c78cee309d9676">更多...</a><br /></td></tr>
 <tr class="separator:ae2c60f8f00ff2ea965c78cee309d9676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d2073154317f60504639011ced6c402"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8h.html#a1d2073154317f60504639011ced6c402">cond_wait</a> (struct <a class="el" href="structcondvar.html">condvar</a> *, struct <a class="el" href="structmutex.html">mutex</a> *)</td></tr>
+<tr class="memdesc:a1d2073154317f60504639011ced6c402"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程使用该接口来等到一个condvar为真（即有其它线程发信号）  <a href="sync_8h.html#a1d2073154317f60504639011ced6c402">更多...</a><br /></td></tr>
 <tr class="separator:a1d2073154317f60504639011ced6c402"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53e895842fc1fc82a19d816274489cfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sync_8h.html#a53e895842fc1fc82a19d816274489cfc">set_sync</a> (struct <a class="el" href="structsynchronization__context.html">synchronization_context</a> *<a class="el" href="structsynchronization__context.html">synchronization_context</a>)</td></tr>
+<tr class="memdesc:a53e895842fc1fc82a19d816274489cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化sync_context  <a href="sync_8h.html#a53e895842fc1fc82a19d816274489cfc">更多...</a><br /></td></tr>
 <tr class="separator:a53e895842fc1fc82a19d816274489cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">宏定义说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>同步互斥模块，实现了mutex（锁）、semaphore（信号量）、condvar（条件变量）三种机制 </p>
+</div><h2 class="groupheader">宏定义说明</h2>
 <a id="ad71b4989e83665d56655107d2b478bf6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad71b4989e83665d56655107d2b478bf6">&#9670;&nbsp;</a></span>WAIT_QUEUE_MAX_LENGTH</h2>
 
@@ -195,6 +210,8 @@ sync.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>在该condvar上发信号，唤醒正在等待的线程 </p>
+
 </div>
 </div>
 <a id="a1d2073154317f60504639011ced6c402"></a>
@@ -223,6 +240,8 @@ sync.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>线程使用该接口来等到一个condvar为真（即有其它线程发信号） </p>
+
 </div>
 </div>
 <a id="abf1dae4f44647ca3f7327d033a4ceb72"></a>
@@ -239,6 +258,8 @@ sync.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>创建一个condvar </p>
 
 </div>
 </div>
@@ -258,6 +279,8 @@ sync.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>创建一个mutex，其中blocking表示mutex的类型，为0是自旋锁、否则是阻塞锁 </p>
+
 </div>
 </div>
 <a id="a18eb2adcf78b0435e05e6df5ba752c34"></a>
@@ -275,6 +298,8 @@ sync.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>加锁 </p>
 
 </div>
 </div>
@@ -294,6 +319,8 @@ sync.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>解锁 </p>
+
 </div>
 </div>
 <a id="ae46baaa9228cdff4ba057f790cf4ab96"></a>
@@ -311,6 +338,8 @@ sync.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>创建一个初值为count的semaphore </p>
 
 </div>
 </div>
@@ -330,6 +359,8 @@ sync.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>将semaphore的值减1 </p>
+
 </div>
 </div>
 <a id="ab1d1b412badffec46073ff411779b7fc"></a>
@@ -348,6 +379,8 @@ sync.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>将semaphore的值加1 </p>
+
 </div>
 </div>
 <a id="a53e895842fc1fc82a19d816274489cfc"></a>
@@ -365,6 +398,8 @@ sync.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>初始化sync_context </p>
 
 </div>
 </div>

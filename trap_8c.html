@@ -96,7 +96,7 @@ trap.c 的引用(Include)关系图:</div>
 <div class="center"><img src="trap_8c__incl.png" border="0" usemap="#trap_2trap_8c" alt=""/></div>
 <map name="trap_2trap_8c" id="trap_2trap_8c">
 <area shape="rect" title=" " alt="" coords="175,5,265,32"/>
-<area shape="rect" href="trap_8h.html" title=" " alt="" coords="157,80,217,107"/>
+<area shape="rect" href="trap_8h.html" title="负责发生异常时操作系统的处理" alt="" coords="157,80,217,107"/>
 <area shape="rect" href="timer_8h.html" title=" " alt="" coords="225,155,293,181"/>
 <area shape="rect" href="trap_2log_8h.html" title=" " alt="" coords="73,155,127,181"/>
 <area shape="rect" href="trap_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="155,304,218,331"/>
@@ -107,6 +107,7 @@ trap.c 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:abc6b4a1e99d8bf04a249c5cd8cc6107f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_8c.html#abc6b4a1e99d8bf04a249c5cd8cc6107f">set_trap</a> (struct <a class="el" href="structtrap__handler__context.html">trap_handler_context</a> *<a class="el" href="structtrap__handler__context.html">trap_handler_context</a>)</td></tr>
+<tr class="memdesc:abc6b4a1e99d8bf04a249c5cd8cc6107f"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化trap_context  <a href="trap_8c.html#abc6b4a1e99d8bf04a249c5cd8cc6107f">更多...</a><br /></td></tr>
 <tr class="separator:abc6b4a1e99d8bf04a249c5cd8cc6107f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a985dffcab200d8378b4fbf822eb1a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trap_8c.html#a6a985dffcab200d8378b4fbf822eb1a6">unknown_trap</a> ()</td></tr>
 <tr class="separator:a6a985dffcab200d8378b4fbf822eb1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,6 +178,8 @@ trap.c 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>初始化trap_context </p>
+
 </div>
 </div>
 <a id="a6a985dffcab200d8378b4fbf822eb1a6"></a>
@@ -229,6 +232,7 @@ trap.c 的引用(Include)关系图:</div>
 </div><div class="memdoc">
 
 <p>return to user space </p>
+<p>不同操作系统完成异常处理的个性需求（即customized_usertrap(cause)）之后，调用该接口从S态回到U态；该接口会完成页表切换、上下文切换等流程 </p>
 
 </div>
 </div>

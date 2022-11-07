@@ -147,25 +147,31 @@ bio.h 的引用(Include)关系图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 结构体</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbuf.html">buf</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">实现了磁盘缓存的数据结构buf，一个buf对应了一个磁盘的block  <a href="structbuf.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 函数</h2></td></tr>
 <tr class="memitem:a53cca0ddc98c5f1de37124eca2575a59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8h.html#a53cca0ddc98c5f1de37124eca2575a59">binit</a> (void)</td></tr>
+<tr class="memdesc:a53cca0ddc98c5f1de37124eca2575a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化一个buf  <a href="bio_8h.html#a53cca0ddc98c5f1de37124eca2575a59">更多...</a><br /></td></tr>
 <tr class="separator:a53cca0ddc98c5f1de37124eca2575a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0acb856531e8a2c691a862530f10d067"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8h.html#a0acb856531e8a2c691a862530f10d067">bread</a> (<a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)</td></tr>
-<tr class="memdesc:a0acb856531e8a2c691a862530f10d067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a buf with the contents of the indicated block.  <a href="bio_8h.html#a0acb856531e8a2c691a862530f10d067">更多...</a><br /></td></tr>
+<tr class="memdesc:a0acb856531e8a2c691a862530f10d067"><td class="mdescLeft">&#160;</td><td class="mdescRight">读磁盘上block到缓存buf的数据，返回buf的指针。dev是设备编号，blockno是磁盘block的编号  <a href="bio_8h.html#a0acb856531e8a2c691a862530f10d067">更多...</a><br /></td></tr>
 <tr class="separator:a0acb856531e8a2c691a862530f10d067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05351fdc6a7e0099238da1d86b34afc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8h.html#a05351fdc6a7e0099238da1d86b34afc8">brelse</a> (void *)</td></tr>
+<tr class="memdesc:a05351fdc6a7e0099238da1d86b34afc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放一个buffer  <a href="bio_8h.html#a05351fdc6a7e0099238da1d86b34afc8">更多...</a><br /></td></tr>
 <tr class="separator:a05351fdc6a7e0099238da1d86b34afc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11d6de18d9baf220a2c63d07cc126fac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8h.html#a11d6de18d9baf220a2c63d07cc126fac">bwrite</a> (void *)</td></tr>
-<tr class="memdesc:a11d6de18d9baf220a2c63d07cc126fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write b's contents to disk.  <a href="bio_8h.html#a11d6de18d9baf220a2c63d07cc126fac">更多...</a><br /></td></tr>
+<tr class="memdesc:a11d6de18d9baf220a2c63d07cc126fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">把buf里面的数据写回磁盘上block，指针指向该buf  <a href="bio_8h.html#a11d6de18d9baf220a2c63d07cc126fac">更多...</a><br /></td></tr>
 <tr class="separator:a11d6de18d9baf220a2c63d07cc126fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21c84bdd526f182efd1b7931ce7d0ade"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8h.html#a21c84bdd526f182efd1b7931ce7d0ade">bpin</a> (void *)</td></tr>
+<tr class="memdesc:a21c84bdd526f182efd1b7931ce7d0ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">增加一个buf的引用计数  <a href="bio_8h.html#a21c84bdd526f182efd1b7931ce7d0ade">更多...</a><br /></td></tr>
 <tr class="separator:a21c84bdd526f182efd1b7931ce7d0ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af40c66b256f5a0cc2ca4fac2a534643a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8h.html#af40c66b256f5a0cc2ca4fac2a534643a">bunpin</a> (void *)</td></tr>
+<tr class="memdesc:af40c66b256f5a0cc2ca4fac2a534643a"><td class="mdescLeft">&#160;</td><td class="mdescRight">减少一个buf的引用计数  <a href="bio_8h.html#af40c66b256f5a0cc2ca4fac2a534643a">更多...</a><br /></td></tr>
 <tr class="separator:af40c66b256f5a0cc2ca4fac2a534643a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d546dc0222d51a0d8e7da7e4d3c8cf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bio_8h.html#a1d546dc0222d51a0d8e7da7e4d3c8cf9">buf_data</a> (void *)</td></tr>
+<tr class="memdesc:a1d546dc0222d51a0d8e7da7e4d3c8cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回buf存放实际数据位置的地址  <a href="bio_8h.html#a1d546dc0222d51a0d8e7da7e4d3c8cf9">更多...</a><br /></td></tr>
 <tr class="separator:a1d546dc0222d51a0d8e7da7e4d3c8cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
@@ -185,6 +191,8 @@ bio.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>初始化一个buf </p>
+
 </div>
 </div>
 <a id="a21c84bdd526f182efd1b7931ce7d0ade"></a>
@@ -203,6 +211,8 @@ bio.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>增加一个buf的引用计数 </p>
+
 </div>
 </div>
 <a id="a0acb856531e8a2c691a862530f10d067"></a>
@@ -215,13 +225,13 @@ bio.h 的引用(Include)关系图:</div>
           <td class="memname">void* bread </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>dev</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>blockno</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -231,7 +241,8 @@ bio.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Return a buf with the contents of the indicated block. </p>
+<p>读磁盘上block到缓存buf的数据，返回buf的指针。dev是设备编号，blockno是磁盘block的编号 </p>
+<p>读磁盘上block到缓存buf的数据，返回buf的指针。dev是设备编号，blockno是磁盘block的编号 </p>
 
 </div>
 </div>
@@ -250,6 +261,8 @@ bio.h 的引用(Include)关系图:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>释放一个buffer </p>
 <p>Release a buffer. Move to the head of the most-recently-used list. </p>
 
 </div>
@@ -270,6 +283,8 @@ bio.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>返回buf存放实际数据位置的地址 </p>
+
 </div>
 </div>
 <a id="af40c66b256f5a0cc2ca4fac2a534643a"></a>
@@ -288,6 +303,8 @@ bio.h 的引用(Include)关系图:</div>
       </table>
 </div><div class="memdoc">
 
+<p>减少一个buf的引用计数 </p>
+
 </div>
 </div>
 <a id="a11d6de18d9baf220a2c63d07cc126fac"></a>
@@ -300,13 +317,14 @@ bio.h 的引用(Include)关系图:</div>
           <td class="memname">void bwrite </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>_b</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Write b's contents to disk. </p>
+<p>把buf里面的数据写回磁盘上block，指针指向该buf </p>
+<p>把buf里面的数据写回磁盘上block，指针指向该buf </p>
 
 </div>
 </div>
