@@ -154,7 +154,7 @@ $(SCRIPT)/kernel_app.ld: $(SCRIPT)/kernelld.py .FORCE
 	cd $(SCRIPT) && $(PY) kernelld.py
 endif
 
-ifeq ($(shell expr $(ch) \!= 1)$(shell expr $(ch) \!= 6)$(shell expr $(ch) \!= 7)$(shell expr $(ch) \!= 8), 1111)
+ifeq ($(shell expr $(ch) \!= 1)$(shell expr $(ch) \!= 6)$(shell expr $(ch) \!= 7)$(shell expr $(ch) \!= 8)$(shell expr $(ch) \!= 9), 1111)
 build/kernel: $(OBJS) $(SCRIPT)/kernel_app.ld
 	$(LD) $(LDFLAGS) -T $(SCRIPT)/kernel_app.ld -o $(BUILDDIR)/kernel $(OBJS) $(LIBS)
 	$(OBJDUMP) -S $(BUILDDIR)/kernel > $(BUILDDIR)/kernel.asm
