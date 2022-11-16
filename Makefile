@@ -44,6 +44,9 @@ endif
 ifeq ($(shell expr $(ch) \>= 8), 1)
 	SUBDIRS += sync
 endif
+ifeq ($(shell expr $(ch) \>= 9), 1)
+	SUBDIRS += signal
+endif
 ##
 
 AS_SRCS = $(wildcard $K/*.S $(ASM)/entry.S)

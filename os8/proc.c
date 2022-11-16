@@ -502,14 +502,14 @@ int curr_task_id()
 void sleeping()
 {
 	struct thread *t = curr_task();
-	t->state = SLEEPING;
+	t->state = T_SLEEPING;
 	sched();
 }
 
 void running(int id)
 {
 	struct thread *t = get_task(id);
-	t->state = RUNNABLE;
+	t->state = T_RUNNABLE;
 	add_task(t);
 }
 

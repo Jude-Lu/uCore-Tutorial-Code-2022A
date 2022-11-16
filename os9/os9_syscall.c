@@ -2,11 +2,6 @@
 #include "os9_syscall.h"
 #include "os9_trap.h"
 
-inline struct proc* curr_proc()
-{
-	return ((struct thread*)curr_task())->process;
-}
-
 uint64 console_write(uint64 va, uint64 len)
 {
 	struct proc *p = curr_proc();
@@ -391,7 +386,11 @@ void syscall_init()
 		.sys_semaphore_down = os9_sys_semaphore_down,
 		.sys_condvar_create = os9_sys_condvar_create,
 		.sys_condvar_signal = os9_sys_condvar_signal,
-		.sys_condvar_wait = os9_sys_condvar_wait
+		.sys_condvar_wait = os9_sys_condvar_wait,
+		.sys_sigaction = sigaction,
+		.sys_sigprocmask = sigprocmask,
+		.sys_sigkill = sigkill,
+		.sys_sigreturn = sigreturn
 	};
 	set_syscall(&os9_sys_context);
 }

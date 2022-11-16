@@ -39,6 +39,24 @@ uint64 os9_get_userret()
 
 void os9_customized_usertrap(int cause)
 {
+	struct signal_block *sig_block = &curr_proc()->sig_block;
+	if (sig_block->killed)
+	{
+		exit_proc(137);
+		__builtin_unreachable();
+	}
+	if (sig_block->frozen)
+		yield();
+	if (!sig_block->handling_sig)
+		for (uint32 signum = 1U;signum <= 31U;++signum)
+			if (sig_block->signals & (1U << signum))
+			{
+				struct trapframe* trapframe = ((struct thread*)curr_task())->trapframe;
+				curr_proc()->sig_trapframe = *trapframe;
+				sig_block->handling_sig = signum;
+				trapframe->epc = (uint64)sig_block->sig_actions[signum].handler;
+				break;
+			}
 	usertrapret();
 }
 

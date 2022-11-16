@@ -44,6 +44,7 @@ struct proc {
 
 int cpuid();
 void exit(int);
+struct proc* curr_proc();
 void proc_init();
 void scheduler() __attribute__((noreturn));
 void sched();

@@ -2,11 +2,6 @@
 #include "os8_syscall.h"
 #include "os8_trap.h"
 
-inline struct proc* curr_proc()
-{
-	return ((struct thread*)curr_task())->process;
-}
-
 uint64 console_write(uint64 va, uint64 len)
 {
 	struct proc *p = curr_proc();

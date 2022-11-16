@@ -244,6 +244,11 @@ void scheduler()
 			warnf("not RUNNABLE", t->process->pid, t->tid);
 			continue;
 		}
+		if (t->process->sig_block.frozen)
+		{
+			add_task(t);
+			continue;
+		}
 		tracef("swtich to proc %d, thread %d", t->process->pid, t->tid);
 		t->state = T_RUNNING;
 		set_curr(t);
@@ -430,6 +435,26 @@ void exit(int code)
 	sched();
 }
 
+void exit_proc(int code)
+{
+	struct proc *p = curr_proc();
+	p->exit_code = code;
+	free_task(p);
+	debugf("proc exit");
+	if (p->parent != NULL) {
+		// Parent should `wait`
+		p->state = ZOMBIE;
+	}
+	// Set the `parent` of all children to NULL
+	struct proc *np;
+	for (np = pool; np < &pool[NPROC]; np++) {
+		if (np->parent == p) {
+			np->parent = NULL;
+		}
+	}
+	sched();
+}
+
 int fdalloc(struct file *f)
 {
 	debugf("debugf f = %p, type = %d", f, f->type);
@@ -502,15 +527,34 @@ int curr_task_id()
 void sleeping()
 {
 	struct thread *t = curr_task();
-	t->state = SLEEPING;
+	t->state = T_SLEEPING;
 	sched();
 }
 
 void running(int id)
 {
 	struct thread *t = get_task(id);
-	t->state = RUNNABLE;
+	t->state = T_RUNNABLE;
 	add_task(t);
+}
+
+struct signal_block* get_curr_sig_block()
+{
+	return &curr_proc()->sig_block;
+}
+
+struct signal_block* pid2sig_block(int pid)
+{
+	struct proc *p = pool + pid;
+	if (p->state == UNUSED || p->state == ZOMBIE)
+		return NULL;
+	return &p->sig_block;
+}
+
+void recover_sig_trapframe()
+{
+	struct trapframe* trapframe = ((struct thread*)curr_task())->trapframe;
+	*trapframe = curr_proc()->sig_trapframe;
 }
 
 // initialize the proc table at boot time.
@@ -595,4 +639,18 @@ void proc_init()
 		.running = running
 	};
 	set_sync(&os9_sync_context);
+
+	static struct signal_context os9_sig_context = 
+	{
+		.get_curr_pagetable = get_curr_pagetable,
+
+		.get_curr_sig_block = get_curr_sig_block,
+		.pid2sig_block = pid2sig_block,
+
+		.recover_sig_trapframe = recover_sig_trapframe,
+
+		.copyin = copyin,
+		.copyout = copyout
+	};
+	set_signal(&os9_sig_context);
 }
