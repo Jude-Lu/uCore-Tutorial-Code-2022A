@@ -60,7 +60,7 @@ struct syscall_context {
 	int (*sys_enable_deadlock_detect)(int is_enable);
 
 	// ch9 新增syscall
-	int (*sys_sigaction)(int signum, uint64 va_act, uint64 va_oldact);
+	int (*sys_sigaction)(uint32 signum, uint64 va_act, uint64 va_oldact);
 	int (*sys_sigprocmask)(uint32 mask);
 	int (*sys_sigkill)(int pid, uint32 signum);
 	int (*sys_sigreturn)();
