@@ -15,7 +15,7 @@ int sigaction(uint32 signum, uint64 va_act, uint64 va_oldact)
 	if (signum == SIGKILL || signum == SIGSTOP || signum == SIGCONT)
 		return -1;
 	struct sigaction *action = (sig_context->get_curr_sig_block)()->sig_actions + signum;
-	if (sig_context->copyout(sig_context->get_curr_pagetable(), va_oldact, (char*)action, sizeof(struct sigaction)) < 0)
+	if (va_oldact && sig_context->copyout(sig_context->get_curr_pagetable(), va_oldact, (char*)action, sizeof(struct sigaction)) < 0)
 		return -1;
 	if (sig_context->copyin(sig_context->get_curr_pagetable(), (char*)action, va_act, sizeof(struct sigaction)) < 0)
 		return -1;
@@ -35,7 +35,7 @@ int sigreturn()
 		return -1;
 	sig_block->signals -= (1U << sig_block->handling_sig);
 	sig_block->handling_sig = 0;
-	sig_context->customized_sigreturn();
+	sig_context->recover_sig_trapframe();
 	return 0;
 }
 
