@@ -9,7 +9,6 @@
 #include "../easy-fs/fs_module.h"
 #include "../kernel-vm/vm_module.h"
 #include "../pipe/pipe_module.h"
-#include "../signal/signal_module.h"
 #include "../syscall/syscall_module.h"
 #include "../trap/trap_module.h"
 #include "../task-manage/task_module.h"

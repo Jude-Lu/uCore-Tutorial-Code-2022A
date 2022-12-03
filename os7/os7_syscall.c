@@ -176,20 +176,6 @@ err0:
 	return -1;
 }
 
-// TODO
-int os7_sys_sigaction(int signum, uint64 va_act, uint64 va_oldact)
-{
-	printf("enter os7_sys_sigact\n");
-	sigaction(signum, va_act, va_oldact);
-	return 0;
-}
-
-int os7_sys_kill(int pid, uint32 signum)
-{
-	sigkill(pid, signum);
-	return 0;
-}
-
 uint64 os7_sys_openat(uint64 va, uint64 omode, uint64 _flags)
 {
 	struct proc *p = curr_task();
@@ -228,8 +214,6 @@ void syscall_init()
 		.sys_exec = os7_sys_exec,
 		.sys_wait = os7_sys_wait,
 		.sys_pipe = os7_sys_pipe,
-		.sys_sigaction = os7_sys_sigaction,
-		.sys_sigkill = os7_sys_kill,
 		.sys_openat = os7_sys_openat,
 		.sys_close = os7_sys_close
 	};

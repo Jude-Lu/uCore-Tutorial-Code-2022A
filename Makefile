@@ -40,7 +40,6 @@ ifeq ($(shell expr $(ch) \>= 6), 1)
 endif
 ifeq ($(shell expr $(ch) \>= 7), 1)
 	SUBDIRS += pipe
-	SUBDIRS += signal
 endif
 ifeq ($(shell expr $(ch) \>= 8), 1)
 	SUBDIRS += sync
