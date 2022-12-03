@@ -545,9 +545,14 @@ struct signal_block* get_curr_sig_block()
 
 struct signal_block* pid2sig_block(int pid)
 {
-	struct proc *p = pool + pid;
-	if (p->state == UNUSED || p->state == ZOMBIE)
-		return NULL;
+	struct proc *p;
+	for (p = pool; p < &pool[NPROC]; p++) {
+		if (p->state != UNUSED && p->state != ZOMBIE && p->pid == pid) {
+			goto found;
+		}
+	}
+	return NULL;
+	found:
 	return &p->sig_block;
 }
 

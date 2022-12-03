@@ -119,7 +119,7 @@ int syscall(uint64 a0, uint64 a1, uint64 a2, uint64 a3, uint64 a4, uint64 a5, ui
 			break;
 		
 		// ch9
-		case SYS_rt_sigaction:
+		case SYS_sigact:
 			ret = sys_context->sys_sigaction(args[0], args[1], args[2]);
 			break;
 		case SYS_rt_sigprocmask:

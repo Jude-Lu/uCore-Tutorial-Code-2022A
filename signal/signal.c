@@ -41,7 +41,7 @@ int sigreturn()
 
 int sigkill(int pid, uint32 signum)
 {
-	if (signum < 1 || signum > 31)
+	if (signum < 1U || signum > 31U)
 		return -1;
 	struct signal_block *sig_block = (sig_context->pid2sig_block)(pid);
 	if (sig_block == NULL || sig_block->killed)
