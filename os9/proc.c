@@ -551,7 +551,7 @@ struct signal_block* pid2sig_block(int pid)
 	return &p->sig_block;
 }
 
-void recover_sig_trapframe()
+void customized_sigreturn()
 {
 	struct trapframe* trapframe = ((struct thread*)curr_task())->trapframe;
 	*trapframe = curr_proc()->sig_trapframe;
@@ -647,7 +647,7 @@ void proc_init()
 		.get_curr_sig_block = get_curr_sig_block,
 		.pid2sig_block = pid2sig_block,
 
-		.recover_sig_trapframe = recover_sig_trapframe,
+		.customized_sigreturn = customized_sigreturn,
 
 		.copyin = copyin,
 		.copyout = copyout

@@ -23,7 +23,7 @@ struct signal_context {
 	struct signal_block* (*get_curr_sig_block)(); //< 得到当前进程的signal_block
 	struct signal_block* (*pid2sig_block)(int pid);
 	
-	void (*recover_sig_trapframe)();
+	void (*customized_sigreturn)();
 
 	int (*copyin)(pagetable_t pagetable, char* dst, uint64 srcva, uint64 len);
 	int (*copyout)(pagetable_t pagetable, uint64 dstva, char* src, uint64 len);

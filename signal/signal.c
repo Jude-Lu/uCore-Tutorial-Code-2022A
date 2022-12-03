@@ -35,7 +35,7 @@ int sigreturn()
 		return -1;
 	sig_block->signals -= (1U << sig_block->handling_sig);
 	sig_block->handling_sig = 0;
-	sig_context->recover_sig_trapframe();
+	sig_context->customized_sigreturn();
 	return 0;
 }
 
