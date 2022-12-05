@@ -12,7 +12,7 @@ struct sigaction {
 struct signal_block {
 	uint32 signals; // 要响应的信号
 	uint32 signal_mask; // 要屏蔽的信号
-	uint32 handling_sig; // 正在处理的信号
+	uint32 handling_sig; // 正在处理的信号。如果没有正在处理任何信号，则该变量为0
 	int killed, frozen; // 当前进程是否已经被杀死/是否被冻住
 	struct sigaction sig_actions[32]; // 每个种类的信号对应的sigaction数据结构
 };
