@@ -10,7 +10,7 @@ void set_signal(struct signal_context *signal_context)
 
 int sigaction(uint32 signum, uint64 va_act, uint64 va_oldact)
 {
-	if (signum < 1 || signum > 31)
+	if (signum < 1U || signum > 31U)
 		return -1;
 	if (signum == SIGKILL || signum == SIGSTOP || signum == SIGCONT) // 这三种信号必须由内核处理
 		return -1;
