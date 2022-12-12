@@ -1,6 +1,6 @@
 #include "proc.h"
 #include "loader.h"
-#include "os8_trap.h"
+#include "os9_trap.h"
 
 struct proc pool[NPROC];
 __attribute__((aligned(16))) char kstack[NPROC][NTHREAD][KSTACK_SIZE];
@@ -244,6 +244,11 @@ void scheduler()
 			warnf("not RUNNABLE", t->process->pid, t->tid);
 			continue;
 		}
+		if (t->process->sig_block.frozen)
+		{
+			add_task(t);
+			continue;
+		}
 		tracef("swtich to proc %d, thread %d", t->process->pid, t->tid);
 		t->state = T_RUNNING;
 		set_curr(t);
@@ -430,6 +435,26 @@ void exit(int code)
 	sched();
 }
 
+void exit_proc(int code)
+{
+	struct proc *p = curr_proc();
+	p->exit_code = code;
+	free_task(p);
+	debugf("proc exit");
+	if (p->parent != NULL) {
+		// Parent should `wait`
+		p->state = ZOMBIE;
+	}
+	// Set the `parent` of all children to NULL
+	struct proc *np;
+	for (np = pool; np < &pool[NPROC]; np++) {
+		if (np->parent == p) {
+			np->parent = NULL;
+		}
+	}
+	sched();
+}
+
 int fdalloc(struct file *f)
 {
 	debugf("debugf f = %p, type = %d", f, f->type);
@@ -513,6 +538,30 @@ void running(int id)
 	add_task(t);
 }
 
+struct signal_block* get_curr_sig_block()
+{
+	return &curr_proc()->sig_block;
+}
+
+struct signal_block* pid2sig_block(int pid)
+{
+	struct proc *p;
+	for (p = pool; p < &pool[NPROC]; p++) {
+		if (p->state != UNUSED && p->state != ZOMBIE && p->pid == pid) {
+			goto found;
+		}
+	}
+	return NULL;
+	found:
+	return &p->sig_block;
+}
+
+void customized_sigreturn()
+{
+	struct trapframe* trapframe = ((struct thread*)curr_task())->trapframe;
+	*trapframe = curr_proc()->sig_trapframe;
+}
+
 // initialize the proc table at boot time.
 void proc_init()
 {
@@ -530,7 +579,7 @@ void proc_init()
 	idle.process = pool;
 	idle.tid = -1;
 	init_queue(&task_queue, QUEUE_SIZE, process_queue_data);
-	static struct manager os8_manager =
+	static struct manager os9_manager =
 	{
 		.create = create,
 		.remove = remove,
@@ -539,15 +588,15 @@ void proc_init()
 		.add = add,
 		.fetch = fetch
 	};
-	set_manager(&os8_manager);
+	set_manager(&os9_manager);
 
-	static struct virtio_context os8_virtio = 
+	static struct virtio_context os9_virtio = 
 	{
 		.yield = yield
 	};
-	set_virtio(&os8_virtio);
+	set_virtio(&os9_virtio);
 
-	static struct pipe_context os8_pipe = 
+	static struct pipe_context os9_pipe = 
 	{
 		.get_curr_pagetable = get_curr_pagetable,
 		.yield = yield,
@@ -558,9 +607,9 @@ void proc_init()
 		.copyin = copyin,
 		.copyout = copyout
 	};
-	set_pipe(&os8_pipe);
+	set_pipe(&os9_pipe);
 
-	static struct FSManager os8_fs_manager = 
+	static struct FSManager os9_fs_manager = 
 	{
 		.fdalloc = fdalloc,
 		.filealloc = filealloc,
@@ -579,9 +628,9 @@ void proc_init()
 		.bunpin = bunpin,
 		.buf_data = buf_data
 	};
-	set_file(&os8_fs_manager);
+	set_file(&os9_fs_manager);
 
-	static struct synchronization_context os8_sync_context =
+	static struct synchronization_context os9_sync_context =
 	{
 		.alloc_mutex = alloc_mutex,
 		.alloc_semaphore = alloc_semaphore,
@@ -594,5 +643,19 @@ void proc_init()
 		.sleeping = sleeping,
 		.running = running
 	};
-	set_sync(&os8_sync_context);
+	set_sync(&os9_sync_context);
+
+	static struct signal_context os9_sig_context = 
+	{
+		.get_curr_pagetable = get_curr_pagetable,
+
+		.get_curr_sig_block = get_curr_sig_block,
+		.pid2sig_block = pid2sig_block,
+
+		.customized_sigreturn = customized_sigreturn,
+
+		.copyin = copyin,
+		.copyout = copyout
+	};
+	set_signal(&os9_sig_context);
 }

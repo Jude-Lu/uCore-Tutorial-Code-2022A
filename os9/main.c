@@ -1,6 +1,6 @@
 #include "loader.h"
-#include "os7_trap.h"
-#include "os7_syscall.h"
+#include "os9_trap.h"
+#include "os9_syscall.h"
 
 void clean_bss()
 {

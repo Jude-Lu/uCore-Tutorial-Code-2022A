@@ -117,6 +117,21 @@ int syscall(uint64 a0, uint64 a1, uint64 a2, uint64 a3, uint64 a4, uint64 a5, ui
 		case SYS_enable_deadlock_detect:
 			ret = sys_context->sys_enable_deadlock_detect(args[0]);
 			break;
+		
+		// ch9
+		case SYS_sigact:
+			ret = sys_context->sys_sigaction(args[0], args[1], args[2]);
+			break;
+		case SYS_rt_sigprocmask:
+			ret = sys_context->sys_sigprocmask(args[0]);
+			break;
+		case SYS_kill:
+			ret = sys_context->sys_sigkill(args[0], args[1]);
+			break;
+		case SYS_rt_sigreturn:
+			ret = sys_context->sys_sigreturn();
+			break;
+
 		default:
 			ret = -1;
 			errorf("unknown syscall %d", id);

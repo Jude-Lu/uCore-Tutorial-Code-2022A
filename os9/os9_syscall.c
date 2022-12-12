@@ -1,6 +1,6 @@
 #include "loader.h"
-#include "os8_syscall.h"
-#include "os8_trap.h"
+#include "os9_syscall.h"
+#include "os9_trap.h"
 
 uint64 console_write(uint64 va, uint64 len)
 {
@@ -27,7 +27,7 @@ uint64 console_read(uint64 va, uint64 len)
 	return len;
 }
 
-uint64 os8_sys_write(int fd, uint64 va, uint64 len)
+uint64 os9_sys_write(int fd, uint64 va, uint64 len)
 {
 	if (fd < 0 || fd > FD_BUFFER_SIZE)
 		return -1;
@@ -50,7 +50,7 @@ uint64 os8_sys_write(int fd, uint64 va, uint64 len)
 	}
 }
 
-uint64 os8_sys_read(int fd, uint64 va, uint64 len)
+uint64 os9_sys_read(int fd, uint64 va, uint64 len)
 {
 	if (fd < 0 || fd > FD_BUFFER_SIZE)
 		return -1;
@@ -73,19 +73,19 @@ uint64 os8_sys_read(int fd, uint64 va, uint64 len)
 	}
 }
 
-__attribute__((noreturn)) void os8_sys_exit(int code)
+__attribute__((noreturn)) void os9_sys_exit(int code)
 {
 	exit(code);
 	__builtin_unreachable();
 }
 
-uint64 os8_sys_sched_yield()
+uint64 os9_sys_sched_yield()
 {
 	yield();
 	return 0;
 }
 
-uint64 os8_sys_gettimeofday(uint64 val, int _tz)
+uint64 os9_sys_gettimeofday(uint64 val, int _tz)
 {
 	struct proc *p = curr_proc();
 	uint64 cycle = get_cycle();
@@ -96,18 +96,18 @@ uint64 os8_sys_gettimeofday(uint64 val, int _tz)
 	return 0;
 }
 
-uint64 os8_sys_getpid()
+uint64 os9_sys_getpid()
 {
 	return curr_proc()->pid;
 }
 
-uint64 os8_sys_getppid()
+uint64 os9_sys_getppid()
 {
 	struct proc *p = curr_proc();
 	return p->parent == NULL ? IDLE_PID : p->parent->pid;
 }
 
-uint64 os8_sys_clone()
+uint64 os9_sys_clone()
 {
 	debugf("fork!");
 	return fork();
@@ -119,7 +119,7 @@ static inline uint64 fetchaddr(pagetable_t pagetable, uint64 va)
 	return *addr;
 }
 
-uint64 os8_sys_exec(uint64 path, uint64 uargv)
+uint64 os9_sys_exec(uint64 path, uint64 uargv)
 {
 	struct proc *p = curr_proc();
 	char name[MAX_STR_LEN];
@@ -137,14 +137,14 @@ uint64 os8_sys_exec(uint64 path, uint64 uargv)
 	return exec(name, (char **)argv);
 }
 
-uint64 os8_sys_wait(int pid, uint64 va)
+uint64 os9_sys_wait(int pid, uint64 va)
 {
 	struct proc *p = curr_proc();
 	int *code = (int *)useraddr(p->pagetable, va);
 	return wait(pid, code);
 }
 
-uint64 os8_sys_pipe(uint64 fdarray)
+uint64 os9_sys_pipe(uint64 fdarray)
 {
 	struct proc *p = curr_proc();
 	uint64 fd0, fd1;
@@ -176,7 +176,7 @@ err0:
 	return -1;
 }
 
-uint64 os8_sys_openat(uint64 va, uint64 omode, uint64 _flags)
+uint64 os9_sys_openat(uint64 va, uint64 omode, uint64 _flags)
 {
 	struct proc *p = curr_proc();
 	char path[200];
@@ -184,7 +184,7 @@ uint64 os8_sys_openat(uint64 va, uint64 omode, uint64 _flags)
 	return fileopen(path, omode);
 }
 
-uint64 os8_sys_close(int fd)
+uint64 os9_sys_close(int fd)
 {
 	if (fd < 0 || fd > FD_BUFFER_SIZE)
 		return -1;
@@ -199,7 +199,7 @@ uint64 os8_sys_close(int fd)
 	return 0;
 }
 
-int os8_sys_thread_create(uint64 entry, uint64 arg)
+int os9_sys_thread_create(uint64 entry, uint64 arg)
 {
 	struct proc *p = curr_proc();
 	int tid = allocthread(p, entry, 1);
@@ -214,12 +214,12 @@ int os8_sys_thread_create(uint64 entry, uint64 arg)
 	return tid;
 }
 
-int os8_sys_gettid()
+int os9_sys_gettid()
 {
 	return ((struct thread*)curr_task())->tid;
 }
 
-int os8_sys_waittid(int tid)
+int os9_sys_waittid(int tid)
 {
 	if (tid < 0 || tid >= NTHREAD) {
 		errorf("unexpected tid %d", tid);
@@ -247,7 +247,7 @@ int os8_sys_waittid(int tid)
 *				use this idea or just ignore it.
 */
 
-int os8_sys_mutex_create(int blocking)
+int os9_sys_mutex_create(int blocking)
 {
 	struct mutex *m = mutex_create(blocking);
 	if (m == NULL) {
@@ -260,7 +260,7 @@ int os8_sys_mutex_create(int blocking)
 	return mutex_id;
 }
 
-int os8_sys_mutex_lock(int mutex_id)
+int os9_sys_mutex_lock(int mutex_id)
 {
 	if (mutex_id < 0 || mutex_id >= curr_proc()->next_mutex_id) {
 		errorf("Unexpected mutex id %d", mutex_id);
@@ -272,7 +272,7 @@ int os8_sys_mutex_lock(int mutex_id)
 	return 0;
 }
 
-int os8_sys_mutex_unlock(int mutex_id)
+int os9_sys_mutex_unlock(int mutex_id)
 {
 	if (mutex_id < 0 || mutex_id >= curr_proc()->next_mutex_id) {
 		errorf("Unexpected mutex id %d", mutex_id);
@@ -283,7 +283,7 @@ int os8_sys_mutex_unlock(int mutex_id)
 	return 0;
 }
 
-int os8_sys_semaphore_create(int res_count)
+int os9_sys_semaphore_create(int res_count)
 {
 	struct semaphore *s = semaphore_create(res_count);
 	if (s == NULL) {
@@ -296,7 +296,7 @@ int os8_sys_semaphore_create(int res_count)
 	return sem_id;
 }
 
-int os8_sys_semaphore_up(int semaphore_id)
+int os9_sys_semaphore_up(int semaphore_id)
 {
 	if (semaphore_id < 0 ||
 	    semaphore_id >= curr_proc()->next_semaphore_id) {
@@ -308,7 +308,7 @@ int os8_sys_semaphore_up(int semaphore_id)
 	return 0;
 }
 
-int os8_sys_semaphore_down(int semaphore_id)
+int os9_sys_semaphore_down(int semaphore_id)
 {
 	if (semaphore_id < 0 ||
 	    semaphore_id >= curr_proc()->next_semaphore_id) {
@@ -321,7 +321,7 @@ int os8_sys_semaphore_down(int semaphore_id)
 	return 0;
 }
 
-int os8_sys_condvar_create()
+int os9_sys_condvar_create()
 {
 	struct condvar *c = condvar_create();
 	if (c == NULL) {
@@ -333,7 +333,7 @@ int os8_sys_condvar_create()
 	return cond_id;
 }
 
-int os8_sys_condvar_signal(int cond_id)
+int os9_sys_condvar_signal(int cond_id)
 {
 	if (cond_id < 0 || cond_id >= curr_proc()->next_condvar_id) {
 		errorf("Unexpected condvar id %d", cond_id);
@@ -343,7 +343,7 @@ int os8_sys_condvar_signal(int cond_id)
 	return 0;
 }
 
-int os8_sys_condvar_wait(int cond_id, int mutex_id)
+int os9_sys_condvar_wait(int cond_id, int mutex_id)
 {
 	if (cond_id < 0 || cond_id >= curr_proc()->next_condvar_id) {
 		errorf("Unexpected condvar id %d", cond_id);
@@ -360,33 +360,37 @@ int os8_sys_condvar_wait(int cond_id, int mutex_id)
 
 void syscall_init()
 {
-	static struct syscall_context os8_sys_context =
+	static struct syscall_context os9_sys_context =
 	{
-		.sys_write = os8_sys_write,
-		.sys_read = os8_sys_read,
-		.sys_exit = os8_sys_exit,
-		.sys_sched_yield = os8_sys_sched_yield,
-		.sys_gettimeofday = os8_sys_gettimeofday,
-		.sys_getpid = os8_sys_getpid,
-		.sys_getppid = os8_sys_getppid,
-		.sys_clone = os8_sys_clone,
-		.sys_exec = os8_sys_exec,
-		.sys_wait = os8_sys_wait,
-		.sys_pipe = os8_sys_pipe,
-		.sys_openat = os8_sys_openat,
-		.sys_close = os8_sys_close,
-		.sys_thread_create = os8_sys_thread_create,
-		.sys_gettid = os8_sys_gettid,
-		.sys_waittid = os8_sys_waittid,
-		.sys_mutex_create = os8_sys_mutex_create,
-		.sys_mutex_lock = os8_sys_mutex_lock,
-		.sys_mutex_unlock = os8_sys_mutex_unlock,
-		.sys_semaphore_create = os8_sys_semaphore_create,
-		.sys_semaphore_up = os8_sys_semaphore_up,
-		.sys_semaphore_down = os8_sys_semaphore_down,
-		.sys_condvar_create = os8_sys_condvar_create,
-		.sys_condvar_signal = os8_sys_condvar_signal,
-		.sys_condvar_wait = os8_sys_condvar_wait
+		.sys_write = os9_sys_write,
+		.sys_read = os9_sys_read,
+		.sys_exit = os9_sys_exit,
+		.sys_sched_yield = os9_sys_sched_yield,
+		.sys_gettimeofday = os9_sys_gettimeofday,
+		.sys_getpid = os9_sys_getpid,
+		.sys_getppid = os9_sys_getppid,
+		.sys_clone = os9_sys_clone,
+		.sys_exec = os9_sys_exec,
+		.sys_wait = os9_sys_wait,
+		.sys_pipe = os9_sys_pipe,
+		.sys_openat = os9_sys_openat,
+		.sys_close = os9_sys_close,
+		.sys_thread_create = os9_sys_thread_create,
+		.sys_gettid = os9_sys_gettid,
+		.sys_waittid = os9_sys_waittid,
+		.sys_mutex_create = os9_sys_mutex_create,
+		.sys_mutex_lock = os9_sys_mutex_lock,
+		.sys_mutex_unlock = os9_sys_mutex_unlock,
+		.sys_semaphore_create = os9_sys_semaphore_create,
+		.sys_semaphore_up = os9_sys_semaphore_up,
+		.sys_semaphore_down = os9_sys_semaphore_down,
+		.sys_condvar_create = os9_sys_condvar_create,
+		.sys_condvar_signal = os9_sys_condvar_signal,
+		.sys_condvar_wait = os9_sys_condvar_wait,
+		.sys_sigaction = sigaction,
+		.sys_sigprocmask = sigprocmask,
+		.sys_sigkill = sigkill,
+		.sys_sigreturn = sigreturn
 	};
-	set_syscall(&os8_sys_context);
+	set_syscall(&os9_sys_context);
 }

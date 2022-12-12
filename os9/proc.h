@@ -40,10 +40,13 @@ struct proc {
 	// LAB5: (1) Define your variables for deadlock detect here.
 	//			 You may need a flag to record if detection enabled,
 	//       and some arrays for detection algorithm.
+	struct signal_block sig_block;
+	struct trapframe sig_trapframe;
 };
 
 int cpuid();
 void exit(int);
+void exit_proc(int);
 struct proc* curr_proc();
 void proc_init();
 void scheduler() __attribute__((noreturn));
