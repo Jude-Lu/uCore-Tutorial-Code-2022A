@@ -1,0 +1,28 @@
+var os9_2proc_8h =
+[
+    [ "thread", "structthread.html", "structthread" ],
+    [ "proc", "structproc.html", "structproc" ],
+    [ "FD_BUFFER_SIZE", "os9_2proc_8h.html#ab1d57f40cf08975094fdd06dfb1ee390", null ],
+    [ "FILEPOOLSIZE", "os9_2proc_8h.html#a93509e3cfb6e22b6decbe294d6614ffe", null ],
+    [ "LOCK_POOL_SIZE", "os9_2proc_8h.html#a45c7478d569e17417387f552a3938060", null ],
+    [ "NPROC", "os9_2proc_8h.html#a810c5b751df5bb30588613ed91095129", null ],
+    [ "NTHREAD", "os9_2proc_8h.html#af072d30ec9a575d52026166678811aef", null ],
+    [ "allocthread", "os9_2proc_8h.html#ad2bfce83e555c9208085538ac7fedfc9", null ],
+    [ "cpuid", "os9_2proc_8h.html#a414dda255ed3c1e43e7922d10f9d2c6d", null ],
+    [ "curr_proc", "os9_2proc_8h.html#a73a5ca57b1a27c0dbbcce882312b750b", null ],
+    [ "exec", "os9_2proc_8h.html#aa7b4aae4a12acd187e23396214aeca47", null ],
+    [ "exit", "os9_2proc_8h.html#a6f255d924f7a6bb2c4be0c8c2f2d9ce3", null ],
+    [ "exit_proc", "os9_2proc_8h.html#ab051cefc4e050215dde31608299e551c", null ],
+    [ "fdalloc", "os9_2proc_8h.html#aac0b2bd7ad65f705f534541c294451fa", null ],
+    [ "filealloc", "os9_2proc_8h.html#ae6dcd86f2dc049b7ab643162247b463a", null ],
+    [ "fork", "os9_2proc_8h.html#aa3a80f0c682e09d788db0c2b4cc5ff7e", null ],
+    [ "get_thread_trapframe_va", "os9_2proc_8h.html#a2c6575a11e05393fc9b7ef875bef2a07", null ],
+    [ "init_stdio", "os9_2proc_8h.html#a0ce6d8058c4fe74c663a253c09bf81fd", null ],
+    [ "proc_init", "os9_2proc_8h.html#a17d1aae356cbff8c71be7a05a1ec480e", null ],
+    [ "push_argv", "os9_2proc_8h.html#a231c65d3a8fdebcde0e3bdb953392352", null ],
+    [ "sched", "os9_2proc_8h.html#a549a0c1cc47933fa045b200690965cbd", null ],
+    [ "scheduler", "os9_2proc_8h.html#a4275b93213964b088d2c8daf9f8ab091", null ],
+    [ "swtch", "os9_2proc_8h.html#a5518344adfcd738bb874c40027ea3f83", null ],
+    [ "wait", "os9_2proc_8h.html#a072060175b68e3020e9b8acfbaf3752b", null ],
+    [ "yield", "os9_2proc_8h.html#a58c8b2ad0ea491a6642e5e1cbd358c89", null ]
+];

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>uCore-Tutorial-Code-2022A: kernel-vm/map.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -88,8 +88,8 @@ $(document).ready(function(){initNavTree('map_8h_source.html',''); initResizable
 <a href="map_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MAP_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define MAP_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kernel-vm_2defs_8h.html">defs.h</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kernel-vm_2log_8h.html">log.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utils_2defs_8h.html">defs.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utils_2log_8h.html">log.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">void</span> <a class="code" href="map_8h.html#a2ad79c7b5ecb41955635f0eafa67f641">kvmmap</a>(<a class="code" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <span class="keywordtype">int</span>);</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">int</span> <a class="code" href="map_8h.html#acfaf965feade6fdc36d2fc12ff542c48">uvmmap</a>(<a class="code" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, <span class="keywordtype">int</span>);</div>
@@ -98,26 +98,24 @@ $(document).ready(function(){initNavTree('map_8h_source.html',''); initResizable
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="map_8h.html#a8064fdaa325d6a3ad61f7157202382c3">uvmfree</a>(<a class="code" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">int</span> <a class="code" href="map_8h.html#af19ef1cdd26725159a05761b883c842d">uvmcopy</a>(<a class="code" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="code" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, <a class="code" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif  // MAP_H</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// MAP_H</span></div>
+<div class="ttc" id="aconsole_2defs_8h_html_a5975ce0896ee5ec5db2f1a411620a51a"><div class="ttname"><a href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a></div><div class="ttdeci">unsigned long uint64</div><div class="ttdef"><b>Definition:</b> defs.h:15</div></div>
+<div class="ttc" id="aconsole_2defs_8h_html_aabc0f4f29a1508768d880855992b8ba7"><div class="ttname"><a href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a></div><div class="ttdeci">uint64 * pagetable_t</div><div class="ttdoc">512 PTEs</div><div class="ttdef"><b>Definition:</b> defs.h:19</div></div>
+<div class="ttc" id="amap_8h_html_a0861cf789c153af3703fc9098cc8dea5"><div class="ttname"><a href="map_8h.html#a0861cf789c153af3703fc9098cc8dea5">uvmcreate</a></div><div class="ttdeci">pagetable_t uvmcreate()</div><div class="ttdoc">创建空用户页表</div><div class="ttdef"><b>Definition:</b> map.c:76</div></div>
+<div class="ttc" id="amap_8h_html_a2ad79c7b5ecb41955635f0eafa67f641"><div class="ttname"><a href="map_8h.html#a2ad79c7b5ecb41955635f0eafa67f641">kvmmap</a></div><div class="ttdeci">void kvmmap(pagetable_t, uint64, uint64, uint64, int)</div><div class="ttdoc">为内核分配虚拟地址空间</div><div class="ttdef"><b>Definition:</b> map.c:10</div></div>
+<div class="ttc" id="amap_8h_html_a4fbf40e2c26f6a6111bd0669ef5e8236"><div class="ttname"><a href="map_8h.html#a4fbf40e2c26f6a6111bd0669ef5e8236">uvmunmap</a></div><div class="ttdeci">void uvmunmap(pagetable_t, uint64, uint64, int)</div><div class="ttdoc">释放虚拟地址到物理地址映射</div><div class="ttdef"><b>Definition:</b> map.c:50</div></div>
+<div class="ttc" id="amap_8h_html_a8064fdaa325d6a3ad61f7157202382c3"><div class="ttname"><a href="map_8h.html#a8064fdaa325d6a3ad61f7157202382c3">uvmfree</a></div><div class="ttdeci">void uvmfree(pagetable_t, uint64)</div><div class="ttdoc">释放用户地址空间</div><div class="ttdef"><b>Definition:</b> map.c:96</div></div>
+<div class="ttc" id="amap_8h_html_acfaf965feade6fdc36d2fc12ff542c48"><div class="ttname"><a href="map_8h.html#acfaf965feade6fdc36d2fc12ff542c48">uvmmap</a></div><div class="ttdeci">int uvmmap(pagetable_t, uint64, uint64, uint64, int)</div><div class="ttdoc">建立虚拟地址到物理地址映射</div><div class="ttdef"><b>Definition:</b> map.c:20</div></div>
+<div class="ttc" id="amap_8h_html_af19ef1cdd26725159a05761b883c842d"><div class="ttname"><a href="map_8h.html#af19ef1cdd26725159a05761b883c842d">uvmcopy</a></div><div class="ttdeci">int uvmcopy(pagetable_t, pagetable_t, uint64)</div><div class="ttdoc">拷贝用户地址空间</div><div class="ttdef"><b>Definition:</b> map.c:107</div></div>
+<div class="ttc" id="autils_2defs_8h_html"><div class="ttname"><a href="utils_2defs_8h.html">defs.h</a></div><div class="ttdoc">规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数</div></div>
+<div class="ttc" id="autils_2log_8h_html"><div class="ttname"><a href="utils_2log_8h.html">log.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="amap_8h_html_a0861cf789c153af3703fc9098cc8dea5"><div class="ttname"><a href="map_8h.html#a0861cf789c153af3703fc9098cc8dea5">uvmcreate</a></div><div class="ttdeci">pagetable_t uvmcreate()</div><div class="ttdoc">创建空用户页表</div><div class="ttdef"><b>Definition:</b> map.c:76</div></div>
-<div class="ttc" id="aconsole_2defs_8h_html_aabc0f4f29a1508768d880855992b8ba7"><div class="ttname"><a href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a></div><div class="ttdeci">uint64 * pagetable_t</div><div class="ttdoc">512 PTEs</div><div class="ttdef"><b>Definition:</b> defs.h:19</div></div>
-<div class="ttc" id="amap_8h_html_a4fbf40e2c26f6a6111bd0669ef5e8236"><div class="ttname"><a href="map_8h.html#a4fbf40e2c26f6a6111bd0669ef5e8236">uvmunmap</a></div><div class="ttdeci">void uvmunmap(pagetable_t, uint64, uint64, int)</div><div class="ttdoc">释放虚拟地址到物理地址映射</div><div class="ttdef"><b>Definition:</b> map.c:50</div></div>
-<div class="ttc" id="amap_8h_html_a2ad79c7b5ecb41955635f0eafa67f641"><div class="ttname"><a href="map_8h.html#a2ad79c7b5ecb41955635f0eafa67f641">kvmmap</a></div><div class="ttdeci">void kvmmap(pagetable_t, uint64, uint64, uint64, int)</div><div class="ttdoc">为内核分配虚拟地址空间</div><div class="ttdef"><b>Definition:</b> map.c:10</div></div>
-<div class="ttc" id="amap_8h_html_af19ef1cdd26725159a05761b883c842d"><div class="ttname"><a href="map_8h.html#af19ef1cdd26725159a05761b883c842d">uvmcopy</a></div><div class="ttdeci">int uvmcopy(pagetable_t, pagetable_t, uint64)</div><div class="ttdoc">拷贝用户地址空间</div><div class="ttdef"><b>Definition:</b> map.c:107</div></div>
-<div class="ttc" id="akernel-vm_2defs_8h_html"><div class="ttname"><a href="kernel-vm_2defs_8h.html">defs.h</a></div><div class="ttdoc">规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数</div></div>
-<div class="ttc" id="aconsole_2defs_8h_html_a5975ce0896ee5ec5db2f1a411620a51a"><div class="ttname"><a href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a></div><div class="ttdeci">unsigned long uint64</div><div class="ttdef"><b>Definition:</b> defs.h:15</div></div>
-<div class="ttc" id="akernel-vm_2log_8h_html"><div class="ttname"><a href="kernel-vm_2log_8h.html">log.h</a></div></div>
-<div class="ttc" id="amap_8h_html_acfaf965feade6fdc36d2fc12ff542c48"><div class="ttname"><a href="map_8h.html#acfaf965feade6fdc36d2fc12ff542c48">uvmmap</a></div><div class="ttdeci">int uvmmap(pagetable_t, uint64, uint64, uint64, int)</div><div class="ttdoc">建立虚拟地址到物理地址映射</div><div class="ttdef"><b>Definition:</b> map.c:20</div></div>
-<div class="ttc" id="amap_8h_html_a8064fdaa325d6a3ad61f7157202382c3"><div class="ttname"><a href="map_8h.html#a8064fdaa325d6a3ad61f7157202382c3">uvmfree</a></div><div class="ttdeci">void uvmfree(pagetable_t, uint64)</div><div class="ttdoc">释放用户地址空间</div><div class="ttdef"><b>Definition:</b> map.c:96</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_3e5ae976cba375449e7597bf7abde3d4.html">kernel-vm</a></li><li class="navelem"><a class="el" href="map_8h.html">map.h</a></li>
-    <li class="footer">制作者
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

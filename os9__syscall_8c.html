@@ -1,0 +1,836 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>uCore-Tutorial-Code-2022A: os9/os9_syscall.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">uCore-Tutorial-Code-2022A
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('os9__syscall_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">os9_syscall.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="os9_2loader_8h_source.html">loader.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="os9__syscall_8h_source.html">os9_syscall.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="os9__trap_8h_source.html">os9_trap.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+os9_syscall.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="os9__syscall_8c__incl.png" border="0" usemap="#aos9_2os9__syscall_8c" alt=""/></div>
+<map name="aos9_2os9__syscall_8c" id="aos9_2os9__syscall_8c">
+<area shape="rect" title=" " alt="" coords="1017,5,1152,32"/>
+<area shape="rect" href="os9_2loader_8h.html" title=" " alt="" coords="969,80,1043,107"/>
+<area shape="rect" href="os9__syscall_8h.html" title=" " alt="" coords="1122,80,1231,107"/>
+<area shape="rect" href="os9__trap_8h.html" title=" " alt="" coords="1043,155,1134,181"/>
+<area shape="rect" href="os9_2modules_8h.html" title=" " alt="" coords="961,229,1051,256"/>
+<area shape="rect" href="os9_2proc_8h.html" title=" " alt="" coords="905,155,968,181"/>
+<area shape="rect" href="os9_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="5,311,68,338"/>
+<area shape="rect" href="os9_2log_8h.html" title=" " alt="" coords="92,311,147,338"/>
+<area shape="rect" href="os9_2extern_8h.html" title=" " alt="" coords="171,311,247,338"/>
+<area shape="rect" href="console__module_8h.html" title=" " alt="" coords="271,304,410,345"/>
+<area shape="rect" href="disk__module_8h.html" title=" " alt="" coords="434,311,594,338"/>
+<area shape="rect" href="fs__module_8h.html" title=" " alt="" coords="619,311,785,338"/>
+<area shape="rect" href="vm__module_8h.html" title=" " alt="" coords="810,311,1002,338"/>
+<area shape="rect" href="pipe__module_8h.html" title=" " alt="" coords="1026,311,1189,338"/>
+<area shape="rect" href="syscall__module_8h.html" title=" " alt="" coords="1213,304,1341,345"/>
+<area shape="rect" href="trap__module_8h.html" title=" " alt="" coords="1365,311,1524,338"/>
+<area shape="rect" href="task__module_8h.html" title=" " alt="" coords="1549,304,1701,345"/>
+<area shape="rect" href="sync__module_8h.html" title=" " alt="" coords="1725,311,1892,338"/>
+<area shape="rect" href="signal__module_8h.html" title=" " alt="" coords="1917,311,2101,338"/>
+<area shape="rect" href="utils__module_8h.html" title=" " alt="" coords="2125,311,2287,338"/>
+<area shape="rect" href="console_8h.html" title="控制台文件，调用sbi实现字符的输入输出" alt="" coords="199,393,283,420"/>
+<area shape="rect" href="printf_8h.html" title="printf文件，调用console实现了printf函数，供其它模块使用" alt="" coords="307,393,375,420"/>
+<area shape="rect" href="sbi_8h.html" title="sbi文件，通过ecall实现最底层的输入输出" alt="" coords="399,393,453,420"/>
+<area shape="rect" href="console_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="395,468,457,495"/>
+<area shape="rect" href="bio_8h.html" title=" " alt="" coords="553,468,608,495"/>
+<area shape="rect" href="virtio_8h.html" title="virtio device definitions." alt="" coords="477,393,545,420"/>
+<area shape="rect" href="disk_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="480,543,543,569"/>
+<area shape="rect" href="disk_2log_8h.html" title=" " alt="" coords="567,543,621,569"/>
+<area shape="rect" href="easy-fs_2fs_8h.html" title="On&#45;disk file system format." alt="" coords="719,468,765,495"/>
+<area shape="rect" href="file_8h.html" title="Inode content" alt="" coords="651,393,705,420"/>
+<area shape="rect" href="easy-fs_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="647,543,709,569"/>
+<area shape="rect" href="fs__dependency_8h.html" title=" " alt="" coords="734,543,865,569"/>
+<area shape="rect" href="kalloc_8h.html" title="主要负责物理内存的管理" alt="" coords="781,393,853,420"/>
+<area shape="rect" href="vm_8h.html" title="主要负责虚拟内存的管理" alt="" coords="877,393,932,420"/>
+<area shape="rect" href="map_8h.html" title="主要负责页表的管理" alt="" coords="956,393,1019,420"/>
+<area shape="rect" href="kernel-vm_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="916,468,979,495"/>
+<area shape="rect" href="kernel-vm_2log_8h.html" title=" " alt="" coords="837,468,892,495"/>
+<area shape="rect" href="pipe_8h.html" title="管道的内部实现" alt="" coords="1043,393,1105,420"/>
+<area shape="rect" href="pipe_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="1083,468,1145,495"/>
+<area shape="rect" href="pipe_2log_8h.html" title=" " alt="" coords="1004,468,1059,495"/>
+<area shape="rect" href="syscall__ids_8h.html" title=" " alt="" coords="1232,393,1337,420"/>
+<area shape="rect" href="syscall_8h.html" title="syscall模块主要负责系统调用的处理，根据传入的syscall id调用对应的syscall函数" alt="" coords="1129,393,1208,420"/>
+<area shape="rect" href="trap_8h.html" title="负责发生异常时操作系统的处理" alt="" coords="1361,393,1421,420"/>
+<area shape="rect" href="plic_8h.html" title=" " alt="" coords="1445,393,1503,420"/>
+<area shape="rect" href="timer_8h.html" title=" " alt="" coords="1527,393,1595,420"/>
+<area shape="rect" href="processor_8h.html" title="主要负责任务的调度" alt="" coords="1619,393,1715,420"/>
+<area shape="rect" href="sync_8h.html" title="同步互斥模块，实现了mutex（锁）、semaphore（信号量）、condvar（条件变量）三种机制" alt="" coords="1777,393,1841,420"/>
+<area shape="rect" href="signal_8h.html" title=" " alt="" coords="1972,393,2045,420"/>
+<area shape="rect" href="utils_2string_8h.html" title="实现了简单的字符串和内存操作函数，很多模块可以视情况使用" alt="" coords="2219,393,2289,420"/>
+<area shape="rect" href="utils_2queue_8h.html" title="实现了简单的循环队列，可以在进程调度和同步互斥中使用" alt="" coords="2119,393,2194,420"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:abcb2514a0bc647fbdddaf14c0ede0ada"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#abcb2514a0bc647fbdddaf14c0ede0ada">console_write</a> (<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
+<tr class="separator:abcb2514a0bc647fbdddaf14c0ede0ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1fdcce28346f48b4af3fae183989bd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#af1fdcce28346f48b4af3fae183989bd0">console_read</a> (<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
+<tr class="separator:af1fdcce28346f48b4af3fae183989bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add48db2e73ff7461441c42b8543d37d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#add48db2e73ff7461441c42b8543d37d3">os9_sys_write</a> (int fd, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
+<tr class="separator:add48db2e73ff7461441c42b8543d37d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a825371f1a06460c7b201ba306612f1a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#a825371f1a06460c7b201ba306612f1a0">os9_sys_read</a> (int fd, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
+<tr class="separator:a825371f1a06460c7b201ba306612f1a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6824bfd4ec0404a4f875ed8db0274e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#a1b6824bfd4ec0404a4f875ed8db0274e">__attribute__</a> ((noreturn))</td></tr>
+<tr class="separator:a1b6824bfd4ec0404a4f875ed8db0274e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9076cb9a9b2f329fc796cbc9ee1ca448"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#a9076cb9a9b2f329fc796cbc9ee1ca448">os9_sys_sched_yield</a> ()</td></tr>
+<tr class="separator:a9076cb9a9b2f329fc796cbc9ee1ca448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f448862fbcdb51c8002ada9f35965b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#a4f448862fbcdb51c8002ada9f35965b4">os9_sys_gettimeofday</a> (<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> val, int _tz)</td></tr>
+<tr class="separator:a4f448862fbcdb51c8002ada9f35965b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38d1d8da0d74a5ab73eb522d399c5006"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#a38d1d8da0d74a5ab73eb522d399c5006">os9_sys_getpid</a> ()</td></tr>
+<tr class="separator:a38d1d8da0d74a5ab73eb522d399c5006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8e4ab13f85e5ac77fdf5f7716c781ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#ab8e4ab13f85e5ac77fdf5f7716c781ce">os9_sys_getppid</a> ()</td></tr>
+<tr class="separator:ab8e4ab13f85e5ac77fdf5f7716c781ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f19482e34d4bd8ff9ffdd7a0dc5ed3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#a5f19482e34d4bd8ff9ffdd7a0dc5ed3c">os9_sys_clone</a> ()</td></tr>
+<tr class="separator:a5f19482e34d4bd8ff9ffdd7a0dc5ed3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca8846996f135e0b96c5c9a779061627"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#aca8846996f135e0b96c5c9a779061627">os9_sys_exec</a> (<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> path, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> uargv)</td></tr>
+<tr class="separator:aca8846996f135e0b96c5c9a779061627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac51a7985a237e4521a5311eac0f03cb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#ac51a7985a237e4521a5311eac0f03cb6">os9_sys_wait</a> (int pid, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va)</td></tr>
+<tr class="separator:ac51a7985a237e4521a5311eac0f03cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f3343a8c9412484f4e070bbc5019341"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#a0f3343a8c9412484f4e070bbc5019341">os9_sys_pipe</a> (<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> fdarray)</td></tr>
+<tr class="separator:a0f3343a8c9412484f4e070bbc5019341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e870444b4acd013de9d531be26180b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#a2e870444b4acd013de9d531be26180b6">os9_sys_openat</a> (<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> va, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> omode, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> _flags)</td></tr>
+<tr class="separator:a2e870444b4acd013de9d531be26180b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dbed7f26a08e2c31d4a069ce76ae745"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#a6dbed7f26a08e2c31d4a069ce76ae745">os9_sys_close</a> (int fd)</td></tr>
+<tr class="separator:a6dbed7f26a08e2c31d4a069ce76ae745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f4c52dc007027e5ea4d00f3b0404ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#ac2f4c52dc007027e5ea4d00f3b0404ed">os9_sys_thread_create</a> (<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> entry, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> arg)</td></tr>
+<tr class="separator:ac2f4c52dc007027e5ea4d00f3b0404ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72218f333791ed28fbe0973c0a7e766f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#a72218f333791ed28fbe0973c0a7e766f">os9_sys_gettid</a> ()</td></tr>
+<tr class="separator:a72218f333791ed28fbe0973c0a7e766f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6b40635c49a697f4edfb720ed0f7c30"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#ac6b40635c49a697f4edfb720ed0f7c30">os9_sys_waittid</a> (int tid)</td></tr>
+<tr class="separator:ac6b40635c49a697f4edfb720ed0f7c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac26aca558dd8fbe26c151cc485f2ab46"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#ac26aca558dd8fbe26c151cc485f2ab46">os9_sys_mutex_create</a> (int blocking)</td></tr>
+<tr class="separator:ac26aca558dd8fbe26c151cc485f2ab46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a034b25018e6ce110d87f6091bd18357e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#a034b25018e6ce110d87f6091bd18357e">os9_sys_mutex_lock</a> (int mutex_id)</td></tr>
+<tr class="separator:a034b25018e6ce110d87f6091bd18357e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fda861fb14b5fe2141825bfc3662aca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#a0fda861fb14b5fe2141825bfc3662aca">os9_sys_mutex_unlock</a> (int mutex_id)</td></tr>
+<tr class="separator:a0fda861fb14b5fe2141825bfc3662aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada346070ffa3384d24e2c5e674a8f102"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#ada346070ffa3384d24e2c5e674a8f102">os9_sys_semaphore_create</a> (int res_count)</td></tr>
+<tr class="separator:ada346070ffa3384d24e2c5e674a8f102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a029934b826b5670da41a3afa4cb4cd99"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#a029934b826b5670da41a3afa4cb4cd99">os9_sys_semaphore_up</a> (int semaphore_id)</td></tr>
+<tr class="separator:a029934b826b5670da41a3afa4cb4cd99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a941c95cbe42fcc43463c888a2258dd89"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#a941c95cbe42fcc43463c888a2258dd89">os9_sys_semaphore_down</a> (int semaphore_id)</td></tr>
+<tr class="separator:a941c95cbe42fcc43463c888a2258dd89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab32c8a8b20e3dab7f87073b7d2ce2be0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#ab32c8a8b20e3dab7f87073b7d2ce2be0">os9_sys_condvar_create</a> ()</td></tr>
+<tr class="separator:ab32c8a8b20e3dab7f87073b7d2ce2be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d634045241996642dbf9a59506058ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#a6d634045241996642dbf9a59506058ae">os9_sys_condvar_signal</a> (int cond_id)</td></tr>
+<tr class="separator:a6d634045241996642dbf9a59506058ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac46d091ceab018d036a8db33f2b90ae3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#ac46d091ceab018d036a8db33f2b90ae3">os9_sys_condvar_wait</a> (int cond_id, int mutex_id)</td></tr>
+<tr class="separator:ac46d091ceab018d036a8db33f2b90ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a581ed37968ead91b6d3a0b3b7a71da9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os9__syscall_8c.html#a581ed37968ead91b6d3a0b3b7a71da9d">syscall_init</a> ()</td></tr>
+<tr class="separator:a581ed37968ead91b6d3a0b3b7a71da9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a1b6824bfd4ec0404a4f875ed8db0274e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b6824bfd4ec0404a4f875ed8db0274e">&#9670;&nbsp;</a></span>__attribute__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__attribute__ </td>
+          <td>(</td>
+          <td class="paramtype">(noreturn)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1fdcce28346f48b4af3fae183989bd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1fdcce28346f48b4af3fae183989bd0">&#9670;&nbsp;</a></span>console_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> console_read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>va</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcb2514a0bc647fbdddaf14c0ede0ada"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb2514a0bc647fbdddaf14c0ede0ada">&#9670;&nbsp;</a></span>console_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> console_write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>va</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f19482e34d4bd8ff9ffdd7a0dc5ed3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f19482e34d4bd8ff9ffdd7a0dc5ed3c">&#9670;&nbsp;</a></span>os9_sys_clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os9_sys_clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6dbed7f26a08e2c31d4a069ce76ae745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dbed7f26a08e2c31d4a069ce76ae745">&#9670;&nbsp;</a></span>os9_sys_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os9_sys_close </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab32c8a8b20e3dab7f87073b7d2ce2be0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab32c8a8b20e3dab7f87073b7d2ce2be0">&#9670;&nbsp;</a></span>os9_sys_condvar_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os9_sys_condvar_create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d634045241996642dbf9a59506058ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d634045241996642dbf9a59506058ae">&#9670;&nbsp;</a></span>os9_sys_condvar_signal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os9_sys_condvar_signal </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cond_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac46d091ceab018d036a8db33f2b90ae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac46d091ceab018d036a8db33f2b90ae3">&#9670;&nbsp;</a></span>os9_sys_condvar_wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os9_sys_condvar_wait </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cond_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mutex_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca8846996f135e0b96c5c9a779061627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca8846996f135e0b96c5c9a779061627">&#9670;&nbsp;</a></span>os9_sys_exec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os9_sys_exec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>uargv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38d1d8da0d74a5ab73eb522d399c5006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38d1d8da0d74a5ab73eb522d399c5006">&#9670;&nbsp;</a></span>os9_sys_getpid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os9_sys_getpid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8e4ab13f85e5ac77fdf5f7716c781ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8e4ab13f85e5ac77fdf5f7716c781ce">&#9670;&nbsp;</a></span>os9_sys_getppid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os9_sys_getppid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72218f333791ed28fbe0973c0a7e766f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72218f333791ed28fbe0973c0a7e766f">&#9670;&nbsp;</a></span>os9_sys_gettid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os9_sys_gettid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f448862fbcdb51c8002ada9f35965b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f448862fbcdb51c8002ada9f35965b4">&#9670;&nbsp;</a></span>os9_sys_gettimeofday()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os9_sys_gettimeofday </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_tz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac26aca558dd8fbe26c151cc485f2ab46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac26aca558dd8fbe26c151cc485f2ab46">&#9670;&nbsp;</a></span>os9_sys_mutex_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os9_sys_mutex_create </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blocking</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a034b25018e6ce110d87f6091bd18357e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a034b25018e6ce110d87f6091bd18357e">&#9670;&nbsp;</a></span>os9_sys_mutex_lock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os9_sys_mutex_lock </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mutex_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0fda861fb14b5fe2141825bfc3662aca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fda861fb14b5fe2141825bfc3662aca">&#9670;&nbsp;</a></span>os9_sys_mutex_unlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os9_sys_mutex_unlock </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mutex_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e870444b4acd013de9d531be26180b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e870444b4acd013de9d531be26180b6">&#9670;&nbsp;</a></span>os9_sys_openat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os9_sys_openat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>va</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>omode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>_flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f3343a8c9412484f4e070bbc5019341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f3343a8c9412484f4e070bbc5019341">&#9670;&nbsp;</a></span>os9_sys_pipe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os9_sys_pipe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>fdarray</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a825371f1a06460c7b201ba306612f1a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a825371f1a06460c7b201ba306612f1a0">&#9670;&nbsp;</a></span>os9_sys_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os9_sys_read </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>va</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9076cb9a9b2f329fc796cbc9ee1ca448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9076cb9a9b2f329fc796cbc9ee1ca448">&#9670;&nbsp;</a></span>os9_sys_sched_yield()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os9_sys_sched_yield </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada346070ffa3384d24e2c5e674a8f102"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada346070ffa3384d24e2c5e674a8f102">&#9670;&nbsp;</a></span>os9_sys_semaphore_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os9_sys_semaphore_create </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>res_count</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a941c95cbe42fcc43463c888a2258dd89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a941c95cbe42fcc43463c888a2258dd89">&#9670;&nbsp;</a></span>os9_sys_semaphore_down()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os9_sys_semaphore_down </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>semaphore_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a029934b826b5670da41a3afa4cb4cd99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a029934b826b5670da41a3afa4cb4cd99">&#9670;&nbsp;</a></span>os9_sys_semaphore_up()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os9_sys_semaphore_up </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>semaphore_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2f4c52dc007027e5ea4d00f3b0404ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2f4c52dc007027e5ea4d00f3b0404ed">&#9670;&nbsp;</a></span>os9_sys_thread_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os9_sys_thread_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>entry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac51a7985a237e4521a5311eac0f03cb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac51a7985a237e4521a5311eac0f03cb6">&#9670;&nbsp;</a></span>os9_sys_wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os9_sys_wait </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>va</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6b40635c49a697f4edfb720ed0f7c30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6b40635c49a697f4edfb720ed0f7c30">&#9670;&nbsp;</a></span>os9_sys_waittid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os9_sys_waittid </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add48db2e73ff7461441c42b8543d37d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add48db2e73ff7461441c42b8543d37d3">&#9670;&nbsp;</a></span>os9_sys_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> os9_sys_write </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>va</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a581ed37968ead91b6d3a0b3b7a71da9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a581ed37968ead91b6d3a0b3b7a71da9d">&#9670;&nbsp;</a></span>syscall_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void syscall_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_3acfda6d81b47bf8a76497f00025504c.html">os9</a></li><li class="navelem"><a class="el" href="os9__syscall_8c.html">os9_syscall.c</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

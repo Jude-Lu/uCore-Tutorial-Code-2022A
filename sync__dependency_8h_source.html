@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>uCore-Tutorial-Code-2022A: sync/sync_dependency.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('sync__dependency_8h_source.html',''); 
 <a href="sync__dependency_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SYNC_DEPENDENCY_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SYNC_DEPENDENCY_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sync_2queue_8h.html">queue.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utils_2queue_8h.html">queue.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="sync__dependency_8h.html#a05518ab241076a365f2acd326cfc9c70">printf</a>(<span class="keywordtype">char</span>*, ...);</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="sync__dependency_8h.html#a537f6c7fcf41e284289a5afaaa9ea689">procid</a>();</div>
@@ -97,21 +97,19 @@ $(document).ready(function(){initNavTree('sync__dependency_8h_source.html',''); 
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="sync__dependency_8h.html#a7861ee1569802186a619778efc85af13">shutdown</a>();</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif  </span></div>
-</div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
-<div class="ttc" id="async__dependency_8h_html_a7861ee1569802186a619778efc85af13"><div class="ttname"><a href="sync__dependency_8h.html#a7861ee1569802186a619778efc85af13">shutdown</a></div><div class="ttdeci">void shutdown()</div><div class="ttdoc">调用ecall实现关机</div><div class="ttdef"><b>Definition:</b> sbi.c:33</div></div>
-<div class="ttc" id="async_2queue_8h_html"><div class="ttname"><a href="sync_2queue_8h.html">queue.h</a></div><div class="ttdoc">实现了简单的循环队列，可以在进程调度和同步互斥中使用</div></div>
-<div class="ttc" id="async__dependency_8h_html_ae326139715a1c3bf4e78a00fefbce3ac"><div class="ttname"><a href="sync__dependency_8h.html#ae326139715a1c3bf4e78a00fefbce3ac">threadid</a></div><div class="ttdeci">int threadid()</div><div class="ttdef"><b>Definition:</b> main.c:8</div></div>
-<div class="ttc" id="async__dependency_8h_html_a5e23deae3ce8e5a548ff617abf90f4ad"><div class="ttname"><a href="sync__dependency_8h.html#a5e23deae3ce8e5a548ff617abf90f4ad">dummy</a></div><div class="ttdeci">void dummy(int,...)</div><div class="ttdef"><b>Definition:</b> printf.c:85</div></div>
 <div class="ttc" id="async__dependency_8h_html_a05518ab241076a365f2acd326cfc9c70"><div class="ttname"><a href="sync__dependency_8h.html#a05518ab241076a365f2acd326cfc9c70">printf</a></div><div class="ttdeci">void printf(char *,...)</div><div class="ttdoc">最基本的printf函数</div><div class="ttdef"><b>Definition:</b> printf.c:40</div></div>
 <div class="ttc" id="async__dependency_8h_html_a537f6c7fcf41e284289a5afaaa9ea689"><div class="ttname"><a href="sync__dependency_8h.html#a537f6c7fcf41e284289a5afaaa9ea689">procid</a></div><div class="ttdeci">int procid()</div><div class="ttdef"><b>Definition:</b> main.c:3</div></div>
+<div class="ttc" id="async__dependency_8h_html_a5e23deae3ce8e5a548ff617abf90f4ad"><div class="ttname"><a href="sync__dependency_8h.html#a5e23deae3ce8e5a548ff617abf90f4ad">dummy</a></div><div class="ttdeci">void dummy(int,...)</div><div class="ttdef"><b>Definition:</b> printf.c:85</div></div>
+<div class="ttc" id="async__dependency_8h_html_a7861ee1569802186a619778efc85af13"><div class="ttname"><a href="sync__dependency_8h.html#a7861ee1569802186a619778efc85af13">shutdown</a></div><div class="ttdeci">void shutdown()</div><div class="ttdoc">调用ecall实现关机</div><div class="ttdef"><b>Definition:</b> sbi.c:33</div></div>
+<div class="ttc" id="async__dependency_8h_html_ae326139715a1c3bf4e78a00fefbce3ac"><div class="ttname"><a href="sync__dependency_8h.html#ae326139715a1c3bf4e78a00fefbce3ac">threadid</a></div><div class="ttdeci">int threadid()</div><div class="ttdef"><b>Definition:</b> main.c:8</div></div>
+<div class="ttc" id="autils_2queue_8h_html"><div class="ttname"><a href="utils_2queue_8h.html">queue.h</a></div><div class="ttdoc">实现了简单的循环队列，可以在进程调度和同步互斥中使用</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_60f2dbb6714164eb829ccd5e05ded1f4.html">sync</a></li><li class="navelem"><a class="el" href="sync__dependency_8h.html">sync_dependency.h</a></li>
-    <li class="footer">制作者
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

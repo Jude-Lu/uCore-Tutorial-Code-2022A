@@ -1,8 +1,8 @@
 <map id="os7/modules.h" name="os7/modules.h">
 <area shape="rect" id="node1" title=" " alt="" coords="349,5,466,32"/>
 <area shape="rect" id="node2" href="$os7_2loader_8h.html" title=" " alt="" coords="398,155,499,181"/>
-<area shape="rect" id="node8" href="$os7_2proc_8h.html" title=" " alt="" coords="445,80,535,107"/>
-<area shape="rect" id="node9" href="$os7__trap_8h.html" title=" " alt="" coords="257,155,374,181"/>
+<area shape="rect" id="node8" href="$os7__trap_8h.html" title=" " alt="" coords="257,155,374,181"/>
+<area shape="rect" id="node9" href="$os7_2proc_8h.html" title=" " alt="" coords="445,80,535,107"/>
 <area shape="rect" id="node3" href="$os7_2loader_8c.html" title=" " alt="" coords="277,229,377,256"/>
 <area shape="rect" id="node4" href="$os7_2main_8c.html" title=" " alt="" coords="402,229,495,256"/>
 <area shape="rect" id="node5" href="$os7__syscall_8c.html" title=" " alt="" coords="5,229,140,256"/>

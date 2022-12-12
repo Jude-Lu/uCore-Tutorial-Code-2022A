@@ -70,8 +70,5 @@ var kernel_vm_2defs_8h =
     [ "uint32", "kernel-vm_2defs_8h.html#a1134b580f8da4de94ca6b1de4d37975e", null ],
     [ "uint64", "kernel-vm_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a", null ],
     [ "uint8", "kernel-vm_2defs_8h.html#adde6aaee8457bee49c2a92621fe22b79", null ],
-    [ "ushort", "kernel-vm_2defs_8h.html#ab95f123a6c9bcfee6a343170ef8c5f69", null ],
-    [ "STDIN", "kernel-vm_2defs_8h.html#abed82baf7f470b522273a3e37c24c600a08864b73fa6c82cb8de78a336050bfdb", null ],
-    [ "STDOUT", "kernel-vm_2defs_8h.html#abed82baf7f470b522273a3e37c24c600ad1026b11391895f6e302f892a44a04df", null ],
-    [ "STDERR", "kernel-vm_2defs_8h.html#abed82baf7f470b522273a3e37c24c600a4b971ca4918db729a147aa7c78cea0e3", null ]
+    [ "ushort", "kernel-vm_2defs_8h.html#ab95f123a6c9bcfee6a343170ef8c5f69", null ]
 ];

@@ -264,6 +264,7 @@ var syscall__ids_8h =
     [ "SYS_shmdt", "syscall__ids_8h.html#ab98ce31740a0f043858318cfad79b814", null ],
     [ "SYS_shmget", "syscall__ids_8h.html#ac6f012f945f002e844bc433ba35b7cb9", null ],
     [ "SYS_shutdown", "syscall__ids_8h.html#a25e38b5c88d165457f60cdb4074f3797", null ],
+    [ "SYS_sigact", "syscall__ids_8h.html#a66e6e069ce25ca42de76601f6f0eefb4", null ],
     [ "SYS_sigaltstack", "syscall__ids_8h.html#a6d8be0bdb72dcc0c0072535778a357a7", null ],
     [ "SYS_signalfd4", "syscall__ids_8h.html#afad22e418f2f0d812c339156e81f6411", null ],
     [ "SYS_socket", "syscall__ids_8h.html#ab7d2ec447b9b329153a51c26a109b593", null ],

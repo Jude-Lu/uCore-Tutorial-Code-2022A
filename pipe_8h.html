@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>uCore-Tutorial-Code-2022A: pipe/pipe.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -97,8 +97,8 @@ $(document).ready(function(){initNavTree('pipe_8h.html',''); initResizable(); })
 </div><div class="textblock"><div class="dynheader">
 pipe.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
-<div class="center"><img src="pipe_8h__incl.png" border="0" usemap="#pipe_2pipe_8h" alt=""/></div>
-<map name="pipe_2pipe_8h" id="pipe_2pipe_8h">
+<div class="center"><img src="pipe_8h__incl.png" border="0" usemap="#apipe_2pipe_8h" alt=""/></div>
+<map name="apipe_2pipe_8h" id="apipe_2pipe_8h">
 <area shape="rect" title="管道的内部实现" alt="" coords="31,5,125,32"/>
 <area shape="rect" href="pipe_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="5,80,68,107"/>
 <area shape="rect" href="pipe_2log_8h.html" title=" " alt="" coords="92,80,147,107"/>
@@ -108,29 +108,38 @@ pipe.h 的引用(Include)关系图:</div>
 </div><div class="textblock"><div class="dynheader">
 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div class="dyncontent">
-<div class="center"><img src="pipe_8h__dep__incl.png" border="0" usemap="#pipe_2pipe_8hdep" alt=""/></div>
-<map name="pipe_2pipe_8hdep" id="pipe_2pipe_8hdep">
-<area shape="rect" title="管道的内部实现" alt="" coords="700,5,795,32"/>
-<area shape="rect" href="pipe__module_8h.html" title=" " alt="" coords="599,80,749,107"/>
-<area shape="rect" href="pipe_8c.html" title=" " alt="" coords="774,80,867,107"/>
+<div class="center"><img src="pipe_8h__dep__incl.png" border="0" usemap="#apipe_2pipe_8hdep" alt=""/></div>
+<map name="apipe_2pipe_8hdep" id="apipe_2pipe_8hdep">
+<area shape="rect" title="管道的内部实现" alt="" coords="935,5,1029,32"/>
+<area shape="rect" href="pipe_8c.html" title=" " alt="" coords="862,80,955,107"/>
+<area shape="rect" href="pipe__module_8h.html" title=" " alt="" coords="980,80,1131,107"/>
 <area shape="rect" href="os7_2modules_8h.html" title=" " alt="" coords="438,155,555,181"/>
-<area shape="rect" href="os8_2modules_8h.html" title=" " alt="" coords="865,155,982,181"/>
+<area shape="rect" href="os8_2modules_8h.html" title=" " alt="" coords="997,155,1114,181"/>
+<area shape="rect" href="os9_2modules_8h.html" title=" " alt="" coords="1506,155,1623,181"/>
 <area shape="rect" href="os7_2loader_8h.html" title=" " alt="" coords="405,304,506,331"/>
-<area shape="rect" href="os7_2proc_8h.html" title=" " alt="" coords="493,229,583,256"/>
 <area shape="rect" href="os7__trap_8h.html" title=" " alt="" coords="263,304,381,331"/>
+<area shape="rect" href="os7_2proc_8h.html" title=" " alt="" coords="493,229,583,256"/>
 <area shape="rect" href="os7_2loader_8c.html" title=" " alt="" coords="277,379,377,405"/>
 <area shape="rect" href="os7_2main_8c.html" title=" " alt="" coords="402,379,495,405"/>
 <area shape="rect" href="os7__syscall_8c.html" title=" " alt="" coords="5,379,140,405"/>
 <area shape="rect" href="os7__trap_8c.html" title=" " alt="" coords="520,379,636,405"/>
 <area shape="rect" href="os7_2proc_8c.html" title=" " alt="" coords="165,379,253,405"/>
-<area shape="rect" href="os8_2loader_8h.html" title=" " alt="" coords="981,304,1082,331"/>
-<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="1028,229,1117,256"/>
-<area shape="rect" href="os8__trap_8h.html" title=" " alt="" coords="839,304,957,331"/>
+<area shape="rect" href="os8_2loader_8h.html" title=" " alt="" coords="1005,304,1106,331"/>
+<area shape="rect" href="os8__trap_8h.html" title=" " alt="" coords="863,304,981,331"/>
+<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="1096,229,1185,256"/>
 <area shape="rect" href="os8_2loader_8c.html" title=" " alt="" coords="660,379,760,405"/>
 <area shape="rect" href="os8_2main_8c.html" title=" " alt="" coords="785,379,878,405"/>
 <area shape="rect" href="os8__syscall_8c.html" title=" " alt="" coords="903,379,1037,405"/>
-<area shape="rect" href="os8__trap_8c.html" title=" " alt="" coords="1061,379,1177,405"/>
-<area shape="rect" href="os8_2proc_8c.html" title=" " alt="" coords="1202,379,1290,405"/>
+<area shape="rect" href="os8__trap_8c.html" title=" " alt="" coords="1175,379,1291,405"/>
+<area shape="rect" href="os8_2proc_8c.html" title=" " alt="" coords="1062,379,1150,405"/>
+<area shape="rect" href="os9_2loader_8h.html" title=" " alt="" coords="1622,304,1723,331"/>
+<area shape="rect" href="os9__trap_8h.html" title=" " alt="" coords="1481,304,1598,331"/>
+<area shape="rect" href="os9_2proc_8h.html" title=" " alt="" coords="1669,229,1759,256"/>
+<area shape="rect" href="os9_2loader_8c.html" title=" " alt="" coords="1315,379,1415,405"/>
+<area shape="rect" href="os9_2main_8c.html" title=" " alt="" coords="1439,379,1533,405"/>
+<area shape="rect" href="os9__syscall_8c.html" title=" " alt="" coords="1557,379,1692,405"/>
+<area shape="rect" href="os9__trap_8c.html" title=" " alt="" coords="1829,379,1945,405"/>
+<area shape="rect" href="os9_2proc_8c.html" title=" " alt="" coords="1717,379,1805,405"/>
 </map>
 </div>
 </div>
@@ -331,9 +340,7 @@ pipe.h 的引用(Include)关系图:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_10a9ce0fed988f239170fb83130f0d8d.html">pipe</a></li><li class="navelem"><a class="el" href="pipe_8h.html">pipe.h</a></li>
-    <li class="footer">制作者
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

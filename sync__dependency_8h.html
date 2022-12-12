@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>uCore-Tutorial-Code-2022A: sync/sync_dependency.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -91,8 +91,8 @@ $(document).ready(function(){initNavTree('sync__dependency_8h.html',''); initRes
 </div><div class="textblock"><div class="dynheader">
 sync_dependency.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
-<div class="center"><img src="sync__dependency_8h__incl.png" border="0" usemap="#sync_2sync__dependency_8h" alt=""/></div>
-<map name="sync_2sync__dependency_8h" id="sync_2sync__dependency_8h">
+<div class="center"><img src="sync__dependency_8h__incl.png" border="0" usemap="#async_2sync__dependency_8h" alt=""/></div>
+<map name="async_2sync__dependency_8h" id="async_2sync__dependency_8h">
 <area shape="rect" title=" " alt="" coords="5,5,188,32"/>
 <area shape="rect" href="sync_2queue_8h.html" title="实现了简单的循环队列，可以在进程调度和同步互斥中使用" alt="" coords="59,80,134,107"/>
 </map>
@@ -100,22 +100,31 @@ sync_dependency.h 的引用(Include)关系图:</div>
 </div><div class="textblock"><div class="dynheader">
 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div class="dyncontent">
-<div class="center"><img src="sync__dependency_8h__dep__incl.png" border="0" usemap="#sync_2sync__dependency_8hdep" alt=""/></div>
-<map name="sync_2sync__dependency_8hdep" id="sync_2sync__dependency_8hdep">
-<area shape="rect" title=" " alt="" coords="383,5,565,32"/>
-<area shape="rect" href="sync_8h.html" title="同步互斥模块，实现了mutex（锁）、semaphore（信号量）、condvar（条件变量）三种机制" alt="" coords="366,80,465,107"/>
-<area shape="rect" href="sync_2log_8h.html" title=" " alt="" coords="489,80,577,107"/>
-<area shape="rect" href="sync__module_8h.html" title=" " alt="" coords="305,155,459,181"/>
-<area shape="rect" href="sync_8c.html" title=" " alt="" coords="484,155,581,181"/>
-<area shape="rect" href="os8_2modules_8h.html" title=" " alt="" coords="323,229,441,256"/>
-<area shape="rect" href="os8_2loader_8h.html" title=" " alt="" coords="331,379,433,405"/>
-<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="423,304,512,331"/>
-<area shape="rect" href="os8__trap_8h.html" title=" " alt="" coords="190,379,307,405"/>
+<div class="center"><img src="sync__dependency_8h__dep__incl.png" border="0" usemap="#async_2sync__dependency_8hdep" alt=""/></div>
+<map name="async_2sync__dependency_8hdep" id="async_2sync__dependency_8hdep">
+<area shape="rect" title=" " alt="" coords="511,5,693,32"/>
+<area shape="rect" href="sync_2log_8h.html" title=" " alt="" coords="499,80,587,107"/>
+<area shape="rect" href="sync_8h.html" title="同步互斥模块，实现了mutex（锁）、semaphore（信号量）、condvar（条件变量）三种机制" alt="" coords="611,80,710,107"/>
+<area shape="rect" href="sync_8c.html" title=" " alt="" coords="495,155,592,181"/>
+<area shape="rect" href="sync__module_8h.html" title=" " alt="" coords="617,155,771,181"/>
+<area shape="rect" href="os8_2modules_8h.html" title=" " alt="" coords="434,229,551,256"/>
+<area shape="rect" href="os9_2modules_8h.html" title=" " alt="" coords="865,229,982,256"/>
+<area shape="rect" href="os8_2loader_8h.html" title=" " alt="" coords="398,379,499,405"/>
+<area shape="rect" href="os8__trap_8h.html" title=" " alt="" coords="257,379,374,405"/>
+<area shape="rect" href="os8_2proc_8h.html" title=" " alt="" coords="491,304,580,331"/>
 <area shape="rect" href="os8_2loader_8c.html" title=" " alt="" coords="5,453,105,480"/>
 <area shape="rect" href="os8_2main_8c.html" title=" " alt="" coords="130,453,223,480"/>
 <area shape="rect" href="os8__syscall_8c.html" title=" " alt="" coords="248,453,383,480"/>
-<area shape="rect" href="os8__trap_8c.html" title=" " alt="" coords="520,453,636,480"/>
-<area shape="rect" href="os8_2proc_8c.html" title=" " alt="" coords="407,453,495,480"/>
+<area shape="rect" href="os8__trap_8c.html" title=" " alt="" coords="407,453,523,480"/>
+<area shape="rect" href="os8_2proc_8c.html" title=" " alt="" coords="547,453,635,480"/>
+<area shape="rect" href="os9_2loader_8h.html" title=" " alt="" coords="981,379,1082,405"/>
+<area shape="rect" href="os9__trap_8h.html" title=" " alt="" coords="839,379,957,405"/>
+<area shape="rect" href="os9_2proc_8h.html" title=" " alt="" coords="1028,304,1117,331"/>
+<area shape="rect" href="os9_2loader_8c.html" title=" " alt="" coords="660,453,760,480"/>
+<area shape="rect" href="os9_2main_8c.html" title=" " alt="" coords="785,453,878,480"/>
+<area shape="rect" href="os9__syscall_8c.html" title=" " alt="" coords="903,453,1037,480"/>
+<area shape="rect" href="os9__trap_8c.html" title=" " alt="" coords="1061,453,1177,480"/>
+<area shape="rect" href="os9_2proc_8c.html" title=" " alt="" coords="1202,453,1290,480"/>
 </map>
 </div>
 </div>
@@ -147,7 +156,7 @@ sync_dependency.h 的引用(Include)关系图:</div>
           <td class="memname">void dummy </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>_</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -175,7 +184,7 @@ sync_dependency.h 的引用(Include)关系图:</div>
           <td class="memname">void printf </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>fmt</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -254,9 +263,7 @@ sync_dependency.h 的引用(Include)关系图:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_60f2dbb6714164eb829ccd5e05ded1f4.html">sync</a></li><li class="navelem"><a class="el" href="sync__dependency_8h.html">sync_dependency.h</a></li>
-    <li class="footer">制作者
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

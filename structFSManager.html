@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>uCore-Tutorial-Code-2022A: FSManager结构体 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -92,8 +92,8 @@ $(document).ready(function(){initNavTree('structFSManager.html',''); initResizab
 <div class="dynheader">
 FSManager 的协作图:</div>
 <div class="dyncontent">
-<div class="center"><img src="structFSManager__coll__graph.png" border="0" usemap="#FSManager_coll__map" alt="Collaboration graph"/></div>
-<map name="FSManager_coll__map" id="FSManager_coll__map">
+<div class="center"><img src="structFSManager__coll__graph.png" border="0" usemap="#aFSManager_coll__map" alt="Collaboration graph"/></div>
+<map name="aFSManager_coll__map" id="aFSManager_coll__map">
 <area shape="rect" title=" " alt="" coords="5,184,100,211"/>
 <area shape="rect" href="structfile.html" title=" " alt="" coords="31,95,74,121"/>
 <area shape="rect" href="structinode.html" title=" " alt="" coords="23,5,82,32"/>
@@ -102,61 +102,61 @@ FSManager 的协作图:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 成员变量</h2></td></tr>
-<tr class="memitem:a4a4bb4217968ab2b47c9be8db3c1accb"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a4a4bb4217968ab2b47c9be8db3c1accb">fdalloc</a> )(struct <a class="el" href="structfile.html">file</a> *f)</td></tr>
-<tr class="memdesc:a4a4bb4217968ab2b47c9be8db3c1accb"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件对于进程而言也是其需要记录的一种资源，每个打开的文件会有一个非负整数 fd 指代它，这是一种已经被打开文件的索引。该接口用于让当前进程分配一个新的fd。  <a href="structFSManager.html#a4a4bb4217968ab2b47c9be8db3c1accb">更多...</a><br /></td></tr>
-<tr class="separator:a4a4bb4217968ab2b47c9be8db3c1accb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe0c01d2813ec65550778f85645054a3"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structfile.html">file</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#abe0c01d2813ec65550778f85645054a3">filealloc</a> )()</td></tr>
-<tr class="memdesc:abe0c01d2813ec65550778f85645054a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">分配进程中实际存储 struct file 指针的资源  <a href="structFSManager.html#abe0c01d2813ec65550778f85645054a3">更多...</a><br /></td></tr>
-<tr class="separator:abe0c01d2813ec65550778f85645054a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6d828f6936788fd5630aa1028856e2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#ad6d828f6936788fd5630aa1028856e2e">get_curr_pagetable</a> )()</td></tr>
-<tr class="memdesc:ad6d828f6936788fd5630aa1028856e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">以下三个接口用于和当前进程的虚存做交互  <a href="structFSManager.html#ad6d828f6936788fd5630aa1028856e2e">更多...</a><br /></td></tr>
-<tr class="separator:ad6d828f6936788fd5630aa1028856e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85f6b23ca0733e0f0ed3796079628432"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a85f6b23ca0733e0f0ed3796079628432">either_copyout</a> )(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, int, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, char *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
-<tr class="separator:a85f6b23ca0733e0f0ed3796079628432"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae460dc851223698a65f05605c88dd6b9"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#ae460dc851223698a65f05605c88dd6b9">either_copyin</a> )(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, int, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, char *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
-<tr class="separator:ae460dc851223698a65f05605c88dd6b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2eab1cd3bb0b41403bda554a49a9ede"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#af2eab1cd3bb0b41403bda554a49a9ede">pipeopen</a> )()</td></tr>
-<tr class="memdesc:af2eab1cd3bb0b41403bda554a49a9ede"><td class="mdescLeft">&#160;</td><td class="mdescRight">对于用户来说，pipe被抽象为了文件，也就是说文件系统要提供操作pipe的接口。实际的实现文件系统不负责，需要内核核心提供的创建和关闭管道的接口；内核核心可以直接使用pipe模块提供的接口  <a href="structFSManager.html#af2eab1cd3bb0b41403bda554a49a9ede">更多...</a><br /></td></tr>
-<tr class="separator:af2eab1cd3bb0b41403bda554a49a9ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab49f7215a6fd0b90849a6981607c253c"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#ab49f7215a6fd0b90849a6981607c253c">pipeclose</a> )(void *_pi, int writable)</td></tr>
-<tr class="separator:ab49f7215a6fd0b90849a6981607c253c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a248eea0a7547da2161f51b7825cc242c"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a248eea0a7547da2161f51b7825cc242c">bread</a> )(<a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)</td></tr>
-<tr class="memdesc:a248eea0a7547da2161f51b7825cc242c"><td class="mdescLeft">&#160;</td><td class="mdescRight">以下为与磁盘交互的接口。内核核心可以把disk模块对外暴露的接口提供给easy-fs模块使用  <a href="structFSManager.html#a248eea0a7547da2161f51b7825cc242c">更多...</a><br /></td></tr>
-<tr class="separator:a248eea0a7547da2161f51b7825cc242c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bc0c52c29ccec5ff797829c71e6c5d6"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a9bc0c52c29ccec5ff797829c71e6c5d6">brelse</a> )(void *)</td></tr>
-<tr class="separator:a9bc0c52c29ccec5ff797829c71e6c5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb031794c61498aa46d887b69b695fee"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#afb031794c61498aa46d887b69b695fee">bwrite</a> )(void *)</td></tr>
-<tr class="separator:afb031794c61498aa46d887b69b695fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81d120b55953bbfc4c228fd969c46a14"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a81d120b55953bbfc4c228fd969c46a14">bpin</a> )(void *)</td></tr>
-<tr class="separator:a81d120b55953bbfc4c228fd969c46a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b269a8abb677d4e33b9a889e791b01a"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a1b269a8abb677d4e33b9a889e791b01a">bunpin</a> )(void *)</td></tr>
-<tr class="separator:a1b269a8abb677d4e33b9a889e791b01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdcd01384de5871faeb5c7b44f06926f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#abdcd01384de5871faeb5c7b44f06926f">buf_data</a> )(void *)</td></tr>
-<tr class="separator:abdcd01384de5871faeb5c7b44f06926f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37028d8ad6b0bfa61173a7d28e45d0f8"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a37028d8ad6b0bfa61173a7d28e45d0f8">fdalloc</a> )(struct <a class="el" href="structfile.html">file</a> *f)</td></tr>
+<tr class="memdesc:a37028d8ad6b0bfa61173a7d28e45d0f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件对于进程而言也是其需要记录的一种资源，每个打开的文件会有一个非负整数 fd 指代它，这是一种已经被打开文件的索引。该接口用于让当前进程分配一个新的fd。  <a href="structFSManager.html#a37028d8ad6b0bfa61173a7d28e45d0f8">更多...</a><br /></td></tr>
+<tr class="separator:a37028d8ad6b0bfa61173a7d28e45d0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3cc1a63fbe6fb580930df61faae3cf7"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structfile.html">file</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#ae3cc1a63fbe6fb580930df61faae3cf7">filealloc</a> )()</td></tr>
+<tr class="memdesc:ae3cc1a63fbe6fb580930df61faae3cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">分配进程中实际存储 struct file 指针的资源  <a href="structFSManager.html#ae3cc1a63fbe6fb580930df61faae3cf7">更多...</a><br /></td></tr>
+<tr class="separator:ae3cc1a63fbe6fb580930df61faae3cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46d5094568667fa15bb958a0d5874f9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a46d5094568667fa15bb958a0d5874f9f">get_curr_pagetable</a> )()</td></tr>
+<tr class="memdesc:a46d5094568667fa15bb958a0d5874f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">以下三个接口用于和当前进程的虚存做交互  <a href="structFSManager.html#a46d5094568667fa15bb958a0d5874f9f">更多...</a><br /></td></tr>
+<tr class="separator:a46d5094568667fa15bb958a0d5874f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad02457c3c1a990c0bc8fa183abd31a45"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#ad02457c3c1a990c0bc8fa183abd31a45">either_copyout</a> )(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, int, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, char *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
+<tr class="separator:ad02457c3c1a990c0bc8fa183abd31a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cb474b6dcefb54a675027a9ada10973"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a8cb474b6dcefb54a675027a9ada10973">either_copyin</a> )(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, int, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, char *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td></tr>
+<tr class="separator:a8cb474b6dcefb54a675027a9ada10973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6840080ee61b9db69bfd78bf056bf14"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#ab6840080ee61b9db69bfd78bf056bf14">pipeopen</a> )()</td></tr>
+<tr class="memdesc:ab6840080ee61b9db69bfd78bf056bf14"><td class="mdescLeft">&#160;</td><td class="mdescRight">对于用户来说，pipe被抽象为了文件，也就是说文件系统要提供操作pipe的接口。实际的实现文件系统不负责，需要内核核心提供的创建和关闭管道的接口；内核核心可以直接使用pipe模块提供的接口  <a href="structFSManager.html#ab6840080ee61b9db69bfd78bf056bf14">更多...</a><br /></td></tr>
+<tr class="separator:ab6840080ee61b9db69bfd78bf056bf14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15b3842758e582466df00a89320b00cb"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a15b3842758e582466df00a89320b00cb">pipeclose</a> )(void *_pi, int writable)</td></tr>
+<tr class="separator:a15b3842758e582466df00a89320b00cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f7b2eb3ac5a9cffe4f969d7da84a917"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a2f7b2eb3ac5a9cffe4f969d7da84a917">bread</a> )(<a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)</td></tr>
+<tr class="memdesc:a2f7b2eb3ac5a9cffe4f969d7da84a917"><td class="mdescLeft">&#160;</td><td class="mdescRight">以下为与磁盘交互的接口。内核核心可以把disk模块对外暴露的接口提供给easy-fs模块使用  <a href="structFSManager.html#a2f7b2eb3ac5a9cffe4f969d7da84a917">更多...</a><br /></td></tr>
+<tr class="separator:a2f7b2eb3ac5a9cffe4f969d7da84a917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b4a1a59f0497c260e68fefdd1d955e0"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a9b4a1a59f0497c260e68fefdd1d955e0">brelse</a> )(void *)</td></tr>
+<tr class="separator:a9b4a1a59f0497c260e68fefdd1d955e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f6ed9778707eb694e5ff09bb87131f8"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a8f6ed9778707eb694e5ff09bb87131f8">bwrite</a> )(void *)</td></tr>
+<tr class="separator:a8f6ed9778707eb694e5ff09bb87131f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a673b8a1a23dce9871f18ef2915251e06"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#a673b8a1a23dce9871f18ef2915251e06">bpin</a> )(void *)</td></tr>
+<tr class="separator:a673b8a1a23dce9871f18ef2915251e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec101839168bb6458c07df5e20078579"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#aec101839168bb6458c07df5e20078579">bunpin</a> )(void *)</td></tr>
+<tr class="separator:aec101839168bb6458c07df5e20078579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb0d4e7450160919929d6338e72c648b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFSManager.html#adb0d4e7450160919929d6338e72c648b">buf_data</a> )(void *)</td></tr>
+<tr class="separator:adb0d4e7450160919929d6338e72c648b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">结构体成员变量说明</h2>
-<a id="a81d120b55953bbfc4c228fd969c46a14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81d120b55953bbfc4c228fd969c46a14">&#9670;&nbsp;</a></span>bpin</h2>
+<a id="a673b8a1a23dce9871f18ef2915251e06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a673b8a1a23dce9871f18ef2915251e06">&#9670;&nbsp;</a></span>bpin</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* bpin(void *)</td>
+          <td class="memname">void(* bpin) (void *)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a248eea0a7547da2161f51b7825cc242c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a248eea0a7547da2161f51b7825cc242c">&#9670;&nbsp;</a></span>bread</h2>
+<a id="a2f7b2eb3ac5a9cffe4f969d7da84a917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f7b2eb3ac5a9cffe4f969d7da84a917">&#9670;&nbsp;</a></span>bread</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void*(* bread(<a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)</td>
+          <td class="memname">void*(* bread) (<a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>, <a class="el" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -165,98 +165,98 @@ FSManager 的协作图:</div>
 
 </div>
 </div>
-<a id="a9bc0c52c29ccec5ff797829c71e6c5d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bc0c52c29ccec5ff797829c71e6c5d6">&#9670;&nbsp;</a></span>brelse</h2>
+<a id="a9b4a1a59f0497c260e68fefdd1d955e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b4a1a59f0497c260e68fefdd1d955e0">&#9670;&nbsp;</a></span>brelse</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* brelse(void *)</td>
+          <td class="memname">void(* brelse) (void *)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="abdcd01384de5871faeb5c7b44f06926f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdcd01384de5871faeb5c7b44f06926f">&#9670;&nbsp;</a></span>buf_data</h2>
+<a id="adb0d4e7450160919929d6338e72c648b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb0d4e7450160919929d6338e72c648b">&#9670;&nbsp;</a></span>buf_data</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="console_2defs_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a>*(* buf_data(void *)</td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a65f85814a8290f9797005d3b28e7e5fc">uchar</a>*(* buf_data) (void *)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a1b269a8abb677d4e33b9a889e791b01a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b269a8abb677d4e33b9a889e791b01a">&#9670;&nbsp;</a></span>bunpin</h2>
+<a id="aec101839168bb6458c07df5e20078579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec101839168bb6458c07df5e20078579">&#9670;&nbsp;</a></span>bunpin</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* bunpin(void *)</td>
+          <td class="memname">void(* bunpin) (void *)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="afb031794c61498aa46d887b69b695fee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb031794c61498aa46d887b69b695fee">&#9670;&nbsp;</a></span>bwrite</h2>
+<a id="a8f6ed9778707eb694e5ff09bb87131f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f6ed9778707eb694e5ff09bb87131f8">&#9670;&nbsp;</a></span>bwrite</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* bwrite(void *)</td>
+          <td class="memname">void(* bwrite) (void *)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ae460dc851223698a65f05605c88dd6b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae460dc851223698a65f05605c88dd6b9">&#9670;&nbsp;</a></span>either_copyin</h2>
+<a id="a8cb474b6dcefb54a675027a9ada10973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cb474b6dcefb54a675027a9ada10973">&#9670;&nbsp;</a></span>either_copyin</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int(* either_copyin(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, int, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, char *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td>
+          <td class="memname">int(* either_copyin) (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, int, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, char *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a85f6b23ca0733e0f0ed3796079628432"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85f6b23ca0733e0f0ed3796079628432">&#9670;&nbsp;</a></span>either_copyout</h2>
+<a id="ad02457c3c1a990c0bc8fa183abd31a45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad02457c3c1a990c0bc8fa183abd31a45">&#9670;&nbsp;</a></span>either_copyout</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int(* either_copyout(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, int, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, char *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td>
+          <td class="memname">int(* either_copyout) (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>, int, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>, char *, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a4a4bb4217968ab2b47c9be8db3c1accb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a4bb4217968ab2b47c9be8db3c1accb">&#9670;&nbsp;</a></span>fdalloc</h2>
+<a id="a37028d8ad6b0bfa61173a7d28e45d0f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37028d8ad6b0bfa61173a7d28e45d0f8">&#9670;&nbsp;</a></span>fdalloc</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int(* fdalloc(struct <a class="el" href="structfile.html">file</a> *f)</td>
+          <td class="memname">int(* fdalloc) (struct <a class="el" href="structfile.html">file</a> *f)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -265,14 +265,14 @@ FSManager 的协作图:</div>
 
 </div>
 </div>
-<a id="abe0c01d2813ec65550778f85645054a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe0c01d2813ec65550778f85645054a3">&#9670;&nbsp;</a></span>filealloc</h2>
+<a id="ae3cc1a63fbe6fb580930df61faae3cf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3cc1a63fbe6fb580930df61faae3cf7">&#9670;&nbsp;</a></span>filealloc</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structfile.html">file</a>*(* filealloc()</td>
+          <td class="memname">struct <a class="el" href="structfile.html">file</a>*(* filealloc) ()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -281,14 +281,14 @@ FSManager 的协作图:</div>
 
 </div>
 </div>
-<a id="ad6d828f6936788fd5630aa1028856e2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6d828f6936788fd5630aa1028856e2e">&#9670;&nbsp;</a></span>get_curr_pagetable</h2>
+<a id="a46d5094568667fa15bb958a0d5874f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46d5094568667fa15bb958a0d5874f9f">&#9670;&nbsp;</a></span>get_curr_pagetable</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(* get_curr_pagetable()</td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(* get_curr_pagetable) ()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -297,28 +297,28 @@ FSManager 的协作图:</div>
 
 </div>
 </div>
-<a id="ab49f7215a6fd0b90849a6981607c253c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab49f7215a6fd0b90849a6981607c253c">&#9670;&nbsp;</a></span>pipeclose</h2>
+<a id="a15b3842758e582466df00a89320b00cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15b3842758e582466df00a89320b00cb">&#9670;&nbsp;</a></span>pipeclose</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* pipeclose(void *_pi, int writable)</td>
+          <td class="memname">void(* pipeclose) (void *_pi, int writable)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="af2eab1cd3bb0b41403bda554a49a9ede"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2eab1cd3bb0b41403bda554a49a9ede">&#9670;&nbsp;</a></span>pipeopen</h2>
+<a id="ab6840080ee61b9db69bfd78bf056bf14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6840080ee61b9db69bfd78bf056bf14">&#9670;&nbsp;</a></span>pipeopen</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void*(* pipeopen()</td>
+          <td class="memname">void*(* pipeopen) ()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -336,9 +336,7 @@ FSManager 的协作图:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structFSManager.html">FSManager</a></li>
-    <li class="footer">制作者
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

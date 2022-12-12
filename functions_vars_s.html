@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>uCore-Tutorial-Code-2022A: 成员变量 - 变量</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -132,6 +132,9 @@ $(document).ready(function(){initNavTree('functions_vars_s.html',''); initResiza
 : <a class="el" href="structcontext.html#a1708f79c90c197da81e09f8b82705c52">context</a>
 , <a class="el" href="structtrapframe.html#a1708f79c90c197da81e09f8b82705c52">trapframe</a>
 </li>
+<li>sa_mask
+: <a class="el" href="structsigaction.html#a876d1daef3da7e7b85cd8227667f8e1f">sigaction</a>
+</li>
 <li>sec
 : <a class="el" href="structTimeVal.html#ab5e3efb420022122eb09a750fac3ed65">TimeVal</a>
 </li>
@@ -139,13 +142,28 @@ $(document).ready(function(){initNavTree('functions_vars_s.html',''); initResiza
 : <a class="el" href="structvirtio__blk__req.html#a68e159f80f2467b2690eeade6417dc1d">virtio_blk_req</a>
 </li>
 <li>semaphore_pool
-: <a class="el" href="structproc.html#a140aba962eefe85e971ebc4a1fa2423c">proc</a>
+: <a class="el" href="structproc.html#a52abb4e320ef12b255010a2de2e5b2ee">proc</a>
 </li>
 <li>set_kerneltrap
-: <a class="el" href="structtrap__handler__context.html#ade101058bbf3ee934bd0bfe8b45af7a8">trap_handler_context</a>
+: <a class="el" href="structtrap__handler__context.html#a2f98090f5330f1dafb29078c2f79f2c3">trap_handler_context</a>
 </li>
 <li>set_usertrap
-: <a class="el" href="structtrap__handler__context.html#aa2a2adbea320888daabb3ec68111f6ae">trap_handler_context</a>
+: <a class="el" href="structtrap__handler__context.html#a7af703aff749945fe9dac36499593a82">trap_handler_context</a>
+</li>
+<li>sig_actions
+: <a class="el" href="structsignal__block.html#a5551f64b55d456c78102e446f0c1a48b">signal_block</a>
+</li>
+<li>sig_block
+: <a class="el" href="structproc.html#a146432e8968a3f392368a0cc99808f8d">proc</a>
+</li>
+<li>sig_trapframe
+: <a class="el" href="structproc.html#a26812584f1f1f65d69fd16df4b07d3c7">proc</a>
+</li>
+<li>signal_mask
+: <a class="el" href="structsignal__block.html#a5308f98860c92762dc3a8604a68d4854">signal_block</a>
+</li>
+<li>signals
+: <a class="el" href="structsignal__block.html#a164b04c29ff64663ed44fdf475a15110">signal_block</a>
 </li>
 <li>size
 : <a class="el" href="structdinode.html#a22d26304a3b3aca97e6311f6939dd1bf">dinode</a>
@@ -154,7 +172,7 @@ $(document).ready(function(){initNavTree('functions_vars_s.html',''); initResiza
 , <a class="el" href="structsuperblock.html#a22d26304a3b3aca97e6311f6939dd1bf">superblock</a>
 </li>
 <li>sleeping
-: <a class="el" href="structsynchronization__context.html#aaa1adf48c5835e6419bb8bce24cb11e1">synchronization_context</a>
+: <a class="el" href="structsynchronization__context.html#a5cbf761fa409c3c44b34503a8651c640">synchronization_context</a>
 </li>
 <li>sp
 : <a class="el" href="structcontext.html#a5eb4ea9b43f8c6b0d2998554998351ef">context</a>
@@ -165,103 +183,115 @@ $(document).ready(function(){initNavTree('functions_vars_s.html',''); initResiza
 , <a class="el" href="structthread.html#a99dc075a175f091ce918096f6b5469c0">thread</a>
 </li>
 <li>super_external_handler
-: <a class="el" href="structtrap__handler__context.html#a1a56e2e99660cc40be5dbbe6ed992367">trap_handler_context</a>
+: <a class="el" href="structtrap__handler__context.html#addca1b51f5e0bf8be5b8a1b9676b43db">trap_handler_context</a>
 </li>
 <li>sys_clone
-: <a class="el" href="structsyscall__context.html#a31348dc98b9944fe86548468945dc78a">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#ab9d5de1d7d7b8e0eb9f567bfb6519594">syscall_context</a>
 </li>
 <li>sys_close
-: <a class="el" href="structsyscall__context.html#ad85ce3025a9a5e8719dcf22b91410527">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a258007c7f30dca7202c517a71acd395c">syscall_context</a>
 </li>
 <li>sys_condvar_create
-: <a class="el" href="structsyscall__context.html#a8b8bfd294abc4ea2da044b8ec38372f5">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a235b9e16820e611166c4ee8b19c4f6ae">syscall_context</a>
 </li>
 <li>sys_condvar_signal
-: <a class="el" href="structsyscall__context.html#ac5efde118f398d1a3621dd4b2f9114fc">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a519ff1d48c488b3c5fc4b9f2c8ed21bd">syscall_context</a>
 </li>
 <li>sys_condvar_wait
-: <a class="el" href="structsyscall__context.html#acd258acecf2cf9472ed3a3f2a01e5ab1">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a8e7e14afefeea5c2481534bad366e59c">syscall_context</a>
 </li>
 <li>sys_enable_deadlock_detect
-: <a class="el" href="structsyscall__context.html#ac88eca0823e304878e25e0087c1e5296">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#acf4d27bf763f499ad8461e472f297282">syscall_context</a>
 </li>
 <li>sys_exec
-: <a class="el" href="structsyscall__context.html#a0fec519170a9286bd9d533f3132a5230">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#ab194cd1ca3d74da60f3d5281c3c2351c">syscall_context</a>
 </li>
 <li>sys_exit
-: <a class="el" href="structsyscall__context.html#ac66fdab952acbff74398a22b92f0654d">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a77f7cba0eee4d005ab82ce06a40393f9">syscall_context</a>
 </li>
 <li>sys_fstat
-: <a class="el" href="structsyscall__context.html#a644b11499e9f8d8df6a29d35db544f88">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#aa033cffd3a9a1d74992246c77becdfc9">syscall_context</a>
 </li>
 <li>sys_getpid
-: <a class="el" href="structsyscall__context.html#a28743bb67b7fc376ab34ecbbc987d733">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a97e72b2d5faefe8e35adef80fc8bb5cb">syscall_context</a>
 </li>
 <li>sys_getppid
-: <a class="el" href="structsyscall__context.html#a2196bbd486abb1f0a79963e2ae98ab8b">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#ac47e0f36676673c1baf18b3b3bc3270e">syscall_context</a>
 </li>
 <li>sys_gettid
-: <a class="el" href="structsyscall__context.html#a170685f623e884712bdf356fdb0106e9">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a0dd0d61e3f443c02baebdcb1962de7a6">syscall_context</a>
 </li>
 <li>sys_gettimeofday
-: <a class="el" href="structsyscall__context.html#a1ed9c5e734b1da39da88cf7f5218f371">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a2614f24c1eb8853684fd443c03450352">syscall_context</a>
 </li>
 <li>sys_linkat
-: <a class="el" href="structsyscall__context.html#a0fb14e99ef62a141715114d99e1a50ee">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a4090c0e439728994db23d51dc946eb56">syscall_context</a>
 </li>
 <li>sys_mutex_create
-: <a class="el" href="structsyscall__context.html#ab33f8e31492f8feebc8a702ae74df59e">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a9189a075a82655ec88c8c69bbccdbb59">syscall_context</a>
 </li>
 <li>sys_mutex_lock
-: <a class="el" href="structsyscall__context.html#aa7cbb5a3e6eaec6c31c3344d690823fa">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a37a41ff324867eec17a31edd0f9048f1">syscall_context</a>
 </li>
 <li>sys_mutex_unlock
-: <a class="el" href="structsyscall__context.html#ad2e804f68733b0e888bc7ab17dd8d18e">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a7ea6c15bfdb6dbba300968bd164d0377">syscall_context</a>
 </li>
 <li>sys_openat
-: <a class="el" href="structsyscall__context.html#a6173d8b61d07b13dbbb856f8afb57256">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a009287810056b29c3b53bc34db99271f">syscall_context</a>
 </li>
 <li>sys_pipe
-: <a class="el" href="structsyscall__context.html#af42c144701e0877282a85cd9c7637b1b">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a899662289b7a037a6169000f68a57572">syscall_context</a>
 </li>
 <li>sys_read
-: <a class="el" href="structsyscall__context.html#ae92ca4d2ef991be1a047217aebddf6ac">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a62c94413a034369cbfed4130ac71d351">syscall_context</a>
 </li>
 <li>sys_sched_yield
-: <a class="el" href="structsyscall__context.html#a35e35740e0937a8ef1856c47e92c7686">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#aff0af5cf052f2a5cb16c43a79ba518fd">syscall_context</a>
 </li>
 <li>sys_semaphore_create
-: <a class="el" href="structsyscall__context.html#a4f00baf8bdbc2459b0f2edbd8d397664">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a36010ef9aa35952b379e8f98633e7670">syscall_context</a>
 </li>
 <li>sys_semaphore_down
-: <a class="el" href="structsyscall__context.html#ad18ddd3fd2a7bc4adcf5ab9229ed28e8">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a1b0ae59ad4734abfe66b46d016900dd2">syscall_context</a>
 </li>
 <li>sys_semaphore_up
-: <a class="el" href="structsyscall__context.html#aae4cebe04bc53f77791cf6a520c05190">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a8e79cd6d84863cf36a84538ced122e5f">syscall_context</a>
 </li>
 <li>sys_set_priority
-: <a class="el" href="structsyscall__context.html#a8c0b588dabcfe21cc122d31df6bb1c64">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a85e5c370704e8af061367f051257a5a1">syscall_context</a>
+</li>
+<li>sys_sigaction
+: <a class="el" href="structsyscall__context.html#a91f7b85b740068b56961057226c88878">syscall_context</a>
+</li>
+<li>sys_sigkill
+: <a class="el" href="structsyscall__context.html#a6f11a1a1b9af3a8354342e818574771b">syscall_context</a>
+</li>
+<li>sys_sigprocmask
+: <a class="el" href="structsyscall__context.html#a8aebb8fc7f3806ad2c798542a31ba8fa">syscall_context</a>
+</li>
+<li>sys_sigreturn
+: <a class="el" href="structsyscall__context.html#a355c691b1b1fcd65abb2999653dbb31c">syscall_context</a>
 </li>
 <li>sys_spawn
-: <a class="el" href="structsyscall__context.html#ad0a42419c93c346160295cab976aa26c">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a9dd51085b32eb008180f590f29e8e435">syscall_context</a>
 </li>
 <li>sys_thread_create
-: <a class="el" href="structsyscall__context.html#adb8a57ff8841a659ec363d7cbbfbe359">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a3454bb8f459a5a8c477a0397d2532a49">syscall_context</a>
 </li>
 <li>sys_unlinkat
-: <a class="el" href="structsyscall__context.html#a2e6603f04efc4975aa67107d62d97ef2">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#ad3b7eb79e194884a7d53b89ded3b6f3f">syscall_context</a>
 </li>
 <li>sys_wait
-: <a class="el" href="structsyscall__context.html#a97df1393dea9b669edea3183d905dc3f">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a6b21648a7d7a09154c0dfd3697be714c">syscall_context</a>
 </li>
 <li>sys_waittid
-: <a class="el" href="structsyscall__context.html#aae9d3cac0a5c45075b1d9e40e61f432f">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a5e51605b6d2f0c1b466c8f8d982f0ac3">syscall_context</a>
 </li>
 <li>sys_write
-: <a class="el" href="structsyscall__context.html#a9f5f771132b65e348df9c88cf7befc7a">syscall_context</a>
+: <a class="el" href="structsyscall__context.html#a65eca057ea9ef6ee0df4f07d465b3880">syscall_context</a>
 </li>
 <li>syscall
-: <a class="el" href="structtrap__handler__context.html#af45a07d39dc5515b789e2af21cd5566a">trap_handler_context</a>
+: <a class="el" href="structtrap__handler__context.html#a14ac301fd21edc1ab7470792c9e6b2c7">trap_handler_context</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -269,9 +299,7 @@ $(document).ready(function(){initNavTree('functions_vars_s.html',''); initResiza
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">制作者
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

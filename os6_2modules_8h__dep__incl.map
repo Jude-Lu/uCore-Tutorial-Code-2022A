@@ -1,11 +1,11 @@
 <map id="os6/modules.h" name="os6/modules.h">
-<area shape="rect" id="node1" title=" " alt="" coords="243,5,361,32"/>
-<area shape="rect" id="node2" href="$os6_2loader_8h.html" title=" " alt="" coords="293,155,394,181"/>
-<area shape="rect" id="node8" href="$os6_2proc_8h.html" title=" " alt="" coords="340,80,429,107"/>
-<area shape="rect" id="node9" href="$os6__trap_8h.html" title=" " alt="" coords="151,155,269,181"/>
-<area shape="rect" id="node3" href="$os6_2loader_8c.html" title=" " alt="" coords="145,229,245,256"/>
-<area shape="rect" id="node4" href="$os6_2main_8c.html" title=" " alt="" coords="270,229,363,256"/>
-<area shape="rect" id="node5" href="$os6__syscall_8c.html" title=" " alt="" coords="500,229,635,256"/>
-<area shape="rect" id="node6" href="$os6__trap_8c.html" title=" " alt="" coords="5,229,121,256"/>
-<area shape="rect" id="node7" href="$os6_2proc_8c.html" title=" " alt="" coords="387,229,475,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="267,5,384,32"/>
+<area shape="rect" id="node2" href="$os6_2loader_8h.html" title=" " alt="" coords="275,155,376,181"/>
+<area shape="rect" id="node8" href="$os6__trap_8h.html" title=" " alt="" coords="133,155,251,181"/>
+<area shape="rect" id="node9" href="$os6_2proc_8h.html" title=" " alt="" coords="369,80,458,107"/>
+<area shape="rect" id="node3" href="$os6_2loader_8c.html" title=" " alt="" coords="123,229,223,256"/>
+<area shape="rect" id="node4" href="$os6_2main_8c.html" title=" " alt="" coords="5,229,99,256"/>
+<area shape="rect" id="node5" href="$os6__syscall_8c.html" title=" " alt="" coords="247,229,382,256"/>
+<area shape="rect" id="node6" href="$os6__trap_8c.html" title=" " alt="" coords="406,229,522,256"/>
+<area shape="rect" id="node7" href="$os6_2proc_8c.html" title=" " alt="" coords="547,229,635,256"/>
 </map>

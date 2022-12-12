@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>uCore-Tutorial-Code-2022A: trap_handler_context结构体 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -92,8 +92,8 @@ $(document).ready(function(){initNavTree('structtrap__handler__context.html','')
 <div class="dynheader">
 trap_handler_context 的协作图:</div>
 <div class="dyncontent">
-<div class="center"><img src="structtrap__handler__context__coll__graph.png" border="0" usemap="#trap__handler__context_coll__map" alt="Collaboration graph"/></div>
-<map name="trap__handler__context_coll__map" id="trap__handler__context_coll__map">
+<div class="center"><img src="structtrap__handler__context__coll__graph.png" border="0" usemap="#atrap__handler__context_coll__map" alt="Collaboration graph"/></div>
+<map name="atrap__handler__context_coll__map" id="atrap__handler__context_coll__map">
 <area shape="rect" title=" " alt="" coords="5,95,165,121"/>
 <area shape="rect" href="structtrapframe.html" title=" " alt="" coords="42,5,129,32"/>
 </map>
@@ -101,54 +101,54 @@ trap_handler_context 的协作图:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 成员变量</h2></td></tr>
-<tr class="memitem:a561f5d7612fb5c250655a20ffae8dafe"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a561f5d7612fb5c250655a20ffae8dafe">yield</a> )()</td></tr>
-<tr class="memdesc:a561f5d7612fb5c250655a20ffae8dafe"><td class="mdescLeft">&#160;</td><td class="mdescRight">yield是每个章节自己的，不同的调度策略会调用不同的sched，而ch2里面甚至不需要支持（空函数）  <a href="structtrap__handler__context.html#a561f5d7612fb5c250655a20ffae8dafe">更多...</a><br /></td></tr>
-<tr class="separator:a561f5d7612fb5c250655a20ffae8dafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79b270d658c32d79ed40fee395764c65"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a79b270d658c32d79ed40fee395764c65">cpuid</a> )()</td></tr>
-<tr class="memdesc:a79b270d658c32d79ed40fee395764c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">主要用于处理外部中断的时候，获取当前是哪个cpu（发生了外部中断）  <a href="structtrap__handler__context.html#a79b270d658c32d79ed40fee395764c65">更多...</a><br /></td></tr>
-<tr class="separator:a79b270d658c32d79ed40fee395764c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2a2adbea320888daabb3ec68111f6ae"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#aa2a2adbea320888daabb3ec68111f6ae">set_usertrap</a> )()</td></tr>
-<tr class="memdesc:aa2a2adbea320888daabb3ec68111f6ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">set_usertrap和set_kerneltrap分别用于处理在U/S态下发生异常时的异常处理代码入口  <a href="structtrap__handler__context.html#aa2a2adbea320888daabb3ec68111f6ae">更多...</a><br /></td></tr>
-<tr class="separator:aa2a2adbea320888daabb3ec68111f6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade101058bbf3ee934bd0bfe8b45af7a8"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#ade101058bbf3ee934bd0bfe8b45af7a8">set_kerneltrap</a> )()</td></tr>
-<tr class="separator:ade101058bbf3ee934bd0bfe8b45af7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6323c0d99db43d2078caf5d35be792f6"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structtrapframe.html">trapframe</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a6323c0d99db43d2078caf5d35be792f6">get_trapframe</a> )()</td></tr>
-<tr class="memdesc:a6323c0d99db43d2078caf5d35be792f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于得到当前正在考虑的trapframe，在ch2里面是全局共用的，到后面就是不同进程、再到不同线程的trap_frame  <a href="structtrap__handler__context.html#a6323c0d99db43d2078caf5d35be792f6">更多...</a><br /></td></tr>
-<tr class="separator:a6323c0d99db43d2078caf5d35be792f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3c72b4d7409db28789f5a7151761c1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#ae3c72b4d7409db28789f5a7151761c1d">get_trapframe_va</a> )()</td></tr>
-<tr class="memdesc:ae3c72b4d7409db28789f5a7151761c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于得到当前正在考虑的trapframe的虚拟地址  <a href="structtrap__handler__context.html#ae3c72b4d7409db28789f5a7151761c1d">更多...</a><br /></td></tr>
-<tr class="separator:ae3c72b4d7409db28789f5a7151761c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a712dbfb95495eaef551d8c5a8da9cd11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a712dbfb95495eaef551d8c5a8da9cd11">get_satp</a> )()</td></tr>
-<tr class="memdesc:a712dbfb95495eaef551d8c5a8da9cd11"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于得到页表的地址  <a href="structtrap__handler__context.html#a712dbfb95495eaef551d8c5a8da9cd11">更多...</a><br /></td></tr>
-<tr class="separator:a712dbfb95495eaef551d8c5a8da9cd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3280f63e6ab69094abadf4e8d37052ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a3280f63e6ab69094abadf4e8d37052ef">get_kernel_sp</a> )()</td></tr>
-<tr class="memdesc:a3280f63e6ab69094abadf4e8d37052ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于拿到内核栈的栈顶指针  <a href="structtrap__handler__context.html#a3280f63e6ab69094abadf4e8d37052ef">更多...</a><br /></td></tr>
-<tr class="separator:a3280f63e6ab69094abadf4e8d37052ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ed3b389a4cec6c26df53089b8d086ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a9ed3b389a4cec6c26df53089b8d086ab">get_userret</a> )()</td></tr>
-<tr class="memdesc:a9ed3b389a4cec6c26df53089b8d086ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">得到userret的虚拟地址（在使用虚存机制时候，它在kernel里面会被映射到特定的位置）  <a href="structtrap__handler__context.html#a9ed3b389a4cec6c26df53089b8d086ab">更多...</a><br /></td></tr>
-<tr class="separator:a9ed3b389a4cec6c26df53089b8d086ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af26fc46ee741e8084ba4e63b79760f3c"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#af26fc46ee741e8084ba4e63b79760f3c">customized_usertrap</a> )(int cause)</td></tr>
-<tr class="memdesc:af26fc46ee741e8084ba4e63b79760f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">在usertrap执行结束后执行，cause是异常编号，这里主要是为了兼容ch2，后面的章节里面只要调用usertrapret即可  <a href="structtrap__handler__context.html#af26fc46ee741e8084ba4e63b79760f3c">更多...</a><br /></td></tr>
-<tr class="separator:af26fc46ee741e8084ba4e63b79760f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7139487d9ef96407f2e1fee22f5c01b"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#ac7139487d9ef96407f2e1fee22f5c01b">error_in_trap</a> )(int <a class="el" href="virtio__disk_8c.html#a051c9e198ee930358372c407a17e8b78">status</a>)</td></tr>
-<tr class="memdesc:ac7139487d9ef96407f2e1fee22f5c01b"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于处理当trap处理发生错误时要做的事  <a href="structtrap__handler__context.html#ac7139487d9ef96407f2e1fee22f5c01b">更多...</a><br /></td></tr>
-<tr class="separator:ac7139487d9ef96407f2e1fee22f5c01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af45a07d39dc5515b789e2af21cd5566a"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#af45a07d39dc5515b789e2af21cd5566a">syscall</a> )(<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a0, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a1, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a2, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a3, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a4, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a5, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a6, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a7)</td></tr>
-<tr class="memdesc:af45a07d39dc5515b789e2af21cd5566a"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于处理系统调用导致的trap  <a href="structtrap__handler__context.html#af45a07d39dc5515b789e2af21cd5566a">更多...</a><br /></td></tr>
-<tr class="separator:af45a07d39dc5515b789e2af21cd5566a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a56e2e99660cc40be5dbbe6ed992367"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a1a56e2e99660cc40be5dbbe6ed992367">super_external_handler</a> )(int <a class="el" href="structtrap__handler__context.html#a79b270d658c32d79ed40fee395764c65">cpuid</a>)</td></tr>
-<tr class="memdesc:a1a56e2e99660cc40be5dbbe6ed992367"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于处理非时间中断的一切外部中断，会在文件系统里面用到  <a href="structtrap__handler__context.html#a1a56e2e99660cc40be5dbbe6ed992367">更多...</a><br /></td></tr>
-<tr class="separator:a1a56e2e99660cc40be5dbbe6ed992367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e2c3c6e4c3c42835b5c4300966e1f6"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#ab2e2c3c6e4c3c42835b5c4300966e1f6">yield</a> )()</td></tr>
+<tr class="memdesc:ab2e2c3c6e4c3c42835b5c4300966e1f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">yield是每个章节自己的，不同的调度策略会调用不同的sched，而ch2里面甚至不需要支持（空函数）  <a href="structtrap__handler__context.html#ab2e2c3c6e4c3c42835b5c4300966e1f6">更多...</a><br /></td></tr>
+<tr class="separator:ab2e2c3c6e4c3c42835b5c4300966e1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad609edd37d9d5d531909253e43b7e63d"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#ad609edd37d9d5d531909253e43b7e63d">cpuid</a> )()</td></tr>
+<tr class="memdesc:ad609edd37d9d5d531909253e43b7e63d"><td class="mdescLeft">&#160;</td><td class="mdescRight">主要用于处理外部中断的时候，获取当前是哪个cpu（发生了外部中断）  <a href="structtrap__handler__context.html#ad609edd37d9d5d531909253e43b7e63d">更多...</a><br /></td></tr>
+<tr class="separator:ad609edd37d9d5d531909253e43b7e63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af703aff749945fe9dac36499593a82"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a7af703aff749945fe9dac36499593a82">set_usertrap</a> )()</td></tr>
+<tr class="memdesc:a7af703aff749945fe9dac36499593a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">set_usertrap和set_kerneltrap分别用于处理在U/S态下发生异常时的异常处理代码入口  <a href="structtrap__handler__context.html#a7af703aff749945fe9dac36499593a82">更多...</a><br /></td></tr>
+<tr class="separator:a7af703aff749945fe9dac36499593a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f98090f5330f1dafb29078c2f79f2c3"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a2f98090f5330f1dafb29078c2f79f2c3">set_kerneltrap</a> )()</td></tr>
+<tr class="separator:a2f98090f5330f1dafb29078c2f79f2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a3c64a4e2acb1dc90d888fcbcb36a99"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structtrapframe.html">trapframe</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a1a3c64a4e2acb1dc90d888fcbcb36a99">get_trapframe</a> )()</td></tr>
+<tr class="memdesc:a1a3c64a4e2acb1dc90d888fcbcb36a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于得到当前正在考虑的trapframe，在ch2里面是全局共用的，到后面就是不同进程、再到不同线程的trap_frame  <a href="structtrap__handler__context.html#a1a3c64a4e2acb1dc90d888fcbcb36a99">更多...</a><br /></td></tr>
+<tr class="separator:a1a3c64a4e2acb1dc90d888fcbcb36a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac78943b2b9b01b6f371dac974585ba7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#aac78943b2b9b01b6f371dac974585ba7">get_trapframe_va</a> )()</td></tr>
+<tr class="memdesc:aac78943b2b9b01b6f371dac974585ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于得到当前正在考虑的trapframe的虚拟地址  <a href="structtrap__handler__context.html#aac78943b2b9b01b6f371dac974585ba7">更多...</a><br /></td></tr>
+<tr class="separator:aac78943b2b9b01b6f371dac974585ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad677157c5ea5f02c5d99fe2268d40a34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#ad677157c5ea5f02c5d99fe2268d40a34">get_satp</a> )()</td></tr>
+<tr class="memdesc:ad677157c5ea5f02c5d99fe2268d40a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于得到页表的地址  <a href="structtrap__handler__context.html#ad677157c5ea5f02c5d99fe2268d40a34">更多...</a><br /></td></tr>
+<tr class="separator:ad677157c5ea5f02c5d99fe2268d40a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4673fdcfbdf5d939d2bdd0e48beefff3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a4673fdcfbdf5d939d2bdd0e48beefff3">get_kernel_sp</a> )()</td></tr>
+<tr class="memdesc:a4673fdcfbdf5d939d2bdd0e48beefff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于拿到内核栈的栈顶指针  <a href="structtrap__handler__context.html#a4673fdcfbdf5d939d2bdd0e48beefff3">更多...</a><br /></td></tr>
+<tr class="separator:a4673fdcfbdf5d939d2bdd0e48beefff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73494f583c2020a65dd407cf1f1d472"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#ab73494f583c2020a65dd407cf1f1d472">get_userret</a> )()</td></tr>
+<tr class="memdesc:ab73494f583c2020a65dd407cf1f1d472"><td class="mdescLeft">&#160;</td><td class="mdescRight">得到userret的虚拟地址（在使用虚存机制时候，它在kernel里面会被映射到特定的位置）  <a href="structtrap__handler__context.html#ab73494f583c2020a65dd407cf1f1d472">更多...</a><br /></td></tr>
+<tr class="separator:ab73494f583c2020a65dd407cf1f1d472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77914c20e2c82f1ef5393164e06a1642"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a77914c20e2c82f1ef5393164e06a1642">customized_usertrap</a> )(int cause)</td></tr>
+<tr class="memdesc:a77914c20e2c82f1ef5393164e06a1642"><td class="mdescLeft">&#160;</td><td class="mdescRight">在usertrap执行结束后执行，cause是异常编号，这里主要是为了兼容ch2，后面的章节里面只要调用usertrapret即可  <a href="structtrap__handler__context.html#a77914c20e2c82f1ef5393164e06a1642">更多...</a><br /></td></tr>
+<tr class="separator:a77914c20e2c82f1ef5393164e06a1642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7b8913e8d5bb4c26e1246d096f8113"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a6e7b8913e8d5bb4c26e1246d096f8113">error_in_trap</a> )(int <a class="el" href="virtio__disk_8c.html#a051c9e198ee930358372c407a17e8b78">status</a>)</td></tr>
+<tr class="memdesc:a6e7b8913e8d5bb4c26e1246d096f8113"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于处理当trap处理发生错误时要做的事  <a href="structtrap__handler__context.html#a6e7b8913e8d5bb4c26e1246d096f8113">更多...</a><br /></td></tr>
+<tr class="separator:a6e7b8913e8d5bb4c26e1246d096f8113"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14ac301fd21edc1ab7470792c9e6b2c7"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#a14ac301fd21edc1ab7470792c9e6b2c7">syscall</a> )(<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a0, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a1, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a2, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a3, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a4, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a5, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a6, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a7)</td></tr>
+<tr class="memdesc:a14ac301fd21edc1ab7470792c9e6b2c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于处理系统调用导致的trap  <a href="structtrap__handler__context.html#a14ac301fd21edc1ab7470792c9e6b2c7">更多...</a><br /></td></tr>
+<tr class="separator:a14ac301fd21edc1ab7470792c9e6b2c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addca1b51f5e0bf8be5b8a1b9676b43db"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtrap__handler__context.html#addca1b51f5e0bf8be5b8a1b9676b43db">super_external_handler</a> )(int <a class="el" href="structtrap__handler__context.html#ad609edd37d9d5d531909253e43b7e63d">cpuid</a>)</td></tr>
+<tr class="memdesc:addca1b51f5e0bf8be5b8a1b9676b43db"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于处理非时间中断的一切外部中断，会在文件系统里面用到  <a href="structtrap__handler__context.html#addca1b51f5e0bf8be5b8a1b9676b43db">更多...</a><br /></td></tr>
+<tr class="separator:addca1b51f5e0bf8be5b8a1b9676b43db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">结构体成员变量说明</h2>
-<a id="a79b270d658c32d79ed40fee395764c65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79b270d658c32d79ed40fee395764c65">&#9670;&nbsp;</a></span>cpuid</h2>
+<a id="ad609edd37d9d5d531909253e43b7e63d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad609edd37d9d5d531909253e43b7e63d">&#9670;&nbsp;</a></span>cpuid</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int(* cpuid()</td>
+          <td class="memname">int(* cpuid) ()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -157,14 +157,14 @@ trap_handler_context 的协作图:</div>
 
 </div>
 </div>
-<a id="af26fc46ee741e8084ba4e63b79760f3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af26fc46ee741e8084ba4e63b79760f3c">&#9670;&nbsp;</a></span>customized_usertrap</h2>
+<a id="a77914c20e2c82f1ef5393164e06a1642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77914c20e2c82f1ef5393164e06a1642">&#9670;&nbsp;</a></span>customized_usertrap</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* customized_usertrap(int cause)</td>
+          <td class="memname">void(* customized_usertrap) (int cause)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -173,14 +173,14 @@ trap_handler_context 的协作图:</div>
 
 </div>
 </div>
-<a id="ac7139487d9ef96407f2e1fee22f5c01b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7139487d9ef96407f2e1fee22f5c01b">&#9670;&nbsp;</a></span>error_in_trap</h2>
+<a id="a6e7b8913e8d5bb4c26e1246d096f8113"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e7b8913e8d5bb4c26e1246d096f8113">&#9670;&nbsp;</a></span>error_in_trap</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* error_in_trap(int <a class="el" href="virtio__disk_8c.html#a051c9e198ee930358372c407a17e8b78">status</a>)</td>
+          <td class="memname">void(* error_in_trap) (int <a class="el" href="virtio__disk_8c.html#a051c9e198ee930358372c407a17e8b78">status</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -189,14 +189,14 @@ trap_handler_context 的协作图:</div>
 
 </div>
 </div>
-<a id="a3280f63e6ab69094abadf4e8d37052ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3280f63e6ab69094abadf4e8d37052ef">&#9670;&nbsp;</a></span>get_kernel_sp</h2>
+<a id="a4673fdcfbdf5d939d2bdd0e48beefff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4673fdcfbdf5d939d2bdd0e48beefff3">&#9670;&nbsp;</a></span>get_kernel_sp</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* get_kernel_sp()</td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* get_kernel_sp) ()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -205,14 +205,14 @@ trap_handler_context 的协作图:</div>
 
 </div>
 </div>
-<a id="a712dbfb95495eaef551d8c5a8da9cd11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a712dbfb95495eaef551d8c5a8da9cd11">&#9670;&nbsp;</a></span>get_satp</h2>
+<a id="ad677157c5ea5f02c5d99fe2268d40a34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad677157c5ea5f02c5d99fe2268d40a34">&#9670;&nbsp;</a></span>get_satp</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(* get_satp()</td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(* get_satp) ()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -221,14 +221,14 @@ trap_handler_context 的协作图:</div>
 
 </div>
 </div>
-<a id="a6323c0d99db43d2078caf5d35be792f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6323c0d99db43d2078caf5d35be792f6">&#9670;&nbsp;</a></span>get_trapframe</h2>
+<a id="a1a3c64a4e2acb1dc90d888fcbcb36a99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a3c64a4e2acb1dc90d888fcbcb36a99">&#9670;&nbsp;</a></span>get_trapframe</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structtrapframe.html">trapframe</a>*(* get_trapframe()</td>
+          <td class="memname">struct <a class="el" href="structtrapframe.html">trapframe</a>*(* get_trapframe) ()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -237,14 +237,14 @@ trap_handler_context 的协作图:</div>
 
 </div>
 </div>
-<a id="ae3c72b4d7409db28789f5a7151761c1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3c72b4d7409db28789f5a7151761c1d">&#9670;&nbsp;</a></span>get_trapframe_va</h2>
+<a id="aac78943b2b9b01b6f371dac974585ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac78943b2b9b01b6f371dac974585ba7">&#9670;&nbsp;</a></span>get_trapframe_va</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* get_trapframe_va()</td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* get_trapframe_va) ()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -253,14 +253,14 @@ trap_handler_context 的协作图:</div>
 
 </div>
 </div>
-<a id="a9ed3b389a4cec6c26df53089b8d086ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ed3b389a4cec6c26df53089b8d086ab">&#9670;&nbsp;</a></span>get_userret</h2>
+<a id="ab73494f583c2020a65dd407cf1f1d472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab73494f583c2020a65dd407cf1f1d472">&#9670;&nbsp;</a></span>get_userret</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* get_userret()</td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a>(* get_userret) ()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -269,28 +269,28 @@ trap_handler_context 的协作图:</div>
 
 </div>
 </div>
-<a id="ade101058bbf3ee934bd0bfe8b45af7a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade101058bbf3ee934bd0bfe8b45af7a8">&#9670;&nbsp;</a></span>set_kerneltrap</h2>
+<a id="a2f98090f5330f1dafb29078c2f79f2c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f98090f5330f1dafb29078c2f79f2c3">&#9670;&nbsp;</a></span>set_kerneltrap</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* set_kerneltrap()</td>
+          <td class="memname">void(* set_kerneltrap) ()</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aa2a2adbea320888daabb3ec68111f6ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2a2adbea320888daabb3ec68111f6ae">&#9670;&nbsp;</a></span>set_usertrap</h2>
+<a id="a7af703aff749945fe9dac36499593a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7af703aff749945fe9dac36499593a82">&#9670;&nbsp;</a></span>set_usertrap</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* set_usertrap()</td>
+          <td class="memname">void(* set_usertrap) ()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -299,14 +299,14 @@ trap_handler_context 的协作图:</div>
 
 </div>
 </div>
-<a id="a1a56e2e99660cc40be5dbbe6ed992367"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a56e2e99660cc40be5dbbe6ed992367">&#9670;&nbsp;</a></span>super_external_handler</h2>
+<a id="addca1b51f5e0bf8be5b8a1b9676b43db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addca1b51f5e0bf8be5b8a1b9676b43db">&#9670;&nbsp;</a></span>super_external_handler</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* super_external_handler(int <a class="el" href="structtrap__handler__context.html#a79b270d658c32d79ed40fee395764c65">cpuid</a>)</td>
+          <td class="memname">void(* super_external_handler) (int <a class="el" href="structtrap__handler__context.html#ad609edd37d9d5d531909253e43b7e63d">cpuid</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -315,14 +315,14 @@ trap_handler_context 的协作图:</div>
 
 </div>
 </div>
-<a id="af45a07d39dc5515b789e2af21cd5566a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af45a07d39dc5515b789e2af21cd5566a">&#9670;&nbsp;</a></span>syscall</h2>
+<a id="a14ac301fd21edc1ab7470792c9e6b2c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14ac301fd21edc1ab7470792c9e6b2c7">&#9670;&nbsp;</a></span>syscall</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int(* syscall(<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a0, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a1, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a2, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a3, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a4, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a5, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a6, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a7)</td>
+          <td class="memname">int(* syscall) (<a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a0, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a1, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a2, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a3, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a4, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a5, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a6, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> a7)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -331,14 +331,14 @@ trap_handler_context 的协作图:</div>
 
 </div>
 </div>
-<a id="a561f5d7612fb5c250655a20ffae8dafe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a561f5d7612fb5c250655a20ffae8dafe">&#9670;&nbsp;</a></span>yield</h2>
+<a id="ab2e2c3c6e4c3c42835b5c4300966e1f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e2c3c6e4c3c42835b5c4300966e1f6">&#9670;&nbsp;</a></span>yield</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* yield()</td>
+          <td class="memname">void(* yield) ()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -356,9 +356,7 @@ trap_handler_context 的协作图:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structtrap__handler__context.html">trap_handler_context</a></li>
-    <li class="footer">制作者
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

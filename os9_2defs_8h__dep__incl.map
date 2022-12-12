@@ -1,0 +1,12 @@
+<map id="os9/defs.h" name="os9/defs.h">
+<area shape="rect" id="node1" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="337,5,427,32"/>
+<area shape="rect" id="node2" href="$os9_2modules_8h.html" title=" " alt="" coords="323,80,441,107"/>
+<area shape="rect" id="node3" href="$os9_2loader_8h.html" title=" " alt="" coords="331,229,433,256"/>
+<area shape="rect" id="node9" href="$os9__trap_8h.html" title=" " alt="" coords="190,229,307,256"/>
+<area shape="rect" id="node10" href="$os9_2proc_8h.html" title=" " alt="" coords="423,155,512,181"/>
+<area shape="rect" id="node4" href="$os9_2loader_8c.html" title=" " alt="" coords="5,304,105,331"/>
+<area shape="rect" id="node5" href="$os9_2main_8c.html" title=" " alt="" coords="130,304,223,331"/>
+<area shape="rect" id="node6" href="$os9__syscall_8c.html" title=" " alt="" coords="248,304,383,331"/>
+<area shape="rect" id="node7" href="$os9__trap_8c.html" title=" " alt="" coords="520,304,636,331"/>
+<area shape="rect" id="node8" href="$os9_2proc_8c.html" title=" " alt="" coords="407,304,495,331"/>
+</map>

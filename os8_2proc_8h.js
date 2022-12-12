@@ -9,6 +9,7 @@ var os8_2proc_8h =
     [ "NTHREAD", "os8_2proc_8h.html#af072d30ec9a575d52026166678811aef", null ],
     [ "allocthread", "os8_2proc_8h.html#ad2bfce83e555c9208085538ac7fedfc9", null ],
     [ "cpuid", "os8_2proc_8h.html#a414dda255ed3c1e43e7922d10f9d2c6d", null ],
+    [ "curr_proc", "os8_2proc_8h.html#a73a5ca57b1a27c0dbbcce882312b750b", null ],
     [ "exec", "os8_2proc_8h.html#aa7b4aae4a12acd187e23396214aeca47", null ],
     [ "exit", "os8_2proc_8h.html#a6f255d924f7a6bb2c4be0c8c2f2d9ce3", null ],
     [ "fdalloc", "os8_2proc_8h.html#aac0b2bd7ad65f705f534541c294451fa", null ],

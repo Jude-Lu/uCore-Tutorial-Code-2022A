@@ -1,0 +1,4 @@
+<map id="signal/signal_dependency.h" name="signal/signal_dependency.h">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,205,32"/>
+<area shape="rect" id="node2" href="$signal_2defs_8h.html" title="规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数" alt="" coords="74,80,137,107"/>
+</map>

@@ -3,7 +3,6 @@ var os8__syscall_8c =
     [ "__attribute__", "os8__syscall_8c.html#a1b6824bfd4ec0404a4f875ed8db0274e", null ],
     [ "console_read", "os8__syscall_8c.html#af1fdcce28346f48b4af3fae183989bd0", null ],
     [ "console_write", "os8__syscall_8c.html#abcb2514a0bc647fbdddaf14c0ede0ada", null ],
-    [ "curr_proc", "os8__syscall_8c.html#a73a5ca57b1a27c0dbbcce882312b750b", null ],
     [ "os8_sys_clone", "os8__syscall_8c.html#a7ae4287efa61523927a9b9ca6c3a6c80", null ],
     [ "os8_sys_close", "os8__syscall_8c.html#a7da5cb82b005980faf0d4dd0bde8a36c", null ],
     [ "os8_sys_condvar_create", "os8__syscall_8c.html#a2896aba0a87d9fa382e4363ff98b46cd", null ],

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>uCore-Tutorial-Code-2022A: easy-fs/string.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('easy-fs_2string_8h_source.html',''); i
 <a href="easy-fs_2string_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef STRING_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define STRING_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="easy-fs_2defs_8h.html">defs.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utils_2defs_8h.html">defs.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">int</span> <a class="code" href="disk_2string_8h.html#acdb4d3f48d2fb0a834722b1107d2b284">memcmp</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *, <span class="keyword">const</span> <span class="keywordtype">void</span> *, <a class="code" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>);</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="disk_2string_8h.html#aa9c8577c0e9d233f85892ec2d9bfe212">memmove</a>(<span class="keywordtype">void</span> *, <span class="keyword">const</span> <span class="keywordtype">void</span> *, <a class="code" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>);</div>
@@ -98,25 +98,23 @@ $(document).ready(function(){initNavTree('easy-fs_2string_8h_source.html',''); i
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">int</span> <a class="code" href="disk_2string_8h.html#a27e878168063a98eae64b4273dcf33cc">strncmp</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *, <span class="keyword">const</span> <span class="keywordtype">char</span> *, <a class="code" href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a>);</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="disk_2string_8h.html#afcc0bb831ec06288e3a951e09e8d5b7d">strncpy</a>(<span class="keywordtype">char</span> *, <span class="keyword">const</span> <span class="keywordtype">char</span> *, <span class="keywordtype">int</span>);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif // STRING_H</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// STRING_H</span></div>
+<div class="ttc" id="aconsole_2defs_8h_html_a91ad9478d81a7aaf2593e8d9c3d06a14"><div class="ttname"><a href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> defs.h:9</div></div>
+<div class="ttc" id="adisk_2string_8h_html_a27e878168063a98eae64b4273dcf33cc"><div class="ttname"><a href="disk_2string_8h.html#a27e878168063a98eae64b4273dcf33cc">strncmp</a></div><div class="ttdeci">int strncmp(const char *, const char *, uint)</div><div class="ttdef"><b>Definition:</b> string.c:53</div></div>
+<div class="ttc" id="adisk_2string_8h_html_a3e26eb6d2dbf34cf09486f4c0295ae3f"><div class="ttname"><a href="disk_2string_8h.html#a3e26eb6d2dbf34cf09486f4c0295ae3f">safestrcpy</a></div><div class="ttdeci">char * safestrcpy(char *, const char *, int)</div><div class="ttdef"><b>Definition:</b> string.c:75</div></div>
+<div class="ttc" id="adisk_2string_8h_html_a5e5172aa1be36b8210c6dfd86800b44c"><div class="ttname"><a href="disk_2string_8h.html#a5e5172aa1be36b8210c6dfd86800b44c">strlen</a></div><div class="ttdeci">int strlen(const char *)</div><div class="ttdef"><b>Definition:</b> string.c:88</div></div>
+<div class="ttc" id="adisk_2string_8h_html_a9d55c9f035076ed1a90b6452770d0b62"><div class="ttname"><a href="disk_2string_8h.html#a9d55c9f035076ed1a90b6452770d0b62">memset</a></div><div class="ttdeci">void * memset(void *, int, uint)</div><div class="ttdef"><b>Definition:</b> string.c:3</div></div>
+<div class="ttc" id="adisk_2string_8h_html_aa9c8577c0e9d233f85892ec2d9bfe212"><div class="ttname"><a href="disk_2string_8h.html#aa9c8577c0e9d233f85892ec2d9bfe212">memmove</a></div><div class="ttdeci">void * memmove(void *, const void *, uint)</div><div class="ttdef"><b>Definition:</b> string.c:28</div></div>
+<div class="ttc" id="adisk_2string_8h_html_acdb4d3f48d2fb0a834722b1107d2b284"><div class="ttname"><a href="disk_2string_8h.html#acdb4d3f48d2fb0a834722b1107d2b284">memcmp</a></div><div class="ttdeci">int memcmp(const void *, const void *, uint)</div><div class="ttdef"><b>Definition:</b> string.c:13</div></div>
+<div class="ttc" id="adisk_2string_8h_html_afcc0bb831ec06288e3a951e09e8d5b7d"><div class="ttname"><a href="disk_2string_8h.html#afcc0bb831ec06288e3a951e09e8d5b7d">strncpy</a></div><div class="ttdeci">char * strncpy(char *, const char *, int)</div><div class="ttdef"><b>Definition:</b> string.c:62</div></div>
+<div class="ttc" id="autils_2defs_8h_html"><div class="ttname"><a href="utils_2defs_8h.html">defs.h</a></div><div class="ttdoc">规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="adisk_2string_8h_html_acdb4d3f48d2fb0a834722b1107d2b284"><div class="ttname"><a href="disk_2string_8h.html#acdb4d3f48d2fb0a834722b1107d2b284">memcmp</a></div><div class="ttdeci">int memcmp(const void *, const void *, uint)</div><div class="ttdef"><b>Definition:</b> string.c:13</div></div>
-<div class="ttc" id="adisk_2string_8h_html_aa9c8577c0e9d233f85892ec2d9bfe212"><div class="ttname"><a href="disk_2string_8h.html#aa9c8577c0e9d233f85892ec2d9bfe212">memmove</a></div><div class="ttdeci">void * memmove(void *, const void *, uint)</div><div class="ttdef"><b>Definition:</b> string.c:28</div></div>
-<div class="ttc" id="adisk_2string_8h_html_a5e5172aa1be36b8210c6dfd86800b44c"><div class="ttname"><a href="disk_2string_8h.html#a5e5172aa1be36b8210c6dfd86800b44c">strlen</a></div><div class="ttdeci">int strlen(const char *)</div><div class="ttdef"><b>Definition:</b> string.c:88</div></div>
-<div class="ttc" id="aconsole_2defs_8h_html_a91ad9478d81a7aaf2593e8d9c3d06a14"><div class="ttname"><a href="console_2defs_8h.html#a91ad9478d81a7aaf2593e8d9c3d06a14">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> defs.h:9</div></div>
-<div class="ttc" id="adisk_2string_8h_html_a3e26eb6d2dbf34cf09486f4c0295ae3f"><div class="ttname"><a href="disk_2string_8h.html#a3e26eb6d2dbf34cf09486f4c0295ae3f">safestrcpy</a></div><div class="ttdeci">char * safestrcpy(char *, const char *, int)</div><div class="ttdef"><b>Definition:</b> string.c:75</div></div>
-<div class="ttc" id="aeasy-fs_2defs_8h_html"><div class="ttname"><a href="easy-fs_2defs_8h.html">defs.h</a></div><div class="ttdoc">规定了uCore项目的所有语义规范，如需开发其它模块，也要遵守该约定，包含类型定义、宏定义和riscv汇编函数</div></div>
-<div class="ttc" id="adisk_2string_8h_html_afcc0bb831ec06288e3a951e09e8d5b7d"><div class="ttname"><a href="disk_2string_8h.html#afcc0bb831ec06288e3a951e09e8d5b7d">strncpy</a></div><div class="ttdeci">char * strncpy(char *, const char *, int)</div><div class="ttdef"><b>Definition:</b> string.c:62</div></div>
-<div class="ttc" id="adisk_2string_8h_html_a9d55c9f035076ed1a90b6452770d0b62"><div class="ttname"><a href="disk_2string_8h.html#a9d55c9f035076ed1a90b6452770d0b62">memset</a></div><div class="ttdeci">void * memset(void *, int, uint)</div><div class="ttdef"><b>Definition:</b> string.c:3</div></div>
-<div class="ttc" id="adisk_2string_8h_html_a27e878168063a98eae64b4273dcf33cc"><div class="ttname"><a href="disk_2string_8h.html#a27e878168063a98eae64b4273dcf33cc">strncmp</a></div><div class="ttdeci">int strncmp(const char *, const char *, uint)</div><div class="ttdef"><b>Definition:</b> string.c:53</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d3f582bb2fa850a4222b3790cad57e7c.html">easy-fs</a></li><li class="navelem"><a class="el" href="easy-fs_2string_8h.html">string.h</a></li>
-    <li class="footer">制作者
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

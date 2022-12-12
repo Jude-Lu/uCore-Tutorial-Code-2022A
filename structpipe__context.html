@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>uCore-Tutorial-Code-2022A: pipe_context结构体 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -33,10 +33,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.8.17 -->
+<!-- 制作者 Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -92,32 +92,32 @@ $(document).ready(function(){initNavTree('structpipe__context.html',''); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 成员变量</h2></td></tr>
-<tr class="memitem:ad6d828f6936788fd5630aa1028856e2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#ad6d828f6936788fd5630aa1028856e2e">get_curr_pagetable</a> )()</td></tr>
-<tr class="memdesc:ad6d828f6936788fd5630aa1028856e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">得到当前进程的页表  <a href="structpipe__context.html#ad6d828f6936788fd5630aa1028856e2e">更多...</a><br /></td></tr>
-<tr class="separator:ad6d828f6936788fd5630aa1028856e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a561f5d7612fb5c250655a20ffae8dafe"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#a561f5d7612fb5c250655a20ffae8dafe">yield</a> )()</td></tr>
-<tr class="memdesc:a561f5d7612fb5c250655a20ffae8dafe"><td class="mdescLeft">&#160;</td><td class="mdescRight">写一个满的管道或者读一个空的管道时，需要等待其它进程的操作，所以要交出 CPU 控制权  <a href="structpipe__context.html#a561f5d7612fb5c250655a20ffae8dafe">更多...</a><br /></td></tr>
-<tr class="separator:a561f5d7612fb5c250655a20ffae8dafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89bc9f8ce1c103a6a89dd1142f343392"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#a89bc9f8ce1c103a6a89dd1142f343392">kalloc</a> )()</td></tr>
-<tr class="memdesc:a89bc9f8ce1c103a6a89dd1142f343392"><td class="mdescLeft">&#160;</td><td class="mdescRight">管道的数据是存放在物理内存里面的ring buffer，因此需要分配和释放物理内存。这两个接口可以直接让模块分配和释放物理页  <a href="structpipe__context.html#a89bc9f8ce1c103a6a89dd1142f343392">更多...</a><br /></td></tr>
-<tr class="separator:a89bc9f8ce1c103a6a89dd1142f343392"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65e6bfd5a0c5b1bc2cb7fd417656bee6"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#a65e6bfd5a0c5b1bc2cb7fd417656bee6">kfree</a> )(void *pa)</td></tr>
-<tr class="separator:a65e6bfd5a0c5b1bc2cb7fd417656bee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7e72c957d8dce216a28cf3857914f34"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#aa7e72c957d8dce216a28cf3857914f34">copyin</a> )(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, char *dst, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> srcva, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
-<tr class="memdesc:aa7e72c957d8dce216a28cf3857914f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">管道需要和进程虚拟内存里面的数据进行交互，比如把进程虚存里面的东西写入管道里面，因此需要copyin和copyout接口  <a href="structpipe__context.html#aa7e72c957d8dce216a28cf3857914f34">更多...</a><br /></td></tr>
-<tr class="separator:aa7e72c957d8dce216a28cf3857914f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4dda5f1f02ae7ba4f11976c0e98c981"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#af4dda5f1f02ae7ba4f11976c0e98c981">copyout</a> )(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> dstva, char *src, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
-<tr class="separator:af4dda5f1f02ae7ba4f11976c0e98c981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46d5094568667fa15bb958a0d5874f9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#a46d5094568667fa15bb958a0d5874f9f">get_curr_pagetable</a> )()</td></tr>
+<tr class="memdesc:a46d5094568667fa15bb958a0d5874f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">得到当前进程的页表  <a href="structpipe__context.html#a46d5094568667fa15bb958a0d5874f9f">更多...</a><br /></td></tr>
+<tr class="separator:a46d5094568667fa15bb958a0d5874f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e2c3c6e4c3c42835b5c4300966e1f6"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#ab2e2c3c6e4c3c42835b5c4300966e1f6">yield</a> )()</td></tr>
+<tr class="memdesc:ab2e2c3c6e4c3c42835b5c4300966e1f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">写一个满的管道或者读一个空的管道时，需要等待其它进程的操作，所以要交出 CPU 控制权  <a href="structpipe__context.html#ab2e2c3c6e4c3c42835b5c4300966e1f6">更多...</a><br /></td></tr>
+<tr class="separator:ab2e2c3c6e4c3c42835b5c4300966e1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a911c8aab0dffd35b7cad0a4093ffe9b1"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#a911c8aab0dffd35b7cad0a4093ffe9b1">kalloc</a> )()</td></tr>
+<tr class="memdesc:a911c8aab0dffd35b7cad0a4093ffe9b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">管道的数据是存放在物理内存里面的ring buffer，因此需要分配和释放物理内存。这两个接口可以直接让模块分配和释放物理页  <a href="structpipe__context.html#a911c8aab0dffd35b7cad0a4093ffe9b1">更多...</a><br /></td></tr>
+<tr class="separator:a911c8aab0dffd35b7cad0a4093ffe9b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d165d5960f186b78bb6c8b62cbcf8d7"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#a4d165d5960f186b78bb6c8b62cbcf8d7">kfree</a> )(void *pa)</td></tr>
+<tr class="separator:a4d165d5960f186b78bb6c8b62cbcf8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49e50a7844a7d3fdc01861666809ba57"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#a49e50a7844a7d3fdc01861666809ba57">copyin</a> )(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, char *dst, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> srcva, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
+<tr class="memdesc:a49e50a7844a7d3fdc01861666809ba57"><td class="mdescLeft">&#160;</td><td class="mdescRight">管道需要和进程虚拟内存里面的数据进行交互，比如把进程虚存里面的东西写入管道里面，因此需要copyin和copyout接口  <a href="structpipe__context.html#a49e50a7844a7d3fdc01861666809ba57">更多...</a><br /></td></tr>
+<tr class="separator:a49e50a7844a7d3fdc01861666809ba57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa964b830ed097c86ec348f36df53ffcc"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpipe__context.html#aa964b830ed097c86ec348f36df53ffcc">copyout</a> )(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> dstva, char *src, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td></tr>
+<tr class="separator:aa964b830ed097c86ec348f36df53ffcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">结构体成员变量说明</h2>
-<a id="aa7e72c957d8dce216a28cf3857914f34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7e72c957d8dce216a28cf3857914f34">&#9670;&nbsp;</a></span>copyin</h2>
+<a id="a49e50a7844a7d3fdc01861666809ba57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49e50a7844a7d3fdc01861666809ba57">&#9670;&nbsp;</a></span>copyin</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int(* copyin(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, char *dst, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> srcva, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td>
+          <td class="memname">int(* copyin) (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, char *dst, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> srcva, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -126,28 +126,28 @@ $(document).ready(function(){initNavTree('structpipe__context.html',''); initRes
 
 </div>
 </div>
-<a id="af4dda5f1f02ae7ba4f11976c0e98c981"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4dda5f1f02ae7ba4f11976c0e98c981">&#9670;&nbsp;</a></span>copyout</h2>
+<a id="aa964b830ed097c86ec348f36df53ffcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa964b830ed097c86ec348f36df53ffcc">&#9670;&nbsp;</a></span>copyout</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int(* copyout(<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> dstva, char *src, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td>
+          <td class="memname">int(* copyout) (<a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a> pagetable, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> dstva, char *src, <a class="el" href="console_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a">uint64</a> len)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ad6d828f6936788fd5630aa1028856e2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6d828f6936788fd5630aa1028856e2e">&#9670;&nbsp;</a></span>get_curr_pagetable</h2>
+<a id="a46d5094568667fa15bb958a0d5874f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46d5094568667fa15bb958a0d5874f9f">&#9670;&nbsp;</a></span>get_curr_pagetable</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(* get_curr_pagetable()</td>
+          <td class="memname"><a class="el" href="console_2defs_8h.html#aabc0f4f29a1508768d880855992b8ba7">pagetable_t</a>(* get_curr_pagetable) ()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -156,14 +156,14 @@ $(document).ready(function(){initNavTree('structpipe__context.html',''); initRes
 
 </div>
 </div>
-<a id="a89bc9f8ce1c103a6a89dd1142f343392"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89bc9f8ce1c103a6a89dd1142f343392">&#9670;&nbsp;</a></span>kalloc</h2>
+<a id="a911c8aab0dffd35b7cad0a4093ffe9b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a911c8aab0dffd35b7cad0a4093ffe9b1">&#9670;&nbsp;</a></span>kalloc</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void*(* kalloc()</td>
+          <td class="memname">void*(* kalloc) ()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -172,28 +172,28 @@ $(document).ready(function(){initNavTree('structpipe__context.html',''); initRes
 
 </div>
 </div>
-<a id="a65e6bfd5a0c5b1bc2cb7fd417656bee6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65e6bfd5a0c5b1bc2cb7fd417656bee6">&#9670;&nbsp;</a></span>kfree</h2>
+<a id="a4d165d5960f186b78bb6c8b62cbcf8d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d165d5960f186b78bb6c8b62cbcf8d7">&#9670;&nbsp;</a></span>kfree</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* kfree(void *pa)</td>
+          <td class="memname">void(* kfree) (void *pa)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a561f5d7612fb5c250655a20ffae8dafe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a561f5d7612fb5c250655a20ffae8dafe">&#9670;&nbsp;</a></span>yield</h2>
+<a id="ab2e2c3c6e4c3c42835b5c4300966e1f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e2c3c6e4c3c42835b5c4300966e1f6">&#9670;&nbsp;</a></span>yield</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void(* yield()</td>
+          <td class="memname">void(* yield) ()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -211,9 +211,7 @@ $(document).ready(function(){initNavTree('structpipe__context.html',''); initRes
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structpipe__context.html">pipe_context</a></li>
-    <li class="footer">制作者
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

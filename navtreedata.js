@@ -1,24 +1,26 @@
 /*
-@licstart  The following is the entire license notice for the
-JavaScript code in this file.
+ @licstart  The following is the entire license notice for the JavaScript code in this file.
 
-Copyright (C) 1997-2019 by Dimitri van Heesch
+ The MIT License (MIT)
 
-This program is free software; you can redistribute it and/or modify
-it under the terms of version 2 of the GNU General Public License as published by
-the Free Software Foundation
+ Copyright (C) 1997-2020 by Dimitri van Heesch
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ and associated documentation files (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge, publish, distribute,
+ sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
-You should have received a copy of the GNU General Public License along
-with this program; if not, write to the Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ The above copyright notice and this permission notice shall be included in all copies or
+ substantial portions of the Software.
 
-@licend  The above is the entire license notice
-for the JavaScript code in this file
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var NAVTREE =
 [
@@ -38,7 +40,7 @@ var NAVTREE =
         [ "全部", "globals.html", "globals_dup" ],
         [ "函数", "globals_func.html", "globals_func" ],
         [ "变量", "globals_vars.html", null ],
-        [ "类型定义", "globals_type.html", null ],
+        [ "类型定义", "globals_type.html", "globals_type" ],
         [ "枚举", "globals_enum.html", null ],
         [ "枚举值", "globals_eval.html", null ],
         [ "宏定义", "globals_defs.html", "globals_defs" ]
@@ -50,27 +52,29 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"disk_2defs_8h.html#a2d1edde91ea515b363277f4bbdc3244d",
-"easy-fs_2defs_8h.html#af6368cbcf84fb75963198f7f8ee3cf3f",
-"globals_b.html",
-"kernel-vm_2log_8h.html#ad990ee40546c76f3c3f424401d00e8d7af80f9a890089d211842d59625e561f88",
-"os1_2log_8h.html#ad990ee40546c76f3c3f424401d00e8d7af80f9a890089d211842d59625e561f88",
-"os2__trap_8c.html#a7b53aa5283f029af662ca57e66ffcced",
-"os3_2proc_8h.html#a6f255d924f7a6bb2c4be0c8c2f2d9ce3",
-"os4_2proc_8c.html#a1f3d5a4ac43d695e1b884a50487336c2",
-"os5_2log_8h.html#ad990ee40546c76f3c3f424401d00e8d7af80f9a890089d211842d59625e561f88",
-"os6_2log_8h.html#ad990ee40546c76f3c3f424401d00e8d7aa60bd322f93178d68184e30e162571ca",
-"os7_2log_8h.html#a7861ee1569802186a619778efc85af13",
-"os8_2defs_8h.html#acdb82cffb46911d1a236dcf651b24b05",
-"os8__trap_8c.html#a7f25b68f8d6d2e7d05a28418da701464",
-"processor_8c.html#a863db1d0bdd94b65f74f84ffc3ced39d",
-"structtrap__handler__context.html#a1a56e2e99660cc40be5dbbe6ed992367",
-"sync_2queue_8h.html#a3d38424ba5ddbd6335dc3254b69b5952",
-"syscall__ids_8h.html#a136665f60ec9fafa9a0cb136cc3896d0",
-"syscall__ids_8h.html#adafbf993b97d4e8eb39fffd9fc2bb8a0",
-"trap_2defs_8h.html#a25f490f8544627e94679dd4eee307c8a",
-"utils_2defs_8h.html#a781d1689a393d7c6e4243349cfdf6ce8",
-"vm__dependency_8h.html#a7861ee1569802186a619778efc85af13"
+"disk_2defs_8h.html#a1134b580f8da4de94ca6b1de4d37975e",
+"easy-fs_2defs_8h.html#abf203f063421971797b2d1152e2f046e",
+"functions_vars_c.html",
+"kernel-vm_2log_8h.html#ad990ee40546c76f3c3f424401d00e8d7aa60bd322f93178d68184e30e162571ca",
+"os1_2log_8h.html#ad990ee40546c76f3c3f424401d00e8d7aa60bd322f93178d68184e30e162571ca",
+"os2_2log_8h.html#ad990ee40546c76f3c3f424401d00e8d7ae735a848bf82163a19236ead1c3ef2d2",
+"os3_2log_8h.html#ad990ee40546c76f3c3f424401d00e8d7ae735a848bf82163a19236ead1c3ef2d2",
+"os4_2log_8h.html#ad990ee40546c76f3c3f424401d00e8d7aa60bd322f93178d68184e30e162571ca",
+"os5_2log_8h.html#ad990ee40546c76f3c3f424401d00e8d7a35d6719cb4d7577c031b3d79057a1b79",
+"os6_2loader_8h.html",
+"os7_2defs_8h.html#a5f96cb6ae6670e023c407cc2f77e1704",
+"os7__trap_8c.html",
+"os8_2proc_8c.html#a2c6575a11e05393fc9b7ef875bef2a07",
+"os9_2log_8h.html#ad990ee40546c76f3c3f424401d00e8d7a3fb6c4ad00f4ad98553e01229d1803ac",
+"pipe_2defs_8h.html#abf203f063421971797b2d1152e2f046e",
+"signal_2defs_8h.html#a1c1f1da0ecfca5bc4fc4db3acadf1bc8",
+"structFSManager.html#ae3cc1a63fbe6fb580930df61faae3cf7",
+"structvirtq__avail.html#a90e9647d01c24514d3841344ff1cea7b",
+"syscall_2defs_8h.html#a22c8ea96d09283ed6496347806cc72a0",
+"syscall__ids_8h.html#a420405113aae945259207c6307cfaa19",
+"task-manage_2defs_8h.html#a058fcbcc3e1eab2c09c68b3e5221c545",
+"trap_2defs_8h.html#aac8de2a0393367154119c25e2b279953",
+"utils_2defs_8h.html#ade6b65dbf23c28fca39d543364b61113"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

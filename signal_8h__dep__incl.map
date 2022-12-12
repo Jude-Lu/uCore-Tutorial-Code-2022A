@@ -1,0 +1,14 @@
+<map id="signal/signal.h" name="signal/signal.h">
+<area shape="rect" id="node1" title=" " alt="" coords="240,5,356,32"/>
+<area shape="rect" id="node2" href="$signal_8c.html" title=" " alt="" coords="157,80,271,107"/>
+<area shape="rect" id="node3" href="$signal__module_8h.html" title=" " alt="" coords="296,80,468,107"/>
+<area shape="rect" id="node4" href="$os9_2modules_8h.html" title=" " alt="" coords="323,155,441,181"/>
+<area shape="rect" id="node5" href="$os9_2loader_8h.html" title=" " alt="" coords="331,304,433,331"/>
+<area shape="rect" id="node11" href="$os9__trap_8h.html" title=" " alt="" coords="190,304,307,331"/>
+<area shape="rect" id="node12" href="$os9_2proc_8h.html" title=" " alt="" coords="423,229,512,256"/>
+<area shape="rect" id="node6" href="$os9_2loader_8c.html" title=" " alt="" coords="5,379,105,405"/>
+<area shape="rect" id="node7" href="$os9_2main_8c.html" title=" " alt="" coords="130,379,223,405"/>
+<area shape="rect" id="node8" href="$os9__syscall_8c.html" title=" " alt="" coords="248,379,383,405"/>
+<area shape="rect" id="node9" href="$os9__trap_8c.html" title=" " alt="" coords="520,379,636,405"/>
+<area shape="rect" id="node10" href="$os9_2proc_8c.html" title=" " alt="" coords="407,379,495,405"/>
+</map>

@@ -2,8 +2,8 @@
 <area shape="rect" id="node1" title=" " alt="" coords="341,5,423,32"/>
 <area shape="rect" id="node2" href="$os8_2modules_8h.html" title=" " alt="" coords="323,80,441,107"/>
 <area shape="rect" id="node3" href="$os8_2loader_8h.html" title=" " alt="" coords="331,229,433,256"/>
-<area shape="rect" id="node9" href="$os8_2proc_8h.html" title=" " alt="" coords="423,155,512,181"/>
-<area shape="rect" id="node10" href="$os8__trap_8h.html" title=" " alt="" coords="190,229,307,256"/>
+<area shape="rect" id="node9" href="$os8__trap_8h.html" title=" " alt="" coords="190,229,307,256"/>
+<area shape="rect" id="node10" href="$os8_2proc_8h.html" title=" " alt="" coords="423,155,512,181"/>
 <area shape="rect" id="node4" href="$os8_2loader_8c.html" title=" " alt="" coords="5,304,105,331"/>
 <area shape="rect" id="node5" href="$os8_2main_8c.html" title=" " alt="" coords="130,304,223,331"/>
 <area shape="rect" id="node6" href="$os8__syscall_8c.html" title=" " alt="" coords="248,304,383,331"/>

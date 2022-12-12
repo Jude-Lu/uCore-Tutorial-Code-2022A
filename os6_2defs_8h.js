@@ -70,8 +70,5 @@ var os6_2defs_8h =
     [ "uint32", "os6_2defs_8h.html#a1134b580f8da4de94ca6b1de4d37975e", null ],
     [ "uint64", "os6_2defs_8h.html#a5975ce0896ee5ec5db2f1a411620a51a", null ],
     [ "uint8", "os6_2defs_8h.html#adde6aaee8457bee49c2a92621fe22b79", null ],
-    [ "ushort", "os6_2defs_8h.html#ab95f123a6c9bcfee6a343170ef8c5f69", null ],
-    [ "STDIN", "os6_2defs_8h.html#aba01db17f4a2bfbc3db60dc172972a25a08864b73fa6c82cb8de78a336050bfdb", null ],
-    [ "STDOUT", "os6_2defs_8h.html#aba01db17f4a2bfbc3db60dc172972a25ad1026b11391895f6e302f892a44a04df", null ],
-    [ "STDERR", "os6_2defs_8h.html#aba01db17f4a2bfbc3db60dc172972a25a4b971ca4918db729a147aa7c78cea0e3", null ]
+    [ "ushort", "os6_2defs_8h.html#ab95f123a6c9bcfee6a343170ef8c5f69", null ]
 ];
